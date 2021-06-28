@@ -107,7 +107,6 @@
 - I got you something.
 - That would be a judgment call.
 - Listen for it.
-- 
 
 ## Words
 
@@ -175,10 +174,135 @@
 
 # E10
 
+## Words
+
+- Precious
+
+# E11
+
 ## Sentences
 
+- There is a guy who has the potential to break our hearts and plunge us into the depression.
+- I just wish there was something we could do.
+- Did you see the dents in his knuckles?
+- He is a lawyer who teaches sculpting on the side.
+- I'm busy beaming with pride.
+- He bursts into flames.
+- I'm famished.
+- Do anyone want me to appraise anything?
+- It's the one he's licking.
+- The girl on the cover with her nipples showing.
+- I thought I'd give it a shot.
+- That would be a no.
+- Maybe you could scrape.
+
+## Words
+
+- Horoscope
+- Plunge
+- To sculpt
+- Rigatoni
+- To intimate
+- To debate
+- Slugger
+- Scum
+
+# E12
+
+## Sentences
+
+- We're done with something.
+- You think?
+- I'm out of sort.
+- Paolo made a pass at me.
+- We kicked your butts.
+- It's the time for you to swoop in.
+- Come on, wussies.
+
+## Words
+
+- Placenta
+- Caterer
+- Nauseous
+- Charming
+- Distraught
+- Shutout
+
+# E13
+
+## Sentences
+
+- That's pretty much it.
+- People divorced before you hit puberty.
+- I don't see that happening
+- Tit for tat.
+
+## Words
+
+- Pet mortician
+- Self-Steem
+- Embolism
+- Perceptive
+
+# E14
+
+## Sentences
+
+- Still got the egg, huh?
+- Ever since I was a little kid, I've been able to pick up quarters with my toes.
+- I hope she throws up on you.
+- What do you do for a living?
+- You guys will scooch, won't you?
+- You seek me out.
+- Something deep in your soul calls out to me like a foghorn.
+- Here is a wacky thought.
 - 
 
 ## Words
 
-- Precious
+- Pathetic mess
+- Slathering
+- reunion
+- Sage branches
+- Righteous
+
+# E15
+
+## Sentences
+
+- I just don't really see myself in a big white hat.
+
+## Words
+
+- Eclectic
+- Amusing
+
+# E16
+
+## Sentences
+
+- So you guys just don't get along?
+- You don't dip your pen in company ink.
+
+# E17
+
+## Sentences
+
+- What are the odds of that happening?
+- You take your time.
+- Your sister stood me up the other night.
+
+# E18
+
+## Sentences
+
+- Your are a way off.
+- This money is cursed.
+- I have to win money to exert my power over women.
+- Your fly's open.
+
+## Words
+
+- Sarcastic
+- Bluffing
+- Coincidence
