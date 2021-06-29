@@ -306,3 +306,55 @@
 - Sarcastic
 - Bluffing
 - Coincidence
+
+# E19
+
+## Sentences
+
+- Some one who gets interrupted.
+- You're a monkey, You're loose in the city.
+- Just a small tranquilizer.
+
+## Words
+
+- Inspiration
+- Embargo
+- Nudity
+- Exotic
+
+# E20
+
+## Sentences
+
+- I can't believe you would actually say that.
+- That's what you've been working on for the past 2 hours?
+- Nothing that spatters.
+- Now I'm needy and snubbed.
+- Hell is filled with people like you.
+
+## Words
+
+- Dangle
+
+# E21
+
+## Sentences
+
+- You might want to try Joseph.
+- This is really becoming a weird obsession.
+- Do you ever just feel you're so unbelievably uncoordinated?
+- He's reached sexual maturity.
+- He beat you.
+- Don't wait up,.
+- It is technically not a zoo per se.
+- You could have called. I've been worried.
+
+## Words
+
+- Humping
+- Fiddler
+- Astounding
+- Spirit
+- Slaughter
+- Docile
+-
