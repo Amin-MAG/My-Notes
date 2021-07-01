@@ -357,4 +357,38 @@
 - Spirit
 - Slaughter
 - Docile
--
+
+# E22
+
+## Sentences
+
+- Interesting, because in my dreams, I'm surprisingly inadequate.
+- I don't know if it's your kind of thing, Because it involves a lot of being normal for a large portion of a day.
+- It pays to know the man who wears my shoes.
+- They do you.
+- This has nothing to do with the fact that he needs a note to get out of gym?
+- Can we drop it now?
+
+## Words
+
+- Extravaganza
+
+# E23
+
+## Sentences
+
+- You have to pick your moment.
+- Who wants to hear something ironic?
+
+## Words
+
+- Hypothetically
+
+# E24
+
+## Sentences
+
+- Here's little Ben is nodding off.
+- Not following you
+- It's rattles.
+- That book got me through some tough times.
