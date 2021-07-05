@@ -38,6 +38,8 @@ Types of testing:
 
 [Design Patterns](Software%20Engineering%20223a4de7a57b48e9a6235a18bb0b7d99/Design%20Patterns%204b0096bf6394460eab38f82ad6df4f82.md)
 
+[Testing](Software%20Engineering%20223a4de7a57b48e9a6235a18bb0b7d99/Testing%2039c8a2730fe74f2f991cfba2c29977b5.md)
+
 Solving Questions
 
 1. Architectural pattern with rational reason
