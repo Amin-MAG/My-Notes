@@ -36,6 +36,58 @@
 
 - Mustard
 
+# E04
+
+## Sentences
+
+- Boy, you said it.
+- I have got to buy a vowel.
+- Because you are tripping me out right now.
+- I'm hopeless and awkward and desperate for love
+- I wanted to apologize in advance for having chased you down the street.
+- When you start getting screwed over all the time, you have got to switch to low-fat.
+- If you feel yourself reaching for that phone, you go shopping. You get your butt in a bubble bath.
+- Do you really think he's gonna fall for that?
+- I don't want to blow my pretty dumb brains out.
+- Did you just make all that stuff up to get out of being my agent?
+- Stop naming dwarves.
+
+## Words
+
+- Intrigue
+- To make out
+- Security blanket
+- To Elaborate
+- In advance
+- Critical
+- Aloof
+- Needy
+- Sophisticated
+- Busted
+- Unprecedented
+- Grumpy
+
+# E05
+
+## Sentences
+
+- Did a forest tick you off?
+- Do you realize that she is a cartoon and way out of your league?
+- To gouge a hole.
+- Who you got it narrowed down to?
+- So far it kind of blows.
+
+## Words
+
+- Spackle boy
+- To laminate
+
+# E07
+
+## Sentences
+
+- Class dismissed
+
 ---
 
 # E00
