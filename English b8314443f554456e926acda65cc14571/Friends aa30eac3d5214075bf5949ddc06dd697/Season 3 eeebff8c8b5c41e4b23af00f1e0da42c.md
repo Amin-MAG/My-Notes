@@ -88,6 +88,36 @@
 
 - Class dismissed
 
+# E08
+
+## Sentences
+
+- He's gonna rat me out.
+- The curse is broken.
+- I was babbling
+- Something this big and long will be very difficult to maneuver.
+- Retract the device.
+- That's never gonna make it all the way over here.
+
+## Words
+
+- Coincidence
+- Blood bath
+- To poke
+- To bow out
+
+# E09
+
+## Sentences
+
+- You have to start getting over her.
+- If you play, maybe It'll take your mind off Janice.
+- You're stuck with me.
+
+## Words
+
+- Lousy
+
 ---
 
 # E00
