@@ -118,6 +118,36 @@
 
 - Lousy
 
+# E10
+
+## Sentences
+
+- It says here that a Muppet got whacked on Sesame Street last night.
+- I always heard them talk about that. I just thought it was a club they went to.
+- I'd rather have something my dad couldn't sell.
+- I can see you through my peephole.
+- That one doesn't look fulfilled.
+- I blew my interview.
+- God bless us, everyone.
+
+## Words
+
+- Shriek
+- Destiny
+- To  pursue
+- Munchie
+
+# E11
+
+## Sentences
+
+- You can't tell which is which either.
+
+## Words
+
+- Charming
+- To fool around with someone.
+
 ---
 
 # E00
