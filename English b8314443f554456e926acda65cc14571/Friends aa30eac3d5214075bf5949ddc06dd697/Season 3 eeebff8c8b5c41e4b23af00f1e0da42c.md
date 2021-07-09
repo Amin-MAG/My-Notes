@@ -148,6 +148,58 @@
 - Charming
 - To fool around with someone.
 
+# E12
+
+## Sentences
+
+- It was like you were marking your territory.
+- Count it off.
+
+## Words
+
+- Botanist
+- Abridgment
+- Invoice number
+- Be dense about something
+
+# E13
+
+## Words
+
+- To grope
+- To get testy
+- Thorn
+
+# E14
+
+## Words
+
+- Bummer
+- Barge
+
+# E15
+
+## Sentences
+
+- Are you going down there to gawk at that hot girl?
+- About what happened earlier...
+
+# E16
+
+## Sentences
+
+- I would have been devastated.
+
+## Words
+
+- Trail
+
+# E17
+
+## Sentences
+
+- You're one to talk.
+
 ---
 
 # E00
