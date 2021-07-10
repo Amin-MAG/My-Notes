@@ -44,3 +44,15 @@
 - Fancy breakfast
 
 [A DAY IN LIFE OF A LANGUAGE STUDENT IN THE USA](https://www.youtube.com/watch?v=lo4iqiDOWRA)
+
+# 23 JOBS OF THE FUTURE
+
+## Sentences
+
+- Be in high demand
+- Openings on those markets have been growing very fast.
+- With projection.
+- To thrive
+- Agriculture
+
+[23 JOBS OF THE FUTURE (and jobs that have no future)](https://www.youtube.com/watch?v=we7zHcsgo0o)
