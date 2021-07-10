@@ -200,6 +200,50 @@
 
 - You're one to talk.
 
+# E18
+
+## Sentences
+
+- Once again, I suckle at your smoky teat.
+- I'm sick of your smoking.
+- Hypnosis is beyond crap.
+- Being immature to get married.
+- I'd have bet good money that he'd be the first one of us to get married.
+
+## Words
+
+- Heather
+- Stunning
+- Ring bearer
+- Loon
+- To encourage a behavior
+- To call-off
+
+# E19
+
+## Sentences
+
+- Peel the onion.
+- The inventor of the door rests happily in his grave.
+
+## Words
+
+- To chock
+- Perry man
+
+# E20
+
+## Sentences
+
+- She was a cruel, cranky old bitch.
+- It's a slide instead of stairs.
+- I'll give you a call.
+
+## Words
+
+- Licorice
+- Compulsion
+
 ---
 
 # E00
