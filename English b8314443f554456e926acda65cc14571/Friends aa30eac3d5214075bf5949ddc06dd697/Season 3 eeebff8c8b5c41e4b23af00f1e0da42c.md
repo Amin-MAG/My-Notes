@@ -244,6 +244,29 @@
 - Licorice
 - Compulsion
 
+# E21
+
+## Sentences
+
+- I'm serious, I mean, I'm intuitive, but my memory sucks.
+- Does it have to do with Chandler and that sock that he keeps by his bed?
+
+## Words
+
+- Fictitious
+- Intuitive
+
+# E22
+
+## Sentences
+
+- Oh, Phoebe, are you still on hold?
+- I was supposed to call my dad back.
+
+## Words
+
+- 
+
 ---
 
 # E00
