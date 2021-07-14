@@ -263,18 +263,34 @@
 - Oh, Phoebe, are you still on hold?
 - I was supposed to call my dad back.
 
-## Words
-
-- 
-
----
-
-# E00
+# E23
 
 ## Sentences
 
-- 
+- Wouldn't be cool if our duck and our chick had a little baby?
+- I need a favor.
+- Cleansing myself.
+- I'm sowing my wild oats.
+- I'm stumped.
 
 ## Words
 
--
+- Wrinkly
+- Mole
+- Pimple
+- Fancier
+- Reluctant
+- Burly
+
+# E24
+
+## Words
+
+- Precaution
+
+# E25
+
+## Sentences
+
+- I just gave her a nudge.
+- Take it from a guy who's never had a long-term kind of relationship.
