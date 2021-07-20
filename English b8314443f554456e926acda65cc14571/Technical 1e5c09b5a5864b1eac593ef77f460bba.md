@@ -11,6 +11,7 @@
 - This solution works well with web applications, where a call goes back and forth...
 - There are a few concerns that need to be addressed.
 - When an application is broken down into smaller microservices.
+- If you take something into account, or take account of something, you consider it when you are thinking about a situation or deciding what to do.
 
 # Words
 
@@ -30,3 +31,10 @@
 - Holistic
 - Collaborate: My father and I collaborated in the writing of several dictionaries.
 - Consolidate: to consolidate a number of small schools
+- Disciplines: traditional disciplines such as history, literature, and philosophy
+- Demolish: The flood demolished the bridge.
+- Presence: her presence at the party.
+- Coexist
+- Compensate: A child can never compensate his mother for her efforts.
+- Comprehensive: a comprehensive history of America
+- Robust: robust faith
