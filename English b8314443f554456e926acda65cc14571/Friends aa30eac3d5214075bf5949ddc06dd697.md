@@ -7,3 +7,5 @@
 [Season 3](Friends%20aa30eac3d5214075bf5949ddc06dd697/Season%203%20eeebff8c8b5c41e4b23af00f1e0da42c.md)
 
 [Season 4](Friends%20aa30eac3d5214075bf5949ddc06dd697/Season%204%205988ffc90b3a4a40b157db6fb25dd904.md)
+
+[Season 5](Friends%20aa30eac3d5214075bf5949ddc06dd697/Season%205%20ba21a2b6708442eb90db2572e580a3be.md)
