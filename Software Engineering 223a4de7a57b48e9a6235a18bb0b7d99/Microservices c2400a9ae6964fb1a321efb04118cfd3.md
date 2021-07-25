@@ -1,5 +1,11 @@
 # Microservices
 
+# **What are Microservices?**
+
+**Microservices**, aka **[microservice architecture](https://www.edureka.co/blog/microservice-architecture/)**, is an architectural style that structures an application as a collection of small autonomous services, modeled around a **business domain.** In a Microservice Architecture, each service is self-contained and implements a single business capability. If you want a  detailed understanding on Microservices, you can refer to [my article on Microservices Architecture.](https://www.edureka.co/blog/microservices-tutorial-with-example)
+
+![https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/07/Picture3-1.png](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/07/Picture3-1.png)
+
 Although microservice solves certain issues, it is not a silver bullet. It has several drawbacks and when using this architecture, numerous issues must be addressed.
 
 ### Greenfield
@@ -28,6 +34,35 @@ A service portfolio is a complete listing of all of IT’s products and servic
 
 (from [https://en.wikipedia.org/wiki/Downstream_(networking)](https://en.wikipedia.org/wiki/Downstream_(networking)))
 
+### Proxy Service
+
+> A service proxy is a network component that acts as an intermediary for requests seeking resources from microservices application components. A client connects to the service proxy to request a particular service (file, connection, web page, or other resources) provided by one of the microservices components.
+
+[https://avinetworks.com/glossary/service-proxy/](https://avinetworks.com/glossary/service-proxy/)
+
+### Reverse Proxy
+
+> A reverse proxy server sits between a network and multiple other internal resources. A large website might have dozens of servers that collectively serve requests from a single domain. To accomplish that, client requests would resolve to a machine that would act as a load balancer. The load balancer would then proxy that traffic back to the individual servers.
+
+Some popular open source reverse proxies are:
+
+- Varnish
+- Squid
+
+more on [https://www.varonis.com/blog/what-is-a-proxy-server/](https://www.varonis.com/blog/what-is-a-proxy-server/)
+
+### API Granularity
+
+> In the tech world, granularity refers to the level of detailed information available within your API. Think of it like your bedsheet’s thread count. In a coarse-grained API, your data is typically housed in a few large components, while a fine-grained API spreads it across a large number of smaller components. If your components are equal in size, but vary in complexity and features, this could lead to a coarse-grained granularity. To build a fine-grained API, you divide your components based on the cohesiveness and coordination of their functionalities.
+
+[https://horizontal.blog/2020/06/09/fine-grained-vs-coarse-grained-apis/](https://horizontal.blog/2020/06/09/fine-grained-vs-coarse-grained-apis/)
+
+### API Gateway
+
+> An API gateway is an API management tool that sits between a client and a collection of backend services. An API gateway acts as a reverse proxy to accept all application programming interface (API) calls, aggregate the various services required to fulfill them, and return the appropriate result.
+
+[https://www.redhat.com/en/topics/api/what-does-an-api-gateway-do#:~:text=An API gateway is an,and return the appropriate result](https://www.redhat.com/en/topics/api/what-does-an-api-gateway-do#:~:text=An%20API%20gateway%20is%20an,and%20return%20the%20appropriate%20result).
+
 # Principles
 
 The principles that microservice has been built on.
@@ -36,10 +71,12 @@ The principles that microservice has been built on.
 2. Availability
 3. Resiliency
 4. Independent, autonomous
-5. Decentralized governance
-6. Failure isolation
-7. Auto-Provisioning
-8. Continuous delivery through DevOps
+5. Real-Time Load Balancing
+6. Decentralized governance
+7. Seamless API Integration and Continuous Monitoring
+8. Failure isolation
+9. Auto-Provisioning
+10. Continuous delivery through DevOps Integration
 
 ## Resiliency
 
