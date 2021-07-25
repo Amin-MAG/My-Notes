@@ -13,6 +13,7 @@
 - When an application is broken down into smaller microservices.
 - If you take something into account or take account of something, you consider it when you are thinking about a situation or deciding what to do.
 - When the number of consecutive failures crosses a threshold, the circuit breaker trips, and for the duration of a timeout period, all attempts to invoke the remote service will fail immediately.
+- How to handle different types of Protocols some of which might not be supported by producer microservice.
 
 # Words
 
@@ -45,3 +46,10 @@
 - Graceful: A very graceful woman
 - To invoke: to invoke aid.
 - Identical: Those two copies are identical.
+- Seamless: seamless integrations, seamless stockings
+- Resilient: Rubber is resilient.
+- Autonomous: This organization is governmental but autonomous.
+- Intermediary: Importing goods and other intermediary trades
+- Granularity
+- Proxy: proxy vote
+-
