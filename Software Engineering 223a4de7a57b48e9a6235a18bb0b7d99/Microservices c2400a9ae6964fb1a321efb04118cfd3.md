@@ -121,6 +121,14 @@ When an application is broken down into smaller microservices, there are a few c
 3. Different consumers might need a different format of the responses from reusable microservices. Who will do the data transformation or field manipulation?
 4. How to handle different types of Protocols some of which might not be supported by producer microservice.
 
+Well, the solution to these kinds of problems could be the API Gateway Design Pattern.  The API Gateway Design Pattern address not only the concerns mentioned above but it solves many other problems. This microservice design pattern can also be considered as the proxy service to route a request to the concerned microservice. Being a variation of the Aggregator service, it can send the request to multiple services and similarly aggregate the results back to the composite or the consumer service. API Gateway also acts as the entry point for all the microservices and creates fine-grained APIs’ for different types of clients.
+
+With the help of the API Gateway design pattern, the API gateways can convert the protocol request from one type to other. Similarly, it can also offload the authentication/authorization responsibility of the microservice.
+
+So, once the client sends a request, these requests are passed to the API Gateway which acts as an entry point to forward the clients’ requests to the appropriate microservices. Then, with the help of the load balancer, the load of the request is handled and the request is sent to the respective services. Microservices use Service Discovery which acts as a guide to find the route of communication between each of them. Microservices then communicate with each other via a stateless server i.e. either by HTTP Request/Message Bus.
+
+![https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/API-Gateway-Microservices-Design-Patterns-Edureka.png](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/API-Gateway-Microservices-Design-Patterns-Edureka.png)
+
 An API Gateway helps to address any concerns raised by microservice implementation, not limited to the ones above.
 
 1. An API Gateway is the single point of entry for any microservice calls.
@@ -134,6 +142,8 @@ An API Gateway helps to address any concerns raised by microservice implementati
 
 We have talked about resolving the aggregating data problem in the API Gateway Pattern. However, we will talk about it here holistically. When breaking the business functionality into several smaller logical pieces of code, it becomes necessary to think about how to collaborate the data returned by each service. This responsibility cannot be left with the consumer, as then it might need to understand the internal implementation of the producer application.
 
+Aggregator in the computing world refers to a website or program that collects related items of data and displays them. So, even in Microservices patterns, Aggregator is a basic web page which invokes various services to get the required information or achieve the required functionality.
+
 The Aggregator pattern helps to address this. It talks about how we can aggregate the data from different services and then send the final response to the consumer. This can be done in two ways:
 
 1. A **composite microservice** will make calls to all the required microservices, consolidate the data, and transform the data before sending it back.
@@ -141,6 +151,14 @@ The Aggregator pattern helps to address this. It talks about how we can aggregat
 2. An **API Gateway** can also partition the request to multiple microservices and aggregate the data before sending it to the consumer.
 
 It is recommended if any business logic is to be applied, then choose a composite microservice. Otherwise, the API Gateway is the established solution.
+
+Also, since the source of output gets divided on breaking the monolithic architecture to microservices, this pattern proves to be beneficial when you need an output by combining data from multiple services. So, if we have two services each having their own database, then an aggregator having a unique transaction ID, would collect the data from each individual microservice, apply the business logic and finally publish it as a [REST](https://www.edureka.co/blog/what-is-rest-api/) endpoint. Later on, the data collected can be consumed by the respective services which require that collected data.
+
+The Aggregate Design Pattern is based on the DRY principle. Based on this principle, you can abstract the logic into a composite microservices and aggregate that particular business logic into one service.
+
+So, for example, if you consider two services: Service A and B, then you can individually scale these services simultaneously by providing the data to the composite microservice.
+
+![https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Aggregator-Microservices-Design-Patterns-Edureka.png](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Aggregator-Microservices-Design-Patterns-Edureka.png)
 
 ### Client-Side UI Composition Pattern
 
@@ -252,7 +270,7 @@ So how does the consumer or router know all the available service instances and 
 
 A service registry needs to be created which will keep the metadata of each producer service. A service instance should register to the registry when starting and should de-register when shutting down. The consumer or router should query the registry and find out the location of the service. The registry also needs to do a health check of the producer service to ensure that only working instances of the services are available to be consumed through it. There are two types of service discovery: client-side and server-side. An example of client-side discovery is Netflix Eureka and an example of server-side discovery is AWS ALB.
 
-## Circuit Breaker Pattern
+### Circuit Breaker Pattern
 
 A service generally calls other services to retrieve data, and there is the chance that the downstream service may be down. There are two problems with this: first, the request will keep going to the down service, exhausting network resources, and slowing performance. Second, the user experience will be bad and unpredictable. How do we avoid cascading service failures and handle failures gracefully?
 
@@ -278,6 +296,6 @@ There are many other patterns used with microservice architecture, like Sidecar,
 
 [Microservice Architecture and Design Patterns - DZone Microservices](https://dzone.com/articles/design-patterns-for-microservices)
 
-[Service Catalogs vs Service Portfolios: What's The Difference?](https://www.bmc.com/blogs/service-catalog-vs-service-portfolio-whats-the-difference/#)
+[Microservices Design Patterns | Microservices Patterns | Edureka](https://www.edureka.co/blog/microservices-design-patterns)
 
-[](https://dzone.com/articles/blue-green-deployment-for-cloud-native-application)
+[Service Catalogs vs Service Portfolios: What's The Difference?](https://www.bmc.com/blogs/service-catalog-vs-service-portfolio-whats-the-difference/#)
