@@ -11,7 +11,8 @@
 - This solution works well with web applications, where a call goes back and forth...
 - There are a few concerns that need to be addressed.
 - When an application is broken down into smaller microservices.
-- If you take something into account, or take account of something, you consider it when you are thinking about a situation or deciding what to do.
+- If you take something into account or take account of something, you consider it when you are thinking about a situation or deciding what to do.
+- When the number of consecutive failures crosses a threshold, the circuit breaker trips, and for the duration of a timeout period, all attempts to invoke the remote service will fail immediately.
 
 # Words
 
@@ -38,3 +39,9 @@
 - Compensate: A child can never compensate his mother for her efforts.
 - Comprehensive: a comprehensive history of America
 - Robust: robust faith
+- Span: a bridge that spans the river.
+- Aggregate: the aggregate of human knowledge.
+- Portfolio: He received the portfolio of war.
+- Graceful: A very graceful woman
+- To invoke: to invoke aid.
+- Identical: Those two copies are identical.
