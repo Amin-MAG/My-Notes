@@ -313,17 +313,50 @@ One more important aspect which you need to understand is that the request from 
 
 The event sourcing design pattern creates events regarding the changes in the application state. Also, these events are stored as a sequence of events to help the developers track which change was made when. So, with the help of this, you can always adjust the application state to cope up with the past changes. You can also query these events, for any data change and simultaneously publish these events from the event store. Once the events are published, you can see the changes in the application state on the presentation layer.
 
-### 
-
 ![https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Event-Sourcing-Microservices-Design-Patterns-Edureka.png](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Event-Sourcing-Microservices-Design-Patterns-Edureka.png)
 
 ### **Branch Pattern**
 
-The branch microservice design pattern is a design pattern in which you can simultaneously process the requests and responses from two or more independent microservices. So, unlike the chained design pattern, the request is not passed in a sequence, but the request is passed to two or more mutually exclusive microservices chains. This design pattern extends the Aggregator design pattern and provides the flexibility to produce responses from multiple chains or single chains. For example, if you consider an e-commerce application, then you may need to retrieve data from multiple sources and this data could be a collaborated output of data from various services. So, you can use the branching pattern, to retrieve data from multiple sources.
+The branch microservice design pattern is a design pattern in which you can simultaneously process the requests and responses from two or more independent microservices. So, unlike the chained design pattern, the request is not passed in a sequence, but the request is passed to two or more mutually exclusive microservices chains. This design pattern extends the Aggregator design pattern and provides the flexibility to produce responses from multiple chains or single chains. For example, if you consider an e-commerce applicatibon, then you may need to retrieve data from multiple sources and this data could be a collaborated output of data from various services. So, you can use the branching pattern, to retrieve data from multiple sources.
 
 ![https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Branch-Microservices-Design-Patterns-Edureka.png](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Branch-Microservices-Design-Patterns-Edureka.png)
 
 There are many other patterns used with microservice architecture, like Sidecar, Continuous Delivery Patterns, and more.
+
+# Build microservice architecture
+
+### iPaaS
+
+> Integration Platform as a Service (iPaaS) is a suite of cloud services enabling development, execution and governance of integration flows connecting any combination of on premises and cloud-based processes, services, applications and data within individual or across multiple organizations.
+
+[https://www.gartner.com/en/information-technology/glossary/information-platform-as-a-service-ipaas](https://www.gartner.com/en/information-technology/glossary/information-platform-as-a-service-ipaas)
+
+## Design microservice
+
+Steps to design a microservice architecture:
+
+1. Understand the monolithic: Study the operation of the monolith and determine the component functions and services it performs.
+2. Develop the microservices: Develop each function of the application as an autonomous, independently-running microservice. These usually run in a container on a cloud server. Each microservice answers to a single function – like search, shipping, payment, accounting, payroll, etc.
+3. Integrate the larger application: Loosely integrate the microservices via API gateways so they work in concert to form the larger application. An iPaaS can play an essential role in this step.
+4. Allocate system usage: Use container orchestration tools like Kubernetes to manage the allocation of system resources for each microservice.
+
+## Switching to microservices
+
+### AWS
+
+**Here’s how Amazon did it:**
+
+- Developers analyzed the source code and pulled out units of code that served a single, functional purpose.
+- They wrapped these units in a web service interface.
+- For example: They developed a single service for the Buy button on a product page, a single service for the tax calculator function, and so on.
+
+Amazon assigned ownership of each independent service to a team of developers. This allowed teams to view development bottlenecks more granularly and resolve challenges more efficiently since a small number of developers could direct all of their attention to a single service.
+
+As for connecting the microservices to form the larger application:
+
+The solution to the single-purpose function problem was the creation of a rule, to be adhered to by developers, that functions could only communicate with the rest of the world through their own web service APIs. “This enabled us to create a very highly decoupled architecture,” said Brigham, “where these services could iterate independently from each other without any coordination between those services, as long as they adhered to that standard web service interface.” ([source](https://thenewstack.io/led-amazon-microservices-architecture/))
+
+Amazon’s “service-oriented architecture” was largely the beginning of what we now call microservices. It led to Amazon developing a number of solutions to support microservices architectures – such as Amazon AWS (Amazon Web Services) and Apollo – which it currently sells to enterprises throughout the world. Without its transition to microservices, Amazon could not have grown to become the most valuable company in the world – valued by market cap at [$941.19 billion on Feb. 28, 2020](https://ycharts.com/companies/AMZN/market_cap).
 
 # References
 
@@ -332,3 +365,5 @@ There are many other patterns used with microservice architecture, like Sidecar,
 [Microservices Design Patterns | Microservices Patterns | Edureka](https://www.edureka.co/blog/microservices-design-patterns)
 
 [Service Catalogs vs Service Portfolios: What's The Difference?](https://www.bmc.com/blogs/service-catalog-vs-service-portfolio-whats-the-difference/#)
+
+[4 Examples of Microservices in Action | DreamFactory Blog](https://blog.dreamfactory.com/microservices-examples/)
