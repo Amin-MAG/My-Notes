@@ -52,4 +52,13 @@
 - Intermediary: Importing goods and other intermediary trades
 - Granularity
 - Proxy: proxy vote
+- To opt for: Fewer students are opting for math classes.
+- Humongous
+- Mature: mature fruit, a mature scheme, a person of mature age, Wine matures slowly. Military service matured him.
+- Cement does not adhere well to glass.
+- To cope: She is ill and cannot cope with household chores.
+- Exclusive: we have the exclusive right to distribute this product. these bears live exclusively on fish. an exclusive interest in sports. an exclusive club that does not admit Blacks and Jews. an exclusive agent.
+- Plague: Wild dogs are a plague to squatters.
+- As a matter of fact: as a matter of fact, I was talking to him this afternoon.
+- Leverage: He has enough leverage to get anything done in this company.
 -
