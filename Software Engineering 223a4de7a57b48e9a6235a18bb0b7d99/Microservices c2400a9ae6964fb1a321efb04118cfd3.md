@@ -301,7 +301,29 @@ The blue-green deployment strategy can be implemented to reduce or remove downti
 - It gives a rapid way of rollback of the application in case of a production issue.
 - It helps build confidence in business users as testing the new version can be done in Production in isolation before rollout.
 
-There are many other patterns used with microservice architecture, like Sidecar, Chained Microservice, Branch Microservice, Event Sourcing Pattern, Continuous Delivery Patterns, and more.
+## Chained or Chain of Responsibility Pattern
+
+Chained or Chain of Responsibility Design Patterns produce a single output which is a combination of multiple chained outputs. So, if you have three services lined up in a chain, then, the request from the client is first received by Service A. Then, this service communicates with the next Service B and collects data. Finally, the second service communicates with the third service to generate the consolidated output. All these services use synchronous HTTP requests or responses for messaging. Also, until the request passes through all the services and the respective responses are generated, the client doesn’t get any output. So, it is always recommended not to make a long chain, as the client will wait until the chain is completed
+
+One more important aspect which you need to understand is that the request from Service A to Service B may look different from Service B to Service C. Similarly the response from Service C to Service B may look completely different from Service B to Service A.
+
+![https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Chained-Microservices-Design-Patterns-Edureka.png](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Chained-Microservices-Design-Patterns-Edureka.png)
+
+### **Event Sourcing Design Pattern**
+
+The event sourcing design pattern creates events regarding the changes in the application state. Also, these events are stored as a sequence of events to help the developers track which change was made when. So, with the help of this, you can always adjust the application state to cope up with the past changes. You can also query these events, for any data change and simultaneously publish these events from the event store. Once the events are published, you can see the changes in the application state on the presentation layer.
+
+### 
+
+![https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Event-Sourcing-Microservices-Design-Patterns-Edureka.png](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Event-Sourcing-Microservices-Design-Patterns-Edureka.png)
+
+### **Branch Pattern**
+
+The branch microservice design pattern is a design pattern in which you can simultaneously process the requests and responses from two or more independent microservices. So, unlike the chained design pattern, the request is not passed in a sequence, but the request is passed to two or more mutually exclusive microservices chains. This design pattern extends the Aggregator design pattern and provides the flexibility to produce responses from multiple chains or single chains. For example, if you consider an e-commerce application, then you may need to retrieve data from multiple sources and this data could be a collaborated output of data from various services. So, you can use the branching pattern, to retrieve data from multiple sources.
+
+![https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Branch-Microservices-Design-Patterns-Edureka.png](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Branch-Microservices-Design-Patterns-Edureka.png)
+
+There are many other patterns used with microservice architecture, like Sidecar, Continuous Delivery Patterns, and more.
 
 # References
 
