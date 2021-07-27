@@ -2,7 +2,7 @@
 
 # **What are Microservices?**
 
-**Microservices**, aka **[microservice architecture](https://www.edureka.co/blog/microservice-architecture/)**, is an architectural style that structures an application as a collection of small autonomous services, modeled around a **business domain.** In a Microservice Architecture, each service is self-contained and implements a single business capability. If you want a  detailed understanding on Microservices, you can refer to [my article on Microservices Architecture.](https://www.edureka.co/blog/microservices-tutorial-with-example)
+**Microservices**, aka **[microservice architecture](https://www.edureka.co/blog/microservice-architecture/)**, is an architectural style that structures an application as a collection of small autonomous services, modeled around a **business domain.** In a Microservice Architecture, each service is self-contained and implements a single business capability. If you want a  detailed understanding of Microservices, you can refer to [my article on Microservices Architecture.](https://www.edureka.co/blog/microservices-tutorial-with-example)
 
 ![https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/07/Picture3-1.png](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/07/Picture3-1.png)
 
@@ -44,7 +44,7 @@ A service portfolio is a complete listing of all of IT’s products and servic
 
 > A reverse proxy server sits between a network and multiple other internal resources. A large website might have dozens of servers that collectively serve requests from a single domain. To accomplish that, client requests would resolve to a machine that would act as a load balancer. The load balancer would then proxy that traffic back to the individual servers.
 
-Some popular open source reverse proxies are:
+Some popular open-source reverse proxies are:
 
 - Varnish
 - Squid
@@ -53,7 +53,7 @@ more on [https://www.varonis.com/blog/what-is-a-proxy-server/](https://www.varon
 
 ### API Granularity
 
-> In the tech world, granularity refers to the level of detailed information available within your API. Think of it like your bedsheet’s thread count. In a coarse-grained API, your data is typically housed in a few large components, while a fine-grained API spreads it across a large number of smaller components. If your components are equal in size, but vary in complexity and features, this could lead to a coarse-grained granularity. To build a fine-grained API, you divide your components based on the cohesiveness and coordination of their functionalities.
+> In the tech world, granularity refers to the level of detailed information available within your API. Think of it like your bedsheet’s thread count. In a coarse-grained API, your data is typically housed in a few large components, while a fine-grained API spreads it across a large number of smaller components. If your components are equal in size but vary in complexity and features, this could lead to a coarse-grained granularity. To build a fine-grained API, you divide your components based on the cohesiveness and coordination of their functionalities.
 
 [https://horizontal.blog/2020/06/09/fine-grained-vs-coarse-grained-apis/](https://horizontal.blog/2020/06/09/fine-grained-vs-coarse-grained-apis/)
 
@@ -125,7 +125,7 @@ Well, the solution to these kinds of problems could be the API Gateway Design Pa
 
 With the help of the API Gateway design pattern, the API gateways can convert the protocol request from one type to other. Similarly, it can also offload the authentication/authorization responsibility of the microservice.
 
-So, once the client sends a request, these requests are passed to the API Gateway which acts as an entry point to forward the clients’ requests to the appropriate microservices. Then, with the help of the load balancer, the load of the request is handled and the request is sent to the respective services. Microservices use Service Discovery which acts as a guide to find the route of communication between each of them. Microservices then communicate with each other via a stateless server i.e. either by HTTP Request/Message Bus.
+So, once the client sends a request, these requests are passed to the API Gateway which acts as an entry point to forward the clients’ requests to the appropriate microservices. Then, with the help of the load balancer, the load of the request is handled and the request is sent to the respective services. Microservices use Service Discovery, which acts as a guide to find the communication route between them. Microservices then communicate with each other via a stateless server i.e. either by HTTP Request/Message Bus.
 
 ![https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/API-Gateway-Microservices-Design-Patterns-Edureka.png](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/API-Gateway-Microservices-Design-Patterns-Edureka.png)
 
@@ -142,7 +142,7 @@ An API Gateway helps to address any concerns raised by microservice implementati
 
 We have talked about resolving the aggregating data problem in the API Gateway Pattern. However, we will talk about it here holistically. When breaking the business functionality into several smaller logical pieces of code, it becomes necessary to think about how to collaborate the data returned by each service. This responsibility cannot be left with the consumer, as then it might need to understand the internal implementation of the producer application.
 
-Aggregator in the computing world refers to a website or program that collects related items of data and displays them. So, even in Microservices patterns, Aggregator is a basic web page which invokes various services to get the required information or achieve the required functionality.
+Aggregator in the computing world refers to a website or program that collects related items of data and displays them. So, even in Microservices patterns, Aggregator is a basic web page that invokes various services to get the required information or achieve the required functionality.
 
 The Aggregator pattern helps to address this. It talks about how we can aggregate the data from different services and then send the final response to the consumer. This can be done in two ways:
 
@@ -152,9 +152,9 @@ The Aggregator pattern helps to address this. It talks about how we can aggregat
 
 It is recommended if any business logic is to be applied, then choose a composite microservice. Otherwise, the API Gateway is the established solution.
 
-Also, since the source of output gets divided on breaking the monolithic architecture to microservices, this pattern proves to be beneficial when you need an output by combining data from multiple services. So, if we have two services each having their own database, then an aggregator having a unique transaction ID, would collect the data from each individual microservice, apply the business logic and finally publish it as a [REST](https://www.edureka.co/blog/what-is-rest-api/) endpoint. Later on, the data collected can be consumed by the respective services which require that collected data.
+Also, since the source of output gets divided on breaking the monolithic architecture to microservices, this pattern proves to be beneficial when you need an output by combining data from multiple services. So, if we have two services each having its own database, then an aggregator having a unique transaction ID, would collect the data from each microservice, apply the business logic, and finally publish it as a [REST](https://www.edureka.co/blog/what-is-rest-api/) endpoint. Later on, the data collected can be consumed by the respective services which require that collected data.
 
-The Aggregate Design Pattern is based on the DRY principle. Based on this principle, you can abstract the logic into a composite microservices and aggregate that particular business logic into one service.
+The Aggregate Design Pattern is based on the DRY principle. Based on this principle, you can abstract the logic into composite microservices and aggregate that particular business logic into one service.
 
 So, for example, if you consider two services: Service A and B, then you can individually scale these services simultaneously by providing the data to the composite microservice.
 
@@ -168,6 +168,17 @@ With microservices, the UI has to be designed as a skeleton with multiple sectio
 
 ## Database Patterns
 
+For every application, there is a humongous amount of data present. So, when we break down an application from its monolithic architecture to microservices, it is very important to note that each microservice has a sufficient amount of data to process a request. So, either the system can have a database per each service or it can have a shared database per service.  You can use database per service and shared database per service to solve various problems.  The problems could be as follows:
+
+- Duplication of data and inconsistency
+- Different services have different kinds of storage requirements
+- Few business transactions can query the data, with multiple services
+- De-normalization of data
+
+Well, to solve the first three problems, I think you can go for database per service, as it will be then accessed by the microservice API itself. So, each microservice will have its own database ID,  which thereafter prevents the other services in the system to use that particular database. Apart from this, to solve the issue of de-normalization, you can choose shared databases per service,  to align more than one database for each microservice. This will help you gather data, for the monolithic applications which are broken down into microservices. But, you have to keep in mind that, you have to limit these databases to 2-3 microservices; else, scaling these services will be a problem.
+
+![https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Database-Microservices-Design-Patterns-Edureka.png](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Database-Microservices-Design-Patterns-Edureka.png)
+
 ### Database per Service
 
 There is a problem with how to define database architecture for microservices. Following are the concerns to be addressed:
@@ -178,7 +189,7 @@ There is a problem with how to define database architecture for microservices. F
 
 3. Some business transactions need to query data that is owned by multiple services.
 
-4. Databases must sometimes be replicated and sharded in order to scale.
+4. Databases must sometimes be replicated and sharded to scale.
 
 5. Different services have different data storage requirements.
 
@@ -188,7 +199,7 @@ To solve the above concerns, one database per microservice must be designed; it 
 
 We have talked about one database per service being ideal for microservices, but that is possible when the application is greenfield and to be developed with DDD. But if the application is a monolith and trying to break into microservices, denormalization is not that easy. What is the suitable architecture in that case?
 
-A shared database per service is not ideal, but that is the working solution for the above scenario. Most people consider this an anti-pattern for microservices, but for brownfield applications, this is a good start to break the application into smaller logical pieces. This should not be applied for greenfield applications. In this pattern, one database can be aligned with more than one microservice, but it has to be restricted to 2-3 maximum, otherwise scaling, autonomy, and independence will be challenging to execute.
+A shared database per service is not ideal, but that is the working solution for the above scenario. Most people consider this an anti-pattern for microservices, but for brownfield applications, this is a good start to break the application into smaller logical pieces. This should not be applied to greenfield applications. In this pattern, one database can be aligned with more than one microservice, but it has to be restricted to 2-3 maximum, otherwise scaling, autonomy, and independence will be challenging to execute.
 
 ### Command Query Responsibility Segregation (CQRS)
 
@@ -196,7 +207,7 @@ Once we implement database-per-service, there is a requirement to query, which r
 
 CQRS suggests splitting the application into two parts — the command side and the query side. The command side handles the Create, Update, and Delete requests. The query side handles the query part by using the materialized views. The **event sourcing pattern** is generally used along with it to create events for any data change. Materialized views are kept updated by subscribing to the stream of events.
 
-A materialized view is a pre-computed data set derived from a query specification (the SELECT in the view definition) and stored for later use. Because the data is pre-computed, querying a materialized view is faster than executing a query against the base table of the view.
+A materialized view is a pre-computed data set derived from a query specification (the SELECT in the view definition) and stored for later use. Because the data is pre-computed, querying a materialized view is faster than executing a query against the view's base table.
 
 ### Saga Pattern
 
@@ -274,7 +285,7 @@ A service registry needs to be created which will keep the metadata of each prod
 
 A service generally calls other services to retrieve data, and there is the chance that the downstream service may be down. There are two problems with this: first, the request will keep going to the down service, exhausting network resources, and slowing performance. Second, the user experience will be bad and unpredictable. How do we avoid cascading service failures and handle failures gracefully?
 
-The consumer should invoke a remote service via a proxy that behaves in a similar fashion to an electrical circuit breaker. When the number of consecutive failures crosses a threshold, the circuit breaker trips, and for the duration of a timeout period, all attempts to invoke the remote service will fail immediately. After the timeout expires the circuit breaker allows a limited number of test requests to pass through. If those requests succeed, the circuit breaker resumes normal operation. Otherwise, if there is a failure, the timeout period begins again.
+The consumer should invoke a remote service via a proxy that behaves similarly to an electrical circuit breaker. When the number of consecutive failures crosses a threshold, the circuit breaker trips, and for the duration of a timeout period, all attempts to invoke the remote service will fail immediately. After the timeout expires the circuit breaker allows a limited number of test requests to pass through. If those requests succeed, the circuit breaker resumes normal operation. Otherwise, if there is a failure, the timeout period begins again.
 
 Netflix Hystrix is a good implementation of the circuit breaker pattern. It also helps you to define a fallback mechanism that can be used when the circuit breaker trips. That provides a better user experience.
 
@@ -288,7 +299,7 @@ The blue-green deployment strategy can be implemented to reduce or remove downti
 
 - It helps to reduce the downtime and even reduces it to zero depending on the application design and deployment approach.
 - It gives a rapid way of rollback of the application in case of a production issue.
-- It helps to build confidence in business users as testing of the new version can be done in Production in isolation before rollout.
+- It helps build confidence in business users as testing the new version can be done in Production in isolation before rollout.
 
 There are many other patterns used with microservice architecture, like Sidecar, Chained Microservice, Branch Microservice, Event Sourcing Pattern, Continuous Delivery Patterns, and more.
 
