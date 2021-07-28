@@ -63,6 +63,8 @@ more on [https://www.varonis.com/blog/what-is-a-proxy-server/](https://www.varon
 
 [https://www.redhat.com/en/topics/api/what-does-an-api-gateway-do#:~:text=An API gateway is an,and return the appropriate result](https://www.redhat.com/en/topics/api/what-does-an-api-gateway-do#:~:text=An%20API%20gateway%20is%20an,and%20return%20the%20appropriate%20result).
 
+[API Gateway](Microservices%20c2400a9ae6964fb1a321efb04118cfd3/API%20Gateway%20005bca0ec0bc450198b03529fb64c77b.md)
+
 # Principles
 
 The principles that microservice has been built on.
@@ -90,6 +92,14 @@ Microservices also offer improved fault isolation whereby in the case of an erro
 
 ## Decomposition Patterns
 
+Microservices are developed with an idea on developers mind to create small services, with each having their own functionality. But, breaking an application into small autonomous units has to be done logically. So, to decompose a small or big application into small services, you can use the Decomposition patterns.
+
+With the help of this pattern, either you can decompose an application based on business capability or on based on the sub-domains. For example, if you consider an e-commerce application, then you can have separate services for orders, payment, customers, products if you decompose by business capability.
+
+But, in the same scenario, if you design the application by decomposing the sub-domains, then you can have services for each and every class. Here, in this example, if you consider the customer as a class, then this class will be used in customer management, customer support, etc. So, to decompose, you can use the Domain-Driven Design through which the whole domain model is broken down into sub-domains. Then, each of these sub-domains will have their own specific model and scope(bounded context).  Now, when a developer designs microservices, he/she will design those services around the scope or bounded context.
+
+Though these patterns may sound feasible to you, they are not feasible for big monolithic applications. This is because of the fact that identifying sub-domains and business capabilities is not an easy task for big applications. So, the only way to decompose big monolithic applications is by following the Vine Pattern or the Strangler Pattern.
+
 ### Decompose by business
 
 Microservices is all about making services loosely coupled, applying the single responsibility principle. However, breaking an application into smaller pieces has to be done logically. How do we decompose an application into small services?
@@ -109,6 +119,8 @@ For the "God Classes" issue, DDD (Domain-Driven Design) comes to the rescue. It 
 So far, the design patterns we talked about were decomposing applications for greenfield, but 80% of the work we do is with brownfield applications, which are big, monolithic applications. Applying all the above design patterns to them will be difficult because breaking them into smaller pieces at the same time it's being used live is a big task.
 
 The Strangler pattern comes to the rescue. The Strangler pattern is based on an analogy to a vine that strangles a tree that it’s wrapped around. This solution works well with web applications, where a call goes back and forth, and for each URI call, a service can be broken into different domains and hosted as separate services. The idea is to do it one domain at a time. This creates two separate applications that live side by side in the same URI space. Eventually, the newly refactored application “strangles” or replaces the original application until finally, you can shut off the monolithic application.
+
+According to the strangler pattern, two separate applications will live side by side in the same URI space, and one domain will be taken in to account at an instance of time. So, eventually, the new refactored application wraps around or strangles or replaces the original application until you can shut down the monolithic application
 
 ## Integration Patterns
 
@@ -287,6 +299,10 @@ A service generally calls other services to retrieve data, and there is the chan
 
 The consumer should invoke a remote service via a proxy that behaves similarly to an electrical circuit breaker. When the number of consecutive failures crosses a threshold, the circuit breaker trips, and for the duration of a timeout period, all attempts to invoke the remote service will fail immediately. After the timeout expires the circuit breaker allows a limited number of test requests to pass through. If those requests succeed, the circuit breaker resumes normal operation. Otherwise, if there is a failure, the timeout period begins again.
 
+With the help of this pattern, the client will invoke a remote service via a proxy. This proxy will basically behave as a circuit barrier. So, when the number of failures crosses the threshold number, the circuit breaker trips for a particular time period. Then, all the attempts to invoke the remote service will fail in this timeout period. Once that time period is finished, the circuit breaker will allow a limited number of tests to pass through and if those requests succeed, the circuit breaker resumes back to the normal operation. Else, if there is a failure, then the time out period begins again.
+
+![https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Circuit-Breaker-Microservices-Design-Patterns-Edureka.png](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Circuit-Breaker-Microservices-Design-Patterns-Edureka.png)
+
 Netflix Hystrix is a good implementation of the circuit breaker pattern. It also helps you to define a fallback mechanism that can be used when the circuit breaker trips. That provides a better user experience.
 
 ### Blue-Green Deployment Pattern
@@ -309,13 +325,13 @@ One more important aspect which you need to understand is that the request from 
 
 ![https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Chained-Microservices-Design-Patterns-Edureka.png](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Chained-Microservices-Design-Patterns-Edureka.png)
 
-### **Event Sourcing Design Pattern**
+## **Event Sourcing Design Pattern**
 
 The event sourcing design pattern creates events regarding the changes in the application state. Also, these events are stored as a sequence of events to help the developers track which change was made when. So, with the help of this, you can always adjust the application state to cope up with the past changes. You can also query these events, for any data change and simultaneously publish these events from the event store. Once the events are published, you can see the changes in the application state on the presentation layer.
 
 ![https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Event-Sourcing-Microservices-Design-Patterns-Edureka.png](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/08/Event-Sourcing-Microservices-Design-Patterns-Edureka.png)
 
-### **Branch Pattern**
+## **Branch Pattern**
 
 The branch microservice design pattern is a design pattern in which you can simultaneously process the requests and responses from two or more independent microservices. So, unlike the chained design pattern, the request is not passed in a sequence, but the request is passed to two or more mutually exclusive microservices chains. This design pattern extends the Aggregator design pattern and provides the flexibility to produce responses from multiple chains or single chains. For example, if you consider an e-commerce applicatibon, then you may need to retrieve data from multiple sources and this data could be a collaborated output of data from various services. So, you can use the branching pattern, to retrieve data from multiple sources.
 
@@ -357,6 +373,31 @@ As for connecting the microservices to form the larger application:
 The solution to the single-purpose function problem was the creation of a rule, to be adhered to by developers, that functions could only communicate with the rest of the world through their own web service APIs. “This enabled us to create a very highly decoupled architecture,” said Brigham, “where these services could iterate independently from each other without any coordination between those services, as long as they adhered to that standard web service interface.” ([source](https://thenewstack.io/led-amazon-microservices-architecture/))
 
 Amazon’s “service-oriented architecture” was largely the beginning of what we now call microservices. It led to Amazon developing a number of solutions to support microservices architectures – such as Amazon AWS (Amazon Web Services) and Apollo – which it currently sells to enterprises throughout the world. Without its transition to microservices, Amazon could not have grown to become the most valuable company in the world – valued by market cap at [$941.19 billion on Feb. 28, 2020](https://ycharts.com/companies/AMZN/market_cap).
+
+### کافه بازار
+
+پنل توسعه‌دهندگان کافه‌بازار وابستگی زیادی به پروژه‌ی اصلی بازار داشت، و این موضوع ادامه‌ی توسعه پنل و اضافه کردن امکانات جدید رو سخت کرده بود. به روز نبودن، کثیفی کد و وابستگی‌های دست‌و‌پا گیر ما رو به سمتِ بازنویسی پنل توسعه‌دهندگان برد.
+
+هدف ما از بازنویسی پنل، کاهش هزینه‌ی توسعه و نگهداری سیستم بود. در این مسیر روش‌های مختلفی رو امتحان کردیم که بعضی از اونها نتیجه‌ی عکس داشت. طوری که نه تنها هزینه توسعه رو کاهش نمی‌داد بلکه بیشتر هم می‌کرد.
+
+از یک [سیستم یکپارچه (Monolithic)](https://microservices.io/patterns/monolithic.html) شروع کردیم، تا تولید چندین [مایکروسرویس (Microservices)](https://martinfowler.com/articles/microservices.html) رفتیم و در نهایت به یک طراحی ساده رسیدیم تا روند توسعه رو ساده‌تر کنیم.
+
+در این مسیر با چالش‌های فنی و ساختاری مربوط به تیم مواجه شدیم و نکاتی رو یاد گرفتیم که در ادامه با هم می‌بینیم.
+
+خلاصه‌اش اینکه:
+
+- فقط زمانی کاری رو انجام بدیم که واقعا بهش نیاز داریم و [Over-engineering](https://www.codesimplicity.com/post/what-is-overengineering/) نکنیم. از قدیم هم گفتن «سری رو که درد نمی‌کنه، دستمال نمی‌بندن» :-)
+- یک تیم متمرکز با هدف مشخص، عملکرد بهتری می‌تونه داشته باشه.
+
+ادامه ی مقاله در صفحه پایین
+
+[کافه بازار - Monolithic به Microservices](Microservices%20c2400a9ae6964fb1a321efb04118cfd3/%DA%A9%D8%A7%D9%81%D9%87%20%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1%20-%20Monolithic%20%D8%A8%D9%87%20Microservices%2064960a9bca07432ea6578064a9847d50.md)
+
+[https://www.notion.so/Microservices-c2400a9ae6964fb1a321efb04118cfd3#b3ed805bd3ea47c29b0ee79d7183c1ab]()
+
+### 
+
+[Interview Questions](Microservices%20c2400a9ae6964fb1a321efb04118cfd3/Interview%20Questions%204b38b3e3e29b48d2ac1a84891042c2c9.md)
 
 # References
 
