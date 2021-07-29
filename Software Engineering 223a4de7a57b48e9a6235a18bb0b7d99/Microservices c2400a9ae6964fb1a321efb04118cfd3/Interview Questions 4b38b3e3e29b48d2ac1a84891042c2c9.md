@@ -94,8 +94,24 @@ You can list down the characteristics of microservices as follows:
 
 ![Interview%20Questions%204b38b3e3e29b48d2ac1a84891042c2c9/Untitled.png](Interview%20Questions%204b38b3e3e29b48d2ac1a84891042c2c9/Untitled.png)
 
+## Why there is a need for DDD? (Domain-Driven Design)
+
+![Interview%20Questions%204b38b3e3e29b48d2ac1a84891042c2c9/Untitled%201.png](Interview%20Questions%204b38b3e3e29b48d2ac1a84891042c2c9/Untitled%201.png)
+
+## What is Ubiquitous Language?
+
+If you have to define the **Ubiquitous Language (UL)**, then it is a common language used by developers and users of a specific domain through which the domain can be explained easily.
+
+The ubiquitous language has to be crystal clear so that it brings all the team members on the same page and also translates in such a way that a machine can understand.
+
+## What is cohesion?
+
+The degree to which the elements inside a module belong together is said to be cohesion.
+
+## What is coupling?
+
+The measure of the strength of the dependencies between components is said to be coupling. A good design is always said to have High Cohesion and Low Coupling.
+
 # References
 
 [Top Microservices Interview Questions and Answers | Edureka](https://www.edureka.co/blog/interview-questions/microservices-interview-questions/)
-
-***Independent Development***
