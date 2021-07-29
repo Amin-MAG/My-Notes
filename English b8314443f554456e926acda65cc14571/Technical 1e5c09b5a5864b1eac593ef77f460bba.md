@@ -15,6 +15,7 @@
 - When the number of consecutive failures crosses a threshold, the circuit breaker trips, and for the duration of a timeout period, all attempts to invoke the remote service will fail immediately.
 - How to handle different types of Protocols some of which might not be supported by producer microservice.
 - t guarantees to deliver unparalleled latency performance and scalability for all our microservice applications regardless of where they run.
+- In layman terms, you must have seen how bees build their honeycomb by aligning hexagonal wax cells.
 
 # Words
 
@@ -56,6 +57,7 @@
 - To opt for: Fewer students are opting for math classes.
 - Humongous
 - Mature: mature fruit, a mature scheme, a person of mature age, Wine matures slowly. Military service matured him.
+- Maturity: Beth shows a maturity way beyond her 16 years. The tree will reach only 5 feet at maturity. He reached maturity.
 - The cement does not adhere well to the glass.
 - To cope: She is ill and cannot cope with household chores.
 - Exclusive: we have the exclusive right to distribute this product. these bears live exclusively on fish. exclusive interest in sports. an exclusive club that does not admit Blacks and Jews. an exclusive agent.
@@ -67,3 +69,6 @@
 - Insulation: the insulation of electrical wires.
 - Regardless: I will go regardless of the consequences.
 - Feasible: a feasible plan
+- Resort: in the last resort
+- Correlate: Old age and conservatism are often correlated.
+- Coarse: coarse cloth, coarse finger
