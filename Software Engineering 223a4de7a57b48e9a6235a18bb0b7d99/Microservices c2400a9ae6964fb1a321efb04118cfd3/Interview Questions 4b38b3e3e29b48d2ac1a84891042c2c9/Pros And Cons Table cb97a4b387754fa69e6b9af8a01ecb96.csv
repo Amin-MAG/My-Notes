@@ -1,0 +1,7 @@
+﻿Pros,Cons
+Freedom to use different technologies,Increases troubleshooting challenges
+Each microservices focuses on single capability,Increases delay due to remote calls
+Supports individual deployable units,Increased efforts for configuration and other operations
+Allow frequent software releases,Difficult to maintain transaction safety
+Ensures security of each service,Tough to track data across various boundaries
+Mulitple services are parallelly developed and deployed,Difficult to code between services

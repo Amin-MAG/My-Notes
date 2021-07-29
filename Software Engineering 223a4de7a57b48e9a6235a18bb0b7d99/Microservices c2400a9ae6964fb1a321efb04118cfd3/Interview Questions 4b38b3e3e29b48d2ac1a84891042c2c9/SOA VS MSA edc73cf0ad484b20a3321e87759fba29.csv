@@ -1,0 +1,11 @@
+﻿SOA,Microservices
+Follows “share-as-much-as-possible” architecture approach,Follows “share-as-little-as-possible” architecture approach
+Importance is on business functionality reuse,Importance is on the concept of “bounded context”
+They have common governance and standards,They focus on people collaboration and freedom of other options
+Uses Enterprise Service bus (ESB) for communication,Simple messaging system
+They support multiple message protocols,They use lightweight protocols such as HTTP/REST etc.
+Multi-threaded with more overheads to handle I/O,Single-threaded usually with the use of Event Loop features for non-locking I/O handling
+Maximizes application service reusability,Focuses on decoupling
+Traditional Relational Databases are more often used,Modern Relational Databases are more often used
+A systematic change requires modifying the monolith,A systematic change is to create a new service
+"DevOps / Continuous Delivery is becoming popular, but not yet mainstream",Strong focus on DevOps / Continuous Delivery
