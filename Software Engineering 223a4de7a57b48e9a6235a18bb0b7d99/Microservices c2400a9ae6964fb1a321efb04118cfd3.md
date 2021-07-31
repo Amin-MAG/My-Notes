@@ -65,6 +65,18 @@ more on [https://www.varonis.com/blog/what-is-a-proxy-server/](https://www.varon
 
 [API Gateway](Microservices%20c2400a9ae6964fb1a321efb04118cfd3/API%20Gateway%20005bca0ec0bc450198b03529fb64c77b.md)
 
+## DDD (Domain Driven Design)
+
+Domain-driven design is a way of looking at software from top to down. When we are developing software our focus shouldn't be primarily on technology, it should be on business or whatever activity that we are trying to assist with the software, the domain.
+
+The domain is the business that we trying to solve with software. We have lots of services and each one of them is going to solve a part of that domain.
+
+![Microservices%20c2400a9ae6964fb1a321efb04118cfd3/Untitled.png](Microservices%20c2400a9ae6964fb1a321efb04118cfd3/Untitled.png)
+
+Ubiquitous Language: something that can be understood by both technical people and domain experts.
+
+Bounded Context:
+
 # Principles
 
 The principles that microservice has been built on.

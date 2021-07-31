@@ -72,3 +72,6 @@
 - Resort: in the last resort
 - Correlate: Old age and conservatism are often correlated.
 - Coarse: coarse cloth, coarse finger
+- Agenda: be on the agenda
+- Ubiquitous: a ubiquitous insect, like the fly
+-
