@@ -16,6 +16,7 @@
 - How to handle different types of Protocols some of which might not be supported by producer microservice.
 - t guarantees to deliver unparalleled latency performance and scalability for all our microservice applications regardless of where they run.
 - In layman terms, you must have seen how bees build their honeycomb by aligning hexagonal wax cells.
+- This is a relatively simple project which uses the components as depicted in the following figure.
 
 # Words
 
@@ -74,4 +75,8 @@
 - Coarse: coarse cloth, coarse finger
 - Agenda: be on the agenda
 - Ubiquitous: a ubiquitous insect, like the fly
+- Versatile: a very versatile performer
+- Snippet: snippets of information
+- Repudiate: He repudiated all offers of friendship.
+- Integrity: the territorial integrity of the country
 -
