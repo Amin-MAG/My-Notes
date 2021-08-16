@@ -57,13 +57,48 @@
 - Aesthetic
 - To renege: to renege on the payment of a loan.
 
----
-
-# E01
+# E05
 
 ## Sentences
 
-- 
+- I'm gonna beat you in the face.
+- Is he toying with me?
+- A guy with three assault convictions.
+- Peter will pull out all of his support and pass on any further funding.
+- I'm gonna be straight to you.
+
+## Words
+
+- Irrelevant: His speech was padded out with irrelevant material.
+- Chaos: For a while after the death of Nadershah, chaos gripped the country.
+- Cubicle
+- Gringo
+- To scurry: Kindergarten kids scurried down hallways.
+- Bust
+- To invest: Fog invests in the city.
+
+# E06
+
+## Sentences
+
+- Try not to dwell on it.
+
+## Words
+
+- To carve-up
+- To emasculate: Corruption and discrimination had emasculated the country's laws.
+
+# E07
+
+## Words
+
+- Brutal
+
+# E08
+
+## Sentences
+
+- A question, regarding our hotel accommodations?
 
 ## Words
 
