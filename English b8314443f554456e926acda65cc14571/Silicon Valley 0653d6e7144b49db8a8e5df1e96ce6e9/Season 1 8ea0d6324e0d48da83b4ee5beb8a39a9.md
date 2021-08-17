@@ -99,7 +99,3 @@
 ## Sentences
 
 - A question, regarding our hotel accommodations?
-
-## Words
-
-- s
