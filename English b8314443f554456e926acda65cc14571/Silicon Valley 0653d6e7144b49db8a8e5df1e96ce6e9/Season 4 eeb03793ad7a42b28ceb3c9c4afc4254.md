@@ -58,6 +58,23 @@
 - Adage
 - To extricate: She found it difficult to extricate herself from his embrace.
 
+# E07
+
+## Words
+
+- Shrinky
+- To screw
+
+# E08
+
+## Sentences
+
+## Words
+
+- To oust: His political rivals ousted him from office.
+- Agitated
+- Metaphor
+
 ---
 
 # E01
@@ -68,4 +85,5 @@
 
 ## Words
 
+- 
 -
