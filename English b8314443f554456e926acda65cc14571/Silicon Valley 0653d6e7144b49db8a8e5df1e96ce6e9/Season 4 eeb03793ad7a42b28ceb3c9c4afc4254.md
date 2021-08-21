@@ -75,9 +75,25 @@
 - Agitated
 - Metaphor
 
----
+# E09
 
-# E01
+## Sentences
+
+- A veritable who's who of nobodies.
+- Immoral behavior
+- Engorged with the blood of a youthful charlatan.
+- You agonize .over using a stolen log-in.
+- You are out on your ass.
+- You don't think this had anything to do with us?
+
+## Words
+
+- Charlatan: The charlatan who had presented himself as a physician was arrested.
+- Engorge
+- Petty
+- Illustrative of our vas differences.
+
+# E10
 
 ## Sentences
 
@@ -85,5 +101,4 @@
 
 ## Words
 
-- 
 -
