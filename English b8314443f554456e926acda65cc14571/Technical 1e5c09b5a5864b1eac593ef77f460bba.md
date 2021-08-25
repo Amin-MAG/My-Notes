@@ -18,7 +18,7 @@
 - In layman terms, you must have seen how bees build their honeycomb by aligning hexagonal wax cells.
 - This is a relatively simple project which uses the components as depicted in the following figure.
 
-# Words
+# Words 01
 
 - De facto
 - Drawback
@@ -79,4 +79,10 @@
 - Snippet: snippets of information
 - Repudiate: He repudiated all offers of friendship.
 - Integrity: the territorial integrity of the country
+
+# Word 02
+
+- Proprietary: proprietary rights
+- vicinity: two schools in close vicinity
+- Miscellaneous: She gave me some money to cover any miscellaneous expenses.
 -
