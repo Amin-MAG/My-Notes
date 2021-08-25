@@ -43,14 +43,27 @@
 - To endorse: Before you cash a check you have to endorse it.
 - Virtue: the many virtues of fasting
 
----
-
-# E00
+# E06
 
 ## Sentences
 
-- 
+- I walk everyone to their car.
+- What can we do to sweeten the pot?
 
 ## Words
 
--
+- Safe bet
+- Deficit: a budget deficit
+- To deteriorate: Wood deteriorates faster in damp places.
+- To throttle: He throttled the enemy with his bare hands.
+
+# E07
+
+## Words
+
+- Prolapse
+- Bribe: The employee admitted that he had been receiving bribes.
+- Liability: liability for an accident
+- Enthusiasm: The play aroused his enthusiasm.
+- Angry grunt
+- Gasping
