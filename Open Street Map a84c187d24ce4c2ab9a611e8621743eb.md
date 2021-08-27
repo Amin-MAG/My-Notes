@@ -31,6 +31,43 @@ Users can add and modify OpenStreetMap data thanks to open-source editors like i
 - `Slippy map library Leaflet (JavaScript)`: Provides the general slippy map interface. Javascript whizzes can help us make the home page's maps even faster.
 - `Map rendering with Mapnik (C++)`: The main backend for the rendering of the maps that are produced from OSM data. Mapnik is an open-source toolkit for rendering maps. Among other things, it is used to render the four main Slippy Map layers on the OpenStreetMap website. It supports a variety of geospatial data formats and provides flexible styling options for designing many different kinds of maps. [https://github.com/mapnik/mapnik/](https://github.com/mapnik/mapnik/)
 - `Tile rendering system with Tirex (C++ and Perl)`: Tirex is a bunch of tools that let you run a tile server. A tile server is a web server that hands out pre-rendered map raster images to clients. [https://github.com/openstreetmap/tirex/](https://github.com/openstreetmap/tirex/)
+
+# Elements
+
+**Elements** are the basic components of OpenStreetMap's conceptual data model of the physical world. Elements are of three types:
+
+- **[nodes](https://wiki.openstreetmap.org/wiki/Node)** (defining points in space),
+- **[ways](https://wiki.openstreetmap.org/wiki/Way)** (defining linear features and area boundaries), and
+- **[relations](https://wiki.openstreetmap.org/wiki/Relation)** (which are sometimes used to explain how other elements work together).
+
+All of the above can have one or more associated tags (which describe the meaning of a particular element).
+
+## Node
+
+A **node** is one of the core [elements](https://wiki.openstreetmap.org/wiki/Elements) in the OpenStreetMap data model. It consists of a single point in space defined by its **latitude**, **longitude,** and **node id**. A third, optional dimension (altitude) can also be included `key:ele` (abbreviation for "elevation")
+
+### Point features
+
+A node can also be defined as part of a particular `layer=*` or `level=*`, where distinct features pass over or under one another; say, at a bridge.
+
+### Nodes on ways
+
+Many nodes form part of one or more ways, defining the shape or "path" of the way.
+
+### Structure
+
+- `id`: 64-bit integer
+- `lat`: between −90.0000000 and 90.0000000
+- `lon`: between −180.0000000 and 180.0000000
+- `tags`: a set of tags with `k` (key) and `v` (value) attributes.
+
+```xml
+<node id="25496583" lat="51.5173639" lon="-0.140043" version="1" changeset="203496" user="80n" uid="1238" visible="true" timestamp="2007-01-28T11:40:26Z">
+    <tag k="highway" v="traffic_signals"/>
+</node>
+```
 # Resources
 
 [Getting started with OpenStreetMap](https://medium.com/@jinalfoflia/getting-started-with-openstreetmap-7f29abb2998c)
+
+[OpenStreetMap Wiki](https://wiki.openstreetmap.org/wiki)
