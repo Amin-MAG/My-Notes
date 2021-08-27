@@ -2,3 +2,5 @@ downloads
 extracts
 
 download_en.sh
+*.DS_Store
+
