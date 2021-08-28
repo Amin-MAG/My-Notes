@@ -291,6 +291,45 @@ You can not be certain that:
 - id or user name present (Not always, due to [anonymous edits](https://wiki.openstreetmap.org/wiki/Anonymous_edits) in a very early stage)
 - [Changesets](https://wiki.openstreetmap.org/wiki/Changesets) have an attribute num_changes (This was abandoned from the history export tool because of inconsistencies)
 - version ordering is sequential (doesn't have to be)
+
+# Planet.osm
+
+**Planet.osm** is the OpenStreetMap data in one file: all the [nodes, ways and relations](https://wiki.openstreetmap.org/wiki/Elements) that make up our map. A new version is released every week. It's a big file (on 2021-06-01, the plain OSM XML variant takes over 1467.2 GB when uncompressed from the 106.5 GB bzip2-compressed or 59.1 GB [PBF](https://wiki.openstreetmap.org/wiki/PBF_Format)-compressed downloaded data file).
+
+There are also files called **Extracts** which contain OpenStreetMap Data for individual continents, countries, and metropolitan areas.
+
+## Format
+
+The two main formats used are [PBF](https://wiki.openstreetmap.org/wiki/PBF_Format) or `bzip2-compressed` [OSM XML](https://wiki.openstreetmap.org/wiki/OSM_XML). PBF (Protocol Buffer Format) is a compact binary format that is smaller to download and much faster to process and should be used when possible. Most common tools using OSM data support PBF.
+
+For an overview over all `osm` file formats and conversion tools have a look at [OSM file formats](https://wiki.openstreetmap.org/wiki/OSM_file_formats).
+
+If you are using traditional GIS tools you may want to look at [Processed data providers](https://wiki.openstreetmap.org/wiki/Processed_data_providers).
+
+### **Unpacking `.bz2` files**
+
+Osmosis and `osm2pgsql` allow you to use the files in `bz2-compressed` form. If you need to unpack it from `bz2` format, use [7-zip](http://www.7-zip.org/) on Windows; on Linux just type:
+
+```bash
+$ bzip2 -d planet.osm.bz2;
+```
+
+or your OS may support double-click unpacking. See Wikipedia's [list of compression programs](https://en.wikipedia.org/wiki/Comparison_of_file_archivers#Archive_format_support).
+
+# Database
+
+The main database is a key component of OpenStreetMap, because obviously it's where we keep all our data.
+
+# Osmosis
+
+Grab small region:
+
+```bash
+$ osmosis --rri --simc --rx current.osm --ac --bb \
+				left=42 right=42 top=42 bottom=42 \
+				clipIncompleteEntities=yes --wx new.osm
+```
+
 # Resources
 
 [Getting started with OpenStreetMap](https://medium.com/@jinalfoflia/getting-started-with-openstreetmap-7f29abb2998c)
