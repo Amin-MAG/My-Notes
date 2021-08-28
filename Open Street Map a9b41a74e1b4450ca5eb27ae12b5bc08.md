@@ -190,6 +190,107 @@ A one-way residential street, tagged as [highway](https://wiki.openstreetmap.or
 ```
 
 The nodes defining the geometry of the way are enumerated in the correct order, and indicated only by reference using their unique identifier. These nodes must have been already defined separately with their coordinates.
+
+## Relation
+
+A relation is a group of elements. In more technical terms, it is one of the core data elements and consists of one or more tags and an ordered list of one or more nodes, ways and/or relations as members which is used to define logical or geographic relationships between other elements. A member of a relation can optionally have a role which describes the part that a particular feature plays within a relation.
+
+### Usage
+
+They are not designed to hold loosely associated but widely spread items. It would be inappropriate, for instance, to use a relation to group 'All footpaths in East Anglia'.
+
+### Size
+
+It is recommended to use not more than about 300 members per relation. Reason: The more members are stuffed into a single relation, the harder it is to handle, the easier it breaks, the easier conflicts can show up and the more resources it consumes on the database and server. If you have to handle more than that amount, some recommend creating several relations and combining them in a Super-Relation (a good concept on paper but software support is poor)
+
+### Roles
+
+A role is an optional textual field describing the function of a member of the relation. For example, in a multipolygon relation, role inner and role outer are used to specify whether a way forms the inner or outer part of that polygon. In some countries, role east can indicate that a way carries only the eastbound lanes of a route, as an alternative to a separate relation representing the eastbound route direction.
+
+### Types ([https://wiki.openstreetmap.org/wiki/Types_of_relation](https://wiki.openstreetmap.org/wiki/Types_of_relation))
+
+[`Multipolygons`](https://wiki.openstreetmap.org/wiki/Multipolygon) are one of two methods to represent  [areas](https://wiki.openstreetmap.org/wiki/Area) in OpenStreetMap. While most areas are represented as a single  closed way, almost all area features can also be mapped using multipolygon relations. This is needed when the area needs to exclude inner rings (holes), has multiple outer areas (exclaves), or uses more than ~2000 nodes. In the [multipolygon relation](https://wiki.openstreetmap.org/wiki/Relation:multipolygon), the *role* [inner](https://wiki.openstreetmap.org/wiki/Role:inner) and *role* [outer](https://wiki.openstreetmap.org/wiki/Role:outer) roles are used to specify whether a member [way](https://wiki.openstreetmap.org/wiki/Way) forms the inner or outer part of that polygon enclosing an area. For example, an inner way could define an island in a lake (which is mapped as relation).
+
+`Bus Routes` : Each variation of a bus route itinerary is represented by a relation with type=route, route=bus and ref=* and operator=* tags. The first members in the route relation are the nodes representing the stops. These are ordered in the way the vehicles travel along them. Then the ways are added. In PT v2 the ways form an ordered sequence, along the stop nodes. The ways don't get roles. If they form a continuous sequence this is apparent from the continuous line along them (in JOSM's relation editor).
+
+## Tag
+
+Tags describe the meaning of the particular element to which they are attached.
+
+A tag consists of two free format text fields; a 'key' and a 'value'. Each of these are Unicode strings of up to 255 characters. For example, [highway](https://wiki.openstreetmap.org/wiki/Key:highway)=[residential](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dresidential) defines the way as a road whose main function is to give access to people's homes. An element cannot have 2 tags with the same 'key', the 'key's must be unique.
+
+# OSM XML/XDS
+
+An XSD (XML Schema) file defines the format of an XML file, in terms of expected elements, how they are ordered, nested and repeated, and what attributes they have. Many downstream programs that consume OSM data will require, or behave better, when supplied with a well constructed and comprehensive `.xsd` file.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.0.2">
+ <bounds minlat="54.0889580" minlon="12.2487570" maxlat="54.0913900" maxlon="12.2524800"/>
+ <node id="298884269" lat="54.0901746" lon="12.2482632" user="SvenHRO" uid="46882" visible="true" version="1" changeset="676636" timestamp="2008-09-21T21:37:45Z"/>
+ <node id="261728686" lat="54.0906309" lon="12.2441924" user="PikoWinter" uid="36744" visible="true" version="1" changeset="323878" timestamp="2008-05-03T13:39:23Z"/>
+ <node id="1831881213" version="1" changeset="12370172" lat="54.0900666" lon="12.2539381" user="lafkor" uid="75625" visible="true" timestamp="2012-07-20T09:43:19Z">
+  <tag k="name" v="Neu Broderstorf"/>
+  <tag k="traffic_sign" v="city_limit"/>
+ </node>
+ ...
+ <node id="298884272" lat="54.0901447" lon="12.2516513" user="SvenHRO" uid="46882" visible="true" version="1" changeset="676636" timestamp="2008-09-21T21:37:45Z"/>
+ <way id="26659127" user="Masch" uid="55988" visible="true" version="5" changeset="4142606" timestamp="2010-03-16T11:47:08Z">
+  <nd ref="292403538"/>
+  <nd ref="298884289"/>
+  ...
+  <nd ref="261728686"/>
+  <tag k="highway" v="unclassified"/>
+  <tag k="name" v="Pastower Straße"/>
+ </way>
+ <relation id="56688" user="kmvar" uid="56190" visible="true" version="28" changeset="6947637" timestamp="2011-01-12T14:23:49Z">
+  <member type="node" ref="294942404" role=""/>
+  ...
+  <member type="node" ref="364933006" role=""/>
+  <member type="way" ref="4579143" role=""/>
+  ...
+  <member type="node" ref="249673494" role=""/>
+  <tag k="name" v="Küstenbus Linie 123"/>
+  <tag k="network" v="VVW"/>
+  <tag k="operator" v="Regionalverkehr Küste"/>
+  <tag k="ref" v="123"/>
+  <tag k="route" v="bus"/>
+  <tag k="type" v="route"/>
+ </relation>
+ ...
+</osm>
+```
+
+## **Contents**
+
+- an XML suffix introducing the [UTF-8](https://en.wikipedia.org/wiki/UTF-8) character encoding for the file
+- an osm element, containing the version of the [API](https://wiki.openstreetmap.org/wiki/API) (and thus the features used) and the generator that distilled this file (e.g. an [editor](https://wiki.openstreetmap.org/wiki/Editor) tool)
+    - a block of [nodes](https://wiki.openstreetmap.org/wiki/Nodes) containing especially the location in the [WGS84](https://wiki.openstreetmap.org/wiki/WGS84) reference system
+        - the tags of each node
+    - a block of [ways](https://wiki.openstreetmap.org/wiki/Ways)
+        - the references to its nodes for each way
+        - the tags of each way
+    - a block of [relations](https://wiki.openstreetmap.org/wiki/Relations)
+        - the references to its members for each relation
+        - the tags of each relation
+
+## **Certainties and Uncertainties**
+
+If you [develop](https://wiki.openstreetmap.org/wiki/Develop) tools using this format, you can be certain that:
+
+- blocks come in this order
+- bounds will be on [API](https://wiki.openstreetmap.org/wiki/API) and [JOSM](https://wiki.openstreetmap.org/wiki/JOSM) data
+
+You can not be certain that:
+
+- blocks are there (e.g. only nodes, no ways)
+- blocks are sorted
+- element IDs are non negative (Not in all osm files. Negative ids are used by editors for new elements)
+- elements have to contain tags (Many elements do not. You will even come across [Untagged unconnected nodes](https://wiki.openstreetmap.org/wiki/Untagged_unconnected_node))
+- visible only if false and not in [Planet.osm](https://wiki.openstreetmap.org/wiki/Planet.osm)
+- id or user name present (Not always, due to [anonymous edits](https://wiki.openstreetmap.org/wiki/Anonymous_edits) in a very early stage)
+- [Changesets](https://wiki.openstreetmap.org/wiki/Changesets) have an attribute num_changes (This was abandoned from the history export tool because of inconsistencies)
+- version ordering is sequential (doesn't have to be)
 # Resources
 
 [Getting started with OpenStreetMap](https://medium.com/@jinalfoflia/getting-started-with-openstreetmap-7f29abb2998c)
