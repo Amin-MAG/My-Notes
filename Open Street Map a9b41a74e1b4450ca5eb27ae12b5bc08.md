@@ -330,6 +330,72 @@ $ osmosis --rri --simc --rx current.osm --ac --bb \
 				clipIncompleteEntities=yes --wx new.osm
 ```
 
+## **Import/Export standard files**
+
+As PostGIS is the most reliable tool for handling shape files (shp-to-PostGIS and PostGIS-to-shape), the other commom task is to convert OSM files, that is accomplished by Osmosis, [eg.](https://stackoverflow.com/a/8947417/287948)
+
+```bash
+$ osmosis --read-apidb host="x" database="x" user="x" password="x" --write-xml file="planet.osm"
+
+```
+
+## OSM Change
+
+**osmChange** is the file format used by [osmosis](https://wiki.openstreetmap.org/wiki/Osmosis) (and [osmconvert](https://wiki.openstreetmap.org/wiki/Osmconvert)) to describe differences between two dumps of OSM data. However, it can also be used as the basis for anything that needs to represent changes. For example, bulk uploads/deletes/changes are also changesets and they can also be described using this format. We also offer [Planet.osm/diffs](https://wiki.openstreetmap.org/wiki/Planet.osm/diffs) downloads in this format.
+
+For other ways of describing differences between datasets, see [Change File Formats](https://wiki.openstreetmap.org/wiki/Change_File_Formats) ([planetdiff](https://wiki.openstreetmap.org/wiki/Planetdiff) and the [JOSM file format](https://wiki.openstreetmap.org/wiki/JOSM_file_format)).
+
+### Example
+
+```xml
+<osmChange version="0.6" generator="acme osm editor">
+    <modify>
+        <node id="1234" changeset="42" version="2" lat="12.1234567" lon="-8.7654321">
+            <tag k="amenity" v="school"/>
+        </node>
+    </modify>
+</osmChange>
+```
+
+This is the [changeset](https://wiki.openstreetmap.org/wiki/Changeset) to modify that single node. The outermost tag is osmChange. Within that are three possible types of nodes:
+
+- create
+- modify
+- delete
+
+The contents of these nodes are the same as the contents of the osm tag returned from the server. It may be any collection of nodes, ways, or relations. Every element must include the changeset ID and a version number. For deletions only the node is necessary but traditionally the actual data is included to make it more obvious to humans reading the file what is actually being deleted. However, for deletion the tags of a node are not included.
+
+Note: The create/modify/delete "action" is applied at the node/way/relation level. There is no way of applying changes at a tag level. So in other words if you wish to add tags you need to include all existing tags in your modified entry.
+
+Note: Some OsmChange output may include generator and version tags on the outermost osmChange element to identify the source of the file. These tags are not necessary, and are ignored when uploading the OsmChange document to the server.
+
+### Placeholder
+
+One common issue when uploading new data to the server is that IDs are allocated by the server and thus are not known at the time the file is created. The way to deal with this is to use numbers less than zero. These function as placeholders and when the node/segment/way is created, for the rest of the file the placeholder is replaced by the ID of the node created.
+
+The [JOSM file format](https://wiki.openstreetmap.org/wiki/JOSM_file_format) has a similar feature, [planetdiff](https://wiki.openstreetmap.org/wiki/Planetdiff) is purely designed to diff/patch planet files and does not support this. As of this writing [osmosis](https://wiki.openstreetmap.org/wiki/Osmosis) does **not** support this feature when applying changes to a database, all other tasks should support negative identifiers. However, there is a bulk uploader ([bulk_import.pl](https://wiki.openstreetmap.org/wiki/Bulk_import.pl)) that does.
+
+A quick example of how this works:
+
+```xml
+<osmChange version="0.6" generator="acme osm editor">
+    <create>
+        <node id="-1" changeset="43" version="1" lat="-33.9133123" lon="151.1173123" />
+        <node id="-2" changeset="43" version="1" lat="-33.9233321" lon="151.1173321" />
+        <way id="-3" changeset="43" version="1">
+            <nd ref="-1"/>
+            <nd ref="-2"/>
+        </way>
+    </create>
+</osmChange>
+```
+
+This creates two nodes at the specified positions and joins them with a way. This will never clash with any existing data.
+
+To implement this programs need a cache file to track what has been uploaded and what hasn't.
+
+Note: The upload API call supports placeholders - in fact, **all** id attributes in create elements are treated as placeholders whether negative or not. However, you should stick to negative numbers to ensure that placeholder IDs do not clash with any other IDs in the OsmChange document. Note that the Rails port substitutes negative placeholder ids only. This affects both nodes in ways, as well as relation member ids in relations. Thus, using negative placeholder ids is essentially mandatory for the placeholder replacement to take place.
+
 # Extract OSM file to DB
 
 Let's extract a `.osm.pbf` to the Postgres database and execute some queries.
