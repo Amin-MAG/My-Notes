@@ -1,6 +1,10 @@
 downloads
 extracts
 
+download_recent.sh
 download_en.sh
 *.DS_Store
+
+*.env
+notion-cli
 
