@@ -351,6 +351,14 @@ The branch microservice design pattern is a design pattern in which you can simu
 
 There are many other patterns used with microservice architecture, like Sidecar, Continuous Delivery Patterns, and more.
 
+## Sidecar Container
+
+Deploy components of an application into a separate process or container to provide isolation and encapsulation. This pattern can also enable applications to be composed of heterogeneous components and technologies.
+
+This pattern is named *Sidecar* because it resembles a sidecar attached to a motorcycle. In the pattern, the sidecar is attached to a parent application and provides supporting features for the application. The sidecar also shares the same lifecycle as the parent application, being created and retired alongside the parent. The sidecar pattern is sometimes referred to as the sidekick pattern and is a decomposition pattern.
+
+[Sidecar Container](Microservices%20c2400a9ae6964fb1a321efb04118cfd3/Sidecar%20Container%207f6ce0dc52d94fe6b3b4e02fa7fd0207.md)
+
 # Build microservice architecture
 
 ### iPaaS
