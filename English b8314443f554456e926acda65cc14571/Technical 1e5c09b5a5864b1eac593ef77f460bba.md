@@ -85,4 +85,19 @@
 - Proprietary: proprietary rights
 - vicinity: two schools in close vicinity
 - Miscellaneous: She gave me some money to cover any miscellaneous expenses.
+- Derivative: a derivative of a function
+- To comprise: The club comprised one thousand members. Farmers comprise fifty percent of the population. The book was comprised of ten chapters.
+- Latitude, Longitude, Altitude: Geographic coordinates.
+- Enumerate: more birds than I could enumerate
+- Itinerary: an itinerary that took them through Canada
+- Kubernetes: helmsman, pilot
+- Underutilize
+- Disposable: a disposable cup.
+- To decouple: to decouple electric circuits
+- Mandate: He was willing to carry out all of his commander's mandates.
+- Proximity: Because of its proximity to the primary application
+- Decay, Decompose
+- Heterogenous: Heterogenous substances, reactions
+- Perspective: This book gave me a whole new perspective on the matter.
+- Agnostic: An agnostic believes that one cannot say whether God exists or not.
 -
