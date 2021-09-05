@@ -17,6 +17,8 @@
 - t guarantees to deliver unparalleled latency performance and scalability for all our microservice applications regardless of where they run.
 - In layman terms, you must have seen how bees build their honeycomb by aligning hexagonal wax cells.
 - This is a relatively simple project which uses the components as depicted in the following figure.
+- For accompanying visual illustration see this.
+- 
 
 # Words 01
 
@@ -80,7 +82,7 @@
 - Repudiate: He repudiated all offers of friendship.
 - Integrity: the territorial integrity of the country
 
-# Word 02
+# Words 02
 
 - Proprietary: proprietary rights
 - vicinity: two schools in close vicinity
@@ -100,4 +102,6 @@
 - Heterogenous: Heterogenous substances, reactions
 - Perspective: This book gave me a whole new perspective on the matter.
 - Agnostic: An agnostic believes that one cannot say whether God exists or not.
+- Ephemeral: Ephemeral boundaries
+- Stanza
 -
