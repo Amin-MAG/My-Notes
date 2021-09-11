@@ -34,3 +34,36 @@ The `URL` parameter can refer to three kinds of resources: Git repositories, p
 ```bash
 docker build [OPTIONS] PATH | URL | -
 ```
+
+# Docker compose
+
+## Volumes
+
+A single docker-compose service with a volume looks like this:
+
+```yaml
+version: "3.9"
+services:
+  frontend:
+    image: node:lts
+    volumes:
+      - myapp:/home/node/app
+volumes:
+  myapp:
+```
+
+On the first invocation of `docker-compose up` the volume will be created. The same volume will be reused on the following invocations.
+
+A volume may be created directly outside of composing with `docker volume create` and then referenced inside `docker-compose.yml` as follows:
+
+```yaml
+version: "3.9"
+services:
+  frontend:
+    image: node:lts
+    volumes:
+      - myapp:/home/node/app
+volumes:
+  myapp:
+    external: true
+```
