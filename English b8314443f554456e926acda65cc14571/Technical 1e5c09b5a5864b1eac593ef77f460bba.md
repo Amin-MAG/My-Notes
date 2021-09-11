@@ -18,6 +18,8 @@
 - In layman terms, you must have seen how bees build their honeycomb by aligning hexagonal wax cells.
 - This is a relatively simple project which uses the components as depicted in the following figure.
 - For accompanying visual illustration see this.
+- That, plus the ability to store and transmit data via the cloud, has created a moment that’s ripe for digital twin adoption.
+- The convergence of digital twinning with automation and artificial intelligence will yield benefits in a vast spectrum of industries, many of which already are creating and using digital twins.
 - 
 
 # Words 01
@@ -104,4 +106,8 @@
 - Agnostic: An agnostic believes that one cannot say whether God exists or not.
 - Ephemeral: Ephemeral boundaries
 - Stanza
--
+- To ingest: I was trying to ingest the ideas of philosophers.
+- Versatile: a man of versatile interests
+- Unprecedented
+- Spectrum: a wide spectrum of opinion
+- To ideate: By analyzing factory performance in a digital environment, manufacturers can uncover problems and ideate potential solutions
