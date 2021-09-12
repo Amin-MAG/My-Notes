@@ -79,3 +79,54 @@ Google also is getting smarter at combining local AI features for the purpose of
 ## References
 
 [What is edge computing?](https://www.theverge.com/circuitbreaker/2018/5/7/17327584/edge-computing-cloud-google-microsoft-apple-amazon)
+
+# Fog computing
+
+Fog computing is a decentralized computing infrastructure in which data, compute, storage and applications are located somewhere between the data source and the cloud. Like edge computing, fog computing brings the advantages and power of the cloud closer to where data is created and acted upon. Many people use the terms fog computing and edge computing interchangeably because both involve bringing intelligence and processing closer to where the data is created. This is often done to improve efficiency, though it might also be done for security and compliance reasons.
+
+The fog metaphor comes from the meteorological term for a cloud close to the ground, just as fog concentrates on the edge of the network.The term is often associated with Cisco; the company's product line manager, Ginny Nichols, is believed to have coined the term. Cisco Fog Computing is a registered name; fog computing is open to the community at large.
+
+## **Fog computing vs. edge computing**
+
+According to the OpenFog Consortium started by Cisco, the key difference between edge and fog computing is where the intelligence and compute power are placed. In a strictly foggy environment, intelligence is at the local area network (LAN), and data is transmitted from endpoints to a fog [gateway](https://internetofthingsagenda.techtarget.com/definition/gateway), where it's then transmitted to sources for processing and return transmission.
+
+In edge computing, intelligence and power can be in either the endpoint or a gateway. Proponents of edge computing praise its reduction of points of failure because each device independently operates and determines which data to store locally and which data to send to a gateway or the cloud for further analysis. Proponents of fog computing over edge computing say it's more scalable and gives a better big-picture view of the network as multiple data points feed data into it.
+
+![Untitled](Cloud%20Computing%20e41101f778b347089ed2430c2f990afe/Untitled%201.png)
+
+## **How fog computing works**
+
+Fog networking complements -- doesn't replace -- cloud computing; fogging enables short-term [analytics at the edge](https://internetofthingsagenda.techtarget.com/photostory/450432721/IoT-predictions-2018-What-will-the-next-year-of-connectedness-bring/1/IoT-edge-analytics-brings-real-time-intelligence-to-devices), while the cloud performs resource-intensive, longer-term analytics. Although edge devices and sensors are where data is generated and collected, they sometimes don't have the compute and storage resources to perform advanced analytics and machine learning tasks. Though cloud servers have the power to do this, they are often too far away to process the data and respond in a timely manner.
+
+In addition, having all endpoints connecting to and sending raw data to the cloud over the internet can have privacy, security and legal implications, especially when dealing with sensitive data subject to regulations in different countries. Popular fog computing applications include smart grids, [smart cities](https://internetofthingsagenda.techtarget.com/definition/smart-city), smart buildings, vehicle networks and software-defined networks.
+
+## **Fog computing benefits and drawbacks**
+
+Like any other technology, fog computing has its pros and cons. Some of the advantages to fog computing include the following:
+
+- **Bandwidth conservation.** Fog computing reduces the volume of data that is sent to the cloud, thereby reducing bandwidth consumption and related costs.
+- **Improved response time.** Because the initial data processing occurs near the data, latency is reduced, and overall responsiveness is improved. The goal is to provide millisecond-level responsiveness, enabling data to be processed in near-real time.
+- **Network-agnostic.** Although fog computing generally places compute resources at the LAN level -- as opposed to the device level, which is the case with edge computing -- the network could be considered part of the fog computing architecture. At the same time, though, fog computing is network-agnostic in the sense that the network can be wired, Wi-Fi or even 5G.
+
+Of course, fog computing also has its disadvantages, some of which include the following:
+
+- **Physical location.** Because fog computing is tied to a physical location, it undermines some of the "anytime/anywhere" benefits associated with cloud computing.
+- **Potential security issues.** Under the right circumstances, fog computing can be subject to security issues, such as Internet Protocol (IP) address spoofing or man in the middle (MitM) attacks.
+- **Startup costs.** Fog computing is a solution that utilizes both edge and cloud resources, which means that there are associated hardware costs.
+- **Ambiguous concept.** Even though fog computing has been around for several years, there is still some ambiguity around the definition of fog computing with various vendors defining fog computing differently.
+
+![https://cdn.ttgtmedia.com/rms/onlineImages/procon_fogcomputing_mobile.jpg](https://cdn.ttgtmedia.com/rms/onlineImages/procon_fogcomputing_mobile.jpg)
+
+## **Applications of fog computing**
+
+There are any number of potential use cases for fog computing. One increasingly common use case for fog computing is traffic control. Because sensors -- such as those used to detect traffic -- are often connected to cellular networks, cities sometimes deploy computing resources near the cell tower. These computing capabilities enable real-time analytics of traffic data, thereby enabling traffic signals to respond in real time to changing conditions.
+
+This basic concept is also being extended to autonomous vehicles. Autonomous vehicles essentially function as edge devices because of their vast onboard computing power. These vehicles must be able to ingest data from a huge number of sensors, perform real-time data analytics and then respond accordingly.
+
+## References
+
+[What is Fog Computing?](https://internetofthingsagenda.techtarget.com/definition/fog-computing-fogging)
+
+# Hierarchical architecture
+
+# Smart manufacturing
