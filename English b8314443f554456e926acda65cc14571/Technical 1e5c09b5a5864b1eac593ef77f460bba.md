@@ -20,7 +20,8 @@
 - For accompanying visual illustration see this.
 - That, plus the ability to store and transmit data via the cloud, has created a moment that’s ripe for digital twin adoption.
 - The convergence of digital twinning with automation and artificial intelligence will yield benefits in a vast spectrum of industries, many of which already are creating and using digital twins.
-- 
+- Remember, the goal is to be able to process data in a matter of milliseconds.
+- These data need to be cleaned, stored, and processed to produce information and knowledge, which are poised to be the basis for smart manufacturing.
 
 # Words 01
 
@@ -111,3 +112,21 @@
 - Unprecedented
 - Spectrum: a wide spectrum of opinion
 - To ideate: By analyzing factory performance in a digital environment, manufacturers can uncover problems and ideate potential solutions
+- Propose: The model proposes changes to the line.
+- Advent: The advent of computers changed the world.
+- To perceive: Perceiving the uselessness of resistance, they surrendered.
+- Latency, Latent: The virus remains latent in the body for many years. If a Computer A needs to ask Computer B, half a globe away, before it can do anything, the user of Computer A perceives this delay as latency.
+- Magnanimous: He forgave my offenses magnanimously.
+- Articulate: a highly articulate speaker
+- Unfounded: Unfounded rumors began circulating that Ian and Susan were having an affair.
+- Consortium: A number of oil companies formed a consortium to explore and refine oil.
+- Proponent: a proponent of women's rights
+- To praise: The teacher praised him.
+- To undermine: The recent flood has undermined the wall.
+- Ambiguous: She gave an ambiguous nod.
+- Compelling: compelling circumstances. compelling reasons.
+- Ubiquitous, ubiquity: a ubiquitous insect, like the fly
+- Inevitability: the inevitability of death
+- Promising: John's promising future in medicine
+- Poise: Poise of mind
+-
