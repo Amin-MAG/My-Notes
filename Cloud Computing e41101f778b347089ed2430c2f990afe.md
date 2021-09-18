@@ -130,3 +130,5 @@ This basic concept is also being extended to autonomous vehicles. Autonomous veh
 # Hierarchical architecture
 
 # Smart manufacturing
+
+[Articles to read](Cloud%20Computing%20e41101f778b347089ed2430c2f990afe/Articles%20to%20read%206a8ab1a9954343e29aa792f7143daacc.md)
