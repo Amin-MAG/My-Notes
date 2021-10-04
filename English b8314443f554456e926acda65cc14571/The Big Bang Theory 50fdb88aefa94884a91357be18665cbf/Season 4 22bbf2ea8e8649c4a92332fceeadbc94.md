@@ -42,3 +42,32 @@
 - Ruse: Her ruse failed.
 - To be suffocated: Children left in a box suffocated.
 
+# E06
+
+## Words
+
+- Abundantly
+- Inadvertent: an inadvertent mistake
+- Scourge: the scourge of war
+
+# E07
+
+## Sentences
+
+- Sleep eludes me!
+
+## Words
+
+- To exude: Some frogs exude a poisonous liquid from their skins.
+- To subvert: Their agents are trying to subvert our regime.
+- To elude: to elude one's responsibilities
+- To recant
+
+# E08
+
+## Words
+
+- Controversy: The new leader tried to avoid controversy.
+- Shrewd: a shrewd businessman
+- Vicious: Stalin's vicious policies
+
