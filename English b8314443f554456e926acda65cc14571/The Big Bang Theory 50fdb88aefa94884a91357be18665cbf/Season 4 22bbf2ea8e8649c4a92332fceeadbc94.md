@@ -71,3 +71,16 @@
 - Shrewd: a shrewd businessman
 - Vicious: Stalin's vicious policies
 
+# E09
+
+## Words
+
+- Petition: a petition for a hearing
+- Sincere: sincere grief
+
+# E11
+
+## Sentences
+
+- It's and indictment of American educational system.
+
