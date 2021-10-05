@@ -5,3 +5,5 @@
 [Season 2](The%20Big%20Bang%20Theory%2050fdb88aefa94884a91357be18665cbf/Season%202%209e8a66a5eba345f398248ef938d69c4d.md)
 
 [Season 3](The%20Big%20Bang%20Theory%2050fdb88aefa94884a91357be18665cbf/Season%203%204bcc8b312da44c19ae29215ec2420fe3.md)
+
+[Season 4](The%20Big%20Bang%20Theory%2050fdb88aefa94884a91357be18665cbf/Season%204%2022bbf2ea8e8649c4a92332fceeadbc94.md)

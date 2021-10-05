@@ -129,4 +129,4 @@
 - Inevitability: the inevitability of death
 - Promising: John's promising future in medicine
 - Poise: Poise of mind
--
+- Resilient: rubber is resilient
