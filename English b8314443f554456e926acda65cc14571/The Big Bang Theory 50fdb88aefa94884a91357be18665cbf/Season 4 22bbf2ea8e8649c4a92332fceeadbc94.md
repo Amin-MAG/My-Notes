@@ -84,3 +84,31 @@
 
 - It's and indictment of American educational system.
 
+# E12
+
+## Sentences
+
+- I need quiet.
+
+## Words
+
+- Condemnation: We hereby express our strong condemnation of the company's actions.
+
+# E13
+
+## Sentences
+
+- You've had allotted 6 ounces.
+- I'd like to weigh in here.
+
+## Words
+
+- Vouch: letters vouching for her skill
+
+# E14
+
+## Words
+
+- Triumphant
+- Spontaneous: His reaction was spontaneous rather than premeditated.
+- Improvisation
