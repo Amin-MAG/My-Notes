@@ -112,3 +112,32 @@
 - Triumphant
 - Spontaneous: His reaction was spontaneous rather than premeditated.
 - Improvisation
+
+# E15
+
+## Words
+
+- To tinkle
+- Rebellious: a rebellious student
+- Stiff: a stiff rod
+
+# E16
+
+## Words
+
+- Inquiry: a court of inquiry
+- Tertiary: secondary and tertiary causes
+
+# E17
+
+## Words
+
+- Exasperation: She could hardly hide her exasperation.
+- To pester: His younger brother pestered him with repeated questions.
+
+# E19
+
+## Words
+
+- Cunning: a cunning old man
+
