@@ -141,3 +141,24 @@
 
 - Cunning: a cunning old man
 
+# E20
+
+## Words
+
+- Hysterical
+- Gossip: the gossip concerning his resignation
+- Ambivalent
+- Palatable: palatable and nutritious food
+- Penetration: their penetration of our interior markets
+
+# E21
+
+## Words
+
+- Harsh: the harsh sound of the electric saw
+
+# E22
+
+## Words
+
+- Whimsy
