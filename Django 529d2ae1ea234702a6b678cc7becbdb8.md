@@ -153,3 +153,72 @@ class Car(models.Model):
 There are all of the options here
 
 [Model Meta options | Django documentation | Django](https://docs.djangoproject.com/en/3.2/ref/models/options/)
+
+# Django REST Framework
+
+## Serialization
+
+The first thing we need to get started on our Web API is to provide a way of serializing and deserializing the snippet instances into representations such as JSON.
+
+### Types of serializers
+
+- `serializers.Serializer`:
+- `BaseSerializer` class that can be used to easily support alternative serialization and deserialization styles. [https://www.django-rest-framework.org/api-guide/serializers/#baseserializer](https://www.django-rest-framework.org/api-guide/serializers/#baseserializer)
+- `serializers.ModelSerializer`: Often you'll want serializer classes that map closely to the Django model definitions.
+- `serializers.HyperlinkedModelSerializer`: This is similar to the ModelSerializer class except that it uses hyperlinks to represent relationships, rather than primary keys.
+- `serializer.ListSerializer`: class provides the behavior for serializing and validating multiple objects at once. You won't typically need to use ListSerializer directly, but should instead simply pass many=True when instantiating a serializer.
+
+In `HyperlinkedModelSerializer` and  `ModelSerializer` you will have a `Meta` subclass to specify the `model` & `fields` that you want.
+
+There are also other third party serializers [https://www.django-rest-framework.org/api-guide/serializers/#third-party-packages](https://www.django-rest-framework.org/api-guide/serializers/#third-party-packages)
+
+## Request & Response
+
+Request:
+
+`request.POST`: Only handles form data.  Only works for the 'POST' method.
+`request.data`: Handles arbitrary data.  Works for 'POST', 'PUT' and 'PATCH' methods.
+
+Response:
+
+- You can set the status code.
+
+```python
+Response(serializer.data, status=status.HTTP_201_CREATED)
+```
+
+## Class-based views
+
+### Mixins
+
+### Generics
+
+## Permissions
+
+We can specify the permissions in view classes.
+
+```python
+# Create your views here.
+class DriverViewSet(viewsets.ModelViewSet):
+    queryset = Driver.objects.all()
+    serializer_class = DriverSerializer
+    permission_classes = [AllowAny]
+```
+
+We can also create our own kind of permission.
+
+```python
+from rest_framework import permissions
+
+class IsOwnerOrReadOnly(permissions.BasePermission):
+
+    def has_object_permission(self, request, view, obj):
+        # Read permissions are allowed to any request,
+        # so we'll always allow GET, HEAD or OPTIONS requests.
+        if request.method in permissions.SAFE_METHODS:
+            return True
+
+        # Write permissions are only allowed to the owner of the snippet.
+        return obj.owner == request.user
+```
+
