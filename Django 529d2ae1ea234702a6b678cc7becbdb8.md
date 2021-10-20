@@ -154,6 +154,36 @@ There are all of the options here
 
 [Model Meta options | Django documentation | Django](https://docs.djangoproject.com/en/3.2/ref/models/options/)
 
+## Testing
+
+Unit testing
+
+```python
+# Search for test files and test
+python -m unittest discover -v -s . -p 'test_*.py'
+```
+
+Unit testing with coverage package
+
+```python
+# Exclude some path and search for test_*.py files
+coverage run --omit '*/venv/*,*/tests/*' -m unittest discover -v -s . -p 'test_*.py'
+coverage report -m
+```
+
+Testing Django with the coverage package
+
+```bash
+# Test all files
+coverage run manage.py test
+
+# More options
+coverage run --source='.' manage.py test <the-app-you-want-to-test>
+
+# Create a report
+coverage report -m
+```
+
 # Django REST Framework
 
 ## Serialization
