@@ -222,3 +222,87 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
         return obj.owner == request.user
 ```
 
+# Swagger
+
+### `drf-yasg`
+
+[GitHub - axnsan12/drf-yasg: Automated generation of real Swagger/OpenAPI 2.0 schemas from Django REST Framework code.](https://github.com/axnsan12/drf-yasg)
+
+Install the package
+
+```yaml
+pip install -U drf-yasg
+```
+
+Add this package to installed apps
+
+```python
+INSTALLED_APPS = [
+   ...
+   'django.contrib.staticfiles',  # required for serving swagger ui's css/js files
+   'drf_yasg',
+   ...
+]
+```
+
+In `urls.py`:
+
+```python
+...
+from rest_framework import permissions
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+
+...
+
+schema_view = get_schema_view(
+   openapi.Info(
+      title="Snippets API",
+      default_version='v1',
+      description="Test description",
+      terms_of_service="https://www.google.com/policies/terms/",
+      contact=openapi.Contact(email="contact@snippets.local"),
+      license=openapi.License(name="BSD License"),
+   ),
+   public=True,
+   permission_classes=[permissions.AllowAny],
+)
+
+urlpatterns = [
+   url(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
+   url(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+   url(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+   ...
+]
+```
+
+This exposes 4 endpoints:
+
+- A JSON view of your API specification at `/swagger.json`
+- A YAML view of your API specification at `/swagger.yaml`
+- A swagger-ui view of your API specification at `/swagger/`
+- A ReDoc view of your API specification at `/redoc/`
+
+You should put `@swagger_auto_schema` before your handlers.
+
+```python
+@api_view()
+@renderer_classes([SwaggerUIRenderer, OpenAPIRenderer])
+def schema_view(request):
+    generator = schemas.SchemaGenerator(title='Pastebin API')
+    return response.Response(generator.get_schema(request=request))
+
+class NodeList(APIView):
+    queryset = Node.objects.all()
+    permission_classes = [AllowAny]
+
+    @swagger_auto_schema
+    def get(self, request):
+        nodes = Node.objects.all()[:30]
+        serializer = NodeSerializer(nodes, many=True)
+
+        return JsonResponse({
+            "nodes": serializer.data
+        })
+```
+
