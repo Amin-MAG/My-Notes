@@ -54,7 +54,7 @@ volumes:
 
 On the first invocation of `docker-compose up` the volume will be created. The same volume will be reused on the following invocations.
 
-A volume may be created directly outside of composing with `docker volume create` and then referenced inside `docker-compose.yml` as follows:
+A volume might be created directly outside of composing with `docker volume create` and then referenced inside `docker-compose.yml` as follows:
 
 ```yaml
 version: "3.9"
@@ -66,4 +66,51 @@ services:
 volumes:
   myapp:
     external: true
+```
+
+## Environment variables
+
+You could use an external file for environment variables.
+
+```yaml
+version: "3.9"
+services:
+	env_file:
+      - .env.compose
+  frontend:
+    image: node:lts
+    volumes:
+      - myapp:/home/node/app
+volumes:
+  myapp:
+    external: true
+```
+
+For example here is the `.env.compose`
+
+```
+# Database
+POSTGRES_DB=cobbler_db
+POSTGRES_USER=admin
+POSTGRES_PASSWORD=admin
+
+# For development
+# PgAdmin
+PGADMIN_DEFAULT_EMAIL=admin@admin.com
+PGADMIN_DEFAULT_PASSWORD=qweqwe
+```
+
+Or you can create a `environment` in your docker compose file.
+
+```yaml
+db:
+    env_file:
+      - .env.compose
+    image: postgis/postgis:13-3.1
+    container_name: my_db
+    environment:
+      # Extensions
+      POSTGRES_MULTIPLE_EXTENSIONS: postgis,hstore,postgis_topology,postgis_raster,pgrouting
+    ports:
+      - "5432:5432"
 ```
