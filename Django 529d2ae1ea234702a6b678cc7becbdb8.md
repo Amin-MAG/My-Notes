@@ -127,6 +127,9 @@ python3 manage.py migrate
 # Create super user for admin panel
 python3 manage.py createsuperuser
 
+# Create new Django app
+python3 manage.py startapp polls
+
 ```
 
 ## Models
@@ -334,5 +337,63 @@ class NodeList(APIView):
         return JsonResponse({
             "nodes": serializer.data
         })
+```
+
+# JWT
+
+## Simple JWT
+
+If you are using simple JWT you may have a more complex way to define your models. You should define customized user models by inheriting `AbstractUser`. 
+
+You can use composition too. For example, compose your user object to the employee.
+
+Here is more detail for customizing user objects:
+
+[https://docs.djangoproject.com/en/dev/topics/auth/customizing/#a-full-example](https://docs.djangoproject.com/en/dev/topics/auth/customizing/#a-full-example)
+
+### Install the simple JWT
+
+```bash
+pip3 install djangorestframework_simplejwt
+```
+
+### **settings.py**
+
+```python
+REST_FRAMEWORK **=** {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
+```
+
+### **urls.py**
+
+```bash
+from django.urls import path
+from rest_framework_simplejwt import views **as** jwt_views
+
+urlpatterns **=** [
+    *# Your URLs...*
+    path('api/token/', jwt_views**.**TokenObtainPairView**.**as_view(), name**=**'token_obtain_pair'),
+    path('api/token/refresh/', jwt_views**.**TokenRefreshView**.**as_view(), name**=**'token_refresh'),
+]
+```
+
+### Example
+
+```bash
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+
+class HelloView(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request):
+        # To get the user
+        print(request.user)
+        content = {'message': 'Hello, World!'}
+        return Response(content)
 ```
 
