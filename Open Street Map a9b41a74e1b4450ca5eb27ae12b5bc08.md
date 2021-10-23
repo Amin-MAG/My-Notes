@@ -78,6 +78,7 @@ A **way** is one of the fundamental [elements](https://wiki.openstreetmap.org
 Technically a way is an ordered list of [nodes](https://wiki.openstreetmap.org/wiki/Node) which normally also has at least one [tag](https://wiki.openstreetmap.org/wiki/Tags) or is included within a [Relation](https://wiki.openstreetmap.org/wiki/Relations). A way can have between 2 and 2,000 nodes, although it's possible that faulty ways with zero or a single node exist. A way can be [open](https://wiki.openstreetmap.org/wiki/Way#Open_way_.28Open_polyline.29) or [closed](https://wiki.openstreetmap.org/wiki/Way#Closed_way_.28Closed_polyline.29).
 
 > A poly line is an open or closed sequence of connected line and/or arc segments, which are treated as a single entity. Each segment of a poly line can have a width that is either constant or tapers over the length of the segment
+> 
 
 ### Open way -  Open poly line
 
@@ -88,6 +89,7 @@ In the database, a way always has a direction. This is true even if the ground f
 In a closed way the last node of the way is identical with the first node.
 
 > A closed way may be interpreted either as a closed poly line, or as an area, or both, depending on its tags.
+> 
 
 The following closed ways would be interpreted as closed polylines:
 
@@ -106,17 +108,18 @@ An [area](https://wiki.openstreetmap.org/wiki/Area) (also polygon) is an encl
 For tags which can be used to define closed poly lines it is necessary to also add an [area](https://wiki.openstreetmap.org/wiki/Key:area)=yes if an area is desired. Examples include:
 
 - [highway](https://wiki.openstreetmap.org/wiki/Key:highway)=[pedestrian](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dpedestrian) +  to define a pedestrian square or plaza.
-
+    
     [area](https://wiki.openstreetmap.org/wiki/Key:area)=yes
+    
 
 Areas can also be described using one or more ways which are associated with a [multipolygon](https://wiki.openstreetmap.org/wiki/Relation:multipolygon) [relation](https://wiki.openstreetmap.org/wiki/Relation).
 
 - For smaller areas is it often appropriate to create a single closed [way](https://wiki.openstreetmap.org/wiki/Way) with suitable [tags](https://wiki.openstreetmap.org/wiki/Tag) and in some rare cases it is also necessary to add . See  for further details.
-
+    
     [area](https://wiki.openstreetmap.org/wiki/Key:area)=yes
-
+    
     [area](https://wiki.openstreetmap.org/wiki/Key:area)=*
-
+    
 - For larger areas and for ones which butt up to other areas or to ways is it often more appropriate to use a [multipolygon](https://wiki.openstreetmap.org/wiki/Relation:multipolygon), again tagged as required. See [relation:multipolygon](https://wiki.openstreetmap.org/wiki/Relation:multipolygon) for more details.
 
 In this example a lake is defined by a closed way where the last node equals the first of the way. The use of [natural](https://wiki.openstreetmap.org/wiki/Key:natural)=[water](https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater) implies [area](https://wiki.openstreetmap.org/wiki/Key:area)=yes. Note that it is not possible to describe lake surfaces having islands or islets this way, as closed ways, by definition, cannot have holes.
@@ -162,9 +165,9 @@ It is possible for a closed way to be tagged in a way that it should be interpre
 For example, a closed way defining a roundabout surrounding a grassy area might be tagged simultaneously as :
 
 - [highway](https://wiki.openstreetmap.org/wiki/Key:highway)=[primary](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dprimary) + , both being interpreted as a polyline along the closed way, and
-
+    
     [junction](https://wiki.openstreetmap.org/wiki/Key:junction)=[roundabout](https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout)
-
+    
 - [landuse](https://wiki.openstreetmap.org/wiki/Key:landuse)=[grass](https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass), interpreted on the area enclosed by the way.
 
 ### Example
