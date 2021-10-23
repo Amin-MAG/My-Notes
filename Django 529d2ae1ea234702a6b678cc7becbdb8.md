@@ -187,6 +187,15 @@ coverage run --source='.' manage.py test <the-app-you-want-to-test>
 coverage report -m
 ```
 
+Config `.coveragerc` to customized the coverage report.
+
+```bash
+[report]
+exclude_lines =
+    # Skip any pass lines such as may be used for @abstractmethod
+    pass
+```
+
 # Django REST Framework
 
 ## Serialization
