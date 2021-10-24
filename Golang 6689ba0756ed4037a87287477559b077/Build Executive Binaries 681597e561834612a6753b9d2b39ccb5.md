@@ -7,7 +7,7 @@ The `go get` tool can fetch packages from version control systems like GitHub. U
 Use `go get` to fetch and install Caddy:
 
 ```bash
-$ go get -u github.com/mholt/caddy/caddy
+go get -u github.com/mholt/caddy/caddy
 ```
 
 The command will take some time to complete, but you won’t see any progress while it fetches the package and installs it. No output actually indicates that the command was executed successfully.
@@ -17,7 +17,7 @@ The command will take some time to complete, but you won’t see any progress wh
 Execute `go build` and specify the package import path:
 
 ```bash
-$ go build github.com/mholt/caddy/caddy
+go build github.com/mholt/caddy/caddy
 ```
 
 As before, no output indicates successful operation. The executable will be generated in your current directory, with the same name as the directory containing the package. In this case, the executable will be named `caddy`.
@@ -27,7 +27,7 @@ If you’re located in the package directory, you can omit the path to the packa
 To specify a different name or location for the executable, use the `-o` flag. Let’s build an executable called `caddy-server` and place it in a `build` directory within the current working directory:
 
 ```bash
-$ go build -o build/caddy-server github.com/mholt/caddy/caddy
+go build -o build/caddy-server github.com/mholt/caddy/caddy
 ```
 
 This command creates the executable and also creates the `./build` directory if it doesn’t exist.
@@ -39,7 +39,7 @@ Building an executable creates the executable in the current directory or the di
 To install an executable, use `go install`, followed by the package import path. Once again, use Caddy to try this out:
 
 ```bash
-$ go install github.com/mholt/caddy/caddy
+go install github.com/mholt/caddy/caddy
 ```
 
 Just like with `go build`, you’ll see no output if the command was successful. And like before, the executable is created with the same name as the directory containing the package. But this time, the executable is stored in `$GOPATH/bin`. If `$GOPATH/bin` is part of your `$PATH` environmental variable, the executable will be available from anywhere on your operating system.
@@ -96,7 +96,7 @@ All of the combinations. `GOOS`, `GOARCH`
 Using the values in the table, we can build Caddy for Windows 64-bit like this:
 
 ```bash
-$ env GOOS=windows GOARCH=amd64 go build github.com/mholt/caddy/caddy
+env GOOS=windows GOARCH=amd64 go build github.com/mholt/caddy/caddy
 ```
 
 Once again, no output indicates that the operation was successful. The executable will be created in the current directory, using the package name as its name.
