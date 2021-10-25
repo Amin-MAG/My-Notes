@@ -130,6 +130,11 @@ python3 manage.py createsuperuser
 # Create new Django app
 python3 manage.py startapp polls
 
+# To inspect database models
+python manage.py inspectdb
+# You can put them in a file
+python manage.py inspectdb > models.py
+
 ```
 
 ## Models
