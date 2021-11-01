@@ -201,6 +201,49 @@ exclude_lines =
     pass
 ```
 
+## Mock
+
+### FeedBack POIs
+
+```json
+{
+  "tags": {
+    "name": "$company.companyName"
+  },
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      "$address.latitude",
+      "$address.longitude"
+    ]
+  }
+}
+```
+
+### GBean POIs
+
+```json
+{  
+	"place_id": "$datatype.uuid",
+  "zoom_levels": [],
+  "names": [
+    "$company.companyName",
+    "$company.companyName"
+  ],
+  "lat": "$address.latitude",
+  "lng": "$address.longitude",
+  "types": [],
+  "phones": [
+    "$phone.phoneNumber",
+    "$phone.phoneNumber",
+    "$phone.phoneNumber"
+  ],
+  "review_count": 0,
+  "rate": 0,
+  "fixed_osm_id": 20100000000
+}
+```
+
 # Django REST Framework
 
 ## Serialization
