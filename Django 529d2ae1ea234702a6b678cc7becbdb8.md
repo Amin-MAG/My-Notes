@@ -162,7 +162,7 @@ There are all of the options here
 
 [Model Meta options | Django documentation | Django](https://docs.djangoproject.com/en/3.2/ref/models/options/)
 
-## Testing
+# Testing
 
 Unit testing
 
@@ -199,6 +199,56 @@ Config `.coveragerc` to customized the coverage report.
 exclude_lines =
     # Skip any pass lines such as may be used for @abstractmethod
     pass
+```
+
+## Django Tests
+
+Django tests create a `test_db`. if you want to run some scripts before creating the database you can put the scripts in:
+
+```json
+myproject/
+   |--myapp/
+       |--sql/
+           |--mymodel.sql
+```
+
+### Testing views in Django
+
+Let's suppose that in your `urls.py` you have defined this:
+
+```python
+url(r'^foo$', some_view, name='url_name'),
+```
+
+Then by using `revert(url_name)` will return the URL string.
+
+For testing views, e.g. NodeListViewTest This is the `urls.py`:
+
+```python
+urlpatterns = [
+    path("", views.index, name="index"),
+]
+```
+
+Here is the `tests/test_views.py`:
+
+```python
+class IndexViewTest(TestCase):
+
+    def test_accessibility(self):
+        response = self.client.get('/workflow/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_accessibility_with_reverse_function(self):
+        response = self.client.get(reverse("index"))
+        self.assertEqual(response.status_code, 200)
+
+    def test_content(self):
+        response = self.client.get(reverse("workflow.index"))
+        content = response.content.decode()
+        json_obj = json.loads(content)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(json_obj["message"], "Workflow APIs")
 ```
 
 ## Mock
