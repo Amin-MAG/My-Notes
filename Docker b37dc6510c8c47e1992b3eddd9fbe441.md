@@ -35,7 +35,27 @@ The `URL` parameter can refer to three kinds of resources: Git repositories, p
 docker build [OPTIONS] PATH | URL | -
 ```
 
+You can use `-t` to attach a tag to the image.
+
+## Create an image from a container
+
+You can start from a base image and apply your changes. Then you can create the new image:
+
+```bash
+# docker commit <container-name> <tag>
+docker commit base_image my_new_image
+```
+
 # Docker compose
+
+## Run a container
+
+You can jump into a container and start it with a specific command:
+
+```bash
+# sudo docker-compose run <service-name> <app-name>
+sudo docker-compose run ubuntu bash
+```
 
 ## Volumes
 
