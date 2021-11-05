@@ -42,8 +42,23 @@ You can use `-t` to attach a tag to the image.
 You can start from a base image and apply your changes. Then you can create the new image:
 
 ```bash
-# docker commit <container-name> <tag>
-docker commit base_image my_new_image
+# docker commit <container-name> <new_image_name>:<tag>
+# the tag part is optional
+docker commit base_image my_new_image:1.0.0
+```
+
+## Network
+
+To see all of the networks:
+
+```bash
+sudo docker network ls
+```
+
+You can see more details of each network with `inspect`
+
+```bash
+sudo docker network inspect <network-name>
 ```
 
 # Docker compose
