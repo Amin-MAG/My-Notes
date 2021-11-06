@@ -22,6 +22,7 @@
 - The convergence of digital twinning with automation and artificial intelligence will yield benefits in a vast spectrum of industries, many of which already are creating and using digital twins.
 - Remember, the goal is to be able to process data in a matter of milliseconds.
 - These data need to be cleaned, stored, and processed to produce information and knowledge, which are poised to be the basis for smart manufacturing.
+- Now, let’s talk about Prometheus from a more technical standpoint.
 
 # Words 01
 
@@ -130,3 +131,4 @@
 - Promising: John's promising future in medicine
 - Poise: Poise of mind
 - Resilient: rubber is resilient
+- Mandatory: Voting is not mandatory.
