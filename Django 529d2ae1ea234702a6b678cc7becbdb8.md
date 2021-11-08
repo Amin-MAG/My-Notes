@@ -135,6 +135,9 @@ python manage.py inspectdb
 # You can put them in a file
 python manage.py inspectdb > models.py
 
+# Extract database data to json file
+python manage.py datadump
+
 ```
 
 ## Models
