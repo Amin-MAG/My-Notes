@@ -11,7 +11,18 @@ Local Volumes   9         4         33.97GB   21.82GB (64%)
 Build Cache     30        0         96.28MB   96.28MB
 ```
 
-## Docker prune
+## ENTRYPOINT VS CMD
+
+You can use `ENTRYPOINT` or `CMD` in your Dockerfile to execute a command when the container starts. The difference between them is that `ENTRYPOINT` is executed any time the container is started, while `CMD` might be replaced with an command line option. Assuming the command you want to execute is `X`
+
+```
+docker run my-image Y
+
+```
+
+will execute `X` if `ENTRYPOINT X` was in the Dockerfile and `Y` if `CMD X` was in the Dockerfile.
+
+Docker prune
 
 The `docker image prune` command allows you to clean up unused images. By default, the `docker image prune` only cleans up *dangling* images. A dangling image is one that is not tagged and is not referenced by any container. To remove dangling images:
 
