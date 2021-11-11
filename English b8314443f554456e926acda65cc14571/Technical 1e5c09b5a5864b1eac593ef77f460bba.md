@@ -23,6 +23,7 @@
 - Remember, the goal is to be able to process data in a matter of milliseconds.
 - These data need to be cleaned, stored, and processed to produce information and knowledge, which are poised to be the basis for smart manufacturing.
 - Now, let’s talk about Prometheus from a more technical standpoint.
+- Often, if our team doesn’t have access to security experts, we go too far in one direction or the other: either we don’t pay enough attention to security issues; or we go through some compliance checklist and try to address everything in some 20 page document filled with potential issues.
 
 # Words 01
 
@@ -132,3 +133,5 @@
 - Poise: Poise of mind
 - Resilient: rubber is resilient
 - Mandatory: Voting is not mandatory.
+- Vulnerability
+-
