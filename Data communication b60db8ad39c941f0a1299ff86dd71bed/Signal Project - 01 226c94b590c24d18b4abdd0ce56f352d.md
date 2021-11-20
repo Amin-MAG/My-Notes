@@ -43,8 +43,9 @@ imshow(gi);
 ```
 
 > `rgb2gray` actually converts RGB values to grayscale values by forming a weighted sum of the *R*, *G*, and *B* components
-$0.2989 \times R + 0.5870 \times G + 0.1140 \times B$
 > 
+
+$0.2989 \times R + 0.5870 \times G + 0.1140 \times B$
 
 ## Write or Save images
 
@@ -76,6 +77,23 @@ There are lossless and lossy compressions. The lossless compression just compres
 ## Image signals
 
 The image signals are digital and they're represented by a 2D array of discrete signal samples. So about the question that was mentioned before, the image signal is energy, not power and the value is the sum of pixels' values.
+
+```matlab
+clc
+clear
+
+% Because of using gnu octave
+pkg load image;
+
+% Read the image
+gi = imread("images/icecream-gray.jpg");
+
+s = sum(gi(:));
+disp(s);
+% 1.4231e+08
+```
+
+It is infinite and so it is an energy.
 
 ## Image noise
 
@@ -190,12 +208,14 @@ The same code result for the main picture is
 
 ![Untitled](Signal%20Project%20-%2001%20226c94b590c24d18b4abdd0ce56f352d/Untitled%201.png)
 
+### FFT - Fast Fourier Transform
+
+The 0 frequency location is at the first and end of the spectrum and the highest frequencies are at the center.
+
 The image shows that it contains all of the frequencies, but their magnitude gets smaller for the higher amount of frequencies. So low frequencies should have more image information.
 
 > The center of the image is the origin of the frequency coordinate system.
 > 
-
-### FFT - Fast Fourier Transform
 
 Fourier analysis converts a signal from its original domain (often time or space) to a representation in the frequency domain and vice versa.
 
@@ -247,10 +267,12 @@ denoisedImage = conv2(double(gni), ones(3)/9, 'same');
 rgbImage = repmat(reshape(denoisedImage / 255, [r, c, 1, m]), [1, 1, 3, 1]);
 
 [peaksnr, snr] = psnr(double(gni), double(denoisedImage));
-% The Peak-SNR value is -28.1573
+% The Peak-SNR value is 28.1573
 fprintf('\n The Peak-SNR value is %0.4f\n', peaksnr);
 % The SNR value is 15.3810
 fprintf('\n The SNR value is %0.4f\n', snr);
 ```
 
 As you can see still it is not as same as the original image, But it removed some specific noises from the image using local mean. (with `conv2`)
+
+High PSNR means good noise removal.
