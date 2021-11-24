@@ -48,6 +48,12 @@ docker build [OPTIONS] PATH | URL | -
 
 You can use `-t` to attach a tag to the image.
 
+## Copy files
+
+```bash
+docker cp <CONTAINER_NAME>:<SRC_PATH> <DEST_PATH>
+```
+
 ## Create an image from a container
 
 You can start from a base image and apply your changes. Then you can create the new image:
