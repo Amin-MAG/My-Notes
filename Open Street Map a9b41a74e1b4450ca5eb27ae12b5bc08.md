@@ -406,3 +406,5 @@ Note: The upload API call supports placeholders - in fact, **all** id attribu
 [OpenStreetMap Wiki](https://wiki.openstreetmap.org/wiki)
 
 [Osmosis](Open%20Street%20Map%20a9b41a74e1b4450ca5eb27ae12b5bc08/Osmosis%20de12cd054dbe4b918998e77837446785.md)
+
+[Geohash](Open%20Street%20Map%20a9b41a74e1b4450ca5eb27ae12b5bc08/Geohash%20391dc833fdd64795864322ef31be0363.md)
