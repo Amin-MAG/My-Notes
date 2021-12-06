@@ -1,11 +1,28 @@
 # CTF
 
+- `enum4linux -a`
+- Linpease for find system vulenterise
+- johntheripper can crack the key passphrases
+- 
+
+## Gobuster
+
+```bash
+gobuster -w <WORDS> -u <IP>
+```
+
+## NMap
+
+```bash
+nmap -sC -sV -oN nmap/initial <IP>
+```
+
 ## Hydra
 
 It tries to broad-force a bunch of passwords based on the connection. It could be with `ssh` or any other kind of connection.
 
 ```bash
-
+hydra -l <USERNAME> -P <PASSWORD_LIST> ssh://<IP>
 ```
 
 ## Hashcat
