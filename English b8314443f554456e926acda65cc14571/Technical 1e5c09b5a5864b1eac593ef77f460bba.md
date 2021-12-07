@@ -134,4 +134,5 @@
 - Resilient: rubber is resilient
 - Mandatory: Voting is not mandatory.
 - Vulnerability
--
+- Subtle: a subtle thinker
+- Mandatory: Voting is not mandatory.
