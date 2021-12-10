@@ -78,6 +78,30 @@ You can see more details of each network with `inspect`
 sudo docker network inspect <network-name>
 ```
 
+## Image Layers
+
+You can see the image layers of an image using
+
+```bash
+docker history <IMAGE>:<TAG>
+```
+
+## Multi-Stage Builds
+
+```docker
+# Build stage
+FROM maven AS build
+WORKDIR /app
+COPY myapp /app
+RUN mvn package
+
+# New stage by using FROM instruction
+# Run stage
+FROM tomcat 
+# You can selectively copy artifacts from one stage to another
+COPY --from=build /app/target/file.war /usr/local/tomcat/war/
+```
+
 # Docker compose
 
 ## Run a container
@@ -166,3 +190,17 @@ db:
     ports:
       - "5432:5432"
 ```
+
+# Best practices
+
+1. User official docker images as base image: For example if you want to create docker file for you node app do not use ubuntu base image, use the node image.
+2. Do not use latest tag (set more specific versions): Latest tags are unpredictable, you might get different docker image versions, and it might break stuff.
+3. Don't use full-blown images: Because they are larger in image size, so they will take more storage space and needs more time for pushing and pulling too. There are lots of unnecessary tools in these images. They can add lots of vulnerabilities to your image. So you may introduce unnecessary security issues from the beginning.
+4. Optimize caching image layers (You should order you commands in docker file from least to most frequently changing to take advantage of caching): Each docker file is consisted of image layers. Each step add a layer. Caching layers is important because when we are building application it will be much faster, even in pushing and pulling images only the non-cached layers will be pushed or pulled.
+5. Use `.dockerignore` to reduce the image size (and maybe prevent unintended secret exposure)
+6. User Multi-Stage builds (To separate build and runtime stage): That would result in increased image file and attack surface. (like `package.json` or `pom.xml`, JDK, Gradle, Maven)
+7. Use the least privileged user: Default user for starting application in user `Id=0` or root. It is a security bad practice, because it will access to the docker host. 
+8. Scan your image for vulnerabilities (Using tools like docker scan)
+
+> This is from [https://www.youtube.com/watch?v=8vXoMqWgbQQ](https://www.youtube.com/watch?v=8vXoMqWgbQQ)
+>
