@@ -102,6 +102,17 @@ FROM tomcat
 COPY --from=build /app/target/file.war /usr/local/tomcat/war/
 ```
 
+## Scan
+
+To scan your image for security vulnerabilities
+
+```bash
+# You need to login into docker hub
+docker login
+# Use synk
+docker scan <IMAGE>:<TAG>
+```
+
 # Docker compose
 
 ## Run a container
