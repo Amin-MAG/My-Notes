@@ -74,10 +74,12 @@ Kubernetes:
 
 [What is Kubernetes?](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)
 
+[Pods and Nodes](Kubernetes%2007523bdad5d24d78b60f8edd681b9272/Pods%20and%20Nodes%206fc928badbbf4a3ea3d93ce2d240537a.md)
+
 [Workloads](Kubernetes%2007523bdad5d24d78b60f8edd681b9272/Workloads%206692c58bcf5e43b5be5eb50fba6fcbf3.md)
 
 [Volumes](Kubernetes%2007523bdad5d24d78b60f8edd681b9272/Volumes%203f6048d6869f4acbbdc456fc31013a53.md)
 
-[Miscellaneous](Kubernetes%2007523bdad5d24d78b60f8edd681b9272/Miscellaneous%20b304a648e1764cb7a2294f73b4deef72.md)
-
 [Kubectl](Kubernetes%2007523bdad5d24d78b60f8edd681b9272/Kubectl%2015099bdc205a428b9e60dc59bfaf1579.md)
+
+[Miscellaneous](Kubernetes%2007523bdad5d24d78b60f8edd681b9272/Miscellaneous%20b304a648e1764cb7a2294f73b4deef72.md)
