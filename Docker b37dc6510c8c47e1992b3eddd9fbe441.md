@@ -64,6 +64,36 @@ You can start from a base image and apply your changes. Then you can create the 
 docker commit base_image my_new_image:1.0.0
 ```
 
+## Save
+
+Used when you want to load a docker image. You can save docker image on disk by:
+
+```bash
+docker save busybox > busybox.tar
+docker save myimage:latest | gzip > myimage_latest.tar.gz
+```
+
+## Load
+
+To load a docker image from the disk.
+
+```bash
+docker load < busybox.tar.gz
+docker load --input fedora.tar
+```
+
+## Start Container
+
+```go
+docker start <CONTAINER_NAME>
+```
+
+If you want to execute a command while you are starting the container you can use
+
+```go
+docker container exec -it kali_base2 /bin/bash
+```
+
 ## Network
 
 To see all of the networks:
