@@ -94,6 +94,26 @@ If you want to execute a command while you are starting the container you can us
 docker container exec -it kali_base2 /bin/bash
 ```
 
+## Mount
+
+To mount to your local file system
+
+```bash
+docker run -d \
+  -it \
+  --name devtest \
+  --mount type=bind,source="$(pwd)"/target,target=/app \
+  nginx:latest
+```
+
+## Volumes
+
+To create new volume
+
+```bash
+docker volume create hello
+```
+
 ## Network
 
 To see all of the networks:
