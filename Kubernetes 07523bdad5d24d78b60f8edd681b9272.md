@@ -83,3 +83,5 @@ Kubernetes:
 [Kubectl](Kubernetes%2007523bdad5d24d78b60f8edd681b9272/Kubectl%2015099bdc205a428b9e60dc59bfaf1579.md)
 
 [Miscellaneous](Kubernetes%2007523bdad5d24d78b60f8edd681b9272/Miscellaneous%20b304a648e1764cb7a2294f73b4deef72.md)
+
+[Helm](Kubernetes%2007523bdad5d24d78b60f8edd681b9272/Helm%20bebec42749e64f29bba2b857df116d5d.md)
