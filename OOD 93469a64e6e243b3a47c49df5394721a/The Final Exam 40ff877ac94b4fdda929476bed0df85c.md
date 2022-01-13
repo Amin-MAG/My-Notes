@@ -9,7 +9,20 @@
 
 ### What is the methods of Locality of change in softwares?
 
-`null`
+The locality in softwares development states that the person working closely, in terms of time and space, to an artifact is the most qualified person to remove defects associated with it.
+
+There are several different types of locality of reference:
+
+- **Temporal locality**: If at one point a particular memory location is referenced, then it is likely that the same location will be referenced again in the near future. There is temporal proximity between adjacent references to the same memory location. In this case it is common to make efforts to store a copy of the referenced data in faster memory storage, to reduce the latency of subsequent references. Temporal locality is a special case of spatial locality (see below), namely when the prospective location is identical to the present location.
+- **Spatial locality**: If a particular storage location is referenced at a particular time, then it is likely that nearby memory locations will be referenced in the near future. In this case it is common to attempt to guess the size and shape of the area around the current reference for which it is worthwhile to prepare faster access for subsequent reference.
+    - **Memory locality** (or *data locality*): Spatial locality explicitly relating to [memory](https://en.wikipedia.org/wiki/Computer_memory).
+        
+        [[3]](https://en.wikipedia.org/wiki/Locality_of_reference#cite_note-NistBig1-3)
+        
+- **[Branch](https://en.wikipedia.org/wiki/Branch_(computer_science)) locality**: If there are only a few possible alternatives for the prospective part of the path in the spatial-temporal coordinate space. This is the case when an instruction loop has a simple structure, or the possible outcome of a small system of conditional branching instructions is restricted to a small set of possibilities. Branch locality is typically not spatial locality since the few possibilities can be located far away from each other.
+- **Equidistant locality**: Halfway between spatial locality and branch locality. Consider a loop accessing locations in an equidistant pattern, i.e., the path in the spatial-temporal coordinate space is a dotted line. In this case, a simple linear function can predict which location will be accessed in the near future.
+
+In order to benefit from temporal and spatial locality, which occur frequently, most of the information storage systems are [hierarchical](https://en.wikipedia.org/wiki/Computer_data_storage#Hierarchy_of_storage). Equidistant locality is usually supported by a processor's diverse nontrivial increment instructions. For branch locality, the contemporary processors have sophisticated branch predictors, and on the basis of this prediction the memory manager of the processor tries to collect and preprocess the data of plausible alternatives.
 
 ### What is the difference in Risk-Driven approaches for software developing?
 
@@ -25,6 +38,8 @@ The key element of the risk-driven model is the promotion of risk to prominence.
 
 Pros
 
+- Late Binding: Services can be swapped with other services without recompiling code.
+- Extensibility
 - Reduces the overall cost of changing the system
 - Classes are more modular
 - Introduces abstraction layers. Increases Single Responsibilities of classes.
@@ -35,6 +50,8 @@ Cons
 
 - Highlight design problems (So that many programmers start to blame DI)
 - For programmers is more difficult to follow the code, due to the separation of responsibilities.
+
+![Untitled](The%20Final%20Exam%2040ff877ac94b4fdda929476bed0df85c/Untitled.png)
 
 ### What is the difference between viewpoints and perspectives in software architecture?
 
@@ -70,3 +87,5 @@ Encapsulation is to hide additional information. To hide complexity and define s
 [Software Architecture Concepts: Architectural Perspectives](https://medium.com/analytics-vidhya/software-architecture-concepts-architectural-perspectives-dda93b775292)
 
 [Software Architecture: Views and Viewpoints](https://frmusazade.medium.com/software-architecture-views-and-viewpoints-113d1592fe3a)
+
+[Locality of reference - Wikipedia](https://en.wikipedia.org/wiki/Locality_of_reference)
