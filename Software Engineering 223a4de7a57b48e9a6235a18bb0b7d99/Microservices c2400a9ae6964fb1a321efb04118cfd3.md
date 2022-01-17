@@ -11,12 +11,14 @@ Although microservice solves certain issues, it is not a silver bullet. It has s
 ### Greenfield
 
 > in other disciplines like software engineering, a greenfield is also a project which lacks any constraints imposed by prior work. The analogy is to that of construction on greenfield land where there is no need to remodel or demolish an existing structure.
+> 
 
 (from [http://en.wikipedia.org/wiki/Greenfield_project](http://en.wikipedia.org/wiki/Greenfield_project))
 
 ### Brownfield
 
 > Brownfield development is a term commonly used in the IT industry to describe problem spaces needing the development and deployment of new software systems in the immediate presence of existing (legacy) software applications/systems. This implies that any new software architecture must take into account and coexist with live software already in situ.
+> 
 
 (from [http://en.wikipedia.org/wiki/Brownfield_(software_development)](http://en.wikipedia.org/wiki/Brownfield_(software_development)))
 
@@ -31,18 +33,21 @@ A service portfolio is a complete listing of all of IT’s products and servic
 ### Downstream
 
 > In a telecommunications network or computer network, downstream refers to data sent from a network service provider to a customer.
+> 
 
 (from [https://en.wikipedia.org/wiki/Downstream_(networking)](https://en.wikipedia.org/wiki/Downstream_(networking)))
 
 ### Proxy Service
 
 > A service proxy is a network component that acts as an intermediary for requests seeking resources from microservices application components. A client connects to the service proxy to request a particular service (file, connection, web page, or other resources) provided by one of the microservices components.
+> 
 
 [https://avinetworks.com/glossary/service-proxy/](https://avinetworks.com/glossary/service-proxy/)
 
 ### Reverse Proxy
 
 > A reverse proxy server sits between a network and multiple other internal resources. A large website might have dozens of servers that collectively serve requests from a single domain. To accomplish that, client requests would resolve to a machine that would act as a load balancer. The load balancer would then proxy that traffic back to the individual servers.
+> 
 
 Some popular open-source reverse proxies are:
 
@@ -54,12 +59,14 @@ more on [https://www.varonis.com/blog/what-is-a-proxy-server/](https://www.varon
 ### API Granularity
 
 > In the tech world, granularity refers to the level of detailed information available within your API. Think of it like your bedsheet’s thread count. In a coarse-grained API, your data is typically housed in a few large components, while a fine-grained API spreads it across a large number of smaller components. If your components are equal in size but vary in complexity and features, this could lead to a coarse-grained granularity. To build a fine-grained API, you divide your components based on the cohesiveness and coordination of their functionalities.
+> 
 
 [https://horizontal.blog/2020/06/09/fine-grained-vs-coarse-grained-apis/](https://horizontal.blog/2020/06/09/fine-grained-vs-coarse-grained-apis/)
 
 ### API Gateway
 
 > An API gateway is an API management tool that sits between a client and a collection of backend services. An API gateway acts as a reverse proxy to accept all application programming interface (API) calls, aggregate the various services required to fulfill them, and return the appropriate result.
+> 
 
 [https://www.redhat.com/en/topics/api/what-does-an-api-gateway-do#:~:text=An API gateway is an,and return the appropriate result](https://www.redhat.com/en/topics/api/what-does-an-api-gateway-do#:~:text=An%20API%20gateway%20is%20an,and%20return%20the%20appropriate%20result).
 
@@ -124,7 +131,10 @@ Decomposing an application using business capabilities might be a good start, bu
 
 For the "God Classes" issue, DDD (Domain-Driven Design) comes to the rescue. It uses subdomains and bounded context concepts to solve this problem. DDD breaks the whole domain model created for the enterprise into subdomains. Each subdomain will have a model, and the scope of that model will be called the bounded context. Each microservice will be developed around the bounded context.
 
-**Note**: Identifying subdomains is not an easy task. It requires an understanding of the business. Like business capabilities, subdomains are identified by analyzing the business and its organizational structure and identifying the different areas of expertise.
+<aside>
+💡 **Note**: Identifying subdomains is not an easy task. It requires an understanding of the business. Like business capabilities, subdomains are identified by analyzing the business and its organizational structure and identifying the different areas of expertise.
+
+</aside>
 
 ### Strangler Pattern
 
@@ -174,7 +184,10 @@ The Aggregator pattern helps to address this. It talks about how we can aggregat
 
 2. An **API Gateway** can also partition the request to multiple microservices and aggregate the data before sending it to the consumer.
 
-It is recommended if any business logic is to be applied, then choose a composite microservice. Otherwise, the API Gateway is the established solution.
+<aside>
+💡 It is recommended if any business logic is to be applied, then choose a composite microservice. Otherwise, the API Gateway is the established solution.
+
+</aside>
 
 Also, since the source of output gets divided on breaking the monolithic architecture to microservices, this pattern proves to be beneficial when you need an output by combining data from multiple services. So, if we have two services each having its own database, then an aggregator having a unique transaction ID, would collect the data from each microservice, apply the business logic, and finally publish it as a [REST](https://www.edureka.co/blog/what-is-rest-api/) endpoint. Later on, the data collected can be consumed by the respective services which require that collected data.
 
@@ -231,7 +244,10 @@ Once we implement database-per-service, there is a requirement to query, which r
 
 CQRS suggests splitting the application into two parts — the command side and the query side. The command side handles the Create, Update, and Delete requests. The query side handles the query part by using the materialized views. The **event sourcing pattern** is generally used along with it to create events for any data change. Materialized views are kept updated by subscribing to the stream of events.
 
-A materialized view is a pre-computed data set derived from a query specification (the SELECT in the view definition) and stored for later use. Because the data is pre-computed, querying a materialized view is faster than executing a query against the view's base table.
+<aside>
+💡 A materialized view is a pre-computed data set derived from a query specification (the SELECT in the view definition) and stored for later use. Because the data is pre-computed, querying a materialized view is faster than executing a query against the view's base table.
+
+</aside>
 
 ### Saga Pattern
 
@@ -364,6 +380,7 @@ This pattern is named *Sidecar* because it resembles a sidecar attached to a m
 ### iPaaS
 
 > Integration Platform as a Service (iPaaS) is a suite of cloud services enabling development, execution and governance of integration flows connecting any combination of on premises and cloud-based processes, services, applications and data within individual or across multiple organizations.
+> 
 
 [https://www.gartner.com/en/information-technology/glossary/information-platform-as-a-service-ipaas](https://www.gartner.com/en/information-technology/glossary/information-platform-as-a-service-ipaas)
 
@@ -413,7 +430,7 @@ Amazon’s “service-oriented architecture” was largely the beginning of what
 
 [کافه بازار - Monolithic به Microservices](Microservices%20c2400a9ae6964fb1a321efb04118cfd3/%DA%A9%D8%A7%D9%81%D9%87%20%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1%20-%20Monolithic%20%D8%A8%D9%87%20Microservices%2064960a9bca07432ea6578064a9847d50.md)
 
-[https://www.notion.so/Microservices-c2400a9ae6964fb1a321efb04118cfd3#b3ed805bd3ea47c29b0ee79d7183c1ab]()
+[https://www.notion.so/Microservices-c2400a9ae6964fb1a321efb04118cfd3#b3ed805bd3ea47c29b0ee79d7183c1ab](Microservices%20c2400a9ae6964fb1a321efb04118cfd3.md)
 
 ### 
 
