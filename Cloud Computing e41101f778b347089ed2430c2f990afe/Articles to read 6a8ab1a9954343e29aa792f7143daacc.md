@@ -60,3 +60,19 @@
 5. Efficient VM migrations using forecasting techniques in cloud computing: a comprehensive review [https://link.springer.com/article/10.1007%2Fs10586-019-03032-x](https://link.springer.com/article/10.1007%2Fs10586-019-03032-x)
 6. Workload aware VM consolidation method in edge/cloud computing for IoT applications [https://www.sciencedirect.com/science/article/abs/pii/S0743731518306762](https://www.sciencedirect.com/science/article/abs/pii/S0743731518306762)
 7. Dynamic Threshold-Based Dynamic Resource Allocation Using Multiple VM Migration for Cloud Computing Systems [https://link.springer.com/chapter/10.1007/978-981-10-6544-6_11](https://link.springer.com/chapter/10.1007/978-981-10-6544-6_11)
+
+## Orchestration serverless workflows
+
+Articles:
+
+1. Serverless is More: From PaaS to Present Cloud Computing [https://ieeexplore.ieee.org/abstract/document/8481652](https://ieeexplore.ieee.org/abstract/document/8481652)
+2. Triggerflow: Trigger-based orchestration of serverless workflows [https://dl.acm.org/doi/10.1145/3401025.3401731](https://dl.acm.org/doi/10.1145/3401025.3401731)
+3. Serverless Workflows for Containerised Applications in the Cloud Continuum [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8276028/pdf/10723_2021_Article_9570.pdf](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8276028/pdf/10723_2021_Article_9570.pdf)
+4. Evaluation of serverless computing for scalable execution of a joint variant calling workflow [https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0254363&type=printable](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0254363&type=printable)
+5. **Valve: Securing Function Workflows on Serverless Computing Platforms** [https://dl.acm.org/doi/abs/10.1145/3366423.3380173](https://dl.acm.org/doi/abs/10.1145/3366423.3380173)
+6. (It’s not a scientific article) Google Cloud: [https://cloud.google.com/blog/topics/developers-practitioners/orchestrating-pic-daily-serverless-app-workflows](https://cloud.google.com/blog/topics/developers-practitioners/orchestrating-pic-daily-serverless-app-workflows)
+
+Articles with no free access:
+
+- **Speedo: Fast dispatch and orchestration of serverless workflows**
+- A Measurement Study on Serverless Workflow Services
