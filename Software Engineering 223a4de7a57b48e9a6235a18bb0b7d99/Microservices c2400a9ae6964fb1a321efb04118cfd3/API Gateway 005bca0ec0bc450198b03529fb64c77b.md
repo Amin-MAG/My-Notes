@@ -39,6 +39,7 @@ It is an API gateway.
 In this approach, we have a layer between the client and microservices called an API gateway. It is a front-facing service for all of the microservices. Now any client who wants to access the microservices, the client has to call the API gateway. Now API gateway, in turn, makes a call to all of the microservices and gets whatever response we might need. This process is called API composition.
 
 > In a nutshell, An API gateway sits in between the client and microservices and it acts as a gateway for all of the microservices.
+> 
 
 Not only this but using an API Gateway benefits us in many ways.
 

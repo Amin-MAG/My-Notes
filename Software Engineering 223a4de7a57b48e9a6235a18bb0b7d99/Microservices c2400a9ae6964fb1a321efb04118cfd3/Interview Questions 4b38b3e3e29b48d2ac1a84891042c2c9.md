@@ -112,6 +112,8 @@ The degree to which the elements inside a module belong together is said to be c
 
 The measure of the strength of the dependencies between components is said to be coupling. A good design is always said to have High Cohesion and Low Coupling.
 
+## What is REST/RESTful and what are its uses?
+
 # References
 
 [Top Microservices Interview Questions and Answers | Edureka](https://www.edureka.co/blog/interview-questions/microservices-interview-questions/)

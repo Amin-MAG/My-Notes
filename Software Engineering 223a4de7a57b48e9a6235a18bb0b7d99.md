@@ -49,3 +49,19 @@ Solving Questions
 5. 
 
 [Microservices](Software%20Engineering%20223a4de7a57b48e9a6235a18bb0b7d99/Microservices%20c2400a9ae6964fb1a321efb04118cfd3.md)
+
+# Miscellaneous
+
+## ECA
+
+ECA stands for Event Condition Action is a shortcut name for referring to the structure of active rules in event-driven architecture and active database systems.
+
+Such a rule traditionally consisted of three parts:
+
+- The *event* part specifies the signal that triggers the invocation of the rule
+- The *condition* part is a logical test that, if satisfied or evaluates to true, causes the action to be carried out
+- The *action* part consists of updates or invocations on the local data
+
+## References
+
+[Event condition action - Wikipedia](https://en.wikipedia.org/wiki/Event_condition_action)
