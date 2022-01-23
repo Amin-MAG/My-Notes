@@ -67,6 +67,42 @@ The context is a key-value data structure that contains the states of the trigge
 The conditions are active rules. Based on these rule it will decide to launch corresponding action or not. These condition evaluate rules over primitive or composite (like counters stored in context) events.
 
 The action is the user-defined code. It can be serverless function, container VM, or container.
+
+## Prototype implementation
+
+Components of the prototype implementation:
+
+- Front-end RESTful API, where a user can interact with Triggerflow
+- Database, responsible for storing workflow information
+- Controller, responsible for creating workflows in kubernetes
+- Workflow Workers (TF-Worker), responsible for processing the events
+
+There were 2 development, one of the was over Knative and the other one used K8s event-driven Autoscaling (KEDA).
+
+Knative is very well suited for push-based scaling. KEDA is the option for having push-based scaling.
+
+### KEDA Implementation
+
+In this case, the Trigger-flow Controller integrates KEDA for the monitoring of Event Sources and for launching the appropriate TF-Workers, and scaling them to zero when necessary.
+
+The advantage here is that, unlike in Knative Eventing, our TF-Workers are connected directly to the Message Broker (Kafa, Redis Streams) using the native protocol of the broker.
+
+![Untitled](Orchestrating%20Serverless%20Workflows%204f2496a943004f16af85c2ab5e8a2cf3/Untitled%201.png)
+
+Figure 2 shows a high-level perspective of our implementation using KEDA. In this deployment, Trigger-flow works as follows:
+
+Through the client, a user must firstly create an empty workflow to the Trigger-flow registry, and reference an event source that this workflow will use. Then, the user can start adding triggers to it (1). 
+
+All the information is persisted in the database (for example, Redis) (2). 
+
+Then, immediately after creating the workflow, the front-end API communicates with the Trigger-flow controller (3), deployed as a single stateless pod container (service) in Kubernetes, to create the auto-scalable TF-Worker in KEDA (4). 
+
+From this moment, KEDA is responsible to scale up and down the TF-Workers (5). 
+
+In KEDA, as stated above, the TF-Worker is responsible for communicating directly to the event source (6) to pull the incoming events. Finally,
+
+TF-Workers periodically interact with the database (7) to keep the local cache of available triggers updated, and to store the context (checkpointing) for fault-tolerance purposes.
+
 ## Keywords to search for it
 
 - PyWren
