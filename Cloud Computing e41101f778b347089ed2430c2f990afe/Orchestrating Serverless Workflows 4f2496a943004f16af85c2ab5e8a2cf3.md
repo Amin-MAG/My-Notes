@@ -103,6 +103,31 @@ In KEDA, as stated above, the TF-Worker is responsible for communicating directl
 
 TF-Workers periodically interact with the database (7) to keep the local cache of available triggers updated, and to store the context (checkpointing) for fault-tolerance purposes.
 
+## Use cases
+
+### Directed Acyclic Graphs - DAGs
+
+In this graph, each vertex represents a single the tasks of the workflow and the edges represents the dependencies between those tasks.
+
+Obviously, you need to know what tasks have to be executed before a certain one.
+
+> Apache Airflow is an example of orchestration platform that uses DAGs
+> 
+
+To orchestrate a workflow defined as a DAG with triggers, we will define a trigger for every edge of the DAG:
+
+- Activation Events: To Register the task IDs needs to be completed. (Dependencies)
+- Condition: To count number of events needs to be aggregated.
+- Action: To Register the actual task
+
+According to Airflow’s core ideas, an Operator describes what is the actual work logic that is carried out by a task.
+
+![Untitled](Orchestrating%20Serverless%20Workflows%204f2496a943004f16af85c2ab5e8a2cf3/Untitled%202.png)
+
+### State Machines & Nested Workflows
+
+### Workflow as Code & Event Sourcing
+
 ## Keywords to search for it
 
 - PyWren
