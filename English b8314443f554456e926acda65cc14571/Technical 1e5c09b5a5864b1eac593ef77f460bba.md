@@ -23,7 +23,9 @@
 - Remember, the goal is to be able to process data in a matter of milliseconds.
 - These data need to be cleaned, stored, and processed to produce information and knowledge, which are poised to be the basis for smart manufacturing.
 - Now, let’s talk about Prometheus from a more technical standpoint.
-- Often, if our team doesn’t have access to security experts, we go too far in one direction or the other: either we don’t pay enough attention to security issues; or we go through some compliance checklist and try to address everything in some 20 page document filled with potential issues.
+- Often, if our team doesn’t have access to security experts, we go too far in one direction or the other: either we don’t pay enough attention to security issues, or we go through some compliance checklist and try to address everything in some 20-page document filled with potential issues.
+- A strong understanding of future goals for scope and volume will draw clear guidelines to inform the process.
+- In particular, he foresees new services like fine-grained, low-latency orchestration, execution data flows, and the ability to customize code and data at scale to support the emerging data-intensive applications over Serverless Functions.
 
 # Words 01
 
@@ -136,3 +138,19 @@
 - Vulnerability
 - Subtle: a subtle thinker
 - Mandatory: Voting is not mandatory.
+
+# Words 3
+
+- Heterogeneous
+- To entail: This project will entail great costs.
+- Aforementioned: the aforementioned writers' works
+- To comply: He complied with all of the regulations.
+- to Introspect
+- To converge: A place where three roads converge.
+- To delegate: He delegated his authority to his assistant.
+- Compelling: compelling circumstances
+- To depict: Her painting depicts a man who is eating.
+- distinctive: a distinctive characteristic
+- Nevertheless
+- Adequate: We didn't thank him adequately.
+- To accelerate: The rate of inflation is accelerating fast.
