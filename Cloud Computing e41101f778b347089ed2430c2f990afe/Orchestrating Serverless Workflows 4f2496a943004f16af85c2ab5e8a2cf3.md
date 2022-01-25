@@ -126,7 +126,51 @@ According to Airflow’s core ideas, an Operator describes what is the actual wo
 
 ### State Machines & Nested Workflows
 
+Amazon uses state machines to represent the workflows. The state machines are defined by a declarative JSON object called ASL. Like the previous use case each state needs to know what is the next step.
+
+There will be a trigger for each one of these state transitions.
+
+Kinds of states in this State Machine:
+
+- **Task** or **Pass** state: ****These state types carry out the actual workflow computational logic.
+- **Choice** state:  ****It defines a set of possible outcomes that execute depending on some basic boolean logic.
+- **Parallel** state:  ****It defines a set of sub-state machines that run in parallel.
+- **Map** state:  ****Similarly to the Parallel state type, this state defines a single sub-state machine that executes for every element in an iterable data structure input in parallel.
+- **Wait** state:  ****It waits for a range of time or until a specific point of time.
+- **Fail** or **Success** state: ****This will end the workflow with and determines that the workflow completed successfully or with a failure.
+
+![Untitled](Orchestrating%20Serverless%20Workflows%204f2496a943004f16af85c2ab5e8a2cf3/Untitled%203.png)
+
 ### Workflow as Code & Event Sourcing
+
+> PyWren and Azure Durable Functions are the examples of this section
+> 
+
+You can handle the task by simple a code.
+
+```python
+import pywren_ibm_cloud as pywren
+
+def my_function (x):
+	return x + 7
+
+pw = pywren. ibm_cf_executor ()
+future = pw._call_async(my_function, 3)
+res = future.result()
+futures = pw.map(my_function, range(res))
+print(pywren.get_result(futures))
+```
+
+In this article, they used even sourcing in 2 ways to ensuring restarting and continuing this PyWren code. 
+
+1. Native Scheduler
+2. External Scheduler
+
+![Untitled](Orchestrating%20Serverless%20Workflows%204f2496a943004f16af85c2ab5e8a2cf3/Untitled%204.png)
+
+## Validation
+
+Validations are consisted of load-testing, auto-scaling, completion time and overhead, and scientific workflows.
 
 ## Keywords to search for it
 
