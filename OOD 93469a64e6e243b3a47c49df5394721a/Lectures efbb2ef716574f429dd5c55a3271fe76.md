@@ -45,7 +45,7 @@ Cons
 - Highlight design problems (So that many programmers start to blame DI)
 - For programmers is more difficult to follow the code, due to the separation of responsibilities.
 
-![Untitled](The%20Final%20Exam%2040ff877ac94b4fdda929476bed0df85c/Untitled.png)
+![Untitled](Lectures%20efbb2ef716574f429dd5c55a3271fe76/Untitled.png)
 
 ### Patterns
 
