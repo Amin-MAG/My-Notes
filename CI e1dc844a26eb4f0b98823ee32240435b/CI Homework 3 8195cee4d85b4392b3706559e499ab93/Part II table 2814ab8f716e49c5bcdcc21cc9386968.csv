@@ -1,0 +1,5 @@
+﻿Given patterns,Asked pattern,Energy,Accuracy,more
+"P1, P2",P2,-28,100%,A stable input is given!
+"P1, P2",P3,-38,100%,A stable input is given!
+"P1, P2, P3",P2,-28,83.33%,
+"P1, P2, P3",P3,-38,83.33%,
