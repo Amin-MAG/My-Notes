@@ -1,5 +1,7 @@
 # Orchestrating Serverless Workflows
 
+Server-less computing is a new paradigm in cloud computing that abstracts away infrastructure management tasks like load-balancing, scaling from tenants. This makes the users to focus solely on the application development.
+
 # FaaS
 
 Serverless Function as a Service (FaaS) is becoming a very popular programming model in the cloud thanks to its simplicity, billing model and inherent elasticity.
@@ -187,8 +189,75 @@ Validations are consisted of load-testing, auto-scaling, completion time and ove
 - NATS and Apache kafka
 - Kubernetes Event-driven Autoscaling (KEDA)
 
+# OSCAR
+
+> Server-less Workflows for Containerized Applications in the Cloud Continuum
+> 
+
+This article will introduce a function definition language to create the functions together with its relationship with data-driven server-less computing.
+
+On of main purposes of this paper is to define new OSCAR framework.
+
+On-premises cloud infrastructure would be hardware that is related to cloud services or activities, that is nonetheless located on-site at the client’s physical business location.
+
+OSCAR is the component of the system that is in charge of creating a function together with the required resources. It is going to support event-driven batch-based GPU-aware executions on the top of K8s cluster for scientific computing.
+
+The users are going to upload a file on an Object storage like MinIO which will trigger the execution of the function. So they are the source of events for this workflow.
+
+## Architecture of OSCAR
+
+![Untitled](Orchestrating%20Serverless%20Workflows%204f2496a943004f16af85c2ab5e8a2cf3/Untitled%205.png)
+
+The clusters become autonomous in deciding whether to scale out due to CLUES elasticity manager.
+
+To aim asynchronous executions, OSCAR creates a Kubernetes job for each asynchronous invocation that are delegated into the Kubernetes workload scheduler for efficient execution.
+
+### Security
+
+For security, Lambda functions use pre-defined IAM (Identity and Access Management) Roles6 that follow the Principle of Least Privilege (PoLP) so that they can
+only access the resources required.
+
+The OSCAR cluster itself need a basic authentication.
+
+## Function Definition Language
+
+This article suggests defining a YAML-based Functions Definition Language (FDL) that specifies the requirements for each function and how they are linked.
+
+Using docker images beside this YAML-based file powers us to use different kinds of OS and distributions and providing complex environments.
+
+![Untitled](Orchestrating%20Serverless%20Workflows%204f2496a943004f16af85c2ab5e8a2cf3/Untitled%206.png)
+
+They use a general form to run the applications. Instead of having a Programming Language they deal with bash files that makes us to run any kind of application that is supported by command line in that container. 
+
+![Untitled](Orchestrating%20Serverless%20Workflows%204f2496a943004f16af85c2ab5e8a2cf3/Untitled%207.png)
+
+As you can see, you can focus on the definition of the workflow and let the cluster auto-scale within the on-premises cloud.
+
+## Use Case - Deep Learning Video Processing
+
+A mask-wearing detection in COVID-19 global pandemic via deep learning vide processing.
+
+![Untitled](Orchestrating%20Serverless%20Workflows%204f2496a943004f16af85c2ab5e8a2cf3/Untitled%208.png)
+
+Data is captured at the edge (camera devices), pre-processing is carried out in an on-premises Cloud (to blur the faces) for regulatory compliance purposes and, finally, processing and storing of final results is carried out in a public Cloud using a server-less platform for increased elasticity and long-term persistence.
+
+![Untitled](Orchestrating%20Serverless%20Workflows%204f2496a943004f16af85c2ab5e8a2cf3/Untitled%209.png)
+
+> Case study is not noted yet.
+> 
+
+## Keywords to search for it
+
+- SCAR and OSCAR Open source project
+- Minicon
+- OpenFaaS
+- Define workflow with SCAR
+- Blurry faces tool
+
 # References
 
 [Triggerflow | Proceedings of the 14th ACM International Conference on Distributed and Event-based Systems](https://dl.acm.org/doi/10.1145/3401025.3401731)
 
 [https://github.com/triggerflow/triggerflow](https://github.com/triggerflow/triggerflow)
+
+[What is an On-Premises Cloud Infrastructure? - Definition from Techopedia](https://www.techopedia.com/definition/32287/on-premises-cloud-infrastructure)
