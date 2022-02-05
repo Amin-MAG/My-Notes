@@ -254,6 +254,24 @@ Data is captured at the edge (camera devices), pre-processing is carried out in 
 - Define workflow with SCAR
 - Blurry faces tool
 
+# SWEEP
+
+> Evaluation of server-less computing for scalable execution of a joint variant calling
+workflow
+> 
+
+## Workflow Definition
+
+SWEEP workflows are represented as Directed Acyclic Graphs (DAGs), where the nodes correspond to tasks, and the arrows indicate order of execution.
+
+The task units can be constructed by a function or a container. These workflows are going to be defined in some JSON based files.  
+
+![Untitled](Orchestrating%20Serverless%20Workflows%204f2496a943004f16af85c2ab5e8a2cf3/Untitled%2010.png)
+
+# Securing Function Workflows - VALVE
+
+It presents `Valve` a server-less platform that enables dynamic information flow tracking and control in distributed function workflows.
+
 # References
 
 [Triggerflow | Proceedings of the 14th ACM International Conference on Distributed and Event-based Systems](https://dl.acm.org/doi/10.1145/3401025.3401731)
