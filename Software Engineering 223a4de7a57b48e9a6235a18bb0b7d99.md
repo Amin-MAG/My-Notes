@@ -65,3 +65,7 @@ Such a rule traditionally consisted of three parts:
 ## References
 
 [Event condition action - Wikipedia](https://en.wikipedia.org/wiki/Event_condition_action)
+
+## CNCF Cloud Events
+
+## References

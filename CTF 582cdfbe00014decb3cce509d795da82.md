@@ -3,7 +3,14 @@
 - `enum4linux -a`
 - Linpease for find system vulenterise
 - johntheripper can crack the key passphrases
-- 
+- scapy
+- hexedit
+
+## ZIP Cracking
+
+```bash
+fcrackzip -D -p /usr/share/wordlists/rockyou.txt 37366.zip -u
+```
 
 ## Gobuster
 
@@ -33,11 +40,16 @@ It actually try to calculate bunch of string with different hashing algorithms a
 
 ```
 
-## Radare2
+# `httpry`
+
+# Gdb
+
+# Radare2
 
 To open the Radare2 console
 
 ```bash
+# To write, analyze in debug mode
 r2 -w -A -d <BINARY_FILES>
 ```
 
@@ -54,8 +66,23 @@ s main
 vv
 
 # Schematic
+# Then you can change the mode with p
 VV
-
 ```
 
-## GDB
+Edit a hex number from operators or operands
+
+```bash
+# Write hex at the head
+:wx 75
+```
+
+To debug continue
+
+```bash
+:dc
+```
+
+dig
+
+gdb
