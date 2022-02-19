@@ -131,12 +131,12 @@ python3 manage.py createsuperuser
 python3 manage.py startapp polls
 
 # To inspect database models
-python manage.py inspectdb
+python3 manage.py inspectdb
 # You can put them in a file
-python manage.py inspectdb > models.py
+python3 manage.py inspectdb > models.py
 
 # Extract database data to json file
-python manage.py datadump
+python3 manage.py datadump
 
 ```
 
