@@ -297,6 +297,80 @@ class IndexViewTest(TestCase):
 }
 ```
 
+## Django Admin
+
+To create a new admin model you need to change the `[admin.py](http://admin.py)` file in the app.
+
+First of define your admin model class.
+
+```python
+from django.contrib import admin
+from django.contrib.admin import ModelAdmin
+from workflow import models
+from workflow.forms import WorkflowStageAdminForm
+
+class HookAdmin(ModelAdmin):
+    # form = HookAdminForm
+    list_display = (
+        "id",
+        "name",
+        "hook_type",
+        "event_type",
+        "setting_name",
+    )  # '__str__',
+    list_filter = (
+        "hook_type",
+        "event_type",
+    )
+    search_fields = ["name", "setting__name"]
+```
+
+Then you need to register this model for your admin panel.
+
+```python
+admin.site.register(models.Hook, HookAdmin)
+```
+
+You can also customize your admin panel for a model by defining a form.
+
+```python
+class WorkflowStageAdmin(ModelAdmin):
+    form = WorkflowStageAdminForm
+    list_display = (
+        "id",
+        "workflow_name",
+        "stage_name",
+        "priority",
+    )
+    list_filter = ("priority",)
+    search_fields = ["workflow__name", "workflow__version", "stage__name"]
+```
+
+### Forms
+
+This package is for customizing the input forms for admin panel.
+
+```python
+from django import forms
+from workflow.models import CobblerSetting, Hook, Workflow, Stage, WorkflowStage, Job
+
+class NameIdModelChoiceField(forms.ModelChoiceField):
+    def label_from_instance(self, obj):
+        return "%s (%s)" % (obj.name, obj.id)
+
+class NameVersionModelChoiceField(forms.ModelChoiceField):
+    def label_from_instance(self, obj):
+        return "%s (%s)" % (obj.name, obj.version)
+
+class WorkflowStageAdminForm(forms.ModelForm):
+    workflow = NameVersionModelChoiceField(queryset=Workflow.objects.all())
+    stage = NameIdModelChoiceField(queryset=Stage.objects.all())
+
+    class Meta:
+        model = WorkflowStage
+        fields = "__all__"
+```
+
 # Django REST Framework
 
 ## Serialization
