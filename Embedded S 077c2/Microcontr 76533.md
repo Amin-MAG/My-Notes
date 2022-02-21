@@ -1,3 +1,0 @@
-# Microcontroller
-
-## What are microcontrollers?

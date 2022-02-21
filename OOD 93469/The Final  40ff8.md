@@ -51,7 +51,7 @@ Cons
 - Highlight design problems (So that many programmers start to blame DI)
 - For programmers is more difficult to follow the code, due to the separation of responsibilities.
 
-![Untitled](The%20Final%20%2040ff8/Untitled.png)
+![Untitled](Lectures%20efbb2/Untitled.png)
 
 ### What is the difference between viewpoints and perspectives in software architecture?
 

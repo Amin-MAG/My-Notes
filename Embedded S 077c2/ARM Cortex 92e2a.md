@@ -1,3 +1,0 @@
-# ARM Cortex M3
-
-##
