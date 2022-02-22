@@ -301,7 +301,50 @@ class IndexViewTest(TestCase):
 
 To create a new admin model you need to change the `[admin.py](http://admin.py)` file in the app.
 
-First of define your admin model class.
+Then you need to register this model for your admin panel.
+
+```python
+class HookAdmin(ModelAdmin):
+		pass
+
+admin.site.register(models.Hook, HookAdmin)
+```
+
+To add a Header and create section for a set of fields
+
+```bash
+class QuestionAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None,               {'fields': ['question_text']}),
+        ('Date information', {'fields': ['pub_date']}),
+    ]
+
+admin.site.register(Question, QuestionAdmin)
+```
+
+You can add the related objects in the same page that an object is created. For example, If you are going to create a question object, You can set the choices with this code.
+
+```python
+class ChoiceInline(admin.StackedInline): # Or use TabularInline
+    model = Choice
+    extra = 3
+
+class QuestionAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None,               {'fields': ['question_text']}),
+        ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
+    ]
+    inlines = [ChoiceInline]
+```
+
+By using `list_display`, you can define which columns you want to show in the main table.
+
+```python
+class QuestionAdmin(admin.ModelAdmin):
+    list_display = ('question_text', 'pub_date', 'was_published_recently')
+```
+
+You can add search and filter on specific fields.
 
 ```python
 from django.contrib import admin
@@ -325,30 +368,9 @@ class HookAdmin(ModelAdmin):
     search_fields = ["name", "setting__name"]
 ```
 
-Then you need to register this model for your admin panel.
-
-```python
-admin.site.register(models.Hook, HookAdmin)
-```
-
-You can also customize your admin panel for a model by defining a form.
-
-```python
-class WorkflowStageAdmin(ModelAdmin):
-    form = WorkflowStageAdminForm
-    list_display = (
-        "id",
-        "workflow_name",
-        "stage_name",
-        "priority",
-    )
-    list_filter = ("priority",)
-    search_fields = ["workflow__name", "workflow__version", "stage__name"]
-```
-
 ### Forms
 
-This package is for customizing the input forms for admin panel.
+This package is for customizing the input forms for admin panel. You can use the Model Choice Field classes to handle relations between tables and objects.
 
 ```python
 from django import forms
@@ -580,4 +602,3 @@ class HelloView(APIView):
         content = {'message': 'Hello, World!'}
         return Response(content)
 ```
-
