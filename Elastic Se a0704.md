@@ -29,6 +29,8 @@ Documents are the basic unit of information that can be indexed in Elasticsearch
 
 ### Indices
 
+Indexing can help us to retrieve data with low latency.
+
 An index is a collection of documents that have similar characteristics. An index is the highest level entity that you can query against in Elasticsearch. You can think of the index as being similar to a database in a relational database schema. Any documents in an index are typically logically related. In the context of an e-commerce website, for example, you can have an index for Customers, one for Products, one for Orders, and so on.
 
 ### Inverted Index
@@ -36,6 +38,12 @@ An index is a collection of documents that have similar characteristics. An inde
 An index in Elasticsearch is actually what’s called an inverted index, which is the mechanism by which all search engines work. It is a data structure that stores a mapping from content, such as words or numbers, to its locations in a document or a set of documents. Basically, it is a hashmap-like data structure that directs you from a word to a document. For example, in the image below, the term “best” occurs in document 2, so it is mapped to that document.
 
 ![Untitled](Elastic%20Se%20a0704/Untitled.png)
+
+Algorithm
+
+- It tokenizes the content of each document.
+- It creates a sorted list of all unique terms.
+- It Associates the list of documents which have the word.
 
 ## Backend concepts
 
@@ -147,6 +155,35 @@ For time series data, such as logs and metrics, you typically add documents to a
 
 ### Add Document
 
+## Retrieving
+
+There are some definitions here
+
+- TF, Term Frequency: Frequency of term in given document.
+- DF, Document Frequency: Frequency of term in all documents.
+- IDF, Inverse Document Frequency: $IDF = \frac{1}{DF}$
+- Relevance: $Relevance= TF \times IDF$ or $Relevance = \frac{TF}{DF}$
+
+By using this HTTP call you can retrieve a specific document.
+
+```bash
+curl -X GET http://localhost:9200/test-index/_doc/1 --user elastic:password | json_pp
+{
+   "_id" : "1",
+   "_index" : "test-index",
+   "_primary_term" : 3,
+   "_seq_no" : 1,
+   "_source" : {
+      "author" : "kimchy",
+      "text" : "Elasticsearch: cool. bonsai cool.",
+      "timestamp" : "2022-02-23T17:14:52.878937"
+   },
+   "_type" : "_doc",
+   "_version" : 2,
+   "found" : true
+}
+```
+
 # Snippets
 
 To create Kibana and elastic search next to each other:
@@ -193,6 +230,39 @@ volumes:
     driver: local
 ```
 
+# Python SDK
+
+```bash
+from datetime import datetime
+from elasticsearch import Elasticsearch
+
+es = Elasticsearch('http://localhost:9200', basic_auth=("elastic", "password"))
+
+# Create a new document
+doc = {
+    'author': 'kimchy',
+    'text': 'Elasticsearch: cool. bonsai cool.',
+    'timestamp': datetime.now(),
+}
+
+# Add the document
+resp = es.index(index="test-index", id=1, document=doc)
+print(resp['result'])
+
+# Retrieve the document
+resp = es.get(index="test-index", id=1)
+print(resp['_source'])
+
+# Refresh the indecies
+es.indices.refresh(index="test-index")
+
+# Search between documents
+resp = es.search(index="test-index", query={"match_all": {}})
+print("Got %d Hits:" % resp['hits']['total']['value'])
+for hit in resp['hits']['hits']:
+    print("%(timestamp)s %(author)s: %(text)s" % hit["_source"])
+```
+
 # References
 
 [What is Elasticsearch? | Elasticsearch Guide [7.14] | Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html)
@@ -200,3 +270,5 @@ volumes:
 [Elasticsearch: What it is, How it works, and what it's used for](https://www.knowi.com/blog/what-is-elastic-search/)
 
 [Quick start | Elasticsearch Guide [7.16] | Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html)
+
+[How indexing and retrieval algorithms work in Elasticsearch | ElasticSearch 7 for Beginners #1.2](https://www.youtube.com/watch?v=fcIzAg63WyI)
