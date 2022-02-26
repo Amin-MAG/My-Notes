@@ -39,6 +39,12 @@ grep -i
 strings <BINARY_FILE>
 ```
 
+## Disk Storage Status
+
+```bash
+df -h
+```
+
 ## List folders sizes
 
 ```bash
@@ -619,6 +625,15 @@ nc -u <IP> <PORT>
 # Show all of the connections
 netstat -na
 netstat -tulpn
+
+```
+
+## FTP
+
+You can transfer your files using FTP
+
+```bash
+ftp <IP_ADDRESS>
 
 ```
 
