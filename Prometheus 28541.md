@@ -350,6 +350,20 @@ scrape_configs:
           group: 'production'
 ```
 
+# Alerting
+
+## RED Strategy
+
+1. Rate
+2. Error
+3. Duration
+
+There are some other use cases:
+
+- Queue sizes
+- Comparing the current state of today with 7 days before.
+- Monitoring and alerting for dependencies
+
 # Resources
 
 [Prometheus Tutorial: A Detailed Guide to Getting Started | Scalyr](https://www.sentinelone.com/blog/prometheus-tutorial-detailed-guide-to-getting-started/)
