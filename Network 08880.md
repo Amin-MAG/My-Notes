@@ -1,5 +1,9 @@
 # Network
 
+## RTT or Round Trip Time
+
+Round-trip time (RTT) is the duration, measured in milliseconds, from when a browser sends a request to when it receives a response from a server. It’s a key performance metric for web applications and one of the main factors, along with Time to First Byte (TTFB).
+
 ## Forward Proxy
 
 A forward proxy, often called a proxy, proxy server, or web proxy, is a server that sits in front of a group of client machines. When those computers make requests to sites and services on the Internet, the proxy server intercepts those requests and then communicates with web servers on behalf of those clients, like a middleman.
@@ -170,3 +174,5 @@ sudo cp /etc/openvpn/ca.crt ~/client-configs/keys/
 [VPN](Network%2008880/VPN%2009efe.md)
 
 [Tor](Network%2008880/Tor%20662bd.md)
+
+[Laboratory](Network%2008880/Laboratory%20a293b.md)
