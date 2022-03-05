@@ -104,5 +104,10 @@ while True:
         zf.extractall(pwd=name.encode())
 ```
 
+## Create instant web server
+
+```bash
+python3 -m http.server 7600
+```
 
 [ClickHouse](Python%20b4e84/ClickHouse%2074f64.md)
