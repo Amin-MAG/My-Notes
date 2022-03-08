@@ -93,6 +93,22 @@ Summaries are more accurate for some pre-defined quantiles but can be a lot more
 - Time Durations like `1h30m`
 - Offset Modifier like `http_requests_total offset 5m`
 
+## Operations
+
+### Sum
+
+```groovy
+// To aggregate the status of the volumes by their phases
+sum by (phase) (kube_persistentvolumeclaim_status_phase)
+
+// Calculate the percentage of something 
+(
+sum by (persistentvolumeclaim) (kubelet_volume_stats_used_bytes{persistentvolumeclaim=~"stalin-.*"})
+/
+sum by (persistentvolumeclaim) (kube_persistentvolumeclaim_resource_requests_storage_bytes{persistentvolumeclaim=~"stalin-.*"})
+) * 100
+```
+
 ## Querying
 
 To compare values
