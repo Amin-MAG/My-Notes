@@ -30,7 +30,7 @@ We have two types of computes
 
 The goals of designing a specific embedded system can be against each other.
 
-Most of real-time systems are embedded and most of embedded systems are real-time.
+Most real-time systems are embedded and most of the embedded systems are real-time.
 
 ![Untitled](Embedded%20S%203a0c2/Untitled.png)
 
