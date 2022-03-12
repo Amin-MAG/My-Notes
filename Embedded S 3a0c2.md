@@ -202,3 +202,5 @@ like DC-DC Convertor, Dimmer lights
 # References
 
 [How to Get Started Learning Embedded Systems](https://www.youtube.com/watch?v=aC37UE7edP0)
+
+[Assignment I](Embedded%20S%203a0c2/Assignment%20cf8b1.md)
