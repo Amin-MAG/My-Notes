@@ -438,6 +438,53 @@ time.Sleep(2 * time.Second)
 > **Note: I don't know the reason but you don't use the `time.sleep()` the server is still waiting!**
 > 
 
+# gRPC Tools
+
+## `grpcurl`
+
+Use `grpcurl` to test your server
+
+```bash
+brew install grpcurl
+
+# Download image
+docker pull fullstorydev/grpcurl:latest
+# Run the tool
+docker run fullstorydev/grpcurl api.grpc.me:443 list
+```
+
+To get the list of services
+
+```bash
+grpcurl -plaintext localhost:8787 list
+```
+
+To get the list of methods inside a service
+
+```bash
+grpcurl -plaintext localhost:8787 list models.Majority
+```
+
+Then to call the method run this command
+
+```bash
+grpcurl -plaintext -d '{"numbers": [1,2,3,5,5,5,5]}' localhost:8787 models.Majority/CalculateListMajority
+```
+
+## `grpcui`
+
+Install the tool
+
+```bash
+go install github.com/fullstorydev/grpcui/cmd/grpcui@latest
+```
+
+To interact with the user interface run
+
+```bash
+grpcui -plaintext localhost:8787
+```
+
 # Load balancing
 
 You can use some services that support the gRPC load balancing.
