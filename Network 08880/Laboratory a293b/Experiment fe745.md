@@ -2,8 +2,6 @@
 
 ✏️  M.Amin Ghasvari  (97521432)
 
-✏️  Omid Mirzajani  (97522067)
-
 ## First of all
 
 I ran the `Mininet` image inside Virtual Box on the top of another windows machine. Then, I used a bridged network adapter for this virtual OS. 
