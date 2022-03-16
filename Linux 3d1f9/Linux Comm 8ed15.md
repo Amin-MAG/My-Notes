@@ -484,6 +484,19 @@ For efficiency, cron syntax also uses operators. Operators are special character
 crontab –u other_username –e
 ```
 
+## ulimit
+
+`ulimit` is a built-in Linux shell command that allows viewing or limiting system resource amounts that individual users consume. Limiting resource usage is valuable in environments with multiple users and system performance issues.
+
+```bash
+# prints all of the user limits
+ulimit -a
+```
+
+There are 2 types of resource limitation: “hard” and “soft”. Hard resource limit defines the physical limit that the user can reach. The “soft” resource limit is manageable by the user. Its value can go up to the “hard” limit.
+
+The system resources are defined in `cat /etc/security/limits.conf`.
+
 # Network
 
 ## IP Address
