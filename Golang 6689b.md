@@ -14,7 +14,7 @@ Data races are among the most common and hardest to debug types of bugs in concu
 
 Here is an example of a data race that can lead to crashes and memory corruption:
 
-```
+```go
 func main() {
 	c := make(chan bool)
 	m := make(map[string]string)
@@ -28,7 +28,6 @@ func main() {
 		fmt.Println(k, v)
 	}
 }
-
 ```
 
 ## Pointers
@@ -159,30 +158,43 @@ for {
 }
 ```
 
-[Graph QL](Golang%206689b/Graph%20QL%207ba83.md)
 
-[Golang, Real-Time Techs](Golang%206689b/Golang,%20Re%2067a69.md)
 
-[Go Bot](Golang%206689b/Go%20Bot%20ad18f.md)
+
+# Topics
 
 [Build Executive Binaries](Golang%206689b/Build%20Exec%2068159.md)
 
-[Testing](Golang%206689b/Testing%2016c6f.md)
+[ENT Database](Golang%206689b/ENT%20Databa%201f959.md)
 
-[Issues](Golang%206689b/Issues%20f1a09.md)
+[Graph QL](Golang%206689b/Graph%20QL%207ba83.md)
 
-[Golang Mock](Golang%206689b/Golang%20Moc%20c1533.md)
+[Go Bot](Golang%206689b/Go%20Bot%20ad18f.md)
 
 [Go Cron](Golang%206689b/Go%20Cron%2081e75.md)
 
-[Prometheus in Go](Golang%206689b/Prometheus%20962c0.md)
+[Golang, Real-Time Techs](Golang%206689b/Golang,%20Re%2067a69.md)
+
+[Golang Mock](Golang%206689b/Golang%20Moc%20c1533.md)
 
 [Goroutines](Golang%206689b/Goroutines%2001dc2.md)
+
+[Issues](Golang%206689b/Issues%20f1a09.md)
+
+[Memory management](Golang%206689b/Memory%20man%20079a0.md)
+
+[Prometheus in Go](Golang%206689b/Prometheus%20962c0.md)
 
 [Rate](Golang%206689b/Rate%20ff6fe.md)
 
 [Swagger](Golang%206689b/Swagger%208fac4.md)
 
-[Memory management](Golang%206689b/Memory%20man%20079a0.md)
-
 [Testify](Golang%206689b/Testify%203f1e8.md)
+
+[Testing](Golang%206689b/Testing%2016c6f.md)
+
+# Libraries
+
+Progress bar:
+
+[https://github.com/cheggaaa/pb](https://github.com/cheggaaa/pb)
