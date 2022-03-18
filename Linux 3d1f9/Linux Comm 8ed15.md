@@ -332,6 +332,12 @@ To pass data to the curl
 curl -d '{"key1":"value1", "key2":"value2"}' -H "Content-Type: application/json" -X POST http://localhost:3000/data
 ```
 
+You can also send a file using curl
+
+```bash
+curl -F 'uploadFile=@./xs.PNG' http://localhost:8080/upload
+```
+
 To get the status code from the curl you can use
 
 ```bash
@@ -387,6 +393,11 @@ done
 while read p; do
   echo "$p"
 done <peptides.txt
+
+# To loop through lines of a command result
+sudo docker container ls -a | grep pg | awk '{print $1}' | while read c; do
+	sudo docker container rm -f $c
+done
 ```
 
 # Tar
