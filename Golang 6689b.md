@@ -158,8 +158,102 @@ for {
 }
 ```
 
+## Upload endpoint
 
+First of all, we usually consider the size of the file:
 
+```go
+func upload(w http.ResponseWriter, r *http.Request){
+	// Set max upload size
+	if err := r.ParseMultipartForm(2 * 1024 * 1024); err != nil {
+		fmt.Printf("Could not parse multipart form: %v\n", err)
+		renderError(w, "CANT_PARSE_FORM", http.StatusInternalServerError)
+		return
+	}
+
+	// ...
+}
+```
+
+To grab the file and validate the uploaded file:
+
+```go
+func upload(w http.ResponseWriter, r *http.Request){
+	// ...
+
+	// uploadFile is the name of the file in request
+	file, fileHeader, err := r.FormFile("uploadFile")
+	if err != nil {
+		renderError(w, "INVALID_FILE", http.StatusBadRequest)
+		return
+	}
+	defer file.Close()
+	
+	// Grab the file size in bytes 
+	fileSize := fileHeader.Size
+	if fileSize > 2 * 1024 * 1024 {
+		renderError(w, "FILE_TOO_BIG", http.StatusBadRequest)
+		return
+	}
+
+	// Read the file
+	fileBytes, err := ioutil.ReadAll(file)
+	if err != nil {
+		renderError(w, "INVALID_FILE", http.StatusBadRequest)
+		return
+	}
+
+	// check file type, detectcontenttype only needs the first 512 bytes
+	detectedFileType := http.DetectContentType(fileBytes)
+	switch detectedFileType {
+	case "image/jpeg", "image/jpg":
+	case "image/gif", "image/png":
+	case "application/pdf":
+		break
+	default:
+		renderError(w, "INVALID_FILE_TYPE", http.StatusBadRequest)
+		return
+	}
+
+	// ...
+}
+
+```
+
+To save the file:
+
+```go
+func upload(w http.ResponseWriter, r *http.Request){
+	// ...
+
+	// Choose the file name and path
+	fileName := randToken(12)
+	fileEndings, err := mime.ExtensionsByType(detectedFileType)
+	if err != nil {
+		renderError(w, "CANT_READ_FILE_TYPE", http.StatusInternalServerError)
+		return
+	}
+	newPath := filepath.Join("./tmp", fileName+fileEndings[0])
+
+	// Write file
+	newFile, err := os.Create(newPath)
+	if err != nil {
+		renderError(w, "CANT_WRITE_FILE", http.StatusInternalServerError)
+		log.Warnf("error: %s", err.Error())
+		return
+	}
+	defer newFile.Close()
+
+	if _, err := newFile.Write(fileBytes); err != nil || newFile.Close() != nil {
+		renderError(w, "CANT_WRITE_FILE", http.StatusInternalServerError)
+		return
+	}
+	w.Write([]byte("SUCCESS"))
+}
+
+```
+
+[https://github.com/zupzup/golang-http-file-upload-download](https://github.com/zupzup/golang-http-file-upload-download)
 
 # Topics
 
