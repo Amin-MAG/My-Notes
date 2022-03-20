@@ -255,6 +255,32 @@ func upload(w http.ResponseWriter, r *http.Request){
 
 [https://github.com/zupzup/golang-http-file-upload-download](https://github.com/zupzup/golang-http-file-upload-download)
 
+## Serve a directory
+
+You need to create `http.FileServer()`
+
+```go
+fs := http.FileServer(http.Dir("./tmp"))
+http.Handle("/files/", http.StripPrefix("/files", fs))
+log.Errorln(http.ListenAndServe(":8080", nil))
+```
+
+## Upload a File
+
+Consider this application that has a path and an endpoint to upload the file.
+
+```bash
+func main() {
+	file := flag.String("file", "", "path of the file you want to upload")
+	flag.Parse()
+
+	err := postFile(*file, "http://localhost:8080/upload")
+	if err != nil {
+		log.Warnln(err.Error())
+	}
+}
+```
+
 # Topics
 
 [Build Executive Binaries](Golang%206689b/Build%20Exec%2068159.md)
