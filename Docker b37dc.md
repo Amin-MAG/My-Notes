@@ -163,6 +163,14 @@ docker login
 docker scan <IMAGE>:<TAG>
 ```
 
+## Stats
+
+To monitor the usage of the container you can use this command.
+
+```bash
+sudo docker stats <CONTAINER_NAME>
+```
+
 # Docker compose
 
 ## Run a container
