@@ -26,7 +26,83 @@ services:
 
 Exchanges are message routing agents, defined by the virtual host within RabbitMQ. An exchange is responsible for routing the messages to different queues with the help of header attributes, bindings, and routing keys.
 
-To go further: [https://www.cloudamqp.com/blog/part4-rabbitmq-for-beginners-exchanges-routing-keys-bindings.html](https://www.cloudamqp.com/blog/part4-rabbitmq-for-beginners-exchanges-routing-keys-bindings.html#:~:text=Exchanges%20are%20message%20routing%20agents,a%20queue%20to%20an%20exchange)
+The exchange must know exactly what to do with a message it receives.
+
+There are a few exchange types available: direct, topic, headers, and fanout.
+
+```go
+err = ch.ExchangeDeclare(
+  "logs",   // name
+  "fanout", // type
+  true,     // durable
+  false,    // auto-deleted
+  false,    // internal
+  false,    // no-wait
+  nil,      // arguments
+)
+```
+
+The fanout exchange is very simple. As you can probably guess from the name, it just broadcasts all the messages it receives to all the queues it knows. And that's exactly what we need for our logger.
+
+### Direct Exchange
+
+The routing key should be exactly as same as the direct binding key.
+
+```go
+err = ch.QueueBind(
+	q.Name,        // queue name
+	"info",             // routing key
+	"logs_direct", // exchange
+	false,
+	nil)
+helper.FailOnError(err, "Failed to bind a queue")
+```
+
+### Topic Exchange
+
+Messages sent to a topic exchange can't have an arbitrary `routing_key` - it must be a list of words, delimited by dots.
+
+- `*` Star - can substitute for exactly one word.
+- `#` Hash - can substitute for zero or more words.
+
+```go
+err = ch.QueueBind(
+	q.Name,       // queue name
+	"kernel.#",            // routing key
+	"logs_topic", // exchange
+	false,
+	nil)
+helper.FailOnError(err, "Failed to bind a queue")
+```
+
+### Binding
+
+That relationship between exchange and a queue is called *binding*.
+
+```go
+err = ch.QueueBind(
+  q.Name, // queue name
+  "",     // routing key
+  "logs", // exchange
+  false,
+  nil,
+)
+```
+
+Bindings can take an extra routing_key parameter. To avoid confusion with a `Channel.Publish` parameter we're going to call it a binding key. This is how we could create a binding with a key
+
+```go
+err = ch.QueueBind(
+  q.Name,    // queue name
+  "black",   // routing key
+  "logs",    // exchange
+  false,
+  nil)
+```
+
+The meaning of a binding key depends on the exchange type. The `fanout` exchanges, which we used previously, simply ignored their value.
+
+To extend the logs application example, We need to filter some of these logs to be published for some consumers.
 
 ## Queue
 
@@ -47,22 +123,14 @@ helper.FailOnError(err, "Failed to declare a queue")
 
 Queue arguments & options
 
-- Durable and Non-Auto-Deleted queues will survive server restarts and remain
-when there are no remaining consumers or bindings.  Persistent publishings will
-be restored in this queue on server restart.  These queues are only able to be
-bound to durable exchanges.
-- Non-Durable and Auto-Deleted queues will not be redeclared on server restart
-and will be deleted by the server after a short time when the last consumer is
-canceled or the last consumer's channel is closed.  Queues with this life-time
-can also be deleted normally with QueueDelete.  These durable queues can only
-be bound to non-durable exchanges.
-- Non-Durable and Non-Auto-Deleted queues will remain declared as long as the
-server is running regardless of how many consumers.  This lifetime is useful
-for temporary topologies that may have long delays between consumer activity.
-These queues can only be bound to non-durable exchanges.
-- Exclusive queues are only accessible by the connection that declares them and
-will be deleted when the connection closes.
+- Durable and Non-Auto-Deleted queues will survive server restarts and remain when there are no remaining consumers or bindings.  Persistent publishings will be restored in this queue on server restart.  These queues are only able to be bound to durable exchanges.
+- Non-Durable and Auto-Deleted queues will not be redeclared on server restart and will be deleted by the server after a short time when the last consumer is canceled or the last consumer's channel is closed. Queues with this life-time can also be deleted normally with QueueDelete.  These durable queues can only be bound to non-durable exchanges.
+- Non-Durable and Non-Auto-Deleted queues will remain declared as long as the server is running regardless of how many consumers.  This lifetime is useful for temporary topologies that may have long delays between consumer activity. These queues can only be bound to non-durable exchanges.
+- Exclusive queues are only accessible by the connection that declares them and will be deleted when the connection closes.
 - When noWait is true, the queue will assume to be declared on the server.
+
+> Empty string for the name indicates that we want to generate a random name for our queue. when the connection closes, the queue will be deleted because it is declared as exclusive.
+> 
 
 ## Publishing
 
@@ -126,10 +194,24 @@ consumers on this channel.
 
 # Commands
 
-To list all queues
+To list the components of RabbitMQ
 
 ```bash
 rabbitmqctl list_queues
+rabbitmqctl list_exchanges
+rabbitmqctl list_bindings
+```
+
+To delete a queue
+
+```bash
+rabbitmqctl delete_queue task_queue
+```
+
+To enable the management ui
+
+```bash
+rabbitmq-plugins enable rabbitmq_management # http://localhost:15672/#/
 ```
 
 # Examples
