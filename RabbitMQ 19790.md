@@ -192,6 +192,54 @@ consumers on this channel.
 - When exclusive is true, the server will ensure that this is the sole consumer from this queue.
 - When noWait is true, do not wait for the server to confirm the request and immediately begin deliveries.
 
+## Dispatching
+
+RabbitMQ just dispatches a message when the message enters the queue. It doesn't look at the number of unacknowledged messages for a consumer.
+
+This tells RabbitMQ not to give more than one message to a worker at a time.
+
+```go
+err = ch.Qos(
+  1,     // prefetch count
+  0,     // prefetch size
+  false, // global
+)
+failOnError(err, "Failed to set QoS")
+```
+
+## RPC
+
+We need to run a function on a remote computer and wait for the result. Well, that's a different story. This pattern is commonly known as *Remote Procedure Call* or *RPC*.
+
+A client sends a request message and a server replies with a response message. In order to receive a response, we need to send a 'callback' queue address with the request.
+
+To publish an RPC event or task
+
+```go
+err = ch.Publish(
+  "",          // exchange
+  "rpc_queue", // routing key
+  false,       // mandatory
+  false,       // immediate
+  amqp.Publishing{
+    ContentType:   "text/plain",
+    CorrelationId: corrId,
+    ReplyTo:       q.Name,
+    Body:          []byte(strconv.Itoa(n)),
+})
+```
+
+- `reply_to`: Commonly used to name a callback queue.
+- `correlation_id`: Useful to correlate RPC responses with requests.
+
+### Overview of RPC
+
+- When the Client starts up, it creates an anonymous exclusive callback queue.
+- For an RPC request, the Client sends a message with two properties: `reply_to`, which is set to the callback queue, and `correlation_id`, which is set to a unique value for every request.
+- The request is sent to a `rpc_queue`.
+- The RPC worker (aka server) is waiting for requests on that queue. When a request appears, it does the job and sends a message with the result back to the Client, using the queue from the `reply_to` field.
+- The client waits for data on the callback queue. When a message appears, it checks the `correlation_id` property. If it matches the value from the request it returns the response to the application.
+
 # Commands
 
 To list the components of RabbitMQ
