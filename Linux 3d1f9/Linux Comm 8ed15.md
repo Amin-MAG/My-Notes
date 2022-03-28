@@ -378,6 +378,15 @@ magick montage -tile 1x top.png bottom.png -mode Concatenate
 
 # Script
 
+## Using basic operators
+
+To increase a variable
+
+```bash
+i=0
+i=$((i+1)) # i=1
+```
+
 ## While
 
 ```bash

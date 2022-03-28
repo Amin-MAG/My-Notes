@@ -422,6 +422,4 @@ func QueryOrganizationsWithUsers(ctx context.Context, client *ent.Client) error 
 }
 ```
 
-Full code of this section: 
-
-[](https://github.com/Amin-MAG/Ent/releases/tag/get-started)
+Full code of this section: [Get-Started](https://github.com/Amin-MAG/Ent/releases/tag/get-started)

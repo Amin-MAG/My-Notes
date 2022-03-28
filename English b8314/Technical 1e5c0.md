@@ -154,3 +154,4 @@
 - Nevertheless
 - Adequate: We didn't thank him adequately.
 - To accelerate: The rate of inflation is accelerating fast.
+- Translucent: Thin paper is translucent but it is not trans-parent.
