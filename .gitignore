@@ -1,19 +1,2 @@
-downloads
-extracts
-
-download_recent.sh
-download_en.sh
-*.DS_Store
-
-*.env
-notion-cli
-
-# Documents
-My Panel 10b8*
-README f8ae7*
-SPCU 6557e*
-Ride Recom 453c3*
-Ride Recom 98eb2*
-
-# Obsidian
-.obsidian
+# Jetbrains
+.idea
