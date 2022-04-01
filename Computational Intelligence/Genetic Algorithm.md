@@ -64,7 +64,7 @@ We should provide a function to calculate the fitness. At the moment, with this 
 
 So after calculating, we should sort the parent based on their fitness. We should choose an equation for our selection and I think this kind of function is good.
 
-![Genetic%20Al%20738b8/Untitled.png](Computational%20Intelligence/Genetic%20Al/Untitled.png)
+![Genetic%20Al%20738b8/Untitled.png](Computational%20Intelligence/Genetic%20Algorithm/Untitled.png)
 
 # Choose 2 random parent
 
