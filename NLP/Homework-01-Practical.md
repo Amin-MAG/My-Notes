@@ -634,7 +634,7 @@ dream team presid vice presid ticket make happen proud trace
 
 ### Creating word cloud
 
-![word_cloud](NLP/Homework-01/word_cloud.png)
+![word_cloud](Homework-01/word_cloud.png)
 
 ```python
 from wordcloud import WordCloud
@@ -653,7 +653,7 @@ plt.show()
 
 ### Trend words chart
 
-![hashtags](NLP/Homework-01/hashtags.png)
+![hashtags](Homework-01/hashtags.png)
 
 ```python
 import matplotlib.pyplot as plt

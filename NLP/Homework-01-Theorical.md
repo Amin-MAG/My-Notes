@@ -68,7 +68,7 @@ The problem is that we have a text without any spaces. There are occasional spac
 
 There are several algorithms for words segmentation. Maximum Matching is a greedy one that would segment multiple possibilities and choose the one with fewer words in the sentence. For example, consider the `themandinehere`; in this case, we can start from `the`, `them`, and `theme`. Again, We should do the same for the subtrees; at the end, the sentence with fewer words is the answer. (We can prioritize unknown words)
 
-![tree](NLP/Homework-01/tree.png)
+![tree](Homework-01/tree.png)
 
 # References
 - [https://www.nltk.org/](https://www.nltk.org/)
