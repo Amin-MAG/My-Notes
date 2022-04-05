@@ -27,7 +27,7 @@
 
 ---
 
-![Git%20Flow%2058c17/Untitled.png](Git%20Flow%2058c17/Untitled.png)
+![Untitled.png](Untitled.png)
 
 ## Feature branch
 

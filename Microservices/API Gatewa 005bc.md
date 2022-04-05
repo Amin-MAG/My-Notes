@@ -16,7 +16,7 @@ To understand the need for an API gateway, let’s discuss a use case of an e-co
 
 Consider a case study of a complex page( let’s say product page) of an e-commerce application. If we look at the below page of the Amazon product listing, we can see a lot of information needed to be rendered by this specific page.
 
-![API%20Gatewa%20005bc/Untitled.png](Microservices/API%20Gatewa%20005bc/Untitled.png)
+![Untitled.png](API%20Gatewa%20005bc/Untitled.png)
 
 For illustration purposes, let’s list all the microservices that we might need to render the above particular page.
 
@@ -28,7 +28,7 @@ P.S: Above seven(7) microservices are just an assumption to explain the API gate
 
 Since these microservices have been deployed separately on a different server if a client wants to access these services, at least seven(7) calls have to be requested for a single page.
 
-![API%20Gatewa%20005bc/Untitled%201.png](Microservices/API%20Gatewa%20005bc/Untitled%201.png)
+![Untitled%201.png](API%20Gatewa%20005bc/Untitled%201.png)
 
 I don’t think it’s a recommended approach because we have to make seven different calls, which would definitely impact performance, resource consumption, load time, etc. The client is also tightly coupled with all of the services, and suppose if we have to separate the Reviews and Rating microservices into two different services, we have to update the client code. The client has to make one call to get reviews, and one call to get ratings, which is really not the best way to deal with it.
 

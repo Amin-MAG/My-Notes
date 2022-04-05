@@ -202,11 +202,11 @@ imshow(ft, []);
 
 This is the result.
 
-![Untitled](Data%20Communication/Signal%20Pro%20226c9/Untitled.png)
+![Untitled](Signal%20Pro%20226c9/Untitled.png)
 
 The same code result for the main picture is
 
-![Untitled](Data%20Communication/Signal%20Pro%20226c9/Untitled%201.png)
+![Untitled](Signal%20Pro%20226c9/Untitled%201.png)
 
 ### FFT - Fast Fourier Transform
 
@@ -228,7 +228,7 @@ Shifting is the main reason for this shape of the picture.
 
 We want to remove the noise of the image we've generated before.
 
-![Untitled](Data%20Communication/Signal%20Pro%20226c9/Untitled.jpeg)
+![Untitled](Signal%20Pro%20226c9/Untitled.jpeg)
 
 Here is the code
 
@@ -249,7 +249,7 @@ imshow(rgbImage)
 imwrite(rgbImage, "images/icecream-gray-noise-removal.jpg")
 ```
 
-![Untitled](Data%20Communication/Signal%20Pro%20226c9/Untitled%201.jpeg)
+![Untitled](Signal%20Pro%20226c9/Untitled%201.jpeg)
 
 To compare the images we use the PSNR that is Peak Signal Noise Ratio
 

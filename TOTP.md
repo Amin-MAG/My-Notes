@@ -31,7 +31,7 @@ where
 
 TOTP values can be [phished](https://en.wikipedia.org/wiki/Phishing) like [passwords](https://en.wikipedia.org/wiki/Password), though this requires attackers to proxy the credentials in real-time.
 
-An attacker who steals the shared secret can generate new, valid TOTP values at will. This can be a particular problem if the attacker breaches a large authentication database.[[4]](https://en.wikipedia.org/wiki/Time-based_One-Time_Password#cite_note-4)
+An attacker who steals the shared secret can generate new, valid TOTP values at will. This can be a particular problem if the attacker breaches a large authentication database.[4](https://en.wikipedia.org/wiki/Time-based_One-Time_Password#cite_note-4)
 
 Because of latency, both network and human, and unsynchronised clocks, the one-time password must validate over a range of times between the authenticator and the authenticate. Here, time is downsampled into larger durations (e.g., 30 seconds) to allow for validity between the parties. 
 

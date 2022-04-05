@@ -16,7 +16,7 @@ sll $11,$7,1
 srl $12,$7,1
 ```
 
-![Results%208364e/Untitled.png](Compiler/Results%208364e/Untitled.png)
+![Results%208364e/Untitled.png](Results%208364e/Untitled.png)
 
 ```xml
 2004001b
@@ -53,7 +53,7 @@ ac670044
 ac0200
 ```
 
-![Results%208364e/Untitled%201.png](Compiler/Results%208364e/Untitled%201.png)
+![Results%208364e/Untitled%201.png](Results%208364e/Untitled%201.png)
 
 ## Sample 3
 
@@ -65,9 +65,9 @@ next: sw $5,4($5)
 lw $7, 4($5)
 ```
 
-![Results%208364e/Untitled%202.png](Compiler/Results%208364e/Untitled%202.png)
+![Results%208364e/Untitled%202.png](Results%208364e/Untitled%202.png)
 
-![Results%208364e/Untitled%203.png](Compiler/Results%208364e/Untitled%203.png)
+![Results%208364e/Untitled%203.png](Results%208364e/Untitled%203.png)
 
 ```xml
 20050003

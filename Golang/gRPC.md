@@ -549,7 +549,7 @@ conn, err := grpc.Dial(
 
 Client reaches out to an external service and it will return a list of available servers, service discovery and all other required information.
 
-![Untitled](Golang/gRPC/Untitled%202.png)
+![Untitled](gRPC/Untitled%202.png)
 
 ## Resource
 

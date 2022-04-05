@@ -327,19 +327,19 @@ For designing this fuzzy system we use two parameters. The first one is the leve
 
 I choose the low dirt the number 1 or less, the medium dirt 0 to 2, and the high dirt 1 or above. They are all in the bottom diagram numbered from 1 to 3.
 
-![Amount of dirt](Computational%20Intelligence/Homeworks/Untitled.png)
+![Amount of dirt](Homeworks/Untitled.png)
 
 Amount of dirt
 
 I choose the type of dirt exactly like the previous one. Type 1 of dirt 1 or less, the second dirt that is harder to clean 0 to 2, and the most annoying type of dirt 1 or above. They are all in the bottom diagram numbered from 1 to 3.
 
-![Type of dirt](Computational%20Intelligence/Homeworks/Untitled.png)
+![Type of dirt](Homeworks/Untitled.png)
 
 Type of dirt
 
 So finally we should have time to wash clothes. It can be little, medium, or much. The little one is 40 minutes or lower, the medium one is between 0 and 80 minutes, and the longest could be 40 or above.
 
-![Washing time](Computational%20Intelligence/Homeworks/Untitled%201.png)
+![Washing time](Homeworks/Untitled%201.png)
 
 Washing time
 

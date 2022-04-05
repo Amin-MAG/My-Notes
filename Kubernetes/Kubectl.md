@@ -140,7 +140,7 @@ Services match a set of Pods using [labels and selectors](https://kubernetes.io
 - Embed version tags
 - Classify an object using tags
 
-![Untitled](Kubernetes/Kubectl%2015099/Untitled.png)
+![Untitled](Kubectl%2015099/Untitled.png)
 
 ## Port Forwarding
 

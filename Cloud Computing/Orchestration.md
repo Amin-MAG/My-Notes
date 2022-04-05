@@ -25,7 +25,7 @@ Major Contributions of this paper is to
 
 This feature is representing the Trigger-flow architecture in the article.
 
-![Untitled](Cloud%20Computing/Orchestration/Untitled.png)
+![Untitled](Orchestration/Untitled.png)
 
 Goals in new architecture
 
@@ -89,7 +89,7 @@ In this case, the Trigger-flow Controller integrates KEDA for the monitoring of 
 
 The advantage here is that, unlike in Knative Eventing, our TF-Workers are connected directly to the Message Broker (Kafa, Redis Streams) using the native protocol of the broker.
 
-![Untitled](Cloud%20Computing/Orchestration/Untitled%201.png)
+![Untitled](Orchestration/Untitled%201.png)
 
 Figure 2 shows a high-level perspective of our implementation using KEDA. In this deployment, Trigger-flow works as follows:
 
@@ -124,7 +124,7 @@ To orchestrate a workflow defined as a DAG with triggers, we will define a trigg
 
 According to Airflow’s core ideas, an Operator describes what is the actual work logic that is carried out by a task.
 
-![Untitled](Cloud%20Computing/Orchestration/Untitled%202.png)
+![Untitled](Orchestration/Untitled%202.png)
 
 ### State Machines & Nested Workflows
 
@@ -141,7 +141,7 @@ Kinds of states in this State Machine:
 - **Wait** state:  ****It waits for a range of time or until a specific point of time.
 - **Fail** or **Success** state: ****This will end the workflow with and determines that the workflow completed successfully or with a failure.
 
-![Untitled](Cloud%20Computing/Orchestration/Untitled%203.png)
+![Untitled](Orchestration/Untitled%203.png)
 
 ### Workflow as Code & Event Sourcing
 
@@ -168,7 +168,7 @@ In this article, they used even sourcing in 2 ways to ensuring restarting and co
 1. Native Scheduler
 2. External Scheduler
 
-![Untitled](Cloud%20Computing/Orchestration/Untitled%204.png)
+![Untitled](Orchestration/Untitled%204.png)
 
 ## Validation
 
@@ -206,7 +206,7 @@ The users are going to upload a file on an Object storage like MinIO which will 
 
 ## Architecture of OSCAR
 
-![Untitled](Cloud%20Computing/Orchestration/Untitled%205.png)
+![Untitled](Orchestration/Untitled%205.png)
 
 The clusters become autonomous in deciding whether to scale out due to CLUES elasticity manager.
 
@@ -225,11 +225,11 @@ This article suggests defining a YAML-based Functions Definition Language (FDL) 
 
 Using docker images beside this YAML-based file powers us to use different kinds of OS and distributions and providing complex environments.
 
-![Untitled](Cloud%20Computing/Orchestration/Untitled%206.png)
+![Untitled](Orchestration/Untitled%206.png)
 
 They use a general form to run the applications. Instead of having a Programming Language they deal with bash files that makes us to run any kind of application that is supported by command line in that container. 
 
-![Untitled](Cloud%20Computing/Orchestration/Untitled%207.png)
+![Untitled](Orchestration/Untitled%207.png)
 
 As you can see, you can focus on the definition of the workflow and let the cluster auto-scale within the on-premises cloud.
 
@@ -237,11 +237,11 @@ As you can see, you can focus on the definition of the workflow and let the clus
 
 A mask-wearing detection in COVID-19 global pandemic via deep learning vide processing.
 
-![Untitled](Cloud%20Computing/Orchestration/Untitled%208.png)
+![Untitled](Orchestration/Untitled%208.png)
 
 Data is captured at the edge (camera devices), pre-processing is carried out in an on-premises Cloud (to blur the faces) for regulatory compliance purposes and, finally, processing and storing of final results is carried out in a public Cloud using a server-less platform for increased elasticity and long-term persistence.
 
-![Untitled](Cloud%20Computing/Orchestration/Untitled%209.png)
+![Untitled](Orchestration/Untitled%209.png)
 
 > Case study is not noted yet.
 > 
@@ -266,7 +266,7 @@ SWEEP workflows are represented as Directed Acyclic Graphs (DAGs), where the nod
 
 The task units can be constructed by a function or a container. These workflows are going to be defined in some JSON based files.  
 
-![Untitled](Cloud%20Computing/Orchestration/Untitled%2010.png)
+![Untitled](Orchestration/Untitled%2010.png)
 
 # Securing Function Workflows - VALVE
 

@@ -4,7 +4,7 @@
 
 # Overview
 
-![It is the flow chart from [https://www.cs.ucdavis.edu/~vemuri/classes/ecs271/The GP Tutorial.htm](Computational%20Intelligence/Genetic%20Programming/Untitled.png These notes are not for quizzes, but also for reviewing the course.](Genetic%20Pr%20dc605/Untitled.png)
+![It is the flow chart from [https://www.cs.ucdavis.edu/~vemuri/classes/ecs271/The GP Tutorial.htm](Genetic%20Programming/Untitled.png These notes are not for quizzes, but also for reviewing the course.](Genetic%20Pr%20dc605/Untitled.png)
 
 It is the flow chart from [https://www.cs.ucdavis.edu/~vemuri/classes/ecs271/The GP Tutorial.htm](https://www.cs.ucdavis.edu/~vemuri/classes/ecs271/The%20GP%20Tutorial.htm). These notes are not for quizzes, but also for reviewing the course.
 
@@ -16,7 +16,7 @@ It is the flow chart from [https://www.cs.ucdavis.edu/~vemuri/classes/ecs271/The
     3. Replication or Reproduction: select one program based on fitness and then copy it to next generation
 4. After reproduction and when we reach $production$ then we repeat step 3 to produce $generation + 1$.
 
-![The selection of those three operation is a part of out process.](Computational%20Intelligence/Genetic%20Programming/Untitled%201.png)
+![The selection of those three operation is a part of out process.](Genetic%20Programming/Untitled%201.png)
 
 The selection of those three operation is a part of out process.
 
@@ -24,7 +24,7 @@ The selection of those three operation is a part of out process.
 
 # In-Class Quiz
 
-![Genetic%20Pr%20dc605/Untitled%202.png](Computational%20Intelligence/Genetic%20Programming/Untitled%202.png)
+![Genetic%20Pr%20dc605/Untitled%202.png](Genetic%20Programming/Untitled%202.png)
 
 We should consider both time and distance to reach the destination in our fitness function. We have 6 kinds of movements and let's assume that each one of them is such a function as $F_i(amount, currentTime)$ that gives us a tuple like $(position, time)$. $amount$ shows the amount of movement. For example, spinning with $amount = 30\%$ means to spin 30% of the movement.
 
@@ -32,7 +32,7 @@ Also we can add some leaves to put the current time and current position in them
 
 ## Initialize the programs
 
-![Genetic%20Pr%20dc605/Untitled%203.png](Computational%20Intelligence/Genetic%20Programming/Untitled%203.png)
+![Genetic%20Pr%20dc605/Untitled%203.png](Genetic%20Programming/Untitled%203.png)
 
 We initialize the tree like this. Since we have six kinds of movements we name them A, B, C, D, E, F. The post movement is the right hand of a tree node and it is a movement again, and the left hand is like this too. So the data structure of blue borders is something like $MovementNode$ and the amount of movement is just an integer number between 0 and 100.
 

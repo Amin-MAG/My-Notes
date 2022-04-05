@@ -76,7 +76,7 @@ The correct answers for real-time systems are not enough. The correct answers ca
 
 Also, consider Most real-time systems are embedded and most of the embedded systems are real-time.
 
-![Untitled](Embedded%20Systems/Assignment%20cf8b1/Untitled.png)
+![Untitled](Assignment%20cf8b1/Untitled.png)
 
 ## Being a Hybrid System
 

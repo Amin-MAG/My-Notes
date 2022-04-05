@@ -101,6 +101,38 @@ To see the difference between two file just use
 diff FILE1 FILE2
 ```
 
+To go to the previous directory
+
+```bash
+cd /etc
+cd /var
+# To go to the /etc again
+# You can also use pushd and pod
+cd -
+```
+
+Minimizing an app like vim into background
+
+```bash
+# To minimize app (background)
+^Z 
+# To go back to foreground again
+fg
+```
+
+Run the most recent command
+
+```bash
+# Repeat the most recent command with sudo
+sudo !!
+```
+
+Run a command from the history. You can use the number to run it again.
+
+```bash
+!120
+```
+
 ## Tree the folders 2 levels
 
 ```bash
@@ -198,7 +230,7 @@ To see user groups
 cat /etc/group
 ```
 
-![Untitled](Linux/Linux%20Commands/Untitled.png)
+![Untitled](Linux%20Commands/Untitled.png)
 
 ## chgrp
 
