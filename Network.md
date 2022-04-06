@@ -169,10 +169,10 @@ sudo cp /etc/openvpn/ca.crt ~/client-configs/keys/
 
 ## Other pages
 
-[University](University%20bc284.md)
+[University](Network/University%20bc284.md)
 
-[VPN](VPN%2009efe.md)
+[VPN](Network/VPN%2009efe.md)
 
-[Tor](Tor%20662bd.md)
+[Tor](Network/Tor%20662bd.md)
 
-[Laboratory](Laboratory%20a293b.md)
+[Laboratory](Network/Laboratory%20a293b.md)

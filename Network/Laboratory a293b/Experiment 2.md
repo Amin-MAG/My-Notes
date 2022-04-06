@@ -87,7 +87,7 @@ if __name__ == '__main__':
 
 In this experiment, each one of the hosts has a kind of label.
 
-![Untitled](Network/Laboratory%20a293b/Experiment%2048125/Untitled.png)
+![Untitled](Experiment%202/Untitled.png)
 
 - Host2 is Bob.
 - Host1 is the Bank.
@@ -127,7 +127,7 @@ This command will create a rule to forward each `icmp` packet from `10.10.24.2` 
 
 I opened the Wireshark in host3 and `ping` the bank from bob’s computer and here is the result in host3
 
-![Untitled](Network/Laboratory%20a293b/Experiment%2048125/Untitled.jpeg)
+![Untitled](Experiment%202/Untitled.jpeg)
 
 As you can see, I could see the packets coming to the host3.
 
@@ -145,7 +145,7 @@ I needed to change the source IP address because of the rule I defined in the ro
 
 Host3 could send packets from Bob to the Bank and from the Bank to Bob. 
 
-![Untitled](Network/Laboratory%20a293b/Experiment%2048125/Untitled%201.jpeg)
+![Untitled](Experiment%202/Untitled%201.jpeg)
 
 As you can see, I sent a packet using the `ping` command to the Bank from Bob’s computer. First, The packet was sent to host3 and then to the Bank. The response from the Bank was also sent to the host3 first and then from host3 to Bob’s computer.
 
@@ -157,7 +157,7 @@ So we need to hide the IP address of host3 and replace it with Bob’s IP addres
 iptables -t nat -A POSTROUTING -p icmp -s 10.10.34.3 -j SNAT --to 10.10.24.2
 ```
 
-![Untitled](Network/Laboratory%20a293b/Experiment%2048125/Untitled%202.jpeg)
+![Untitled](Experiment%202/Untitled%202.jpeg)
 
 As you can see, There is no clue of host3!
 

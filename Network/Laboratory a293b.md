@@ -1,7 +1,9 @@
 # Laboratory
 
-[Experiment 0](Experiment%20179d8.md)
+[Experiment 0](Laboratory%20a293b/Experiment%200.md)
 
-[Experiment 1](Experiment%20fe745.md)
+[Experiment 1](Laboratory%20a293b/Experiment%201.md)
 
-[Experiment 2](Experiment%2048125.md)
+[Experiment 2](Laboratory%20a293b/Experiment%202.md)
+
+[Experiment 3](Laboratory%20a293b/Experiment%203.md)

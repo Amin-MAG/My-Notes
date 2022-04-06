@@ -14,7 +14,7 @@ I checked the connection using the `ping` command.
 ping -c 4 192.168.1.10
 ```
 
-![Untitled](Network/Laboratory%20a293b/Experiment%20179d8/Untitled.png)
+![Untitled](Experiment%200/Untitled.png)
 
 The RTT or Round Trip Time is in milliseconds and contains sending and acknowledging the packet. Here, RTT is `100.439ms`.
 
@@ -22,7 +22,7 @@ The TTL is the lifetime of data that is being sent. Here, TTL is `64s`.
 
 Let’s `ping` other addresses:
 
-![Untitled](Network/Laboratory%20a293b/Experiment%20179d8/Untitled%201.png)
+![Untitled](Experiment%200/Untitled%201.png)
 
 As you can see the RTT & TTL for
 
@@ -41,11 +41,11 @@ ping -c 5 192.168.1.10
 
 Here is the Result
 
-![Untitled](Network/Laboratory%20a293b/Experiment%20179d8/Untitled%202.png)
+![Untitled](Experiment%200/Untitled%202.png)
 
 Here is the Wireshark View
 
-![Untitled](Network/Laboratory%20a293b/Experiment%20179d8/Untitled%203.png)
+![Untitled](Experiment%200/Untitled%203.png)
 
 I filtered the `ip.dst` to be my VM IP address.
 
@@ -68,7 +68,7 @@ mininet> h1 ping -c 4 h2
 mininet> net
 ```
 
-![Untitled](Network/Laboratory%20a293b/Experiment%20179d8/Untitled%204.png)
+![Untitled](Experiment%200/Untitled%204.png)
 
 For the second picture, We need 2 switches and 4 computers.
 
@@ -81,7 +81,7 @@ mininet> h1s1 ping -c 4 h2s2
 mininet> net
 ```
 
-![Untitled](Network/Laboratory%20a293b/Experiment%20179d8/Untitled%205.png)
+![Untitled](Experiment%200/Untitled%205.png)
 
 For the last one, We need 4 switches and 9 computers.
 
@@ -94,7 +94,7 @@ mininet> h1 ping -c 4 h9
 mininet> net
 ```
 
-![Untitled](Network/Laboratory%20a293b/Experiment%20179d8/Untitled%206.png)
+![Untitled](Experiment%200/Untitled%206.png)
 
 ## Part 4
 
@@ -113,7 +113,7 @@ h1 ping -c 4 h2
 iperf
 ```
 
-![Untitled](Network/Laboratory%20a293b/Experiment%20179d8/Untitled%207.png)
+![Untitled](Experiment%200/Untitled%207.png)
 
 Then I repeated the same steps for different delays to complete the table.
 
@@ -144,7 +144,7 @@ h1 ping -c 4 h2
 iperf
 ```
 
-![Untitled](Network/Laboratory%20a293b/Experiment%20179d8/Untitled%208.png)
+![Untitled](Experiment%200/Untitled%208.png)
 
 Then I repeated the same steps for different bandwidths to complete the table.
 

@@ -82,11 +82,11 @@ sudo python lanTopology.py
 
 Here is the result:
 
-![Untitled](Network/Laboratory%20a293b/Experiment%20fe745/Untitled.jpeg)
+![Untitled](Experiment%201/Untitled.jpeg)
 
 Instantly it opened four shell windows named h1, h2, h3, and h4.
 
-![Untitled](Network/Laboratory%20a293b/Experiment%20fe745/Untitled%201.jpeg)
+![Untitled](Experiment%201/Untitled%201.jpeg)
 
 ## Part 2
 
@@ -98,7 +98,7 @@ ip link
 
 This is the result on host1 and host4:
 
-![Untitled](Network/Laboratory%20a293b/Experiment%20fe745/Untitled%202.jpeg)
+![Untitled](Experiment%201/Untitled%202.jpeg)
 
 All interfaces are up, but we can use this command to change the state of interfaces.
 
@@ -120,7 +120,7 @@ I used `arp -a` to see the arp table in host1.
 
 Now you can see in the picture that we have the MAC address of `10.0.0.4`.
 
-![Untitled](Untitled%203.jpeg)
+![Untitled](Experiment%201/Untitled%203.jpeg)
 
 Yes, It had an ARP reply packet too, and it was asking about `who has 10.0.0.1`. After that last ARP packet, host4 also had the MAC address of host1 in its arp table.
 
@@ -136,14 +136,14 @@ ip addr add 10.10.14.1/24 dev h1-eth0
 
 Just like the picture below
 
-![Untitled](Untitled%204.jpeg)
+![Untitled](Experiment%201/Untitled%204.jpeg)
 
 > I used `sudo ip addr del` to fix the issue here.
 > 
 
 The result looks ok.
 
-![Untitled](Untitled%205.jpeg)
+![Untitled](Experiment%201/Untitled%205.jpeg)
 
 Then, again I opened Wireshark on host1 and tried to ping host4.
 
@@ -163,7 +163,7 @@ Due to subnet, they have different networks, and they are not reachable!
 
 ❓ Question 4
 
-![Untitled](Network/Laboratory%20a293b/Experiment%20fe745/Untitled.png)
+![Untitled](Experiment%201/Untitled.png)
 
 As you can see, it will send and receive all packets that want to communicate to the `10.10.14.0/24` range with `h1-eth0`.
 
@@ -182,13 +182,13 @@ Yes, The ICMP packets were sent to the interface. Because we told the host1 that
 
 Still, we are not able to ping host3 from host1.
 
-![Untitled](Untitled%206.jpeg)
+![Untitled](Experiment%201/Untitled%206.jpeg)
 
 So I enabled IP forwarding on host4.
 
 And again tried to ping host3.
 
-![Untitled](Untitled%207.jpeg)
+![Untitled](Experiment%201/Untitled%207.jpeg)
 
 As you can see, packets were sent to the host3, but still, I could not have the responses.
 
@@ -214,7 +214,7 @@ I could access
 - host3 from host2
 - host1 from host3
 
-![Untitled](Untitled%208.jpeg)
+![Untitled](Experiment%201/Untitled%208.jpeg)
 
 The average RTT is very close to each other because they traverse the same way.
 
