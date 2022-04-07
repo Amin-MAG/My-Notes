@@ -34,6 +34,17 @@ openssl req -x509 -newkey rsa:4096 -days 365 -keyout ca-key.pem -out ca-cert.pem
 openssl x509 -in ca-cert.pem -noout -text
 ```
 
+## Hashing
+
+To generate an MD5 hash based on the input text
+
+```bash
+# It is a cryptographic hash: static length and looks random
+md5sum
+here_is_my_plain_text
+^D
+```
+
 # Signing
 
 ## Signing the certificate request

@@ -42,9 +42,24 @@ It actually try to calculate bunch of string with different hashing algorithms a
 
 # `httpry`
 
-# Gdb
+# Reverse 
+To see all the readable strings in a binary that you can use
 
-# Radare2
+```bash
+strings ./chall
+```
+
+To see the system calls you can use
+
+```bash
+strace ./chall test
+```
+
+## Ghidra
+
+## Gdb
+
+## Radare2
 
 To open the Radare2 console
 
@@ -83,6 +98,4 @@ To debug continue
 :dc
 ```
 
-dig
-
-gdb
+## dig
