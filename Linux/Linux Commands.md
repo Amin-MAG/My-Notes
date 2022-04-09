@@ -30,7 +30,10 @@ grep -r flag *
 
 # For non-sensetive
 grep -i
-```
+
+# To exclude a word use -v 
+grep -v something
+````
 
 ## Binaries
 
