@@ -1,4 +1,7 @@
-# Embedded Systems
+	# Embedded Systems
+Embedded Systems 2022 IUST Course
+
+# Chapter I
 
 We have two types of computes
 
@@ -198,6 +201,60 @@ like DC-DC Convertor, Dimmer lights
 ### LCD
 
 - Having n row and m columns
+
+# Chapter III
+
+## Arduino
+
+What is Arduino?
+
+- A development board
+- A kind of C/C++ framework
+- Open-Source hardware platform & development environment
+- 
+
+Characterstics:
+
+- Low frequency range: Up to 20 MHz
+- Many IO pins: It's good for creating a control program
+- Cheep
+- Widespread
+
+### Sheilds
+
+- TFT touch screen
+- Data logger
+- Ethernet
+- Audio wave
+- GSM
+- Wifi
+- Xbee: For creating a Wireless sensor network
+- Adafruit Servo, Stepper, or DC Motor
+- Battery
+- Liquidware touch 
+- Adafruit wave
+- Adafruit GPS
+- Adafruit wave
+
+### Pins
+
+![Screen Shot 2022-04-10 at 09.59.05.png](Embedded%20Systems/Screen%20Shot%202022-04-10%20at%2009.59.05.png)
+
+- Digitals: `pinMode()`, `digitalWrite()`, `digitalRead()`.
+- Interrupt: `attachInterrupt()`
+- PWN: `analogWrite()`
+- Analogs: `analogRead()`
+- Power: 
+
+USB - FIFI - 
+
+
+what is PWM (?) You can create analog signals on digirtal ports 
+
+> What is PCB?
+> What are the sheilds?
+
+
 
 # References
 
