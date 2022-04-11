@@ -83,11 +83,35 @@ machine, without connecting to a cluster.
 - An application name, namely My App in these examples. This will identify your
 application on the cluster manager’s UI if you connect to a cluster.
 
+## PySpark
+It's really important to care about which version of `pyspark` you are using.
+
+```python
+import pyspark
+
+print(pyspark.__version__)
+```
+
+### Sub Modules
+
+There are some sub modules in pyspark
+- Structured Data -> `pyspark.sql`
+- Streaming Data -> `pyspark.streaming`
+- Machine Learning -> `pyspark.mllib`
+
+### Connection
+
+For Remote cluster, You should specify the master node: `spark://<IP_ADDRESS|DNS_NAME>:<PORT>`
+
+For local cluster, You can use `local` and the number of cores: `local`, `local[2]`, or `local[*]`
+
 ## Resources
 
 [Docker Hub](https://hub.docker.com/r/bitnami/spark)
 
 [GitHub - apache/spark: Apache Spark - A unified analytics engine for large-scale data processing](https://github.com/apache/spark)
+
+[Youtube video](https://www.youtube.com/watch?v=czd9a2Rc-h4)
 
 ### Books
 
