@@ -76,6 +76,16 @@ then
 fi
 ```
 
+## Breakpoint
+
+You can use `breackpoint()` and then you kind of enter to the shell mode.
+
+```python
+n # for next
+pp v # to print a variable ?
+c # continue
+```
+
 # Snippets
 
 A snippet to generate a dictionary based on another dictionary in one line:
