@@ -1,4 +1,4 @@
-# Homework 01 - Theorical
+# Homework 01 - Theoretical
 
 ## 1. NLP Tools & Libraries
 
