@@ -187,6 +187,29 @@ When you want to use a default value for your env variable:
 echo ${PGADMIN_DEFAULT_EMAIL:-amin}
 ```
 
+## Screen
+
+You may want to execute a long-running job on your virtual machine. The network connection can interrupt your ssh connection, and you lose the running task session in your terminal. In this situation, you can use something like Tmux.
+Another tool is called Screen. 
+
+```bash
+# To create a new session with name
+screen -S session_name
+
+# To detach
+# Press ^a^d
+
+# List the sessions
+screen -ls
+
+# To restore a session
+screen -r 51166
+```
+
+> You can customize your screen in `~/.screenrc` file.
+
+At last, I think using tmux is better :))
+
 ## User Management
 
 To create a separate home directory for user
@@ -420,6 +443,13 @@ magick montage -tile 1x top.png bottom.png -mode Concatenate
 ```
 
 # Script
+
+## Input
+
+```bash
+echo "What is your name?"
+read name
+```
 
 ## Using basic operators
 
