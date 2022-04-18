@@ -1,4 +1,4 @@
-	# Embedded Systems
+# Embedded Systems
 Embedded Systems 2022 IUST Course
 
 # Chapter I
@@ -201,6 +201,78 @@ like DC-DC Convertor, Dimmer lights
 ### LCD
 
 - Having n row and m columns
+
+# Chapter II
+
+We are going to talk about microcontrollers. 
+
+## Processor 
+
+The processor executes serial of instructions. There are three different kinds of instructions:
+
+- Data: Move, arithmetic, or logical operations
+- Control: Branch, loop, or subroutine call
+- Interface: Load or store
+
+We always want to improve the performance of the processor. 
+
+- Caches
+- Branch prediction
+- Multiple/Out of order
+
+Embedded Processors
+
+- Optimized and Low performance
+- Integrated on a single chip
+- Embedded processors are once programmed by manufacturer of system.
+- Embedded processors interacts with their environments in many ways. (+Realtime)
+
+## ARM Instruction
+
+- Data processing
+	- All operands are 32-bits wide.
+	- The result is 32-bit wide.
+- Data transfer
+- Control flow
+
+## Data Processing
+
+### Arithmetic operations
+
+```assembly
+ADD r0, r1, r2 ;	r0 = r1 + r2
+SUB r0, r1, #2 ;	r0 = r1 - 2
+ADC r0, r1, r2 ;	r0 = r1 + r2 + C
+SBC r0, r1, r2 ; 	r0 = r1 - r2 + C - 1
+RSB r0, r1, r2 ;	r0 = r2 - r1 + C - 1
+RSC r0, r1, r2 ; 	r0 = r2 - r1 + C - 1
+```
+
+### Logical operations
+
+```assembly
+AND r0, r1, r2 ;	r0 = r1 and r2
+ORR r0, r1, r2 ;	r0 = r1 or r2
+EOR r0, r1, r2 ;	r0 = r1 xor r2
+BIC r0, r1, r2 ;	r0 = r1 and not r2
+```
+
+### Register Movement operations
+
+```assembly
+MOV r0, r2 ;	r0 = r2
+MVN r0, r2 ;	r0 = not r2
+```
+
+### Comparsion operation
+
+```assembly
+; values for CC are N, V, C, Z
+CMP r1, r2 ;
+CMN r1, r2 ;
+TST r1, r2 ;
+TEQ r1, r2 ;
+```
 
 # Chapter III
 
