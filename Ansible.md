@@ -19,7 +19,7 @@ For the controller node, You can see the Ansible configuration on the `/etc/ansi
 
 To add a group of hosts
 
-```
+```plain
 [linux]
 45.56.72.153
 45.56.72.154
@@ -39,9 +39,50 @@ ansible linux -m ping
 ansible linux -a "cat /etc/os-release"
 ```
 
-## Playbook
+## Concepts
 
-You can define some play book like
+### Control Node
+
+Any machine with Ansible installed. You can have multiple control nodes.
+
+### Managed Nodes
+
+Hosts or managed nodes are the network devices that you manage using Ansible.
+
+### Inventory
+
+A list of managed nodes. An inventory file or `hostfile` is a file that stores information about the managed machines.
+
+### Collection
+
+Collections are a distribution format for Ansible content that can include playbooks, roles, modules, and plugins. You can install and use collections through [Ansible Galaxy](https://galaxy.ansible.com/).
+
+### Module
+
+The units of code Ansible executes. Each module has a specific usage.
+
+### Task
+
+The units of actions in Ansible. You can execute a single task once with an ad hoc command.
+
+### Playbook
+
+The playbook is ordered lists of tasks. Here is my initial playbook.
+
+```yaml
+- name: My Initial Playbook
+  hosts: all
+  tasks:
+    - name: Create an empty file
+      command: "touch ~/ansible_was_here.tmp"
+```
+
+To run a playbook, you should run this command.
+```bash
+ansible-playbook my_initial_playbook.yml
+```
+
+Here is another example.
 
 ```yaml
 - name: Build Unicorn
@@ -112,4 +153,5 @@ ansible-playbook -i hosts.ini build-playbook.yml
 
 # References
 
-[you need to learn Ansible RIGHT NOW!! (Linux Automation)](https://www.youtube.com/watch?v=5hycyr-8EKs)
+- [you need to learn Ansible RIGHT NOW!! (Linux Automation)](https://www.youtube.com/watch?v=5hycyr-8EKs)
+- [Ansible concepts](https://docs.ansible.com/ansible/latest/user_guide/basic_concepts.html#tasks)
