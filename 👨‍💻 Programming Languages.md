@@ -3,6 +3,7 @@
 - [Go](Golang.md)
 - [Python](Python.md)
 - Java
+- [C](C.md)
 - [TypeScript/Javascript](TypeScript.md)
 - [Rust](Rust.md)
 - [Matlab](Matlab.md)
