@@ -37,3 +37,7 @@
 - [ElasticSearch](ElasticSearch.md)
 - Solr
 - MEILISearch
+
+
+# Read more
+- [Logging - Databases](Logging.md#Databases)
