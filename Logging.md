@@ -1,4 +1,40 @@
 # Logging
+## Beats
+
+Beats are a collection of lightweight (resource efficient, no dependencies, small) and open source log shippers
+
+-   Log files (Filebeat)
+-   Network data (Packetbeat)
+-   Server metrics (Metricbeat)
+-   Heart beat (uptime monitoring)
+-   Audit beat (user and process activity on your Linux servers)
+-   WinLog beat (Windows Event logs)
+-   Function beat (Server-less shipper)
+-   Journal beat (Linux service journals)
+
+To install your beat, use:
+
+```bash
+sudo apt-get update
+sudo apt-get install <beatname>
+```
+
+Just like other services the configurations are located in `/etc/<beatname>`, for example, following configuration is in `/etc/filebeat/filebeat.yml`.
+
+```yaml
+filebeat.prospectors:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/*.log
+  fields:
+    app_id: service-a
+    env: dev
+output.logstash:
+  hosts: ["localhost:5044"]
+```
+
+🌐 [logz.io - Article About logging](https://logz.io/blog/beats-tutorial/)
 
 ## Databases
 
