@@ -45,7 +45,8 @@ class Graph:
         rank = []  
   
         # Step 1:  
-        # Sort the edges based on their weights        self.edges = sorted(self.edges, key=lambda item: item[2])  
+        # Sort the edges based on their weights        
+		self.edges = sorted(self.edges, key=lambda item: item[2])  
   
         for n in range(self.V):  
             parent.append(n)  
@@ -56,7 +57,8 @@ class Graph:
         while n_of_edges < self.V - 1:  
   
             # Step 2:  
-            # Pick the smallest edge and increase the index            u, v, w = self.edges[edge_idx]  
+            # Pick the smallest edge and increase the index
+			u, v, w = self.edges[edge_idx]  
             edge_idx += 1  
   
             # Calculate the subset  
