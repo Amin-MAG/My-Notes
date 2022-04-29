@@ -86,4 +86,80 @@ These words are some necessary TOEFL vocabularies that I try to add to my own pe
 -  To reduce the effect of a sudden violent movement
 	-  A well-designed sports shoe should absorb the impact on your feet.
 
-**Today, the professor presented the new chapter so nicely that everyone absorbed it readily. The chapter was about plants and how they live. I realized how plants absorb light and oxygen to survive. I miss such people in my life. I wish my parents were not absorbed by the thoughts of the home so that I didn't have to leave the city.**
+**Today, the professor presented the new chapter so nicely that everyone absorbed it readily. The chapter was about plants and how they live. I realized how plants absorb light and oxygen to survive. I miss such people in my life. I wish my parents were not absorbed by the thoughts of the home so that I didn't have to leave the city.
+**
+
+## Abstract
+
+- Something based on general ideas, Existing only as an idea
+	- She has the ability to turn abstract ideas into words.
+	- Human beings are the only creatures capable of abstract thoughts.
+	- **Highly/Very/Purely/Entirely abstract** drawing
+
+**If we want to abstract things, we need to forget the details to be able to see the forest and not the trees.**
+
+## Absurd
+
+- Stupid, unreasonable
+	- She **found** the whole concept **faintly absurd**.
+	- His sense of absurd kept him away from becoming too solemn.
+	- That kind of thinking is **absolutely absurd**.
+	- **To be/look/seem/sound absurd**
+	- **Become absurd**
+	- **Find something absurd**
+	- **completely/absolutely/quite/utterly absurd**
+	- **clearly/manifestly/patently/faintly/rather/slightly/somewhat/wonderfully absurd**
+
+## Abundant
+
+- Available in large quantities, Ample, Affluent
+	- An abundant & cheap supply of oil.
+	- The food was abundant & delicious.
+	- Plant fossils are **abundant in** some types of rocks.
+	- Great/Sheer **abundance of food**
+	- **To have an abundance of natural resources**
+	- **To grow in great abundance**
+
+## Accelerate
+
+- To go faster
+	- Here are the measures to accelerate the rate of economic growth.
+	- The Ferrari can accelerate from 0 to 60 mph in 6.3 seconds.
+	- The runners **accelerated smoothly** round the bend.
+	- Think about how quickly & easily you can accelerate and brake.
+	- The car purred into life and **accelerated away**.
+	- **To accelerate smoothly/hard/quickly**
+	- **To accelerate away**
+- To develop quickly
+	- The Aids epidemic is **accelerated dramatically**.
+	- **To accelerate dramatically/sharply/greatly/rapidly**
+
+## Access
+
+- The right to do something
+	- **Access to** the papers is restricted to senior management.
+	- Cat should always **have access to** fresh, clean water.
+	- The new computers **provide access to** all the files.
+	- Some people **are being denied access** to proper medical care.
+	- **To have/gain/get/give/offer/provide access**
+	- **To demand/seek/allow/grant/deny(sb)/prevent/refuse(sb)/restrict access**
+- How easy or difficult to do something
+	- We're trying to **improve access for** disabled visitors.
+	- We had a villa **with easy access to** the sea.
+	- I lived deep in the country, **without easy access** to shops.
+	- Men and women should **have equal/immediate/instant/improved access** to education.
+	- **To have direct/easy/free/good/ready/unlimited/unrestricted access**
+	- **To have limited/restricted/poor access**
+- The way you use to enter a place
+	- **Access to** the restroom is through the foyer and by means of a small door on the right.
+- To find information, especially on computers
+	- Users can access their voice mails remotely.
+
+## Accidental
+
+- happening without being planned or intended.
+	- I bought an insurance policy that covers accidental damage.
+	- The accidental discharge of toxic waste
+	- Are you insured against accidental damage to your property?
+	- **To be accidental**
+	- **completely/purely/quite/almost accidental**
