@@ -163,3 +163,44 @@ These words are some necessary TOEFL vocabularies that I try to add to my own pe
 	- Are you insured against accidental damage to your property?
 	- **To be accidental**
 	- **completely/purely/quite/almost accidental**
+
+## Acclaimed
+
+Acclaimed
+- Publicly praised by a lot of people
+	- His work **was critically acclaimed**.
+	- Her lastest novel has won **greate critical acclaim**.
+	- His discoveries in science **earned him wide acclaim**.
+	- She reveived international **acclaim for** her interpretation of Chopin.
+	- The **acclaim from** critics
+	- The book **has been widely acclaimed** by teachers and pupils as a modern classic.
+	- **great/general/public/universal/wide/widespread/popular acclaim**
+	- **critical/national/international acclaim**
+	- **To earn(sb)/gain(sb)/meet(with)/receive/win acclaim**
+	- **To be critically/highly/internationally/widely acclaimed**
+
+## Accommodate
+
+- To provide space for something
+	- He bought a huge house to accommodate his library.
+	- This island was used to accommodate child refugees.
+	- The hotel can only accommodate 200 people.
+	- It was a large hall where many people could be comfortably accommodated.
+	- To be comfortably/easily accommodated
+	- Can be accommodated
+- To accept someone's opinion
+	- We've made every effort to accommodate your point of view.
+- To get used to a new situation
+	- Her eyes took a while to accommodate the darkness.
+
+## Accomplished
+
+- Adept, Skilled
+	- He is a highly accomplished designer.
+	- She is a technically accomplished musician.
+	- Her two children are both accomplished athletes.
+	- Sarah became accomplished at running the house.
+	- He came to London in 1976, already accomplished in the English language.
+	- To be/become accomplished at something
+	- extremely/highly/very/technically accomplished
+
