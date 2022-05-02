@@ -151,6 +151,38 @@ ansible -i hosts.ini ${ANSIBLE_REMOTE_HOST} -m ping
 ansible-playbook -i hosts.ini build-playbook.yml
 ```
 
+## Commands
+
+To configure your hosts and managed machines, you need to change `/etc/ansible/hosts`.
+
+```plain
+194.5.193.113 ansible_user=ubuntu
+```
+
+### Basic commands
+
+To ping all your managed machines and test the connection. You should add your ssh key.
+
+```bash
+eval `ssh-agent`
+ssh-add .ssh/mykey
+ansible all -m ping
+# 194.5.193.113 | SUCCESS => {
+#     "ansible_facts": {
+#         "discovered_interpreter_python": "/usr/bin/python3"
+#     },
+#     "changed": false,
+#     "ping": "pong"
+# }
+```
+
+Run a command on every node:
+
+```bash
+ansible all -a "/bin/echo hello-world!"
+# 194.5.193.113 | CHANGED | rc=0 >>
+# hello-world
+```
 # References
 
 - [you need to learn Ansible RIGHT NOW!! (Linux Automation)](https://www.youtube.com/watch?v=5hycyr-8EKs)
