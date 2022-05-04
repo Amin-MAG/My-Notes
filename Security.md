@@ -191,6 +191,10 @@ So there is no complexity here, the browser will check the access-control-allowe
 
 [Cryptography](Cryptography.md)
 
+# See more
+
+[Capture the flag](CTF.md)
+
 # Resources
 - [Stack Overflow - Jadi](https://www.youtube.com/watch?v=RLlQFfZoEB8)
 - [Buffer Overflow - Jadi](https://www.youtube.com/watch?v=xjRFubg5Ghs)

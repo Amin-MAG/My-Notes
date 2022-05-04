@@ -3,3 +3,5 @@
 
 # Obsidian
 .obsidian
+
+*.DS_Store

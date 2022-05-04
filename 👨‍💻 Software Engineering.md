@@ -63,6 +63,8 @@ Such a rule traditionally consisted of three parts:
 - [DevOps](👷%20DevOps.md)
 - [Databases](💾%20Databases.md)
 - [Message Brokers](💬%20Message%20Brokers.md)
+- [Git](Git.md)
+- [Game](Game.md)
 
 # References
 
