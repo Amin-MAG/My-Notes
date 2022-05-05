@@ -76,7 +76,7 @@ Let’s see all kinds of Cross-Validation.
 You read some books in your life so that you can guess a hidden word or phrase in a sentence. But how can a computer learn to guess these words?
 We need to calculate the probability of the sentence.
 
-![Untitled](Homework%200%200752b/Untitled.png)
+![Untitled](Homework%2002%20-%20Theoretical%200752b16200324631bc89f8bccd3fd013/Untitled.png)
 
 We don’t need to calculate all of the Probabilities before. We use an `n` parameter and take those previous words. 
 
@@ -88,11 +88,11 @@ We also need to add fake start and fake ending tokens.
 
 **The model**
 
-![Untitled](Homework%200%200752b/Untitled%201.png)
+![Untitled](Homework%2002%20-%20Theoretical%200752b16200324631bc89f8bccd3fd013/Untitled%201.png)
 
 **To estimate the probabilities**
 
-![Untitled](Homework%200%200752b/Untitled%202.png)
+![Untitled](Homework%2002%20-%20Theoretical%200752b16200324631bc89f8bccd3fd013/Untitled%202.png)
 
 For this question, here are the sentences.
 
@@ -101,6 +101,25 @@ For this question, here are the sentences.
 <s> B A B A B A A </s>
 <s> B A B B A B A </s>
 ```
+
+### Training
+
+- P(A|`<S>`) = 0
+- P(B|`<S>`) = 1
+- P(`</S>`|`<S>`) = 0
+- P(`<S>`|`<S>`) = 0
+- P(A|A) = $\frac{2}{10}$
+- P(B|A) = $\frac{6}{10}$
+- P(`</S>`|A) = $\frac{2}{10}$
+- P(`<S>`|A) = 0
+- P(A|B) = $\frac{8}{11}$
+- P(B|B) = $\frac{2}{11}$
+- P(`</S>`|B) = $\frac{1}{11}$
+- P(`<S>`|B) = 0
+- P(A|`</S>`) = 0
+- P(B|`</S>`) = 0
+- P(`<S>`|`</S>`) = 0
+- P(`</S>`|`</S>`) = 0
 
 ### Calculation
 
@@ -118,11 +137,36 @@ For this question, here are the sentences.
 So the final result turns out to be `0`.
 
 <aside>
-💡 There is no sample that `A` is word number 1. The number `0` makes sense.
+💡 There is no sample that `A` is the word with index 1. The `0` makes sense.
 
 </aside>
 
-**A-Smoothing)** $P(w1=A|w2=B)= \frac{P(w2=B|w1=A) \times P(w1=A)}{P(w2=B)}$
+**B)** $P(w1=S|w2=B)= \frac{P(w2=B|w1=S) \times P(w1=S)}{P(w2=B)} = 1$
+
+- $P(w2=B|w1=S)= \frac{3}{3}$
+- $P(w2=B) = \frac{3}{3}$
+- $P(w1=S)= \frac{3}{3}$
+
+**C)** $P(w1=A|w2=S')= \frac{P(w2=S'|w1=A) \times P(w1=A)}{P(w2=S')}$
+
+- $P(w2=S'|w1=A)= \frac{0}{3}$
+
+### Smoothing
+
+I used smoothing to avoid this zero.
+
+<aside>
+💡 $P(A|B)= \frac{P(B|A) \times P(A) + 1}{P(B) + V}$
+
+</aside>
+
+V is 4 here. {A, B, `<S>`, `</S>`}
+
+**A)** $P(w1=A|w2=B)= \frac{P(w2=B|w1=A) \times P(w1=A) + 1}{P(w2=B) + 4} = \frac{1}{7}$
+
+**B)** $P(w1=S|w2=B)= \frac{P(w2=B|w1=S) \times P(w1=S) + 1}{P(w2=B) + 4} = \frac{4}{7}$
+
+**C)** $P(w1=A|w2=B)= \frac{P(w2=B|w1=A) \times P(w1=A) + 1}{P(w2=B) + 4}= \frac{1}{7}$
 
 ## Bayes Rule
 
