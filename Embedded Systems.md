@@ -10,7 +10,7 @@ We have two types of computes
 
 ## What are embedded systems?
 
-1. Information processing system embedded into a larger product. 
+1. Information processing system embedded into a larger product. (It is not the main goal)
 2. The main reason for buying these systems are not data processing
 3. They are such devices other than PCs, servers, and notebooks that:
     1. Electricity running through
@@ -326,10 +326,95 @@ what is PWM (?) You can create analog signals on digirtal ports
 > What is PCB?
 > What are the sheilds?
 
+## Automata Programming
 
+The main problem of current programming languages is dealing with complex system behaviors. (Monitoring, Health care, etc.)
+A solution is to provide automata for our system and generate the code using the available tools. 
+
+### Components
+
+- Control Object: Control the output amount of the water
+- Control System: Check the height of the water
+
+Control State: Like in Truing Machine.
+
+Structure:
+- Actions formed simultaneously
+- Time and delays are set in the transitions.
+
+### Language Specification for Embedded Systems
+
+Completeness, Avoid the contradiction
+
+- Hierarchy: Behavioral (Super-States), Structural (Like VHDL, Verilog)
+- Timing behavior
+- State-oriented behavior
+- Event handling
+	- External events (casued by the environment)
+	- Internal Events (caused by the syste components)
+- Support for a dependable system
+- Exception-handling behavior
+
+Available System: being awake watching for external events.
+Safe System: Hardly fails and safely fails
+
+## Model of computation - MOC
+
+They are conceptual notions used to capture the system behavior.
+
+- Sequential program model
+- Object oriented - OO
+- FSM
+- DFG
+- Petri net
+- KPN
+- CSP
+
+## State-charts
+
+Statecharts is a language for describing large, complex, and reactive systems.
+
+![State-chart](Embedded%20Systems/statechart.png)
+
+Statecharts VS FSM:
+
+- Depth (abstraction)
+- Orthogonality (concurrency)
+- Broadcast communication (between states)
+
+<aside>
+💡 Outputs are global. (This message is a kind of communication between states)
+</aside>
+
+### Depth (!)
+
+### Bottom-up clustering
+
+![Refinement](Embedded%20Systems/refinement.png)
+
+- D is a super state.
+- The semantic of super state D: `A XOR B`
+
+### Top-down refinement
+
+The destination of a transition to a super state should be assigned to a basic state.
+
+### Design modularity
+
+#### Default State Mechanism
+
+We can use the filled circle mechanism to handle this scenario. This super state is a state-less state.
+
+#### History Mechanism
+
+### Orthogonality (Concurrency)
+
+![Orthogonality](Embedded%20Systems/orthogonality.png)
+
+# See more
+
+- [Assignment I](Assignment%20cf8b1.md)
 
 # References
 
-[How to Get Started Learning Embedded Systems](https://www.youtube.com/watch?v=aC37UE7edP0)
-
-[Assignment I](Assignment%20cf8b1.md)
+- [How to Get Started Learning Embedded Systems](https://www.youtube.com/watch?v=aC37UE7edP0)
