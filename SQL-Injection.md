@@ -21,6 +21,30 @@ In simple cases, the output of both the intended and the new query may be printe
 - Special characters to find the vulnerability: `'`, `"`, `#`, `;`, `)`.
 - For bypassing the authentication we can inject an `OR` statement.
 
+Basic tricks
+- Add `OR` statement
+- Add `--`, `#`, or `/**/` to comment rest of the query
+- Use `union` statement
+
+#####  Detect number of columns
+
+Before going ahead and exploiting Union-based queries, we need to find the number of columns selected by the server. There are two methods of detecting the number of columns:
+
+###### Order By
+
+The first way of detecting the number of columns is through the `ORDER BY` function, which we discussed earlier. We have to inject a query that sorts the results by a column we specified, 'i.e., column 1, column 2, and so on', until we get an error saying the column specified does not exist.
+
+```sql
+' order by 2-- -
+```
+
+###### UNION
+
+The other method is to attempt a Union injection with a different number of columns until we successfully get the results back. The first method always returns the results until we hit an error, while this method always gives an error until we get a success.
+
+```sql
+cn' UNION select 1,2,3,4-- -
+```
 
 ### Blind
 
