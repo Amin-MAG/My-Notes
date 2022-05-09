@@ -183,6 +183,33 @@ ansible all -a "/bin/echo hello-world!"
 # 194.5.193.113 | CHANGED | rc=0 >>
 # hello-world
 ```
+
+### Ad hoc
+
+Ad hoc commands are great for executing a command that you repeat rarely.
+
+```bash
+ansible [pattern] -m [module] -a "[module options]"
+
+# To reboot all the servers in the [atlanta] group:
+ansible atlanta -a "/sbin/reboot"
+
+# To reboot the [atlanta] servers with 10 parallel forks:
+ansible atlanta -a "/sbin/reboot" -f 10
+
+# To connect as a different user
+ansible atlanta -a "/sbin/reboot" -f 10 -u amin
+
+# You can connect to the server as `username` and 
+# run the command as the `root` user by using the become keyword.
+ansible atlanta -a "/sbin/reboot" -f 10 -u amin --become-user batman -K
+
+# All above examples are with command module, to use another 
+# module:
+ansible atlanta -m ansible.builtin.copy -a "src=/etc/hosts dest=/tmp/hosts"
+ansible webservers -m ansible.builtin.file -a "dest=/srv/foo/a.txt mode=600"
+```
+
 # References
 
 - [you need to learn Ansible RIGHT NOW!! (Linux Automation)](https://www.youtube.com/watch?v=5hycyr-8EKs)
