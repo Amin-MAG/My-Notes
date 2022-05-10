@@ -411,6 +411,30 @@ We can use the filled circle mechanism to handle this scenario. This super state
 
 ![Orthogonality](Embedded%20Systems/orthogonality.png)
 
+# Chapter IV
+
+## Scheduling(?)
+
+### Earliest Deadline First
+
+EDF says the closest deadline should be executed first. Each time a task arrives, it is inserted into a queue of ready tasks, sorted by their deadlines.
+
+## (?)
+
+### Least Laxity/Slack First
+
+The queue is sorted based on the `slack` parameter.
+
+- Dynamically changing priority
+- Preemptive: To allocate the CPU core to the ready task
+- It is the optimal solution for uni-processor systems
+	- Some OS don't support calculating dynamic priority.
+	- Fixed-Priority preemptive scheduling is used commonly in real-time systems.
+- Needs the knowledge of execution time.
+- Need lots of calculations to specify the priority
+
+> $$SLACK = Deadline - ExecutionTime$$
+
 # See more
 
 - [Assignment I](Assignment%20cf8b1.md)
