@@ -36,6 +36,18 @@ To remove all images which are not used by existing containers, use the `-a` f
 docker image prune -a
 ```
 
+## Add 
+
+The **`ADD` command** is used to copy files/directories into a Docker image. It can copy data in _three_ ways:
+
+-	Copy files from the local storage to a destination in the Docker image.
+-   Copy a _tarball_ from the local storage and extract it automatically inside a destination in the Docker image.
+-   Copy files from a URL to a destination inside the Docker image.
+
+```dockerfile
+ADD source destination
+```
+
 ## Docker build
 
 The `docker build` command builds Docker images from a `Dockerfile` and a “context”. A build’s context is the set of files located in the specified `PATH` or `URL`. The build process can refer to any of the files in the context. For example, your build can use a [copy](https://www.notion.so/ttps-docs-docker-com-engine-reference-builder-copy-7bf99b2be9044648948bdfd43b561600) instruction to reference a file in the context.
