@@ -1,4 +1,11 @@
-# Linux Commands
+,# Linux Commands
+
+## Get system info
+`uname` return some useful information about the specific flavor of the OS and its kernel.
+
+```bash
+uname -a 
+```
 
 ## Create link
 
@@ -19,7 +26,9 @@ sudo kill -9 $(sudo lsof -t -i:3000)
 find . -iname '*flag*'
 ```
 
-## Search in contents
+## Grep
+
+To search in the content of a file.
 
 ```bash
 # Search a word in file
@@ -33,6 +42,9 @@ grep -i
 
 # To exclude a word use -v 
 grep -v something
+
+# To show before and after a grep
+cat something.txt | grep -B 5 -A 5 something
 ````
 
 ## Binaries
@@ -415,6 +427,12 @@ You can pipe curl with `json_pp` to make it better
 
 ```bash
 curl -d '{"key1":"value1", "key2":"value2"}' -H "Content-Type: application/json" -X POST http://localhost:3000/data | json_pp
+```
+
+To download a file
+
+```bash
+curl <FILE_URL> --output filename.jpg
 ```
 
 ## APT
