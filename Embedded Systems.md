@@ -435,6 +435,39 @@ The queue is sorted based on the `slack` parameter.
 
 > $$SLACK = Deadline - ExecutionTime$$
 
+## RM Scheduling
+
+- RM Algorithm is existed in different operating systems. (Such as windows NT)
+- It is based on static priorities.
+
+## EDF 
+
+- It is optimal for periodic scheduling.
+- It requires dynamix priority.
+- EDF it the mos optimal scheduling that doesn't have idle time.
+
+# Non-Preemptive
+
+## LDF
+- LDF can be optimal for uni-processors.
+
+# Multi processor real-time scheduling
+
+- One processor is a one-dimensional issue
+
+Classification of algorithms:
+
+- Partintioned 
+- Global
+- Semi-Partitioned: It is hybrid
+
+## Partioned scheduling
+
+- Each of two dimentions is dealt with separately
+- No task migration
+- 
+
+
 # See more
 
 - [Assignment I](Assignment%20cf8b1.md)
