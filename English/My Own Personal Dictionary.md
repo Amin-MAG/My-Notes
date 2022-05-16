@@ -204,3 +204,85 @@ Acclaimed
 	- To be/become accomplished at something
 	- extremely/highly/very/technically accomplished
 
+## Account
+
+- Description, A written or spoken discription saying what happens in an event or process
+	- He later **wrote an account of his experiences** during the war.
+	- He was too shocked to **give an account of what** had happened.
+	- Richard describes this very well in his account of the events.
+	- **A blow-by-blow account of how** England lost to Portugal.
+	- I've never been there, but it's a lovely place **by all accounts**.
+	- The differences in achievments between the pupils are **partly/fully accountedf for by** the differences in age.
+	- **By his own account**, he had an unhappy childhood.
+	- **Eye-witness accounts told of the unprovoked** shooting of civilians.
+	- She received a glowing account of her son's progress.
+	- **give/provide/read/write** an account
+	- **brief/short/blow-by-blow/comprehensive/detailed/full/graphic/vivid** account
+	- *eyewitness/clear/accurate/factual/first-hand/true/verbatim/good/glowing** account
+	- **The newspaper account**
+- Bank Account
+	- I **opened a new account at/with** City's bank.
+	- My husband and I have a **savings/deposit/joint/separate account**.
+	- The money will **be credited to your account** tommorow.
+	- She had **taken all of her money out of her account**.
+	- **To hold an account**
+	- **To credit sth to account**
+	- **To pay/put sth into account**
+	- **To debit/pay/withdraw sth from an account**
+	- **To draw/take sth out of an account**
+- Record of money
+	- Try to keep accurate accounts.
+- Arrangement with a business
+	- James left the resturant, settling his account by credit card.
+	- an account with a large store
+
+## Accumulate
+
+- Collect, pile up, build-up
+	- Investigators have yet to accumulate enough evidence.
+	- It is unjust that a privileged few should continue to accumulate wealth.
+	- Toxic chemicals **tend to accumulate** in the body.
+	- Fat tends to accumulate around the hips and tights
+	- Dirt must not **be allowed to accumulate**.
+	- **To begin to accumulate**
+	- **Accumulate gradually/slowly/steadily/rapidly**
+
+## Accurate
+
+- Correct, percise
+	- Police believe that Derek gace a reasonably accurate account of what happened.
+	- The evidence she gave to the court was not **strictly accurate**.
+	- It is difficult to get accurate figures on population number.
+	- He **gave a full and accurate account of** his movements.
+	- His predictions **was/proved accurate**
+	- **Deadly/extremely/highly/very/amazingly/remarkably/supeisingly/@@uncannily@@/completely/perfectly/totally accurate**
+	- **not completely/entirely/strictly/quite/wholly accurate**
+	- **partially/broadly/fairly/generally/largely/pretty/quite/sufficiently/historically/statistically accurate**
+
+## Accustomed
+
+- Addicted, get used to
+	- I'm not **accustomed to** getting up so early.
+	- The pans are in their accustomed places.
+	- She had grown accustomed to** his long absence.
+	- He was **well accustomed to** hard work.
+	- **To be/become/grow//get accustomed**
+	- **Well/quite accustomed**
+
+## Acknowledge
+
+- Admit
+	- Clarie **acknowledged that** she was guilty.
+	- The family acknowledged the need for change.
+	- Many of the poor **fully acknowledged him** as their spiritual leader.
+	- Mentall illness can exist for years before families **are forced to acknowledge** the truth.
+	- A truth that **generally/universally/widely acknowledged**.
+	- **fully/freely/readily/clearly/explicitly/effectively/implicitly acknowledge**
+	- **To acknowledge publicly/formally/officially/openly**
+	- **To acknowledge ruefully/privately/reluctantly**
+	- **Fail/refuse to acknowlege**
+- Recognize
+	- The Brazilian coach acknowledged the talent of his players.
+	- Tom acknowledged her presence by a brief glance.
+- Reply to letter
+	- The company **duly/hereby acknowledged** the receipt of the letter.
