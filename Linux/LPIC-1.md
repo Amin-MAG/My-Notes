@@ -23,13 +23,16 @@ It enables us to add the hardware boards to the motherboard.
 ## sysfs
 
 It is a pseudo-file system provided by the Linux kernel. It has information about:
+
 - kernel subsystems
 - hardware devices
 - associated device drivers
 
 > pseudo-file means that they're not on the disk‌‌ but in kernel memory.
+> 
 
 To see `sysfs` files, you can enter `sys` directory
+
 ```bash
 cd /sys/
 
@@ -49,15 +52,16 @@ cd /dev
 
 ## dbus
 
-D-bus is a message bus system allowing applications to talk to one another. 
+The D-bus is a message bus system allowing applications to talk to one another.
 
 ## proc
 
 `proc` is just another pseudo-file system. `proc` is where the kernel keeps its setting and properties.
 You can see all of these:
+
 - IRQ - Interrupt requests
 - I/O Port
-- DMA 
+- DMA
 - Processes
 - Network Settings
 - ...
@@ -73,16 +77,18 @@ cat /proc/meminfo
 ```
 
 > The numbers represent the processes.
+> 
 
 ## ls commands
 
 - `lsusb` - usb devices
 - `lspci` - devices connected to computer
 - `lsblk` - block devices RAM/ROM/Disk
-- `lshw` - 
+- `lshw` -
 
 ## Loadable Kernel Modules
-Linux like any other OS needs drivces. In Linux, most of these drivers are built-in. `.ko` files are object files used to extend the kernel of the Linux distribution.
+
+Linux like any other OS needs drives. In Linux, most of these drivers are built-in. `.ko` files are object files used to extend the kernel of the Linux distribution.
 
 Here are some Modules Loading commands:
 
@@ -98,14 +104,16 @@ sudo insmod <ADDRESS_OF_MODULE>
 sudo modprobe tls
 ```
 
+---
+
 # 101 - 2
 
 ## The boot process
 
 1. Motherboard firmware does a PowerOnSelfTest.
 2. Motherboard loads the bootloader.
-3. Bootloader loades the Linux Kernel.
-4. Kernel loads and prepares the system, and runs `init` program.
+3. Bootloader loads the Linux Kernel.
+4. Kernel loads and prepares the system and runs `init` program.
 5. `init` program starts the services or other applications.
 
 ### BIOS
@@ -116,32 +124,33 @@ The motherboard itself has firmware; the older version of this firmware was call
 
 Nowadays, we have UEFI (Unified Extensible Firmware Interface). UEFI has a separate partition `/boot`. They're modern and fantasy.
 
-EFI System partition or ESP is FAT and mounted on `/boot/efi`. Bootloader files has `.efi` extentions.
+EFI System partition or ESP is FAT and mounted on `/boot/efi`. Bootloader files has `.efi` extensions.
 
-> Check `/sys/firmware/efi` to see if you're using UEFI or not.
+> Check /sys/firmware/efi to see if you're using UEFI or not.
+> 
 
 ### Bootloader
 
-The bootloader initialize the minimum hardware needed to boot your system and then scans, finds, and run the OS.
+The bootloader initializes the minimum hardware needed to boot your system and then scans, finds, and runs the OS.
 
 <aside>
-💡 Grub is a bootloader.
+💡  Grub is a bootloader.
+
 </aside>
 
 ### Kernel
 
-It is the main and core component of your operating system. It is the LINUX itself. Kernel needs some initial information to to start. Those are stored in `initramfs`.
+It is the main and core component of your operating system. It is the LINUX itself. The kernel needs some initial information to start. Those are stored in `initramfs`.
 
 ## Logs
 
 ### Kernel Ring Buffer
 
-When kernel is loading, there is no space to write logs yet. The kernel uses the Kernel Ring Bugger to remembers and stores these logs. After loading, They're also stored in `/var/log/boot` (for debian) and `/var/log/boot.log` (for redhat).
+When the kernel is loading, there is no space to write logs yet. The kernel uses the Kernel Ring Bugger to remember and store these logs. After loading, They're also stored in `/var/log/boot` (for Debian) and `/var/log/boot.log` (for RedHat).
 
 ### dmesg
 
 `dmesg` shows the full data from the Kernel Ring Buffer up to now. But the `/var/log/dmesg` shows the data during the boot. The Kernel is continuously logging its messages to `dmesg`.
-
 
 ### journalctl
 
@@ -157,21 +166,23 @@ journalctl -b
 
 ## init
 
-There are lots of services and daemons running in our operating system. The kernel runs `init` program and then `init` is responsible for launghing those services. 
+There are lots of services and daemons running in our operating system. The kernel runs `init` program and then `init` is responsible for launching those services.
 
-> **Note:** having a separate program like `init` is a good architecture because it avoids crashing.
+> Note: having a separate program like init is a good architecture because it avoids crashing.
+> 
 
 init systems:
-- SysVinit: It is based on the unix systems and not used much.
+
+- SysVinit: It is based on the Unix systems and not used much.
 - systemd
-- upstart: The project started by canonical (The company behind ubuntu) and was canceled.
+- upstart: The project was started by canonical (The company behind Ubuntu) and was canceled.
 
 ```bash
 # To see your init system
-which init 
+which init
 # Read the link
 ls -ltrh /usr/sbin/init
-# Or 
+# Or
 readlink -f /usr/sbin/init
 
 # Using process to find out init system
@@ -183,25 +194,26 @@ pstree | less
 
 `systemd` is a init system. `systemd` work with some units.
 The units priority is
+
 1. `/etc/systemd/system/`
 2. `/run/systemd/system/`
 3. `/usr/lib/systemd/system/`
 
-You can also read this page: [systemctl in linux](Systemctl.md)
+You can also read this page: [systemctl in linux](https://www.notion.so/amin-mag/Systemctl.md)
 
 ```bash
 sudo systemctl is-system-running
 sudo systemctl --failed
 ```
 
-#### Units
+### Units
 
 ```bash
 # To see the units
 sudo systemctl list-units
 ```
 
-There are 12 types of units, the services are the most important one. The `target`s consist of some services and by loading them all of its services is going to run.
+There are 12 types of units, the services are the most important ones. The `target`s consist of some services and by loading them all of its services are going to run.
 
 ```bash
 # To show just a type of units
@@ -239,7 +251,7 @@ sudo systemctl stop sshd
 sudo systemctl enable sshd
 ```
 
-#### Journalctl
+### Journalctl
 
 ```bash
 # Show everything
@@ -268,6 +280,79 @@ The services are located in `/etc/init.d` in systems using SysV. These are some 
 /etc/init.d/ntpd restart
 ```
 
-# Resources 
+---
+
+# 101 - 3
+
+## runlevels
+
+You can run Linux on different levels. Runlevels define what tasks can be accomplished in the current state of a Linux System.
+
+### systemd
+
+```bash
+# Each target means something
+sudo systemctl list-unit --type=target
+
+# More detail for targets
+systemctl cat multi-user.target
+```
+
+1. `rescue`
+    - Local systems are mounted
+    - There is no networking
+    - Only root user
+2. `emergency`
+    - Only root file system in read-only mode
+    - No networking
+    - Only root user
+3. `reboot`
+4. `halt`
+    - Stop all processes
+    - Halts CPU activities
+5. `poweroff`
+
+```bash
+# Change the level
+systemctl isolate rescue
+systemctl isolate graphical
+
+# Check system running
+systemctl is-system-running
+```
+
+### SysV runlevels
+
+Different stages for RedHat-based systems.
+
+- 0 - Shutdown
+- 1 - Single-User
+- 2 - Multi-User
+- 3 - Multi-User with networking
+- 4 - Customized by the admin
+- 5 - Multi-User with networking and graphics
+- 6 - Reboot
+
+Different stages for Debian systems.
+
+- 0 - Shutdown
+- 1 - Single-User
+- 2 - Multi-User with graphics
+- 6 - Reboot
+
+```bash
+# You can use init to change the mode.
+# In our systems, we have init command and
+# it is connected to systemd.
+# Reboot
+init 6
+
+# See the history of the change mode
+runlevel
+```
+
+`/etc/rc` files like `/etc/rc6.d/` contain some bash files (Linked to the real bash script files) and represent the init commands tasks.
+
+`K` at the beginning of these files means to kill, and `S` means to start.
 
 - [Linux1st](https://linux1st.com/)
