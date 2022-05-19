@@ -469,8 +469,10 @@ Classification of algorithms:
 
 
 # See more
-
-- [Assignment I](Assignment%20cf8b1.md)
+  
+- [Assignment I](Embedded%20Systems/Assignment%201.md)
+- [Assignment II](Embedded%20Systems/Assignment%202.md)
+- [Arduino](Embedded%20Systems/Arduino.md)
 
 # References
 
