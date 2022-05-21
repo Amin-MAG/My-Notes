@@ -355,4 +355,33 @@ runlevel
 
 `K` at the beginning of these files means to kill, and `S` means to start.
 
+
+## Shutdown like a professional
+
+`halt`, `reboot`, `poweroff` are some commands using systemd underlying.
+
+```bash
+# Reboot for 5 minutes later with
+# the message "we are going down"
+shutdown -r +5 we are going down
+
+# Cancelation
+shutdown -c
+
+# Wall to send a message
+wall hi everybody!
+# Disable messagin
+mesg n
+# What users are logged in the system
+# With their messaging status
+who -T
+```
+
+`/etc/motd` is the message of the day. After ssh to the system, this message is going to be printed.
+
+## Advanced Configuration and Power Interface
+
+ACPI provides an open standard for the operating system to discover and configure computer hardware components. The bold part of this tool is power management.
+
+---
 - [Linux1st](https://linux1st.com/)
