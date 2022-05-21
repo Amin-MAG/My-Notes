@@ -663,20 +663,55 @@ wpa_passphrase <YOUR-ESSID> <YOUR-PASS> | sudo tee /etc/wpa_supplicant.conf
 sudo wpa_supplicant -c /etc/wpa_supplicant.conf -i wlp4s0
 ```
 
-## Block a server
+- [x] ## Block a server
 
 Sometimes you may need to block the connection with specific servers. The file `/etc/hosts` is the one gathering information. If you want to block a server you should add lines to this file.
 
-```jsx
+```bash
 # First open the file
 sudo vim /etc/hosts
+```
 
+To block them
+
+```
 # Then Add these lines
 0.0.0.0   www.example.com
 0.0.0.0   example.com
 ::0       www.example.com
 ::0       example.com
 ```
+
+## Add a domain name system
+
+### Name Resolution
+
+Open the `/etc/hosts` and add the name and IP address.
+
+```python
+192.168.1.11	db
+# You can handle the subdomain too
+# For example for mycompany.com or prod.company.com
+search 			mycompany.com	prod.mycompany.com
+```
+
+This mapping is called name resolution.
+
+### DNS Server
+
+Name Resolution is an old solution for handling the domain name system. We use some DNS servers with all of these domain names and IP addresses.
+
+To add a dns server, change the `/etc/hosts`.
+
+```python
+nameserver		192.168.1.100
+# You can add more.
+# You can also set this on your DNS server
+# to forward other names to a global DNS server
+nameserver		8.8.8.8
+```
+
+Still, the local configuration has a higher priority than the DNS server.
 
 ## Set static IP addresses
 
@@ -947,6 +982,64 @@ search example.com company.net
 
 Then your computer will try to resolve `test.example.com` followed by `test.company.net`. It will return the first query that was successful.
 
+### Records
+
+#### A Record
+
+Mapping a IPv4 to host names.
+
+#### AAAA Record
+
+Mapping a IPv6 to host names.
+
+#### CNAME Record
+
+Mapping a host name to other host names.
+
+### nslookup
+
+The `nslookup` tool does not consider the local configurations for the DNS, It just look at the DNS server.
+
+```python
+nslookup
+> google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 142.250.179.174
+Name:	google.com
+Address: 2a00:1450:400e:802::200e
+```
+
+## dig
+
+It returns more details.
+
+```python
+dig google.com
+
+; <<>> DiG 9.16.1-Ubuntu <<>> google.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 28637
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;google.com.			IN	A
+
+;; ANSWER SECTION:
+google.com.		200	IN	A	142.250.179.174
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Fri May 20 02:32:56 +0430 2022
+;; MSG SIZE  rcvd: 55
+```
+
 # Third-Party Packages
 
 ## Termgraph
@@ -958,3 +1051,7 @@ python3 -m pip install termgraph
 # A simple graph
 cat file | sort | uniq -c | awk '{print $2 " " $1}' | termgraph
 ```
+
+# Resources
+
+- [DevOps Prerequisites Course - Getting started with DevOps](https://www.youtube.com/watch?v=Wvf0mBNGjXY)
