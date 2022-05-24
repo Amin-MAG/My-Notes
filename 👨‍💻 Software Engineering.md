@@ -38,6 +38,7 @@ Read More:
 
 - [Testing](🧪%20Testing.md)
 - [Monitoring](📈%20Monitoring.md)
+- [Observability](Observability.md)
 
 ## Miscellaneous
 
