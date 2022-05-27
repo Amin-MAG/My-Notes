@@ -152,3 +152,25 @@ Host 1
 ### ❓ Question 6
 
 Values of RTT decreases when ECN is active. The sending rate for both of the are same. Router queue will overflow when ECN in inactive and that’s why time of queueing and RTT is going to increase.
+
+# 
+
+### ❓ Question 7
+
+As you can see in the image below, the RTT is `300ms`.
+
+![Untitled](file:///home/amin/notes/Network/Laboratory a293b/Experiment%206B%20ab1b61e6d5a44a429500ceba43d03730/Untitled.png?msec=1653648863074)
+
+### ❓ Question 8
+
+The goodput for host1 is `1015kbps` and for host 2 is `696kbps`.
+
+![Untitled](file:///home/amin/notes/Network/Laboratory a293b/Experiment%206B%20ab1b61e6d5a44a429500ceba43d03730/Untitled%201.png?msec=1653648863074)
+
+### ❓ Question 9
+
+Yes, this amount of goodput is approximately as same as the theoretical answer.
+
+### ❓ Question 10
+
+The latency is more than `300ms` so we have latency in the queue. Since this latency is lower than `400ms`, the queue latency is lower than `100ms`.

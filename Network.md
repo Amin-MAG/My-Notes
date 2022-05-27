@@ -92,7 +92,6 @@ sudo apt install openvpn easy-rsa
 
 # Copy easy-rsa directory
 sudo make-cadir /etc/openvpn/easy-rsa
-
 ```
 
 In the server:
@@ -123,7 +122,6 @@ In CA:
 # Send certificates back to the server
 scp pki/issued/server.crt sammy@your_server_ip:/tmp
 scp pki/ca.crt sammy@your_server_ip:/tmp
-
 ```
 
 Back into the server:
