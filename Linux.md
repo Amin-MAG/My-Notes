@@ -18,6 +18,8 @@
 
 [LPIC-1](Linux/LPIC-1.md)
 
+[Swap](Linux/Swap.md)
+
 [Linux Commands](Linux/Linux%20Commands.md)
 
 [DPKG](Linux/DPKG.md)
