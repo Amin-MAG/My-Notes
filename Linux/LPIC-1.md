@@ -29,7 +29,6 @@ It is a pseudo-file system provided by the Linux kernel. It has information abou
 - associated device drivers
 
 > pseudo-file means that they're not on the disk‌‌ but in kernel memory.
-> 
 
 To see `sysfs` files, you can enter `sys` directory
 
@@ -77,7 +76,6 @@ cat /proc/meminfo
 ```
 
 > The numbers represent the processes.
-> 
 
 ## ls commands
 
@@ -127,7 +125,6 @@ Nowadays, we have UEFI (Unified Extensible Firmware Interface). UEFI has a separ
 EFI System partition or ESP is FAT and mounted on `/boot/efi`. Bootloader files has `.efi` extensions.
 
 > Check /sys/firmware/efi to see if you're using UEFI or not.
-> 
 
 ### Bootloader
 
@@ -169,7 +166,6 @@ journalctl -b
 There are lots of services and daemons running in our operating system. The kernel runs `init` program and then `init` is responsible for launching those services.
 
 > Note: having a separate program like init is a good architecture because it avoids crashing.
-> 
 
 init systems:
 
@@ -299,17 +295,17 @@ systemctl cat multi-user.target
 ```
 
 1. `rescue`
-    - Local systems are mounted
-    - There is no networking
-    - Only root user
+   - Local systems are mounted
+   - There is no networking
+   - Only root user
 2. `emergency`
-    - Only root file system in read-only mode
-    - No networking
-    - Only root user
+   - Only root file system in read-only mode
+   - No networking
+   - Only root user
 3. `reboot`
 4. `halt`
-    - Stop all processes
-    - Halts CPU activities
+   - Stop all processes
+   - Halts CPU activities
 5. `poweroff`
 
 ```bash
@@ -384,4 +380,105 @@ who -T
 ACPI provides an open standard for the operating system to discover and configure computer hardware components. The bold part of this tool is power management.
 
 ---
+
+# 102 - 1
+
+## Unix Directories
+
+Understanding Filesystem Hierarchy Standard or FHS can help you find your programs, configs, logs, or other files.
+
+- `/bin`: Essential executables, It contains some binary files that are essential for the system.
+- `/sbin`: Essential executables for root.
+- `/lib`: Shared code between binaries, `/bin` binaries, and `/sbin` binaries may share some codes.
+- `/usr`: Second Hierarchy
+  - `/usr/bin`: Non-Essential installed binaries.
+  - `/usr/local/bin`: Locally compiled binaries.
+- `/etc`: Editable text config, all of the configurations are here.
+- `/home`: User data
+- `/mnt`: Mount point for mounting a filesystem temporarily
+- `/boot`: Files need to boot the system like the kernel.
+- `/dev`: Device files
+- `/opt`: Optional and add-on software.
+- `/var`: Contains variable files that will be changed as the OS is used. Like logs and cache files.
+- `/tmp`: Contains files that won't be persisted between reboots.
+- `/proc`: Imaginary directory that doesn't exist on the disk. It is created by the memory and contains information about processes.
+- `/root`: Home of the root user (For security)
+
+## Partitions
+
+Before formatting, you need to partition your hard disk.
+
+In the Linux world, the devices are defined as `/dev/`. Your flash drive will be mounted at `/mnt/`. So everything becomes part of the `/` tree. 
+
+You can create different partitions for different directories of the root; for example, you can create:  
+
+- 250MB partition for your `/boot/`.
+
+- 905GB partition for your `/home/`.
+
+- 50GB partition for your `/` (The rest of the directories) - In this case, when you want to change your Operating system, you need to install it on this partition. You can easily mount your old partition `/home/` and not be worry about your files.
+
+> In BIOS you could have upto 4 partitions on each disk. (Although you can create a extended partition, then create another 4 logical partition on that.)
+
+### Tools
+
+#### Fdisk command
+
+```bash
+# Run fdisk for sda disk
+sudo dfisk /dev/sda
+# Command (m for help):
+# p -> shows the partitions
+# q -> exit
+```
+
+#### Mount
+
+```bash
+sudo mount | grep sda 
+```
+
+#### Parted
+
+```bash
+sudo parted /eve/sda p
+# You can use the graphical version Gparted
+```
+
+### LVM
+
+What about having a 20TB hard drive? The answer is LVM or Logical Volume Managment. You can connect ten 2TB hard disk and use LVM to create a single virtual hard drive. After that you can start to partition this 20TB virtual LVM hard drive.
+
+You can easily connect more hard drives and make each one of your partitions bigger.
+
+The main concepts:
+
+- Physical Volume (or PV)
+
+- Volume Group (or VG)
+
+- Logical Volume (or LG)
+
+```bash
+# It is not for LPIC 1
+# You can use the lv command
+lv
+```
+
+## Design Hard disk layout
+
+### swap
+
+The swap is like an extended memory. Kernel will page memory and then it can execute a program that need more memory than the system has. (Although it is slow)
+
+### boot
+
+Having separate partition for `/boot` ?
+
+1. You can recover your system using `/boot` partition.
+
+2. You can not encrypt `/boot` or load it from network because the UEFI or BIOS needs to read the data from this partition, but by separating `/boot/` and `/` partitions you can encrypt just `/` partition, or you even can put the `/` in another disk drive. (It is much cleaner.)
+
+# Resources
+
 - [Linux1st](https://linux1st.com/)
