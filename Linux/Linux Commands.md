@@ -478,6 +478,45 @@ i=0
 i=$((i+1)) # i=1
 ```
 
+## Conditions
+
+```bash
+read coffee
+if [[ $coffee == "y" ]]; then
+    echo "You're awesome."
+elif [[ $USER == "bernard" ]]; then
+    echo "Bernard always win this game."
+else
+    echo "Do nothing."
+fi
+```
+
+Condition on file existence.
+
+```bash
+# File existance
+if [ -r /var/the/file ]; then
+    echo "It exists."
+fi
+```
+
+## Switches
+
+```bash
+read class
+case $class in
+    1)
+        type="A"
+        ;;
+    2)
+        type="A"
+        ;;
+    3)
+        type="A"
+        ;;
+esac
+```
+
 ## While
 
 ```bash
