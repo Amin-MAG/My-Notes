@@ -305,6 +305,14 @@ To change owner of the directory or file
 chown -R user1 /shared_files
 ```
 
+## Watch
+
+You can use `watch` command to watch the output of your command periodically.
+
+```bash
+watch -n 1  "ls -lhf | grep Huawei | awk '{print \$5}'"
+```
+
 ## Sed
 
 It is a command used for replacing and editing strings. For instance, look at this text:
@@ -369,7 +377,6 @@ minikube status | cut -w -f2
 # Or you can deliminate the letter
 # f2 shows the seconds part in each line 
 minikube status | cut -d " " -f2
-
 ```
 
 ## Head
@@ -446,7 +453,6 @@ To resize an image
 ```bash
 # Resize
 convert temp.png -resize x200 temp.png
-
 ```
 
 ## Magick
@@ -536,7 +542,27 @@ done <peptides.txt
 # To loop through lines of a command result
 sudo docker container ls -a | grep pg | awk '{print $1}' | while read c; do
 	sudo docker container rm -f $c
+
+## Select 
+
+```bash
+choice="encrypt decrypt"
+select option in $choice; do
+	if [ $REPLY = 1 ]; then
+		echo "Using encrypt"
+	elif [ $REPLY = 2 ]; then
+		echo "Using dencrypt"
+	fi
 done
+
+# Output
+# 1) encrypt
+# 2) decrypt
+# #? 1
+# Using encrypt
+# #? 2
+# Using dencrypt
+	
 ```
 
 # Tar
@@ -557,7 +583,7 @@ By default, tar will extract the archive contents in the current working directo
 tar -xf archive.tar.gz -C /home/linuxize/files
 ```
 
-When extracting files, you must provide their exact names including the path, as printed by `--list` (`-t`).
+When extracting files, you must provide their exact names, including the path, as printed by `--list` (`-t`).
 
 Extracting one or more directories from an archive is the same as extracting files:
 

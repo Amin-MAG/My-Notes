@@ -297,7 +297,13 @@ func main() {
 
 [Golang Mock](Mock.md)
 
+[Go Generic](GoGenerics.md)
+
 [Goroutines](Goroutines.md)
+
+[Go patterns](GoPatterns.md)
+
+[Gzip](gzip.md)
 
 [Issues](Issues.md)
 
