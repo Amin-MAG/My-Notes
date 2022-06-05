@@ -479,6 +479,97 @@ Having separate partition for `/boot` ?
 
 2. You can not encrypt `/boot` or load it from network because the UEFI or BIOS needs to read the data from this partition, but by separating `/boot/` and `/` partitions you can encrypt just `/` partition, or you even can put the `/` in another disk drive. (It is much cleaner.)
 
+---
+
+# 102 - 2
+
+## Grub 1
+
+Common Configurations
+
+```bash
+# The forground and background of items
+color= 
+
+# The default OS
+default=
+
+# If it fails...
+fallback=
+
+# Graphical options
+hiddenmenu=
+splashimage=
+
+# Timeout for default
+timeout=
+
+# Authentication
+password=
+
+# Default OS is the previous loaded OS
+savedefault=
+```
+
+For each one of operating systems, You need to configure these items.
+
+```bash
+# The name of the OS.
+title=
+# Where the /boot directory is.
+root=
+kernel=
+initrd=
+rootverity=
+chainloader=
+```
+
+You need to apply these changes.
+
+```bash
+grub-install /dev/sda1
+```
+
+## Grub 2
+
+It is more like a programming language.
+
+```bash
+set default ="0"
+menuentry "Fedora" {
+	# Wher the /boot is
+	set root=<DISK>
+	# Linux Kernel
+	linux <KERNEL>
+	# Initramfs
+	initrd <INITRD>
+}
+menuentry "Windows" {
+	chainloader
+}
+```
+
+To aggregate seperate config files and update the new configuration file.
+
+```bash
+grub2-mkeconfig > /boot/grub2/grub.cfg
+```
+
+### Grub CLI
+
+```bash
+# Print everything even the disks
+ls
+ls (hd0.gtp3)/
+
+# To load the kernel with CLI
+linux <PATH-TO-KERNEL> ro root=<BOOT-DIR>
+initrd <PATH-TO-INITRD-IMAGE>
+
+# Start to boot the kernel
+boot
+```
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)
