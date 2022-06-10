@@ -570,6 +570,68 @@ initrd <PATH-TO-INITRD-IMAGE>
 boot
 ```
 
+---
+
+# 102 - 3
+
+## Linking 
+
+When you create your program, you use others codes known as a library. The process of using these libraries is called linking.
+
+### Static Linking
+
+It's when you add the library to your executable program.
+
+- It is easy to run. We are sure that it will be executed.
+- It needs lots of disk storage.
+- When the library is updated, your executable program won't be updated.
+
+### Dynamic Linking
+
+It tells the operating system that it needs this library. Linux dynamic libraries have names like `lib<LIB_NAME>.so.<VERION>` located at places like `/lib/`, `/lib64/` or `/usr/lib/`.
+
+- It needs a small amount of disk storage.
+- It's more secure because your program will also be updated when the library is updated.
+
+To check the dependencies
+
+```bash
+# Shows the libraries you need to run the program
+ldd /usr/bin/ls
+```
+
+The configuration specifies where to find the libraries.
+
+```bash
+cat  /etc/ld.so.conf
+```
+
+There is a cache file that has a better structure for searching.
+
+```bash
+# To recreate the cache file
+sudo ldconfig -v
+
+# Show the cache file
+sudo ldconfig -p
+```
+
+To analyze an ELF file
+
+```bash
+# To link the libraries manually
+/usr/lib64/ld-linux-x86-64.so.2 /usr/bin/ls
+
+readelf -Wl /usr/bin/ls
+```
+
+#### Steps of finding libraries
+
+1. `LD_LIBRARY_PATH` environment variable
+2. Programs `PATH`
+3. `/etc/ld.so.conf`
+4. `/lib/`, `/lib64/`, `/usr/lib/`, `/usr/lib64/`
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)
