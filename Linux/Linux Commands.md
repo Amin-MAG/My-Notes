@@ -396,6 +396,19 @@ cat output | uniq
 cat output | uniq -c
 ```
 
+## PS
+
+It's a flexible too for identifying programs running on the system.
+
+```bash
+# Show the processes
+ps
+
+# Show the all processes based on the users
+ps -ef 
+ps -Af
+```
+
 ## Curl
 
 For a get request:
