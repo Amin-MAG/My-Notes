@@ -578,6 +578,58 @@ done
 	
 ```
 
+## Functions
+
+```bash
+read -p "Enter the number: " num
+
+# Factorial
+print_factorial() {
+        counter=$1
+        factorial=1
+        while [ $counter -gt 0 ]; do
+                factorial=$(( factorial * counter ))
+                counter=$(( counter - 1 ))
+        done
+        echo "Factorial: " $factorial
+}
+
+
+# Aggregation
+print_aggregation() {
+        counter=$1
+        aggr=0
+        while [ $counter -gt 0 ]; do
+                aggr=$(( aggr + counter))
+                counter=$(( counter - 1 ))
+        done
+        echo "Aggregation: " $aggr
+}
+
+print_factorial $num 
+print_aggregation $num 
+
+```
+
+## Arrays
+
+```bash
+# Create new array
+newarr=()
+
+# Read and save to an array
+read -p "Enter 5 names: " name1 name2 name3 name4 name5
+originalarr=($name1 $name2 $name3 $name4 $name5)
+
+# Read and assign values
+for index in 0 1 2 3 4; do
+	newarr[$index]=${originalarr[4-$index]}
+done
+
+# Print everything inside an array
+echo ${newarr[*]}
+```
+
 # Tar
 
 ## Extracting `.tar` files
