@@ -35,6 +35,21 @@ To jump into the vagrant box you can use `ssh`  command. It takes care of the ss
 vagrant ssh
 ```
 
+### Snapshot
+
+This helps us to rollback at a later time.
+
+```bash
+vagrant snapshot save <option> <vm-name> <name>
+```
+
+### Boxes
+
+```bash
+# To list all of installed boxes
+vagrant box list
+```
+
 ## Vagrant File
 
 ```python
