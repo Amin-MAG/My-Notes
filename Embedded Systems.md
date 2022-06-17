@@ -539,11 +539,130 @@ If `Ti` is executed in slot `u`, this function is `1` else `0`.
 
 # Embedded Operating Systems
 
-- Critical tasks 
+The big usage of Embedded systems are Real-time systems. We also call the Embedded operating systems, Real-Time operating systems.
 
-- Critical and mini tasks
+There are classes of operating systems:
 
-- Non-Critical tasks but a lot of different tasks
+- Fast proprietary kernels - Although the top priority is the speed not being predictable. (not used for hard real-time) 
+	- FreeRTOS
+	- VxWORKS
+- Extensions to standard OSes - A real-time kernel executes all real-time tasks and the Standard-OS as a single task (Hypervisor). Standard-OS manages non-real-time tasks. 
+	- RT Linux
+- Research OS
+
+## Why to use embedded systems OS
+- Same reason for why we use OS nowadays instead of traditional computers.
+- Embedded systems usually don't need all of services of a standard OS.
+	- There is timing uncertainty issue in common OS.
+	- These additional features needs more resources like memory.
+	- Being modular is the first priority in Embedded Systems desing. 
+	- Common OS are not designed to be mission-critical. 
+
+There are large variety of requirements and environments in Embedded Systems.
+
+- Critical tasks - like medical or space shuttle systems
+- Critical with mini tasks - like ABS
+-  Lots of different non-critical tasks - smart phones
+
+## Characteristics of an ES-OS
+
+An ES-OS supports the construction of real-time systems.
+- Configurability
+- Ting behaviors are predictable in ES-OSs. (But they're not important in common OSs)
+- Drivers are handled by tasks directly. (Not OS)
+- Every task can perform an interrupt.
+- Protection mechanisms are not always necessary.
+- They can perform quasi-parallel tasks.
+- CPU Scheduling is important.
+- They have Inter-task communication.
+- They support real-time clocks.
+- Tasks Synchronizations is important.
+
+### Configurability
+
+It allows us to change the OS to fit all our needs.
+
+- Remove unused libraries (e.g. by a linker)
+- Using `#if` and `#ifdef`
+- They usually have some configuration management tool, because manual changes might break the dependencies. 
+
+## Tasks states
+
+Tasks can be in Ready, Blocked or Running states.
+
+- Scheduler selects a ready task and dispatch it. Then the task will go in running state (CPU is running the tasks). Preemption changes the state from running -> ready again.
+- Tasks that are looking for an event (e.g. a resource allocation) will wait and go to blocked state. When the specific event comes, it signals the tasks and the state will be changed to ready.
+
+## Threads
+
+### Thread Control Block 
+
+TCB stores the information needed to manage and schedule threads.  The operating system creates a new TCB for each thread.
+
+- Program counter
+- Priority 
+- State
+- Scheduling information
+- Thread name
+
+The TCBs are administerd in linked lists.
+
+## FreeRTOS
+
+- FreeRTOS contains some C codes like `tasks.c`, `timers.c`, and... containing usefull functions.
+- FreeRTOS is configured by a header file called `FreeRTOSConfig.h`.
+- Tasks are implemented as threads.
+
+### Tasks States in FreeRTOS
+
+- Block state
+	- Temporal events
+	- Synchronization events
+- Suspend state - Pause a task
+- Ready
+- Running
+
+### Some basic interfaces
+
+Thread instantiation
+
+```c
+// You can use this function to create your tasks 
+BaseType_t xTaskCreate( 
+	TaskFunction_t pointerToTheFunction,
+	const char* name,
+	uint16_t stackDepthInWords,
+	void *parameters,
+	UBaseType_t priority,
+	TaskHandle_t handle
+)
+```
+
+Change the priority
+
+```c
+void vTaskPrioritySet(
+	TaskHandle_t handle,
+	UBaseType_t priority
+)
+```
+
+Delete a task
+
+```c
+void vTaskDelete(TaskHandle_t handle)
+```
+
+We can use timer interface to create a delay.
+
+```c
+void vTaskDelay(TickType_t ticks)
+```
+
+### Interrupts
+
+- Tasks will only be executed when there are no Interrupts Service Rourtine (ISR) running.
+- They are short
 
 # See more
 
