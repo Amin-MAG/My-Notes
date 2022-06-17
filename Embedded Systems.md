@@ -411,19 +411,58 @@ We can use the filled circle mechanism to handle this scenario. This super state
 
 ![Orthogonality](Embedded%20Systems/orthogonality.png)
 
-# Chapter IV
+# Chapter IV - Scheduling
 
-## Scheduling(?)
+There are different kinds of classifications for scheduling.
+- Centralized or Distributed
+- Mono-processor or Multi-processor
+- Online(dynamic) or Offline(static)
 
-### Earliest Deadline First
+## Mono-Processor
 
-EDF says the closest deadline should be executed first. Each time a task arrives, it is inserted into a queue of ready tasks, sorted by their deadlines.
+### EDD - Earliest Due Date
 
-## (?)
+It schedules the tasks in the way to have minimum $lateness_max$.
 
-### Least Laxity/Slack First
+### EDF - Earliest Deadline First
+
+The losest deadline should be executed first.
+
+- It's preemptive.
+- ach time a task arrives, it is inserted into a queue of ready tasks, sorted by their deadlines.
+- It is optimal for periodic scheduling.
+- It requires dynamic priority.
+- EDF is the most optimal scheduling that doesn't have idle time.
+
+Issues:
+
+- It is less predictable.
+- It provide less control over the execution.
+- It has high overheads, since it should calculate the deadline.
+- Domino failure: when multiple tasks ties in priorities, there’s a possibility of
+failure.
+- Transient Overload Problem
+- Resource Sharing Problem
+- Efficient Implementation Problem
+
+### RM - Rate Monotonic
+
+The task with smallest period should be executed first. The condition is
+
+$$\mu = \Sigma \frac{c_i}{p} < n(2^{\frac{1}{n}}-1)$$
+
+- It's preemptive.
+- RM Algorithm exists in different operating systems. (Such as Windows NT)
+- It is based on static priorities.
+
+### LLF - Least Laxity/Slack First
 
 The queue is sorted based on the `slack` parameter.
+
+$$
+SLACK = Deadline - ExecutionTime
+$$
+
 
 - Dynamically changing priority
 - Preemptive: To allocate the CPU core to the ready task
@@ -433,30 +472,13 @@ The queue is sorted based on the `slack` parameter.
 - Needs the knowledge of execution time.
 - Need lots of calculations to specify the priority
 
-$$
-SLACK = Deadline - ExecutionTime
-$$
-
-## RM Scheduling
-
-- RM Algorithm exists in different operating systems. (Such as Windows NT)
-- It is based on static priorities.
-
-## EDF
-
-- It is optimal for periodic scheduling.
-- It requires dynamic priority.
-- EDF is the most optimal scheduling that doesn't have idle time.
-
-# Non-Preemptive
-
-## LDF
-
+### LDF
+- At run-time, the tasks are executed in from head to tail.
 - LDF can be optimal for uni-processors.
 
-# Multi processor real-time scheduling
+## Multi-processor
 
-- One processor is a one-dimensional issue
+One processor is a one-dimensional issue, But in multi-processor problem we have a 2 dimensions problem.
 
 Classification of algorithms:
 
@@ -464,54 +486,72 @@ Classification of algorithms:
 - Global
 - Semi-Partitioned: It is hybrid
 
-## Partioned scheduling
+On important condition is $U < m$ and $u_{max} < m$.
+
+#### Anormalies
+
+- Dhall's effect - Periodic task sets with utilization close to 1 are unschedulable using global RM/EDF
+- G-RM anormaly
+
+
+### Partioned Scheduling
 
 - Each of two dimentions is dealt with separately
 - No task migration
 
----
-
 All periodic tasks that are running on multiple cores have a common long period. 
-
----
 
 $$
 Utiliziation = \frac{C}{Priority}
 $$
 
-## RM/EDF(k)
+### Global Scheduling
 
-- Task indices by increasing utilization.
+- At each scheduling point, the scheduler decides when and where schedule at most $m$ tasks
+- Task migrations are allowed
+- The m higher priority tasks are executed on the $m$ processors
 
-- Priority assignment depends on a threshold on task index. Consider k,
-  
-  - For i < k, priority is maximum
-  
-  - For the rest of them, I will calculate the EDF (Priority)
+#### XX-US - RM/EF Utilization Threshold
 
-Note that, 
+Priority assignment depend on an utilization threshold  $ξ$ If  $u_{max} > \xi$ then $T_i$ is assigned maximal priority. Else, $T_i$’s priority assigned as in original algorithm. (RM or EDF)
 
 $$
-EDF(k_{min})
+u_{max} = \frac{C_i}{P_i}
 $$
 
-dominates
+$\mu_{RM} = \frac{m}{3m-2}$
+$\mu_{EDF} = \frac{m}{2m-1}$
 
-$$
-EDF(k=\frac{1}{2})
-$$
+For RM-US, condition is  $\mu = \Sigma \frac{c_i}{p} < \frac{m^2}{3m-2}$.
+For EDF-US, condition is $\mu = \Sigma \frac{c_i}{p} < \frac{m^2}{2m-1}$.
 
-## RM/EDF ZL (Zero Laxity)
+- Not optimal
+- Defies Dhall's effect
+
+#### XX(k) - RM/EDF(k)
+
+Task indices by increasing utilization. Priority assignment depends on a threshold on task index. Consider k, For $i < k$, priority is maximum, and for the rest of them the algorithm is RM or EDF. 
+
+Note that, $EDF(k_{min})$ dominates $EDF(k=\frac{1}{2})$.
+
+#### XX-ZL - RM/EDF Zero Laxity
+
+Tasks with zero laxity have the highest priorities, if there is no zero laxity between remaining tasks then we use the common algorithm. 
 
 - It has additional over-head for our system.
+- It's dynamic job scheduling.
+- It dominates G-EDF.
+- Utilization bound is $\frac{m+1}{2}$
 
-## Pfair Algorithms
+#### Pfair Algorithms
 
 An algorithm that maximize the accumulated utilization or U.
 
+$$\Sigma u_i < m)$$
+
 - Full processor utilization!
 
-### Lag Function
+##### Lag Function
 
 It calculates the difference between real and fluid execution.
 
@@ -521,23 +561,17 @@ $$
 
 The actual fomula is
 
-![](/Users/snapp/Documents/screenshots/Screen%20Shot%202022-05-24%20at%2009.44.28.png)
-
-For calculating the Real time execution,
-
 $$
-S(t_i, u) = 0 | 1
+lag(T_i, t) = \omega_it - \Sigma S(T_i, u)
 $$
 
-If `Ti` is executed in slot `u`, this function is `1` else `0`.
+> Consider $\omega_i = u_i$
 
-### Policies for Pseudo-Deadline
-
-- To apply EPDF to pseudo-deadlines
+For calculating the Real time execution, $S(t_i, u)$ is $1$ if $T_i$ is executed in slot $u$ else $0$.
 
 ---
 
-# Embedded Operating Systems
+# Chapter V - Embedded Operating Systems
 
 The big usage of Embedded systems are Real-time systems. We also call the Embedded operating systems, Real-Time operating systems.
 
