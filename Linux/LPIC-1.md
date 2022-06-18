@@ -632,6 +632,133 @@ readelf -Wl /usr/bin/ls
 3. `/etc/ld.so.conf`
 4. `/lib/`, `/lib64/`, `/usr/lib/`, `/usr/lib64/`
 
+---
+
+# 102 - 4
+
+## Debian package management
+
+Package managers are responsible for searching the repositories, installing packages and their dependencies, resolving conflicts and updating system.
+
+In Debian-base distros, there are some package manager softwares like
+
+- apt-get
+- dpkg (lower level)
+- apt (easy to use)
+
+Debian packages are in the format of `<APP_NAME>-<VERSION>-<ARCH>.deb`. You can read more [here](DPKG.md).
+
+### apt
+
+You can find the apt sources in `/etc/apt/sources.list` or `/etc/apt/source.list.d`. 
+
+```bash
+# deb <SOURCE_PATH> <VERSINO_TYPE> <RESOURCES...>
+# SOURCE_PATH can be URL or cdrom or ....
+deb http://ir.archive.ubuntu.com/ubuntu/ focal-updates main restricted
+```
+
+The `source.list.d` is a directory contains list of `.list` source files.
+
+#### Update package's lists
+
+It looks at the `.list` source files and update the list of the packages.
+
+```bash
+sudo apt-get update
+
+# After updating the list of packages 
+# you're able to install a package.
+sudo apt-get install vlc
+```
+
+These caches are in `/var/cache/apt`.
+
+
+#### Install/Uninstall a package
+
+Here are some basic commands.
+
+```bash
+sudo apt-get install <APP_NAME>
+
+# To simulate the installation
+sudo apt-get install -s <APP_NAME>
+
+# To download the packages and save them in cache
+sudo apt-get install --download-only <APP_NAME>
+
+# To install dependencies haven't been installed
+sudo apt-get install -f
+
+# To download the .deb files
+apt-get download <APP_NAME>
+
+# To uninstall a package
+sudo apt-get remove <APP_NAME>
+
+# Remove with the configurations
+sudo apt-get purge <APP_NAME>
+
+# To remove unused packages (dependencies)
+sudo apt-get autoremove
+```
+
+#### Search packages
+
+```bash
+# apt-get
+apt-cache search vlc
+# apt
+apt search vlc
+```
+
+#### Upgrade
+
+It compares the installed packages with local repository and install new packages if there is a newer version in local repository.
+
+```bash
+sudo apt update
+sudo apt upgrade
+
+# Upgrade the whole OS
+sudo apt-get dist-upgrade
+```
+
+### dpkg
+
+It's a tool for installing a `.deb` file.
+
+```bash
+# Install the .deb file
+sudo dpkg -i <APP_NAME>.deb
+
+# Get the list of installed packages
+sudo dpkg -l
+
+# Get information
+sudo dpkg -I <APP_NAME>.deb
+
+# Remove a package
+sudo dpkg -r <APP_NAME>
+
+# Remove with the configurations
+sudo dpkg -P <APP_NAME>
+
+# Show which dependencies binary files were installed
+sudo dpkg -L <APP_NAME>
+
+# Show which app installed the package.
+# It's the opposite of the previous command.
+sudo dpkg -S <APP_NAME>
+```
+
+### Reconfigure packages
+
+```bash
+sudo dpkg-reconfigure <APP_NAME>
+```
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)

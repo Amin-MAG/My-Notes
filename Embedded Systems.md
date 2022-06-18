@@ -274,7 +274,7 @@ TST r1, r2 ;
 TEQ r1, r2 ;
 ```
 
-# Chapter III
+# Chapter III - Develop an Embedded System
 
 ## Arduino
 
@@ -328,7 +328,8 @@ what is PWM (?) You can create analog signals on digirtal ports
 ## Automata Programming
 
 The main problem of current programming languages is dealing with complex system behaviors. (Monitoring, Health care, etc.)
-A solution is to provide automata for our system and generate the code using the available tools. 
+
+A solution is to provide automata for our system and generate the code using the available tools. (automata-based programming)
 
 ### Components
 
@@ -358,7 +359,7 @@ Completeness, Avoid the contradiction
 Available System: being awake watching for external events.
 Safe System: Hardly fails and safely fails
 
-## Model of computation - MOC
+### Model of computation - MOC
 
 They are conceptual notions used to capture the system behavior.
 
@@ -370,7 +371,7 @@ They are conceptual notions used to capture the system behavior.
 - KPN
 - CSP
 
-## State-charts
+### State-charts
 
 Statecharts is a language for describing large, complex, and reactive systems.
 
@@ -382,9 +383,7 @@ Statecharts VS FSM:
 - Orthogonality (concurrency)
 - Broadcast communication (between states)
 
-<aside>
 💡 Outputs are global. (This message is a kind of communication between states)
-</aside>
 
 ### Depth (!)
 

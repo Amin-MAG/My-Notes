@@ -101,25 +101,25 @@ Make sure you have the `dpkg-deb` program installed in your system.
 It's a good idea to test your deb package once created. You can install it like any other regular deb package:
 
 ```bash
-sudo dpkg -i <package>
+sudo dpkg -i <APP_NAME>
 ```
 
 Make sure it can be also uninstalled easily. You can just remove the package:
 
 ```bash
-sudo dpkg -r <appname>
+sudo dpkg -r <APP_NAME>
 ```
 
 or remove it along with the configuration files (if any):
 
 ```bash
-sudo dpkg -P <appname>
+sudo dpkg -P <APP_NAME>
 ```
 
 Make sure the application has been removed correctly by issuing:
 
 ```bash
-dpkg -l | grep <appname>
+dpkg -l | grep <APP_NAME>
 ```
 
 The `dpkg -l` command lists all the packages installed, while `grep` searches for `<appname>`. The output should be blank if the app has been uninstalled correctly.
