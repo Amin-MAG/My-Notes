@@ -37,6 +37,8 @@ http {
 events { }
 ```
 
+> Remember to put `index.html` in the selected directory, otherwise, you get a 403 error.
+
 to serve some kind of data in a completely different location:
 
 ```bash
@@ -90,43 +92,43 @@ to redirect and proxy pass:
 
 ```bash
 http {
-	
-	server{
-		listen 8080;
-		root /home/amin/static_site/;
-	
-		# Note that you should have an image
-		# directory in path /home/amin/Pictures
-		# otherwise you will get 404.
-		location /images {
-			root /home/amin/Pictures/;
-		}
-	
-		location ~ .jpg$ {
-			return 403;
-		}
-	
-		# You can use Regular Expression here 
-		# to define lots of rules.
-		# ...
-		
-	}
 
-	# We can have as many server context as
-	# we want to have.
+    server{
+        listen 8080;
+        root /home/amin/static_site/;
 
-	server {
-		listen 8888;
+        # Note that you should have an image
+        # directory in path /home/amin/Pictures
+        # otherwise you will get 404.
+        location /images {
+            root /home/amin/Pictures/;
+        }
 
-		location / {
-			return 400;
-		}
+        location ~ .jpg$ {
+            return 403;
+        }
 
-		location /img {
-			proxy_pass http://localhost:8080/images/;
-		}
+        # You can use Regular Expression here 
+        # to define lots of rules.
+        # ...
 
-	}
+    }
+
+    # We can have as many server context as
+    # we want to have.
+
+    server {
+        listen 8888;
+
+        location / {
+            return 400;
+        }
+
+        location /img {
+            proxy_pass http://localhost:8080/images/;
+        }
+
+    }
 
 }
 
