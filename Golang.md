@@ -305,6 +305,8 @@ func main() {
 
 [Gzip](gzip.md)
 
+[Hugo](Hugo.md)
+
 [Issues](Issues.md)
 
 [Memory management](Go%20Memory%20Management.md)
