@@ -27,6 +27,12 @@ sudo kill -9 $(sudo lsof -t -i:3000)
 find . -iname '*flag*'
 ```
 
+## Alias
+
+```bash
+- [ ] alias ll='ls -lh'
+```
+
 ## Grep
 
 To search in the content of a file.
@@ -46,6 +52,11 @@ grep -v something
 
 # To show before and after a grep
 cat something.txt | grep -B 5 -A 5 something
+
+# Search between all files in current directory
+# using regular expression and with line number.
+grep -r -n -e ".*"  ./*
+```
 
 ## Binaries
 
@@ -76,6 +87,12 @@ An alternative for the `du` is the `ncdu`:
 
 ```bash
 ncdu
+```
+
+Sort files based on their sizes:
+
+```bash
+ll -hrl | sort -k 5n
 ```
 
 ## Common tricks
@@ -123,6 +140,7 @@ cd /etc
 cd /var
 # To go to the /etc again
 # You can also use pushd and pod
+# To go to previous path
 cd -
 ```
 
