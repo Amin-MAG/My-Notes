@@ -22,6 +22,22 @@ On the other hand, some functions like `gets()` are not safe. They don't check t
 # SQL-Injection
 SQL injection or SQLi refers to attacks against relational databases such as `MySQL`. Many types of injection vulnerabilities are possible within web applications, such as HTTP injection, code injection, and command injection. [Read more](SQL-Injection.md)
 
+# WIFI
+
+### Broad-Forcing
+
+You can use different wordlists to attack close WIFIs.
+
+You can also create your wordlist using the `crunch` command.
+
+```bash
+# Install crunch
+sudo apt install crunch
+
+# Create new wordlist by specifing length and letters
+crunch 6 6 0123456789abcdef -o 6char_wordlist.txt
+```
+
 # Digital signature
 
 ## Purposes
@@ -190,6 +206,7 @@ It stands for Cross-origin resource sharing. It is a kind of browser security fe
 So there is no complexity here, the browser will check the access-control-allowed-origins and will get data without error if the origin is allowed.
 
 [Cryptography](Cryptography.md)
+[Hashcat](Hashcat.md)
 
 # See more
 
