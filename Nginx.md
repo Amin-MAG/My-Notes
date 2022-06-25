@@ -135,6 +135,19 @@ http {
 events { }
 ```
 
+You can redirect different kinds of errors to your customized web page.
+
+```bash
+http {
+
+    server{
+        listen 8080;
+        root /home/amin/static_site/;
+		error_page 404 /404.html;
+    }
+}
+```
+
 to start, reload, or stop Nginx:
 
 ```bash
