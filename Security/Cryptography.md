@@ -60,6 +60,10 @@ openssl x509 -req -in server-req.pem -CA ca-cert.pem -CAkey ca-key.pem -CAcreate
 openssl verify -CAfile ca-cert.pem server-cert.pem
 ```
 
+# See more
+
+- [Hashes](Hash.md)
+
 # References
 
 [Advanced Encryption Standard - Wikipedia](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
