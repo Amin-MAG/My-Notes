@@ -217,6 +217,22 @@ When you want to use a default value for your env variable:
 echo ${PGADMIN_DEFAULT_EMAIL:-amin}
 ```
 
+You can use `source` command to execute a bash script for the running terminal session.
+
+```bash
+source my_bash_script.sh
+```
+
+## rsync
+
+```bash
+# Verbose and archive mode
+rsync -av /Volume/example .
+
+# With progress bar
+rsync -av --progress /Volume/example .
+```
+
 ## Screen
 
 You may want to execute a long-running job on your virtual machine. The network connection can interrupt your ssh connection, and you lose the running task session in your terminal. In this situation, you can use something like Tmux.
@@ -672,6 +688,13 @@ Extracting one or more directories from an archive is the same as extracting fil
 
 ```bash
 tar -xf archive.tar.gz dir1 dir2Copy
+```
+
+# gzip
+
+```bash
+# To uncompress the gzip file
+gunzip file.gz
 ```
 
 # Cron
@@ -1223,9 +1246,8 @@ toilet -k Amin-MAG
 python3 -m pip install termgraph
 
 # A simple graph
-cat file | sort | uniq -c | awk '{print $2 " " $1}' | termgraph
+cat file | sort | uniq -c | awk '{print $2 " " $1}' | termgraph 
 ```
 
 # Resources
 
-- [DevOps Prerequisites Course - Getting started with DevOps](https://www.youtube.com/watch?v=Wvf0mBNGjXY)
