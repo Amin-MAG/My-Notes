@@ -14,9 +14,12 @@ uname -a
 ln -s /root/B/publicB.pem
 ```
 
-## Kill a process on a port
+## Kill a process
 
 ```bash
+sudo kill -9 423
+
+# To kill a process on a specific port
 sudo kill -9 $(sudo lsof -t -i:3000)
 ```
 
@@ -26,6 +29,13 @@ sudo kill -9 $(sudo lsof -t -i:3000)
 # Files that have flag in their names
 find . -iname '*flag*'
 ```
+
+Using `locate` commands
+
+```bash
+sudo apt install mlocate
+locate <FILE_NAME<
+````
 
 ## Alias
 
@@ -483,6 +493,12 @@ You can pipe curl with `json_pp` to make it better
 curl -d '{"key1":"value1", "key2":"value2"}' -H "Content-Type: application/json" -X POST http://localhost:3000/data | json_pp
 ```
 
+To pass a cookie
+
+```bash
+curl -XGET --cookie "PHPSESSID=dgtvr4ef7k3jnm8bfmiobo9vm5" https://typhooncon-knowme.chals.io
+```
+
 To download a file
 
 ```bash
@@ -520,6 +536,12 @@ magick montage -tile 1x top.png bottom.png -mode Concatenate
 ```bash
 echo "What is your name?"
 read name
+# Read with a message
+read -p "Enter the number: " num
+# Read secure
+read -sp "Enter the password: " num
+# More variables
+read name1 name2 name3 name4 name5
 ```
 
 ## Using basic operators
@@ -570,6 +592,14 @@ case $class in
 esac
 ```
 
+## For 
+
+```bash
+for index in 0 1 2 3 4; do
+	newarr[$index]=${originalarr[4-$index]}
+done
+```
+
 ## While
 
 ```bash
@@ -589,6 +619,7 @@ done <peptides.txt
 # To loop through lines of a command result
 sudo docker container ls -a | grep pg | awk '{print $1}' | while read c; do
 	sudo docker container rm -f $c
+```
 
 ## Select 
 
@@ -979,7 +1010,7 @@ To calculate the ip address bits and patterns
 ipcalc <IP_ADDRESS>
 ```
 
-## N-Map
+## nmap
 
 To discover once
 
