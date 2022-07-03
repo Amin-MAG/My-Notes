@@ -243,6 +243,38 @@ rsync -av /Volume/example .
 rsync -av --progress /Volume/example .
 ```
 
+## xarg
+
+It can take output of a command and passes it as argument of another command.
+
+```bash
+# To convert muti-line output from ls command into single line
+ls | xargs
+ls | xargs wc
+
+# Change xargs to expect NUL (``\0'') characters as separators
+# Find & remove all directories with a special word
+find Downloads -name "flag" -type d -print0 | xargs -0 /bin/rm -v -rf "{}"
+```
+
+## SSH
+
+You can use `ssh` to receive an interactive shell from another computer. 
+
+You can also use port forwarding
+
+```bash
+# Port forwarding
+# -f is used for running in background
+# -L is for binding 
+# -N not execute a remote command
+ssh -N -f -L 8080:localhost:8080 ubuntu@os-playground1
+```
+
+## SCP
+
+You can use `scp` command to send files in terminal to other computers.
+
 ## Screen
 
 You may want to execute a long-running job on your virtual machine. The network connection can interrupt your ssh connection, and you lose the running task session in your terminal. In this situation, you can use something like Tmux.
