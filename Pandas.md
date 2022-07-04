@@ -1,5 +1,20 @@
 # Pandas
 
+## Series
+
+```python
+import numpy as np
+a = pd.Series([1, 2, 3, 4, 'jadi', np.nan)
+
+dates = pd.date_range('20210101', periods=6)
+```
+
+## Data Frame
+
+```py
+df = pd.DataFrame(np.random.randn(6, 4), index=dates, columns=['a', 'b', 'c', 'd'])
+```
+
 ## Load data from csv
 
 ```python
