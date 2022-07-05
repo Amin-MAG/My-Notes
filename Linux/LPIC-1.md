@@ -759,6 +759,111 @@ sudo dpkg -S <APP_NAME>
 sudo dpkg-reconfigure <APP_NAME>
 ```
 
+# 102 - 5
+
+## Redhat package management (RPM, YUM)
+All `.rpm` files just like `.deb` files can be installed with RPM commands.
+
+> We also have something called `zypper` for SUSE linux.
+
+## Yum
+
+- Yum is a higher level tool that can install packages for you.  The yum repositories are in `/etc/yum.repos.d/`.
+- You can configure the behavior of the Yum package manager with `/etc/yum.conf`.
+- Yum doesn't have a debain `update` concept.
+- The `dnf` is a newer package manager and it's the Fedora undelying package manager.
+
+
+### Install/Uninstall a package
+
+```bash
+sudo yum -y install vlc
+sudo yum localinstall vlc.rpm
+sudo yum groupinstall "KDE Plasma Workspaces"
+
+sudo yum -y reinstall vlc
+
+sudo yum remove vlc
+```
+
+### Upgrade a package
+
+```bash
+sudo yum update
+# This one will remove the obsolate packages
+sudo yum upgrade
+```
+ 
+### List installed packages
+
+```bash
+sudo yum list
+```
+
+###  Get information about packages
+
+```bash
+# Search in repository
+sudo yum search vlc
+
+# Get some general information about the package
+sudo yum info vlc
+
+# Show dependencies
+sudo yum deplist vlc
+```
+
+## RPM Files
+
+The `.rpm` files are technically a `cpio` file. You can use `rpm2cpio` to convert to a `cpio` file.
+
+```bash
+# Create the file
+rpm2cpio <RPM_FILE> > file.cpio
+# Extract
+cpio -idv < file.cpio
+```
+
+Anyway, here are some basic RPM commands.
+
+```bash
+# To install or upgrade
+# -v is for verbose
+# -h for progress bar
+sudo rpm -Uvh <RPM_FILE>
+
+# To install
+sudo rpm -iv <RPM_FILE>
+
+# To erase
+sudo rpm -ev <RPM_FILE>
+
+# To see the signitures
+sudo rpm -kv <RPM_FILE>
+
+# To verify the installed package
+sudo rpm -Vv <RPM_FILE>
+```
+
+### Query
+
+```bash
+# To query
+sudo rpm -q <RPM_FILE>
+# Config files
+sudo rpm -qc <RPM_FILE>
+# All Installed files
+sudo rpm -ql <RPM_FILE>
+# Package information
+sudo rpm -qc <RPM_FILE>
+# Installed packages
+sudo rpm -qa 
+# Which packages provides this binary
+sudo rpm -q --whatprovides <RPM_FILE>
+# Show dependencies
+sudo rpm -qR <RPM_FILE>
+```
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)
