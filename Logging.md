@@ -82,3 +82,6 @@ There are some Click house integrations with some other services. For example, y
 ### Hbase
 
 HBase is an open-source non-relational distributed database modeled after Google's Bigtable and written in Java.
+
+# See more
+- [Fluentd](Fluentd.md)
