@@ -864,6 +864,53 @@ sudo rpm -q --whatprovides <RPM_FILE>
 sudo rpm -qR <RPM_FILE>
 ```
 
+
+# 102 - 6
+
+## Virtualzation
+
+We need Hypervisor is to run a virtual machine.
+
+> To see the CPU information you can use `lscpu` or `cat /proc/cpuinfo`.
+
+### Hypervisors
+
+There 2 types of hypervisors.
+- Native or bare metael  Hypervisors
+- Hosted Hypervisors
+
+#### Native Hypervisor
+
+The hypervisor directly runs on the hardware and has different kinds of operating systems. Like kvm, Xen, Hyper-V.
+
+#### Hosted Hypervisors
+
+The operating system is installed on the hardware and on the top of that there is a hypervisor with different kinds of operating systems. Like virtualbox, vmware.
+
+### Open Virtualization Format
+
+It's easy to move machines between hypervisors using Open Virtualization Format or OVF. It may include several files. Open Virtualization Archive or OVA is a single file that container all previous standard OVF files.
+
+### Cloning Machine
+
+When you clone a machine you should take care of some network stuff before booting. Here are some examples:
+
+- Host Name 
+- MAC Address
+- Network Interface Controller
+- Machine ID
+- Encryption Keys
+- HDD UUID
+- ...
+ 
+### Containers
+
+This is an OS-Level virtualization. Containes against virtual machines only install the libraries and binaries to run an application. There is no operaing system. Here we need a container engine like Docker to create containers.
+
+### IaaS
+
+
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)
