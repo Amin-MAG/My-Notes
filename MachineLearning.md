@@ -76,9 +76,25 @@ Each scenario that you give the inputs and the result is a continuous value.
 
 ### Simple Linear Regression
 
+The equation just consists of one feature.
+
 $$
 y=\theta_0 + \theta_1x_1
 $$
+
+### Multiple Linear Regression
+
+The feature consists of multiple factors and features. Sometimes if we add more features the final result will become better.
+
+$$
+y=\theta_0 + \theta_1x_1 + \theta_2x_2 + \theta_3x_3 + ...
+$$
+
+### Non-Linear Regression
+
+Sometimes, When you visualize the data, You can not find a linear solution to fit the answer. 
+
+You can define new $\hat{X}$s that are equal to $\frac{1}{X}$, $X^2$, and so on. 
 
 ## Model Evaluation
 
