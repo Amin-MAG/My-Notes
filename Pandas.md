@@ -59,6 +59,14 @@ df.iloc[2:30]
 df.iloc[4, 2]
 ```
 
+## Indexing
+
+You can change and set the indicies.
+
+```python
+df_class_act = df_class_act.set_index('stdid')
+```
+
 ## Iterating
 
 ```python
@@ -104,6 +112,19 @@ df.groupby(['Type 1']).mean()
 
 ## Mutate columns
 
+You can rename the titles
+
+```python
+cdf.rename(columns = {
+	'TA1/Total':'TA1',
+	'TA2/Total':'TA2',
+	'TA3/Total':'TA3',
+	'TA4/Total':'TA4',
+}, inplace = True)
+```
+
+Mutate the values
+
 ```python
 # Add a column
 df['Total'] = df['HP'] + df['Defense'] + df['Attack']
@@ -117,6 +138,14 @@ df = df.drop(columns=['Total'])
 
 ```python
 df.loc[df['Type 1'] == 'Fire', 'Type 1'] = 'Flamer'
+```
+
+## Convert
+
+To convert the data to python list
+
+```python
+df.head(10).values.tolist()
 ```
 
 ## Saving

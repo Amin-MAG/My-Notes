@@ -86,6 +86,19 @@ pp v # to print a variable ?
 c # continue
 ```
 
+# Socket
+
+```python
+import socket
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.connect(("challs.dvc.tf", 6666))
+    # Now read from this connection
+    data = s.receive(1024)
+    # Or send something
+    s.sendall(bytes("1 1", "utf-8"))
+```
+
 # Snippets
 
 A snippet to generate a dictionary based on another dictionary in one line:
@@ -126,3 +139,5 @@ python3 -m http.server 7600
 - [Pandas](Pandas.md)
 - [Telnetlib](Telnetlib.md)
 - [Hashlib](Hashlib.md)
+- [FastAPI](Python/FastAPI.md)
+- [Matplotlib](Python/Matplotlib.md)
