@@ -268,6 +268,5 @@ Check out [this repository](https://github.com/Amin-MAG/RabbitMQ) (Actually insp
 
 # References
 
-[RabbitMQ tutorial - "Hello World!" - RabbitMQ](https://www.rabbitmq.com/tutorials/tutorial-one-go.html)
-
-[https://github.com/rabbitmq/rabbitmq-tutorials](https://github.com/rabbitmq/rabbitmq-tutorials)
+- [RabbitMQ tutorial - "Hello World!" - RabbitMQ](https://www.rabbitmq.com/tutorials/tutorial-one-go.html)
+- [https://github.com/rabbitmq/rabbitmq-tutorials](https://github.com/rabbitmq/rabbitmq-tutorials)
