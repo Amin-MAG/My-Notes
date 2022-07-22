@@ -40,7 +40,15 @@ locate <FILE_NAME<
 ## Alias
 
 ```bash
-- [ ] alias ll='ls -lh'
+'alias ll='ls -lh'
+```
+
+## `<<`
+
+You can use `<< EOF` to give multiple line string to a command. You can use anything instead of using `EOF`.
+
+```bash
+cat << EOF > save.txt
 ```
 
 ## Grep
@@ -485,6 +493,15 @@ ps -ef
 ps -Af
 ```
 
+## Strace
+
+If all you want to do is spy on the existing process, you can use `strace`.
+
+```bash
+# To see only data written to file descriptor 3 (`-e trace=` prevents the system calls from being loged).
+strace -p1234 -e trace= -e write=3
+```
+
 ## Curl
 
 For a get request:
@@ -756,9 +773,24 @@ tar -xf archive.tar.gz dir1 dir2Copy
 # gzip
 
 ```bash
-# To uncompress the gzip file
+# To compress a file 
+gzip you_file.txt
+
+# To list details including the compress percentage
+gzip -l you_file.txt.gz
+
+# To uncompress
+gzip -d you_file.txt.gz
 gunzip file.gz
 ```
+
+You can use gzip in `tar` command. To compress a directory with multiple files
+
+```bash
+# -z for gzip
+tar -czvf files.gz files/
+```
+
 
 # Cron
 
