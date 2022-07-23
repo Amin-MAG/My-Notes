@@ -1,6 +1,6 @@
 # Friends
 
-[Season 1](Season%201%2027f3c.md)
+[Season 1](Season-01.md)
 
 [Season 2](Season%202%204515d.md)
 

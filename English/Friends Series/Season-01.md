@@ -6,6 +6,7 @@
 
 - Does he have a hump and a hair piece?
 - I don't want her to go though what I went though with Carl.
+- All of a sudden
 - It's turns out It's my mother.
 - Carol moved her stuff today.
 - Stop cleansing my aura.
@@ -19,6 +20,7 @@
 - I guess we have established that she is staying with Monica
 - Stop hitting on her!
 - Buzz him in!
+- Whatsoever
 - You got screwed.
 - Being spit on is probably not what you need right now.
 - While you're on a roll
@@ -33,12 +35,8 @@
 - Limoges gravy boats
 - Pipe organ
 - Negotiate
-- "Dear Diary"
+- "Dear Diary" (**an expression written at the beginning of a diary or journal entry**.)
 - Revelation
-
-## Questions
-
-- decaf?
 
 # E02
 
@@ -54,6 +52,8 @@
 - Kind of puts that whole pillow thing in perspective.
 - I mean, presumably, the biggest part of your job is done
 - It might take some of the heat off me.
+- Give me a "for instansce."
+- You're welling up.
 
 ## Words
 
@@ -65,6 +65,7 @@
 - To stand erect
 - To be dumped
 - To well up
+- Nausea
 
 # E03
 
@@ -75,22 +76,26 @@
 ## Words
 
 - Herd
-- Adore
+- Innate
+- To a dore
 - Flaw
 - Snort
 - Knuckle cracking
+
 
 # E04
 
 ## Sentences
 
 - You've just nodded off again.
-- Maybe it will take my mind of it
+- Maybe it will take my mind of it.
+- My face is dented.
 
 ## Words
 
 - Omnipotent
 - Deaf
+- Predicament
 
 # E05
 
@@ -107,6 +112,7 @@
 - I got you something.
 - That would be a judgment call.
 - Listen for it.
+- What a neat idea!
 
 ## Words
 
@@ -114,6 +120,7 @@
 - Breast
 - Mean things
 - Glamour
+- Brutal
 - Virgin
 - Delicate
 - Nibbling
@@ -146,6 +153,17 @@
 - Clenching
 
 # E07
+
+## Sentences
+
+- She'll get trampled.
+- And now you're choking.
+
+## Words
+
+- Vestibule
+- Atrium
+- Impish
 
 # E08
 
