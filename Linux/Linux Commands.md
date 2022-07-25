@@ -21,13 +21,20 @@ sudo kill -9 423
 
 # To kill a process on a specific port
 sudo kill -9 $(sudo lsof -t -i:3000)
+lsof -ti:8080 | xargs kill -9
 ```
 
 ## Find files
 
 ```bash
-# Files that have flag in their names
+# Files that their name's are exactly "test"
+find . -name 'test'
+
+# Files that have flag (ignore-case) in their names
 find . -iname '*flag*'
+
+# Search only between directories
+find . -iname '*flag*' -type d
 ```
 
 Using `locate` commands
@@ -247,8 +254,14 @@ source my_bash_script.sh
 # Verbose and archive mode
 rsync -av /Volume/example .
 
+# Simulate the rsync
+rsync -av --dry-run --progress /Volume/example .
+
 # With progress bar
 rsync -av --progress /Volume/example .
+
+# To another server
+rsync -av --progress /Volume/example root@139.177.195.158:
 ```
 
 ## xarg
@@ -478,6 +491,13 @@ cat output | uniq
 
 # To count each one of them
 cat output | uniq -c
+```
+
+## lsof
+
+```bash
+# To print processes on the port 8080
+lsof -i:8080
 ```
 
 ## PS
