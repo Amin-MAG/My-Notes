@@ -272,7 +272,7 @@ Acclaimed
 ## Acknowledge
 
 - Admit
-    - Clarie **acknowledged that** she was guilty.
+    - Claire **acknowledged that** she was guilty.
     - The family acknowledged the need for change.
     - Many of the poor **fully acknowledged him** as their spiritual leader.
     - Mental illness can exist for years before families **are forced to acknowledge** the truth.
@@ -287,6 +287,63 @@ Acclaimed
 - Reply to letter
     - The company **duly/hereby acknowledged** the receipt of the letter.
 
+## Adequate
+
+- Sufficient (≠ deficient)
+
+## Affection
+
+- Strong fondness
+    - She **gazed with deep affection at** the baby.
+    - She **had a deep affection for** her parents.
+    - Family affections
+    - The reciprocal affection of the moving body.
+
+## Argue
+
+- Verbally fight
+    - Don’t **argue with** me! I’m tired.
+- To convince, discuss
+    - He **argued her out of** suicide.
+    - He **argued against** vegetarianism.
+
+## Attribute
+
+- Feature
+    - But this is not **attributable to** age.
+    - To **attribute something to something**
+
+## Barter
+
+- To exchange for goods and services rather than money
+    - They barter food for services.
+    - The barter service.
+
+## Commodity
+
+- Merchandise
+    - Labor is bought and sold like any other commodity.
+
+## Cultivation
+
+- Development of land for growing
+    - The cultivation of rice requires plenty of water.
+- Sophisticated
+    - A man of charm and cultivation
+
+## Domesticate
+
+- Tame, Habituate
+    - Do you know when the horses and cows were domesticated?
+
+## Discount
+
+- Reduction in cost
+    - Members **get a %15 discount**.
+    - This card **gives you a discount on** rail travel
+- To regard something as unlikely to be true and important
+    - Experts discount the accuracy of the polls.
+
 ## Dissolve
 
 - Melt from solid to liquid
@@ -295,11 +352,21 @@ Acclaimed
 - Mix in
     - It dissolved in the oceans.
 
+## Diversify
+
+- To Increase the range of goods or services it produces.
+    - We must diversify our product in order to attract more customers.
+
 ## Emanate
 
 - Originate from
     - Fragrance **emanates** **from** flowers.
     - Most of the criticism against him emanates from his defeated rivals.
+
+## Emergence
+
+- Rise
+    - The **emergence of** Japan as an industrial giant.
 
 ## Envelop
 
@@ -311,6 +378,17 @@ Acclaimed
 
 - Demonstrate
 
+## Expedition
+
+- Journey
+    - A shopping expedition
+    - An **expedition to** the North pole.
+
+## Fondness
+
+- Like, Taste
+    - My **fondness for** classical music.
+
 ## Forth
 
 - Out and away from
@@ -321,6 +399,16 @@ Acclaimed
 - Onward in time
     - **from that day forth** he gave me endless friendship
 
+## Fraud
+
+- trickery
+    - He got the money by fraud.
+
+## Hypothesis
+
+- Theory
+    - **To prove/disprove/develop a hypothesis**
+
 ## Impact
 
 - Effect
@@ -328,9 +416,130 @@ Acclaimed
 - The force of one object hitting another
     - Impact from comets
 
+## Incentive
+
+- Motivation
+    - As an added incentive, there is a bottle of champagne for the best team.
+    - Awards **provide an incentive** for young people to improve their skills.
+    - Farmers lack any **incentive to** manage their land organically.
+    - **create/provide/give somebody an incentive**
+
 ## Intensify
 
 - To make more forceful
     - We must intensify our efforts.
 
+## Intricate
+
+- Complicated
+    - An intricate problem
+    - The intricate structure of a computer chip
+
+## Kin
+
+- Blood relative
+    - The kin of my father.
+    - He is my kin.
+
+## Mutual
+
+- Shared and common
+    - Mutual respect
+    - Mutual friends
+
+## Notion
+
+- Belief or idea
+    - She **took the notion of** swimming in that stormy sea.
+    - I have no adequate **notion of** what the fifth dimension means.
+
+## Objection
+
+- Disagreement
+    - Her objection was that he was so young.
+    - Does anyone have any objection?
+
+## Objective
+
+- Aim, Goal
+    - This project has three objectives.
+- Fair, Based on facts
+    - An objective description/report
+
+## Obtain
+
+- To get something you want
+    - Further information can be **obtained from** head office.
+- To continue to exist
+    - These conditions are no longer obtained.
+
+## Overlook
+
+- To disregard, To not notice, To forgive
+    - You’re late, but this time I’m going to overlook it.
+- To have view
+    - Our room overlooks the ocean.
+
+## Prime
+
+- The most important
+    - Smoking is the prime cause of (or reason for) lung disease.
+    - Our prime concern is providing substantial number of job opportunities.
+- The very best quality or kind
+    - Prime agriculture land
+    - Prime rib of beef
+- The time a person that is active
+    - He is now past his prime.
+- To prepare someone for some situation
+    - Did you **prime her with** what to say?
+    - He took a shower and **primed himself for** action.
+    - He had been **primed to say** nothing about it.
+
+## Piracy
+
+- Robbery
+
+## Reciprocity
+
+- a situation in which two people, groups, or countries give each other similar kinds of help or special rights
+    - **The reciprocity of** trading rights between two nations.
+    - The reciprocity of their love
+
+## Regard
+
+- Consider, Believe, to Look
+    - I **regard you as** my brother.
+    - He **regarded me** from the corner of his eye.
+- Affection, Attention, Care
+    - **Give my regards to** your brother.
+    - He **has no regard for** his health.
+    - She has high regard for his old law professor.
+- Relation, Detail
+    - **In regard to** your map.
+    - Regarding your information.
+
+## Regulate
+
+- To manage, organize
+    - Strict rules regulate the use of chemicals in food
+    - To regulate a clock
+
+## Scarcity
+
+- When there is not enough of something
+    - The **scarcity of** employment opportunities
+    - A scarcity of math teachers
+
 ## Spew
+
+## Substantial
+
+- Large in amount or number
+    - A substantial salary
+    - We have the support of a **substantial number** of parents.
+
+## Suffer
+
+- Pain, Become worse
+    - I’m worried and my work is beginning to suffer.
+    - It **suffers from** the objection.
