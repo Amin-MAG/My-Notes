@@ -907,9 +907,31 @@ When you clone a machine you should take care of some network stuff before booti
 
 This is an OS-Level virtualization. Containes against virtual machines only install the libraries and binaries to run an application. There is no operaing system. Here we need a container engine like Docker to create containers.
 
-### IaaS
+# 103 - 1
 
+There are different kinds of shells for example, `bash` (the most common one), `dash`, `zsh`, `ksh`, and so on.
 
+```bash
+# To see the name of shell
+ls -ltrh /bin/bash
+echo $SHELL
+```
+
+To see if a command is an internal command or external, you can use `type` command.
+
+```bash
+type cd
+
+# Get more info about commands
+which vi
+whereis vi
+whatis vi
+```
+
+To ignore special characters like `*` or `$` you can use `\`.
+
+> You can find most of this section in [Linux Commands](Linux%20Commands.md)
+> 
 
 # Resources
 
