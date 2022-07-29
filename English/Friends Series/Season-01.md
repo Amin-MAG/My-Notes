@@ -171,12 +171,14 @@
 
 - When my time comes.
 - That is a wonder.
+- Here is my retrainer.
 - How she drove you crazy.
 - Not out of my league.
 
 ## Words
 
 - Funeral
+- Eternity
 
 # E09
 
@@ -185,16 +187,26 @@
 - I was wondering, Do you think it would be possible If I got 100 dollar advance on my salary?
 - I was just wondering, Do you think there is a possibility you could give me an advance on my tips?
 - Well, I'm off to Carol's.
+- We all chipped in.
+- You owe me 20 bucks.
+- I prefer to keep a safe distance from all this merriment.
 
 ## Words
 
 - Boycotting
+- Smirky
 
 # E10
+
+## Sentences
+
+- I snapped.
 
 ## Words
 
 - Precious
+- Methodical
+- Spatula
 
 # E11
 
@@ -212,7 +224,6 @@
 - The girl on the cover with her nipples showing.
 - I thought I'd give it a shot.
 - That would be a no.
-- Maybe you could scrape.
 
 ## Words
 
@@ -229,6 +240,7 @@
 
 ## Sentences
 
+- Maybe you could scrape.
 - We're done with something.
 - You think?
 - I'm out of sort.
@@ -274,7 +286,6 @@
 - You seek me out.
 - Something deep in your soul calls out to me like a foghorn.
 - Here is a wacky thought.
-- 
 
 ## Words
 
@@ -302,6 +313,10 @@
 - So you guys just don't get along?
 - You don't dip your pen in company ink.
 
+## Words
+
+- Apron
+
 # E17
 
 ## Sentences
@@ -314,6 +329,7 @@
 
 ## Sentences
 
+- Did you profread these? 
 - Your are a way off.
 - This money is cursed.
 - I have to win money to exert my power over women.
@@ -324,6 +340,8 @@
 - Sarcastic
 - Bluffing
 - Coincidence
+- Incident
+- 
 
 # E19
 
@@ -363,6 +381,7 @@
 - Do you ever just feel you're so unbelievably uncoordinated?
 - He's reached sexual maturity.
 - He beat you.
+- I have to give him up.
 - Don't wait up,.
 - It is technically not a zoo per se.
 - You could have called. I've been worried.
@@ -373,6 +392,7 @@
 - Fiddler
 - Astounding
 - Spirit
+- Vicious
 - Slaughter
 - Docile
 
@@ -386,6 +406,7 @@
 - They do you.
 - This has nothing to do with the fact that he needs a note to get out of gym?
 - Can we drop it now?
+- Just a touch
 
 ## Words
 

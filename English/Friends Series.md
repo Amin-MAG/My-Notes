@@ -2,9 +2,9 @@
 
 [Season 1](Season-01.md)
 
-[Season 2](Season%202%204515d.md)
+[Season 2](Season-02.md)
 
-[Season 3](Season%203%20eeebf.md)
+[Season 3](Season-03.md)
 
 [Season 4](Season%204%205988f.md)
 
