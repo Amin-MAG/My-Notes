@@ -313,6 +313,11 @@ Acclaimed
     - But this is not **attributable to** age.
     - To **attribute something to something**
 
+## Ancestors
+
+- Predecessor in family
+    - The ancestors of Irainians were Zoroastrians.
+
 ## Barter
 
 - To exchange for goods and services rather than money
@@ -374,6 +379,13 @@ Acclaimed
     - They **envelop meat in** vine leaves.
     - A shroud enveloped her body.
 
+## Elaborate
+
+- Having lot of small parts and details.
+    - An elaborately carved wooden statue
+- To give more detail
+    - He said he had new evidence, but refused to elaborate further.
+
 ## Establish
 
 - Demonstrate
@@ -409,6 +421,12 @@ Acclaimed
 - Theory
     - **To prove/disprove/develop a hypothesis**
 
+## Imitate
+
+- To copy
+    - Imitation Game
+    - She loved to imitate Winston Churchill.
+
 ## Impact
 
 - Effect
@@ -440,6 +458,14 @@ Acclaimed
 - Blood relative
     - The kin of my father.
     - He is my kin.
+
+## Leisure
+
+- Free time and its activities.
+    - He **spends his leisure** painting.
+    - Watching television is now the nation’s most popular leisure activity.
+    - **Leisure activities/wear**
+    - **The leisure class**
 
 ## Mutual
 
@@ -473,6 +499,20 @@ Acclaimed
 - To continue to exist
     - These conditions are no longer obtained.
 
+## Occupation
+
+- Profession, business
+    - His occupation is farming.
+- Possession, Control
+    - The German **occupation of** France.
+    - When the scientists came to the region, they found out a little evidence of human occupation.
+
+## Oversee
+
+- To manage, supervise
+    - These women oversee all aspects of wool production.
+    - He oversees the construction of the bridge.
+
 ## Overlook
 
 - To disregard, To not notice, To forgive
@@ -499,13 +539,28 @@ Acclaimed
 
 - Robbery
 
+## Pull off
+
+- To succeed in doing something difficult
+    - The Goal keeper pulled off six terrific saves.
+- to drive a car off a road in order to stop
+    - We pulled off the road to get some foods.
+
+## Rather
+
+- Preferably
+    - I **would rather** have tea.
+    - He became their leader **or, rather,** their idol.
+- Fairly or to some degree
+    - I was rather surprised to see him with his ex-wife.
+
 ## Reciprocity
 
 - a situation in which two people, groups, or countries give each other similar kinds of help or special rights
     - **The reciprocity of** trading rights between two nations.
     - The reciprocity of their love
 
-## Regard
+## Regard ⭐
 
 - Consider, Believe, to Look
     - I **regard you as** my brother.
@@ -524,13 +579,52 @@ Acclaimed
     - Strict rules regulate the use of chemicals in food
     - To regulate a clock
 
+## Rendition
+
+- Explanation
+
+## Respect
+
+- To admire, Admiration given by others
+    - Respect for the law
+- Way, sense
+    - This artist is outstanding from many respects.
+    - **With respect to** your other question, I must say…
+
+## Retain
+
+- To hold on
+    - These flowers retain their freshness for along time.
+    - A lot of water can be retain behind dams.
+- To hire
+    - Ahmad has retained two lawyers.
+
+## Ritual
+
+- Ceremony, Tradition
+
 ## Scarcity
 
 - When there is not enough of something
     - The **scarcity of** employment opportunities
     - A scarcity of math teachers
 
+## Settlement
+
+- Community
+    - In those days, New York was a Dutch settlement.
+    - Scattered settlements
+- Decision, Conclusion
+    - To reach a peace settlement
+- Pay all the money that you owe
+    - The settlement of all his debts
+
 ## Spew
+
+- To spit out
+    - Sewage **spew out of** the pipe.
+    - She **spewed out** a mass of undigested food.
+    - A volcano spewing out lava.
 
 ## Substantial
 
@@ -543,3 +637,13 @@ Acclaimed
 - Pain, Become worse
     - I’m worried and my work is beginning to suffer.
     - It **suffers from** the objection.
+
+## Tuition
+
+- Education costs
+
+## Weave
+
+- To blend, unite
+    - To weave baskets
+    - Get weaving on something (Expression to focus on something and do it)
