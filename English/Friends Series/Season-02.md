@@ -17,6 +17,7 @@
 ## Sentences
 
 - I'm pretty much totally intimidated by you.
+- Reaffirms his faith.
 
 ## Words
 
@@ -28,6 +29,7 @@
 ## Sentences
 
 - Go ahead and scoff.
+- I just don't buy it. (disagree)
 - What is this obsessive need you have to make everybody agree with you.
 
 ## Words
@@ -35,6 +37,8 @@
 - Evolution
 - Dork
 - Arrogant
+- Attorney
+- Nutcase
 
 # E04
 
@@ -54,12 +58,15 @@
 ## Sentences
 
 - Could you be less enthused?
+- Having a phone has finally paid off.
+- I have to confess something.
 
 # E06
 
 ## Sentences
 
 - It's just a bone bruise.
+- This is my gig.
 
 ## Words
 
@@ -75,6 +82,14 @@
 ## Words
 
 - Repellent
+- Insulation
+- Closure
+
+# E08
+
+## Words
+
+- Appaling 
 
 # E09
 
@@ -85,21 +100,31 @@
 ## Words
 
 - Seizing
+- Whiny
+- Obsessive
+- Gutless
 
 # E10
 
 ## Sentences
 
 - We have a spare.
+- You can avert your eyes.
+- If we ever loose Ross, we have a spare.
 
 ## Words
 
+- Affection - Family affection
 - Lousy
 - Audition
 - Ecstatic
 - Sober
 
 # E11
+
+## Sentences
+
+- It just seems so futile.
 
 ## Words
 
@@ -112,12 +137,16 @@
 ## Words
 
 - To bribe somebody
+- To boff the maniac
+- To meet someone in 15 minutes
+- To bribe somebody
 
 # E13
 
 ## Sentences
 
 - You don't have the guts.
+- Do you blow me for a monkey?
 
 # E14
 
@@ -170,6 +199,17 @@
 - Insole
 - Incorporate
 
+# E19
+
+## Sentences
+
+- Don't poop on the floor!
+
+## Words
+
+- Jaunty - a jaunty straw hat with a red ribbon
+- 
+
 # E20
 
 ## Words
@@ -182,16 +222,26 @@
 
 - Didn't I told you these pillows would be a good idea?
 - That's my motto
+- You told on us?
+- Have you ever be beaten up  by someone besides Monica?
 
 ## Words
 
 - Custer
+
+# E22
+
+## Sentences
+
+- I didn't think anybody would buy that.
 
 # E23
 
 ## Sentences
 
 - Ben's got chicken pox.
+- You're pretty much running that risk either way.
+- We'd better make count this night out.
 
 ## Words
 
@@ -208,6 +258,9 @@
 
 ## Words
 
+- Nauseous
 - Darn
 - Terrified
 - Bassinet
+- Grace
+- Dignity
