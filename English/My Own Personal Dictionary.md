@@ -287,6 +287,11 @@ Acclaimed
 - Reply to letter
     - The company **duly/hereby acknowledged** the receipt of the letter.
 
+## Acquire
+
+- To obtain or receive
+    - The college acquired a reputation for very high standards.
+
 ## Adequate
 
 - Sufficient (≠ deficient)
@@ -316,7 +321,15 @@ Acclaimed
 ## Ancestors
 
 - Predecessor in family
-    - The ancestors of Irainians were Zoroastrians.
+    - The ancestors of Iranians were Zoroastrians.
+
+## Barrier
+
+- Obstruction, Anything that prevents people from doing something
+    - Problems with childcare remain the biggest **barrier to** women succeeding at work.
+- A Physical object that keeps two things apart, A type of fence or gate
+    - The police **put a barrier** across the road to stop the traffic.
+    - The mountains form a natural **barrier between the** two countries.
 
 ## Barter
 
@@ -324,10 +337,26 @@ Acclaimed
     - They barter food for services.
     - The barter service.
 
+## Burst
+
+- **Burst into** - to suddenly begin to make a sound
+    - Suddenly, the group burst into laughter.
+- **Burst into flames** - to start to burn very strongly
+    - Their car crashed and burst into flames.
+- **Burst through** - To break through something
+    - Crowds burst through the barriers and run onto the pitch.
+
 ## Commodity
 
 - Merchandise
     - Labor is bought and sold like any other commodity.
+
+## Contend
+
+- To compete against someone to gain something
+    - Three armed groups are **contending for** power.
+- To argue, insist
+    - Some astronomers **contend that** the universe may be younger than previously thought.
 
 ## Cultivation
 
@@ -357,6 +386,13 @@ Acclaimed
 - Mix in
     - It dissolved in the oceans.
 
+## Disposal
+
+- When you get rid of something
+    - Bomb disposal experts
+- The sale of something you own
+    - To use every mean at their disposal to do something.
+
 ## Diversify
 
 - To Increase the range of goods or services it produces.
@@ -381,7 +417,7 @@ Acclaimed
 
 ## Elaborate
 
-- Having lot of small parts and details.
+- Having a lot of small parts and details.
     - An elaborately carved wooden statue
 - To give more detail
     - He said he had new evidence, but refused to elaborate further.
@@ -401,6 +437,13 @@ Acclaimed
 - Like, Taste
     - My **fondness for** classical music.
 
+## Formidable
+
+- Very powerful and impressive
+    - The new range of computers has formidable processing power.
+- Difficult to deal with
+    - A formidable task
+
 ## Forth
 
 - Out and away from
@@ -415,6 +458,11 @@ Acclaimed
 
 - trickery
     - He got the money by fraud.
+
+## Give
+
+- **Give rise** - cause to happen
+    - Decisions that **give rise to** arguments
 
 ## Hypothesis
 
@@ -453,6 +501,12 @@ Acclaimed
     - An intricate problem
     - The intricate structure of a computer chip
 
+## Inevitable
+
+- Avoidable
+    - Death is an inevitable end of life.
+    - The disease was an inevitable consequence of the poor living conditions.
+
 ## Kin
 
 - Blood relative
@@ -466,6 +520,13 @@ Acclaimed
     - Watching television is now the nation’s most popular leisure activity.
     - **Leisure activities/wear**
     - **The leisure class**
+
+## Level
+
+- Flat
+    - A **level surface** suitable/appropriate for wheelchairs.
+- To make smooth
+    - Cover with a layer of sand and **level it off**.
 
 ## Mutual
 
@@ -520,11 +581,34 @@ Acclaimed
 - To have view
     - Our room overlooks the ocean.
 
+## Passage
+
+- A long narrow area that connects one place to another.
+    - My office is just along the passage.
+- The movement of people or vehicles, A journey on a ship
+    - Both sides agreed to allow the free passage of medical supplies into the area.
+- When a new law is discussed and accepted
+    - They are expecting the new legislation to have quite a rough passage.
+
+## Phenomenon
+
+- Something that happens or exists that is studied because it is hard to understand.
+    - The growing phenomenon of telecommunication.
+    - Homelessness is not a new phenomenon.
+- A rare occurrence, wonder
+    - Gravity is a natural phenomenon.
+
+## Plausible
+
+- Believable
+    - A plausible liar
+    - His story certainly **seems plausible**.
+
 ## Prime
 
 - The most important
     - Smoking is the prime cause of (or reason for) lung disease.
-    - Our prime concern is providing substantial number of job opportunities.
+    - Our prime concern is providing a substantial number of job opportunities.
 - The very best quality or kind
     - Prime agriculture land
     - Prime rib of beef
@@ -542,9 +626,9 @@ Acclaimed
 ## Pull off
 
 - To succeed in doing something difficult
-    - The Goal keeper pulled off six terrific saves.
+    - The Goalkeeper pulled off six terrific saves.
 - to drive a car off a road in order to stop
-    - We pulled off the road to get some foods.
+    - We pulled off the road to get some food.
 
 ## Rather
 
@@ -585,19 +669,28 @@ Acclaimed
 
 ## Respect
 
-- To admire, Admiration given by others
+- To admire, Admiration which is given by others
     - Respect for the law
 - Way, sense
-    - This artist is outstanding from many respects.
+    - This artist is outstanding in many respects.
     - **With respect to** your other question, I must say…
 
 ## Retain
 
 - To hold on
-    - These flowers retain their freshness for along time.
-    - A lot of water can be retain behind dams.
+    - These flowers retain their freshness for a long time.
+    - A lot of water can be retained behind dams.
 - To hire
     - Ahmad has retained two lawyers.
+
+## Rigid
+
+- Strict
+    - Rigid and authoritarian methods of education.
+- Someone that is unwilling to change their ideas/behaviors
+    - She maintained rigid control over her emotional and sexual life.
+- Not moving
+    - Rigid plastic
 
 ## Ritual
 
@@ -622,9 +715,19 @@ Acclaimed
 ## Spew
 
 - To spit out
-    - Sewage **spew out of** the pipe.
+    - Sewage **spews out of** the pipe.
     - She **spewed out** a mass of undigested food.
     - A volcano spewing out lava.
+
+## Stray
+
+- To move away from the place you should be.
+    - Three of the soldiers **strayed into** enemy territory.
+- To begin to deal with a different subject from the main one.
+    - The meeting is beginning to **stray from the point**.
+    - Her eyes **strayed to** the clock.
+- An animal that has no home
+    - I was merely about to fire a blank to frighten off some stray cats.
 
 ## Substantial
 
