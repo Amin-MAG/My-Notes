@@ -254,10 +254,16 @@ Acclaimed
     - The evidence she gave to the court was not **strictly accurate**.
     - It is difficult to get accurate figures on population numbers.
     - He **gave a full and accurate account of** his movements.
-    - His predictions **was/proved accurate**
+    - His predictions **were/proved accurate**
     - **Deadly/extremely/highly/very/amazingly/remarkably/supeisingly/@@uncannily@@/completely/perfectly/totally accurate**
     - **not completely/entirely/strictly/quite/wholly accurate**
     - **partially/broadly/fairly/generally/largely/pretty/quite/sufficiently/historically/statistically accurate**
+
+## Accuse
+
+- to say that you believe someone is guilty
+    - He was **accused of** murder.
+    - Smith accused her of lying.
 
 ## Accustomed
 
@@ -318,12 +324,21 @@ Acclaimed
     - But this is not **attributable to** age.
     - To **attribute something to something**
 
-## Ancestors
+## Ancestors ⭐⭐
 
 - Predecessor in family
     - The ancestors of Iranians were Zoroastrians.
 
-## Barrier
+## Anticipation
+
+- Expectation, Readiness
+    - The evolution of lungs was in no sense an anticipation of future life on land.
+
+## Auxiliary
+
+- Supplementary, helper
+
+## Barrier ⭐
 
 - Obstruction, Anything that prevents people from doing something
     - Problems with childcare remain the biggest **barrier to** women succeeding at work.
@@ -351,6 +366,18 @@ Acclaimed
 - Merchandise
     - Labor is bought and sold like any other commodity.
 
+## Compensation
+
+- Something that makes a bad situation better, Repayment
+    - **Compensation for** injuries at work
+    - The jury awarded Tyler $1.7 million **in compensation**.
+    - One of the few compensations of losing my job was seeing more of my family.
+
+## Conscience
+
+- Moral sense
+    - To have a clear conscience
+
 ## Contend
 
 - To compete against someone to gain something
@@ -358,17 +385,61 @@ Acclaimed
 - To argue, insist
     - Some astronomers **contend that** the universe may be younger than previously thought.
 
-## Cultivation
+## Controversial
+
+- At issue
+
+## Cultivation ⭐
 
 - Development of land for growing
     - The cultivation of rice requires plenty of water.
 - Sophisticated
     - A man of charm and cultivation
 
+## Corrupt
+
+- Dishonest
+    - Corrupt practices/politicians/judges
+    - Corrupt judges have taken millions of dollars in bribes.
+
 ## Domesticate
 
 - Tame, Habituate
     - Do you know when the horses and cows were domesticated?
+
+## Diffuse
+
+- To make something spread through something, To spread
+    - The pollutants **diffuse into** the soil.
+- To make a bad situation less serious
+    - An attempt to diffuse his anger.
+- Using a lot of words without explanation which makes it unclear
+    - His writing is diffuse and difficult to understand.
+
+## Defuse
+
+- To improve a difficult and dangerous situation.
+    - Beth’s quiet voice helped to defuse the situation.
+- To remove the fuse from the bomb.
+
+## Deplete
+
+- To consume
+    - The Salmon populations have been severely depleted.
+    - Too much walking depleted our energy.
+
+## Deposit
+
+- To put something down.
+    - The female deposits her eggs directly into the water.
+- To leave a layer of a substance on the surface of something
+    - As the river slows down, it deposits a layer of soil.
+    - Rich **deposits of** gold in the hills.
+- To put a valuable thing in a safe place
+    - You are advised to deposit your valuables in the hotel safe.
+- A part of the payment of buying something before you pay the rest
+    - A **deposit of %10** is required.
+- The money for renting something. (It will be given back to you)
 
 ## Discount
 
@@ -432,6 +503,14 @@ Acclaimed
     - A shopping expedition
     - An **expedition to** the North pole.
 
+## Feed
+
+- **Feed on something**
+    - To eat something (used for animals)
+        - Owls feed on mice and other small animals.
+    - To become stronger because of something
+        - His powerful mind fed off the political discussions.
+
 ## Fondness
 
 - Like, Taste
@@ -464,7 +543,7 @@ Acclaimed
 - **Give rise** - cause to happen
     - Decisions that **give rise to** arguments
 
-## Hypothesis
+## Hypothesis ⭐
 
 - Theory
     - **To prove/disprove/develop a hypothesis**
@@ -481,6 +560,15 @@ Acclaimed
     - **Impact on something/somebody**
 - The force of one object hitting another
     - Impact from comets
+
+## Imply
+
+- To indicate
+    - Life implies conflict.
+    - Did her silence imply consent?
+- **Implication** - A possible future effect of an action
+    - What are the implications of those proposals?
+    - The new law has far-reaching **implications for** the future of journalism.
 
 ## Incentive
 
@@ -566,7 +654,13 @@ Acclaimed
     - His occupation is farming.
 - Possession, Control
     - The German **occupation of** France.
-    - When the scientists came to the region, they found out a little evidence of human occupation.
+    - When the scientists came to the region, they found little evidence of human occupation.
+
+## Opt
+
+- To choose
+    - Fewer students are **opting for** math classes.
+    - We finally opted for wood finish.
 
 ## Oversee
 
@@ -590,7 +684,7 @@ Acclaimed
 - When a new law is discussed and accepted
     - They are expecting the new legislation to have quite a rough passage.
 
-## Phenomenon
+## Phenomenon ⭐
 
 - Something that happens or exists that is studied because it is hard to understand.
     - The growing phenomenon of telecommunication.
@@ -603,6 +697,15 @@ Acclaimed
 - Believable
     - A plausible liar
     - His story certainly **seems plausible**.
+
+## Post
+
+- An important job in a large organization
+    - I applied for the post and was asked to attend an interview.
+- A strong upright piece of wood
+    - A fence post
+- Public notice
+    - The exam schedule was posted on the wall.
 
 ## Prime
 
@@ -622,6 +725,14 @@ Acclaimed
 ## Piracy
 
 - Robbery
+
+## Presume
+
+- To think that something is true, although you’re not certain.
+    - I **presume (that)** we’ll be there by six o’clock.
+    - From the way he talked, I **presumed him to be** your boss.
+- To behave without respect by doing something that you have no right to do.
+    - I would never **presume to** tell you what to do.
 
 ## Pull off
 
@@ -657,17 +768,26 @@ Acclaimed
     - **In regard to** your map.
     - Regarding your information.
 
-## Regulate
+## Regulate ⭐
 
 - To manage, organize
     - Strict rules regulate the use of chemicals in food
     - To regulate a clock
 
+## Rehearse
+
+- Repeat
+    - Before the night of play’s opening, we must rehearse is three more times.
+
 ## Rendition
 
 - Explanation
 
-## Respect
+## Repercussion
+
+- Consequence (economical)
+
+## Respect ⭐
 
 - To admire, Admiration which is given by others
     - Respect for the law
@@ -683,7 +803,14 @@ Acclaimed
 - To hire
     - Ahmad has retained two lawyers.
 
-## Rigid
+## Reveal
+
+- To make known something that was secret, To tell, To show
+    - To reveal a secret
+    - He may be prosecuted for revealing secrets about the security agency.
+    - The rising curtain revealed a street scene.
+
+## Rigid ⭐
 
 - Strict
     - Rigid and authoritarian methods of education.
@@ -692,7 +819,7 @@ Acclaimed
 - Not moving
     - Rigid plastic
 
-## Ritual
+## Ritual ⭐
 
 - Ceremony, Tradition
 
@@ -711,6 +838,13 @@ Acclaimed
     - To reach a peace settlement
 - Pay all the money that you owe
     - The settlement of all his debts
+
+## Soil
+
+- The top layer of the earth
+    - Fertile soil
+- To make something dirty
+    - Please don’t soil your hands.
 
 ## Spew
 
@@ -744,6 +878,17 @@ Acclaimed
 ## Tuition
 
 - Education costs
+
+## Treasure
+
+- To keep and care for something
+    - To treasure gold
+    - I will always treasure the memory of the nights we spend together.
+
+## Unwind
+
+- To relax
+    - The Grand Hotel is a superb place to unwind.
 
 ## Weave
 
