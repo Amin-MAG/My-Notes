@@ -10,6 +10,7 @@
 
 ## Words
 
+- To wink at somebody
 - To yank
 
 # E02
@@ -23,6 +24,7 @@
 
 - To humiliate
 - To arouse
+- Essence
 
 # E03
 
@@ -81,6 +83,13 @@
 
 - Spackle boy
 - To laminate
+
+# E06
+
+## Words
+
+- Ferret
+
 
 # E07
 
@@ -169,6 +178,7 @@
 - To grope
 - To get testy
 - Thorn
+- Dainty
 
 # E14
 
@@ -215,6 +225,7 @@
 - Heather
 - Stunning
 - Ring bearer
+- Eligible
 - Loon
 - To encourage a behavior
 - To call-off
@@ -229,7 +240,8 @@
 ## Words
 
 - To chock
-- Perry man
+- Insicive
+- Petty man
 
 # E20
 
@@ -294,3 +306,4 @@
 
 - I just gave her a nudge.
 - Take it from a guy who's never had a long-term kind of relationship.
+- Gang up on me.
