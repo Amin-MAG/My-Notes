@@ -1,5 +1,7 @@
 # MOD
 
+# MOD
+
 This is [My Own Dictionary](https://www.youtube.com/watch?v=iNhZnH9bQLc&t=609s). I write each word that I learn here. 😶
 
 # Rules
@@ -373,6 +375,24 @@ Acclaimed
     - The jury awarded Tyler $1.7 million **in compensation**.
     - One of the few compensations of losing my job was seeing more of my family.
 
+## Comprise
+
+- To consist of particular parts
+    - The committee is **comprised of** well-known mountaineers.
+- To form part of a larger thing
+    - Women comprise a high proportion of part-time workers.
+
+## Conclude
+
+- To decide that something is true after considering all the information
+    - The report **concluded that** the school should be closed immediately.
+    - He **concluded from his studies** that equality between sexes is still a long way off.
+- To complete or end something you have been doing
+    - When the investigation is concluded, the report will be sent to your office.
+    - **To conclude**, I’d like to express my thanks to my family.
+    - Each chapter **concludes with** a short summary.
+    - **To conclude by doing something**
+
 ## Conscience
 
 - Moral sense
@@ -402,6 +422,19 @@ Acclaimed
     - Corrupt practices/politicians/judges
     - Corrupt judges have taken millions of dollars in bribes.
 
+## Dampen
+
+- To make wet
+    - The rain didn’t even dampen the ground.
+- To make something (Feeling, activity, noise or movement) less strong
+    - The light rain dampened the crowd’s enthusiasm.
+
+## Decline
+
+- A decrease in the quality, quantity or importance of something, To decrease, To become worse
+    - There has been **a decline in** the size of families.
+    - A **decline of** manufacturing
+
 ## Domesticate
 
 - Tame, Habituate
@@ -415,6 +448,13 @@ Acclaimed
     - An attempt to diffuse his anger.
 - Using a lot of words without explanation which makes it unclear
     - His writing is diffuse and difficult to understand.
+
+## Dispose
+
+- To arrange things
+    - Chinese vases are **disposed around** the gallery.
+    - **Dispose of something**
+    - **To dispose somebody to do something**
 
 ## Defuse
 
@@ -440,6 +480,16 @@ Acclaimed
 - A part of the payment of buying something before you pay the rest
     - A **deposit of %10** is required.
 - The money for renting something. (It will be given back to you)
+
+## Desiccate
+
+- To remove the moisture from
+    - Desiccated fruit’
+
+## Deteriorate
+
+- Decay
+    - The relations between the two countries have been deteriorating for sometime.
 
 ## Discount
 
@@ -480,6 +530,10 @@ Acclaimed
 - Rise
     - The **emergence of** Japan as an industrial giant.
 
+## Enthusiasm
+
+- Keen, Interest, Excitement
+
 ## Envelop
 
 - To cover
@@ -496,6 +550,10 @@ Acclaimed
 ## Establish
 
 - Demonstrate
+
+## Excessive
+
+- Too much
 
 ## Expedition
 
@@ -570,6 +628,13 @@ Acclaimed
     - What are the implications of those proposals?
     - The new law has far-reaching **implications for** the future of journalism.
 
+## Impose
+
+- To dictate, To force people to accept something.
+    - The court can impose a fine.
+- To ask someone do something for you when this is not convenient for them.
+    - We could ask to stay the night, but we don’t want to **impose on** them.
+
 ## Incentive
 
 - Motivation
@@ -583,7 +648,7 @@ Acclaimed
 - To make more forceful
     - We must intensify our efforts.
 
-## Intricate
+## Intricate ⭐
 
 - Complicated
     - An intricate problem
@@ -641,6 +706,15 @@ Acclaimed
 - Fair, Based on facts
     - An objective description/report
 
+## Obscure
+
+- Not well known and usually not very important
+    - The details of his life remain obscure.
+- Difficult to understand
+    - For some obscure reason, the group is very popular.
+- To prevent something from being seen or heard clearly
+    - The view was obscured by mist.
+
 ## Obtain
 
 - To get something you want
@@ -683,6 +757,11 @@ Acclaimed
     - Both sides agreed to allow the free passage of medical supplies into the area.
 - When a new law is discussed and accepted
     - They are expecting the new legislation to have quite a rough passage.
+
+## Perception
+
+- understanding
+    - Color perception
 
 ## Phenomenon ⭐
 
@@ -787,6 +866,12 @@ Acclaimed
 
 - Consequence (economical)
 
+## Resemble
+
+- To look like or be similar to something
+    - He grew up to **resemble his father**.
+    - It’s amazing how closely these two people **resemble each other**.
+
 ## Respect ⭐
 
 - To admire, Admiration which is given by others
@@ -829,6 +914,10 @@ Acclaimed
     - The **scarcity of** employment opportunities
     - A scarcity of math teachers
 
+## Sediment ⭐
+
+- Solid substances that settle at the bottom of a liquid.
+
 ## Settlement
 
 - Community
@@ -846,12 +935,24 @@ Acclaimed
 - To make something dirty
     - Please don’t soil your hands.
 
+## Speculate
+
+- To guess about possible causes (without knowing everything)
+    - Jones refused to **speculate about/on** what might happen.
+
 ## Spew
 
 - To spit out
     - Sewage **spews out of** the pipe.
     - She **spewed out** a mass of undigested food.
     - A volcano spewing out lava.
+
+## Still
+
+- Not moving, quiet and calm, not windy
+    - We **stood still** and watched as the deer came closer.
+    - The house was completely still.
+    - A hot still day
 
 ## Stray
 
@@ -863,17 +964,35 @@ Acclaimed
 - An animal that has no home
     - I was merely about to fire a blank to frighten off some stray cats.
 
+## Subject
+
+- To say something is affected by something
+    - The proposed transaction **is subject to** shareholder approval.
+- A person or animal used in an experience
+- Govern by other country
+
 ## Substantial
 
 - Large in amount or number
     - A substantial salary
     - We have the support of a **substantial number** of parents.
 
+## Succession
+
+- The act of taking over an official job or position, or the right to be the next to take it
+    - If prince dies, the succession passes to his son.
+    - Three defeats **in succession**
+
 ## Suffer
 
 - Pain, Become worse
     - I’m worried and my work is beginning to suffer.
     - It **suffers from** the objection.
+
+## Tolerant ⭐
+
+- Open-minded, easygoing
+    - We must be **tolerant of** those people whose ideas are different from ours.
 
 ## Tuition
 
@@ -883,7 +1002,7 @@ Acclaimed
 
 - To keep and care for something
     - To treasure gold
-    - I will always treasure the memory of the nights we spend together.
+    - I will always treasure the memory of the nights we spent together.
 
 ## Unwind
 
