@@ -1,6 +1,7 @@
 # Security
 
 ### Stack Overflow
+
 Usually, Stacks are much smaller than heaps. For getting a stack overflow error, you can do a couple of things, For example calling a function recursively or defining a significant variable in a line.
 
 ```c
@@ -20,6 +21,7 @@ If you run this code, you will see that at the end, it shows a Segmentation faul
 On the other hand, some functions like `gets()` are not safe. They don't check the input length and replace them in the stack. They have some side effects because of this buffer overflow issue. Assume there are two variables next to each other in the stack, and one of them is the cipher, and the other is your guess (program input). If the program uses `gets()` to get the string from the user, the user can profit from overwriting the cipher by giving a larger string than the program expects. 
 
 # SQL-Injection
+
 SQL injection or SQLi refers to attacks against relational databases such as `MySQL`. Many types of injection vulnerabilities are possible within web applications, such as HTTP injection, code injection, and command injection. [Read more](SQL-Injection.md)
 
 # WIFI
@@ -178,7 +180,6 @@ $ openssl rsa -in keypairA.pem -des3 -out privateA.pem
 # so it is more secure.
 $ openssl rsautl -sign -ing msg -out signed -inkey keypairA.pem
 Enter passphrase:
-
 ```
 
 ## Others
@@ -213,6 +214,11 @@ So there is no complexity here, the browser will check the access-control-allowe
 
 [Capture the flag](CTF.md)
 
+[Cryptography](Cryptography.md)
+
+[University](Security/University.md)
+
 # Resources
+
 - [Stack Overflow - Jadi](https://www.youtube.com/watch?v=RLlQFfZoEB8)
 - [Buffer Overflow - Jadi](https://www.youtube.com/watch?v=xjRFubg5Ghs)

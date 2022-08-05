@@ -687,7 +687,20 @@ done <peptides.txt
 
 # To loop through lines of a command result
 sudo docker container ls -a | grep pg | awk '{print $1}' | while read c; do
-	sudo docker container rm -f $c
+    sudo docker container rm -f $c
+done
+```
+
+## Functions
+
+```bash
+function functionName() {
+    # code
+}
+
+secondFunction() {
+    # code
+}
 ```
 
 ## Select 

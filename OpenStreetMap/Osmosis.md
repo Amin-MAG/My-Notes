@@ -113,7 +113,7 @@ osm2pgsql -c -d osm -U postgres -H localhost -S C:\default.style C:\bangkok.osm.
 
 # Convert
 
-To convert the `.osm` file to the `.osm.pbf` file.
+Convert the `.osm` file to the `.osm.pbf` file.
 
 ```bash
 osmosis --read-xml file=map.osm --write-pbf map.osm.pbf

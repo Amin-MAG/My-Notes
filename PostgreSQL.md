@@ -313,4 +313,14 @@ WINDOW client_window as (partition by client order by startdate)
 ORDER BY client, stardate;
 ```
 
+## Privileges
+
+To grant privileges on a specific table to a user.
+
+```sql
+GRANT ALL PRIVILEGES ON TABLE <TABLE_NAME> TO <USERNAME>;
+```
+
+# See more
+
 [Snippet](PostgreSQL%20Snippet.md)
