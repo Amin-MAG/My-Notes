@@ -78,6 +78,10 @@
 
 - How could I leave if I knew I was depriving for your music.
 
+## Words
+
+- Deprive
+
 # E09
 
 ## Sentences
@@ -85,6 +89,7 @@
 - I may vomit.
 - Congratulations, you've just crossed the line into completely useless.
 - Besides, it might be kind of fun to form the new A-Team.
+- I'm gonna get off work tomorrow.
 
 ## Words
 
@@ -102,8 +107,10 @@
 - I haven't been picked on this much since kindergarten.
 - They brought in someone from junior high to do the seesaw with me.
 - A director who, in the beginning, would hire somebody just to fire them. Then they would all know who was boss.
+- I'm not good at confrontation.
 - Nothing rhymes with your stupid name.
 - You are a great catch.
+- Like father, like son
 
 ## Words
 
@@ -136,6 +143,7 @@
 - I took a shot.
 - I majored in lightning rounds.
 - I'm just trying to spice it up.
+- The score is nighn to eight in favor of the guys.
 - Throw in the duck.
 - What do you have against the duck?
 
@@ -167,6 +175,7 @@
 ## Sentences
 
 - Which it kind of is.
+- You've got a concussion.
 
 ## Words
 

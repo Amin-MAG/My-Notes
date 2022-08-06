@@ -6,9 +6,9 @@
 
 [Season 3](Season-03.md)
 
-[Season 4](Season%204%205988f.md)
+[Season 4](Season-04.md)
 
-[Season 5](Season%205%20ba21a.md)
+[Season 5](Season-05.md)
 
 [Season 6](Season%206%20368db.md)
 
