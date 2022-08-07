@@ -111,7 +111,7 @@ These words are some necessary TOEFL vocabularies that I try to add to my own pe
     - **completely/absolutely/quite/utterly absurd**
     - **clearly/manifestly/patently/faintly/rather/slightly/somewhat/wonderfully absurd**
 
-## Abundant
+## Abundant ⭐⭐
 
 - Available in large quantities, Ample, Affluent
     - An abundant & cheap supply of oil.
@@ -295,7 +295,7 @@ Acclaimed
 - Reply to letter
     - The company **duly/hereby acknowledged** the receipt of the letter.
 
-## Acquire
+## Acquire ⭐
 
 - To obtain or receive
     - The college acquired a reputation for very high standards.
@@ -311,6 +311,10 @@ Acclaimed
     - She **had a deep affection for** her parents.
     - Family affections
     - The reciprocal affection of the moving body.
+
+## Amply
+
+- Fully, Sufficiently
 
 ## Argue
 
@@ -354,6 +358,15 @@ Acclaimed
     - They barter food for services.
     - The barter service.
 
+## Breach
+
+- To break a law or rule (or action that breaks a law or rule)
+    - The company accused him of breaching his contract.
+    - This was a clear **breach of** the 1994 Trade Agreement.
+- A serious disagreement
+    - What had caused the **sudden breach between** Henry and his son?
+    - She wanted to help **heal the breach** between them.
+
 ## Burst
 
 - **Burst into** - to suddenly begin to make a sound
@@ -363,12 +376,21 @@ Acclaimed
 - **Burst through** - To break through something
     - Crowds burst through the barriers and run onto the pitch.
 
-## Commodity
+## Cease ⭐
+
+- To stop doing something
+    - He **ceased to be** a member of the association.
+    - The things that people will do for charity never **cease to amaze me**.
+    - The decision **to cease using** CFCs. in packaging.
+    - Cease fire!
+    - As long as you lack something, you yearn for it without cease.
+
+## Commodity ⭐
 
 - Merchandise
     - Labor is bought and sold like any other commodity.
 
-## Compensation
+## Compensation ⭐
 
 - Something that makes a bad situation better, Repayment
     - **Compensation for** injuries at work
@@ -398,6 +420,14 @@ Acclaimed
 - Moral sense
     - To have a clear conscience
 
+## Constitute
+
+- To be considered to be something
+    - Failing to complete the work constitutes a breach of the employment contract.
+    - The rise in crime **constitutes a threat to** society.
+- Be the parts of something that form it
+    - We must redefine what constitutes a family.
+
 ## Contend
 
 - To compete against someone to gain something
@@ -416,6 +446,17 @@ Acclaimed
 - Sophisticated
     - A man of charm and cultivation
 
+## Correspond
+
+- To be related to a part of something
+    - The two halves of the document didn’t correspond.
+    - The numbers **correspond to** points on the map.
+- To be similar
+    - The description of these events **corresponds closely to** other accounts written at the time.
+- To write letters to someone and receive letters from them.
+    - For the next three years, they corresponded regularly.
+    - She stopped **corresponding with** him after the death of her mother.
+
 ## Corrupt
 
 - Dishonest
@@ -426,14 +467,21 @@ Acclaimed
 
 - To make wet
     - The rain didn’t even dampen the ground.
-- To make something (Feeling, activity, noise or movement) less strong
+- To make something (Feeling, activity, noise, or movement) less strong
     - The light rain dampened the crowd’s enthusiasm.
 
-## Decline
+## Decline ⭐
 
-- A decrease in the quality, quantity or importance of something, To decrease, To become worse
+- A decrease in the quality, quantity, or importance of something, To decrease, To become worse
     - There has been **a decline in** the size of families.
     - A **decline of** manufacturing
+
+## Devastate
+
+- To make someone feel extremely shocked and sad.
+    - Rob was devastated by the news of her death.
+- To damage something very badly
+    - The city center was devastated by the bomb
 
 ## Domesticate
 
@@ -456,6 +504,15 @@ Acclaimed
     - **Dispose of something**
     - **To dispose somebody to do something**
 
+## Dedicate
+
+- To give all attention and effort to something
+    - The actress now **dedicates herself to** children’s charity work.
+- To be performed for someone that you love or respect (At the beginning of a book or film)
+    - The book was **dedicated to** her husband.
+- To use a place, time, money, or other resources for a purpose
+    - The company **dedicates $50000 for** the study.
+
 ## Defuse
 
 - To improve a difficult and dangerous situation.
@@ -468,7 +525,7 @@ Acclaimed
     - The Salmon populations have been severely depleted.
     - Too much walking depleted our energy.
 
-## Deposit
+## Deposit ⭐
 
 - To put something down.
     - The female deposits her eggs directly into the water.
@@ -489,7 +546,7 @@ Acclaimed
 ## Deteriorate
 
 - Decay
-    - The relations between the two countries have been deteriorating for sometime.
+    - The relations between the two countries have been deteriorating for some time.
 
 ## Discount
 
@@ -498,6 +555,12 @@ Acclaimed
     - This card **gives you a discount on** rail travel
 - To regard something as unlikely to be true and important
     - Experts discount the accuracy of the polls.
+
+## Dispense
+
+- To give something to people (For medicine), They could be a machine
+    - Villagers dispensed tea to visitors.
+    - A machine for dispensing cash.
 
 ## Dissolve
 
@@ -514,10 +577,20 @@ Acclaimed
 - The sale of something you own
     - To use every mean at their disposal to do something.
 
-## Diversify
+## Diversify ⭐
 
 - To Increase the range of goods or services it produces.
     - We must diversify our product in order to attract more customers.
+    - The wide diversity of tastes and opinions
+
+## Drawback
+
+- Disadvantage
+
+## Dub
+
+- To give something a name that describes it
+    - The body, thousands of years old, was found in the Alps and dubbed ‘The Iceman’.
 
 ## Emanate
 
@@ -554,6 +627,7 @@ Acclaimed
 ## Excessive
 
 - Too much
+    - They **exercise an influence** far **in** **excess** of their numbers.
 
 ## Expedition
 
@@ -573,6 +647,12 @@ Acclaimed
 
 - Like, Taste
     - My **fondness for** classical music.
+
+## Forage
+
+- To go around searching for food, The act of searching
+    - People are being forced to **forge for** food and fuel.
+    - In the summer, the goats forge freely.
 
 ## Formidable
 
@@ -606,6 +686,11 @@ Acclaimed
 - Theory
     - **To prove/disprove/develop a hypothesis**
 
+## Immense
+
+- Extremely large
+    - The Amazon forest is immense.
+
 ## Imitate
 
 - To copy
@@ -618,6 +703,10 @@ Acclaimed
     - **Impact on something/somebody**
 - The force of one object hitting another
     - Impact from comets
+
+## Impediment
+
+- Obstruction, Barrier
 
 ## Imply
 
@@ -643,6 +732,11 @@ Acclaimed
     - Farmers lack any **incentive to** manage their land organically.
     - **create/provide/give somebody an incentive**
 
+## Incise
+
+- To cut into
+    - To incise a table with design
+
 ## Intensify
 
 - To make more forceful
@@ -654,11 +748,20 @@ Acclaimed
     - An intricate problem
     - The intricate structure of a computer chip
 
-## Inevitable
+## Inevitable ⭐
 
 - Avoidable
     - Death is an inevitable end of life.
     - The disease was an inevitable consequence of the poor living conditions.
+
+## Invade
+
+- To enter a place with military force to take the control of it.
+    - The Romans invaded Britain 2000 years ago.
+- To go into a place in large numbers (especially when you are not wanted)
+    - Every summer, the town is invaded by tourists.
+- To get involved in something unwanted and annoying way
+    - What right does he have to invade my privacy?
 
 ## Kin
 
@@ -680,6 +783,10 @@ Acclaimed
     - A **level surface** suitable/appropriate for wheelchairs.
 - To make smooth
     - Cover with a layer of sand and **level it off**.
+
+## Mundane
+
+- Ordinary
 
 ## Mutual
 
@@ -705,6 +812,15 @@ Acclaimed
     - This project has three objectives.
 - Fair, Based on facts
     - An objective description/report
+
+## Obliterate
+
+- To destroy something completely
+    - Hiroshima was nearly obliterated by the atomic bomb.
+- To remove a thought, feeling, or memory from someone’s mind
+    - Nothing could obliterate the memory of those tragic events.
+- To cover something
+    - Then the fog came down, obliterating everything.
 
 ## Obscure
 
@@ -734,9 +850,14 @@ Acclaimed
 
 - To choose
     - Fewer students are **opting for** math classes.
-    - We finally opted for wood finish.
+    - We finally opted for a wood finish.
 
-## Oversee
+## Outweigh
+
+- To be more important or valuable than something
+    - The benefits of the scheme outweigh the disadvantages.
+
+## Oversee ⭐
 
 - To manage, supervise
     - These women oversee all aspects of wool production.
@@ -763,6 +884,11 @@ Acclaimed
 - understanding
     - Color perception
 
+## Perishable
+
+- The food that is likely to decay
+    - Perishable goods such as butter, milk, fruit, and fish.
+
 ## Phenomenon ⭐
 
 - Something that happens or exists that is studied because it is hard to understand.
@@ -771,11 +897,12 @@ Acclaimed
 - A rare occurrence, wonder
     - Gravity is a natural phenomenon.
 
-## Plausible
+## Plausible ⭐
 
 - Believable
     - A plausible liar
     - His story certainly **seems plausible**.
+    - What you say is plausible, but I don’t believe it.
 
 ## Post
 
@@ -785,6 +912,28 @@ Acclaimed
     - A fence post
 - Public notice
     - The exam schedule was posted on the wall.
+
+## Predator ⭐⭐
+
+- **Predation** - When an animal kills and eats another animal.
+
+## Preference
+
+- First choice
+    - Which is your preference?
+    - The amount of sugar that you add will depend on your personal preference.
+    - Acanthasters **show a preference for** branching corals, especially Acroporids.
+
+## Preserve
+
+- To save something/somebody from being harmed or destroyed
+    - We must encourage the planting of new trees and preserving the existing woodlands.
+    - The responsibility of the police is to preserve the peace.
+- A substance made from boiling fruits
+    - Homemade fruit preserves.
+- An activity that is suitable or allowed only for a particular group of people
+    - Banking used to be a male preserve.
+    - The civil service **became the preserve of** the educated middle class.
 
 ## Prime
 
@@ -813,12 +962,29 @@ Acclaimed
 - To behave without respect by doing something that you have no right to do.
     - I would never **presume to** tell you what to do.
 
+## Pretension
+
+- A claim to do something
+- 
+
+## Prey ⭐
+
+- An animal that is hunted and eaten by another animal.
+
 ## Pull off
 
 - To succeed in doing something difficult
     - The Goalkeeper pulled off six terrific saves.
 - to drive a car off a road in order to stop
     - We pulled off the road to get some food.
+
+## Pursue
+
+- To chase
+
+## Radically
+
+- Fundamentally
 
 ## Rather
 
@@ -888,7 +1054,7 @@ Acclaimed
 - To hire
     - Ahmad has retained two lawyers.
 
-## Reveal
+## Reveal ⭐
 
 - To make known something that was secret, To tell, To show
     - To reveal a secret
@@ -908,7 +1074,7 @@ Acclaimed
 
 - Ceremony, Tradition
 
-## Scarcity
+## Scarcity ⭐
 
 - When there is not enough of something
     - The **scarcity of** employment opportunities
@@ -928,6 +1094,21 @@ Acclaimed
 - Pay all the money that you owe
     - The settlement of all his debts
 
+## Shed
+
+- To get rid of
+    - The company is planning to shed about a quarter of its workforce.
+    - A diet that helps you shed pounds.
+- To fall off (for plants)
+    - The trees were starting to shed their leaves.
+
+## Snatch
+
+- To take something away from someone
+    - The thief snatched her purse and ran.
+- To take someone away from a person/place.
+    - Vargas was **snatched from** his home by two armed men.
+
 ## Soil
 
 - The top layer of the earth
@@ -939,6 +1120,11 @@ Acclaimed
 
 - To guess about possible causes (without knowing everything)
     - Jones refused to **speculate about/on** what might happen.
+
+## Spectrum
+
+- A complete range of things (opinions, people, situations, etc) going from one extreme to its opposite.
+    - The ethnic spectrum of America.
 
 ## Spew
 
@@ -989,6 +1175,24 @@ Acclaimed
     - I’m worried and my work is beginning to suffer.
     - It **suffers from** the objection.
 
+## Temptation
+
+- A strong desire to do something
+    - There might be a **temptation to** cheat if students sit too close together.
+
+## Tendency
+
+- To be likely to do or become something
+    - Greg’s **tendency to be** critical made him unpopular with his co-workers.
+    - Some people may inherit a **tendency to** alcoholism.
+- A General change
+    - There is an increasing **tendency for** women to have children later in life.
+    - A tendency among Americans to get married at a later age.
+
+## Thrive
+
+- Prosper
+
 ## Tolerant ⭐
 
 - Open-minded, easygoing
@@ -998,19 +1202,34 @@ Acclaimed
 
 - Education costs
 
-## Treasure
+## Treasure ⭐
 
 - To keep and care for something
     - To treasure gold
     - I will always treasure the memory of the nights we spent together.
+    - The literature of the Sumerians was **treasured throughout** the Near East.
 
 ## Unwind
 
 - To relax
     - The Grand Hotel is a superb place to unwind.
 
+## Utilitarian
+
+- Intended to be useful rather than attractive
+
 ## Weave
 
 - To blend, unite
     - To weave baskets
     - Get weaving on something (Expression to focus on something and do it)
+
+## Yield
+
+- To produce a result or answer
+    - Our research has only begun to yield important results.
+- To produce crops or profits. (or amount of profit as a noun)
+    - The tourist industry yielded an estimated $2.25 billion for the state last year.
+- To agree unwillingly
+    - Further action may be necessary if the leaders do not **yield to** diplomatic pressure.
+- To accept the defeat in fighting
