@@ -133,6 +133,13 @@ while True:
 python3 -m http.server 7600
 ```
 
+## Byte to string and hex
+
+```python
+os = ''.join(map(chr, o))
+oo = bytearray.fromhex(os)
+```
+
 # See more
 
 - [ClickHouse](ClickHouse.md)
@@ -141,3 +148,4 @@ python3 -m http.server 7600
 - [Hashlib](Hashlib.md)
 - [FastAPI](Python/FastAPI.md)
 - [Matplotlib](Python/Matplotlib.md)
+- [Scapy](Scapy.md)
