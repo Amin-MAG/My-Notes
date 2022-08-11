@@ -134,11 +134,61 @@ To see all of the networks:
 sudo docker network ls
 ```
 
+> The driver is actually the network type.
+
 You can see more details of each network with `inspect`
 
 ```bash
 sudo docker network inspect <network-name>
 ```
+
+### Bridge Network
+
+It's the default network for containers. You will need to map ports to communicate with these containers.
+
+### User-Defined Bridge Network
+
+It's better to define your network and that helps you to have isolation.
+
+```bash
+sudo docker network create asgard
+```
+
+### Host network
+
+It shares everything like IP address with host. You don't need to map the ports.
+
+### MAC VLan (bridge mode)
+
+They will be connected directly to the home network and act like a separate system.
+
+```bash
+sudo docker network create -d macvaln --subnet 10.7.1.0/24 --gateway 10.7.1.3 -o parent=enp0s3 newasgard
+```
+
+### MAC VLan (802)
+
+```bash
+sudo docker network create -d macvaln --subnet 192.168.0.0/24 --gateway 192.168.20.1 -o parent=enp0s3.20 newasgard
+```
+
+### IP Vlan (l2)
+
+The networks shares the MAC Address to solve the MAC Vlan issue.
+
+```bash
+sudo docker network create -d ipvlan --subnet 10.7.1.0/24 --gateway 10.7.1.3 -o parent=enp0s3 newasgard
+```
+
+### IP Vlan (l3)
+
+```bash
+sudo docker network create -d ipvlan --subnet 192.168.0.0/24 -o parent=enp0s3.20 -o ipvlan_mode=l3 --subnet 192.168.0.0/24 newasgard
+```
+
+### None
+
+There is no network adapter here!
 
 ## Image Layers
 
