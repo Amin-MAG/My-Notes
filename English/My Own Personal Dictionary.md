@@ -135,6 +135,11 @@ These words are some necessary TOEFL vocabularies that I try to add to my own pe
     - The Aids epidemic is **accelerated dramatically**.
     - **To accelerate dramatically/sharply/greatly/rapidly**
 
+## Accentuate
+
+- To make something more noticeable
+    - The photograph seemed to accentuate his large nose.
+
 ## Access
 
 - The right to do something
@@ -324,6 +329,11 @@ Acclaimed
     - He **argued her out of** suicide.
     - He **argued against** vegetarianism.
 
+## Attain
+
+- Achieve
+    - Manoochehr attained his goal through hard work and trust in God.
+
 ## Attribute
 
 - Feature
@@ -357,6 +367,11 @@ Acclaimed
 - To exchange for goods and services rather than money
     - They barter food for services.
     - The barter service.
+
+## Bind
+
+- **Bind to -** Cause someone to feel strongly attach to a person or place.
+    - This demonstrates how new cultural symbols bound provincials to the identify of the Roman world.
 
 ## Breach
 
@@ -404,6 +419,43 @@ Acclaimed
 - To form part of a larger thing
     - Women comprise a high proportion of part-time workers.
 
+## Compromise
+
+- A settlement of dispute that is reached by each side making concessions.
+    - Compromise is an inevitable part of marriage.
+    - A **compromise of** the government and opposition.
+    - Be prepared **to make compromise**.
+    - Eventually they **reached a compromise**.
+    - She admitted that she was unable to compromise.
+    - His workmates demanded that he never **compromise with** the bosses.
+    - **To compromise on/with something**
+- To do something which is against your principle and which therefore seems dishonest.
+    - She had already **compromised herself by** accepting his invitation.
+    - As soon as you compromise your principle, you are lost.
+
+## Compulsory
+
+- Something that must be done because of law or rule
+    - The threat to compulsory redundancies
+
+## Conceive
+
+- Imagine a particular situation
+    - He couldn’t conceive that anything really serious could be worrying his friend.
+- To think of new ideas
+    - Scientists first conceived the idea of the atomic bomb in the 1930s.
+- To become pregnant
+
+## Concession
+
+- A right
+    - A policy of **no concession to** terrorists
+    - His readiness to **make concession on** many of the issues raised.
+    - We tried to **force further concessions from** the government.
+    - The ending of tax **concession for** home owners.
+- A change of behavior
+    - He took off his jackets **as a concession to** the heat.
+
 ## Conclude
 
 - To decide that something is true after considering all the information
@@ -428,6 +480,11 @@ Acclaimed
 - Be the parts of something that form it
     - We must redefine what constitutes a family.
 
+## Contemporary
+
+- Modern, Occurring at the same time
+    - Contemporary Iranian literature
+
 ## Contend
 
 - To compete against someone to gain something
@@ -438,6 +495,15 @@ Acclaimed
 ## Controversial
 
 - At issue
+
+## Convey
+
+- To communicate or express something without using words
+    - This word doesn’t convey your meaning.
+    - The painting conveys the essence of the beast.
+    - Ads **convey the message** that thin is beautiful.
+- To carry something from one place to other place
+    - Your luggage will be conveyed to the hotel by taxi.
 
 ## Cultivation ⭐
 
@@ -488,7 +554,7 @@ Acclaimed
 - Tame, Habituate
     - Do you know when the horses and cows were domesticated?
 
-## Diffuse
+## Diffuse ⭐
 
 - To make something spread through something, To spread
     - The pollutants **diffuse into** the soil.
@@ -503,6 +569,26 @@ Acclaimed
     - Chinese vases are **disposed around** the gallery.
     - **Dispose of something**
     - **To dispose somebody to do something**
+
+## Dispute
+
+- A serious agreement or disagreement
+    - The firm is **involved in** a legal **dispute with** a rival company.
+    - He **got into a dispute over** a taxi fare.
+    - The bitter border **dispute between** countries.
+- To say that something is not correct, To argue with someone
+    - The main facts of the book have never been disputed.
+
+## Decent
+
+- Good enough standard or quality
+    - A decent salary.
+    - A house with a decent-sized yard.
+    - The majority of residents here are decent citizens.
+- Treating people in a fair and kind way.
+    - It was **decent of you** to show up today.
+- Wear enough of clothes
+    - Are you decent? Can I come in?
 
 ## Dedicate
 
@@ -538,12 +624,12 @@ Acclaimed
     - A **deposit of %10** is required.
 - The money for renting something. (It will be given back to you)
 
-## Desiccate
+## Desiccate ⭐
 
 - To remove the moisture from
     - Desiccated fruit’
 
-## Deteriorate
+## Deteriorate ⭐
 
 - Decay
     - The relations between the two countries have been deteriorating for some time.
@@ -576,6 +662,8 @@ Acclaimed
     - Bomb disposal experts
 - The sale of something you own
     - To use every mean at their disposal to do something.
+- **At one’s disposal, at the disposal of** - To have the control of something
+    - He has several cars at his disposal.
 
 ## Diversify ⭐
 
@@ -634,6 +722,29 @@ Acclaimed
 - Journey
     - A shopping expedition
     - An **expedition to** the North pole.
+
+## Expose
+
+- To show something (that is usually covered)
+    - He lifted his T-shirt to expose a jagged scar.
+    - Potatoes turn green when **exposed to light**.
+- To put someone in a situation that is not protected from something dangerous
+    - The report revealed that the workers had been exposed to high levels of radiation.
+- To show the truth about someone or something (especially when it is bad)
+    - The film exposes the utter horror of war.
+
+## Exuberant
+
+- Happy and full of energy
+    - An exuberant personality
+- Decorations or patterns that are exciting, complicated, and colorful
+
+## Fare
+
+- The price you pay for travel
+    - Air fares have shop up by 20%.
+- Food (Especially served in a restaurant or eaten on special occasions)
+    - Traditional Christmas foods
 
 ## Feed
 
@@ -737,16 +848,37 @@ Acclaimed
 - To cut into
     - To incise a table with design
 
+## Influx
+
+- Rush, Flow
+    - A **huge influx of** Nowruz tourists
+
+## Instinct
+
+- A natural tendency to behave in a particular way
+    - Animals have a natural **instinct for** survival.
+    - Her instinct told her that something was wrong.
+
 ## Intensify
 
 - To make more forceful
     - We must intensify our efforts.
+    - A day of intensive negotiations
+    - The program includes intensive instruction in English.
 
 ## Intricate ⭐
 
 - Complicated
     - An intricate problem
     - The intricate structure of a computer chip
+
+## Intrigue
+
+- When something interests you a lot because it seems strange
+    - Other people’s houses always intrigued her.
+- To make secret plans to harm someone
+    - While King Richard was abroad, the barons had been **intriguing against** him.
+    - A web on intrigue (=complicated set of secret plans)
 
 ## Inevitable ⭐
 
@@ -768,6 +900,17 @@ Acclaimed
 - Blood relative
     - The kin of my father.
     - He is my kin.
+
+## Lavish
+
+- To give a lot of love
+    - He **lavish attentions on** her.
+    - Hug your children and **lavish them with love**.
+- Large, Impressive, or expensive
+    - A lavish lifestyle
+    - A royal palace on a lavish scale
+- Very generous
+    - We were always **lavish with** financial aid in times of crisis.
 
 ## Leisure
 
@@ -870,6 +1013,11 @@ Acclaimed
 - To have view
     - Our room overlooks the ocean.
 
+## Pertinent
+
+- Relevant, Suitable
+    - Your question was not pertinent.
+
 ## Passage
 
 - A long narrow area that connects one place to another.
@@ -965,7 +1113,9 @@ Acclaimed
 ## Pretension
 
 - A claim to do something
-- 
+    - The group don’t have any **pretensions to be** pop stars.
+- An attempt to seem higher class than you really are
+    - Lilith resented Adam’s **pretensions to** superiority.
 
 ## Prey ⭐
 
@@ -1038,6 +1188,12 @@ Acclaimed
     - He grew up to **resemble his father**.
     - It’s amazing how closely these two people **resemble each other**.
 
+## Resent
+
+- To be angry about something
+    - I reset what you said about my sister.
+    - She **bitterly resented** his mother’s influence over him.
+
 ## Respect ⭐
 
 - To admire, Admiration which is given by others
@@ -1061,6 +1217,10 @@ Acclaimed
     - He may be prosecuted for revealing secrets about the security agency.
     - The rising curtain revealed a street scene.
 
+## Ridge
+
+- Something long and thin that is raised above the things around it
+
 ## Rigid ⭐
 
 - Strict
@@ -1074,15 +1234,35 @@ Acclaimed
 
 - Ceremony, Tradition
 
+## Saturate
+
+- To make something very wet
+    - Water poured through the hole, saturating the carpet.
+- To put a lot of something into a particular place
+- A less healthy type of fat in milk or meat.
+
 ## Scarcity ⭐
 
 - When there is not enough of something
     - The **scarcity of** employment opportunities
     - A scarcity of math teachers
 
+## Sculpture
+
+- To form three-dimension art objects
+    - The sculpture is a tangible art
+
 ## Sediment ⭐
 
 - Solid substances that settle at the bottom of a liquid.
+
+## Seize
+
+- To take hold of something suddenly
+    - I want to seize every opportunity.
+- To take control of something suddenly
+    - A group of soldiers seized the airport.
+- To suddenly catch someone and make sure they cannot get away
 
 ## Settlement
 
@@ -1101,6 +1281,21 @@ Acclaimed
     - A diet that helps you shed pounds.
 - To fall off (for plants)
     - The trees were starting to shed their leaves.
+
+## Shoot
+
+- Shoot up - To increase very quickly and rapidly, To inject illegal drugs
+    - Demand for water has **shot up by 70% over** the last 30 days.
+    - He’s shot up since we last saw him.
+    - Kids as young as ten are shooting up heroin.
+
+## Shore
+
+- An area along the edge of a large area of water like an ocean or lake
+    - Only a few survivors reached the shore.
+    - She began to swim to shore.
+- **Shore something up** - To support
+    - The tax cuts are supposed to shore up the economy.
 
 ## Snatch
 
@@ -1155,7 +1350,7 @@ Acclaimed
 - To say something is affected by something
     - The proposed transaction **is subject to** shareholder approval.
 - A person or animal used in an experience
-- Govern by other country
+- Govern by another country
 
 ## Substantial
 
@@ -1163,10 +1358,15 @@ Acclaimed
     - A substantial salary
     - We have the support of a **substantial number** of parents.
 
-## Succession
+## Substratum
+
+- A layer that lies beneath another layer.
+    - A substratum of rock
+
+## Succession ⭐
 
 - The act of taking over an official job or position, or the right to be the next to take it
-    - If prince dies, the succession passes to his son.
+    - If the prince dies, the succession passes to his son.
     - Three defeats **in succession**
 
 ## Suffer
@@ -1175,15 +1375,26 @@ Acclaimed
     - I’m worried and my work is beginning to suffer.
     - It **suffers from** the objection.
 
+## System
+
+- **Mountain system**
+
 ## Temptation
 
 - A strong desire to do something
     - There might be a **temptation to** cheat if students sit too close together.
 
+## Tense
+
+- A situation in which you feel very anxious and worried (something bad might be happen)
+    - Marion spoke, eager to break the silenece.
+- Feel worried and uncomfortable
+    - Is anything wrong? You look a little tense.
+
 ## Tendency
 
 - To be likely to do or become something
-    - Greg’s **tendency to be** critical made him unpopular with his co-workers.
+    - Greg’s **tendency to** be ****critical made him unpopular with his co-workers.
     - Some people may inherit a **tendency to** alcoholism.
 - A General change
     - There is an increasing **tendency for** women to have children later in life.
@@ -1217,6 +1428,18 @@ Acclaimed
 ## Utilitarian
 
 - Intended to be useful rather than attractive
+
+## Utterly
+
+- Completely
+
+## Ventilate
+
+- To let fresh air into a room
+    - A well-ventilated kitchen
+- To pump air into and out of someone’s lungs
+- To let go your feeling and opinion about something
+    - The important thing is to ventilate your anger.
 
 ## Weave
 
