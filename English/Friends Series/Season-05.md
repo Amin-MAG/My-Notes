@@ -123,6 +123,7 @@
 ## Words
 
 - Funeral
+- Cremate
 - Lousy: the hungry, lousy natives.
 - Controversial: one of today's controversial issues.
 
@@ -130,11 +131,12 @@
 
 ## Sentences
 
-- Get your edge back
+- So that gives me back my edge.
 
 ## Words
 
 - To squeeze: to squeeze the trigger
+- Intrigue
 - Intercourse
 
 # E15
@@ -191,13 +193,27 @@
 
 - If you want to be rational, I can't argue with you.
 
+## Words
+
+- Instinct
+- Seize
+
 # E21
+
+## Sentences
+
+- Why is it inside out?
+- He is a dropper.
 
 ## Words
 
 - Dropper
 
 # E22
+
+## Sentences
+
+- You won't ditch me like you 
 
 ## Words
 
