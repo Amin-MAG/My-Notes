@@ -5,6 +5,7 @@
 `uname` return some useful information about the specific flavor of the OS and its kernel.
 
 ```bash
+# -a for all information
 uname -a 
 ```
 
@@ -183,11 +184,18 @@ Run the most recent command
 ```bash
 # Repeat the most recent command with sudo
 sudo !!
+
+# Run the most recent command that had `ping`
+!ping
 ```
 
 Run a command from the history. You can use the number to run it again.
 
 ```bash
+# Show histories
+history
+
+# Execute the id=120
 !120
 ```
 
@@ -410,6 +418,50 @@ You can use `watch` command to watch the output of your command periodically.
 watch -n 1  "ls -lhf | grep Huawei | awk '{print \$5}'"
 ```
 
+## Cat
+
+A tool to concatinate input streams.
+
+```bash
+cat a.txt b.txt
+```
+
+> You can use `zcat`, `gzcat`, etc., to concatinate compressed files.
+>    
+
+## Od
+
+It shows files in formats other than text.
+
+```bash
+od t.txt
+
+# To show readable characters
+od -c t.txt
+```
+
+## Split
+
+You can split a big file to some smaller files using `split` command.
+
+```bash
+# -b for size
+# -l for lines
+# -n for chunks
+split -n  10 h.zip h_ 
+```
+
+## Nl
+
+Add line number to the input text.
+
+```bash
+nl t.txt
+
+# You can use other commands too
+cat -n t.txt
+```
+
 ## Sed
 
 It is a command used for replacing and editing strings. For instance, look at this text:
@@ -433,15 +485,17 @@ You can replace all of UNIX works to Linux by this command:
 sed 's/unix/linux/g' geekfile.txt
 ```
 
+### To show specific lines of a file
+
 To get number of lines you can use
 
 ```bash
 # Get line 2 to 10
 # Docs for `-n`: By default, each line of input is echoed to the standard output after all of the commands have been applied to it
-cat file | sed -n '2,10p'
+sed -n '2,10p'
 
 # Get line 2 and 10 
-cat file | sed -n '2p;10p'
+sed -n '2p;10p'
 ```
 
 ## WC
@@ -449,7 +503,20 @@ cat file | sed -n '2p;10p'
 To get the number of lines
 
 ```bash
-cat docker-compose-dev.yml | wc -l
+# Word count
+# [paragraphs] [words] [characters]
+wc t.txt
+
+# To get number of lines
+wc -l docker-compose-dev.yml 
+```
+
+## Hashing
+
+```bash
+md5sum file.txt
+sha256sum file.txt
+sha512sum file.txt
 ```
 
 ## AWK
@@ -460,7 +527,7 @@ cat docker-compose-dev.yml | wc -l
 awk -F ' ' '{print $1}'
 
 # To print the exact previous output
-cat output | awk '{print $0}'
+awk '{print $0}' t.txt
 ```
 
 ## Cut
@@ -474,6 +541,9 @@ minikube status | cut -w -f2
 # Or you can deliminate the letter
 # f2 shows the seconds part in each line 
 minikube status | cut -d " " -f2
+
+# field 1,2 and 4,5,6
+minikube status | cut -d " " -f1,2,4-6
 ```
 
 ## Head
@@ -483,14 +553,45 @@ minikube status | cut -d " " -f2
 cat file | head --bytes 20
 ```
 
+## Sort
+
+It sorts the input text string by different kinds of factors.
+
+```bash
+# If you want to sort a file in which a line has a number at the beginning.
+sort -n the_file.txt
+```
+
 ## Unique
 
 ```bash
 # To get the unique output
-cat output | uniq
+uniq t.txt
 
 # To count each one of them
-cat output | uniq -c
+uniq -c t.txt
+
+# To find words that are unique along the entire file.
+uniq -u t.txt
+```
+
+> The `unique` can operate on files that have been sorted already.
+> 
+
+## Paste
+
+It merges the lines of the given files.
+
+```bash
+paste a.txt b.txt c.txt
+```
+
+## Tr
+
+It translates the characters to another character.
+
+```bash
+cat file.txt | tr '123456789' '۱۳۴۵۶۷۸۹۰'
 ```
 
 ## lsof

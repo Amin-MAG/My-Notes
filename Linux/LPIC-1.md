@@ -933,6 +933,23 @@ To ignore special characters like `*` or `$` you can use `\`.
 > You can find most of this section in [Linux Commands](Linux%20Commands.md)
 > 
 
+# 103 - 2
+
+## Work with streams
+
+- stdin
+- stdout
+- stderr
+
+> You can find most of this section in [Linux Commands](Linux%20Commands.md)
+> 
+
+### Hashes
+
+- md5sum
+- sha256sum
+- sha512sum
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)
