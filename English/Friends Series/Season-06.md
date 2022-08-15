@@ -64,6 +64,7 @@
 
 - Delicate: The sun can easily damage a child’s delicate skin.
 - Sneak out: To leave a place or a gathering while trying to avoid being seen or heard.
+- Uptight
 
 # E08
 
@@ -76,7 +77,7 @@
 
 ## Sentences
 
-- If it is any consolation, before she dropped it, he seemed to enjoy it.
+- If it is any consolation, before he dropped it, he seemed to enjoy it.
 - I got tricked into all those things.
 
 ## Words
@@ -86,6 +87,10 @@
 - Tattletale: She scolded another student for being a tattletale.
 
 # E10
+
+## Sentences
+
+- She is onto us. She knew the police would be onto them.
 
 ## Words
 

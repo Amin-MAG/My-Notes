@@ -27,6 +27,8 @@
 - If someone wants to give us a present, we don't want to deprive them of that joy.
 - I'll try to tone it down.
 - I won't boss you around.
+- You aren't a lefty?
+- You Americans always butcher the French language.
 
 ## Words
 
@@ -111,6 +113,7 @@
 
 - I didn't want to intrude on your life or anything.
 - I didn't bring you here so you could ambush her.
+- That's such a lame excuse.
 
 # E12
 

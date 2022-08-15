@@ -10,9 +10,9 @@
 
 [Season 5](Season-05.md)
 
-[Season 6](Season%206%20368db.md)
+[Season 6](Season-06.md)
 
-[Season 7](Season%207%2087f7c.md)
+[Season 7](Season-07.md)
 
 [Season 8](Season%208%20856e3.md)
 
