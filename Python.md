@@ -76,6 +76,34 @@ then
 fi
 ```
 
+## Itertools
+
+With this library, you can for instance calculate the production of two list or get all of subset combinations of a list.
+
+```python
+import itertools
+
+# Instead of 2 loops
+for a, b in itertools.product(list_a, list_b):
+	pass
+
+# Calculate all combinations
+for subset in itertools.combinations(list_a, 2):
+	pass
+
+```
+
+It can perform more operations and these two are just some examples.
+
+## Enumerate
+
+You can write more cleaner code using `enumerate`. In case you need the index of an iterm in a list
+
+```python
+for i, item in enumerate(items):
+	pass
+```
+
 ## Breakpoint
 
 You can use `breackpoint()` and then you kind of enter to the shell mode.
@@ -84,6 +112,17 @@ You can use `breackpoint()` and then you kind of enter to the shell mode.
 n # for next
 pp v # to print a variable ?
 c # continue
+```
+
+## Write a decorator
+
+```python
+def do_twice(func) {
+	def wrapper_do_twice():
+		func()
+		func()
+	return wrapper_do_twice()
+}
 ```
 
 # Socket
@@ -98,6 +137,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     # Or send something
     s.sendall(bytes("1 1", "utf-8"))
 ```
+
 
 # Snippets
 
