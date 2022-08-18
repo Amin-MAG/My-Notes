@@ -25,6 +25,16 @@ sudo kill -9 $(sudo lsof -t -i:3000)
 lsof -ti:8080 | xargs kill -9
 ```
 
+## ls
+
+```bash
+# Reverse sort based on time and in long human readable format
+ls -ltrh
+
+# Show recursively
+ls -R
+```
+
 ## Find files
 
 ```bash

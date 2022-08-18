@@ -950,6 +950,27 @@ To ignore special characters like `*` or `$` you can use `\`.
 - sha256sum
 - sha512sum
 
+# 103 - 3
+
+## Perform basic file management
+
+### Wildcards
+
+- * - match everything 
+- ? - match any single character
+- [ABC] or [A-Z] - match bunch of characters
+- [!X] - match not having a character
+
+```bash
+# copy all of the files
+cp ./* /tmp
+
+# list all txt files
+ls ./*.txt
+```
+
+> You can find most of this section in [Linux Commands](Linux%20Commands.md)
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)
