@@ -1,5 +1,26 @@
 # My Notes
 
-My "Notes" or My "Brain". Here is my very first experience in different topics.
+![Untitled](.notes/all.png)
+
+My "Notes" or My "Brain". I usually take some notes or document my experiences here. 
 
 > You can use Obsidian to open this repository
+> 
+
+## Main Entries
+
+Most of the documents are related to the computer science.
+
+![Untitled](.notes/SE.png)
+
+
+- [Computer-Science](Computer-Science.md)
+	- [Computer-Engineering](Computer-Engineering.md)
+	- [Linux](Linux.md)
+	- [DevOps](DevOps.md)
+	- [Programming Languages](Programming%20Languages.md)
+	- [Cloud](Cloud.md)
+	- [Microservices](Microservices.md)
+	- [Artificial Intelligence](Artificial%20Intelligence.md)
+	- [Network](Network.md)
+- [English](English.md)
