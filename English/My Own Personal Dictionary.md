@@ -13,9 +13,7 @@ There are some rules in this dictionary. You should follow these steps to have a
 3. Write down some collocation with that words. (Create collocation with Adjectives, Verbs, and... - Use the [OZDIC website](https://ozdic.com/))
 4. Write a paragraph with the new word and its collocations.
 
-# 1212 Deck Cards
-
-These words are some necessary TOEFL vocabularies that I try to add to my own personal dictionary.
+# Words
 
 ## Abandon
 
@@ -345,10 +343,16 @@ Acclaimed
 - Predecessor in family
     - The ancestors of Iranians were Zoroastrians.
 
-## Anticipation
+## Anticipation ☄️
 
 - Expectation, Readiness
     - The evolution of lungs was in no sense an anticipation of future life on land.
+- To anticipate
+    - To expect something
+        - We don’t **anticipate any problems/difficulties**.
+        - I didn’t **anticipate having to** do the cooking myself.
+    - To look forward to
+        - Daniel was eagerly anticipating her arrival.
 
 ## Auxiliary
 
@@ -370,8 +374,8 @@ Acclaimed
 
 ## Bind
 
-- **Bind to -** Cause someone to feel strongly attach to a person or place.
-    - This demonstrates how new cultural symbols bound provincials to the identify of the Roman world.
+- **Bind to -** Cause someone to feel strongly attached to a person or place.
+    - This demonstrates how new cultural symbols bound provincials to the identity of the Roman world.
 
 ## Breach
 
@@ -405,12 +409,27 @@ Acclaimed
 - Merchandise
     - Labor is bought and sold like any other commodity.
 
+## Compassion ☄️
+
+- A strong feeling of sympathy for someone
+    - I was shocked by the doctor’s **lack of compassion**.
+    - Practice compassion toward others and toward yourself.
+
 ## Compensation ⭐
 
 - Something that makes a bad situation better, Repayment
     - **Compensation for** injuries at work
     - The jury awarded Tyler $1.7 million **in compensation**.
     - One of the few compensations of losing my job was seeing more of my family.
+
+## Compliment
+
+- A remark that shows you admire someone or something, To say something nice
+    - All the guests **paid her extravagant compliments**.
+    - He paid MacLennan the finest compliment of all by imitating him.
+    - Being compared to Abba is quite a great compliment.
+    - **Compliment۶s on** her appearance.
+    - Bob **complimented me on** my new hairstyle.
 
 ## Comprise
 
@@ -421,11 +440,11 @@ Acclaimed
 
 ## Compromise
 
-- A settlement of dispute that is reached by each side making concessions.
+- A settlement of a dispute that is reached by each side making concessions.
     - Compromise is an inevitable part of marriage.
     - A **compromise of** the government and opposition.
-    - Be prepared **to make compromise**.
-    - Eventually they **reached a compromise**.
+    - Be prepared **to make a compromise**.
+    - Eventually, they **reached a compromise**.
     - She admitted that she was unable to compromise.
     - His workmates demanded that he never **compromise with** the bosses.
     - **To compromise on/with something**
@@ -450,11 +469,16 @@ Acclaimed
 
 - A right
     - A policy of **no concession to** terrorists
-    - His readiness to **make concession on** many of the issues raised.
+    - His readiness to **make concessions on** many of the issues raised.
     - We tried to **force further concessions from** the government.
-    - The ending of tax **concession for** home owners.
+    - The ending of tax **concession for** homeowners.
 - A change of behavior
-    - He took off his jackets **as a concession to** the heat.
+    - He took off his jacket **as a concession to** the heat.
+
+## Concise
+
+- Short, with no unnecessary words
+    - Your summary should be as clear and concise as possible.
 
 ## Conclude
 
@@ -480,6 +504,11 @@ Acclaimed
 - Be the parts of something that form it
     - We must redefine what constitutes a family.
 
+## Contemplation
+
+- Quiet serious thinking about something
+    - The monks **spend** an hour **in contemplation** each morning.
+
 ## Contemporary
 
 - Modern, Occurring at the same time
@@ -502,8 +531,18 @@ Acclaimed
     - This word doesn’t convey your meaning.
     - The painting conveys the essence of the beast.
     - Ads **convey the message** that thin is beautiful.
+    - It conveys the essence of the beast.
 - To carry something from one place to other place
     - Your luggage will be conveyed to the hotel by taxi.
+
+## Conviction
+
+- A very strong belief or opinion
+    - The students possess the conviction that they can make a difference to their community.
+- The feeling of being sure about something
+    - He was able to say with conviction that he had changed.
+- A decision in a court of law
+    - This was her third **conviction for** theft.
 
 ## Cultivation ⭐
 
@@ -541,6 +580,31 @@ Acclaimed
 - A decrease in the quality, quantity, or importance of something, To decrease, To become worse
     - There has been **a decline in** the size of families.
     - A **decline of** manufacturing
+
+## Defy
+
+- To refuse to obey a law or rule
+    - People who openly defy the law.
+
+## Deliberate ☄️
+
+- Intended or planned
+    - A deliberate attempt to humiliate her.
+    - The attack on him was quite deliberate.
+- Slow and careful (For speech, thought, or movement)
+    - He approached her with slow, deliberate steps.
+
+## Delicate
+
+- Need to be dealt with carefully
+    - **Delicate negotiations**
+    - There is something I need to talk about - **It’s a delicate matter**.
+- Fragile, Easily damaged or broken
+    - The sun can easily damage a child‘s **delicate skin.**
+- Attractive part of body
+    - Her wrists and ankles were slim and delicate.
+- With attention to small details
+    - A plate with a delicate pattern of leaves.
 
 ## Devastate
 
@@ -605,6 +669,12 @@ Acclaimed
     - Beth’s quiet voice helped to defuse the situation.
 - To remove the fuse from the bomb.
 
+## Depict
+
+- To describe something or someone in writing or speech, or show in a painting.
+    - A book depicting life in pre-revolutionary Russia.
+    - The god is depicted as a bird with a human head.
+
 ## Deplete
 
 - To consume
@@ -629,7 +699,7 @@ Acclaimed
 - To remove the moisture from
     - Desiccated fruit’
 
-## Deteriorate ⭐
+## Deteriorate ⭐ ☄️
 
 - Decay
     - The relations between the two countries have been deteriorating for some time.
@@ -691,6 +761,13 @@ Acclaimed
 - Rise
     - The **emergence of** Japan as an industrial giant.
 
+## Encompass
+
+- To include a wide range of ideas, subjects, etc.
+    - The study encompasses the social, political, economic aspects of the situation.
+- To cover or surround something
+    - The houses encompassed around 100 square meters.
+
 ## Enthusiasm
 
 - Keen, Interest, Excitement
@@ -712,7 +789,7 @@ Acclaimed
 
 - Demonstrate
 
-## Excessive
+## Excessive ⭐
 
 - Too much
     - They **exercise an influence** far **in** **excess** of their numbers.
@@ -732,6 +809,21 @@ Acclaimed
     - The report revealed that the workers had been exposed to high levels of radiation.
 - To show the truth about someone or something (especially when it is bad)
     - The film exposes the utter horror of war.
+
+### Exposure
+
+- Prolonged exposure to the sun can cause skin cancer.
+- The **exposure of** his underground political activity.
+- Her fear of **exposure as** a spy
+
+## Extravagant
+
+- Spending a lot of money (more than is necessary)
+    - An extravagant lifestyle
+- Doing something too much or more than is necessary
+    - Don’t be too extravagant with the wine.
+- Very impressive because of being very expensive
+    - Extravagant celebrations
 
 ## Exuberant
 
@@ -880,6 +972,12 @@ Acclaimed
     - While King Richard was abroad, the barons had been **intriguing against** him.
     - A web on intrigue (=complicated set of secret plans)
 
+## Intuition
+
+- The ability to understand something because of a feeling rather than by facts.
+    - **Intuition told** **her** it was unwise to argue.
+    - We should trust our intuitions.
+
 ## Inevitable ⭐
 
 - Avoidable
@@ -926,6 +1024,11 @@ Acclaimed
     - A **level surface** suitable/appropriate for wheelchairs.
 - To make smooth
     - Cover with a layer of sand and **level it off**.
+
+## Mitigate
+
+- To make a situation or the effects of something less unpleasant.
+    - Measures need to be taken to mitigate the environmental effects of burning more coal.
 
 ## Mundane
 
@@ -1032,6 +1135,13 @@ Acclaimed
 - understanding
     - Color perception
 
+## Perceive
+
+- To understand or think of something
+    - Often what is perceived to be aggression is Simply fear.
+- To notice, see, or recognize
+    - That morning, he perceive a change in Franca’s mood.
+
 ## Perishable
 
 - The food that is likely to decay
@@ -1083,6 +1193,13 @@ Acclaimed
     - Banking used to be a male preserve.
     - The civil service **became the preserve of** the educated middle class.
 
+## Press
+
+- The press people who write reports.
+    - The freedom of the press.
+    - **Press reports**
+    - The band has received good **press coverage**.
+
 ## Prime
 
 - The most important
@@ -1120,6 +1237,17 @@ Acclaimed
 ## Prey ⭐
 
 - An animal that is hunted and eaten by another animal.
+
+## Provoke
+
+- To cause a reaction or feeling (especially a sudden one)
+    - The proposal provoked widespread criticism.
+    - The novel has **provoked fierce debate** in the US.
+    - She hopes her editorial will **provoke readers into thinking** seriously about the issue.
+    - Emma, though still at school, **was provoked to help** too.
+- To make someone angry
+    - The dog wouldn’t attack if it hadn’t been provoked.
+    - Paul tried to **provoke Fletch into a fight**.
 
 ## Pull off
 
@@ -1172,7 +1300,7 @@ Acclaimed
 ## Rehearse
 
 - Repeat
-    - Before the night of play’s opening, we must rehearse is three more times.
+    - Before the night of the play’s opening, we must rehearse it three more times.
 
 ## Rendition
 
@@ -1241,6 +1369,11 @@ Acclaimed
 - To put a lot of something into a particular place
 - A less healthy type of fat in milk or meat.
 
+### Saturation
+
+- When an event or person is given so much attention by newspapers, television, etc everyone has heard about it.
+    - The trail was given **saturation coverage** by the press.
+
 ## Scarcity ⭐
 
 - When there is not enough of something
@@ -1263,6 +1396,11 @@ Acclaimed
 - To take control of something suddenly
     - A group of soldiers seized the airport.
 - To suddenly catch someone and make sure they cannot get away
+
+## Serenity
+
+- Placidity, Very calm and peaceful
+    - The child’s face was serene and beautiful.
 
 ## Settlement
 
@@ -1413,6 +1551,30 @@ Acclaimed
 
 - Education costs
 
+## Trail
+
+- To pull something behind you
+    - A plane trailing a banner was circling overhead.
+    - She walked slowly along the path, her skirt **trailing in** the mud.
+- To walk slowly
+    - Susie **trailed along** behind her parents.
+- To be losing in a game, competition, or election.
+    - The Democratic candidate is still trailing in the opinion polls.
+    - Manchester United was **trailing by** two goals to one.
+- To follow someone by looking for signs
+    - Police trailed the gang for several days.
+- A rough path across the countryside or through a forest
+    - The trail led over Boulder Pass before descending to a lake.
+- A long line or a series of marks
+    - The bus **left a trail of** black smoke behind it.
+    - He left a trail of broken hearts and broken promises.
+- A sign that a person or animal has been in a place and used for catching them.
+    - The hunters lost the tiger’s trail in the middle of the jungle.
+- All places that a particular group of people visits
+    - Politicians on the campaign trail.
+- Path, Track
+    - New players should put their team **on the winning trail**.
+
 ## Treasure ⭐
 
 - To keep and care for something
@@ -1438,14 +1600,25 @@ Acclaimed
 - To let fresh air into a room
     - A well-ventilated kitchen
 - To pump air into and out of someone’s lungs
-- To let go your feeling and opinion about something
+- To let go of your feeling and opinion about something
     - The important thing is to ventilate your anger.
+
+## Vivid
+
+- Memories, dreams, etc are so clear that they seem real.
+    - I’ve got vivid memory of that summer.
+    - He had a vivid picture of her in his mind.
 
 ## Weave
 
 - To blend, unite
     - To weave baskets
     - Get weaving on something (Expression to focus on something and do it)
+
+## Yet
+
+- In addition to what existed before
+    - Yet another function of line in art is the creation of pattern and texture.
 
 ## Yield
 
