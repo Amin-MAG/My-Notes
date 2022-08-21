@@ -62,3 +62,12 @@ M = nx.complete_graph(500)
 nx.draw(M)
 plt.show()
 ```
+
+## Create random graph
+
+```python
+import networkx as nx
+
+g = nx.fast_gnp_random_graph(10, 0.5)
+print(g.edges)
+```

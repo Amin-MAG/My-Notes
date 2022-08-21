@@ -11,6 +11,10 @@
 
 # E03
 
+## Sentences
+
+- I'm indigant as a consumer!
+
 ## Words
 
 - Indignant: I was very indignant over his behavior.
@@ -29,6 +33,10 @@
 - Seclude: a secluded corner of the garden
 
 # E05
+
+## Words
+
+- Simp
 
 ## Sentences
 
@@ -112,6 +120,7 @@
 ## Sentences
 
 - You just sit there, stewing in your own filth.
+- This does butch it up a bit.
 
 ## Words
 

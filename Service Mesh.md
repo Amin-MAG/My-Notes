@@ -33,6 +33,13 @@ Istio is a service mesh implementation.
 - Generate Certificates for TLS communication, Acts like Certificate Authority
 - Gathers metrics, Handle tracing
 
+## Features
+
+- Load balancing
+- Fine-Grain control
+- Access Control
+- Visibility
+
 ## Architecture
 
 ### Istiod

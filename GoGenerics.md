@@ -47,3 +47,5 @@ func main() {
     fmt.Println(Sum(1.2, 1.42, 15.231))
 }
 ```
+
+The expression `~string` means the set of all types whose underlying type is `string`. This includes the type `string` itself as well as all types declared with definitions such as `type MyString string`.

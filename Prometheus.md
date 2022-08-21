@@ -31,10 +31,7 @@ Prometheus is a good fit for collecting metrics from servers or distributed syst
 
 ## Metric Types
 
-### Counters
-
-> How many times?
-> 
+### Counters (How many times?)
 
 Counters are a simple metric type that can only be incremented or be reset to zero on restart. It is often used to count primitive data like the total number of requests to a services or number of tasks completed. Most counters are therefore named using the *_total* suffix e.g. *http_requests_total*.
 
@@ -48,19 +45,13 @@ jobs_completed_total
 
 The absolute value of these counters is often irrelevant and does not give you much information about the applications state. The real information can be gathered by their evolution over time which can be obtained using the *rate()* function.
 
-### Gauges
-
-> What is the value of x now?
-> 
+### Gauges (What is the value of x now?)
 
 Gauges also represent a single numerical value but different to counters the value can go up as well as down. Therefore gauges are often used for measured values like temperature, humidy or current memory usage.
 
 Unlike with counters the current value of a gauge is meaningful and can be directly used in graphs and tests.
 
-### Histograms
-
-> How long or How big?
-> 
+### Histograms (How long or How big?)
 
 Histograms are used to measure the frequency of value observations that fall into specific predefined buckets. This means that they will provide information about the distribution of a metric like response time and signal outliers.
 
@@ -380,12 +371,14 @@ There are some other use cases:
 - Comparing the current state of today with 7 days before.
 - Monitoring and alerting for dependencies
 
+
+# See more
+
+- [Instant and Range Vector](https://satyanash.net/software/2021/01/04/understanding-prometheus-range-vectors.html)
+
 # Resources
 
-[Prometheus Tutorial: A Detailed Guide to Getting Started | Scalyr](https://www.sentinelone.com/blog/prometheus-tutorial-detailed-guide-to-getting-started/)
-
-[Golang Application monitoring using Prometheus](https://gabrieltanner.org/blog/collecting-prometheus-metrics-in-golang)
-
-[How Prometheus Monitoring works | Prometheus Architecture explained](https://www.youtube.com/watch?v=h4Sl21AKiDg)
-
-[](https://prometheus.io/docs/prometheus/latest/querying)
+- [Prometheus Tutorial: A Detailed Guide to Getting Started | Scalyr](https://www.sentinelone.com/blog/prometheus-tutorial-detailed-guide-to-getting-started/)
+- [Golang Application monitoring using Prometheus](https://gabrieltanner.org/blog/collecting-prometheus-metrics-in-golang)
+- [How Prometheus Monitoring works | Prometheus Architecture explained](https://www.youtube.com/watch?v=h4Sl21AKiDg)
+- [Querying](https://prometheus.io/docs/prometheus/latest/querying)

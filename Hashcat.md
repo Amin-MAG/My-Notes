@@ -107,10 +107,17 @@ It will check all of combination of given words. (They're in 2 separate files.)
 hashcat -m 1000 -a 1 <HASH> ./wordlist/english1.txt ./wordlist/english2.txt
 ```
 
-# See more
+## PRINCE Attack
 
-- [Introduction to Hashcat - Part II - YouTube](https://www.youtube.com/watch?v=FZ9g6Pau8ao)
+```bash
+pp64.app wordlist/rockyou.txt | pp64.app | hashcat -O -a 0 -m 0 --status-time 600 hashes.txt
+```
+
+> You can use `--status-time` for setting the interval of printing the statistic info.
+
+> You can use `-O` to optimize kernel.
 
 # Resources
 
 - [Introduction to Hashcat - YouTube](https://www.youtube.com/watch?v=EfqJCKWtGiU)
+- [Introduction to Hashcat - Part II - YouTube](https://www.youtube.com/watch?v=FZ9g6Pau8ao)

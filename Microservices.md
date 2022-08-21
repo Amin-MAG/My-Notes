@@ -411,29 +411,6 @@ The solution to the single-purpose function problem was the creation of a rule, 
 
 Amazon’s “service-oriented architecture” was largely the beginning of what we now call microservices. It led to Amazon developing a number of solutions to support microservices architectures – such as Amazon AWS (Amazon Web Services) and Apollo – which it currently sells to enterprises throughout the world. Without its transition to microservices, Amazon could not have grown to become the most valuable company in the world – valued by market cap at [$941.19 billion on Feb. 28, 2020](https://ycharts.com/companies/AMZN/market_cap).
 
-### کافه بازار
-
-پنل توسعه‌دهندگان کافه‌بازار وابستگی زیادی به پروژه‌ی اصلی بازار داشت، و این موضوع ادامه‌ی توسعه پنل و اضافه کردن امکانات جدید رو سخت کرده بود. به روز نبودن، کثیفی کد و وابستگی‌های دست‌و‌پا گیر ما رو به سمتِ بازنویسی پنل توسعه‌دهندگان برد.
-
-هدف ما از بازنویسی پنل، کاهش هزینه‌ی توسعه و نگهداری سیستم بود. در این مسیر روش‌های مختلفی رو امتحان کردیم که بعضی از اونها نتیجه‌ی عکس داشت. طوری که نه تنها هزینه توسعه رو کاهش نمی‌داد بلکه بیشتر هم می‌کرد.
-
-از یک [سیستم یکپارچه (Monolithic)](https://microservices.io/patterns/monolithic.html) شروع کردیم، تا تولید چندین [مایکروسرویس (Microservices)](https://martinfowler.com/articles/microservices.html) رفتیم و در نهایت به یک طراحی ساده رسیدیم تا روند توسعه رو ساده‌تر کنیم.
-
-در این مسیر با چالش‌های فنی و ساختاری مربوط به تیم مواجه شدیم و نکاتی رو یاد گرفتیم که در ادامه با هم می‌بینیم.
-
-خلاصه‌اش اینکه:
-
-- فقط زمانی کاری رو انجام بدیم که واقعا بهش نیاز داریم و [Over-engineering](https://www.codesimplicity.com/post/what-is-overengineering/) نکنیم. از قدیم هم گفتن «سری رو که درد نمی‌کنه، دستمال نمی‌بندن» :-)
-- یک تیم متمرکز با هدف مشخص، عملکرد بهتری می‌تونه داشته باشه.
-
-ادامه ی مقاله در صفحه پایین
-
-[کافه بازار - Monolithic به Microservices](کافه%20بازار%2064960.md)
-
-[https://www.notion.so/Microservices-c2400a9ae6964fb1a321efb04118cfd3#b3ed805bd3ea47c29b0ee79d7183c1ab](Microservices.md)
-
-### 
-
 [Interview Questions](Interview%20%204b38b.md)
 
 # References

@@ -283,43 +283,27 @@ func main() {
 
 # Topics
 
-[Build Executive Binaries](Build.md)
-
-[ENT Database](ENT.md)
-
-[Graph QL](Go%20GraphQL.md)
-
-[Go Bot](GoBot.md)
-
-[Go Cron](GoCron.md)
-
-[Golang, Real-Time Techs](Go%20Real-time.md)
-
-[Golang Mock](Mock.md)
-
-[Go Generic](GoGenerics.md)
-
-[Goroutines](Goroutines.md)
-
-[Go patterns](GoPatterns.md)
-
-[Gzip](gzip.md)
-
-[Hugo](Hugo.md)
-
-[Issues](Issues.md)
-
-[Memory management](Go%20Memory%20Management.md)
-
-[Prometheus in Go](Go%20Prometheus.md)
-
-[Rate](Rate.md)
-
-[Go Swagger](Go%20Swagger.md)
-
-[Testify](Testify.md)
-
-[Go Testing](Go%20Testing.md)
+- [Build Executive Binaries](Build.md)
+- [ENT Database](ENT.md)
+- [Graph QL](Go%20GraphQL.md)
+- [Go Bot](GoBot.md)
+- [Go Cron](GoCron.md)
+- [Golang, Real-Time Techs](Go%20Real-time.md)
+- [gRPC](gRPC.md)
+- [Golang Mock](Mock.md)
+- [Go Generic](GoGenerics.md)
+- [Goroutines](Goroutines.md)
+- [Go patterns](GoPatterns.md)
+- [Gzip](gzip.md)
+- [Hugo](Hugo.md)
+- [Issues](Issues.md)
+- [Memory management](Go%20Memory%20Management.md)
+- [Prometheus in Go](Go%20Prometheus.md)
+- [Rate](Rate.md)
+- [Serverless in Go](Serverless-in-go.md)
+- [Go Swagger](Go%20Swagger.md)
+- [Testify](Testify.md)
+- [Go Testing](Go%20Testing.md)
 
 # Libraries
 

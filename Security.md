@@ -206,17 +206,16 @@ It stands for Cross-origin resource sharing. It is a kind of browser security fe
 
 So there is no complexity here, the browser will check the access-control-allowed-origins and will get data without error if the origin is allowed.
 
-- [Cryptography](Cryptography.md)
-- [Hashcat](Hashcat.md)
-- [Gobuster](Gobuster.md)
 
 # See more
 
-[Capture the flag](CTF.md)
-
-[Cryptography](Cryptography.md)
-
-[University](Security/University.md)
+- [Capture the flag](CTF.md)
+- [Hashcat](Hashcat.md)
+- [Authorization](Authorization.md)
+- [Gobuster](Gobuster.md)
+- [SQL-Map](Security/SQL-Map.md)
+- [Cryptography](Cryptography.md)
+- [University](Security/University.md)
 
 # Resources
 

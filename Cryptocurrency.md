@@ -37,6 +37,9 @@ General Properties:
 - Hiding
 - Puzzle friendliness: to be difficult to bruteforce
 
+# How to earn BTC
+The computer should find a nonce and hash the whole mem pool and nonce together. In case that this hash is lower than difficulty, your block is accepted. That's how you show your Prove Of Work (POW). 
+
 # Resources
 - A Comprehensive Introduction: BITCOIN AND CRYPTOCURRENCY TECHNOLOGIES
 - [Jadi Blockchain Course](https://docs.google.com/presentation/d/1sqgx2gQE0G2UXa4MpOYNPyDkFPsjuBZuKLBhAtfBXC0/edit#slide=id.p)

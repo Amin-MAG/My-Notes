@@ -236,7 +236,7 @@ volumes:
 from datetime import datetime
 from elasticsearch import Elasticsearch
 
-es = Elasticsearch('http://localhost:9200', basic_auth=("elastic", "password"))
+es = Elasticsearch('http://localhost:9200', http_auth=("elastic", "password"))
 
 # Create a new document
 doc = {

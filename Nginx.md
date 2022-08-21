@@ -39,6 +39,8 @@ events { }
 
 > Remember to put `index.html` in the selected directory, otherwise, you get a 403 error.
 
+> To validate your changes, you can use the `sudo nginx -t` command.
+
 to serve some kind of data in a completely different location:
 
 ```bash

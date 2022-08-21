@@ -14,10 +14,6 @@ fcrackzip -D -p /usr/share/wordlists/rockyou.txt 37366.zip -u
 
 ## Gobuster
 
-```bash
-gobuster -w <WORDS> -u <IP>
-```
-
 ## NMap
 
 ```bash
@@ -42,7 +38,8 @@ It actually try to calculate bunch of string with different hashing algorithms a
 
 # `httpry`
 
-# Reverse 
+# Reverse
+
 To see all the readable strings in a binary that you can use
 
 ```bash

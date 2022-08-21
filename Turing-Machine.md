@@ -46,7 +46,7 @@ So the third one is the one that Alan Turing cured about. Did there exist an eff
 
 ## Turing Machine Model 💥
 
-![Turing%20Mac%208b977/Untitled.png](Turing%20Machine/Untitled.png)
+![Turing%20Mac%208b977/Untitled.png](Turing-Machine/Untitled.png)
 
 There is an infinite tape. There is also a single control unit that stands above specific location and can:
 
@@ -66,7 +66,7 @@ To be Turing complete having these two things are essential.
 
 ## Turing Test 🧪
 
-![Turing%20Mac%208b977/Untitled%201.png](Turing%20Machine/Untitled%201.png)
+![Turing%20Mac%208b977/Untitled%201.png](Turing-Machine/Untitled%201.png)
 
 Related to AI and it is a test that determine a bot can think like a human.
 

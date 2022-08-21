@@ -11,12 +11,12 @@
 
 ## Service-Oriented Software Engineering
 
-- [Cloud](☁️%20Cloud.md)
+- [Cloud](Cloud.md)
 - [Container Orchestrations](Container%20Orchestrations.md)
 
 ## Microservice Architecture
 
-- [Cloud](☁️%20Cloud.md)
+- [Cloud](Cloud.md)
 - [Microservices](Microservices.md)
 - [Container Orchestrations](Container%20Orchestrations.md)
 
@@ -36,8 +36,8 @@ Solving Questions:
 
 Read More:
 
-- [Testing](🧪%20Testing.md)
-- [Monitoring](📈%20Monitoring.md)
+- [Testing](Testing.md)
+- [Monitoring](Monitoring.md)
 - [Observability](Observability.md)
 
 ## Miscellaneous
@@ -60,12 +60,13 @@ Such a rule traditionally consisted of three parts:
 # Read More
 
 - [Cloud Computing](Cloud%20Computing.md)
-- [Programming Languages](👨‍💻%20Programming%20Languages.md)
-- [DevOps](👷%20DevOps.md)
-- [Databases](💾%20Databases.md)
-- [Message Brokers](💬%20Message%20Brokers.md)
+- [Programming Languages](Programming%20Languages.md)
+- [DevOps](DevOps.md)
+- [Databases](Databases.md)
+- [Message Brokers](Message-Brokers.md)
 - [Git](Git.md)
 - [Game](Game.md)
+- [Telecommunication](Telecommunication.md)
 
 # References
 

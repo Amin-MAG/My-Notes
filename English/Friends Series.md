@@ -14,8 +14,8 @@
 
 [Season 7](Season-07.md)
 
-[Season 8](Season%208%20856e3.md)
+[Season 8](Season-08.md)
 
-[Season 9](Season%209%2088426.md)
+[Season 9](Season-09.md)
 
-[Season 10](Season%2010%2099e8f.md)
+[Season 10](Season-10.md)

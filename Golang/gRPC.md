@@ -373,7 +373,8 @@ if err != nil {
 This stream is bi-directional so we should create a separate goroutine for receiving from server.
 
 ```go
-{
+func main() {
+	// ...
 	// In main function after creating stream
 	wc := make(chan struct{})
 	go receiveFromServer(wc, stream)
@@ -422,7 +423,7 @@ for {
 		_ = stream.Send(&api.CalculatePrimeFactorsRequest{
 			// Input new number
 			Num: int64(num),
-	})
+		})
 
 		<-wc
 }
