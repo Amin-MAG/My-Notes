@@ -969,7 +969,22 @@ cp ./* /tmp
 ls ./*.txt
 ```
 
-> You can find most of this section in [Linux Commands](Linux%20Commands.md)
+> ⚠️ You can find most of this section in [Linux Commands](Linux%20Commands.md)
+> 
+
+
+> ✍️  `/dev/zero` is a device that always return zero.
+> 
+
+### Compression
+
+- gzip
+- bzip2
+- tar
+- cpio
+
+> ⚠️ You can find most of this section in [Linux Commands](Linux%20Commands.md)
+> 
 
 # Resources
 

@@ -35,7 +35,15 @@ ls -ltrh
 ls -R
 ```
 
-## Find files
+## Find
+
+`find` shows everything in current directory
+
+```bash
+find .
+```
+
+Here are some more useful commands and switches.
 
 ```bash
 # Files that their name's are exactly "test"
@@ -43,12 +51,52 @@ find . -name 'test'
 
 # Files that have flag (ignore-case) in their names
 find . -iname '*flag*'
+```
 
-# Search only between directories
+### Based on type
+
+```bash
+# Search only between directories -type {d,f,l}
 find . -iname '*flag*' -type d
 ```
 
-Using `locate` commands
+### Based on size 
+
+```bash
+# Set condition on file's size
+find /var -iname '*tmp*' -size +1M -100M
+```
+
+### Based on time
+
+First part
+
+- `a` - Access
+- `c` - Status (like permission)
+- `m` - Modify (Content)
+
+Second part
+
+- `min` - Minutes
+- `time` - 24 Hour
+
+```bash
+# Files that have been modified under ./ in recent 30 minutes.
+find . -mmin -30
+```
+
+### Execute on the files
+
+```bash
+find . -mmin -3 -exec echo "this is file {}" \;
+find . -mmin -3 -exec ls "{}" \;
+
+# Important operations have their own switch
+find . -mmin -3 -ls
+find . -mmin -3 -delete
+```
+
+## Locate
 
 ```bash
 sudo apt install mlocate
@@ -604,6 +652,121 @@ It translates the characters to another character.
 cat file.txt | tr '123456789' '۱۳۴۵۶۷۸۹۰'
 ```
 
+## Touch
+
+```bash
+# To create new empty file 
+touch myfile.txt
+
+# To change the time of the file (You can set -t for timestamp)
+touch -t 200908121510.32
+
+# Use reference with -r
+touch -r /etc/debian_version myfile.txt
+```
+
+## File 
+
+Windows files have an extention which specifies the type of the file. This is not safe because everybody can change the extention. In Linux, There is no `*.extention`.
+
+```bash
+# To get the type of the file
+file filename.txt
+```
+
+## dd
+
+It is a more advanced copy.
+
+```bash
+# To copy 100 1 byte block size from /dev/zero and put it in newfile
+# You can test the result with `od` command
+dd if=/dev/zero of=newfile count=100 bs=1
+```
+
+# Compression
+
+## gzip
+
+```bash
+# To compress a file 
+gzip you_file.txt
+
+# To list details including the compress percentage
+gzip -l you_file.txt.gz
+
+# To uncompress
+gzip -d you_file.txt.gz
+gunzip file.gz
+```
+
+You can use gzip in `tar` command. To compress a directory with multiple files
+
+```bash
+# -z for gzip
+tar -czvf files.gz files/
+```
+
+## Tar
+
+`tar` is used for archiveing multiple files.
+
+> ⚠️ You don't need to type `-` for switches.
+
+### Create a new tar file
+
+```bash
+tar cf mytarfile.tar a.txt b.txt c.txt 
+```
+
+You can compress the give files while creating a new tar file.
+
+- `z` - gzip
+- `b` - bzip2
+
+```bash
+tar cfz mytarfile.tar.gzip a.txt b.txt c.txt
+```
+
+> ✍️ The `-r` option appends new files to the current available archive.
+
+### Extract a tar file
+
+To extract a `tar.gz` file, use the --extract (`-x`) option and specify the archive file name after the f option:
+
+```bash
+tar -xf archive.tar.gz
+tar xf archive.tar.gz
+```
+
+> ✍️ The `-v` option will make the tar command more visible and print the names of the files being extracted on the terminal.
+
+By default, tar will extract the archive contents in the current working directory. Use the `--directory` (`-C`) to extract archive files in a specific directory:
+
+```bash
+tar -xf archive.tar.gz -C /home/linuxize/files
+```
+
+When extracting files, you must provide their exact names, including the path, as printed by `--list` (`-t`).
+
+Extracting one or more directories from an archive is the same as extracting files:
+
+```bash
+tar -xf archive.tar.gz dir1 dir2Copy
+```
+
+## cpio
+
+```bash
+# To create
+ls | cpio -o > thefile.cpio
+
+# To open the file
+cpio -id < thefile.cpio
+```
+
+
+
 ## lsof
 
 ```bash
@@ -778,6 +941,21 @@ esac
 for index in 0 1 2 3 4; do
 	newarr[$index]=${originalarr[4-$index]}
 done
+
+# Range of numbers
+for index in {0..10}; do
+	newarr[$index]=${originalarr[4-$index]}
+done
+
+# Or it can be some strings
+for name in ; google.com facebook.com bing.com do
+	ping $name
+done
+
+# Read from file
+for index in $(cat cities.txt); do
+	newarr[$index]=${originalarr[4-$index]}
+done
 ```
 
 ## While
@@ -785,10 +963,12 @@ done
 ```bash
 # While status code is not 200 continue to making requests
 status_code=0
+i=0
 while [ $status_code -ne 200 ]
 do
 	status_code=$(curl -o /dev/null -s -w "%{http_code}" $1)
 	echo "ret is: [$status_code]"
+	((i ++))
 done
 
 # Loop through the lines of a file
@@ -887,54 +1067,6 @@ done
 # Print everything inside an array
 echo ${newarr[*]}
 ```
-
-# Tar
-
-## Extracting `.tar` files
-
-To extract a `tar.gz` file, use the --extract (`-x`) option and specify the archive file name after the f option:
-
-```bash
-tar -xf archive.tar.gz
-```
-
-The `-v` option will make the tar command more visible and print the names of the files being extracted on the terminal.
-
-By default, tar will extract the archive contents in the current working directory. Use the `--directory` (`-C`) to extract archive files in a specific directory:
-
-```bash
-tar -xf archive.tar.gz -C /home/linuxize/files
-```
-
-When extracting files, you must provide their exact names, including the path, as printed by `--list` (`-t`).
-
-Extracting one or more directories from an archive is the same as extracting files:
-
-```bash
-tar -xf archive.tar.gz dir1 dir2Copy
-```
-
-# gzip
-
-```bash
-# To compress a file 
-gzip you_file.txt
-
-# To list details including the compress percentage
-gzip -l you_file.txt.gz
-
-# To uncompress
-gzip -d you_file.txt.gz
-gunzip file.gz
-```
-
-You can use gzip in `tar` command. To compress a directory with multiple files
-
-```bash
-# -z for gzip
-tar -czvf files.gz files/
-```
-
 
 # Cron
 
