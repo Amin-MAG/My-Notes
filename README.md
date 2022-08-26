@@ -1,17 +1,17 @@
 # My Notes
 
-![Untitled](.notes/all.png)
+![Untitled](./notes/all.png)
 
-My "Notes" or My "Brain". I usually take some notes or document my experiences here. 
+My Notes, or "My Second Brain", is a repository in which I keep my notes about things I'm learning. I usually take some notes or document my experiences here.
 
 > You can use Obsidian to open this repository
 > 
 
 ## Main Entries
 
-Most of the documents are related to the computer science.
+Most of the documents are related to computer science.
 
-![Untitled](.notes/SE.png)
+![Untitled](./notes/SE.png)
 
 
 - [Computer-Science](Computer-Science.md)
