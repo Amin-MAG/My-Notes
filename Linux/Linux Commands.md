@@ -109,14 +109,6 @@ locate <FILE_NAME<
 'alias ll='ls -lh'
 ```
 
-## `<<`
-
-You can use `<< EOF` to give multiple line string to a command. You can use anything instead of using `EOF`.
-
-```bash
-cat << EOF > save.txt
-```
-
 ## Grep
 
 To search in the content of a file.

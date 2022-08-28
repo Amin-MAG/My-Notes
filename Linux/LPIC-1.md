@@ -986,6 +986,60 @@ ls ./*.txt
 > ⚠️ You can find most of this section in [Linux Commands](Linux%20Commands.md)
 > 
 
+# 103 - 4
+
+## Use streams, pipes and redirects
+
+### Streams
+
+Linux has three kinds of stream: stdin(code=0), stdout(code=1), and stderr(code=2) which can be read from or write on serveral devices such as console, printer, or...
+
+| Operator    | Usage                           |
+| ----------- | ------------------------------- |
+| `>`           | Redirects STDOUT to a file|
+| `>>`          | Appends STDOUT to a file|
+| `2>`   | Redirects STDERR to a file|
+| `2>>`   | Appends STDERR to a file|
+| `&>`   | Appends STDOUT & STDERR to a file|
+| `&>>`   | Appends STDOUT & STDERR to a file|
+| `<`   | Redirects STDIN from a file|
+| `<>`   | Redirects STDIN from a file and send the STDOUT to it|
+
+
+```bash
+# To redirect stdout and stdin in separate files
+# Consider not having x* file in current directory
+# And having t* file in current directory
+ls x* t* > lsresult 2> lserr
+```
+
+> ✍️  `&0`, `&1`, `&2` is defined after redirecting and it refers to the destination.
+> 
+
+```bash
+ls > lsresult 2>&1
+```
+
+> ✍️  `/dev/null` ignores any streams that are redirected to it.
+> 
+
+```bash
+# To just ignore the output
+# To redirect stdout and stdin in separate files
+# Consider not having x* file in current directory
+# And having t* file in current directory
+ls x* t* > lsresult 2>/dev/null
+```
+
+#### Here documents `<<`
+
+You can use `<< EOF` to give multiple line string to a command. You can use anything instead of using `EOF`.
+
+```bash
+cat << EOF > save.txt
+```
+
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)
