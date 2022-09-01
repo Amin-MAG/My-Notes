@@ -35,6 +35,10 @@ Peer-To-Peer Model
 
 This is the opposite of the Client-Server model and each one of the devices can be whether a server or a client. So that it is based on a distributed structure.
 
+## See more
+
+- [Build a simple ditributed system](Distributed-Systems/Simple-Distributed-System)
+
 # Resources
 
 [L1: What is a distributed system?](https://www.youtube.com/watch?v=7VbL89mKK3M)
