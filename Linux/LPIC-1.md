@@ -1039,6 +1039,18 @@ You can use `<< EOF` to give multiple line string to a command. You can use anyt
 cat << EOF > save.txt
 ```
 
+### Pipe
+
+```bash
+ls -1 | wc -n
+```
+
+Do something with each one of the results
+
+```bash
+ls | xargs echo
+```
+
 
 # Resources
 

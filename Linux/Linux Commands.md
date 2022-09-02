@@ -331,9 +331,19 @@ It can take output of a command and passes it as argument of another command.
 ls | xargs
 ls | xargs wc
 
+# It's more flexiable to 
+echo "hi there" | xargs -I DATA echo hi DATA there!
+
 # Change xargs to expect NUL (``\0'') characters as separators
 # Find & remove all directories with a special word
 find Downloads -name "flag" -type d -print0 | xargs -0 /bin/rm -v -rf "{}"
+```
+
+## tee
+
+```bash
+# It also print on the stdout
+ls -1 | tee allfiles myfiles
 ```
 
 ## SSH
