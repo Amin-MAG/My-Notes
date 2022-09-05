@@ -15,16 +15,6 @@ uname -a
 ln -s /root/B/publicB.pem
 ```
 
-## Kill a process
-
-```bash
-sudo kill -9 423
-
-# To kill a process on a specific port
-sudo kill -9 $(sudo lsof -t -i:3000)
-lsof -ti:8080 | xargs kill -9
-```
-
 ## ls
 
 ```bash
@@ -789,6 +779,21 @@ ps -ef
 ps -Af
 ```
 
+## Kill a process
+
+```bash
+sudo kill -9 423
+
+# To kill a process on a specific port
+sudo kill -9 $(sudo lsof -t -i:3000)
+lsof -ti:8080 | xargs kill -9
+
+# Kill all processes whoses command is exactly `xeyes`
+killall xeyes
+# Kill all process which have a kind of command
+pkill xeye
+```
+
 ## Strace
 
 If all you want to do is spy on the existing process, you can use `strace`.
@@ -796,6 +801,49 @@ If all you want to do is spy on the existing process, you can use `strace`.
 ```bash
 # To see only data written to file descriptor 3 (`-e trace=` prevents the system calls from being loged).
 strace -p1234 -e trace= -e write=3
+```
+
+## Jobs
+
+```bash
+# For see the procecess in the current session
+# Jobs with `&` at the end mean running in background
+jobs
+
+# With process id
+jobs -l
+```
+
+## Fg
+
+To resume a job or process in the foreground
+
+```bash
+# Resume the last process (consider the `+` sign)
+fg 
+
+# Choose between multiple processes
+fg %2
+```
+
+## Bg
+
+To resume a job in the background
+
+```bash
+# Resume the last process (consider the `+` sign)
+bg 
+
+# Choose between multiple processes
+bg %2
+```
+
+## Nohup
+
+These foreground and background process are alive until the session is closed. If you want to keep them alive even if the parent are killed, you need to use `nohup`.
+
+```bash
+nohup xeyes
 ```
 
 ## Curl

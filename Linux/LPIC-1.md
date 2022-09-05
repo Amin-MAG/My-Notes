@@ -1051,6 +1051,75 @@ Do something with each one of the results
 ls | xargs echo
 ```
 
+# 103 - 5
+
+## Managing processes
+
+Status
+- Foreground
+- Background
+- Running
+- Stopped
+
+You can use `CTRL+C` to terminate or `CTRL+Z` to stop a process which is run in the foreground.
+
+```bash
+# For see the procecess in the current session
+# Jobs with `&` at the end mean running in background
+jobs
+
+# With process id
+jobs -l
+```
+
+To resume a job or process in the foreground
+
+```bash
+# Resume the last process (consider the `+` sign)
+fg 
+
+# Choose between multiple processes
+fg %2
+```
+
+To resume a job in the background
+
+```bash
+# Resume the last process (consider the `+` sign)
+bg 
+
+# Choose between multiple processes
+bg %2
+```
+
+Or run a process in the background at first
+
+```bash
+xeyes &
+```
+
+These foreground and background process are alive until the session is closed. If you want to keep them alive even if the parent are killed, you need to use `nohup`.
+
+```bash
+nohup xeyes
+```
+
+### Signals
+
+- 1 - HUP
+- 15 - TERM
+- 9 - KILL
+
+```bash
+# Kill a process
+kill -9 1500
+
+# Kill all processes whoses command is exactly `xeyes`
+killall xeyes
+# Kill all process which have a kind of command
+pkill xeye
+```
+
 
 # Resources
 
