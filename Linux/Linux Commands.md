@@ -239,6 +239,16 @@ history
 !120
 ```
 
+To check whether the command is available or not.
+
+```bash
+if ! command -v <the_command> &> /dev/null
+then
+    echo "<the_command> could not be found"
+    exit
+fi
+```
+
 ## Tree the folders 2 levels
 
 ```bash
@@ -448,6 +458,9 @@ It restricts the way a file can be accessed.
 # others may only read it.
 chmod u=rwx,g=rx,o=r myfile
 chmod 754 myfile
+
+# To change the mod of files or directories
+find /var/www/html -type f -exec chmod u=rw,go=r {} \;
 ```
 
 The operator **+** causes the selected file mode bits to be added to the existing file mode bits of each file; **** causes them to be removed; and **=** causes them to be added and causes unmentioned bits to be removed except that a directory's unmentioned set user and group ID bits are not affected.
