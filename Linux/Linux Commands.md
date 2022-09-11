@@ -478,7 +478,16 @@ chown -R user1 /shared_files
 You can use `watch` command to watch the output of your command periodically.
 
 ```bash
+# Default is 2 seconds
+watch uptime
+
 watch -n 1  "ls -lhf | grep Huawei | awk '{print \$5}'"
+
+# Highlight the differences
+watch -n 1 -d uptime
+
+# Make sound if it has a non zero exit
+watch -n 1 ./run
 ```
 
 ## Cat
@@ -779,7 +788,7 @@ cpio -id < thefile.cpio
 lsof -i:8080
 ```
 
-## PS
+## ps
 
 It's a flexible too for identifying programs running on the system.
 
@@ -787,9 +796,27 @@ It's a flexible too for identifying programs running on the system.
 # Show the processes
 ps
 
-# Show the all processes based on the users
+# All Linux processes
+ps -e
+
+# Full information of processes
 ps -ef 
 ps -Af
+
+# Show resources dedicated to the processes
+ps -aux
+```
+
+### pgrep
+
+To find a process between running processes
+
+- [ ] ```bash
+ps | grep eyes
+pgrep eyes
+
+# Kill all eyes processes
+pgrep eyes | xargs kill
 ```
 
 ## Kill a process

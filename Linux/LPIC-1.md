@@ -1120,6 +1120,20 @@ killall xeyes
 pkill xeye
 ```
 
+### Monitoring processes
+
+There are some useful commands for monitoring the system.
+
+```bash
+top
+htop
+uptime
+free -h
+```
+
+#### top
+
+It shows the load average in the first line. The numbers represent the load averege in recent 1, 5, and 15 minutes. The number shows how many process are requested in the system and it should be fewer than the number of CPU cores. (If the load number is higher than the number of CPU, some processes should wait to be processed and it can have some troubles for the system)
 
 # Resources
 
