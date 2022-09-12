@@ -1,5 +1,13 @@
 # Git
 
+## Tricks
+
+To change the author's name in the last commit
+
+```bash
+git commit --amend --reset-author --no-edit
+```
+
 ## Hooks
 
 There are a bunch of hooks in `./git/hooks` triggered at specific moments. All of them are disabled by default. You can change the name and remove the `sample` to enable a hook.
