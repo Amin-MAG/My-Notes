@@ -8,6 +8,7 @@
 
 - [Design Patterns](Software%20Engineering/Design%20Patterns.md)
 - Software Anti-Patterns
+- [Refactoring](Refactoring.md)
 
 ## Service-Oriented Software Engineering
 
