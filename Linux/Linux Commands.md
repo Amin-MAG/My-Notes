@@ -374,7 +374,7 @@ Another tool is called Screen.
 screen -S session_name
 
 # To detach
-# Press ^a^d
+# Press ^a + d
 
 # List the sessions
 screen -ls

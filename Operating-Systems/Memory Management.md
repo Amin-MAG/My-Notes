@@ -2,7 +2,7 @@
 
 Here is a figure for memory of OS
 
-![Untitled](Memory%20Management/Untitled.png)
+![Untitled](Operating-Systems/Memory%20Management/Untitled.png)
 
 1. The text area contains the program's machine instructions (i.e., the executable code).
 2. [Global](https://icarus.cs.weber.edu/~dab/cs1410/textbook/1.Basics/terminology.html#extern) variables are defined in
