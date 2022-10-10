@@ -165,12 +165,10 @@ sudo cp /etc/openvpn/ca.crt ~/client-configs/keys/
 
 ## TCP / UDP
 
-## Other pages
+# See More
 
-[University](Network/University%20bc284.md)
-
-[VPN](Network/VPN%2009efe.md)
-
-[Tor](Network/Tor%20662bd.md)
-
-[Laboratory](Network/Laboratory%20a293b.md)
+- [University](Network/University%20bc284.md)
+- [VPN](Network/VPN%2009efe.md)
+- [Tor](Network/Tor%20662bd.md)
+- [Laboratory](Network/Laboratory%20a293b.md)
+- [Setup a security camera](Network/SecurityCamera.md)

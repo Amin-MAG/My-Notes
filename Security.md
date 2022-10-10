@@ -215,6 +215,7 @@ So there is no complexity here, the browser will check the access-control-allowe
 - [Gobuster](Gobuster.md)
 - [SQL-Map](Security/SQL-Map.md)
 - [Cryptography](Cryptography.md)
+- [Security Camera](Network/SecurityCamera.md)
 - [University](Security/University.md)
 
 # Resources
