@@ -315,7 +315,7 @@ rsync -av /Volume/example .
 # Simulate the rsync
 rsync -av --dry-run --progress /Volume/example .
 
-# With progress bar
+# With the progress bar
 rsync -av --progress /Volume/example .
 
 # To another server
@@ -324,10 +324,10 @@ rsync -av --progress /Volume/example root@139.177.195.158:
 
 ## xarg
 
-It can take output of a command and passes it as argument of another command.
+It can take the output of a command and passes it as an argument for another command.
 
 ```bash
-# To convert muti-line output from ls command into single line
+# To convert the muti-line output from ls command into a single line
 ls | xargs
 ls | xargs wc
 
@@ -811,7 +811,7 @@ ps -aux
 
 To find a process between running processes
 
-- [ ] ```bash
+```bash
 ps | grep eyes
 pgrep eyes
 
@@ -828,9 +828,9 @@ sudo kill -9 423
 sudo kill -9 $(sudo lsof -t -i:3000)
 lsof -ti:8080 | xargs kill -9
 
-# Kill all processes whoses command is exactly `xeyes`
+# Kill all processes whose command is exactly `xeyes`
 killall xeyes
-# Kill all process which have a kind of command
+# Kill all process that have a kind of command
 pkill xeye
 ```
 
@@ -1610,17 +1610,9 @@ Then your computer will try to resolve `test.example.com` followed by `test.c
 
 ### Records
 
-#### A Record
-
-Mapping a IPv4 to host names.
-
-#### AAAA Record
-
-Mapping a IPv6 to host names.
-
-#### CNAME Record
-
-Mapping a host name to other host names.
+- A Record: Mapping a IPv4 to host names.
+- AAAA Record: Mapping a IPv6 to host names.
+- CNAME Record: Mapping a host name to other host names.
 
 ### nslookup
 
@@ -1664,6 +1656,28 @@ google.com.		200	IN	A	142.250.179.174
 ;; SERVER: 127.0.0.53#53(127.0.0.53)
 ;; WHEN: Fri May 20 02:32:56 +0430 2022
 ;; MSG SIZE  rcvd: 55
+```
+
+## Aircrack
+
+Start monitoring
+
+```bash
+airmon-ng start wlan0
+```
+
+Start sniffing the packets
+
+```bash
+airodump-ng  wlan0mon
+```
+
+```bash
+aireplay-ng --test wlan0mon
+```
+
+```bash
+besside-ng wlan0mon -R Irancell-TD-9283727
 ```
 
 # Fantasy packages

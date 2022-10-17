@@ -1,6 +1,6 @@
 # Memory Management
 
-Here is a figure for memory of OS
+Here is a figure for the memory of the OS
 
 ![Untitled](Operating-Systems/Memory%20Management/Untitled.png)
 

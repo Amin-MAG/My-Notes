@@ -28,11 +28,14 @@ The variables are immutable by default and it allows them to be used in stack me
 let hello = "hi mom"
 ```
 
-By using `mut` keyword, Mutable variables will be stored  in heap.
+By using `mut` keyword, Mutable variables will be stored in the heap.
 
 ## Package Manager
 
-Cargo is the Rust package manager.
+
+# See More
+
+- [Cargo, the Rust package manager](Rust/Cargo.md)
 
 # References
 
