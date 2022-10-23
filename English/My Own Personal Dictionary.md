@@ -377,6 +377,13 @@ Acclaimed
 - **Bind to -** Cause someone to feel strongly attached to a person or place.
     - This demonstrates how new cultural symbols bound provincials to the identity of the Roman world.
 
+## Brave
+
+- To deal with a dangerous and difficult situation
+    - I decided to take the train to work rather than **brave the traffic**.
+    - **It was brave of you** to speak in front of all those people.
+    - Despite their captain’s **brave performance**, Arsenal lost 2-1. (Good performance)
+
 ## Breach
 
 - To break a law or rule (or action that breaks a law or rule)
@@ -386,6 +393,12 @@ Acclaimed
     - What had caused the **sudden breach between** Henry and his son?
     - She wanted to help **heal the breach** between them.
 
+## Brittle
+
+- Hard but easily broken
+    - The branches are dry and brittle.
+    - He spoke with the brittle confidence of someone who, underneath, was very worried.
+
 ## Burst
 
 - **Burst into** - to suddenly begin to make a sound
@@ -394,6 +407,11 @@ Acclaimed
     - Their car crashed and burst into flames.
 - **Burst through** - To break through something
     - Crowds burst through the barriers and run onto the pitch.
+
+## Catastrophe
+
+- A terrible event
+    - The black sea is facing an ecological catastrophe as a result of pollution.
 
 ## Cease ⭐
 
@@ -415,6 +433,14 @@ Acclaimed
     - I was shocked by the doctor’s **lack of compassion**.
     - Practice compassion toward others and toward yourself.
 
+## Compel
+
+- To force someone to do something
+    - The law **compels employers to provide** health insurance.
+    - She **felt compelled** to resign because of the scandal.
+- To make people have a particular feeling
+    - His performance **compelled the audience’s attention**.
+
 ## Compensation ⭐
 
 - Something that makes a bad situation better, Repayment
@@ -431,7 +457,7 @@ Acclaimed
     - **Compliment۶s on** her appearance.
     - Bob **complimented me on** my new hairstyle.
 
-## Comprise
+## Comprise ⭐
 
 - To consist of particular parts
     - The committee is **comprised of** well-known mountaineers.
@@ -491,10 +517,22 @@ Acclaimed
     - Each chapter **concludes with** a short summary.
     - **To conclude by doing something**
 
+## Confront
+
+- Need to be dealt
+    - Customers are **confronted with** a bewildering amount of choices.
+    - We try to help confront their problems.
+
 ## Conscience
 
 - Moral sense
     - To have a clear conscience
+
+## Consensus
+
+- An opinion that everyone in a group agrees with.
+    - A lack of **consensus about/on** the aims of the project.
+    - There is a consensus among the teachers that children should have a broad understanding of the world.
 
 ## Constitute
 
@@ -575,6 +613,11 @@ Acclaimed
 - To make something (Feeling, activity, noise, or movement) less strong
     - The light rain dampened the crowd’s enthusiasm.
 
+## Decisive
+
+- Definite
+    - I want to stress the decisive importance of city location.
+
 ## Decline ⭐
 
 - A decrease in the quality, quantity, or importance of something, To decrease, To become worse
@@ -613,6 +656,12 @@ Acclaimed
 - To damage something very badly
     - The city center was devastated by the bomb
 
+## Devote
+
+- To use all or most of your time or effort
+    - He **devotes his energies to** writing films.
+    - She **devoted herself full-time to** her business.
+
 ## Domesticate
 
 - Tame, Habituate
@@ -626,6 +675,12 @@ Acclaimed
     - An attempt to diffuse his anger.
 - Using a lot of words without explanation which makes it unclear
     - His writing is diffuse and difficult to understand.
+
+## Disperse
+
+- To spread, go away in different directions
+    - Police used tear gas to disperse the crowd.
+    - The clouds dispersed as quickly as they had gathered.
 
 ## Dispose
 
@@ -768,6 +823,17 @@ Acclaimed
 - To cover or surround something
     - The houses encompassed around 100 square meters.
 
+## Engage
+
+- To be doing or to become involved in an activity
+    - Only 10% of American adults **engaged in** regular exercise.
+    - Despite her illness, she remains actively engaged in shaping policy.
+- To attract someone attention and keep them interested.
+    - The toy didn’t engage her interest for long.
+- To employ someone to do a particular job
+    - Her father **engage a tutor to improve** her maths.
+    - We’d be able to **engage local people as volunteers**.
+
 ## Enthusiasm
 
 - Keen, Interest, Excitement
@@ -793,6 +859,11 @@ Acclaimed
 
 - Too much
     - They **exercise an influence** far **in** **excess** of their numbers.
+
+## Expedient
+
+- A quick and effective way of dealing with a problem
+    - Moore was escaped by a simple expedient of lying down in a clump of grass.
 
 ## Expedition
 
@@ -834,9 +905,9 @@ Acclaimed
 ## Fare
 
 - The price you pay for travel
-    - Air fares have shop up by 20%.
+    - Air fares have shot up by 20%.
 - Food (Especially served in a restaurant or eaten on special occasions)
-    - Traditional Christmas foods
+    - Traditional Christmas fare.
 
 ## Feed
 
@@ -945,6 +1016,12 @@ Acclaimed
 - Rush, Flow
     - A **huge influx of** Nowruz tourists
 
+## Inhibit
+
+- To prevent something from growing or development, To make someone embarrassed.
+    - An unhappy family can inhibit children’s learning.
+    - Recording the meeting may inhibit people from expressing their real views.
+
 ## Instinct
 
 - A natural tendency to behave in a particular way
@@ -992,6 +1069,11 @@ Acclaimed
     - Every summer, the town is invaded by tourists.
 - To get involved in something unwanted and annoying way
     - What right does he have to invade my privacy?
+
+## Invasive
+
+- Can be spread quickly (for diseases and plants)
+    - The red imported fire is one the world’s worst invasive species.
 
 ## Kin
 
@@ -1237,6 +1319,10 @@ Acclaimed
 ## Prey ⭐
 
 - An animal that is hunted and eaten by another animal.
+
+## Prosperous
+
+- Flourishing
 
 ## Provoke
 
@@ -1512,6 +1598,11 @@ Acclaimed
 - Pain, Become worse
     - I’m worried and my work is beginning to suffer.
     - It **suffers from** the objection.
+
+## Swarm
+
+- A large uncontrolled group (of bees or people)
+    - When they **swarm in large numbers**, they can kill.
 
 ## System
 
