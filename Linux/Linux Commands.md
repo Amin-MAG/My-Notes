@@ -913,6 +913,12 @@ You can also send a file using curl
 curl -F 'uploadFile=@./xs.PNG' http://localhost:8080/upload
 ```
 
+To send a gzip file with curl
+
+```bash
+curl -i -XPOST localhost:8080/orgs/8395a239-d09f-4427-927a-614022239859/devices/f365fbb2-56bf-4b4f-95e3-23cd1c9fc88a/apps/runner/logs -H'Content-Encoding : gzip' --data-binary @sentlog.gz
+```
+
 To get the status code from the curl you can use
 
 ```bash
@@ -941,6 +947,14 @@ curl <FILE_URL> --output filename.jpg
 ## APT
 
 You can edit the resources in this list. `/etc/apt/sources.list` and in any file with the suffix .list under the directory like `/etc/apt/sources.list.d/`
+
+## Binwalk
+
+Check the binary file to see if it is consisted of multiple binaries or not.
+
+```bash
+binwalk f.png
+```
 
 ## Convert
 
