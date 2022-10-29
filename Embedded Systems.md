@@ -701,7 +701,7 @@ void vTaskDelay(TickType_t ticks)
 
 - [Assignment I](Embedded%20Systems/Assignment%201.md)
 - [Assignment II](Embedded%20Systems/Assignment%202.md)
-- [Arduino](Embedded%20Systems/Arduino.md)
+- [Arduino](Arduino.md)
 
 # References
 

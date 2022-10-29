@@ -16,14 +16,12 @@
 - `/tmp`: Contains files that won't be persisted between reboots.
 - `/proc`: Imaginary directory that doesn't actually exist on the disk. It is created by the memory and contains information about processes.
 
-[LPIC-1](Linux/LPIC-1.md)
+# See More
 
-[Swap](Linux/Swap.md)
-
-[Linux Commands](Linux/Linux%20Commands.md)
-
-[DPKG](Linux/DPKG.md)
-
-[Makefile](Linux/Makefile.md)
-
-[Systemctl](Linux/Systemctl.md)
+- [LPIC-1](Linux/LPIC-1.md)
+- [Swap](Linux/Swap.md)
+- [Linux Commands](Linux/Linux%20Commands.md)
+- [DPKG](Linux/DPKG.md)
+- [Makefile](Linux/Makefile.md)
+- [Systemctl](Linux/Systemctl.md)
+- [ffmpeg](Linux/ffmpeg.md)
