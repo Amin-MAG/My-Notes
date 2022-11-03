@@ -63,7 +63,11 @@ Such a rule traditionally consisted of three parts:
 
 `empty`
 
-# Read More
+## Softwares for Miscellaneous Devices
+
+- [Mobile Development](Mobile-Development.md)
+
+# See More
 
 - [Cloud Computing](Cloud%20Computing.md)
 - [Programming Languages](Programming%20Languages.md)
