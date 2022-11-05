@@ -2069,15 +2069,82 @@ systemd-run --on-active="2minute" touch /tmp/chert
 
 # Network
 
+To get some information about network adapters
+
+```bash
+# Install the lshw
+sudo apt install lshw
+
+sudo lshw -class network
+```
+
 ## IP Address
 
 To get local IP addresses:
 
 ```bash
-ifconfig
+# Using ip command
+sudo ip a
+# sudo ip a s <Interface>
+sudo ip a s eth0
+
+# Using ifconfig command
+sudo ifconfig
 ```
 
-### Search all of the active IP Addresses
+To enable/disable the interfaces:
+
+```bash
+# Using ip command
+sudo ip link set dev eth0 up
+sudo ip link set dev eth0 down
+
+# Using ifconfig command
+sudo ifconfig eth0 up
+sudo ifconfig eth0 down
+```
+
+To change IP Adresses:
+
+```bash
+# Using ip command
+
+# Using ifconfig
+sudo ifconfig eth0 192.168.42.169 netmask 255.255.255.0
+```
+
+When manually changing your IP address, Linux automatically understands that you want to change from using a DHCP server to static IP addressing.
+
+On Linux, changing your IP address using network utilities does not mean that your IP configuration will be saved on reboots. **In order to change your IP address on Linux, you will have to add your network configuration in the “/etc/network/interfaces” or create this file if it does not exist already.**
+
+```bash
+# Content of /etc/network/interfaces
+
+iface eth0 inet static 
+address 192.168.178.32 
+netmask 255.255.255.0 
+gateway 192.168.178.1
+```
+
+Then, restart the network service
+
+```bash
+sudo systemctl restart networking.service
+```
+
+### Routes
+
+```bash
+# List the current routes
+sudo ip route list
+sudo ip route show
+route -n
+
+# Add a route
+sudo ip route add 10.0.2.15 via 192.168.43.223 dev enp0s3
+```
+
+## Search all of the active IP Addresses
 
 ```bash
 # Install the arp-scan
@@ -2108,14 +2175,54 @@ resolvectl status
 ```bash
 iwconfig
 
-sudo iwlist <INTERFACE> scan | grep ESSID
+# sudo iwlist <INTERFACE> scan | grep ESSID
+sudo iw dev wlan0 scan | grep SSID
 
-# To connect 
+# To connect Wifi
 wpa_passphrase <YOUR-ESSID> <YOUR-PASS> | sudo tee /etc/wpa_supplicant.conf
 sudo wpa_supplicant -c /etc/wpa_supplicant.conf -i wlp4s0
+
+# Get the name of current SSID
+iwgetid
 ```
 
-- [x] ## Block a server
+### nmcli
+
+```bash
+# Install the network manager to have this command
+sudo apt install network-manager
+sudo nmcli dev status
+
+# Monitor nearby wifi
+sudo nmcli radio wifi
+sudo nmcli radio wifi on
+sudo nmcli dev wifi
+
+```
+
+## Aircrack
+
+Start monitoring
+
+```bash
+airmon-ng start wlan0
+```
+
+Start sniffing the packets
+
+```bash
+airodump-ng  wlan0mon
+```
+
+```bash
+aireplay-ng --test wlan0mon
+```
+
+```bash
+besside-ng wlan0mon -R Irancell-TD-9283727
+```
+
+## Block a server
 
 Sometimes you may need to block the connection with specific servers. The file `/etc/hosts` is the one gathering information. If you want to block a server you should add lines to this file.
 
@@ -2558,28 +2665,6 @@ google.com.		200	IN	A	142.250.179.174
 ;; SERVER: 127.0.0.53#53(127.0.0.53)
 ;; WHEN: Fri May 20 02:32:56 +0430 2022
 ;; MSG SIZE  rcvd: 55
-```
-
-## Aircrack
-
-Start monitoring
-
-```bash
-airmon-ng start wlan0
-```
-
-Start sniffing the packets
-
-```bash
-airodump-ng  wlan0mon
-```
-
-```bash
-aireplay-ng --test wlan0mon
-```
-
-```bash
-besside-ng wlan0mon -R Irancell-TD-9283727
 ```
 
 # Fantasy packages
