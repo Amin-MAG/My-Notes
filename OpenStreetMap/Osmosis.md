@@ -1,6 +1,6 @@
 # Osmosis
 
-# Extract OSM file to DB
+## Extract OSM file to DB
 
 Let's extract a `.osm.pbf` to the Postgres database and execute some queries.
 
@@ -111,7 +111,7 @@ osmosis --read-pgsql host="localhost:5432" user="admin" password="admin" databas
 osm2pgsql -c -d osm -U postgres -H localhost -S C:\default.style C:\bangkok.osm.pbf
 ```
 
-# Convert
+## Convert
 
 Convert the `.osm` file to the `.osm.pbf` file.
 
@@ -122,10 +122,17 @@ osmosis --read-xml file=map.osm --write-pbf map.osm.pbf
 osmosis --read-pbf file=this_is_for_test.osm.pbf --write-xml map.osm
 ```
 
-# Cropping
+## Cropping
 
 ```bash
 osmosis --read-xml file="YOUR-REGION-latest.osm" \ 
 	--bounding-polygon file="CITY-NAME_STATE.poly" \
 	--write-xml file="CITY-NAME_STATE.osm"
+```
+
+## Applying changes
+
+```bash
+osmosis --read-xml-change file="my_update.osc" --read-xml file="tehran-copy.osm" \
+	--apply-change --write-xml "applied.osm"
 ```

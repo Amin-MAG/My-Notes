@@ -399,18 +399,22 @@ To implement this programs need a cache file to track what has been uploaded and
 
 Note: The upload API call supports placeholders - in fact, **all** id attributes in create elements are treated as placeholders whether negative or not. However, you should stick to negative numbers to ensure that placeholder IDs do not clash with any other IDs in the OsmChange document. Note that the Rails port substitutes negative placeholder ids only. This affects both nodes in ways, as well as relation member ids in relations. Thus, using negative placeholder ids is essentially mandatory for the placeholder replacement to take place.
 
+# Links
+
+- To create and see the polygons: [Map Polygon/Polyline Tool](https://www.keene.edu/campus/maps/tool/)
+- [Map shapes generator](https://www.doogal.co.uk/polylines.php)
+- [Wicket - Lightweight Javascript for WKT [Sandbox]](https://arthur-e.github.io/Wicket/sandbox-gmaps3.html)
+
+# See more
+
+- [Osmosis](Osmosis.md)
+- [Geohash](Geohash.md)
+- [Links](Links.md)
+- [Osmium](Osmium.md)
+- [OSM Filter](OSM%20Filter.md)
+
 # Resources
 
 [Getting started with OpenStreetMap](https://medium.com/@jinalfoflia/getting-started-with-openstreetmap-7f29abb2998c)
 
 [OpenStreetMap Wiki](https://wiki.openstreetmap.org/wiki)
-
-[Osmosis](Osmosis.md)
-
-[Geohash](Geohash.md)
-
-[Links](Links.md)
-
-[Osmium](Osmium.md)
-
-[OSM Filter](OSM%20Filter.md)
