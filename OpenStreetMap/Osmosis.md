@@ -136,3 +136,11 @@ osmosis --read-xml file="YOUR-REGION-latest.osm" \
 osmosis --read-xml-change file="my_update.osc" --read-xml file="tehran-copy.osm" \
 	--apply-change --write-xml "applied.osm"
 ```
+
+## Grab small region
+
+```bash
+$ osmosis --rri --simc --rx current.osm --ac --bb \
+				left=42 right=42 top=42 bottom=42 \
+				clipIncompleteEntities=yes --wx new.osm
+```
