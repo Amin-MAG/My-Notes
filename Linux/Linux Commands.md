@@ -698,6 +698,36 @@ It is a more advanced copy.
 dd if=/dev/zero of=newfile count=100 bs=1
 ```
 
+## Process management
+
+### nice
+
+It run a command with a specific niceness. 
+
+```bash
+# Show the default niceness
+nice 
+
+# Run ls with niceness 10
+nice ls
+
+# Run ls with niceness 14
+nice -n 14 ls
+
+# Run ls with niceness -14
+sudo nice -n -14 ls
+```
+
+**Notice:** non-root user can not set negative niceness for their tasks.
+
+### renice
+
+It changes the niceness of a process.
+
+```bash
+renice -n 57890
+```
+
 # Compression
 
 ## gzip

@@ -1051,7 +1051,7 @@ Do something with each one of the results
 ls | xargs echo
 ```
 
-# 103 - 5
+# 103 - 5, 6
 
 ## Managing processes
 
@@ -1103,6 +1103,10 @@ These foreground and background process are alive until the session is closed. I
 ```bash
 nohup xeyes
 ```
+
+### Niceness and priority
+
+Niceness is a number between -20 and 19. If the niceness is a big number then it will have less priority to gain resources. A process will have `niceness=0` when it gets start.
 
 ### Signals
 
