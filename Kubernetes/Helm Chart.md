@@ -1,4 +1,4 @@
-# Helm
+# What is Helm
 
 It is a package manager for k8s. It like apt, home brew or yum. It is a good way to package YAML files together and distribute them in public and private repositories.
 
@@ -52,6 +52,54 @@ Tiller actually saves the history of the deployed YAML files for future.
 ### Helm v3
 
 This feature was removed because of security issues. It was powerful and could add, update, or remove components of k8s cluster. There is no Tiller.
+
+# Commands
+
+To add a new repository
+
+```bash
+helm repo add bitnami https://charts.bitnami.com/bitnami
+```
+
+To list the repositories
+
+```bash
+helm repo list
+```
+
+To search between the repositories
+
+```bash
+helm search repo bitnami/nginx
+```
+
+To install a helm chart with a parameter
+
+```bash
+helm install cobbler-db-postgresql bitnami/postgresql --set service.type=CluterIP
+
+# You can also uninstall a release using 
+helm uninstall cobbler-db-postgresql
+```
+
+You can see the list of the helm's deployments
+
+```bash
+helm ls
+```
+
+Create a new helm chart
+
+```bash
+helm create cobbler-pg-database
+```
+
+To clean up and see whether you make a mistake or not
+
+```bash
+helm lint ./mychart/
+```
+
 
 # References
 
