@@ -1202,6 +1202,20 @@ done
 echo ${newarr[*]}
 ```
 
+## Tips
+
+To check the exit code and status of the last executed command.
+
+```bash
+if [ $? -eq 0 ]
+then
+  echo "Successfully created file"
+else
+  echo "Could not create file" >&2
+  exit 1
+fi
+```
+
 # Cron
 
 ## Basic syntax
