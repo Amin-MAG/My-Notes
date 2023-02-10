@@ -4,11 +4,11 @@
 
 ## Operating System
 
-The computer is all just some hardware. An operating system is software that manages hardware and its resources. It allocates resources to the applications.
+The computer is all just some hardware. An operating system is a software that manages hardware and its resources. It allocates resources to the applications.
 
 ## Firmware
 
-Firmware is something between hardware and software. It enables that hardware to communicate to the operating system or other hardware.
+Firmware is something between hardware and software. It enables that hardware to communicate with the operating system or other hardware.
 
 The motherboard itself has firmware; the older version of this firmware was called BIOS. Nowadays, we have UEFI (Unified Extensible Firmware Interface). UEFI has a separate partition `/boot`. They're modern and fantasy.
 
@@ -1051,7 +1051,7 @@ Do something with each one of the results
 ls | xargs echo
 ```
 
-# 103 - 5, 6
+# 103 - 5, 103 - 6
 
 ## Managing processes
 
@@ -1138,6 +1138,78 @@ free -h
 #### top
 
 It shows the load average in the first line. The numbers represent the load averege in recent 1, 5, and 15 minutes. The number shows how many process are requested in the system and it should be fewer than the number of CPU cores. (If the load number is higher than the number of CPU, some processes should wait to be processed and it can have some troubles for the system)
+
+##103 - 7
+
+## RegEX
+
+```bash
+grep funk words.txt
+grep j..a words.txt
+
+```
+
+
+# 104 - 1
+
+## Block devices
+
+A nonvolatile storage device that can be accessed in any order.
+
+```bash
+# To see all blocks
+lsblk
+```
+
+## Create partitions
+
+To partition your disks you can use `fdisk` for older systems that use BIOS and MBR. You can use `gdisk` for systems that use UEFI and GPT.
+
+```bash
+# Start partitioning
+fdisk /dev/sda
+
+# p for listing partitions
+# n for creating a new partition
+# t for changing the type of the partition.
+```
+
+### GParted/Parted
+
+Parted has more features than `gdisk` or `fdisk`. For example, it can resize the partitions.
+
+## File Systems
+
+- ext2 
+	- Doesn't have journaling.
+- ext3 
+	- It has journaling.
+	- Each file size could be 1TB and the max filesystem size is 16TB.
+- ext4
+	- It has journaling.
+	- Each file size could be 16TB and the max filesystem size is 1EB.
+- XFS
+	- It has journaling.
+	- caches to RAM.
+	- Max filesystem and file size are 8EB.
+- swap
+- VFAT/FAT32
+	- Doesn't have journaling.
+	- It is simple and any device can recognize this filesystem.
+- exFAT
+	- It is simple and any device can recognize this filesystem.
+- btrfs
+	- A new high-performance filesystem.
+	- It has a RAID
+	- Create partitions from multiple physical hard disks. (LVM)
+	- It has a Snapshot feature.
+
+## Formatting a partition
+
+```bash
+# Formatting to ex3 (Calling /sbin/mkfs.ext3)
+mkfs -t ext3 /dev/sda1
+```
 
 # Resources
 
