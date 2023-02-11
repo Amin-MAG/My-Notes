@@ -263,12 +263,15 @@ for hit in resp['hits']['hits']:
     print("%(timestamp)s %(author)s: %(text)s" % hit["_source"])
 ```
 
+## To get a specific item 
+
+```python
+fetched = es.get(index="ride-recommender-2022.06.29", id="Cp3xsIEBm0LuWQhlK45T")
+```
+
 # References
 
-[What is Elasticsearch? | Elasticsearch Guide [7.14] | Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html)
-
-[Elasticsearch: What it is, How it works, and what it's used for](https://www.knowi.com/blog/what-is-elastic-search/)
-
-[Quick start | Elasticsearch Guide [7.16] | Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html)
-
-[How indexing and retrieval algorithms work in Elasticsearch | ElasticSearch 7 for Beginners #1.2](https://www.youtube.com/watch?v=fcIzAg63WyI)
+- [What is Elasticsearch? | Elasticsearch Guide [7.14] | Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html)
+- [Elasticsearch: What it is, How it works, and what it's used for](https://www.knowi.com/blog/what-is-elastic-search/)
+- [Quick start | Elasticsearch Guide [7.16] | Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html)
+- [How indexing and retrieval algorithms work in Elasticsearch | ElasticSearch 7 for Beginners #1.2](https://www.youtube.com/watch?v=fcIzAg63WyI)
