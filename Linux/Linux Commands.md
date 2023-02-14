@@ -99,7 +99,7 @@ locate <FILE_NAME<
 'alias ll='ls -lh'
 ```
 
-## Grep
+## grep
 
 To search in the content of a file.
 
@@ -122,7 +122,20 @@ cat something.txt | grep -B 5 -A 5 something
 # Search between all files in current directory
 # using regular expression and with line number.
 grep -r -n -e ".*"  ./*
+
+# Show the count 
+grep -c funk words_alpha.txt
+
+# Show all of the file names that contains the regex
+grep -lr funk .
+
+# grep this regex in all txt files
+grep a *.txt
 ```
+
+## egrep
+
+`egrep` is an extended grep. It is equal to `grep -E`.
 
 ## Binaries
 
@@ -131,10 +144,58 @@ grep -r -n -e ".*"  ./*
 strings <BINARY_FILE>
 ```
 
-## Disk Storage Status
+##  df
+
+Disk Storage Status
 
 ```bash
 df -h
+```
+
+## lsblk
+
+Show all of blocks
+
+```bash
+lsblk
+```
+
+## fdisk
+
+Show all of the partitions of a disk
+
+```bash
+# List all of partitions
+fdisk /dev/sda -l
+```
+
+Start partitioning
+
+```bash
+fdisk /dev/sda
+```
+
+## mkfs
+
+```bash
+# Formatting to ex3 
+mkfs -t ext3 /dev/sda1
+# Calling /sbin/mkfs.ext3
+mkfs.ext3 /dev/sda1
+```
+
+## mkswap
+
+```bash
+# Create a swap area
+mkswap /dev/sda5
+```
+
+## blkid
+
+```bash
+# Get the UUID of a partition
+blkid /dev/sda1
 ```
 
 ## List folders sizes
