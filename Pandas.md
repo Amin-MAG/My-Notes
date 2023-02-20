@@ -1,5 +1,22 @@
 # Pandas
 
+## Basics
+
+```python
+# To get the size of the data
+df.shape
+
+# To get the length
+df.shape[0]
+```
+
+## Drop
+
+```python
+# Remove any rows that have NaN value
+df = df.dropna()
+```
+
 ## Series
 
 ```python

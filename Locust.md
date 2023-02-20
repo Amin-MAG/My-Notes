@@ -1,6 +1,6 @@
 # Locust
 
-It is a load testing tool written in python.
+It is a load-testing tool written in python.
 
 ## Installation
 
