@@ -1211,6 +1211,20 @@ Parted has more features than `gdisk` or `fdisk`. For example, it can resize the
 mkfs -t ext3 /dev/sda1
 ```
 
+# 104 - 2
+
+## Maintaining the integrity of filesystems
+
+### iNode
+
+In `ext` filesystems, the filesystem store more information about files like the file owner or permissions. This data is stored in the `inode` table.
+
+> See more about [df](Linux%20Commands.md##df) and [du](Linux%20Commands.md##du) on the Linux commands page.
+
+## Repairing filesystem
+
+> See more about [fsck](Linux%20Commands.md##fsck), [tune2fs](Linux%20Commands.md##tune2fs) and [xfs](Linux%20Commands.md##xfs)on the Linux commands page.
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)

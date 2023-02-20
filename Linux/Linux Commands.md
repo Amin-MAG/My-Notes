@@ -144,14 +144,6 @@ grep a *.txt
 strings <BINARY_FILE>
 ```
 
-##  df
-
-Disk Storage Status
-
-```bash
-df -h
-```
-
 ## lsblk
 
 Show all of blocks
@@ -200,8 +192,44 @@ blkid /dev/sda1
 
 ## List folders sizes
 
+Sort files based on their sizes:
+
 ```bash
-du -sh *
+ll -hrl | sort -k 5n
+```
+
+##  df
+
+Disk Storage Status (Disk free).
+
+```bash
+# Human readable
+df -h
+
+# Show the type of the filesystem
+df -hT
+
+# Show the status of iNode
+df -i
+```
+
+## du
+
+Disk Usage
+
+```bash
+# Print the usage of all files in the current directory
+du -h
+
+# Show the summary of disk usage in the root
+du / -h -s
+```
+
+If you want to be more specific
+
+```bash
+# Calculate with a specific depth
+du -h --max-depth 1
 ```
 
 If you want to sort them, you can use the `sort` command.
@@ -210,16 +238,47 @@ If you want to sort them, you can use the `sort` command.
 du -hs * | sort -h
 ```
 
-An alternative for the `du` is the `ncdu`:
+## fsck
+
+Filesystem Check
 
 ```bash
-ncdu
+fsck /dev/sda5
+
+# Check everything that is necessary
+fsck -A
+
+# Do not execute anything
+fsck -N
+# Ask me each time
+fsck -i
 ```
 
-Sort files based on their sizes:
+To see where are the current partitions you can see `/etc/fstab`.
+
+## tune2fs
+
+Get full information about a disk.
 
 ```bash
-ll -hrl | sort -k 5n
+tune2fs -l /dev/sda5
+```
+
+## xfs
+
+```bash
+xfs_info
+
+# Organizing the blocks
+xfs_fsr
+```
+
+### ncdu 
+
+An alternative for the `du` is the `ncdu`:
+ 
+```bash
+ncdu
 ```
 
 ## Common tricks
