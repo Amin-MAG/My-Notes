@@ -119,6 +119,7 @@ sudo cp /etc/openvpn/ca.crt ~/client-configs/keys/
 
 - [VPN](Network/VPN%2009efe.md)
 - [Proxy](Proxy.md)
+- [Load Balancing](Network/Load-Balancing.md)
 - [CDN](CDN.md)
 - [Tor](Network/Tor%20662bd.md)
 - [Setup a security camera](Network/SecurityCamera.md)
