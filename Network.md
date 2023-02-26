@@ -4,6 +4,15 @@
 
 Round-trip time (RTT) is the duration, measured in milliseconds, from when a browser sends a request to when it receives a response from a server. It’s a key performance metric for web applications and one of the main factors, along with Time to First Byte (TTFB).
 
+## Network Congestion
+
+The network can handle the transmission of a specific amount of data. If there is more data transmission, it leads to a decrease in performance and an increase in latency. Here are some reasons:
+
+- Heavy Network Traffic
+- Network Failure
+- Insufficient Bandwidth
+- Malware or Cyberattacks
+
 # VPN
 
 ## Setup OpenVPN
