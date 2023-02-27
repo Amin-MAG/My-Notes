@@ -70,18 +70,25 @@ Kubernetes:
 - Does not provide nor adopt any comprehensive machine configuration, maintenance, management, or self-healing systems.
 - Additionally, Kubernetes is not a mere orchestration system. In fact, it eliminates the need for orchestration. The technical definition of orchestration is execution of a defined workflow: first do A, then B, then C. In contrast, Kubernetes comprises a set of independent, composable control processes that continuously drive the current state towards the provided desired state. It shouldn't matter how you get from A to C. Centralized control is also not required. This results in a system that is easier to use and more powerful, robust, resilient, and extensible.
 
+# K8s Master node setup
+
+First of all we need to turn of the swap.
+
+```bash
+swapoff -a
+```
+
+
+
+# See More
+
+- [Pods and Nodes](Pods%20and%20Nodes.md)
+- [Workloads](Workloads.md)
+- [Volumes](Volumes.md)
+- [Kubectl](Kubectl.md)
+- [Miscellaneous](Miscellaneous.md)
+- [Helm](Helm%20Chart.md)
+
 # Resources
 
-[What is Kubernetes?](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)
-
-[Pods and Nodes](Pods%20and%20Nodes.md)
-
-[Workloads](Workloads.md)
-
-[Volumes](Volumes.md)
-
-[Kubectl](Kubectl.md)
-
-[Miscellaneous](Miscellaneous.md)
-
-[Helm](Helm%20Chart.md)
+- [What is Kubernetes?](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)

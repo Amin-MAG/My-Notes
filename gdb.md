@@ -27,3 +27,4 @@ Here are some useful and basic commands.
 ```
 
 >  use `(gdb) help` to see all of the commands
+To exit the gdb you should use `quit`.

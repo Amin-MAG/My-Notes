@@ -27,7 +27,7 @@ If you’re located in the package directory, you can omit the path to the packa
 To specify a different name or location for the executable, use the `-o` flag. Let’s build an executable called `caddy-server` and place it in a `build` directory within the current working directory:
 
 ```bash
-go build -o build/caddy-server github.com/mholt/caddy/caddy
+go build -o build/caddy-server github.com/mholt/caddy/cmd/caddy
 ```
 
 This command creates the executable and also creates the `./build` directory if it doesn’t exist.

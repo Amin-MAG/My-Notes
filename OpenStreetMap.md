@@ -8,34 +8,6 @@ Most maps out there may be free for individuals to use, but use proprietary info
 
 I believe that no one can know your vicinity better than you and this is the idea that OpenStreetMap is built on.
 
-# Open Street Map Main Pieces
-
-The code that runs [openstreetmap.org](http://openstreetmap.org/) is composed of independent components that work together to provide an API, Slippy Map, and other bits of functionality.
-
-Slippy Map is, in general, a term referring to modern web maps which let you zoom and pan around (the map slips around when you drag the mouse).
-
-OpenStreetMap's data, "the planet", are stored in PostgreSQL with PostGIS, and rendered into pretty map tiles with Mapnik. The Slippy Map interface for those tiles — what lets you pan and zoom the map — is powered by Leaflet.
-
-Users can add and modify OpenStreetMap data thanks to open-source editors like iD, Potlatch 2, and JOSM.
-
-- `The OSM website Rails Port (Ruby)`: this does the UI and API for the site. The Rails port page has plenty of useful information for getting started.
-- `Search, geocoding Nominatim`: (from the Latin, 'by name') is a tool to search OSM data by name and address (geocoding) and to generate synthetic addresses of OSM points (reverse geocoding). [https://nominatim.openstreetmap.org/](https://nominatim.openstreetmap.org/)
-- `Desktop map data editor JOSM (Java)`: JOSM is one of the most popular and powerful OpenStreetMap editors.
-- `Online map data editor iD (Javascript)`: iD is the newest editor for OpenStreetMap.
-- `Default style` at [OSM.org](http://osm.org/):  [https://github.com/gravitystorm/openstreetmap-carto](https://github.com/gravitystorm/openstreetmap-carto)
-- `OSM data processing Swiss Army knife`: They are a bunch of tools in C++, Java, and ... languages. These tools help us to work with OSM data. [https://github.com/osmcode](https://github.com/osmcode)
-    - A multipurpose command-line tool for working with OpenStreetMap data based on the Osmium library.
-    - A fast and flexible C++ library for working with OpenStreetMap data.
-    - osm2pgsql is a tool for loading OpenStreetMap data into a PostgreSQL / PostGIS database suitable for applications like rendering into a map, geocoding with Nominatim, or general analysis.
-    - Osmosis is a command-line Java application for processing Open Street Map data.
-- `Slippy map library Leaflet (JavaScript)`: Provides the general slippy map interface. Javascript whizzes can help us make the home page's maps even faster.
-- `Map rendering with Mapnik (C++)`: The main backend for the rendering of the maps that are produced from OSM data. Mapnik is an open-source toolkit for rendering maps. Among other things, it is used to render the four main Slippy Map layers on the OpenStreetMap website. It supports a variety of geospatial data formats and provides flexible styling options for designing many different kinds of maps. [https://github.com/mapnik/mapnik/](https://github.com/mapnik/mapnik/)
-- `Tile rendering system with Tirex (C++ and Perl)`: Tirex is a bunch of tools that let you run a tile server. A tile server is a web server that hands out pre-rendered map raster images to clients. [https://github.com/openstreetmap/tirex/](https://github.com/openstreetmap/tirex/)
-
-![Untitled](OpenStreetMap/Untitled.png)
-
-[https://wiki.openstreetmap.org/wiki/Component_overview](https://wiki.openstreetmap.org/wiki/Component_overview)
-
 # Elements
 
 **Elements** are the basic components of OpenStreetMap's conceptual data model of the physical world. Elements are of three types:
@@ -58,7 +30,7 @@ A node can also be defined as part of a particular `layer=*` or `level=*`, where
 
 Many nodes form part of one or more ways, defining the shape or "path" of the way.
 
-### Structure
+#### Structure
 
 - `id`: 64-bit integer
 - `lat`: between −90.0000000 and 90.0000000
@@ -78,7 +50,6 @@ A **way** is one of the fundamental [elements](https://wiki.openstreetmap.org
 Technically a way is an ordered list of [nodes](https://wiki.openstreetmap.org/wiki/Node) which normally also has at least one [tag](https://wiki.openstreetmap.org/wiki/Tags) or is included within a [Relation](https://wiki.openstreetmap.org/wiki/Relations). A way can have between 2 and 2,000 nodes, although it's possible that faulty ways with zero or a single node exist. A way can be [open](https://wiki.openstreetmap.org/wiki/Way#Open_way_.28Open_polyline.29) or [closed](https://wiki.openstreetmap.org/wiki/Way#Closed_way_.28Closed_polyline.29).
 
 > A poly line is an open or closed sequence of connected line and/or arc segments, which are treated as a single entity. Each segment of a poly line can have a width that is either constant or tapers over the length of the segment
-> 
 
 ### Open way -  Open poly line
 
@@ -104,23 +75,6 @@ An [area](https://wiki.openstreetmap.org/wiki/Area) (also polygon) is an encl
 
 - [leisure](https://wiki.openstreetmap.org/wiki/Key:leisure)=[park](https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark) to define the perimeter of a park
 - [amenity](https://wiki.openstreetmap.org/wiki/Key:amenity)=[school](https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dschool) to define the outline of a school
-
-For tags which can be used to define closed poly lines it is necessary to also add an [area](https://wiki.openstreetmap.org/wiki/Key:area)=yes if an area is desired. Examples include:
-
-- [highway](https://wiki.openstreetmap.org/wiki/Key:highway)=[pedestrian](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dpedestrian) +  to define a pedestrian square or plaza.
-    
-    [area](https://wiki.openstreetmap.org/wiki/Key:area)=yes
-    
-
-Areas can also be described using one or more ways which are associated with a [multipolygon](https://wiki.openstreetmap.org/wiki/Relation:multipolygon) [relation](https://wiki.openstreetmap.org/wiki/Relation).
-
-- For smaller areas is it often appropriate to create a single closed [way](https://wiki.openstreetmap.org/wiki/Way) with suitable [tags](https://wiki.openstreetmap.org/wiki/Tag) and in some rare cases it is also necessary to add . See  for further details.
-    
-    [area](https://wiki.openstreetmap.org/wiki/Key:area)=yes
-    
-    [area](https://wiki.openstreetmap.org/wiki/Key:area)=*
-    
-- For larger areas and for ones which butt up to other areas or to ways is it often more appropriate to use a [multipolygon](https://wiki.openstreetmap.org/wiki/Relation:multipolygon), again tagged as required. See [relation:multipolygon](https://wiki.openstreetmap.org/wiki/Relation:multipolygon) for more details.
 
 In this example a lake is defined by a closed way where the last node equals the first of the way. The use of [natural](https://wiki.openstreetmap.org/wiki/Key:natural)=[water](https://wiki.openstreetmap.org/wiki/Tag:natural%3Dwater) implies [area](https://wiki.openstreetmap.org/wiki/Key:area)=yes. Note that it is not possible to describe lake surfaces having islands or islets this way, as closed ways, by definition, cannot have holes.
 
@@ -162,17 +116,7 @@ From the data fragment alone we cannot tell if these are
 
 It is possible for a closed way to be tagged in a way that it should be interpreted both as a closed-polylines and also as an area.
 
-For example, a closed way defining a roundabout surrounding a grassy area might be tagged simultaneously as :
-
-- [highway](https://wiki.openstreetmap.org/wiki/Key:highway)=[primary](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dprimary) + , both being interpreted as a polyline along the closed way, and
-    
-    [junction](https://wiki.openstreetmap.org/wiki/Key:junction)=[roundabout](https://wiki.openstreetmap.org/wiki/Tag:junction%3Droundabout)
-    
-- [landuse](https://wiki.openstreetmap.org/wiki/Key:landuse)=[grass](https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dgrass), interpreted on the area enclosed by the way.
-
-### Example
-
-A one-way residential street, tagged as [highway](https://wiki.openstreetmap.org/wiki/Key:highway)=[residential](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dresidential) + [name](https://wiki.openstreetmap.org/wiki/Key:name)=Clipstone Street + [oneway](https://wiki.openstreetmap.org/wiki/Key:oneway)=yes
+For example, A one-way residential street, tagged as [highway](https://wiki.openstreetmap.org/wiki/Key:highway)=[residential](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dresidential) + [name](https://wiki.openstreetmap.org/wiki/Key:name)=Clipstone Street + [oneway](https://wiki.openstreetmap.org/wiki/Key:oneway)=yes
 
 ```xml
 <way id="5090250" visible="true" timestamp="2009-01-19T19:07:25Z" version="8" changeset="816806" user="Blumpsy" uid="64226">
@@ -210,7 +154,7 @@ It is recommended to use not more than about 300 members per relation. Reason: T
 
 A role is an optional textual field describing the function of a member of the relation. For example, in a multipolygon relation, role inner and role outer are used to specify whether a way forms the inner or outer part of that polygon. In some countries, role east can indicate that a way carries only the eastbound lanes of a route, as an alternative to a separate relation representing the eastbound route direction.
 
-### Types ([https://wiki.openstreetmap.org/wiki/Types_of_relation](https://wiki.openstreetmap.org/wiki/Types_of_relation))
+### Types 
 
 [`Multipolygons`](https://wiki.openstreetmap.org/wiki/Multipolygon) are one of two methods to represent  [areas](https://wiki.openstreetmap.org/wiki/Area) in OpenStreetMap. While most areas are represented as a single  closed way, almost all area features can also be mapped using multipolygon relations. This is needed when the area needs to exclude inner rings (holes), has multiple outer areas (exclaves), or uses more than ~2000 nodes. In the [multipolygon relation](https://wiki.openstreetmap.org/wiki/Relation:multipolygon), the *role* [inner](https://wiki.openstreetmap.org/wiki/Role:inner) and *role* [outer](https://wiki.openstreetmap.org/wiki/Role:outer) roles are used to specify whether a member [way](https://wiki.openstreetmap.org/wiki/Way) forms the inner or outer part of that polygon enclosing an area. For example, an inner way could define an island in a lake (which is mapped as relation).
 
@@ -323,32 +267,12 @@ or your OS may support double-click unpacking. See Wikipedia's [list of compres
 
 The main database is a key component of OpenStreetMap, because obviously it's where we keep all our data.
 
-# Osmosis
 
-Grab small region:
-
-```bash
-$ osmosis --rri --simc --rx current.osm --ac --bb \
-				left=42 right=42 top=42 bottom=42 \
-				clipIncompleteEntities=yes --wx new.osm
-```
-
-## **Import/Export standard files**
-
-As PostGIS is the most reliable tool for handling shape files (shp-to-PostGIS and PostGIS-to-shape), the other commom task is to convert OSM files, that is accomplished by Osmosis, [eg.](https://stackoverflow.com/a/8947417/287948)
-
-```bash
-$ osmosis --read-apidb host="x" database="x" user="x" password="x" --write-xml file="planet.osm"
-
-```
-
-## OSM Change
+# OSM Change
 
 **osmChange** is the file format used by [osmosis](https://wiki.openstreetmap.org/wiki/Osmosis) (and [osmconvert](https://wiki.openstreetmap.org/wiki/Osmconvert)) to describe differences between two dumps of OSM data. However, it can also be used as the basis for anything that needs to represent changes. For example, bulk uploads/deletes/changes are also changesets and they can also be described using this format. We also offer [Planet.osm/diffs](https://wiki.openstreetmap.org/wiki/Planet.osm/diffs) downloads in this format.
 
 For other ways of describing differences between datasets, see [Change File Formats](https://wiki.openstreetmap.org/wiki/Change_File_Formats) ([planetdiff](https://wiki.openstreetmap.org/wiki/Planetdiff) and the [JOSM file format](https://wiki.openstreetmap.org/wiki/JOSM_file_format)).
-
-### Example
 
 ```xml
 <osmChange version="0.6" generator="acme osm editor">
@@ -372,33 +296,6 @@ Note: The create/modify/delete "action" is applied at the node/way/relation leve
 
 Note: Some OsmChange output may include generator and version tags on the outermost osmChange element to identify the source of the file. These tags are not necessary, and are ignored when uploading the OsmChange document to the server.
 
-### Placeholder
-
-One common issue when uploading new data to the server is that IDs are allocated by the server and thus are not known at the time the file is created. The way to deal with this is to use numbers less than zero. These function as placeholders and when the node/segment/way is created, for the rest of the file the placeholder is replaced by the ID of the node created.
-
-The [JOSM file format](https://wiki.openstreetmap.org/wiki/JOSM_file_format) has a similar feature, [planetdiff](https://wiki.openstreetmap.org/wiki/Planetdiff) is purely designed to diff/patch planet files and does not support this. As of this writing [osmosis](https://wiki.openstreetmap.org/wiki/Osmosis) does **not** support this feature when applying changes to a database, all other tasks should support negative identifiers. However, there is a bulk uploader ([bulk_import.pl](https://wiki.openstreetmap.org/wiki/Bulk_import.pl)) that does.
-
-A quick example of how this works:
-
-```xml
-<osmChange version="0.6" generator="acme osm editor">
-    <create>
-        <node id="-1" changeset="43" version="1" lat="-33.9133123" lon="151.1173123" />
-        <node id="-2" changeset="43" version="1" lat="-33.9233321" lon="151.1173321" />
-        <way id="-3" changeset="43" version="1">
-            <nd ref="-1"/>
-            <nd ref="-2"/>
-        </way>
-    </create>
-</osmChange>
-```
-
-This creates two nodes at the specified positions and joins them with a way. This will never clash with any existing data.
-
-To implement this programs need a cache file to track what has been uploaded and what hasn't.
-
-Note: The upload API call supports placeholders - in fact, **all** id attributes in create elements are treated as placeholders whether negative or not. However, you should stick to negative numbers to ensure that placeholder IDs do not clash with any other IDs in the OsmChange document. Note that the Rails port substitutes negative placeholder ids only. This affects both nodes in ways, as well as relation member ids in relations. Thus, using negative placeholder ids is essentially mandatory for the placeholder replacement to take place.
-
 # Links
 
 - To create and see the polygons: [Map Polygon/Polyline Tool](https://www.keene.edu/campus/maps/tool/)
@@ -409,6 +306,7 @@ Note: The upload API call supports placeholders - in fact, **all** id attribu
 
 - [Osmosis](Osmosis.md)
 - [Geohash](Geohash.md)
+- [OSM-API](OSM-API.md)
 - [Links](Links.md)
 - [Osmium](Osmium.md)
 - [OSM Filter](OSM%20Filter.md)

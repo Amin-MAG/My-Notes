@@ -1,6 +1,6 @@
 # NetworkX
 
-It is for creating, editing, and analyzing complex networks such as graph.
+It is for creating, editing, and analyzing complex networks such as graphs.
 
 ```bash
 # To install
@@ -9,7 +9,7 @@ pip install networkx[default]
 
 ## Simple usage
 
-You can create predefined or customized graph and attach labels to them.
+You can create a predefined or customized graph and attach labels to them.
 
 ```python
 import networkx as nx
