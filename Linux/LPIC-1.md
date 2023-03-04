@@ -1223,7 +1223,13 @@ In `ext` filesystems, the filesystem store more information about files like the
 
 ## Repairing filesystem
 
-> See more about [fsck](Linux%20Commands.md##fsck), [tune2fs](Linux%20Commands.md##tune2fs) and [xfs](Linux%20Commands.md##xfs)on the Linux commands page.
+> See more about [fsck](Linux%20Commands.md##fsck), [tune2fs](Linux%20Commands.md##tune2fs), and [xfs](Linux%20Commands.md##xfs) on the Linux commands page.
+
+# 104 - 3
+
+## Control Mounting and Unmounting
+
+Linux systems usually mount the flash memory to the `/media` or `/mnt` directory.
 
 # Resources
 

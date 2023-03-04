@@ -281,6 +281,39 @@ An alternative for the `du` is the `ncdu`:
 ncdu
 ```
 
+## mount
+
+Show all mount drives
+
+```bash
+mount
+```
+
+To mount a new disk.
+
+```bash
+mkdir /media/mydisk
+touch /media/mydisk/mydisk_file
+
+# It will overwrite the previous files
+# `-t` you can define the disk type
+mount /dev/vdb1 /media/mydisk/
+```
+
+## umount
+
+To un-mount a disk.
+
+```bash
+umount /media/mydisk
+# or 
+umount /dev/vdb1
+
+# Lazy or Force mode
+umount -l /dev/vdb1
+umount -f /dev/vdb1
+```
+
 ## Common tricks
 
 To check if a bash script is correct or not without running it:
