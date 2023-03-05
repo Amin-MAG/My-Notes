@@ -285,6 +285,7 @@ func main() {
 
 - [Build Executive Binaries](Build.md)
 - [ENT Database](ENT.md)
+- [Benchmark](GoBenchmark.md)
 - [Graph QL](Go%20GraphQL.md)
 - [Go Bot](GoBot.md)
 - [Go Cron](GoCron.md)
