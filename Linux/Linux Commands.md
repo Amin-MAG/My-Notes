@@ -1071,6 +1071,24 @@ nohup xeyes
 
 ## Curl
 
+To get the header of a request:
+
+```bash
+curl -I http://www.google.com/
+```
+
+Save the response in a output file:
+
+```bash
+curl -o google.com.html http://www.google.com/
+```
+
+Follow the link if it is moved permanently:
+
+```bash
+curl -L yahoo.com
+```
+
 For a get request:
 
 ```bash
