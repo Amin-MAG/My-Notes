@@ -1231,6 +1231,16 @@ In `ext` filesystems, the filesystem store more information about files like the
 
 Linux systems usually mount the flash memory to the `/media` or `/mnt` directory.
 
+> See more about [mount](Linux%20Commands.md##mount) and [umount](Linux%20Commands.md##umount) on the Linux commands page.
+
+## fstab
+
+If you want to have a custom configuration for your mount, you can edit the `/etc/fstab` file.
+
+## Systemd
+
+Systemd has a mechanism that can mount a disk in the boot time. These units have `.mount` name.
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)

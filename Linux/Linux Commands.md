@@ -150,6 +150,12 @@ Show all of blocks
 
 ```bash
 lsblk
+
+# Show all columns
+lsblk -O
+
+# Show UUID in the table
+lsblk -o +UUID
 ```
 
 ## fdisk
@@ -186,6 +192,9 @@ mkswap /dev/sda5
 ## blkid
 
 ```bash
+# Show all blocks
+blkid
+
 # Get the UUID of a partition
 blkid /dev/sda1
 ```
@@ -298,6 +307,9 @@ touch /media/mydisk/mydisk_file
 # It will overwrite the previous files
 # `-t` you can define the disk type
 mount /dev/vdb1 /media/mydisk/
+
+# Mount using UUID
+mount UUID=<DISK-UUID> /media/mydisk/
 ```
 
 ## umount
