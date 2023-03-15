@@ -122,6 +122,12 @@ cp ~/EasyRSA-3.0.8/ta.key ~/client-configs/keys/
 sudo cp /etc/openvpn/ca.crt ~/client-configs/keys/
 ```
 
+## DNS
+
+DNS or Domain name server change the human-readable path or domain to IP addresses. A DNS resolver can be in ISP or popular DNS providers (Google/Cloudflare).
+
+If a DNS resolver can not find the domain name in its cache, It will ask authoritative nameserver. When we update a domain's DNS record, we are updating its authoritative nameserver.
+
 ## TCP / UDP
 
 # See More
