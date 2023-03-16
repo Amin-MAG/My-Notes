@@ -358,12 +358,6 @@ Using `tee` you can save log of your commands
 echo "amin" | tee test.log
 ```
 
-To see the difference between two file just use 
-
-```bash
-diff FILE1 FILE2
-```
-
 To go to the previous directory
 
 ```bash
@@ -413,6 +407,21 @@ then
     exit
 fi
 ```
+
+## diff
+
+
+To see the difference between the two files just use 
+
+```bash
+# If the files are just like each other the value of $? is 0
+diff FILE1 FILE2
+
+# To see more lines after and before changes
+diff -u FILE1 FILE2
+```
+
+> You can install the colordiff to have colors
 
 ## Tree the folders 2 levels
 
