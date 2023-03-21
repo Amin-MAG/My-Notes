@@ -586,6 +586,45 @@ Remove the password for a user
 passwd -d user1
 ```
 
+## whoami
+
+To see the logged-in user in Linux.
+
+```bash
+whoami
+```
+
+## groups 
+
+![Untitled](Linux%20Commands/Untitled.png)
+
+To show the groups that you are a member.
+
+```bash
+groups
+
+# Alternatively
+cat /etc/group
+```
+
+## id
+
+To show the IDs of my user and groups.
+
+```bash
+id
+```
+
+The origin of these data is in the `/etc/passwd` and `/etc/group`.
+
+## su
+
+Change the user to the root.
+
+```bash
+sudo su -
+```
+
 ## Group Management
 
 To create or remove a new group
@@ -601,26 +640,11 @@ To add a user to a new group you can use
 usermod -a -G shared user1
 ```
 
-To see user groups
-
-```bash
-cat /etc/group
-```
-
-![Untitled](Linux%20Commands/Untitled.png)
-
-## chgrp
-
-To change group owner ship
-
-```bash
-# Change group of /u to staff
-chgrp staff /u
-# + With subfolders (recursively)
-chgrp -hR staff /u
-```
+![Untitled](Linux%20Commands/file-permissions.png)
 
 ## chmod
+
+File access is in this format
 
 It restricts the way a file can be accessed.
 
@@ -645,6 +669,17 @@ To change owner of the directory or file
 
 ```bash
 chown -R user1 /shared_files
+```
+
+## chgrp
+
+To change group ownership
+
+```bash
+# Change group of /u to staff
+chgrp staff /u
+# + With subfolders (recursively)
+chgrp -hR staff /u
 ```
 
 ## Watch
