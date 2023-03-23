@@ -1,8 +1,9 @@
 # 👨‍💻 Software Engineering
 
-## Continuing Software Design
+## Software and System Design
 
 - [Software Design](Software%20Engineering/Software%20Design.md)
+- [System Design Main Concepts](System-Design-Concepts.md)
 
 ## Patterns and Anti-Patterns
 
@@ -30,16 +31,20 @@ Types of testing:
 
 Solving Questions:
 
-1. Architectural pattern with rational reason
-2. Component diagram and class diagram in shape of architecture
+1. Architectural pattern with a rational reason
+2. Component diagram and class diagram in the shape of architecture
 3. Covering the scenarios
 4. Fundamental design elements
 
-Read More:
+You can read more about testing on the [testing](Testing.md) page.
 
-- [Testing](Testing.md)
-- [Monitoring](Monitoring.md)
-- [Observability](Observability.md)
+## Monitoring
+
+You can read more about testing on the [Monitoring](Monitoring.md) page.
+
+## Observability and Tracing
+
+You can read more about testing on the [Observability](Observability.md) page.
 
 ## Miscellaneous
 
