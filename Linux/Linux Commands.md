@@ -615,7 +615,15 @@ To show the IDs of my user and groups.
 id
 ```
 
-The origin of these data is in the `/etc/passwd` and `/etc/group`.
+The origin of these data is in the `/etc/passwd` and `/etc/group`. This command also shows the current group name and the one's that the user is a member of. You can change default group by `newgrp` command.
+
+## newgrp
+
+To switch the default group.
+
+```bash
+newgrp cdrom
+```
 
 ## su
 
@@ -644,30 +652,57 @@ usermod -a -G shared user1
 
 ## chmod
 
-File access is in this format
-
-It restricts the way a file can be accessed.
+To change the file permissions by octal numbers
 
 ```bash
-# chmod options permissions file name
-
-# the user can read, write, and execute it;
-# members of your group can read and execute it; and
-# others may only read it.
-chmod u=rwx,g=rx,o=r myfile
+# The user can read, write, and execute it;
+# Members of the group can read and execute it;
+# Others may only read it.
 chmod 754 myfile
+```
 
-# To change the mod of files or directories
+You can add permission like execution 
+
+```bash
+# Add permission for the user
+chmod u+rwx myfile
+
+# Add permission for the group
+chmod +x myfile
+
+# Add multiple permissions
+chmod u+rwx,g+rwx,o+rx myfile
+
+# Remove multiple permissions
+chmod u-x,g-x,o-x myfile
+```
+
+The operator **+** causes the selected file mode bits to be added to the existing file mode bits of each file; **-** causes them to be removed; and **=** causes them to be added and causes unmentioned bits to be removed except that a directory's unmentioned set user and group ID bits are not affected.
+
+Another way is to
+
+```bash
+chmod u=rwx,g=rx,o=r myfile
+
+# Find some files and change the permission
 find /var/www/html -type f -exec chmod u=rw,go=r {} \;
 ```
 
-The operator **+** causes the selected file mode bits to be added to the existing file mode bits of each file; **** causes them to be removed; and **=** causes them to be added and causes unmentioned bits to be removed except that a directory's unmentioned set user and group ID bits are not affected.
+If we want to change the permission of a directory recursively
+
+```bash
+chmod -R 755 directory_name
+```
 
 ## chown
 
-To change owner of the directory or file
+To change the owner of the directory or file
 
 ```bash
+# Change the owner to the user amin and group amin
+chown amin:amin myfile
+
+# Recursively change the owner of files in a directory
 chown -R user1 /shared_files
 ```
 
@@ -678,13 +713,27 @@ To change group ownership
 ```bash
 # Change group of /u to staff
 chgrp staff /u
+
 # + With subfolders (recursively)
 chgrp -hR staff /u
 ```
 
+## umask
+
+To see the `umask` number
+
+```bash
+umask
+
+# To change the umask number
+umask 0066
+# You can also chnage it this way
+umask u=rw,g=,o=
+```
+
 ## Watch
 
-You can use `watch` command to watch the output of your command periodically.
+You can use the `watch` command to watch the output of your command periodically.
 
 ```bash
 # Default is 2 seconds
@@ -695,19 +744,19 @@ watch -n 1  "ls -lhf | grep Huawei | awk '{print \$5}'"
 # Highlight the differences
 watch -n 1 -d uptime
 
-# Make sound if it has a non zero exit
+# Make sound if it has a non-zero exit
 watch -n 1 ./run
 ```
 
 ## Cat
 
-A tool to concatinate input streams.
+A tool to concatenate input streams.
 
 ```bash
 cat a.txt b.txt
 ```
 
-> You can use `zcat`, `gzcat`, etc., to concatinate compressed files.
+> You can use `zcat`, `gzcat`, etc., to concatenate compressed files.
 >    
 
 ## Od
@@ -723,7 +772,7 @@ od -c t.txt
 
 ## Split
 
-You can split a big file to some smaller files using `split` command.
+You can split a big file into some smaller files using `split` command.
 
 ```bash
 # -b for size
@@ -734,7 +783,7 @@ split -n  10 h.zip h_
 
 ## Nl
 
-Add line number to the input text.
+Add the line number to the input text.
 
 ```bash
 nl t.txt
@@ -759,10 +808,10 @@ You can replace all of UNIX works to Linux by this command:
 
 ```bash
 # `s` is for substitution
-# First one is the word going to be substituted
+# The First one is the word going to be substituted
 # The second word is the new work
-# There are bunch of flags like g that means global.
-# You can use `2` for changing the second occurnance.
+# There are a bunch of flags like g that means global.
+# You can use `2` for changing the second occurrence.
 sed 's/unix/linux/g' geekfile.txt
 ```
 
@@ -771,11 +820,11 @@ sed 's/unix/linux/g' geekfile.txt
 To get number of lines you can use
 
 ```bash
-# Get line 2 to 10
+# Get lines 2 to 10
 # Docs for `-n`: By default, each line of input is echoed to the standard output after all of the commands have been applied to it
 sed -n '2,10p'
 
-# Get line 2 and 10 
+# Get lines 2 and 10 
 sed -n '2p;10p'
 ```
 
@@ -788,7 +837,7 @@ To get the number of lines
 # [paragraphs] [words] [characters]
 wc t.txt
 
-# To get number of lines
+# To get the number of lines
 wc -l docker-compose-dev.yml 
 ```
 

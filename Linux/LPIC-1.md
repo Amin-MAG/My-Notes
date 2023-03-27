@@ -1241,6 +1241,36 @@ If you want to have a custom configuration for your mount, you can edit the `/et
 
 Systemd has a mechanism that can mount a disk in the boot time. These units have `.mount` name.
 
+# 104 - 5
+
+## Manage file permissions and ownership
+
+File access in this format is
+
+$$
+Owner-Group-Others
+$$
+
+Each one of the items consists of 3 bits which is
+
+$$
+Read-Write-Execute
+$$
+
+For example, 755 means
+
+- Read, Write, and Execute for the owner.
+- Read and Execute for group and others.
+
+> See more about [chmod](Linux%20Commands.md##chmod), [umask](Linux%20Commands.md##umask), [chown](Linux%20Commands.md##chown), and [chgrp](Linux%20Commands.md##chgrp) on the Linux commands page.
+
+###  SUID
+
+In some cases, like `passwd` we have `s` permission. This means that when the file is executed the access mode in executing that file is equal to the owner. For example, when you execute passwd, it has the access mode of root.
+
+### umask
+
+the `umask` is responsible for setting permission for new files. The mechanism is that 666 minus `umask` number will be the default permission.
 # Resources
 
 - [Linux1st](https://linux1st.com/)
