@@ -124,9 +124,23 @@ sudo cp /etc/openvpn/ca.crt ~/client-configs/keys/
 
 ## DNS
 
-DNS or Domain name server change the human-readable path or domain to IP addresses. A DNS resolver can be in ISP or popular DNS providers (Google/Cloudflare).
+DNS or Domain name servers change the human-readable path or domain to IP addresses. A DNS resolver can be in ISP or popular DNS providers (Google/Cloudflare). If a DNS resolver can not find the domain name in its cache, It will ask authoritative nameserver. When we update a domain's DNS record, we are updating its authoritative nameserver.
 
-If a DNS resolver can not find the domain name in its cache, It will ask authoritative nameserver. When we update a domain's DNS record, we are updating its authoritative nameserver.
+### Root, Domain, and Name servers
+
+But to find the name server we need to ask it from root server. Root server itself forward this request to the domain server. Finally, the domain server forward the request to the authoritative nameserver that is responsible for the domain name.
+
+### DNS Records
+
+- **A record** resolves domain names to IP addresses (IPv4).
+- **A record** resolves domain names to IP addresses (IPv6).
+- **CNAME record** resolves a domain or subdaomain to another domain name. It is actually an alias.
+- **MX record** is used for email.
+- **SOA record** stores administrative information about a DNS zone.
+- **NS record** provides the name of the authoritative name server whithin domain.
+- **SRV record** point to aserver and a service by including a port number.
+- **PTR record** resolves the IP addresses to the domain names (Used in email servers). This is known as reverse DNS lookup.
+- **TXT record** contains miscellaneous information about a domain.
 
 ## TCP / UDP
 
