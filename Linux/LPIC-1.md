@@ -1271,6 +1271,13 @@ In some cases, like `passwd` we have `s` permission. This means that when the fi
 ### umask
 
 the `umask` is responsible for setting permission for new files. The mechanism is that 666 minus `umask` number will be the default permission.
+
+# 104 - 6
+
+## Create and change hard and symbolic links
+
+The hard link points to the file on the disk, but the Soft link point to the file itself. Removing the file hard link works properly.
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)

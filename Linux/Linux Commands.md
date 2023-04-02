@@ -9,10 +9,18 @@
 uname -a 
 ```
 
-## Create link
+## ln
+
+Create a hard link to my_file (the `inode` is exactly the same)
 
 ```bash
-ln -s /root/B/publicB.pem
+ln my_file hard_link
+```
+
+Create a soft link to my_file (the `inode` is not exactly the same)
+
+```bash
+ln -s my_file soft_link
 ```
 
 ## ls
@@ -23,6 +31,9 @@ ls -ltrh
 
 # Show recursively
 ls -R
+
+# Show the inode of files
+ls -i
 ```
 
 ## Find
