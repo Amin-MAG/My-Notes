@@ -41,7 +41,7 @@ ls -i
 `find` shows everything in current directory
 
 ```bash
-find .
+find . 
 ```
 
 Here are some more useful commands and switches.
@@ -50,25 +50,32 @@ Here are some more useful commands and switches.
 # Files that their name's are exactly "test"
 find . -name 'test'
 
-# Files that have flag (ignore-case) in their names
+# Files that have a flag (ignore-case) in their names
 find . -iname '*flag*'
+
+# To define how deep it should go into directories
+find /tmp/ -maxdepth 1 -group admin
 ```
 
-### Based on type
+### Filter
+
+You can filter the files when you are finding them based on different factors.
+
+#### Based on type
 
 ```bash
 # Search only between directories -type {d,f,l}
 find . -iname '*flag*' -type d
 ```
 
-### Based on size 
+#### Based on size 
 
 ```bash
 # Set condition on file's size
 find /var -iname '*tmp*' -size +1M -100M
 ```
 
-### Based on time
+#### Based on time
 
 First part
 
@@ -86,7 +93,19 @@ Second part
 find . -mmin -30
 ```
 
-### Execute on the files
+#### Based on user and group
+
+```bash
+find /tmp/ -user amin
+find /tmp/ -group amin
+
+# You can not belongings to group or user
+find /tmp/ -nouser amin
+find /tmp/ -nogroup amin
+find /tmp/ ! -user amin
+```
+
+### Execute command on the files
 
 ```bash
 find . -mmin -3 -exec echo "this is file {}" \;
@@ -99,9 +118,15 @@ find . -mmin -3 -delete
 
 ## Locate
 
+Locate is faster than `find`. It uses the `updatedb` and updates the database periodically. This command will search the phrase in the database.
+
 ```bash
-sudo apt install mlocate
-locate <FILE_NAME<
+sudo apt install plocate
+# locate <FILE_NAME>
+locate networking
+
+# To update the updatedb
+sudo updatedb
 ````
 
 ## Alias
@@ -353,7 +378,7 @@ mkdir -p a/b/c/d/e/f/g
 
 To calculate the duration of a command
 
-```matlab
+```bash
 time <YOUR_COMMMAND>
 ```
 
@@ -489,6 +514,42 @@ You can use `source` command to execute a bash script for the running terminal s
 
 ```bash
 source my_bash_script.sh
+```
+
+## which
+
+Show the path of a command.
+
+```bash
+which ping
+
+# Get all 
+which -a ping
+```
+
+## whereis
+
+Show more information about the origin of a command.
+
+```bash
+whereis ping
+```
+
+## whatis
+
+The first line of the man page.
+
+```bash
+whatis pings
+```
+
+## type
+
+Show the type of command. Some of the commands like `cd` are shell built-in ones.
+
+```bash
+type cd
+type ping
 ```
 
 ## rsync
@@ -927,7 +988,7 @@ It merges the lines of the given files.
 paste a.txt b.txt c.txt
 ```
 
-## Tr
+## tr
 
 It translates the characters to another character.
 
@@ -935,7 +996,7 @@ It translates the characters to another character.
 cat file.txt | tr '123456789' '۱۳۴۵۶۷۸۹۰'
 ```
 
-## Touch
+## touch
 
 ```bash
 # To create new empty file 
@@ -1753,7 +1814,7 @@ nc -v -n -z w1 192.168.133.128 1-100
 nc -u <IP> <PORT>
 ```
 
-## Net Stat
+## netstat
 
 ```bash
 # Show all of the connections
@@ -1849,7 +1910,7 @@ Not discovered the services? (Maybe it is because of firewall)
 nmap -sS sU -PN 192.168.0.1
 ```
 
-## IP tables
+## iptables
 
 ```bash
 # See the firewall rules (actually the name is netfilter)

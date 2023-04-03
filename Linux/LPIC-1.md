@@ -715,7 +715,7 @@ apt search vlc
 
 #### Upgrade
 
-It compares the installed packages with local repository and install new packages if there is a newer version in local repository.
+It compares the installed packages with the local repository and installs new ones if there is a newer version in the local repository.
 
 ```bash
 sudo apt update
@@ -1139,7 +1139,7 @@ free -h
 
 It shows the load average in the first line. The numbers represent the load averege in recent 1, 5, and 15 minutes. The number shows how many process are requested in the system and it should be fewer than the number of CPU cores. (If the load number is higher than the number of CPU, some processes should wait to be processed and it can have some troubles for the system)
 
-##103 - 7
+# 103 - 7
 
 ## RegEX
 
@@ -1277,6 +1277,30 @@ the `umask` is responsible for setting permission for new files. The mechanism i
 ## Create and change hard and symbolic links
 
 The hard link points to the file on the disk, but the Soft link point to the file itself. Removing the file hard link works properly.
+
+# 104 - 7
+
+## Find system files and place files in the correct location
+
+### File Hierachy Standard (FHS)
+
+- `/bin`: Essential executables, It contains some binary files that are essential for the system.
+- `/sbin`: Essential executables for root.
+- `/lib`: Shared code between binaries, `/bin` binaries, and `/sbin` binaries may share some codes in it.
+- `/usr/bin`: Non-Essential installed binaries.
+- `/usr/local/bin`: Locally compiled binaries.
+- `/etc`: Editable text config, all of the configurations are here.
+- `/home`: User data
+- `/boot`: Files need to boot the system like the kernel itself.
+- `/dev`: Device files
+- `/opt`: Optional and add-on software.
+- `/var`: Contains variable files that will be changed as the OS is being used. Like logs and cache files.
+- `/tmp`: Contains files that won't be persisted between reboots.
+- `/proc`: Imaginary directory that doesn't actually exist on the disk. It is created by memory and contains information about processes.
+
+### PATH
+
+The Linux operating system searches the command in the paths and tries to find the specific command. You can set these directories in the PATH environment variable.
 
 # Resources
 
