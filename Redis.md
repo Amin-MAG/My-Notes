@@ -15,6 +15,39 @@ Or a combination of these methods.
 
 ## Basic commands
 
+To see all available keys
+
+```bash
+keys *
+```
+
+To set a new key-value data
+
+```bash
+set test_key test_value
+
+# Set a value with a TTL (seconds)
+setex test_key 10 test_value
+```
+
+To get a key
+
+```bash
+get test_key
+```
+
+To delete a key
+
+```bash
+del test_key
+```
+
+To check whether a key exists or not
+
+```bash
+exists test_key
+```
+
 To flush the whole instance or a single database
 
 ```sql
@@ -29,6 +62,12 @@ To monitor the instance you can use
 
 ```sql
 MONITOR
+```
+
+To get the size of the database
+
+```bash
+dbsize
 ```
 
 # Use cases
