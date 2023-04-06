@@ -1822,6 +1822,22 @@ netstat -na
 netstat -tulpn
 ```
 
+## fuser
+
+To identify which process is using port 80.
+
+```bash
+sudo fuser -v -n tcp 80
+```
+
+## ss
+
+The modern form of `netstat`.
+
+```bash
+ss -tupln
+```
+
 ## FTP
 
 You can transfer your files using FTP
@@ -1960,6 +1976,29 @@ iptables -L
 # To show them fast use -n and -v for more information
 iptables -L -n -v
 
+# To see rules and chains of a specific table
+iptables -t <table_name> -L
+```
+
+### Create a Table
+
+```bash
+iptables -t <table-name> <command>
+```
+
+### Create a chain
+
+In addition to the built-in chains, you can create your own custom chains. Custom chains are useful when you need to apply a complex set of rules to a specific type of traffic. For example, you might create a custom chain to handle traffic that is destined for a specific port or IP address range.
+
+```bash
+iptables -N mychain
+```
+
+### Change Rules
+
+A rule can be added to a chain using the "-A" option, and it can be deleted using the "-D" option. The `-j` or jump action determines which target or chain the packet will be sent to for further processing.
+
+```bash
 # To add a new rule
 # To block an IP address
 iptables -A INPUT -s <SOURCE_IP> -j DROP
