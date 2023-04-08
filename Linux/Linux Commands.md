@@ -444,8 +444,32 @@ then
 fi
 ```
 
-## diff
+## column
 
+To change junk output to clean formatted columns
+
+```bash
+mount | column -t
+```
+
+## pushd
+
+To enter the directory by pushing the directory to the stack.
+
+```bash
+pushd /var
+```
+
+## popd
+
+To enter the directory poping the directory from the stack.
+
+```bash
+popd
+```
+
+
+## diff
 
 To see the difference between the two files just use 
 
