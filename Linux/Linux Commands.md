@@ -1082,6 +1082,41 @@ It changes the niceness of a process.
 renice -n 57890
 ```
 
+## service
+
+To See and Change the status of a service
+
+```bash
+service nginx status
+service nginx stop 
+service nginx start 
+service nginx restart 
+service nginx enable 
+```
+
+> Read more about `systemctl` and `service` in [this page](Systemctl.md).
+
+
+## systemctl
+
+To list all services
+
+```bash
+systemctl list-units --type=service
+```
+
+To See and Change the status of a service
+
+```bash
+systemctl status nginx
+systemctl stop nginx
+systemctl start nginx
+systemctl restart nginx
+systemctl enable nginx
+```
+
+> Read more about `systemctl` and `service` in [this page](Systemctl.md).
+
 # Compression
 
 ## gzip
@@ -1710,6 +1745,14 @@ To see the ports you can use this command in Linux
 
 ```bash
 less /etc/services
+```
+
+## resolvectl
+
+For new versions of ubuntu, you can use `resolvectl` for DNS.
+
+```bash
+resolvectl status
 ```
 
 ## Wifi
