@@ -21,6 +21,28 @@ To get only the framerate of the video, you can use the following command.
 ffprobe -v error -select_streams v:0 -show_entries stream=r_frame_rate -of default=noprint_wrappers=1:nokey=1 <input_file>
 ```
 
+## Create an output file
+
+To convert the file to another format.
+
+```bash
+ffmpeg -i input_file.mp4 output_file.avi
+```
+
+To extract the audio of the movie file.
+
+```bash
+ffmpeg -i input_file.mp4 output_file.mp3
+```
+
+To extract a specific portion of a video.
+
+```bash
+# Use -ss to seek a specific point of the video
+# Use -t for duration
+# Use -c[:stream_specifier] to indicate the codec (Use the `copy` for no re-encoding)
+ffmpeg -i input_file.mp4 -ss 00:00:30 -t 00:00:10 -c copy output_file.mp4
+```
 
 ## Play a video
 
