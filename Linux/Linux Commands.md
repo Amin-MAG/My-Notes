@@ -55,6 +55,9 @@ find . -iname '*flag*'
 
 # To define how deep it should go into directories
 find /tmp/ -maxdepth 1 -group admin
+
+# To find a path 
+find . -path '*gateway\/api-*'
 ```
 
 ### Filter
@@ -468,6 +471,13 @@ To enter the directory poping the directory from the stack.
 popd
 ```
 
+## time
+
+To calculate the execution time of a command. 
+
+```bash
+time python3 main.py
+```
 
 ## diff
 
@@ -1031,6 +1041,14 @@ touch -t 200908121510.32
 
 # Use reference with -r
 touch -r /etc/debian_version myfile.txt
+```
+
+## truncate
+
+Delete all of the contents of a file.
+
+```bash
+truncate -s 0 hello.txt
 ```
 
 ## File 
