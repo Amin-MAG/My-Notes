@@ -44,6 +44,25 @@ To extract a specific portion of a video.
 ffmpeg -i input_file.mp4 -ss 00:00:30 -t 00:00:10 -c copy output_file.mp4
 ```
 
+- `-i`: Spcifies the input video file. 
+- `-ss`: Spcifies the start time.
+- `-t` Sets the duration.
+- `-c copy` Creates a copy without encoding.
+
+## Stream a video 
+
+```bash
+ffmpeg -re -i input_file.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -c:a aac -ar 44100 -f flv rtmp://streaming_server_address/application/stream_key
+```
+
+- `-re` Reads the input video at the native frame rate.
+- `-i` Spcifies the input video file. 
+- `-c:v` Specifies the video codec.
+- `-preset` Sets the encoding speed.
+- `-c:a` Specifies the audio codec.
+- `-ar` Specifies the audio sample rate.
+- `-f` Sets the output format.
+
 ## Play a video
 
 ```bash
