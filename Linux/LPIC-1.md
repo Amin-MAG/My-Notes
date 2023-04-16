@@ -1302,6 +1302,33 @@ The hard link points to the file on the disk, but the Soft link point to the fil
 
 The Linux operating system searches the command in the paths and tries to find the specific command. You can set these directories in the PATH environment variable.
 
+# 105 - 1
+
+## Shells
+
+- Login Shell
+- Interactive Shell: 
+- Non-Interactive Shell: Some shel ls created to be non-interactive while running a specific command like `ping`.
+
+### Login Shell
+
+The shell that you get after login into system. The shell environment is 
+- `/etc/profile`
+- `/etc/profile.d/*`
+- `/home/USERNAME/.bash_profile`, `/home/USERNAME/.bash_login`, `/home/USERNAME/.profile`,  `/home/USERNAME/.bashrc`
+
+### Interactive Shell (non-login)
+
+Open terminal via GUi. The shell environment is 
+- `/etc/bash.bashrc` or `/etc/bashrc`
+- `/home/USERNAME/.bashrc`
+
+### Non-Interactive Shell
+
+Some shell ls created to be non-interactive while running a specific command like `ping`. The shell environment is `$BASH_ENV`.
+
+> **Note**: the `/etc/skel` contains the initial default profiles which are used for each new user. The script `.bash_logout` is executed each time a user logs out.
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)
