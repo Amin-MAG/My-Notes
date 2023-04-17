@@ -4,7 +4,7 @@
 
 ## Service
 
-Many of these services don’t run all the time like nginx or MySQL would. You can print out a list of services currently in use swith:
+Many of these services don’t run all the time like nginx or MySQL would. You can print out a list of services currently in use with:
 
 ```bash
 service --status-all

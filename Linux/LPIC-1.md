@@ -4,7 +4,7 @@
 
 ## Operating System
 
-The computer is all just some hardware. An operating system is a software that manages hardware and its resources. It allocates resources to the applications.
+The computer is all just some hardware. An operating system is software that manages hardware and its resources. It allocates resources to the applications.
 
 ## Firmware
 
@@ -16,7 +16,7 @@ The motherboard itself has firmware; the older version of this firmware was call
 
 ### PCI (Peripheral Component Interconnect)
 
-It enables us to add the hardware boards to the motherboard.
+It enables us to add hardware boards to the motherboard.
 
 ### Gpio (General Purpose Input Output)
 
@@ -1328,6 +1328,18 @@ Open terminal via GUi. The shell environment is
 Some shell ls created to be non-interactive while running a specific command like `ping`. The shell environment is `$BASH_ENV`.
 
 > **Note**: the `/etc/skel` contains the initial default profiles which are used for each new user. The script `.bash_logout` is executed each time a user logs out.
+
+# 105 - 2
+
+- `command_a;command_b`: normally executes the `command_a` and after than it executes the `command_b`.
+- `command_a && command_b`: executes the `command_b` only if `command_a` is executed successfully.
+- `command_a || command_b`: executes `command_a` and if it is not successful then executes `command_b`.
+
+bash create a process for executing the shell script. Using `exec` command it will be replaced by the bash process. 
+
+```bash
+exec script.sh
+```
 
 # Resources
 
