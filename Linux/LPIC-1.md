@@ -1331,6 +1331,8 @@ Some shell ls created to be non-interactive while running a specific command lik
 
 # 105 - 2
 
+## Shell Scripting
+
 - `command_a;command_b`: normally executes the `command_a` and after than it executes the `command_b`.
 - `command_a && command_b`: executes the `command_b` only if `command_a` is executed successfully.
 - `command_a || command_b`: executes `command_a` and if it is not successful then executes `command_b`.
@@ -1340,6 +1342,25 @@ bash create a process for executing the shell script. Using `exec` command it wi
 ```bash
 exec script.sh
 ```
+
+### Conditions
+
+- `-f` Does file exist?
+- `-s` Does file exist and is size of file more than zero?
+- `-x` Does file exist and is it executable?
+
+```bash
+read coffee
+if [ $coffee -eq "y" ]; then
+    echo "You're awesome."
+elif [[ $USER == "bernard" ]]; then
+    echo "Bernard always win this game."
+else
+    echo "Do nothing."
+fi
+```
+
+
 
 # Resources
 

@@ -1466,6 +1466,16 @@ elif [[ $USER == "bernard" ]]; then
 else
     echo "Do nothing."
 fi
+
+# Set a timeout for the read
+read -t 10 coffee
+if [ $coffee -eq "y" ]; then
+    echo "You're awesome."
+elif [[ $USER == "bernard" ]]; then
+    echo "Bernard always win this game."
+else
+    echo "Do nothing."
+fi
 ```
 
 Condition on file existence.
@@ -1499,6 +1509,16 @@ esac
 ```bash
 for index in 0 1 2 3 4; do
 	newarr[$index]=${originalarr[4-$index]}
+done
+
+# Use sequences
+for V in `seq 1 10`;
+	echo $V;
+done
+
+# Use list of files
+for f in `ls`;
+	echo $f;
 done
 
 # Range of numbers
