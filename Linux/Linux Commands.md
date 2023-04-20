@@ -966,6 +966,18 @@ awk -F ' ' '{print $1}'
 awk '{print $0}' t.txt
 ```
 
+## seq
+
+Generates a sequence of numbers
+
+```bash
+# Generate numbers from 1 to 10
+seq 1 10
+
+# Generate numbers from 1 to 10 by 3
+seq 1 3 10 
+```
+
 ## Cut
 
 As it seems, It will cut the output as we want to.
@@ -2314,6 +2326,15 @@ python3 -m pip install termgraph
 
 # A simple graph
 cat file | sort | uniq -c | awk '{print $2 " " $1}' | termgraph 
+```
+
+## yt-dlp
+
+Youtube downloader tool.
+
+```bash
+# Download the audio of the video in the format of mp3
+yt-dlp -x --audio-format mp3 'https://youtube.com/the_address_of_video'
 ```
 
 # Resources
