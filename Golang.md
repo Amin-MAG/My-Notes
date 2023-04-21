@@ -10,7 +10,7 @@ go tool compile -S file.go > file.s
 
 ## Data Race
 
-Data races are among the most common and hardest to debug types of bugs in concurrent systems. A data race occurs when two goroutines access the same variable concurrently and at least one of the accesses is a write. See the [The Go Memory Model](https://go.dev/ref/mem/) for details.
+Data races are among the most common and hardest-to-debug types of bugs in concurrent systems. A data race occurs when two goroutines access the same variable concurrently and at least one of the accesses is a write. See the [The Go Memory Model](https://go.dev/ref/mem/) for details.
 
 Here is an example of a data race that can lead to crashes and memory corruption:
 
@@ -278,6 +278,97 @@ func main() {
 	if err != nil {
 		log.Warnln(err.Error())
 	}
+}
+```
+
+
+## Read Files
+
+Get statistics about a file.
+
+```go
+f, err := os.Open(name)  
+if err != nil {  
+   log.Println(err)  
+   return  
+}  
+defer f.Close()  
+  
+stats, err := f.Stat()  
+if err != nil {  
+   log.Println(err)  
+   return  
+}  
+log.Printf("%+v", stats)
+```
+
+Read the contents of a file
+
+```go
+contents, err := os.ReadFile(name)  
+if err != nil {  
+   log.Println(err)  
+   return  
+}  
+  
+fmt.Println(string(contents))
+```
+
+Read the content of a file line by line
+
+```go
+f, err := os.Open(name)  
+if err != nil {  
+   log.Println(err)  
+   return  
+}
+defer f.Close()
+
+s := bufio.NewScanner(f)  
+for s.Scan() {  
+   fmt.Printf("- %s \n", s.Text())  
+}
+```
+
+Read the content of a file word by word
+
+```go
+f, err := os.Open(name)  
+if err != nil {  
+   log.Println(err)  
+   return  
+}
+defer f.Close()
+  
+s := bufio.NewScanner(f)  
+s.Split(bufio.ScanWords)  
+for s.Scan() {  
+   fmt.Println(s.Text())  
+}
+```
+
+Read the content of a file bytes by bytes
+
+```go
+f, err := os.Open(name)  
+if err != nil {  
+   log.Println(err)  
+   return  
+}  
+defer f.Close()  
+  
+buf := make([]byte, size)  
+for {  
+   totalRead, err := f.Read(buf)  
+   if err != nil && err != io.EOF {  
+      log.Println(err.Error())  
+      return  
+   }  
+   if err != nil && err == io.EOF {  
+      fmt.Println(string(buf[:totalRead]))  
+      return  
+   }  
+   fmt.Println(string(buf[:totalRead]))  
 }
 ```
 
