@@ -7,6 +7,9 @@
 ```bash
 # -a for all information
 uname -a 
+
+# Get information about operating system
+cat /etc/os-release
 ```
 
 ## ln
@@ -739,6 +742,17 @@ Change the user to the root.
 sudo su -
 ```
 
+## last
+
+To see the logs of users that logged into the system.
+
+```bash
+sudo last
+
+# last failed logged in
+sudo last -adF
+```
+
 ## Group Management
 
 To create or remove a new group
@@ -1146,6 +1160,17 @@ systemctl enable nginx
 ```
 
 > Read more about `systemctl` and `service` in [this page](Systemctl.md).
+
+## journalctl
+
+To show the logs of units in systemd.
+
+```bash
+journalctl -u ssh
+
+# To have a follow mode
+journalctl -fu ssh
+```
 
 # Compression
 

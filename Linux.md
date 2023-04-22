@@ -16,6 +16,21 @@
 - `/tmp`: Contains files that won't be persisted between reboots.
 - `/proc`: Imaginary directory that doesn't actually exist on the disk. It is created by memory and contains information about processes.
 
+# Logs
+
+## Ubuntu
+
+- `/var/log/auth.log`: contains the login attempts.
+- `/var/log/syslog`: contains logs related to the hardware and system events.
+- `/var/log/apt/`: contains the logs related to the package manager. `history.log` contains the previous commands and installations.
+- `/var/log/dmesg` or `dmesg`: shows the same information in `syslog` in a special format.
+- `journalctl`: inspects actual units in `systemd`.
+
+## Fedora
+
+- `/var/log/boot.log`: contains the log of the boot process.
+- `/var/log/dnf`: contains the log of package manager.
+
 # See More
 
 - [LPIC-1](Linux/LPIC-1.md)
