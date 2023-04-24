@@ -150,6 +150,34 @@ http {
 }
 ```
 
+To add another domain for port 80 to handle and decide based on the domain names:
+
+```bash
+http {
+	server {
+		listen 80;
+		server_name example.net;
+		root /var/www/example.net;
+		index index.html; 
+		# additional configuration directives for example.net
+	}
+}
+```
+
+You can also define the location:
+
+```bash
+http {
+	server {
+		listen 80;
+		server_name example.net;
+		location / {
+			root /var/www/example.net;
+		}
+	}
+}
+```
+
 to start, reload, or stop Nginx:
 
 ```bash
