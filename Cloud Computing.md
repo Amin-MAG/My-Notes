@@ -2,9 +2,63 @@
 
 # Introduction
 
+Cloud computing refers to data and applications being stored and run on the cloud, rather than local computer.
+
+## Pros and cons
+
+- **✔️** It is cost-efficient. 
+- **✔️** It is much more reliable.
+- **✔️** It is scalable.
+
+## Types
+
+### IaaS
+
+The cloud provider will manage
+- Servers
+- Virtualization
+- Storage
+- Networking
+
+The user must take care of 
+- Applications
+- Data
+- Operating System
+- Middleware
+- Runtime
+
+### PaaS
+
+In this type of cloud computing the cloud provider will manage
+- Servers
+- Virtualization
+- Storage
+- Networking
+- Operating System
+- Middleware
+- Runtime
+
+The user must take care of 
+- Applications
+- Data
+
+### SaaS
+
+In this type of cloud computing the cloud provider will manage almost everything
+- Servers
+- Virtualization
+- Storage
+- Networking
+- Operating System
+- Middleware
+- Runtime
+- Applications
+- Data
+
 ## References
 
-[The Basics of Cloud Computing](https://www.lucidchart.com/blog/cloud-computing-basics)
+- [The Basics of Cloud Computing](https://www.lucidchart.com/blog/cloud-computing-basics)
+- [Cloud Computing Explained](https://www.youtube.com/watch?v=_a6us8kaq0g)
 
 # Digital twin technology
 
