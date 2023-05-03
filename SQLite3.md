@@ -18,6 +18,20 @@ In the `sqlite3` environment:
 
 ```
 
+## Tables
+
+```
+.tables
+```
+
+## Select 
+
+To print headers in the select queries
+
+```
+.headers ON
+```
+
 ## Import and export
 
 Dump to a file
