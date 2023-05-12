@@ -1360,7 +1360,35 @@ else
 fi
 ```
 
+# 106 - 1
 
+![](gui_stack.png)
+
+## Xhost
+
+This command controls the access to the X server.
+
+```bash
+# Give access to all
+xhost + 
+# Or give access to a specific IP
+xhost +192.168.32.12
+
+# Limit the access 
+xhost -
+```
+
+To see the current display status
+
+```bash
+echo $DISPLAY
+```
+
+But this is not secure. This mechanisam has multiple security issues.
+
+## xauth
+
+The difference is that xauth is based on secrets and not based on IP addresses.
 
 # Resources
 
