@@ -38,6 +38,7 @@ This is the opposite of the Client-Server model and each one of the devices can 
 ## See more
 
 - [Build a simple ditributed system](Distributed-Systems/Simple-Distributed-System)
+- [Most used distributed systems patterns](Distributed-Systems/Distributed-Systems-Pattern)
 
 # Resources
 
