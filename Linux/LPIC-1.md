@@ -1390,6 +1390,34 @@ But this is not secure. This mechanisam has multiple security issues.
 
 The difference is that xauth is based on secrets and not based on IP addresses.
 
+# 106 - 2
+
+## Graphical Desktops
+
+- KDE
+- Gnome
+- Xfce
+
+## Remote Desktop
+
+For running a single application, if the `X11Forwarding yes` is configured in `/etc/ssh/sshd_config` you can remote desktop using this command.
+
+```bash
+ssh -X server_ip.address.net
+```
+
+### VNC
+
+It is an old protocol that works on most of computers and the default port is 5900+DisplayNumber. It has multiple security issues.
+
+### Spice
+
+It uses low amount of CPU and it is faster. The usage is limited to some kinds of computers.
+
+### RDP
+
+You can install applications like `xrdp` that runs on 3389. The connection is encrypted and there are many open RDP clients.
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)
