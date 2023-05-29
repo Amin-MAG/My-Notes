@@ -8,7 +8,7 @@ If you have many replicas of Redis, then it doesn't cause any problems. Always w
 
 There are 2 options here:
 
-1. Use snapshotting (RDB): This is faster, but you lose your latest data.
+1. Use snapshotting (RDB): This is faster, but you lose your latest data. (You can use `SAVE`, `BGSAVE`, or `DUMP` to create a new snapshot) 
 2. Use Append only file (AOF): This is slower, but you restore the latest state.
 
 Or a combination of these methods.
@@ -42,11 +42,21 @@ To delete a key
 del test_key
 ```
 
+To get the size of the database
+
+```bash
+dbsize
+```
+
+### exists
+
 To check whether a key exists or not
 
 ```bash
 exists test_key
 ```
+
+### flush
 
 To flush the whole instance or a single database
 
@@ -58,17 +68,43 @@ FLUSHALL
 FLUSHDB
 ```
 
+### monitor
+
 To monitor the instance you can use 
 
 ```sql
 MONITOR
 ```
 
-To get the size of the database
+### save
+
+To perform a background saving of Redis on disk. The snapshot file is usually named `dump.rdb` and is stored in the Redis data directory.
 
 ```bash
-dbsize
+bgsave
 ```
+
+To perform a synchronous blocking save of the Redis database to disk.
+
+```bash
+save
+```
+
+`DUMP` returns a binary serialized version of the value associated with the key
+
+```bash
+dump mykey
+```
+
+### restore
+
+The `RESTORE` command in Redis is used to restore data from a backup created with the `DUMP` command or obtained from a snapshot file (RDB file).
+
+```bash
+RESTORE mykey 0 <serialized-value>
+```
+
+The 0 in the command represents the key's TTL (Time to Live) value. If you want to restore the key without any expiration, use 0; otherwise, you can specify the desired TTL in seconds.
 
 # Use cases
 
