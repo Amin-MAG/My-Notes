@@ -1,3 +1,4 @@
+
 # OpenShift
 
 ## Resource
@@ -190,6 +191,12 @@ oc logs
 oc rsh <pod>
 ```
 
+## Execute a command 
+
+```bash
+oc exec -it cobbler-staging-106-r7bx4 -- cat /tmp/data/data-sources/stalin-web/feedbacks_ret.csv
+```
+
 ## Quota
 
 ```bash
@@ -201,6 +208,12 @@ oc describe quota default -n smapp-data
 
 # To see the limits
 oc describe limits default
+```
+
+## User Tokens
+
+```bash
+oc get useroauthaccesstokens
 ```
 
 # Objects
