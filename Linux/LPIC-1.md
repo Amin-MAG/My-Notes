@@ -1418,6 +1418,18 @@ It uses low amount of CPU and it is faster. The usage is limited to some kinds o
 
 You can install applications like `xrdp` that runs on 3389. The connection is encrypted and there are many open RDP clients.
 
+# 107 - 1
+
+## Manage user accounts and related system files
+
+> See more about [adduser](Linux%20Commands.md##adduser), [useradd](Linux%20Commands.md##useradd), [usermod](Linux%20Commands.md##usermod), and [userdel](Linux%20Commands.md##userdel)  on the Linux commands page.
+
+## Manage user groups and related system files
+
+> See more about [groupadd](Linux%20Commands.md##groupadd), [groupmod](Linux%20Commands.md##groupmod), and [groupdel](Linux%20Commands.md##groupdel)  on the Linux commands page.
+
+
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)

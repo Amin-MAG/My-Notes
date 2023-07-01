@@ -2,7 +2,7 @@
 
 ## Get system info
 
-`uname` return some useful information about the specific flavor of the OS and its kernel.
+`uname` returns some useful information about the specific flavor of the OS and its kernel.
 
 ```bash
 # -a for all information
@@ -29,7 +29,7 @@ ln -s my_file soft_link
 ## ls
 
 ```bash
-# Reverse sort based on time and in long human readable format
+# Reverse sort based on time and in long human-readable format
 ls -ltrh
 
 # Show recursively
@@ -629,7 +629,7 @@ find Downloads -name "flag" -type d -print0 | xargs -0 /bin/rm -v -rf "{}"
 ls -1 | tee allfiles myfiles
 ```
 
-## SSH
+## ssh
 
 You can use `ssh` to receive an interactive shell from another computer. 
 
@@ -643,11 +643,11 @@ You can also use port forwarding
 ssh -N -f -L 8080:localhost:8080 ubuntu@os-playground1
 ```
 
-## SCP
+## scp
 
 You can use `scp` command to send files in terminal to other computers.
 
-## Screen
+## screen
 
 You may want to execute a long-running job on your virtual machine. The network connection can interrupt your ssh connection, and you lose the running task session in your terminal. In this situation, you can use something like Tmux.
 Another tool is called Screen. 
@@ -670,188 +670,7 @@ screen -r 51166
 
 At last, I think using tmux is better :))
 
-## User Management
-
-To create a separate home directory for user
-
-```bash
-mkhomedir_helper <USER>
-```
-
-To create a specific directory for the user when you are creating the user
-
-```bash
-useradd -m -d /home/user1 user1
-
-# To add user 
-useradd user1
-# To remove user
-userdel user1
-```
-
-Remove the password for a user
-
-```bash
-passwd -d user1
-```
-
-## whoami
-
-To see the logged-in user in Linux.
-
-```bash
-whoami
-```
-
-## groups 
-
-![Untitled](Linux%20Commands/Untitled.png)
-
-To show the groups that you are a member.
-
-```bash
-groups
-
-# Alternatively
-cat /etc/group
-```
-
-## id
-
-To show the IDs of my user and groups.
-
-```bash
-id
-```
-
-The origin of these data is in the `/etc/passwd` and `/etc/group`. This command also shows the current group name and the one's that the user is a member of. You can change default group by `newgrp` command.
-
-## newgrp
-
-To switch the default group.
-
-```bash
-newgrp cdrom
-```
-
-## su
-
-Change the user to the root.
-
-```bash
-sudo su -
-```
-
-## last
-
-To see the logs of users that logged into the system.
-
-```bash
-sudo last
-
-# last failed logged in
-sudo last -adF
-```
-
-## Group Management
-
-To create or remove a new group
-
-```bash
-groupadd shared
-groupdel shared
-```
-
-To add a user to a new group you can use 
-
-```bash
-usermod -a -G shared user1
-```
-
-![Untitled](Linux%20Commands/file-permissions.png)
-
-## chmod
-
-To change the file permissions by octal numbers
-
-```bash
-# The user can read, write, and execute it;
-# Members of the group can read and execute it;
-# Others may only read it.
-chmod 754 myfile
-```
-
-You can add permission like execution 
-
-```bash
-# Add permission for the user
-chmod u+rwx myfile
-
-# Add permission for the group
-chmod +x myfile
-
-# Add multiple permissions
-chmod u+rwx,g+rwx,o+rx myfile
-
-# Remove multiple permissions
-chmod u-x,g-x,o-x myfile
-```
-
-The operator **+** causes the selected file mode bits to be added to the existing file mode bits of each file; **-** causes them to be removed; and **=** causes them to be added and causes unmentioned bits to be removed except that a directory's unmentioned set user and group ID bits are not affected.
-
-Another way is to
-
-```bash
-chmod u=rwx,g=rx,o=r myfile
-
-# Find some files and change the permission
-find /var/www/html -type f -exec chmod u=rw,go=r {} \;
-```
-
-If we want to change the permission of a directory recursively
-
-```bash
-chmod -R 755 directory_name
-```
-
-## chown
-
-To change the owner of the directory or file
-
-```bash
-# Change the owner to the user amin and group amin
-chown amin:amin myfile
-
-# Recursively change the owner of files in a directory
-chown -R user1 /shared_files
-```
-
-## chgrp
-
-To change group ownership
-
-```bash
-# Change group of /u to staff
-chgrp staff /u
-
-# + With subfolders (recursively)
-chgrp -hR staff /u
-```
-
-## umask
-
-To see the `umask` number
-
-```bash
-umask
-
-# To change the umask number
-umask 0066
-# You can also chnage it this way
-umask u=rw,g=,o=
-```
-
-## Watch
+## watch
 
 You can use the `watch` command to watch the output of your command periodically.
 
@@ -868,7 +687,7 @@ watch -n 1 -d uptime
 watch -n 1 ./run
 ```
 
-## Cat
+## cat
 
 A tool to concatenate input streams.
 
@@ -879,7 +698,7 @@ cat a.txt b.txt
 > You can use `zcat`, `gzcat`, etc., to concatenate compressed files.
 >    
 
-## Od
+## od
 
 It shows files in formats other than text.
 
@@ -890,7 +709,7 @@ od t.txt
 od -c t.txt
 ```
 
-## Split
+## split
 
 You can split a big file into some smaller files using `split` command.
 
@@ -901,7 +720,7 @@ You can split a big file into some smaller files using `split` command.
 split -n  10 h.zip h_ 
 ```
 
-## Nl
+## nl
 
 Add the line number to the input text.
 
@@ -912,7 +731,7 @@ nl t.txt
 cat -n t.txt
 ```
 
-## Sed
+## sed
 
 It is a command used for replacing and editing strings. For instance, look at this text:
 
@@ -948,7 +767,7 @@ sed -n '2,10p'
 sed -n '2p;10p'
 ```
 
-## WC
+## wc
 
 To get the number of lines
 
@@ -961,7 +780,7 @@ wc t.txt
 wc -l docker-compose-dev.yml 
 ```
 
-## Hashing
+## hashing
 
 ```bash
 md5sum file.txt
@@ -969,7 +788,7 @@ sha256sum file.txt
 sha512sum file.txt
 ```
 
-## AWK
+## awk
 
 ```bash
 # To get the first column of output
@@ -992,7 +811,7 @@ seq 1 10
 seq 1 3 10 
 ```
 
-## Cut
+## cut
 
 As it seems, It will cut the output as we want to.
 
@@ -1008,14 +827,14 @@ minikube status | cut -d " " -f2
 minikube status | cut -d " " -f1,2,4-6
 ```
 
-## Head
+## head
 
 ```bash
 # To get the 20 first character of a file
 cat file | head --bytes 20
 ```
 
-## Sort
+## sort
 
 It sorts the input text string by different kinds of factors.
 
@@ -1024,7 +843,7 @@ It sorts the input text string by different kinds of factors.
 sort -n the_file.txt
 ```
 
-## Unique
+## unique
 
 ```bash
 # To get the unique output
@@ -1040,7 +859,7 @@ uniq -u t.txt
 > The `unique` can operate on files that have been sorted already.
 > 
 
-## Paste
+## paste
 
 It merges the lines of the given files.
 
@@ -1170,6 +989,270 @@ journalctl -u ssh
 
 # To have a follow mode
 journalctl -fu ssh
+```
+
+## getent
+
+To get information about entries.
+
+```bash
+getent passwd newuser 
+getent host localhost
+```
+
+# User Management
+
+## whoami
+
+To see the logged-in user in Linux.
+
+```bash
+whoami
+```
+
+## id
+
+To show the IDs of my user and groups.
+
+```bash
+id
+```
+
+The origin of these data is in the `/etc/passwd` and `/etc/group`. This command also shows the current group name and the one's that the user is a member of. You can change default group by `newgrp` command.
+
+## useradd
+
+You need to specify multiple flags to use this command. To add a new user account to the linux.
+
+```bash
+useradd newuser 
+
+# -m creates a home directory for user
+# -d specifies the path of the home directory
+# -s specifies the user shell
+# -G add user to a group
+# -c add some comments for this account
+# To create a specific directory for the user when you are creating the user
+useradd -m -d /home/user1 user1
+```
+
+## adduser
+
+It is more automated and interactive and ask some questions about the new user.
+
+```bash
+adduser newuser
+```
+
+## usermod
+
+To modify the configurations of a linux user
+
+```bash
+# Change the shell for the user
+usermod -s /bin/csh newuser
+
+# Lock or unlock the user
+usermod -L newuser
+usermod -U newuser
+
+# Add user to more group
+usermod -aG sudo newuser
+```
+
+## userdel
+
+To delete a user account in linux
+
+```bash
+userdel newuser
+
+# To remove the home directory files
+userdel -r newuser
+```
+
+## passwd
+
+To change the password of a user
+
+```bash
+passwd user1
+
+# Remove the password for a user
+passwd -d user1
+```
+
+The details about each user is in `/etc/passwd`.
+
+![Untitled](Linux%20Commands/passwd.png)
+
+Passwords are saved in `/etc/shadow`.
+
+![Untitled](Linux%20Commands/shadow.png)
+
+## chage
+
+To change password configuration for a user
+
+```bash
+chage newuser
+
+# Show the details about password configurations
+chage -l newuser
+```
+
+# Group Management 
+
+![Untitled](Linux%20Commands/Untitled.png)
+
+## groups
+
+To show the groups that you are a member.
+
+```bash
+groups
+
+# Alternatively
+cat /etc/group
+```
+
+## groupadd
+
+To create a new group
+
+```bash
+groupadd newgroup
+
+# To specify the group ID
+groupadd -g 1200 newgroup
+```
+
+## groupmod
+
+To modify the configurations of a group
+
+```bash
+groupmod -g 500 newgroup
+```
+
+## groupdel
+
+To delete a group
+
+```bash
+groupdel newgroup
+```
+
+## newgrp
+
+To switch the default group.
+
+```bash
+newgrp cdrom
+```
+
+## su
+
+Change the user to the root.
+
+```bash
+sudo su -
+```
+
+## last
+
+To see the logs of users that logged into the system.
+
+```bash
+sudo last
+
+# last failed logged in
+sudo last -adF
+```
+
+# File Permissions and Ownership
+
+## chmod
+
+![Untitled](Linux%20Commands/file-permissions.png)
+
+To change the file permissions by octal numbers
+
+```bash
+# The user can read, write, and execute it;
+# Members of the group can read and execute it;
+# Others may only read it.
+chmod 754 myfile
+```
+
+You can add permission like execution 
+
+```bash
+# Add permission for the user
+chmod u+rwx myfile
+
+# Add permission for the group
+chmod +x myfile
+
+# Add multiple permissions
+chmod u+rwx,g+rwx,o+rx myfile
+
+# Remove multiple permissions
+chmod u-x,g-x,o-x myfile
+```
+
+The operator **+** causes the selected file mode bits to be added to the existing file mode bits of each file; **-** causes them to be removed; and **=** causes them to be added and causes unmentioned bits to be removed except that a directory's unmentioned set user and group ID bits are not affected.
+
+Another way is to
+
+```bash
+chmod u=rwx,g=rx,o=r myfile
+
+# Find some files and change the permission
+find /var/www/html -type f -exec chmod u=rw,go=r {} \;
+```
+
+If we want to change the permission of a directory recursively
+
+```bash
+chmod -R 755 directory_name
+```
+
+## chown
+
+To change the owner of the directory or file
+
+```bash
+# Change the owner to the user amin and group amin
+chown amin:amin myfile
+
+# Recursively change the owner of files in a directory
+chown -R user1 /shared_files
+```
+
+## chgrp
+
+To change group ownership
+
+```bash
+# Change group of /u to staff
+chgrp staff /u
+
+# + With subfolders (recursively)
+chgrp -hR staff /u
+```
+
+## umask
+
+To see the `umask` number
+
+```bash
+umask
+
+# To change the umask number
+umask 0066
+# You can also chnage it this way
+umask u=rw,g=,o=
 ```
 
 # Compression
