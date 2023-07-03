@@ -1478,6 +1478,20 @@ In `/etc/crontab`, you can also write some cron jobs as a root user. This file a
 
 Moreover, In `/etc/` there are some directories that you can set jobs for specific intervals like `/etc/cron.weekly`, `/etc/cron.hourly`, etc. The difference is that you can directly copy your shell script in this directories.
 
+### At
+
+You can Also use `at` to schedule a job for a specific time.
+
+> See more about [at](Linux%20Commands.md##at) on the Linux commands page.
+
+### Managing cron access 
+
+There 4 files for managing access of `cron` and `at` commands.
+
+- `/etc/cron.allow`: the whitelist of users that can use cron jobs
+- `/etc/cron.deny`: the blacklist of users that can not use cron jobs
+- `/etc/at.allow`: the whitelist of users that can use at jobs
+- `/etc/at.deny`: the blacklist of users that can use at jobs
 
 # Resources
 

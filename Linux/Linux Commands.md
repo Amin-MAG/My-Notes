@@ -1838,38 +1838,39 @@ To set a cron job for another user
 crontab –u other_username –e
 ```
 
-### Time Special values
+## at
 
-[https://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/](https://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/)
-
-```bash
-# Keyword	Equivalent
-# @yearly	0 0 1 1 *
-# @daily	0 0 * * *
-# @hourly	0 * * * *
-# @reboot	Run at startup.
-# For example
-@yearly /home/ramesh/red-hat/bin/annual-maintenance
-```
-
-## Set Cron job for another user
+You can use this command to schedule some tasks for a specific time. To add a new job to run
 
 ```bash
-crontab –u other_username –e
+at now + 3min
 ```
 
-## ulimit
+Then you enter the command you like to run one by one. By `CTRL+D` you can specify the end of the commands.
 
-`ulimit` is a built-in Linux shell command that allows viewing or limiting system resource amounts that individual users consume. Limiting resource usage is valuable in environments with multiple users and system performance issues.
+To see all the jobs
 
 ```bash
-# prints all of the user limits
-ulimit -a
+atq
 ```
 
-There are 2 types of resource limitation: “hard” and “soft”. Hard resource limit defines the physical limit that the user can reach. The “soft” resource limit is manageable by the user. Its value can go up to the “hard” limit.
+To remove one of the jobs from the list
 
-The system resources are defined in `cat /etc/security/limits.conf`.
+```bash
+atrm 2
+```
+
+There are keywords you can use with `at`
+
+- `now`: current time
+- `teatime`: It is 4pm.
+- `tomorrow`: exactly tomorrow this time
+- `17:30`: 24-Hour format time
+
+```bash
+```
+
+
 
 # Network
 
@@ -1879,20 +1880,6 @@ To get local IP addresses:
 
 ```bash
 ifconfig
-en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
-	options=400<CHANNEL_IO>
-	ether 38:f9:d3:50:53:4f
-	inet6 fe80::cd8:50d:9fda:6cfc%en0 prefixlen 64 secured scopeid 0x4
-	inet 192.168.1.3 netmask 0xffffff00 broadcast 192.168.1.255
-	nd6 options=201<PERFORMNUD,DAD>
-	media: autoselect
-	status: active
-
-arp -a 
-? (192.168.1.1) at e0:1c:fc:6:a4:5c on en0 ifscope [ethernet]
-? (192.168.1.3) at 38:f9:d3:50:53:4f on en0 ifscope permanent [ethernet]
-? (192.168.1.255) at ff:ff:ff:ff:ff:ff on en0 ifscope [ethernet]
-? (239.255.255.250) at 1:0:5e:7f:ff:fa on en0 ifscope permanent [ethernet]
 ```
 
 ### Search all of the active IP Addresses
