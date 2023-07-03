@@ -1000,6 +1000,19 @@ getent passwd newuser
 getent host localhost
 ```
 
+## ulimit
+
+`ulimit` is a built-in Linux shell command that allows viewing or limiting system resource amounts that individual users consume. Limiting resource usage is valuable in environments with multiple users and system performance issues.
+
+```bash
+# prints all of the user limits
+ulimit -a
+```
+
+There are 2 types of resource limitation: “hard” and “soft”. Hard resource limit defines the physical limit that the user can reach. The “soft” resource limit is manageable by the user. Its value can go up to the “hard” limit.
+
+The system resources are defined in `cat /etc/security/limits.conf`.
+
 # User Management
 
 ## whoami
@@ -1781,54 +1794,49 @@ else
 fi
 ```
 
-# Cron
+# Scheduling
 
-## Basic syntax
+## cron
 
-***Cron*** reads the configuration files for a list of commands to execute. The daemon uses a specific syntax to interpret the lines in the ***crontab*** configuration tables.
-
-To be able to set up a cron job, we need to understand the basic elements that make up this syntax. The standard form for a crontab line is as follows:
+To see the list of cron jobs for the user
 
 ```bash
-a b c d e /directory/command output
-
-# Another pattern naming
-MIN HOUR DOM MON DOW CMD
-# MIN	Minute field	0 to 59
-# HOUR	Hour field	0 to 23
-# DOM	Day of Month	1-31
-# MON	Month field	1-12
-# DOW	Day Of Week	0-6
-# CMD	Command	Any command to be executed
+crontab -l
 ```
 
-1. The first five fields **`a b c d e`** specify the time/date and recurrence of the job. See the table for further information.  [https://phoenixnap.com/kb/set-up-cron-job-linux](https://phoenixnap.com/kb/set-up-cron-job-linux)
-
-2. In the second section, the **`/directory/command`** specifies the location and script you want to run.
-
-3. The final segment **`output`** is optional. It defines how the system notifies the user of the job completion.
-
-For example, if I want to run the script `run.sh`:
+To create or edit the cron jobs
 
 ```bash
-# Open the configuration file
 crontab -e
-
-# Add the line to the file
-# It will run the script each miniute
-# The current path that runs the script is /home/<username>
-# The third option is optional and gathers the output in a file
-* * * * * /home/ubuntu/cron/run.sh /home/ubuntu/cron/
 ```
 
-## Special characters
+For example, if you want to create a cronjob for `backup.sh` script which is run in the first day of the first month at 14:32, your configuration should be
 
-For efficiency, cron syntax also uses operators. Operators are special characters that perform operations on the provided values in the cron field.
+```bash
+32  14  1    1    *    /root/backup.sh
+```
 
-- **An asterisk (*)** stands for all values. Use this operator to keep tasks running during all months, or all days of the week.
-- **A comma (,)** specifies separate individual values.
-- **A dash (–)** indicates a range of values.
-- **A forward-slash (/)** is used to divide a value into steps. (*/2 would be every other value, */3 would be every third, */10 would be every tenth, etc.)
+If you want to define some intervals you can use `/` character. For instance, if you want to run a job for each 15 minutes
+
+```bash
+*/15  */2   *    *    *    /root/backup.sh
+```
+
+> **Note**: The cron jobs are saved in `/var/spool/cron/`. There are some files which are named after usernames and contains the configuration of the cron jobs.
+
+You can also specify the days with `,` characters
+
+```bash
+*/15  */2   *    *    1,2,3,4,5    /root/backup.sh
+```
+
+> **Note**: to maintain the logs of the commands you can use `>>` in command section for your cron jobs.
+
+To set a cron job for another user
+
+```bash
+crontab –u other_username –e
+```
 
 ### Time Special values
 

@@ -1428,6 +1428,55 @@ You can install applications like `xrdp` that runs on 3389. The connection is en
 
 > See more about [groupadd](Linux%20Commands.md##groupadd), [groupmod](Linux%20Commands.md##groupmod), and [groupdel](Linux%20Commands.md##groupdel)  on the Linux commands page.
 
+# 107 - 2
+
+## Automate system administration tasks by scheduling jobs
+
+### Cron Job
+
+`Cron` reads the configuration files for a list of commands to execute. The daemon uses a specific syntax to interpret the lines in the `crontab` configuration tables.
+
+To be able to set up a cron job, we need to understand the basic elements that make up this syntax. The standard form for a crontab line is as follows:
+
+```bash
+# MIN HOUR DOM MON DOW CMD
+# MIN	Minute field	0 to 59
+# HOUR	Hour field	0 to 23
+# DOM	Day of Month	1-31
+# MON	Month field	1-12
+# DOW	Day Of Week	0-6
+# CMD	Command	Any command to be executed
+
+# The third option `output` is optional and gathers the output in a file
+a b c d e /directory/command output
+```
+
+#### Using special values and characters
+
+For efficiency, cron syntax also uses operators. Operators are special characters that perform operations on the provided values in the cron field.
+
+- **An asterisk (\*)** stands for all values. Use this operator to keep tasks running during all months, or all days of the week.
+- **A comma (,)** specifies separate individual values.
+- **A dash (–)** indicates a range of values.
+- **A forward-slash (/)** is used to divide a value into steps. (*/2 would be every other value, */3 would be every third, */10 would be every tenth, etc.)
+
+Here is an example of special values that schedule a yearly job.
+
+```bash
+# Keyword	Equivalent
+# @yearly	0 0 1 1 *
+# @daily	0 0 * * *
+# @hourly	0 * * * *
+# @reboot	Run at startup.
+# For example
+@yearly /home/ramesh/red-hat/bin/annual-maintenance
+```
+
+> See more about [cron](Linux%20Commands.md##cron) on the Linux commands page.
+
+In `/etc/crontab`, you can also write some cron jobs as a root user. This file also specify the username in addition to the command.
+
+Moreover, In `/etc/` there are some directories that you can set jobs for specific intervals like `/etc/cron.weekly`, `/etc/cron.hourly`, etc. The difference is that you can directly copy your shell script in this directories.
 
 
 # Resources
