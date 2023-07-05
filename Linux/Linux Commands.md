@@ -1867,10 +1867,50 @@ There are keywords you can use with `at`
 - `tomorrow`: exactly tomorrow this time
 - `17:30`: 24-Hour format time
 
+## systemd-timers
+
+You can set this kind of timer with a file which is `service_name.timer` in which `service_name.service` is your target service.
+
 ```bash
+[Unit]
+Description=Daily rotation of log files
+Documentation=man:logrotate(8) man:logrotate.conf(5)
+
+[Timer]
+OnCalendar=daily
+AccuracySec=1h
+Persistent=true
+
+[Install]
+WantedBy=timers.target
 ```
 
+If you want to see your timers you can use 
 
+```bash
+systemctl list-timers
+
+# For all timers use --all
+systemctl list-timers --all
+```
+
+You need to activate a timer like a service to start the timer.
+
+```bash
+systemctl enable myservice.timer
+systemctl start myservice.time
+
+# Also do not forget to reload the daemon to apply the changes
+systemctl daemon-reload
+```
+
+### systemd-run
+
+You can temporary schedule a task using this command.
+
+```bash
+systemd-run --on-active="2minute" touch /tmp/chert
+```
 
 # Network
 

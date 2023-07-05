@@ -1493,6 +1493,69 @@ There 4 files for managing access of `cron` and `at` commands.
 - `/etc/at.allow`: the whitelist of users that can use at jobs
 - `/etc/at.deny`: the blacklist of users that can use at jobs
 
+### systemd & systemd-run
+
+Systemd has some timers and the timers are in `/etc/systemd/`. You can filter the timers using
+
+```bash
+find . -iname '*.time*'
+```
+
+The structure of a timer file is like `/etc/systemd/system/timers.target.wants/logrotate.timer`.
+
+```bash
+[Unit]
+Description=Daily rotation of log files
+Documentation=man:logrotate(8) man:logrotate.conf(5)
+
+[Timer]
+OnCalendar=daily
+AccuracySec=1h
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+```
+
+The timers automatically run the service which are the name exactly same with the timer's name. In this case it will run the `logrotate.service` service.
+
+There are two kinds of timers you can set
+
+#### reald-time timer
+
+You can set the exact time like this
+
+```bash
+On-Calendar=DOW YYYY-MM-DD hh-mm-ss
+```
+
+> **Note**: You can also use characters like `*`, `/`, and `,` just like in cron jobs.
+
+A unique special character which is only in `systemd` is `..`. In this example, you can say the first Saturday of each month the timer will be triggered.
+
+```bash
+OnCalendar=Sat *-*-1..7 02:42:00
+```
+
+You can also use some keywords for iterations such as `hourly`, `daily`, `weekly`, `monthly`, `monthly`, and `yearly`.
+
+#### Monotonic timer
+
+This kind of timer is activated after some time has elapsed from a specific start point.
+
+- `OnActiveSec`: after unit activation
+- `OnBootSec`: after system boot
+- And there some other keywords that you can search...
+
+> See more about [systemd timers](Linux%20Commands.md##systemd-timers) on the Linux commands page.
+
+As you can guess, the outputs and log of timer is in `journalctl`.
+
+#### Temporary timer
+
+It is possible to use `systemd-run` to schedule a task temporary.
+
+> See more about [systemd timers](Linux%20Commands.md###systemd-run) on the Linux commands page.
 # Resources
 
 - [Linux1st](https://linux1st.com/)
