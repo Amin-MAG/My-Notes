@@ -1013,6 +1013,77 @@ There are 2 types of resource limitation: “hard” and “soft”. Hard resour
 
 The system resources are defined in `cat /etc/security/limits.conf`.
 
+## cal
+
+A terminal based calendar
+
+```bash
+cal
+
+# To see the next and previous months
+cal -3
+
+# To see the full calendar of a year
+cal 1998
+```
+
+> **Note**: you can use `jcal` for Jalalli calendar
+
+## date
+
+To get information about date and time.
+
+```bash
+# Get the full date and time in default format
+date
+
+# You can specify a customized format
+# %Y year
+# %B name of the month
+# %m the number of the month
+# %d the number of the day in month
+# %H the current hour
+# %M the current minute
+
+# To get the year and the name of month
+date +'%Y %B'
+
+# To change the date and time
+sudo date -s "Jan 22 22:22:22 2022"
+```
+
+## timedatectl
+
+To get some configurations about the timezone
+
+```bash
+timedatectl
+```
+
+> **Note**: There is usually a service called `NTP` that set the correct time based on the timezone.
+
+## tzselect
+
+To change the timezone of the system.
+
+```bash
+tzselect
+```
+
+For example, if you want to check the Tokyo time
+
+```bash
+# /etc/timezone
+env TZ="Asia/Tokyo" date
+```
+
+You can also change your timezone by linking
+
+```bash
+sudo unlink /etc/localtime
+sudo ln -s /usr/share/zoneinfo/Africa/Logos
+
+```
 # User Management
 
 ## whoami

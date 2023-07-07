@@ -1556,6 +1556,60 @@ As you can guess, the outputs and log of timer is in `journalctl`.
 It is possible to use `systemd-run` to schedule a task temporary.
 
 > See more about [systemd timers](Linux%20Commands.md###systemd-run) on the Linux commands page.
+
+# 107 - 3
+
+## Date and time
+
+This section is about getting information about date and time and how to change the timezone. For changing the timezone you can either use the `tzselect` command or you can change the link of the `/etc/localtime`.
+
+> See more about [cal](Linux%20Commands.md##cal), [date](Linux%20Commands.md##date), [timedatectl](Linux%20Commands.md##timedatectl), and [tzselect](Linux%20Commands.md##tzselect) on the Linux commands page.
+
+To the information about the preferred formats in language.
+
+## Localization
+
+```bash
+locale
+```
+
+This will show some variables that is related and you can configure the locale in `/etc/locale.conf`.
+
+```bash
+LANG=en_US.UTF-8
+LANGUAGE=
+LC_CTYPE="en_US.UTF-8"
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY="en_US.UTF-8"
+LC_MESSAGES="en_US.UTF-8"
+LC_PAPER="en_US.UTF-8"
+LC_NAME="en_US.UTF-8"
+LC_ADDRESS="en_US.UTF-8"
+LC_TELEPHONE="en_US.UTF-8"
+LC_MEASUREMENT="en_US.UTF-8"
+LC_IDENTIFICATION="en_US.UTF-8"
+LC_ALL=en_US.UTF-8
+```
+
+You might see this line of code in scripts to avoid inconsistency between codes because of language (for example the order of characters or dates).
+
+```bash
+# It is a kind of contract to set the LANG to C
+export LANG=C
+```
+
+## Character Encoding
+
+To show the characters of other languages, systems start to use another character encoding that supports more number of characters.
+
+- ACSII
+- ISO-8859
+- UTF-8
+
+> See more about [iconv](Linux%20Commands.md##iconv) on the Linux commands page.
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)
