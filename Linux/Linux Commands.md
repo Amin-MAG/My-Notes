@@ -1084,6 +1084,61 @@ sudo unlink /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Africa/Logos
 
 ```
+
+## hwclock
+
+To see the hardware clock
+
+```bash
+hwclock
+
+# Change the hardware clock
+hwclock --localtime --set --date="01/05/2023 22:22:22"
+```
+
+You can see the system time adjustment in `/etc/adjtime`.
+
+## ntpdate
+
+To check the time and date with the global time.
+
+```bash
+sudo ntpdate pool.ntp.org
+
+# To update the system hardware time
+sudo hwclock -w -u
+```
+
+## chronyc
+
+```bash
+# Show status of time confiugration
+chronyc tracking
+
+# Show the status
+chronyc activity
+
+# Show the sources
+chronyc sources
+```
+
+## locale
+
+To show the preferred language in each situation.
+
+```bash
+locale
+```
+
+You can use either these environment variables or `/etc/locale.conf` to change the settings.
+## iconv
+
+To Convert the encoding to each other.
+
+```bash
+iconv -f windows-1258 -t UTF-8 /tmp/myfile.txt
+```
+
 # User Management
 
 ## whoami

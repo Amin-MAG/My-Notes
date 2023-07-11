@@ -1610,6 +1610,32 @@ To show the characters of other languages, systems start to use another characte
 
 > See more about [iconv](Linux%20Commands.md##iconv) on the Linux commands page.
 
+# 108 - 1
+
+## Maintain system time
+
+Systems have a hardware clock that can maintain the time even if the system is off. These clock are not accurate and they can be some seconds different from the accurate time.
+
+```bash
+# To see the hardware clock
+hwclock
+```
+
+The OS also has a mechanism to keep the time accurate by using a protocol called NTP. (ntpd and chrony are two famous implementations of this protocol)
+
+## NTP
+
+### ntpd
+
+An ntp service controls and updates the time with global time. You should either use the `ntp` service or `ntpdate` to keep your system time updated. You can not use both.
+
+The configuration of `ntp` service is in `/etc/ntp.conf`. You can add your time pools in this file.
+
+> **Note**: If `ntpd` recognizes a large amount of time difference it may not change the time automatically.
+
+### chrony
+
+Another alternative that nowadays personal systems use is chrony. You can configure this service using `chrony.conf`.
 # Resources
 
 - [Linux1st](https://linux1st.com/)
