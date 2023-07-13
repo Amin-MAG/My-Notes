@@ -1636,6 +1636,45 @@ The configuration of `ntp` service is in `/etc/ntp.conf`. You can add your time 
 ### chrony
 
 Another alternative that nowadays personal systems use is chrony. You can configure this service using `chrony.conf`.
+
+# 108 - 2
+
+## System logging
+
+The previous tools for logging in Linux were `syslog` and `syslog-ng`. Nowadays, `rsyslog` is usually used. The logs are usually stored in `/var/log` directory. 
+
+- `/var/log/auth.log`: Authentication processes like cron jobs, failed logins, sudo information, etc.
+- `/var/log/syslog` or `/etc/log/messages`: It is the place for most logs if a specific log file is not provided in `/etc/rsyslog.conf`.
+- `/var/log/debug`: Debug information from programs.
+- `/var/log/kern.log`: Kernel messages.
+- `/var/log/utmp`, `/var/log/wtmp`: These are some binary logs that maintain successful logins.
+- `/var/log/btmp`: Failed logins.
+- `/var/log/faillog`: Failed authentication attempts.
+- `/var/log/lastlog`: Date and time of recent user logins.
+
+## rsyslog
+
+`rsyslog` is a service in Linux systems. The configuration of this service is in `/etc/rsyslog.conf`.
+
+### Rules
+
+Rules in the configuration have facility, priority, and action. For example, if the cron facility has a warning log, then write in `/var/log/cron-warn.log`
+
+```bash
+cron.warning   /var/log/cron-warning.log
+
+# You can use * for all cases
+cron.*         /var/log/cron.log
+```
+
+Actions can be a file to save the log, a username to print on `tty` of the user, or an IP address to send the log to another `rsyslog`.
+
+> **Note**: You need to search more about this topic and there are a lot of capabilities for this service.
+
+### logrotate
+
+`logrotate` is a tool using cron jobs and responsible for compressing and maintaining the aggregate log in a Linux system. The configuration of this tool is in `/etc/logrotate.conf`.
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)

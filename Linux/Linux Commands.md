@@ -1131,6 +1131,35 @@ locale
 ```
 
 You can use either these environment variables or `/etc/locale.conf` to change the settings.
+
+## dmesg
+
+To show the kernel ring buffer which contains the entire logs. These logs are based on seconds
+
+```bash
+dmesg
+```
+
+## last
+
+To see the last successful logins
+
+```bash
+last
+
+# To see the failed logins
+lastb
+```
+
+## logger
+
+```bash
+# CTRL+D for the end of log
+logger
+
+# 
+```
+
 ## iconv
 
 To Convert the encoding to each other.
