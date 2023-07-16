@@ -1,5 +1,11 @@
 # Open Faas
 
+To login into the gateway.
+
+```bash
+faas-cli login --gateway https://gateway-openfaas.aminmag.ir/ --username admin --password 3124gZi
+```
+
 See all of the available templates.
 
 ```bash
@@ -22,5 +28,10 @@ After you change the handler or function you should build and push your FaaS app
 
 ```bash
 sudo faas-cli build -f ./hello-world.yml
+```
 
+To deploy your function.
+
+```bash
+faas-cli deploy -f ride-recommend.yml
 ```
