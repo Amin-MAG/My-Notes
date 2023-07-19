@@ -281,7 +281,6 @@ func main() {
 }
 ```
 
-
 ## Read Files
 
 Get statistics about a file.
@@ -386,6 +385,7 @@ for {
 - [Go Generic](GoGenerics.md)
 - [Goroutines](Goroutines.md)
 - [Go patterns](GoPatterns.md)
+- [Go Refactorings](GoRefactorings.md)
 - [Gzip](gzip.md)
 - [Hugo](Hugo.md)
 - [Issues](Issues.md)
@@ -396,6 +396,7 @@ for {
 - [Go Swagger](Go%20Swagger.md)
 - [Testify](Testify.md)
 - [Go Testing](Go%20Testing.md)
+- [Go Effective](Go-Effective.md)
 
 # Libraries
 
