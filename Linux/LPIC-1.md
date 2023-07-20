@@ -1675,6 +1675,33 @@ Actions can be a file to save the log, a username to print on `tty` of the user,
 
 `logrotate` is a tool using cron jobs and responsible for compressing and maintaining the aggregate log in a Linux system. The configuration of this tool is in `/etc/logrotate.conf`.
 
+## journald
+
+It is a newer tool for observing system's logs. You can see all of `journald` logs using 
+
+```bash
+journalctl
+```
+
+> **Note**: You can configure the `journald` in `/etc/systemd/journald.conf`.
+
+### journald configuration
+
+By changing the configuration file you can modify the behavior of the `journald`. For instance, You can set the method of storing the logs in the configuration.
+
+`Storage=auto` -> If `journald` discover the path `/var/log/journal`, it create a directory based on the machine ID and store the logs on disk. Otherwise, it stores the logs in memory.
+`Storage=volatile` -> It stores the logs in the memory.
+`Storage=persistent` -> it stores the logs on disk.
+`Storage=none` -> Does not store anything.
+
+There are also multiple configurations about storing logs on disk.
+
+`SystemMaxUse` -> The maximum size that can be dedicated to storing logs. It is also possible to mentions a percentage of remaining free disk.
+`SystemKeepFree` -> It doesn't matter how much to store the logs, but always keep this amount of disk free.
+`SystemMaxFileSize` -> The restriction of large file size.
+
+> **Note**: In case you are storing the logs in the memory, there are exactly the same configs like `RuntimeMaxUse`, `RuntimeKeepFree`, `RuntimeMaxFileSize`.
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)

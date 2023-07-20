@@ -982,13 +982,89 @@ systemctl enable nginx
 
 ## journalctl
 
-To show the logs of units in systemd.
+To show all the logs that have been sent to the `journald`.
 
 ```bash
+journalctl
+
+# Reverse the logs 
+journalctl -r
+
+# Go to the end of the logs
+journalctl -e
+
+# Keep showing the tail of logs
+journalctl -f
+
+# To see the last 10 lines
+journalctl -n 10
+
+# To show the kernel logs 
+journalctl -k
+
+# To filter only filter logs
+journalctl -p err
+journalctl -p info
+
+# To show the logs of units in systemd.
 journalctl -u ssh
 
-# To have a follow mode
-journalctl -fu ssh
+# To set a time range
+journalctl -u ssh --since yesterday --until "10 minutes ago"
+```
+
+> **Note**: You can configure the `journald` in `/etc/systemd/journald.conf`
+
+### Boot logs in `journald`
+
+To show the current boot logs
+
+```bash
+journalctl -b 0
+```
+
+To see the list of boots
+
+```bash
+journalctl --list-boots
+```
+
+### Delete some of logs
+
+You need to use `vaccum` to delete some of the logs from `journald`.
+
+```bash
+# Delete all logs until 2 months ago
+journalctl --vaccum-time=2months
+
+# Eliminate all logs until the size of logs be 100mb
+journalctl --vaccum-size=100M
+
+# Eliminate all file logs to 2 files
+journalctl --vaccum-file=2
+```
+
+### Check logs from a recovered system
+
+You need to configure the path of log files to see the logs.
+
+```bash
+journalctl -D <PATH>
+```
+
+Or you can merge the logs with your `journald` logs
+
+```bash
+journalctl --merge <PATH>
+```
+
+## systemd-cat
+
+It is used to manually send a log to the `journald`.
+
+```bash
+# Send a message with a info priority
+echo "this is not an info log" | system-cat -p info
 ```
 
 ## getent
@@ -1503,8 +1579,6 @@ ls | cpio -o > thefile.cpio
 # To open the file
 cpio -id < thefile.cpio
 ```
-
-
 
 ## lsof
 
