@@ -2141,6 +2141,31 @@ You can temporary schedule a task using this command.
 systemd-run --on-active="2minute" touch /tmp/chert
 ```
 
+# Mail Management
+
+## mail
+
+To see the inbox for the current user
+
+```bash
+mail
+```
+
+Send a new email
+
+```bash
+mail amin
+
+# You can schedule a command and send the result
+echo -e "this is my command result" | mail -s "subject" "amin@x.com"
+```
+
+To see the MTA queue of current processing emails
+
+```bash
+mailq
+```
+
 # Network
 
 To get some information about network adapters

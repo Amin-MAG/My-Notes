@@ -1702,6 +1702,26 @@ There are also multiple configurations about storing logs on disk.
 
 > **Note**: In case you are storing the logs in the memory, there are exactly the same configs like `RuntimeMaxUse`, `RuntimeKeepFree`, `RuntimeMaxFileSize`.
 
+# 108 -3
+
+## Main Transfer Agent
+
+MTAs are programs which handle emails in Linux operating system. There some options for MTAs that we are going to examine here.
+
+- `sendmail`: It is one of the oldest options. This program is a heavy one and the configuration is complex.
+- `exim`
+- `postfix`: This is a new alternative to `sendemail` that can be a more valid option for setting up a mail server.
+- `qmail`
+
+To install the basic requirements
+
+```bash
+sudo apt update
+sudo apt install postfix bsd-mailx
+```
+
+> **Note**: You can create a file `.forward` in the home directory, in case that you want MTA to forward your emails to another email.
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)
