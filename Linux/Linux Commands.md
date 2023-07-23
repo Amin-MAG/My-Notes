@@ -2271,6 +2271,8 @@ resolvectl status
 
 ## Wifi
 
+## iw
+
 ```bash
 iwconfig
 
@@ -2819,5 +2821,43 @@ Youtube downloader tool.
 yt-dlp -x --audio-format mp3 'https://youtube.com/the_address_of_video'
 ```
 
-# Resources
+# CUPS
+
+You need to `cups-bsd` for these command lines.
+
+## lpr
+
+To send a new print request for a file.
+
+```bash
+lpr -P MyPrinter myfile
+```
+
+## lpq
+
+Show jobs in the printers.
+
+```bash
+# Show all 
+lpq -a
+
+# To cancel a job
+lprm <JOB_ID>
+# To cancel all of jobs
+lprm -
+```
+
+## lpc
+
+To get status of all printers
+
+```bash
+lpc
+
+cupsaccept <PRINTER_NAME> "Message"
+cupsreject <PRINTER_NAME> "Message"
+cupsenable <PRINTER_NAME> "Message"
+cupsdisable <PRINTER_NAME> "Message"
+```
+
 

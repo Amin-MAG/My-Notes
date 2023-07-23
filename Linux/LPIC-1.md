@@ -1722,6 +1722,14 @@ sudo apt install postfix bsd-mailx
 
 > **Note**: You can create a file `.forward` in the home directory, in case that you want MTA to forward your emails to another email.
 
+# 108 - 4
+
+## Managing printers and printing
+
+`CUPS` is the main package for controlling and managing printers and printing. `/etc/cups` contains the `CUPS` configurations.
+
+> See more about [CUPS](Linux%20Commands.md##) on the Linux commands page.
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)
