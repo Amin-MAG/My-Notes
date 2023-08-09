@@ -1,5 +1,35 @@
 # Network
 
+## Layering in Network
+
+Network has many layers. Each one of them runs one or many protocols.
+
+- **Physical Layer**: This layer defines data transmission in electrical and physical terms.
+- **Data Link Layer**: This layer defines the transmission of data between two nodes.
+- **Network Layer**: It defines how packets are transmitted between networks. This layer needs to identify the hosts and networks.
+- **Transport Layer**: It defines mechanisms to deliver variable length messages.
+- **Session Layer**: This layer defines communication between applications running on the host.
+- **Presentation Layer**: It defines common formats for data representation.
+- **Application Layer**: This layer defines how user-centric applications should send and receive data.
+
+## Connection-oriented Service
+
+### TCP Header format
+
+![](tcp-model.png)
+
+Flags: 
+- `SYN`: Triggers a synchronization of sequence numbers.
+- `ACK`: Indicates that receiver should care about the acknowledgment number.
+- `FIN`: Starts a process of tearing down a connection.
+- `RST`: Resets the connection in case of error.
+
+## Connection-less Service
+
+### UDP Header Format
+
+![](udp-model.png)
+
 ## RTT or Round Trip Time
 
 Round-trip time (RTT) is the duration, measured in milliseconds, from when a browser sends a request to when it receives a response from a server. It’s a key performance metric for web applications and one of the main factors, along with Time to First Byte (TTFB).
