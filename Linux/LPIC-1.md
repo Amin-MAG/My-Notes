@@ -1730,6 +1730,14 @@ sudo apt install postfix bsd-mailx
 
 > See more about [CUPS](Linux%20Commands.md##) on the Linux commands page.
 
+# 109 - 1
+
+## Fundamental of internet protocols
+
+**TCP/IP**: `TCP` is the protocol of packets and how the data is transmitted. `IP` is a protocol that connect the computers together and create a network by defining an IP for each system. It also includes `UDP`, `ICMP`, `DNS`, etc.
+
+
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)
