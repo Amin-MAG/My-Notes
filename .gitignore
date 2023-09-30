@@ -5,3 +5,6 @@
 .obsidian
 
 *.DS_Store
+
+# Ignore the daily notes
+Daily.md
