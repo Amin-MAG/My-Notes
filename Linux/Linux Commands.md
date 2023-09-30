@@ -117,6 +117,9 @@ find /tmp/ ! -user amin
 find . -mmin -3 -exec echo "this is file {}" \;
 find . -mmin -3 -exec ls "{}" \;
 
+# Execute the go fmt commmand on any go file except the ones in the vendor directory
+find . -name '*.go' ! -path './vendor/*' -type f -exec go fmt {} \;
+
 # Important operations have their own switch
 find . -mmin -3 -ls
 find . -mmin -3 -delete
@@ -2253,6 +2256,14 @@ sudo apt-get install arp-scan
 sudo arp-scan --interface=eth0 --localnet
 ```
 
+## arp
+
+To display the ARP (Address Resolution Protocol) cache table.
+
+```bash
+arp -a
+```
+
 ## Ports
 
 To see the ports you can use this command in Linux
@@ -2628,6 +2639,15 @@ iptables -A INPUT -s <SOURCE_IP> -j DROP
 
 # To block a TCP port
 iptables -A INPUT -p tcp --dport 3200 -j DROP 
+```
+
+### Forward the Traffic
+
+You can use iptables to forward all traffic on a port to another port or IP address using the "DNAT" (Destination NAT) action. Here's an example command to forward all incoming traffic on port 80 to port 8080 on a specific IP address:
+
+```bash
+# -t nat is to speicify the nat table
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 192.168.1.100:8080
 ```
 
 ## DNS file `resolv.conf`
