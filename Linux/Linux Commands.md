@@ -2212,122 +2212,133 @@ netmask 255.255.255.0
 gateway 192.168.178.1
 ```
 
+You can use this command to configure the Adapter based on the configuration file.
+
+```bash
+ifup eth0
+```
+
 Then, restart the network service
 
 ```bash
 sudo systemctl restart networking.service
 ```
 
-### Routes
+## ip
+
+To see the physical network cards or NICs
 
 ```bash
-# List the current routes
-sudo ip route list
-sudo ip route show
-route -n
+sudo ip link
+sudo ip link show
+```
 
+To enable/disable the interfaces
+
+```bash
+sudo ip link set dev eth0 up
+sudo ip link set dev eth0 down
+```
+
+To get local IP addresses
+
+```bash
+sudo ip addr show
+sudo ip addr s 
+sudo ip a s
+sudo ip a
+
+# To see a specific interface
+sudo ip a s eth0
+```
+
+To change IP Addresses
+
+```bash
+# Set config and set the IP address
+sudo ip addr add 10.10.14.1/24 dev eth2 # temporary
+
+# Remove the IP address
+sudo ip del add 10.10.14.1/24 dev eth2
+```
+
+To see and change the routes
+
+```bash
+# List of the current routes
+sudo ip route show
+sudo ip route list
+sudo ip route s
+sudo ip r s
+sudo ip r
+
+# It has a separte command
+route -n
+```
+
+To add or delete a route
+
+```bash
+# Add default gateway
+sudo ip route add default via 192.168.1.1 
 # Add a route
 sudo ip route add 10.0.2.15 via 192.168.43.223 dev enp0s3
 ```
 
-## Search all of the active IP Addresses
+## route
+
+To see the routes
 
 ```bash
-# Install the arp-scan
-sudo apt-get install arp-scan
-
-# Scan the local IP addresses in network
-sudo arp-scan --interface=eth0 --localnet
+route -n
 ```
 
-## arp
-
-To display the ARP (Address Resolution Protocol) cache table.
+To set the default gateway IP:
 
 ```bash
-arp -a
+route add default gw <IP_Address>
 ```
 
-## Ports
+## nmcli
 
-To see the ports you can use this command in Linux
-
-```bash
-less /etc/services
-```
-
-## resolvectl
-
-For new versions of ubuntu, you can use `resolvectl` for DNS.
-
-```bash
-resolvectl status
-```
-
-## Wifi
-
-## iw
-
-```bash
-iwconfig
-
-# sudo iwlist <INTERFACE> scan | grep ESSID
-sudo iw dev wlan0 scan | grep SSID
-
-# To connect Wifi
-wpa_passphrase <YOUR-ESSID> <YOUR-PASS> | sudo tee /etc/wpa_supplicant.conf
-sudo wpa_supplicant -c /etc/wpa_supplicant.conf -i wlp4s0
-
-# Get the name of current SSID
-iwgetid
-```
-
-### nmcli
+You can easily install the network manager that can control your network and connectivity.
 
 ```bash
 # Install the network manager to have this command
 sudo apt install network-manager
-sudo nmcli dev status
+nmcli
+```
 
+To get the general status
+
+```bash
+sudo nmcli general
+sudo nmcli general status
+```
+
+To get devices status
+
+```bash
+sudo nmcli device
+sudo nmcli device status
+
+# To get surrounding Wifi
+sudo nmcli device wifi
+# To connect to Wifi
+sudo nmcli device wifi connect SSID password mypassword
+
+# // TODO: networking, radio, connection, agent, device, monitor
+```
+
+To get info about radio
+
+```bash
 # Monitor nearby wifi
 sudo nmcli radio wifi
 sudo nmcli radio wifi on
-sudo nmcli dev wifi
-
 ```
 
-## Aircrack
-
-Start monitoring
-
-```bash
-airmon-ng start wlan0
-```
-
-Start sniffing the packets
-
-```bash
-airodump-ng  wlan0mon
-```
-
-```bash
-aireplay-ng --test wlan0mon
-```
-
-```bash
-besside-ng wlan0mon -R Irancell-TD-9283727
-```
-
-## Block a server
-
-Sometimes you may need to block the connection with specific servers. The file `/etc/hosts` is the one gathering information. If you want to block a server you should add lines to this file.
-
-```bash
-# First open the file
-sudo vim /etc/hosts
-```
-
-To block them
+## hostname
 
 ```
 # Then Add these lines

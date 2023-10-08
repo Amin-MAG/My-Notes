@@ -1764,6 +1764,49 @@ You can change the others hostname by editing `/etc/hosts`. Open the `/etc/hosts
 192.168.1.11	db
 ```
 
+### DNS Configuration
+
+On the other hand, if your computer wants to translate the names and domains to the IP addresses, it uses the `/etc/resolv.conf`.  
+
+Name Resolution is an old solution for handling the domain name system. We use some DNS servers with all of these domain names and IP addresses. To add a dns server, change the `/etc/hosts`.
+
+```python
+nameserver		192.168.1.100
+# You can add more.
+# You can also set this on your DNS server
+# to forward other names to a global DNS server
+nameserver		8.8.8.8
+# For any name search the NAME.jadi.net
+domain jadi.net
+# For any name search NAME.mycompany.com or NAME.prod.mycompany.com
+search 			mycompany.com	prod.mycompany.com
+```
+
+> This file can be managed by network managers or `resolvctl`. So your changes might be temporary.
+
+### Block a server
+
+Sometimes you may need to block the connection with specific servers. The file `/etc/hosts` is the one gathering information. If you want to block a server you should add lines to this file.
+
+```bash
+# First open the file
+sudo vim /etc/hosts
+```
+
+To block them
+
+```
+# Then Add these lines
+0.0.0.0   www.example.com
+0.0.0.0   example.com
+::0       www.example.com
+::0       example.com
+```
+
+### nsswitch
+
+You can config the order of name/domain resolution. You can edit the priority of that by editing the `/etc/nsswitch`. By default, first computer search for the host in `/etc/hosts` (`files`) and then search it in the `/etc/resolv.conf` (`dns`).https://github.com/
+
 
 # Resources
 
