@@ -1736,6 +1736,33 @@ sudo apt install postfix bsd-mailx
 
 **TCP/IP**: `TCP` is the protocol of packets and how the data is transmitted. `IP` is a protocol that connect the computers together and create a network by defining an IP for each system. It also includes `UDP`, `ICMP`, `DNS`, etc.
 
+> It is essential to know about IP and range of submask for this module. Also, this module contains some basic information about protocols like TCP, UDP, and ICMP.
+
+### Ports
+
+You can look at the `/etc/services` to see port numbers and their usage.
+
+# 109 - 2
+
+## Persistent Network Configuration
+
+### NIC or Network Adapters
+
+NIC represents a physical network adapter that kernel can recognize. You can use `ip` commands to see or make some changes to the IP address. `ifconfig` is also another older command that can be used.
+
+> See more about [ip](Linux%20Commands.md##ip), [ifconfig](Linux%20Commands.md##ifconfig), and [nmcli](Linux%20Commands.md##nmcli) on the Linux commands page.
+
+### Hostname
+
+You can change the host name by editing `/etc/hostname`.
+
+> See more about [hostname](Linux%20Commands.md##hostname) and [hostnamectl](Linux%20Commands.md##hostnamectl) on the Linux commands page.
+
+You can change the others hostname by editing `/etc/hosts`. Open the `/etc/hosts` and add the name and IP address. This mapping is called name resolution.
+
+```python
+192.168.1.11	db
+```
 
 
 # Resources

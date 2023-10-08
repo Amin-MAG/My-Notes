@@ -2171,57 +2171,41 @@ mailq
 
 # Network
 
-To get some information about network adapters
+> To see the common ports you can use `less /etc/services`
+
+## ifconfig
+
+> `ifconfig` is an old command compared to `ip`.
+
+To enable/disable the interfaces
 
 ```bash
-# Install the lshw
-sudo apt install lshw
-
-sudo lshw -class network
-```
-
-## IP Address
-
-To get local IP addresses:
-
-```bash
-# Using ip command
-sudo ip a
-# sudo ip a s <Interface>
-sudo ip a s eth0
-
-# Using ifconfig command
-sudo ifconfig
-```
-
-To enable/disable the interfaces:
-
-```bash
-# Using ip command
-sudo ip link set dev eth0 up
-sudo ip link set dev eth0 down
-
-# Using ifconfig command
 sudo ifconfig eth0 up
 sudo ifconfig eth0 down
 ```
 
-To change IP Adresses:
+To get local IP addresses
 
 ```bash
-# Using ip command
+sudo ifconfig
+# Show interfaces that are even down
+sudo ifconfig -a 
+```
 
-# Using ifconfig
+To change IP Addresses:
+
+```bash
 sudo ifconfig eth0 192.168.42.169 netmask 255.255.255.0
 ```
 
+## ifup & ifdown
+
 When manually changing your IP address, Linux automatically understands that you want to change from using a DHCP server to static IP addressing.
 
-On Linux, changing your IP address using network utilities does not mean that your IP configuration will be saved on reboots. **In order to change your IP address on Linux, you will have to add your network configuration in the “/etc/network/interfaces” or create this file if it does not exist already.**
+On Linux, changing your IP address using network utilities does not mean that your IP configuration will be saved on reboots. **In order to change your IP address on Linux, you will have to add your network configuration in the `/etc/network/interfaces` or create this file if it does not exist already.**
 
 ```bash
 # Content of /etc/network/interfaces
-
 iface eth0 inet static 
 address 192.168.178.32 
 netmask 255.255.255.0 
