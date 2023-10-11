@@ -10,7 +10,7 @@ When there are more users for a service, a better way is to deploy replicas of y
 
 ## Load Balancer
 
-How can we ensure that one server will not be overloaded when we have multiple replicas? If we use a reverse proxy to dispatch the request to the servers, we can be sure that none of them will be overloaded. There are multiple algorithms and mechanisms for load balancing like round-robin or hashing. You can read more about load balancers on the [Load Balancing](Network/Load-Balancing.md) page.
+How can we ensure that one server will not be overloaded when we have multiple replicas? If we use a reverse proxy to dispatch the request to the servers, we can be sure that none of them will be overloaded. There are multiple algorithms and mechanisms for load balancing like round-robin or hashing. You can read more about load balancers on the [Load Balancing](Load-Balancing.md) page.
 
 ## Content Deliver Network (CDN)
 

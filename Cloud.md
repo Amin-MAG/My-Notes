@@ -7,3 +7,5 @@
 - [Cloud Computing](Cloud%20Computing.md)
 - [SRE](SRE.md)
 - [Backend Development](Backend-Development.md)
+- [OpenStack](OpenStack.md)
+- [Serverless](Serverless.md)

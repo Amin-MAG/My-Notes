@@ -13,7 +13,7 @@ hugo
 hugo -D
 ```
 
-You can download various themes and configuret it in `config.toml`
+You can download various themes and configure it in `config.toml`.
 
 ```env
 ubuntu@ubuntu-g2-small3-sh-1:~/website$ cat config.toml 

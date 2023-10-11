@@ -16,7 +16,7 @@ Network has many layers. Each one of them runs one or many protocols.
 
 ### TCP Header format
 
-![](tcp-model.png)
+![](Network/tcp-model.png)
 
 Flags: 
 - `SYN`: Triggers a synchronization of sequence numbers.
@@ -28,7 +28,7 @@ Flags:
 
 ### UDP Header Format
 
-![](udp-model.png)
+![](Network/udp-model.png)
 
 ## RTT or Round Trip Time
 
@@ -178,11 +178,12 @@ But to find the name server we need to ask it from root server. Root server itse
 
 - [VPN](Network/VPN%2009efe.md)
 - [Proxy](Proxy.md)
-- [Load Balancing](Network/Load-Balancing.md)
+- [Load Balancing](Load-Balancing.md)
 - [CDN](CDN.md)
 - [Tor](Network/Tor%20662bd.md)
 - [Setup a security camera](Network/SecurityCamera.md)
 - [Laboratory](Network/Laboratory%20a293b.md)
 - [University](Network/University%20bc284.md)
+- [FTP](FTP.md)
 
 

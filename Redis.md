@@ -27,7 +27,7 @@ To set a new key-value data
 set test_key test_value
 
 # Set a value with a TTL (seconds)
-setex test_key 10 test_value
+set test_10s value_10s EX 10
 ```
 
 To get a key
