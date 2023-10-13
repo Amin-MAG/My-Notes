@@ -1807,6 +1807,18 @@ To block them
 
 You can config the order of name/domain resolution. You can edit the priority of that by editing the `/etc/nsswitch`. By default, first computer search for the host in `/etc/hosts` (`files`) and then search it in the `/etc/resolv.conf` (`dns`).https://github.com/
 
+# 109.3
+
+## Basic Network Troubleshooting
+
+You can use `ip`, `ifconfig`, and `ping` command to start troubleshooting from the client side. The first step is to see whether you can see the default gateway or not.
+
+> See more about [ip](Linux%20Commands.md##ip), [ifconfig](Linux%20Commands.md##ifconfig) and [ping](Linux%20Commands.md##ping) on the Linux commands page.
+
+`netstat` and `ss` are other useful command for troubleshooting. Specially, when you want to investigate the local machine.
+
+> See more about [netcat](Linux%20Commands.md##netcat) and [ss](Linux%20Commands.md##ss) on the Linux commands page.
+
 
 # Resources
 

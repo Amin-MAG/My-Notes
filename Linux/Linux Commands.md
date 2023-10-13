@@ -1583,13 +1583,6 @@ ls | cpio -o > thefile.cpio
 cpio -id < thefile.cpio
 ```
 
-## lsof
-
-```bash
-# To print processes on the port 8080
-lsof -i:8080
-```
-
 ## ps
 
 It's a flexible too for identifying programs running on the system.
@@ -2340,18 +2333,13 @@ sudo nmcli radio wifi on
 
 ## hostname
 
-```
-# Then Add these lines
-0.0.0.0   www.example.com
-0.0.0.0   example.com
-::0       www.example.com
-::0       example.com
-```
+To get the host name
 
-## Add a domain name system
+```bash
+hostname
 
-### Name Resolution
-
+# To change it temporarly
+sudo hostname new-hostname
 Open the `/etc/hosts` and add the name and IP address.
 
 ```python
@@ -2393,29 +2381,37 @@ For example, it could be like this:
 ifconfig wlan0 192.168.1.5 netmask 255.255.255.0 up
 ```
 
-To set the default gateway IP:
+## netstat
 
 ```bash
-route add default gw <IP_Address>
+# No reverse lookup, Routing table
+netstat -nr
+# Show all of the Active connections
+netstat -na
+# TCP, UDP, Process Name, Listening, Numberic
+netstat -tulpn
 ```
 
-## Net Cat - `nc`
+## ss
 
-It is a TCP/IP swiss army knife.
-
-To install the `nc` command you need to install `netcat`
+The modern form of `netstat`.
 
 ```bash
-# Install the netcat
-sudo apt install netcat
+# Show all of the Active connections
+ss -na
+# TCP, UDP, Process Name, Listening, Numberic
+ss -tupln
 ```
 
-To listen to a specific port
+## lsof
+
+To list open files
 
 ```bash
-nc -l -p <PORT> -v
-nc -lpv <PORT> -n <IP> # Did not worked the last time.
-nc -zvw10 192.168.0.1 22
+# To see all of the internet related ones
+lsof -i
+# To print processes on the port 8080
+lsof -i:8080
 ```
 
 `-l` is for listen.
