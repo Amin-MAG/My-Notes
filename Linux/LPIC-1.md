@@ -1819,6 +1819,11 @@ You can use `ip`, `ifconfig`, and `ping` command to start troubleshooting from t
 
 > See more about [netcat](Linux%20Commands.md##netcat) and [ss](Linux%20Commands.md##ss) on the Linux commands page.
 
+# 109.4
+
+## Configure the Client DNS
+
+This is all about configuring DNS in `/etc/resolv.conf` and `/etc/hosts`. It is already covered in [here](###DNS%20Configuration).
 
 # Resources
 

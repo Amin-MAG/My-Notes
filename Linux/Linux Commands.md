@@ -2340,29 +2340,18 @@ hostname
 
 # To change it temporarly
 sudo hostname new-hostname
-Open the `/etc/hosts` and add the name and IP address.
-
-```python
-192.168.1.11	db
-# You can handle the subdomain too
-# For example for mycompany.com or prod.company.com
-search 			mycompany.com	prod.mycompany.com
 ```
 
-This mapping is called name resolution.
+## hostnamectl
 
-### DNS Server
+To change the host name permanently.
 
-Name Resolution is an old solution for handling the domain name system. We use some DNS servers with all of these domain names and IP addresses.
+```bash
+sudo hostnamectl set-hostname new-hostname
+# Or you can change the /etc/hostname
 
-To add a dns server, change the `/etc/hosts`.
-
-```python
-nameserver		192.168.1.100
-# You can add more.
-# You can also set this on your DNS server
-# to forward other names to a global DNS server
-nameserver		8.8.8.8
+# To get the status
+sudo hostnamectl status
 ```
 
 Still, the local configuration has a higher priority than the DNS server.
@@ -2486,8 +2475,6 @@ To calculate the ip address bits and patterns
 ```bash
 ipcalc <IP_ADDRESS>
 ```
-
-## nmap
 
 To discover once
 
