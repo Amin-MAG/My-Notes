@@ -1825,6 +1825,14 @@ You can use `ip`, `ifconfig`, and `ping` command to start troubleshooting from t
 
 This is all about configuring DNS in `/etc/resolv.conf` and `/etc/hosts`. It is already covered in [here](###DNS%20Configuration).
 
+# 110.1
+
+## Perform Security Administration Tasks
+
+You can use `sudo` to run a command as a sudoer. You can see the list of sudoers in `/etc/sudoers`. Be careful when editing this file. You can use the `visudo` for more safety. In this way you can take care of your users.
+
+> See more about [netcat](Linux%20Commands.md##netcat), [ss](Linux%20Commands.md##ss), [lsof](Linux%20Commands.md##lsof), [fuser](Linux%20Commands.md##fuser), and [nmap](Linux%20Commands.md##nmap) on the Linux commands page.
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)
