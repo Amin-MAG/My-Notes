@@ -1833,6 +1833,12 @@ You can use `sudo` to run a command as a sudoer. You can see the list of sudoers
 
 > See more about [netcat](Linux%20Commands.md##netcat), [ss](Linux%20Commands.md##ss), [lsof](Linux%20Commands.md##lsof), [fuser](Linux%20Commands.md##fuser), and [nmap](Linux%20Commands.md##nmap) on the Linux commands page.
 
+# 110.2
+
+## Setup host security
+
+Remove additional open ports. Create firewall for your machine. Remove the services that are not useful.
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)

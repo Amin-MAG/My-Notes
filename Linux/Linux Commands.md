@@ -1086,11 +1086,13 @@ getent host localhost
 ```bash
 # prints all of the user limits
 ulimit -a
+# Each program should not longer than 1s
+ulimit -t 1
 ```
 
 There are 2 types of resource limitation: “hard” and “soft”. Hard resource limit defines the physical limit that the user can reach. The “soft” resource limit is manageable by the user. Its value can go up to the “hard” limit.
 
-The system resources are defined in `cat /etc/security/limits.conf`.
+> The system resources are defined in `cat /etc/security/limits.conf`.
 
 ## cal
 
@@ -1400,10 +1402,13 @@ newgrp cdrom
 
 ## su
 
-Change the user to the root.
+Change the user
 
 ```bash
-sudo su -
+# Change to the root
+su -
+# Changet to the newuser
+su newuser
 ```
 
 ## last
@@ -1415,6 +1420,22 @@ sudo last
 
 # last failed logged in
 sudo last -adF
+```
+
+## w
+
+To see the users in the system.
+
+```bash
+w
+```
+
+## who
+
+To see the users in the system.
+
+```bash
+who
 ```
 
 # File Permissions and Ownership
@@ -2530,6 +2551,131 @@ Not discovered the services? (Maybe it is because of firewall)
 nmap -sS sU -PN 192.168.0.1
 ```
 
+## tcpflow
+
+To see packets that are sending or receiving 
+
+```bash
+# Show me the port
+sudo tcpflow -c port 80 
+```
+
+## tcpdump
+
+You can save the communication to analyze
+
+```bash
+tcpdump
+```
+
+## host
+
+To lookup DNS queries
+
+```bash
+host yahoo.com
+```
+
+## dig
+
+Returns the DNS request's result
+
+```bash
+dig google.com
+# Use a specific DNS
+dig @8.8.8.8 google.com
+```
+
+## getent
+
+```bash
+# Returns all of host entries
+getent hosts
+getent hosts localhost
+```
+
+## arp-scan
+
+Search all of the active IP Addresses
+
+```bash
+# Install the arp-scan
+sudo apt-get install arp-scan
+
+# Scan the local IP addresses in network
+sudo arp-scan --interface=eth0 --localnet
+```
+
+## resolvectl
+
+For new versions of ubuntu, you can use `resolvectl` for DNS.
+
+```bash
+resolvectl status
+```
+
+## iw
+
+```bash
+iwconfig
+
+# sudo iwlist <INTERFACE> scan | grep ESSID
+sudo iw dev wlan0 scan | grep SSID
+
+# To connect Wifi
+wpa_passphrase <YOUR-ESSID> <YOUR-PASS> | sudo tee /etc/wpa_supplicant.conf
+sudo wpa_supplicant -c /etc/wpa_supplicant.conf -i wlp4s0
+
+# Get the name of current SSID
+iwgetid
+```
+
+## Aircrack
+
+Start monitoring
+
+```bash
+airmon-ng start wlan0
+```
+
+Start sniffing the packets
+
+```bash
+airodump-ng  wlan0mon
+```
+
+```bash
+aireplay-ng --test wlan0mon
+```
+
+```bash
+besside-ng wlan0mon -R Irancell-TD-9283727
+```
+
+## FTP
+
+You can transfer your files using FTP
+
+```bash
+ftp <IP_ADDRESS>
+```
+
+## Telnet
+
+To connect to a TCP connection.
+
+```bash
+telnet <HOST> <PORT>
+```
+
+## Ipcalc
+
+To calculate the ip address bits and patterns
+
+```bash
+ipcalc <IP_ADDRESS>
+```
+
 ## iptables
 
 The basic idea behind iptables is to allow you to filter network traffic and control which packets are allowed to pass through your system.
@@ -2792,6 +2938,16 @@ toilet -k Amin-MAG
 
 # Third-Party Packages
 
+## lshw
+
+To get some information about network adapters
+
+```bash
+# Install the lshw
+# sudo apt install lshw
+sudo lshw -class network
+```
+
 ## Termgraph
 
 ```bash
@@ -2849,5 +3005,3 @@ cupsreject <PRINTER_NAME> "Message"
 cupsenable <PRINTER_NAME> "Message"
 cupsdisable <PRINTER_NAME> "Message"
 ```
-
-
