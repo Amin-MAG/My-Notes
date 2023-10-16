@@ -1839,6 +1839,12 @@ You can use `sudo` to run a command as a sudoer. You can see the list of sudoers
 
 Remove additional open ports. Create firewall for your machine. Remove the services that are not useful.
 
+# 110.3
+
+## Securing data with encryption
+
+It contains an explanation of asymmetric and symmetric encryption. It also contains different types of `ssh` command; listening or reverse forwarding.
+
 # Resources
 
 - [Linux1st](https://linux1st.com/)

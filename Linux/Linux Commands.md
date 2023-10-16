@@ -636,6 +636,20 @@ ls -1 | tee allfiles myfiles
 
 You can use `ssh` to receive an interactive shell from another computer. 
 
+To create a semi-automated-proxy
+
+```bash
+ssh -D 1080 192.168.1.2
+```
+
+To forward the X (Show UI of the program on the client side)
+
+```bash
+ssh -X 192.168.1.2
+```
+
+### ssh tunnels
+
 You can also use port forwarding
 
 ```bash
@@ -644,6 +658,12 @@ You can also use port forwarding
 # -L is for binding 
 # -N not execute a remote command
 ssh -N -f -L 8080:localhost:8080 ubuntu@os-playground1
+```
+
+You can use Remote forwarding
+
+```bash
+ssh -R 8080:localhost:80 root@5.5.5.5
 ```
 
 ## scp
@@ -1249,6 +1269,14 @@ To Convert the encoding to each other.
 iconv -f windows-1258 -t UTF-8 /tmp/myfile.txt
 ```
 
+## ldd
+
+It shows the library of a executable
+
+```bash
+ldd /bin/executable
+```
+
 # User Management
 
 ## whoami
@@ -1592,6 +1620,16 @@ Extracting one or more directories from an archive is the same as extracting fil
 
 ```bash
 tar -xf archive.tar.gz dir1 dir2Copy
+```
+
+## 7za
+
+```bash
+# To list the file's contents
+7za l file.zip
+
+# To decompress the zip file
+7za x file.zip
 ```
 
 ## cpio
@@ -2877,31 +2915,67 @@ Name:	google.com
 Address: 2a00:1450:400e:802::200e
 ```
 
-## dig
+# Encryption
 
-It returns more details.
+## ssh-keygen
 
-```python
-dig google.com
+To generate new pair of keys
 
-; <<>> DiG 9.16.1-Ubuntu <<>> google.com
-;; global options: +cmd
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 28637
-;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+```bash
+ssh-keygen
+# To specify the type of the key
+ssh-keygen -t edsa
+```
 
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 65494
-;; QUESTION SECTION:
-;google.com.			IN	A
+## ssh-copy-id
 
-;; ANSWER SECTION:
-google.com.		200	IN	A	142.250.179.174
+To set the key as an authorized key.
 
-;; Query time: 0 msec
-;; SERVER: 127.0.0.53#53(127.0.0.53)
-;; WHEN: Fri May 20 02:32:56 +0430 2022
-;; MSG SIZE  rcvd: 55
+```bash
+ssh-copy-id 192.168.1.20 
+```
+
+## ssh-agent
+
+Create a bash that contains the key
+
+```bash
+ssh-agent /bin/bash
+```
+
+## ssh-add
+
+To add a key
+
+```bash
+ssh-add ~/.ssh/mykey
+```
+
+## gpg
+
+```bash
+# List of the keys
+gpg --list-keys
+# Generate new key
+gpg --gen-key
+
+# Export the public key
+gpg --export mykey > mykey.pub
+# Import the public key
+gpg --import mykey > mykey.pub
+# Generate a revoke
+gpg --output mykey.revoke --gen-revoke amin@amin.com
+
+# Encrypt a file
+gpg --out encrypted --recipient amin@amin.com --encrypt text.file
+# Decrypt a file
+gpg --out text.file --decrypt encrypted
+
+# Sign a file
+gpg --out text.sign --sign text.file
+gpg --out text.sign --clearsign text.file
+# Verify a file
+gpg --verify text.sign
 ```
 
 # Fantasy packages
