@@ -106,6 +106,61 @@ RESTORE mykey 0 <serialized-value>
 
 The 0 in the command represents the key's TTL (Time to Live) value. If you want to restore the key without any expiration, use 0; otherwise, you can specify the desired TTL in seconds.
 
+
+## Sorted Set
+
+### ZADD
+
+```bash
+ZADD userlogins 10 myuserID
+```
+
+### ZSCORE
+
+```bash
+ZSCORE userlogins myuserID
+```
+
+### ZINCRBY 
+
+```bash
+# If it is not in the sorted set, it will add it
+ZINCRBY userlogins 7 foor
+# It will increase it, when it is present.
+ZINCRBY userlogins 1 myuserID
+```
+
+### ZRANGE, ZREVRANGE
+
+To sort the entities ascending or descending.
+
+```bash
+# Sort from the first one to last one
+ZRANGE userlogins 0 -1
+```
+
+### ZCARD
+
+To get the number of the entities.
+
+```bash
+ZCARD userlogins
+```
+
+### ZRANGEBYSCORE, ZREVRANGEBYSCORE
+
+To filter some of the results from redis.
+
+```bash
+# Filter the userlogins that are more than 10
+# Sort them in ascending order
+ZRANGEBYSCORE userlogins 10 +inf
+
+# You can use WITHSCORES to get the value alongside
+# with the name
+ZRANGEBYSCORE userlogins -inf 5 WITHSCORES
+```
+
 # Use cases
 
 ## Caching Objects
