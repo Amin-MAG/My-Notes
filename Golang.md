@@ -385,6 +385,7 @@ for {
 - [Go Generic](GoGenerics.md)
 - [Goroutines](Goroutines.md)
 - [Go patterns](GoPatterns.md)
+- [Go Design Patterns](Golang/Go-Design-Patterns.md)
 - [Go Refactorings](GoRefactorings.md)
 - [Gzip](gzip.md)
 - [Hugo](Hugo.md)
