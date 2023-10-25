@@ -13,7 +13,8 @@ Most of the documents are related to computer science.
 
 ![Untitled](./notes/SE.png)
 
-
+- [Articles](Articles.md)
+- [Books](Books.md)
 - [Computer-Science](Computer-Science.md)
 	- [Computer-Engineering](Computer-Engineering.md)
 	- [Linux](Linux.md)
