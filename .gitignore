@@ -8,3 +8,5 @@
 
 # Ignore the daily notes
 Daily.md
+# Ignore the Idea folder related to personal notes
+Ideas/

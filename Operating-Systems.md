@@ -22,6 +22,7 @@ An I/O-bound task is a task that primarily depends on input/output (I/O) operati
 Using a fixed-size goroutine pool for I/O bound workloads can lead to over-provisioning of goroutines, which can result in unnecessary memory and CPU usage. Additionally, if the pool size is too small, it can lead to underutilization of resources and increased latency.
 
 - [Linux](Linux.md)
+- [Windows](Windows.md)
 - [Memory Management](Operating-Systems/Memory%20Management.md)
 - [Building the kernel](Operating-Systems/Building%20The%20Kernel.md)
 - [Mpich](Operating-Systems/Mpitch.md)

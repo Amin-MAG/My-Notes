@@ -87,6 +87,9 @@ import itertools
 for a, b in itertools.product(list_a, list_b):
 	pass
 
+# Consider the combinations with repeat, which means product
+two_digit_numbers = list(itertools.product(list(range(10)), repeat=2))
+
 # Calculate all combinations
 for subset in itertools.combinations(list_a, 2):
 	pass

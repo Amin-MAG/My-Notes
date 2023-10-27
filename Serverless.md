@@ -5,3 +5,7 @@ In this architecture, which is a good fit for small startups, we only implement 
 - It has scaling flexibility.
 - It increases the developer's productivity.
 - There is no worries about provisioning, scaling, or maintaining servers.
+
+# See more
+
+- [OpenFaas](OpenFaas.md)
