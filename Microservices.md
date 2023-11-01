@@ -72,7 +72,7 @@ more on [https://www.varonis.com/blog/what-is-a-proxy-server/](https://www.varon
 
 [API Gateway](API%20Gatewa%20005bc.md)
 
-## DDD (Domain Driven Design)
+## DDD (Domain Driven Design) in Microservices
 
 Domain-driven design is a way of looking at software from top to down. When we are developing software our focus shouldn't be primarily on technology, it should be on business or whatever activity that we are trying to assist with the software, the domain.
 
@@ -80,9 +80,7 @@ The domain is the business that we trying to solve with software. We have lots o
 
 ![Microservi%20c2400/Untitled.png](Microservices/Untitled.png)
 
-Ubiquitous Language: something that can be understood by both technical people and domain experts.
-
-Bounded Context:
+> Read more about [Domain Driven Design](Domain-Driven-Design.md)
 
 # Principles
 
