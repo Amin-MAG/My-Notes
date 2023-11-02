@@ -27,3 +27,4 @@ Using a fixed-size goroutine pool for I/O bound workloads can lead to over-provi
 - [Building the kernel](Operating-Systems/Building%20The%20Kernel.md)
 - [Mpich](Operating-Systems/Mpitch.md)
 - [Latency Numbers](Operating-Systems/Latency-Numbers)
+- [Storage](Storage.md)
