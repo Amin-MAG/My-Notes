@@ -30,5 +30,14 @@ adb shell install example.apk
 adb shell install /mnt/sdcard/Download/example.apk
 ```
 
+## Port Forwarding
+
+To port forward from your android device to local, you can use
+
+```bash
+adb forward tcp:8080 tcp:8081
+```
+
 # Resources
+
 - [Android ADB Cheat Sheet](https://3os.org/android/adb-cheat-sheet/)
