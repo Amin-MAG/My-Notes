@@ -371,6 +371,102 @@ for {
 }
 ```
 
+## Check the variable type
+
+```go
+package main  
+  
+import (  
+   "fmt"  
+)  
+  
+func main() {  
+   var t interface{}  
+   t = functionOfSomeType()  
+   switch t := t.(type) {  
+   default:  
+      fmt.Printf("unexpected type %T\n", t) // %T prints whatever type t has  
+   case bool:  
+      fmt.Printf("boolean %t\n", t) // t has type bool  
+   case int:  
+      fmt.Printf("integer %d\n", t) // t has type int  
+   case *bool:  
+      fmt.Printf("pointer to boolean %t\n", *t) // t has type *bool  
+   case *int:  
+      fmt.Printf("pointer to integer %d\n", *t) // t has type *int  
+   }  
+}
+```
+
+## `defer` 
+
+Deferred functions are executed in LIFO order, so this code will cause `4 3 2 1 0` to be printed when the function returns. A more plausible example is a simple way to trace function execution through the program.
+
+```go
+for i := 0; i < 5; i++ {
+    defer fmt.Printf("%d ", i)
+}
+```
+
+## `new` VS `make`
+
+The `make` function is used to create slices, maps, and channels. These data structures need to be initialized with specific internal data structures, and `make` ensures that the underlying data is properly initialized and ready for use. It returns a reference to the initialized data structure.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    // Create a slice of integers with length 3 and capacity 5
+    mySlice := make([]int, 3, 5)
+
+    // Add elements to the slice
+    mySlice[0] = 10
+    mySlice[1] = 20
+    mySlice[2] = 30
+
+    // Output the slice
+    fmt.Println(mySlice) // Output: [10 20 30]
+}
+```
+
+The `new` function is used to allocate memory for a new value of a specified type and returns a pointer to the newly allocated memory. It doesn't initialize the memory, but it zeroes out the allocated memory, which means that the new value will have the default zero value of its type.
+
+```go
+package main
+
+import "fmt"
+
+type Person struct {
+    Name string
+    Age  int
+}
+
+func main() {
+    // Create a new instance of the Person struct using new
+    personPtr := new(Person)
+
+    // As new allocates memory, we can directly assign values to the struct fields through the pointer
+    personPtr.Name = "John"
+    personPtr.Age = 30
+
+    // Output the person object (note the dereferencing with *)
+    fmt.Println(*personPtr) // Output: {John 30}
+}
+```
+
+In summary, `make` is used for creating and initializing slices, maps, and channels, while `new` is used for allocating memory for a new value of a specified type (usually for structs) and returns a pointer to that memory.
+
+## `make(MyStruct)` VS `&MyStruct{}`
+
+- `new(MyStruct)` returns a pointer to a zero-initialized instance of `MyStruct`.
+- `&MyStruct{}` returns a pointer to a new `MyStruct` instance with specified initial values for its fields.
+
+As a limiting case, if a composite literal contains no fields at all, it creates a zero value for the type. The expressions `new(File)` and `&File{}` are equivalent.
+
+
+
 # Topics
 
 - [Build Executive Binaries](Build.md)
