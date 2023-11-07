@@ -28,7 +28,7 @@ This pattern emphasizes separating core system functionality into small microker
 For example, In an operating system a microkernel might oversee vital tasks like inter-process communication. In the meanwhile, It offloads other systems functions to external components. 
 Eclipse IDE is also another example of this design. It's core runtime handles the plugin architecture, but the features are delivered as plugins. This design prioritize the extensibility, ease of maintenance, and fault isolation.
 
-## [Microservice Architecture]()
+## [Microservice Architecture](Microservices.md)
 
 This decompose an application into a collection of small, loosely coupled services. Each microservice is responsible for a specific business which contains its data models and APIs.
 
@@ -40,6 +40,9 @@ This architecture promotes modularization of functionality so services can be de
 
 Everything in a monolothic application is in one code base and one single instance. This simplifies development and deployment, however Modular Monolothic suggest the same single instance of code base but in a emphasizes on clear boundaries within the code base. That helps the future migrations to microservice architecture.
 
+## [Materialized View](Materialized-View.md)
+
+## [CQRS](CQRS.md)
 # References
 
 - [Top 5 Most Used Architecture Patterns](https://www.youtube.com/watch?v=f6zXyq4VPP8)
