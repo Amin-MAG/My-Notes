@@ -12,7 +12,7 @@ This architecture prevents cascading failures. When a service become unavailable
 
 ## CQRS (Command Query Responsibility Segregation)
 
-By sparating the command or write operations from query or read operations, you can scale and optimized each independantly. This kind of architecture can be considered for applications that have different performance characteristics, with different latency or resource requirements. 
+By sparating the command or write operations from query or read operations, you can scale and optimized each independently. This kind of architecture can be considered for applications that have different performance characteristics, with different latency or resource requirements. 
 
 ## Event-Sourcing
 
@@ -20,7 +20,7 @@ Instead of updating a record directly, it is possible to store events representi
 
 ## Leader Election
 
-In a distributed system, the leader election pattern ensures only one node is responsible for a specific task or resource. When a leader fails, the remaining nodes elect a new leader. Zookeeper and etcd use this pattern. With this pattern we can ensure consistant decision making and avoid conflicts.
+In a distributed system, the leader election pattern ensures only one node is responsible for a specific task or resource. When a leader fails, the remaining nodes elect a new leader. Zookeeper and etcd use this pattern. With this pattern we can ensure consistent decision making and avoid conflicts.
 
 ## PubSub
 

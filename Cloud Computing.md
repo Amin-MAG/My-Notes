@@ -189,7 +189,7 @@ This basic concept is also being extended to autonomous vehicles. Autonomous veh
 
 # Smart manufacturing
 
-[Articles to read](Articles.md)
+[Articles to read](Cloud%20Computing/Articles.md)
 
 [Resource Scheduling](Resource%20Scheduling.md)
 

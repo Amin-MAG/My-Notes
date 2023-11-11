@@ -3,7 +3,7 @@
 
 - [K8s](Kubernetes.md)
 - [OpenShift](OpenShift.md)
-- [ServiceMesh](Service%20Mesh.md)
+- [ServiceMesh](Service-Mesh.md)
 - [Cloud Computing](Cloud%20Computing.md)
 - [SRE](SRE.md)
 - [Backend Development](Backend-Development.md)
