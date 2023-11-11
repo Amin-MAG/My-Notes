@@ -30,8 +30,24 @@ let hello = "hi mom"
 
 By using `mut` keyword, Mutable variables will be stored in the heap.
 
-## Package Manager
+## Read user input
 
+You can use the `std::io` to scan the `stdin`.
+
+```rust
+use std::io;
+
+fn main() {
+    // Read user input
+    println!("Enter your name:");
+    let mut input_text = String::new();
+    io::stdin().read_line(&mut input_text).expect("Failed to read line");
+    let name = input_text.trim();
+
+    // Display the input
+    println!("Hello, {}! Nice to meet you!", name);
+}
+```
 
 # See More
 

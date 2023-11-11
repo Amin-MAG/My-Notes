@@ -11,7 +11,6 @@ You can use this repository for configuring the VPN.
 [https://github.com/Nyr/openvpn-install](https://github.com/Nyr/openvpn-install)
 
 ```bash
-
 # To get the script
 wget https://github.com/Nyr/openvpn-install/raw/master/openvpn-install.sh
 
