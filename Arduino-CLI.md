@@ -15,7 +15,8 @@ Here is an example format of this YAML file.
 ```yml
 board_manager:
   additional_urls:
-    - https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+    - https://raw.githubus
+    - ercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 daemon:
   port: "50051"
 directories:
@@ -71,4 +72,10 @@ arduino-cli core install esp32:esp32
 ```BASH
 arduino-cli compile -fqbn esp32:esp32:wrover <SKETCH_NAME>
 arduino-cli upload -p /dev/ttyUSB0 --fqbn esp32:esp32:esp32wrover <SKETCH_NAME>
+```
+
+## Monitor serial port
+
+```bash
+arduino-cli monitor -p /dev/ttyUSB0
 ```
