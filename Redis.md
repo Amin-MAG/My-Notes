@@ -106,6 +106,35 @@ RESTORE mykey 0 <serialized-value>
 
 The 0 in the command represents the key's TTL (Time to Live) value. If you want to restore the key without any expiration, use 0; otherwise, you can specify the desired TTL in seconds.
 
+### scan
+
+# Data Types
+
+## Hash Map
+
+### hmset
+
+### hgetall
+
+### hget, hdel
+
+## Set
+
+### SADD
+
+To add an item to the set
+
+```bash
+SADD usernames amin
+```
+
+### SISMEMBER
+
+Check if it is a member of the set
+
+```bash
+SISMEMBER usernames amin
+```
 
 ## Sorted Set
 
@@ -186,3 +215,4 @@ It can be used for game leader boards.
 # Resources
 
 - [Top 5 Redis Use Cases](https://www.youtube.com/watch?v=a4yX7RUgTxI)
+
