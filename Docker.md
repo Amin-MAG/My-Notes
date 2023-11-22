@@ -334,4 +334,19 @@ db:
 8. Scan your image for vulnerabilities (Using tools like docker scan)
 
 > This is from [https://www.youtube.com/watch?v=8vXoMqWgbQQ](https://www.youtube.com/watch?v=8vXoMqWgbQQ)
->
+
+# Open Container Initiative
+
+OCI standardized container runtime, image and distribution specifications. This ensures that container ecosystem remains open and not tied  to a single vendor.
+
+Docker has popularized several key concepts
+
+1. Standard Image
+2. Streamline the Building of Container Images
+3. Enabling Sharing of Images with Registeries
+4. Facilitate the actual running of containers
+
+# References
+
+- https://www.youtube.com/watch?v=8vXoMqWgbQQ
+- [Is Docker Still Relevant?](https://www.youtube.com/watch?v=Cs2j-Rjqg94
