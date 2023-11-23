@@ -76,3 +76,83 @@ Then, whenever we want to create a car-related instance. We use these `New()` fu
 
 > Using the traditional Factory Method design pattern can make the creation process more complex. In addition, We need to pass some arguments to the factory method class that might not be used. This lead to confusion, when developer is using the factory class, because after a while the developer can not understand which arguments are essential for creating the target. In my opinion, also passing all of the prerequisites to the method is not a good approach.
 
+## Behavioral
+
+### Iterator
+
+Iterator design pattern can be useful, specially when you want to traverse some data structures like trees. 
+
+Consider having these models
+
+```go
+// Book represents a book with a title and an author.type Book struct {  
+    Title  string  
+    Author string  
+}  
+  
+// Library represents a collection of books.type Library struct {  
+    Books []Book  
+}  
+```
+
+I implement the iterator this way using Go generics.
+
+```go
+// Iterator represents a general purpose Iterator  
+type Iterator[V comparable] interface {  
+    getNext() V  
+    hasNext() bool  
+}  
+  
+type BookIterator struct {  
+    Iterator[Book]  
+  
+    index int  
+    Books []Book  
+}  
+  
+func (bi *BookIterator) getNext() Book {  
+    b := bi.Books[bi.index]  
+    bi.index++  
+    return b  
+}  
+  
+func (bi *BookIterator) hasNext() bool {  
+    return bi.index < len(bi.Books)  
+}  
+
+// NewBookIterator returns a new Iterator for Book  
+func (l *Library) NewBookIterator() (Iterator[Book], error) {  
+    return &BookIterator{  
+       Books: l.Books,  
+    }, nil  
+}  
+```
+
+Here is the usage.
+
+```go
+func main() {  
+    lib := Library{Books: []Book{  
+       {  
+          Title:  "A",  
+          Author: "1",  
+       },  
+       {  
+          Title:  "B",  
+          Author: "2",  
+       },  
+       {  
+          Title:  "C",  
+          Author: "3",  
+       },  
+    }}  
+  
+    // Create an iterator  
+    iter, _ := lib.NewBookIterator()  
+    for iter.hasNext() {  
+       book := iter.getNext()  
+       fmt.Printf("%s\t%s\n", book.Title, book.Author)  
+    }  
+}
+```
