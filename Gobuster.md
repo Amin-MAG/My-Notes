@@ -12,6 +12,14 @@ gobuster -w ./wordlists/big.txt -s "200" -u <URL>
 
 # To specify the number of threads
 gobuster -w ./wordlists/big.txt -t 30 -u <URL>
+
+# To search directories
+gobuster dir -w ./wordlists/big.txt -u <URL>
+# Search the php file 
+gobuster dir -x php -w ./wordlist/big.txt -u <URL>
+
+# Find subdomains
+gobuster vhost -u http://example.com -w subdomains.txt
 ```
 
 
