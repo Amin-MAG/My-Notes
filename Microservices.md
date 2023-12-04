@@ -8,6 +8,16 @@
 
 Although microservice solves certain issues, it is not a silver bullet. It has several drawbacks and when using this architecture, numerous issues must be addressed.
 
+## Characteristics
+
+1. **Size**: A microservice should encapsulate information and functionality that can be comprehended without frequent referencing
+2. **Independent Deployment**
+3. **Encapsulation**: It ensures that a change in one service doesn’t mandate modifications in another, preserving the system's integrity
+4. **Business-centric Modeling**: A hallmark of both microservices and DDD is their alignment with business concepts.
+5. **Decentralization**
+6. **Observability**: An effective microservice system requires mechanisms to detect and notify of anomalies, ensuring timely interventions.
+7. **Autonomy**
+
 ### Greenfield
 
 > in other disciplines like software engineering, a greenfield is also a project which lacks any constraints imposed by prior work. The analogy is to that of construction on greenfield land where there is no need to remodel or demolish an existing structure.
@@ -240,12 +250,9 @@ A shared database per service is not ideal, but that is the working solution for
 
 Once we implement database-per-service, there is a requirement to query, which requires joint data from multiple services — it's not possible. Then, how do we implement queries in microservice architecture?
 
-CQRS suggests splitting the application into two parts — the command side and the query side. The command side handles the Create, Update, and Delete requests. The query side handles the query part by using the materialized views. The **event sourcing pattern** is generally used along with it to create events for any data change. Materialized views are kept updated by subscribing to the stream of events.
+CQRS suggests splitting the application into two parts — the command side and the query side. The command side handles the Create, Update, and Delete requests. The query side handles the query part by using the materialized views. The **event sourcing pattern** is generally used along with it to create events for any data change. Materialized views are kept updated by subscribing to the stream of events.  [More about CQRS](CQRS.md)
 
-<aside>
-💡 A materialized view is a pre-computed data set derived from a query specification (the SELECT in the view definition) and stored for later use. Because the data is pre-computed, querying a materialized view is faster than executing a query against the view's base table.
-
-</aside>
+> 💡 A materialized view is a pre-computed data set derived from a query specification (the SELECT in the view definition) and stored for later use. Because the data is pre-computed, querying a materialized view is faster than executing a query against the view's base table. [More about the Materialized Views](Materialized-View.md)
 
 ### Saga Pattern
 
