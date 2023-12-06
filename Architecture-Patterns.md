@@ -34,11 +34,17 @@ This decompose an application into a collection of small, loosely coupled servic
 
 This architecture promotes modularization of functionality so services can be developed, deployed, and scaled independently. On the other hand, It can add complexity to inter-service communication and maintaining data consistancy.
 
-> You can read more about [Microservices]().
+> You can read more about [Microservices](Microservices.md).
 
 ## Monolothic
 
 Everything in a monolothic application is in one code base and one single instance. This simplifies development and deployment, however Modular Monolothic suggest the same single instance of code base but in a emphasizes on clear boundaries within the code base. That helps the future migrations to microservice architecture.
+
+### Challenges
+
+1. Difficult Updates
+2. Deployment Hurdles
+3. Maintenance Issues
 
 ## [Materialized View](Materialized-View.md)
 
