@@ -1,5 +1,50 @@
 # ffmpeg
 
+## Installation
+
+```bash
+sudo apt update
+sudo apt install ffmpeg # For version 3
+```
+
+## Change the frame per second
+
+```bash
+ffmpeg -y -i 2022-12-07\ 14-05-36.mkv -vf "setpts=1*PTS" -r 8 documentation-and-github.mp4 
+```
+
+## Converting
+
+## Trimming
+
+## Burn Subtitles
+
+## Extract Frames
+
+## Rotate
+
+## Streaming 
+
+```bash
+ffmpeg -re -i test.mkv -c copy -f flv rtmp://localhost:1935/live/rfBd56ti2SMtYvSgD5xAV0YU99zampta7Z7S575KLkIZ9PYk
+```
+
+
+## Download Streams
+
+## ffplay
+
+To open camera in terminal
+
+```bash
+ffplay /dev/video0
+```
+
+# Resources
+
+- [A ffmpeg cheet sheet](https://gist.github.com/steven2358/ba153c642fe2bb1e47485962df07c730)
+# ffmpeg
+
 The general format of the `ffmpeg` commands is:
 
 ```bash
@@ -90,3 +135,9 @@ ffprobe
 ffmpeg -i in.mp4 -o out.mov
 ```
 
+
+## Save a streaming video
+
+```bash
+ffmpeg -i http://admin:23123332qwe@192.168.0.112:8081/videofeed -c copy output.mp4
+```
