@@ -49,3 +49,18 @@ func main() {
 ```
 
 The expression `~string` means the set of all types whose underlying type is `string`. This includes the type `string` itself as well as all types declared with definitions such as `type MyString string`.
+
+For example, with this feature you can have such a function for all of your type
+
+```go
+func Contains[V comparable](slice []V, value V) bool {  
+    for _, item := range slice {  
+       if item == value {  
+          return true  
+       }  
+    }  
+    return false  
+}
+```
+
+
