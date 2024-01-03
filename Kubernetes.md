@@ -70,7 +70,95 @@ Kubernetes:
 - Does not provide nor adopt any comprehensive machine configuration, maintenance, management, or self-healing systems.
 - Additionally, Kubernetes is not a mere orchestration system. In fact, it eliminates the need for orchestration. The technical definition of orchestration is execution of a defined workflow: first do A, then B, then C. In contrast, Kubernetes comprises a set of independent, composable control processes that continuously drive the current state towards the provided desired state. It shouldn't matter how you get from A to C. Centralized control is also not required. This results in a system that is easier to use and more powerful, robust, resilient, and extensible.
 
-# K8s Master node setup
+# Setup
+
+## Swap off
+
+Kubernetes pods are designed to utilize CPU limits fully. The _kubelet_ is not designed to use SWAP memory and it, therefore, needs to be disabled.
+
+```bash
+sudo swapoff -a
+```
+
+## Firewall
+
+```bash
+# For Master node
+sudo ufw allow 6443/tcp
+sudo ufw allow 2379/tcp
+sudo ufw allow 2380/tcp
+sudo ufw allow 10250/tcp
+sudo ufw allow 10251/tcp
+sudo ufw allow 10252/tcp
+sudo ufw allow 10255/tcp
+sudo ufw reload
+
+# For worker nodes
+sudo ufw allow 10251/tcp
+sudo ufw allow 10255/tcp
+sudo ufw reload
+```
+
+## Install Docker
+
+### Centos
+
+```bash
+sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
+
+sudo yum install -y yum-utils
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
+
+### Ubuntu
+
+```bash
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
+# Prerequisites
+sudo apt-get update
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+	
+# GPG Key
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
+# Setup repository
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  
+# Install docker
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin docker-compose
+```
+
+## Install kubeadm
+
+```bash
+sudo apt-get update
+sudo apt-get install -y apt-transport-https ca-certificates curl
+```
+
+# See more
+
+- [Knative](Knative.md)
+
+# Resources
 
 First of all we need to turn of the swap.
 
