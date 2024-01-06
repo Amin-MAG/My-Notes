@@ -8,6 +8,10 @@
 - `/usr/bin`: Non-Essential installed binaries.
 - `/usr/local/bin`: Locally compiled binaries.
 - `/etc`: Editable text config, all of the configurations are here.
+	-  `/etc/skel/`:  it contains the skeleton of home directories.
+	- `/etc/passwd`: it contains all the details for users.
+	- `/etc/shadow`: it contains all passwords for users.
+	- `/etc/gshadow`: it contains all passwords for groups.
 - `/home`: User data
 - `/boot`: Files need to boot the system like the kernel itself.
 - `/dev`: Device files

@@ -25,7 +25,6 @@
 
 1. Distributed systems are dynamic (Allows the computers to join or leave)
 2. Distributed systems are usually overlay networks (underlying networks)
-3. 
 
 Client-Server Model
 

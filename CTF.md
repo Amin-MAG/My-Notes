@@ -10,6 +10,7 @@
 
 ```bash
 fcrackzip -D -p /usr/share/wordlists/rockyou.txt 37366.zip -u
+# john2zip and john
 ```
 
 ## Gobuster

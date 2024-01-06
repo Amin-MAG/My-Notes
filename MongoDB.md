@@ -1,5 +1,11 @@
 # MongoDB
 
+Connect to a mongodb host
+
+```bash
+mongosh mongodb://host:port
+```
+
 # **MongoDB Cheat Sheet**
 
 ## **Show All Databases**

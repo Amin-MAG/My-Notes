@@ -12,7 +12,7 @@ To create a new Diver we need to pass a Digital Writer beside the pin number. Al
 
 # Robot
 
-The robot struct is an entity that manages a set of devices and connections with a working function. The connections and devices are going to be started and stopped automatically with the robot. The working function is a simple `func()` type object that will be executed in another goroutine as soon as all the devices and connections have been initialized and started.
+The robot struct is an entity that manages a set of devices and connections with a working function. The connections and devices are going to be started and stopped automatically by the robot. The working function is a simple `func()` type object that will be executed in another goroutine as soon as all the devices and connections have been initialized and started.
 
 # Change the LED state using an array
 
