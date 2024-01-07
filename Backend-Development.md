@@ -6,9 +6,11 @@ APIs or Application Programming Interfaces are the backbone of our interconnecte
 
 ### SOAP
 
-It's a veteran in the field, mature, comprehensive, and XML-based. SOAP is heavily used in financial service and payment gateways where security and reliability are key.
+It's a veteran in the field, mature, comprehensive, and XML-based. SOAP is heavily used in financial service and payment gateways where security and reliability are key. 
 
-### RESTful
+IBM and Microsoft define a new way to define the APIs in 2007 which is called WSDL. WSDL contains all definitions about the API such as Elements, Operations, Messages, etc.. You can use SoapUI to see the API definition.
+
+### RESTful 
 
 They are like the Internet's backbone. popular, easy to implement, and use HTTP methods. If you need real-time data or operate with a highly connected data model, This might not be the right choice.
 

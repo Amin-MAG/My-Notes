@@ -1,5 +1,10 @@
 # Prometheus in Go
 
+## Common metrics
+
+1.  `go_memstats_alloc_bytes`: This metric reports the number of bytes that have been allocated and not yet freed by the Go application. This metric can be used to monitor the memory usage of the application.
+2.  `go_memstats_sys_bytes`: This metric reports the total memory footprint of the Go application, including both the allocated and unallocated memory.
+
 Example code snippet for prometheus
 
 ```go
