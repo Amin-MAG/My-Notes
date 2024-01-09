@@ -42,6 +42,21 @@ print(G.nodes)
 # [1, 2, 'spam', 4, 5]
 ```
 
+## Directed Graph
+
+```python
+g = nx.DiGraph()  
+g.add_nodes_from([0, 1, 2, 3, 4])  
+g.add_edge(0, 1, w=10)  
+g.add_edge(1, 2, w=10)  
+g.add_edge(2, 3, w=10)  
+g.add_edge(3, 4, w=10)
+
+print(G)
+print(G.edges)
+print(G.nodes)
+```
+
 ## Drawing
 
 You can use `matplotlib` beside NetworkX to draw the graphs
