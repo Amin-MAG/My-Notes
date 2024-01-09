@@ -1,5 +1,12 @@
 # Django
 
+## Django-Admin
+
+```bash
+# Create new project
+django-admin startproject sse
+```
+
 ## Settings
 
 The `project_name/settings.py` is the main file for your project configuration.
@@ -601,4 +608,27 @@ class HelloView(APIView):
         print(request.user)
         content = {'message': 'Hello, World!'}
         return Response(content)
+```
+
+## SSE in Django
+
+```python
+import time  
+  
+from django.http import StreamingHttpResponse  
+  
+  
+def event_stream(request):  
+    # Set the content type to text/event-stream  
+    response = StreamingHttpResponse(streaming_content=event_generator(), content_type='text/event-stream')  
+    response['Cache-Control'] = 'no-cache'  
+    return response  
+  
+  
+def event_generator():  
+    # This function generates the server-side events  
+    while True:  
+        # Yield the event data  
+        yield 'data: Hello, world!\n\n'  
+        time.sleep(1)
 ```
