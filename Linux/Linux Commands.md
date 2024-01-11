@@ -1447,6 +1447,14 @@ su -
 su newuser
 ```
 
+### sudo
+
+To see the list of user permissions
+
+```bash
+sudo -l
+```
+
 ## last
 
 To see the logs of users that logged into the system.
