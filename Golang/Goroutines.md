@@ -47,7 +47,7 @@ func main() {
 }
 ```
 
-## Some challanging scenarios
+### Channels will wait until receive a value
 
 The first point is that when we send something through the pipe it does not matter how much it takes to receive that data. It even does not matter that we receive it or not.
 
@@ -75,6 +75,94 @@ c <- 3
   
 time.Sleep(time.Second * 4)  
 fmt.Println(<-c)
+```
+
+### Using Mutex and Channels simultaneously
+
+It's tricky and you should be careful when you are using the channels and mutex at the same time. If you want to send a new value through the channel, first the mutex should be unlocked. Here is an example of correct usage,
+
+```go
+type Inventory struct {  
+    Sections map[string]int  
+    mu       sync.Mutex  
+}  
+  
+func NewInventory() *Inventory {  
+    return &Inventory{  
+       Sections: make(map[string]int),  
+    }  
+}  
+  
+func (inv *Inventory) addItem(section string, quantity int, result chan bool) {  
+    // Implement the logic to add items to the inventory section  
+    // Ensure that the section does not exceed its capacity    // Use the result channel to signal whether the operation was successful    inv.mu.Lock()  
+    addedSuccessfully := true  
+    defer func() {  
+       inv.mu.Unlock()  
+       result <- addedSuccessfully  
+    }()  
+  
+    if _, ok := inv.Sections[section]; !ok {  
+       inv.Sections[section] = quantity  
+       return  
+    }  
+  
+    inv.Sections[section] = inv.Sections[section] + quantity  
+    return  
+}  
+  
+func (inv *Inventory) removeItem(section string, quantity int, result chan bool) {  
+    // Implement the logic to remove items from the inventory section  
+    // Use the result channel to signal whether the operation was successful    inv.mu.Lock()  
+    removedSuccessfully := true  
+    defer func() {  
+       inv.mu.Unlock()  
+       result <- removedSuccessfully  
+    }()  
+    if _, ok := inv.Sections[section]; !ok {  
+       removedSuccessfully = false  
+       return  
+    }  
+  
+    availableQuantity := inv.Sections[section]  
+    if availableQuantity-quantity < 0 {  
+       removedSuccessfully = false  
+       return  
+    }  
+  
+    inv.Sections[section] = inv.Sections[section] - quantity  
+    return  
+}  
+  
+func (inv *Inventory) displayInventory() {  
+    // Implement the logic to display the current state of the inventory  
+    fmt.Println("Current Inventory:")  
+    for section, quantity := range inv.Sections {  
+       fmt.Printf("%s: %d\n", section, quantity)  
+    }  
+    fmt.Println("--------------------")  
+}  
+  
+func main() {  
+    // Create an instance of the Inventory  
+    inventory := NewInventory()  
+  
+    addA := make(chan bool)  
+    addB := make(chan bool)  
+    removeA := make(chan bool)  
+    removeB := make(chan bool)  
+  
+    // Example usage: Start multiple goroutines to add and remove items concurrently  
+    go inventory.addItem("SectionA", 5, addA)  
+    go inventory.addItem("SectionB", 3, addB)  
+    go inventory.removeItem("SectionA", 2, removeA)  
+    go inventory.removeItem("SectionB", 1, removeB)  
+  
+    fmt.Printf("%v\t%v\t%v\t%v\n", <-addA, <-addB, <-removeA, <-removeB)  
+  
+    // Display the final state of the inventory  
+    inventory.displayInventory()  
+}
 ```
 
 ## Buffer channel
