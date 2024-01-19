@@ -97,3 +97,10 @@ To debug continue
 ```
 
 ## dig
+
+# Web
+
+- SSTI or SERVER-SIDE TEMPLATE INJECTION
+	- [SSTI in Flask/Jinja2](https://medium.com/@nyomanpradipta120/ssti-in-flask-jinja2-20b068fdaeee)
+	- [HACKTHEBOX – TEMPLATED WRITE-UP](https://shakuganz.com/2021/06/13/hackthebox-templated-write-up/)
+- 
