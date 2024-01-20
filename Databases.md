@@ -45,7 +45,7 @@
 
 # Database Management Systems
 
-Some Esstential features of a DBMS System:
+Some essential features of a DBMS System:
 
 - Concurrency: It makes sure that these concurrent interactions succeed without corrupting or loosing any data.
 - Consistancy: It ensures the data remains consistent and valid throughout the database.
@@ -79,7 +79,29 @@ Different kind of transactions will not interfere with each other.
 
 They offer durability because the data is stored on the disk.
 
+# How to choose database
+
+> **Note**: If you want to change the current database to another type of database, You should be sure that there is not any other way or solution to fix the problem that you've faced.
+
+Here are some casual trade-offs:
+
+1. The eliminate or limit transactional guarantees like ACID.
+2. The can limit data modeling flexibility.
+
+After you chose database candidates, create a realistic test bench using your own data.
+# Read more
+
+- tuning the working of set memory size
+- choosing compaction strategy
+- change the garbage collection strategy
+- Using cache to fix the problem?
+- Add Read replicas
+- partitioning or shardin (maybe the data is naturally siloed)
+- I should read more about the benefits and limitation of each kind of database
+- 
+
 # Read more
 
 - [Logging Databases](Logging.md#Databases)
 - [SQL Injection](SQL-Injection.md)
+- [How to choose the right database](https://www.youtube.com/watch?v=kkeFE6iRfMM)
