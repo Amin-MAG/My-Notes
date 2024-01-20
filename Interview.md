@@ -53,7 +53,7 @@ In this step, we need to discuss
 - Data Access patterns
 - Read/Write ratio
 - The database to use
-- Indexing options
+- [Indexing options](Databases.md#Indexing)
 
 > Defer any detailed discussion to the "Design Deep Dive" section. For example, topics like sharding.
 
@@ -67,6 +67,13 @@ You should analyze different part of your design and discuss parts that can be p
 2. Come up with at least two solutions
 3. Discuss the trade-offs
 4. Pick a Solution
+
+The solution could be using
+
+- [Cache](Caching.md)
+- [Message Brokers](Message-Brokers.md)
+- [CDN](CDN.md)
+- [Indexing](Databases.md#Indexing)
 
 # Read more 
 
