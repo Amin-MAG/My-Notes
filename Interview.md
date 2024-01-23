@@ -23,6 +23,9 @@ The goal of asking questions is to clarify the problem.
 - What are non-functional requirements? 
 	- **Performance**
 	- **Scale**
+	- Observability
+	- Monitoring
+	- Logging
 	- Security
 	- Consistency
 	- Freshness
@@ -74,13 +77,7 @@ The solution could be using
 - [Message Brokers](Message-Brokers.md)
 - [CDN](CDN.md)
 - [Indexing](Databases.md#Indexing)
-
-# Read more 
-
-- You should read more about how to manage and support different kind of non-functional requirement
-- How can we make a stateful service like a service using websocket more scalable?
-- 
-
+- [Load Balancing](Load-Balancing.md)
 # Resources
 
 - [System Design Interview: A Step-By-Step Guide](https://www.youtube.com/watch?v=i7twT3x5yv8)
