@@ -99,6 +99,42 @@ Here are some casual trade-offs:
 
 After you chose database candidates, create a realistic test bench using your own data.
 
+## NoSQL vs SQL Databases
+
+- **SQL:** MySQL, PostgreSQL, Oracle, SQL Server.
+- **NoSQL:** MongoDB (document-oriented), Cassandra (column-family), Redis (key-value), Neo4j (graph).
+
+### SQL
+
+1. **Data Model**: Data is structured in tables with predefined schemas
+2. **Schema**: Requires a predefined schema where the structure of the data is established before inserting data.
+3. **Scalability**: Typically scales vertically by adding more powerful hardwares. Scaling horizontally can be challenging.
+4. **Transactions**: Supports ACID.
+5. **Query Language**: Uses a standardized query language (SQL) for defining and manipulating the data.
+6. **Use Cases**: Well-suited for applications with complex queries and structured, relational data, such as financial systems, ERP (Enterprise Resource Planning), and transactional systems.
+
+### NoSQL
+
+1. **Data Model**: It supports various data models including document-oriented, key-values, column-family, and graphs.
+2. **Schema**: Data can be inserted without a predefined schema, allowing for dynamic and evolving data structures.
+3. **Scalability**: Designed to scale horizontally, allowing for distributed and parallel processing across nodes. Good for large amount of data and traffic.
+4. **Transactions**: May sacrifice some aspects of ACID properties for performance and scalability. NoSQL databases often provide eventual consistency, where data consistency is guaranteed over time rather than immediately.
+5. **Query Language**: No standardized query language across all NoSQL databases. Each type of NoSQL database may have its own query language or API.
+6. **Use Cases**: Ideal for scenarios with rapidly changing data, unstructured or semi-structured data, and high scalability requirements, such as content management systems, real-time big data applications, and mobile app backends.
+
+# Indexing
+
+Indexing in databases is a technique used to improve the speed of data retrieval operations on a database table. Indexes provide a quick way to look up data based on the values in one or more columns.
+
+## Types
+
+- **Single-Column Index:** An index on a single column.
+- **Composite Index:** An index on multiple columns.
+- **Unique Index:** Ensures that the indexed columns do not contain duplicate values.
+- **Clustered Index:** Determines the physical order of data rows in a table.
+- **Non-clustered Index:** Keeps a separate structure to store the index data, pointing back to the actual data rows.
+
+> **Note**: When you define a column as `UNIQUE`, the database system often automatically creates an index to enforce the uniqueness constraint efficiently. This index helps the database system quickly check if a new value being inserted or updated violates the uniqueness rule. However, not all indexes imply uniqueness. You can create indexes on columns without enforcing uniqueness. Multiple rows may have the same indexed value in such cases.
 
 ## Benefits of Indexing:
 
