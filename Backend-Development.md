@@ -22,6 +22,9 @@ It is not only a API architecture style, but also a query language. The client c
 
 It's modern, high-performance, and uses Protocol Buffers. It is a favorite choice for microservices architectures.
 
+- [gRPC](gRPC.md)
+- [gRPC in Golang](Golang/gRPC.md)
+
 ### WebSocket
 
 WebSocket is all about real-time, bidirectional, and persistent connections. It is perfect for live chat applications and real-time gaming, where low-latency is a key.

@@ -40,7 +40,7 @@ func pointers() {
 	var a string
 	var b string
 	a = "amin"
-	b = "ghasvari"
+	b = "mag"
 	log.Infoln(a, b)
 	log.Infoln(&a, &b)
 
@@ -476,7 +476,7 @@ As a limiting case, if a composite literal contains no fields at all, it creates
 - [Go Bot](GoBot.md)
 - [Go Cron](GoCron.md)
 - [Golang, Real-Time Techs](Go%20Real-time.md)
-- [gRPC](gRPC.md)
+- [gRPC](Golang/gRPC.md)
 - [Golang Mock](Mock.md)
 - [Go Generic](GoGenerics.md)
 - [Goroutines](Goroutines.md)
@@ -495,7 +495,6 @@ As a limiting case, if a composite literal contains no fields at all, it creates
 - [Go Testing](Go%20Testing.md)
 - [Go Effective](Go-Effective.md)
 - [Go Networking](Go-Networking.md)
-
 - [Close Chan](Golang/Closed-Chan-Golang.md)
 
 # Libraries
