@@ -10,11 +10,11 @@ gRPC (gRPC Remote Procedure Calls) is a high-performance, open-source framework 
 ## REST API vs. gRPC
 
 - **Advantages of gRPC:**
-    - **Performance:** gRPC generally has better performance compared to REST API, primarily because it uses a binary protocol (Protocol Buffers) and supports features like multiplexing.
-    - **Strong Typing:** Protocol Buffers provide a more structured and strongly typed approach compared to JSON in REST APIs.
+    1. **Performance:** gRPC generally has better performance compared to REST API, primarily because it uses a binary protocol (Protocol Buffers) and supports features like multiplexing.
+    2. **Strong Typing:** Protocol Buffers provide a more structured and strongly typed approach compared to JSON in REST APIs.
 - **Advantages of REST API:**
-    - **Simplicity:** REST is simpler to understand and implement. It relies on standard HTTP methods and is easy to work with using tools like cURL or browser-based requests.
-    - **Widely Adopted:** REST has been the traditional choice for many web applications and is widely supported by various tools and frameworks.
+    1. **Simplicity:** REST is simpler to understand and implement. It relies on standard HTTP methods and is easy to work with using tools like cURL or browser-based requests.
+    2. **Widely Adopted:** REST has been the traditional choice for many web applications and is widely supported by various tools and frameworks.
 
 # See More
 
