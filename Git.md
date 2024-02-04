@@ -73,6 +73,6 @@ fi
 exec git diff-index --check --cached $against --
 ```
 
-[Git Flow](Git%20faed6/Git%20Flow%2058c17.md)
+# See More
 
-[Gitlab CI](Git%20faed6/Gitlab%20CI%20d1288.md)
+- [Git-Flow](Git-Flow.md)

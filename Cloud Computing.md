@@ -189,8 +189,8 @@ This basic concept is also being extended to autonomous vehicles. Autonomous veh
 
 # Smart manufacturing
 
-[Articles to read](Cloud%20Computing/Articles.md)
+# See more
 
-[Resource Scheduling](Resource%20Scheduling.md)
-
-[Orchestrating Serverless Workflows](Orchestration.md)
+- [Articles to read](Cloud%20Computing/Articles.md)
+- [Resource Scheduling](Resource%20Scheduling.md)
+- [Orchestrating Serverless Workflows](Orchestration.md)

@@ -2,6 +2,7 @@
 
 - [Linux](Linux.md)
 - [Jenkins](Jenkins.md)
+- [Gitlab-CI](Gitlab-CI.md)
 - [Terraform](Terraform.md)
 - [Ansible](Ansible.md)
 - [Docker](Docker.md)

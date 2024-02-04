@@ -14,4 +14,4 @@ abootimg -x dist
 
 # See More
 
-- [adb](Android/adb.md)
+- [ADB](ADB.md)

@@ -12,7 +12,7 @@ The Argo CD is going to help us in this point. It is going to be installed as a 
 
 As you can see, instead of triggering the K8s cluster, the Argo CD pulling and checking for changes in contrast.
 
-![Untitled](ArgoCD/Untitled.png)
+![](Attachments/ArgoCD/image-20240203064131882.png)
 
 So as Nana showed, the CI pipeline is going to test, build image, push image and then update the K8s manifest file. Since the Argo CD is constantly watching the app configurations, It will start to sync the changes.
 
