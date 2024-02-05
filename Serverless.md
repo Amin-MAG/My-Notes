@@ -9,3 +9,4 @@ In this architecture, which is a good fit for small startups, we only implement 
 # See more
 
 - [OpenFaas](OpenFaas.md)
+- [faas-provider](OpenFaaS/faas-provider.md)
