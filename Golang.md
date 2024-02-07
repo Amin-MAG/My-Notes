@@ -496,6 +496,7 @@ As a limiting case, if a composite literal contains no fields at all, it creates
 - [Go Effective](Go-Effective.md)
 - [Go Networking](Go-Networking.md)
 - [Close Chan](Golang/Closed-Chan-Golang.md)
+- [Go Generate](Golang/Go-Generate.md)
 
 # Libraries
 
