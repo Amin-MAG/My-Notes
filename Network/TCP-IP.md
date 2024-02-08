@@ -1,6 +1,7 @@
 # TCP/IP
 
 TCP/IP (Transmission Control Protocol/Internet Protocol) is a suite of communication protocols that form the backbone of the Internet Including protocols like TCP, IP, ICMP, and others.
+
 ## IP
 
 Responsible for addressing and routing packets so that they can travel across networks and arrive at the correct destination.
