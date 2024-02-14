@@ -1,5 +1,47 @@
 # Python
 
+## Why to use Python
+
+**Good sides of using Python:**
+1. **Readability**: Python's syntax is  easy to understand, making it accessible to beginners and experienced programmers alike.
+2. **Versatility**: Python is a multipurpose language with a vast ecosystem of libraries and frameworks that support a wide range of applications. Whether it's web development with frameworks like Django or Flask, data analysis with libraries like Pandas and NumPy, or machine learning with TensorFlow or PyTorch, Python has tools for almost any task.
+3. **Large Standard Library**: Python comes with a comprehensive standard library that provides support for many common programming tasks, reducing the need for external dependencies.
+4. **Community Support**
+5. **Cross-platform Compatibility**
+6. **Easy to Learn and Use**
+
+**Bad sides of using Python:**
+
+1. **Performance**: Python is often criticized for its performance compared to languages like C or C++. It is an interpreted language, which can lead to slower execution speeds, especially for CPU-intensive tasks. However, performance-critical parts of a program can often be optimized using libraries written in C or by utilizing just-in-time (JIT) compilers.
+2. **Global Interpreter Lock (GIL)**: In multi-threaded applications, Python's Global Interpreter Lock can be a bottleneck, as it prevents multiple native threads from executing Python bytecode simultaneously. This can limit the scalability of certain types of applications, although there are workarounds such as multiprocessing or using asynchronous programming techniques.
+3. **Mobile Development**
+4. **Deployment Size**: Python applications typically require the Python interpreter to be installed on the target system, which can increase deployment size compared to compiled languages.
+
+## Differenced Between Python 2 & 3
+
+- **Print Statement vs. Function**
+- **Unicode Support**
+- **Division Operator**
+- **Range vs. xrange**
+- **Iterating Over Dictionaries**
+- **`input()` vs. `raw_input()`**
+
+## Data Types
+
+1. int
+2. float
+3. complex
+4. str
+5. list
+6. tuple
+7. dict
+8. set
+9. frozenset
+10. bool
+11. NoneType
+12. bytes
+13. bytearray
+
 ## Init files in packages
 
 All imports in `__init__.py` are made available when you import the package (directory) that contains it.
