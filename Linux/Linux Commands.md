@@ -1285,6 +1285,32 @@ It shows the library of a executable
 ldd /bin/executable
 ```
 
+## jq
+
+To view and deal with JSON files
+
+```bash
+jq < data.json
+
+# Compact format
+jq -c < data.json
+
+# Select one field of all objects
+jq .id < data.json
+
+# See the keys or fields of objects
+jq keys < data.json
+
+# Create new objects on the fly
+jq '{id: .id, logs: .logs}' < data.json
+
+# Filter the objects
+jq 'select(.logs | length > 0)' < data.json
+jq 'select(has(.logs))' < data.json
+jq 'select(.values.a + .values.b > 1)'< data.json
+jq 'select(.errors | length > 0 and any(.[]; contains("test")))' < data.json
+```
+
 # User Management
 
 ## whoami
