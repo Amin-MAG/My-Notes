@@ -71,7 +71,7 @@ Such a rule traditionally consisted of three parts:
 # See More
 
 - [Cloud Computing](Cloud%20Computing.md)
-- [Programming Languages](Programming%20Languages.md)
+- [Programming Languages](ProgrammingLanguages.md)
 - [DevOps](DevOps.md)
 - [Databases](Databases.md)
 - [Message Brokers](Message-Brokers.md)

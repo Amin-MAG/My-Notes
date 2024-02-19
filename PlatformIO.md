@@ -27,5 +27,9 @@ pio device monitor --port /dev/cu.usbserial-0001  --baud 115200
 To search between different platforms and devices
 
 ```bash
+# Boards
+pio boards
+
+# Platforms
 pio platforms search
 ```
