@@ -10,7 +10,44 @@
 - [Matlab](Matlab.md)
 - [Lua](Lua.md)
 
+## Types of Programming Languages
+
+If we all of programming languages different branches of a tree, There are two main branch.
+
+1. **Imperative**: Giving explicit instructions
+2. **Declarative**: Describing our goal
+
+## Imperative Programming Languages
+
+The main branches of this paradigm is 
+
+- Structured
+- Procedural
+- Object Oriented
+
+> **Note**: There are more paradigms than ones mentioned. 
+
+## Declarative Programming Languages
+
+The main branches of this paradigm is 
+
+- Reactive
+- Functional
+- Logic
+
+> **Note**: There are more paradigms than ones mentioned. 
+
+### Functional
+
+- **Functions can be used in unrestricted way**
+	- Can pass a function into a function
+	- Can return a function in a function
+	- Can hold references to a function
+- **Can create closures**: Functions that can be accessed and remember the scope around them. In closures, the function scope remains in the memory as long as the closure exists.
+- 
 ## Paradigms of Programming Languages
+
+Each programming language can use some of the paradigms mentioned before in its language.
 
 1. **Procedural Programming Languages**: These languages focus on procedures or routines, which are sequences of commands or statements to perform specific tasks. Examples include [C](C.md), Pascal, and BASIC.
 2. **Functional Programming Languages**: Functional programming languages treat computation as the evaluation of mathematical functions and avoid changing state and mutable data. Examples include Haskell, Lisp, and Scala.
@@ -30,3 +67,7 @@
 - [Object Oriented Design](Object%20Oriented%20Design.md)
 - [Compiler](Compiler.md)
 - [Code Review](Code%20Review.md)
+
+# Resources
+
+- [The purest coding style, where bugs are near impossible](https://www.youtube.com/watch?v=HlgG395PQWw)
