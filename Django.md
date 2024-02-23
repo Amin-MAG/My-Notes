@@ -1,5 +1,13 @@
 # Django
 
+## MVT Model
+
+Django follows the MVT architectural pattern
+
+- Models represent the data structure of your application.
+- Views handle the logic and processing of data.
+- Templates render the HTML to be presented to the user.
+
 ## Django-Admin
 
 ```bash
@@ -632,3 +640,4 @@ def event_generator():
         yield 'data: Hello, world!\n\n'  
         time.sleep(1)
 ```
+
