@@ -3,6 +3,7 @@
 ## Key-Value
 
 - [Redis](Redis.md)
+	- [Tile38](Tile38.md)
 - [etcd](etcd.md)
 
 ## Wide-Column
