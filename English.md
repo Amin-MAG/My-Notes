@@ -2,11 +2,9 @@
 
 ## Vocabulary
 
-- [MOD](English/My%20Own%20Personal%20Dictionary.md)
 - [Daily](English/Daily%20Vocabularies.md)
 - [Technical](English/Technical%20Vocabularies.md)
 - [Phrasal verbs](English/PhrasalVerbs.md)
-
 
 ## Series
 
