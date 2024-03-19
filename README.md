@@ -22,7 +22,7 @@ Most of the documents are related to computer science.
 	- [Programming Languages](ProgrammingLanguages.md)
 	- [Cloud](Cloud.md)
 	- [Microservices](Microservices.md)
-	- [Artificial Intelligence](Artificial%20Intelligence.md)
+	- [Artificial-Intelligence](Artificial-Intelligence.md)
 	- [Data Science](Data-Science.md)
 	- [Network](Network.md)
 - [English](English.md)

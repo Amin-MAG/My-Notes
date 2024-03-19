@@ -43,7 +43,6 @@ imshow(gi);
 ```
 
 > `rgb2gray` actually converts RGB values to grayscale values by forming a weighted sum of the *R*, *G*, and *B* components
-> 
 
 $0.2989 \times R + 0.5870 \times G + 0.1140 \times B$
 
@@ -133,7 +132,6 @@ $SNR = \mu_{Signal} / \sigma_{signal}$
 $SNR=10 \times log10(mean_{PixelValues}/std)$
 
 > Express the result in decibel
-> 
 
 $std=$ standard deviation or error value of the pixel values
 
@@ -202,11 +200,11 @@ imshow(ft, []);
 
 This is the result.
 
-![Untitled](Signal%20Pro%20226c9/Untitled.png)
+![](Attachments/Signal/image-20240318183758528.png)
 
 The same code result for the main picture is
 
-![Untitled](Signal%20Pro%20226c9/Untitled%201.png)
+![](Attachments/Signal/image-20240318183805732.png)
 
 ### FFT - Fast Fourier Transform
 
@@ -215,20 +213,18 @@ The 0 frequency location is at the first and end of the spectrum and the highest
 The image shows that it contains all of the frequencies, but their magnitude gets smaller for the higher amount of frequencies. So low frequencies should have more image information.
 
 > The center of the image is the origin of the frequency coordinate system.
-> 
 
 Fourier analysis converts a signal from its original domain (often time or space) to a representation in the frequency domain and vice versa.
 
 Shifting is the main reason for this shape of the picture.  
 
 > This shifting (`fftshift`) moves the zero component of frequency to the center of the image. A dot at the center represents the (0,0) frequency term or average value of the image.
-> 
 
 ## Noise Removal
 
 We want to remove the noise of the image we've generated before.
 
-![Untitled](Signal%20Pro%20226c9/Untitled.jpeg)
+![](Attachments/Signal/image-20240318183725212.jpeg)
 
 Here is the code
 
@@ -249,7 +245,7 @@ imshow(rgbImage)
 imwrite(rgbImage, "images/icecream-gray-noise-removal.jpg")
 ```
 
-![Untitled](Signal%20Pro%20226c9/Untitled%201.jpeg)
+![](Attachments/Signal/image-20240318183738045.jpeg)
 
 To compare the images we use the PSNR that is Peak Signal Noise Ratio
 

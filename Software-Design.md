@@ -38,7 +38,7 @@ set of interfaces. It actually a subsystem. It is a distributable piece of imp
 
 We are able to make a UML definition of a component.
 
-![Design%207dfad/Untitled.png](Software%20Engineering/Software%20Design/Untitled.png)
+![](Attachments/Software-Design/image-20240318184225819.png)
 
 Each component has 2 ports that represent the import and export APIs. The import port represents every API that passes in data to this component, And the export port actually represents all of the APIs that have been exposed from that component and we can use them.
 
@@ -62,7 +62,7 @@ Like kernel.
 
 ## Pipe
 
-![Design%207dfad/Untitled%201.png](Software%20Engineering/Software%20Design/Untitled%201.png)
+![](Attachments/Software-Design/image-20240318184235950.png)
 
 - It is used in the compiler.
 - Low-Coupling
@@ -78,7 +78,7 @@ Like kernel.
 
 ## Client-Server (Centralized)
 
-![Design%207dfad/Untitled%202.png](Software%20Engineering/Software%20Design/Untitled%202.png)
+![](Attachments/Software-Design/image-20240318184247143.png)
 
 Benefits:
 
@@ -144,7 +144,7 @@ We add some servers to resolve some issues in P2P. But cause a single point of f
 
 ## Repository (Blackboard)
 
-![Design%207dfad/Untitled%203.png](Software%20Engineering/Software%20Design/Untitled%203.png)
+![](Attachments/Software-Design/image-20240318184258514.png)
 
 Git or DBMS use this architecture style. The actions on the repository are atomic. Other examples could be Wikipedia that is a knowledge base site and people can read and write.
 
@@ -160,7 +160,7 @@ Benefits:
 
 ### Repository with the storage access layer
 
-![Design%207dfad/Untitled%204.png](Software%20Engineering/Software%20Design/Untitled%204.png)
+![](Attachments/Software-Design/image-20240318184307015.png)
 
 The data store subsystem can be changed without modifying any component except the Storage access.
 
@@ -170,7 +170,7 @@ The data store subsystem can be changed without modifying any component except t
 - The model contains data and entities.
 - View
 
-![Design%207dfad/Untitled%205.png](Software%20Engineering/Software%20Design/Untitled%205.png)
+![](Attachments/Software-Design/image-20240318184312545.png)
 
 Here we can have one-to-n relation between these layers.
 
@@ -183,17 +183,17 @@ MVC vs 3-layer-architecture
 
 This is the famous MVC one. Coupling is important to us so if we want to keep it without dependency, we should use a kind of notifier like an observer. (dash line)
 
-![Design%207dfad/Untitled%206.png](Software%20Engineering/Software%20Design/Untitled%206.png)
+![](Attachments/Software-Design/image-20240318184322496.png)
 
 ## MVP (Model-View-Presenter)
 
 It is a variation of MVC. There is no relation between view and model.
 
-![Design%207dfad/Untitled%207.png](Software%20Engineering/Software%20Design/Untitled%207.png)
+![](Attachments/Software-Design/image-20240318184331519.png)
 
 In MVP each view only interacts with one presenter. Actually here is a one-to-one relation.
 
-![In android applications](Software%20Engineering/Software%20Design/Untitled%208.png)
+![](Attachments/Software-Design/image-20240318184342319.png)
 
 In android applications
 
@@ -201,7 +201,7 @@ In android applications
 
 In MVVM the relation between view and view model is on directional unlike the MVP.
 
-![Design%207dfad/Untitled%209.png](Software%20Engineering/Software%20Design/Untitled%209.png)
+![](Attachments/Software-Design/image-20240318184350779.png)
 
 ## MVT (Django)
 
@@ -224,7 +224,7 @@ Types of Time-Critical Systems
 
 ## Daemon
 
-![Design%207dfad/Untitled%2010.png](Software%20Engineering/Software%20Design/Untitled%2010.png)
+![](Attachments/Software-Design/image-20240318184359808.png)
 
 There is a daemon that dispatches the incoming request to processes, or it can create a new process to respond to that request.
 
@@ -343,7 +343,7 @@ To have Service-oriented architecture, Here are the basic laws.
 - Standards
 - Service identification and categorization like monitoring
 
-![Design%207dfad/Untitled%2011.png](Untitled%2011.png)
+![](Attachments/Software-Design/image-20240318184414406.png)
 
 ## Space-Bound Architecture
 
@@ -359,7 +359,7 @@ The container is an isolated space with no shared resources.
 
 VM vs Container
 
-![Design%207dfad/Untitled%2012.png](Untitled%2012.png)
+![](Attachments/Software-Design/image-20240318184425237.png)
 
 - VM is heavyweight because all of the requests should be interpreted by Hypervisor and mapped to Host OS instructions. On the other hand, containers are isolated spaces in the kernel so it is super fast.
 - There is no Translation.
@@ -380,7 +380,8 @@ Disadvantages
 
 Docker (as container manager)
 
-![Design%207dfad/Untitled%2013.png](Untitled%2013.png)
+![](Attachments/Software-Design/image-20240318184433161.png)
+
 
 - Docker registries like Docker hub contain the images the files.
 - Docker daemon is actually the container manager and knows about when to run when to pause, and ...
@@ -452,7 +453,7 @@ It is a methodology introduced by Heroku.
 - Coordination is orchestration or choreography
 - What is the toolset of the backing services
 
-![Design%207dfad/Untitled%2014.png](Untitled%2014.png)
+![](Attachments/Software-Design/image-20240318184440756.png)
 
 Pros
 

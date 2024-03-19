@@ -2,26 +2,26 @@
 
 ## Software and System Design
 
-- [Software Design](Software%20Engineering/Software%20Design.md)
+- [Software-Design](Software-Design.md)
 - [System Design Main Concepts](System-Design-Concepts.md)
 - [Architecture Patterns](Architecture-Patterns.md)
 	- [Microservices](Microservices.md)
 ## Code Architectures and Patterns
 
-- [Design Patterns](Software%20Engineering/Design%20Patterns.md)
+- [Design-Patterns](Design-Patterns.md)
 - Software Anti-Patterns
 - [Refactoring](Refactoring.md)
 
 ## Service-Oriented Software Engineering
 
 - [Cloud](Cloud.md)
-- [Container Orchestrations](Container%20Orchestrations.md)
+- [Container-Orchestrations](Container-Orchestrations.md)
 
 ## Microservice Architecture
 
 - [Cloud](Cloud.md)
 - [Microservices](Microservices.md)
-- [Container Orchestrations](Container%20Orchestrations.md)
+- [Container-Orchestrations](Container-Orchestrations.md)
 
 ## Software Testing
 
@@ -70,7 +70,7 @@ Such a rule traditionally consisted of three parts:
 
 # See More
 
-- [Cloud Computing](Cloud%20Computing.md)
+- [Cloud-Computing](Cloud-Computing.md)
 - [Programming Languages](ProgrammingLanguages.md)
 - [DevOps](DevOps.md)
 - [Databases](Databases.md)

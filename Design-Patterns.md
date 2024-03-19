@@ -12,7 +12,7 @@ There are some common design principles that are common and useful between the d
 
 ## Factory
 
-![Design%20Pat%204b009/Untitled.png](Software%20Engineering/Design%20Patterns/Untitled.png)
+![](Attachments/Design-Patterns/image-20240318184058901.png)
 
 # Behavioral
 
@@ -26,7 +26,9 @@ As you can understand, These buttons are very similar with each other. One solut
 
 The Command pattern suggests that GUI objects shouldn’t send these requests directly. Instead, you should extract all of the request details, such as the object being called, the name of the method and the list of arguments into a separate *command* class with a single method that triggers this request.
 
-![Untitled](Software%20Engineering/Design%20Patterns/Untitled%201.png)
+![](Attachments/Design-Patterns/image-20240318184122911.png)
+
+
 
 Let’s get back to our text editor. After we apply the Command pattern, we no longer need all those button subclasses to implement various click behaviors. It’s enough to put a single field into the base `Button` class that stores a reference to a command object and make the button execute that command on a click.
 
@@ -40,7 +42,7 @@ Let’s get back to our text editor. After we apply the Command pattern, we no l
 
 ## Decorator
 
-![Design%20Pat%204b009/Untitled%202.png](Software%20Engineering/Design%20Patterns/Untitled%202.png)
+![](Attachments/Design-Patterns/image-20240318184108361.png)
 
 ## Adapter
 

@@ -23,6 +23,6 @@ type CustomerRepository interface {
 In this way, any data source you want to use should implement these functions. You are independent of the database which you used. 
 
 # See more
-- [Software Design](Software%20Engineering/Software%20Design.md)
-- [Design Patterns](Software%20Engineering/Design%20Patterns.md)
+- [Software-Design](Software-Design.md)
+- [Design-Patterns](Design-Patterns.md)
 - [Microservices](Microservices.md)

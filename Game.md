@@ -1,3 +1,3 @@
 # Game
 
-- [IUST - Game Course](Game%20Course.md)
+- [IUST - Game Course](Game-Course.md)

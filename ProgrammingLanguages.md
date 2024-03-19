@@ -64,7 +64,7 @@ Each programming language can use some of the paradigms mentioned before in its 
 
 # Read More
 
-- [Object Oriented Design](Object%20Oriented%20Design.md)
+- [ObjectOrientedDesign](ObjectOrientedDesign.md)
 - [Compiler](Compiler.md)
 - [Code Review](Code%20Review.md)
 
