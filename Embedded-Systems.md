@@ -35,7 +35,7 @@ The goals of designing a specific embedded system can be against each other.
 
 Most real-time systems are embedded and most of the embedded systems are real-time.
 
-![Untitled](Embedded%20Systems/Untitled.png)
+![](Attachments/Embedded-Systems/image-20240324220202372.png)
 
 # Big picture of an Embedded system
 
@@ -43,7 +43,7 @@ They Always check the sensors and the state of the environment.
 
 They can use actuators to change the environment.
 
-![Untitled](Embedded%20Systems/Untitled%201.png)
+![](Attachments/Embedded-Systems/image-20240324220209403.png)
 
 ### Analog Components
 
@@ -81,7 +81,7 @@ They can use actuators to change the environment.
 
 ### General-Purpose processors
 
-![Untitled](Embedded%20Systems/Untitled%202.png)
+![](Attachments/Embedded-Systems/image-20240324220217925.png)
 
 - They can do variety of computational tasks.
 - Functional Flexibility
@@ -90,7 +90,7 @@ They can use actuators to change the environment.
 
 They have general data-path and ALU.
 
-![Untitled](Embedded%20Systems/Untitled%203.png)
+![](Attachments/Embedded-Systems/image-20240324220224449.png)
 
 ### Single-Purpose processors
 
@@ -136,7 +136,7 @@ Storage permanence is about how long it holds the bits.
 - Lower range: the data is gone as soon as you turn off power supply like SRAM
 - Low end: like DRAM
 
-![Untitled](Embedded%20Systems/Untitled%204.png)
+![](Attachments/Embedded-Systems/image-20240324220238682.png)
 
 ## Interfaces (Buses)
 
@@ -310,7 +310,7 @@ Characterstics:
 
 ### Pins
 
-![Screen Shot 2022-04-10 at 09.59.05.png](Embedded%20Systems/Screen%20Shot%202022-04-10%20at%2009.59.05.png)
+![](Attachments/Embedded-Systems/image-20240324220254678.png)
 
 - Digitals: `pinMode()`, `digitalWrite()`, `digitalRead()`.
 - Interrupt: `attachInterrupt()`
@@ -375,7 +375,7 @@ They are conceptual notions used to capture the system behavior.
 
 Statecharts is a language for describing large, complex, and reactive systems.
 
-![State-chart](Embedded%20Systems/statechart.png)
+![](Attachments/Embedded-Systems/image-20240324220305761.png)
 
 Statecharts VS FSM:
 
@@ -389,7 +389,7 @@ Statecharts VS FSM:
 
 ### Bottom-up clustering
 
-![Refinement](Embedded%20Systems/refinement.png)
+![](Attachments/Embedded-Systems/image-20240324220314056.png)
 
 - D is a super state.
 - The semantic of super state D: `A XOR B`
@@ -408,7 +408,7 @@ We can use the filled circle mechanism to handle this scenario. This super state
 
 ### Orthogonality (Concurrency)
 
-![Orthogonality](Embedded%20Systems/orthogonality.png)
+![](Attachments/Embedded-Systems/image-20240324220322159.png)
 
 # Chapter IV - Scheduling
 
@@ -699,8 +699,6 @@ void vTaskDelay(TickType_t ticks)
 
 # See more
 
-- [Assignment I](Embedded%20Systems/Assignment%201.md)
-- [Assignment II](Embedded%20Systems/Assignment%202.md)
 - [Arduino](Arduino.md)
 - [Microprocessor](Microprocessor.md)
 
