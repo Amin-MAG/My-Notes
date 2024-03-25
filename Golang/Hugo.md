@@ -33,6 +33,12 @@ hugo server -D
 hugo server -D --bind="0.0.0.0"
 ```
 
+To create a new post (using the archetypes)
+
+```bash
+hugo new posts/my-first-post.md
+```
+
 ## Directories
 
 ### archtypes

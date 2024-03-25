@@ -465,7 +465,25 @@ In summary, `make` is used for creating and initializing slices, maps, and chann
 
 As a limiting case, if a composite literal contains no fields at all, it creates a zero value for the type. The expressions `new(File)` and `&File{}` are equivalent.
 
+## Slice vs Array
 
+Arrays have **primitive data structure** and a **fixed size**. We rarely use arrays in Go. On the other hand, Slices can **grow and shrink**. Slices are a fantasy implementation of Arrays in Go.
+
+## Reference Types vs Value Types
+
+Value Types:
+- `int`
+- `float`
+- `string`
+- `bool`
+- `struct`
+
+Reference Types:
+- `slice`
+- `channel`
+- `map`
+- `pointer`
+- `function`
 
 # Topics
 

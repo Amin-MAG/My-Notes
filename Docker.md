@@ -68,12 +68,15 @@ docker cp <CONTAINER_NAME>:<SRC_PATH> <DEST_PATH>
 
 ## Create an image from a container
 
-You can start from a base image and apply your changes. Then you can create the new image:
+We usage images to create the containers, but It is possible to create images from the container. You can start from a base image and apply your changes. Then you can create the new image:
 
 ```bash
 # docker commit <container-name> <new_image_name>:<tag>
 # the tag part is optional
 docker commit base_image my_new_image:1.0.0
+
+# You can define the Command
+docker commit -c 'CMD ["redis-server"]' base_image my_new_image:1.0.0
 ```
 
 ## Save
@@ -200,7 +203,7 @@ docker history <IMAGE>:<TAG>
 
 ## Multi-Stage Builds
 
-```docker
+```dockerfile
 # Build stage
 FROM maven AS build
 WORKDIR /app
