@@ -78,6 +78,7 @@ Such a rule traditionally consisted of three parts:
 - [Git](Git.md)
 - [Game](Game.md)
 - [Telecommunication](Telecommunication.md)
+- [Data Engineering](Data-Engineering.md)
 
 # References
 
