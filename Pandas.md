@@ -1,6 +1,103 @@
 # Pandas
 
-## Basics
+To create the Data Frame
+
+```python
+data = {
+    'name': ['Angela', 'Amin', 'Daniel'],
+    'age': [18, 24, 27]
+}
+
+df = pd.DataFrame(data)
+```
+
+## Querying
+
+Get the general metrics
+
+```python
+df.describe()
+```
+
+Also for comparing rows of data frame, 
+
+```python
+filtered_df = df['Age'] > 20
+# Then to get the data frame of it 
+df[filtered_df]
+```
+
+### Filtering
+
+```python
+# Filter rows
+df.loc[df['Type 1'] == 'Fire']
+
+# Consider the not annotation
+df.loc[~df['Name'].str.contains('Mega')]
+df.loc[df['Type 1'].str.contains('fire|grass', flags=re.I, regex=True)]
+
+# Consider the and annotation
+new_df = df.loc[(df['Type 1'] == 'Fire') & (df['Type 2'] != 'Fire')]
+new_df = new_df.reset_index()
+
+# Remove the duplicates
+df.drop_duplicates().reset_index(drop=True)
+```
+
+### Sorting
+
+```python
+df.sort_values(['Name', 'HP'], ascending=[1, 0])
+```
+
+
+## Iterating
+
+```python
+for idx, row in df.iterrows():
+	# Do something
+	pass
+```
+
+### Aggregate statistics
+
+```python
+# Calculate the mean based on their type
+df.groupby('Type 1').mean()
+df.groupby(['Type 1']).mean()
+df.groupby('name').aggregate({
+	'age': 'mean'
+})
+new_df = df.groupby('name').aggregate({
+	'age': 'max'
+})
+```
+
+## Indexing
+
+To get the index of a Data Frame
+
+```python
+df.index
+```
+
+If you want to have the range after filter, you can
+
+```python
+new_df = df.groupby('name').aggregate({
+	'age': 'max'
+})
+new_df.reset_index()
+```
+
+You can change and set the indicies.
+
+```python
+df_class_act = df_class_act.set_index('stdid')
+```
+
+## Shape
 
 ```python
 # To get the size of the data
@@ -76,57 +173,6 @@ df.iloc[2:30]
 df.iloc[4, 2]
 ```
 
-## Indexing
-
-You can change and set the indicies.
-
-```python
-df_class_act = df_class_act.set_index('stdid')
-```
-
-## Iterating
-
-```python
-for idx, row in df.iterrows():
-	# Do something
-	pass
-```
-
-## Querying
-
-```python
-# Get the general metrics
-df.describe()
-```
-
-### Filtering
-
-```python
-# Filter rows
-df.loc[df['Type 1'] == 'Fire']
-
-# Consider the not annotation
-df.loc[~df['Name'].str.contains('Mega')]
-df.loc[df['Type 1'].str.contains('fire|grass', flags=re.I, regex=True)]
-
-# Consider the and annotation
-new_df = df.loc[(df['Type 1'] == 'Fire') & (df['Type 2'] != 'Fire')]
-new_df = new_df.reset_index()
-```
-
-### Sorting
-
-```python
-df.sort_values(['Name', 'HP'], ascending=[1, 0])
-```
-
-### Aggregate statistics
-
-```python
-# Calculate the mean based on their type
-df.groupby(['Type 1']).mean()
-```
-
 ## Mutate columns
 
 You can rename the titles
@@ -175,3 +221,4 @@ df.to_excel('output.xlsx')
 # Resources
 
 - [Tutorial - Github Repo](https://github.com/KeithGalli/pandas)
+- Udemy - Data Engineering for Beginners with Python and SQL 2023-9
