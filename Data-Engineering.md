@@ -8,4 +8,4 @@
 - [Databases](Databases.md)
 - [Pandas](Pandas.md)
 - [Spark](Spark.md)
-- [Azure-Databricks](Azure-Databricks.md)
+- [Databricks](Databricks.md)
