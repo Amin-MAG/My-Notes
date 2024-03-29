@@ -1,14 +1,53 @@
 # Spark
 
-## Introduction
+Apache Spark is a unified analytics engine for big data and large-scale data processing.
 
-Apache Spark is a unified analytics engine for large-scale data processing.
+## Why to Use?
 
-Unlike most other shells however which let you manipulate data using disk and memory in one single machine, Sparks allows you to interact with data distributed on disk or memory in many machines available in the cluster.
+- **Works on Distributed System**:  Unlike most other shells, however which let you manipulate data using disk and memory in one single machine, Sparks allows you to interact with data distributed on disk or memory in many machines available in the cluster.Unlike most other shells, however which let you manipulate data using disk and memory in one single machine, Sparks allows you to interact with data distributed on disk or memory in many machines available in the cluster.
+- **Better Version of Hadoop**: Spark is more easier and more performant than the Hadoop.
+- **Better and Easier API**
 
-### RDD
+## Architecture
+
+- [Core](###Core)
+- [SQL Engine](###SQL%20Engine)
+
+### Core
+
+It is the center part of Spark that contains APIs called RDD or Resilient Distributed Datasets.
+
+- Scheduling Tasks
+- Memory Management
+- Fault Recovery
+- Communication with Storage Systems
+
+#### RDD
 
 Resilient Distributed Datasets are distributed collections that are automatically parallelized across the cluster.
+
+Interacting with these APIs to manipulate the RDDs was difficult to use and optimize for complex operations. In order to optimize the workload, Spark introduced the SQL Engine layer on top of Core.
+
+### SQL Engine
+
+It includes 
+
+- **Catalyst Optimizer**, which takes care of converting a computational query to a highly efficient execution plan.
+- **Tungsten Project**, which is responsible for memory management and CPU efficiency.
+
+### High APIs
+
+The higher level abstraction makes it easier to develop applications.
+
+- **Spark SQL**
+- **Dataset API**
+- **DataFrame API**
+
+On top of Dataset API and DataFrame API, we have the set of libraries such as 
+
+- **Spark Structured Streaming**
+- **Spark ML**
+- **Spark Graph**
 
 ### Simple code in `PySpark`
 
