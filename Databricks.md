@@ -16,3 +16,19 @@ At Its core, Databricks contains Apache [Spark](Spark.md), which is widely used 
 - **Data Lake**
 - **SQL Analytics**
 - **MLFlow**
+
+# Azure Databricks Architecture
+
+There are two pieces in the Azure Databricks.
+
+## Control Plane
+
+- **Cluster Manager**
+- **Databricks UX**.
+- **DBFS**
+
+## Data Plane
+
+- **Virtual Network** and **Network Security Group**
+- **Azure Blob Storage**
+- **Databricks Workspace**
