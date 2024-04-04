@@ -25,4 +25,5 @@ Most of the documents are related to computer science.
 	- [Artificial-Intelligence](Artificial-Intelligence.md)
 	- [Data Science](Data-Science.md)
 	- [Network](Network.md)
+- [Physics](Physics.md)
 - [English](English.md)
