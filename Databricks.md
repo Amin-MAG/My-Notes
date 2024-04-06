@@ -58,6 +58,25 @@ Databricks Runtime is set of libraries that run on Databricks Clusters.
 - **Databricks Runtime ML**: Databricks Runtime + PyTorch, Keras, TensorFlow
 - **Photon Runtime**: Databricks Runtime + Photon Engine
 - **Databricks Runtime Light**: For only jobs
+
+## Notebook
+
+To change from python to Scala you can use
+
+```scala
+%scala
+val msg = "hello"
+print(msg)
+
+```
+
+Other available magic commands
+
+- `%sql`
+- `%md`
+- `%sh`
+- `%html`
+- `%fs`
 # Azure Databricks Architecture
 
 There are two pieces in the Azure Databricks.
