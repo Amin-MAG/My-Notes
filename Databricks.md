@@ -77,6 +77,32 @@ Other available magic commands
 - `%sh`
 - `%html`
 - `%fs`
+
+### Utilities
+
+For interacting to **File System**
+
+```bash
+%fs
+ls
+```
+
+It's better to use the `dbutils` package
+
+```python
+dbutils.fs.ls('/databricks-dataets/COVID')
+```
+
+it is integrated with the python language
+
+```python
+for files in dbutils.fs.ls('/databricks-datasets/COVID'):
+	if files.name.endswith('/'):
+		print(files.name)
+```
+
+> `dbutils.help()` or `dbutils.fs.help('ls')` to see all of the help.
+
 # Azure Databricks Architecture
 
 There are two pieces in the Azure Databricks.
