@@ -34,6 +34,22 @@ To list all of the available keys you can use
 KEYS *
 ```
 
+## SCAN
+
+To retrieve all IDs of a key collections
+
+```
+SCAN areas 
+```
+
+## GET
+
+To retrieve entity with a specific ID
+
+```
+GET areas 12342 
+```
+
 # Searching
 
 ## INTERSECTS
