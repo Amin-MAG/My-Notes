@@ -27,6 +27,41 @@ $$\Delta t' = \frac{\Delta t}{\sqrt{1 - \frac{v^2}{c^2}}} $$
 
 To calculate the combined effect of both gravitational and kinematic time dilation, you would need to consider both formulas simultaneously. This can become quite complex, especially in scenarios involving significant gravitational fields and relativistic velocities.
 
+Here is a code to calculate the Time Dilation in Python:
+
+```python
+import math
+
+# Constants
+G = 6.674 * 10**-11  # Gravitational constant in m³/kg/s²
+M_earth = 5.972 * 10**24  # Mass of the Earth in kg
+R_earth = 6.371 * 10**6  # Radius of the Earth in meters
+c = 299792458  # Speed of light in m/s
+
+# Function to calculate gravitational time dilation
+def gravitational_time_dilation(delta_t, R):
+    dilation_factor = math.sqrt(1 - 2 * G * M_earth / (c**2 * R))
+    return delta_t * dilation_factor
+
+# Jack's position (Earth's surface)
+delta_t_jack = 1  # Assume arbitrary time interval for Jack
+R_jack = R_earth
+
+# Leo's position (far from Earth's surface)
+delta_t_leo = 1  # Assume arbitrary time interval for Leo
+R_leo = 1.5 * R_earth  # Assuming Leo's orbit is 1.5 times Earth's radius
+
+# Calculate gravitational time dilation for Jack and Leo
+dilated_time_jack = gravitational_time_dilation(delta_t_jack, R_jack)
+dilated_time_leo = gravitational_time_dilation(delta_t_leo, R_leo)
+
+year = 60 * 60 * 24 * 365
+
+print("Gravitational time dilation for Jack:", dilated_time_jack * year)
+print("Gsravitational time dilation for Leo:", dilated_time_leo * year)
+print("Difference:", abs(dilated_time_jack * year - dilated_time_leo * year))
+```
+
 # Gravitational Constant
 
 The value of the gravitational constant $G = 6.674 \times 10^{-11} \, \text{N}  \text{m}^2/\text{kg}^2$ represents the strength of the gravitational force between two objects with mass. It's a fundamental constant in physics and is used in calculations involving gravitational interactions.
