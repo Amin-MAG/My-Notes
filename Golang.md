@@ -515,6 +515,7 @@ Reference Types:
 - [Go Networking](Go-Networking.md)
 - [Close Chan](Golang/Closed-Chan-Golang.md)
 - [Go Generate](Golang/Go-Generate.md)
+- [Go C](Golang/Go-C.md)
 
 # Libraries
 
