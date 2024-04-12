@@ -1,17 +1,22 @@
+*.DS_Store
+
 # Jetbrains
 .idea
 
 # Obsidian
 .obsidian
 
-*.DS_Store
-
-# Ignore the daily notes
-Daily.md
-# Ignore the Idea folder related to personal notes
+# Draft notes
+Draft.md
+Interview-General-Questions.md
+# Templates
+Templates/
+# Daily Notes
+Daily-Notes/
+# Idea folder related to personal notes
 Ideas/
-# Ignore work-related notes
-Nebulon*.md
+# Work
+VPORT.md
 
 # zk
 .zk
