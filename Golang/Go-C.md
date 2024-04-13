@@ -58,3 +58,68 @@ func main() {
 	fmt.Println("Result: ", result)
 }
 ```
+
+## C Functions with Callback 
+
+In some cases, you may need to pass a Go function as a callback to a C function. This involves using function pointers in C and the `unsafe` package in Go. Here's the `callback.h` file
+
+```c
+#include <stdio.h>  
+
+// The function type which is the argument of call_from_c
+typedef int (*callback)(int);  
+  
+// Forward declaration of the C function that accepts the callback  
+void call_from_c(callback cb);  
+  
+// Exporting the Go callback function  
+// We can not pass an anonymous/inline function.
+// The function should be defined in C.
+extern int goCallback(int value);
+```
+
+The function `call_from_c` has an argument of type function that receive an integer and returns an integer.
+
+Here is the `callback.c` file which runs the callback with the value of 5
+
+```c
+#include "callback.h"  
+#include <stdio.h>  
+  
+void call_from_c(callback cb) {  
+  int r = cb(5);  
+  printf("The return value of go function in C is %d\n", r);  
+}
+```
+
+Now to pass the callback in Go 
+
+```go
+package main  
+  
+/*  
+#include "callback.h"  
+*/  
+import "C"  
+import (  
+    "fmt"  
+    "unsafe"
+)  
+  
+//export goCallback  
+func goCallback(value C.int) C.int {  
+    v := int(value)  
+    fmt.Println("Go callback called with result:", v*v*v)  
+    res := v * v * v  
+    return C.int(res)  
+}  
+  
+func main() {  
+    C.call_from_c((C.callback)(unsafe.Pointer(C.goCallback)))  
+}
+```
+
+- Importing `callback.h` contains all of necessary informations
+- The `export` keyword on top of goCallback register the function in C.
+- Keep in mind to use `C.types` like `C.int` in the implementation of the function.
+- Also `go run main.go` might not work, because you need all of Go and C files. So you should run the `go build .` or `go run .`
