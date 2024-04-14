@@ -59,6 +59,32 @@ func main() {
 }
 ```
 
+## Type Conversion
+
+| C Type         | Go Equivalent       |
+|----------------|---------------------|
+| int            | C.int               |
+| unsigned int   | C.uint              |
+| long           | C.long              |
+| unsigned long  | C.ulong             |
+| long long      | C.longlong          |
+| unsigned long long | C.ulonglong     |
+| float          | C.float             |
+| double         | C.double            |
+| char           | C.char              |
+| const char*    | *C.char             |
+| void*          | unsafe.Pointer      |
+| struct         | C.struct_*          |
+| pointer        | *C.type             |
+| array          | *C.type             |
+| union          | C.union_*           |
+
+- In Go, types from the "C" package are used to represent C types. For example, `C.int` represents an `int` in C.
+- Pointers to C types are represented as `*C.type` in Go.
+- C arrays are represented as pointers in Go. For example, `*C.int` represents a pointer to an `int` array in C.
+- `unsafe.Pointer` in Go is used to represent `void*` in C. It is typically used for memory addresses and raw memory manipulation, and its use should be handled with caution due to potential safety issues.
+- Structs and unions from C can be represented using their respective types prefixed with `C.struct_` or `C.union_` in Go.
+
 ## C Functions with Callback 
 
 In some cases, you may need to pass a Go function as a callback to a C function. This involves using function pointers in C and the `unsafe` package in Go. Here's the `callback.h` file
