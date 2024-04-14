@@ -123,3 +123,4 @@ func main() {
 - The `export` keyword on top of goCallback register the function in C.
 - Keep in mind to use `C.types` like `C.int` in the implementation of the function.
 - Also `go run main.go` might not work, because you need all of Go and C files. So you should run the `go build .` or `go run .`
+## Using C Libraries and Header Files Without WrapperYou can directly import the C file and use it in Go. For the previous `math` example,```gopackage main/*#include <math.h>#cgo LDFLAGS: -lm*/import "C"import (	"fmt")func main() {	x := 16.0	result := C.sqrt(C.double(x))	fmt.Printf("Square root of %.1f is %.1f\n", x, result)}```
