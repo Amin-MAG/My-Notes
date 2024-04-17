@@ -1,6 +1,6 @@
-# Load Balancing
+# Load Balancer
 
-Load balancing is an inevitable component for a large scale application. Load Balancing helps ensure high availability, responsiveness, and scalability. 
+Load balancer is an inevitable component for a large scale application. Load Balancing helps ensure high availability, responsiveness, and scalability. 
 
 # Load Balancing Algorithms
 

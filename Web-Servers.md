@@ -1,5 +1,5 @@
 # 💻 Web Servers
 
-- [Nginx](Nginx.md)
+- [NGINX](NGINX.md)
 - [Apache](Apache.md)
 - [Traefik](Traefik.md)
