@@ -60,9 +60,48 @@ You can read more about Reverse proxy [here](Reverse-Proxy.md).
 
 ## Load Balancer
 
+- **Purpose** 
+	1. Distributes incoming network traffic
+- **Features**
+	1. Health checks
+	2. Session persistence
+	3. Content-based routing
+	4. SSL Termination
+	5. Global server load balancing
+- **Use cases**
+	- Optimizing resource utilization, maximize throughput, etc, in
+		- [Web Servers](Web-Servers.md)
+		- Application servers
+		- [Microservices](Microservices.md) environments
+- **Examples:**
+	- [NGINX](NGINX.md)
+	- HAProxy
+	- AWS Elastic Load Balancer
+
 You can read more about Load Balancer [here](Load-Balancer.md)
 
 ## API Gateway
+
+API Gateway is a specialized form of Reverse Proxy.
+
+- **Purpose** 
+	1. Manage requests for APIs
+	2. Secure requests for APIs
+	3. Optimize requests for APIs
+- **Features**
+	1. Authentication of APIs
+	2. Rate Limiting of APIs
+	3. Request/Response Transformation of APIs
+	4. Logging of APIs
+	5. Monitoring of APIs
+	6. Versioning of APIs
+- **Use cases**
+	- [Microservices](Microservices.md) architecture 
+	- [Distributed Systems](Distributed-Systems.md)
+- **Examples:**
+	- [NGINX](NGINX.md)
+	- Kong
+
 You can read more about API Gateway [here](API-Gateway.md).
 
 # Resources
