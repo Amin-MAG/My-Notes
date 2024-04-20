@@ -58,29 +58,12 @@ Some essential features of a DBMS System:
 
 ## Relation Database Management Systems
 
-They are usually apply the rule of ACID.
+They are usually apply the rule of [ACID](ACID.md).
 
 ## Non-Relation Database Management Systems
 
-This DMS drops the concept of consistency from ACID and whole idea of relations.
+This DMS drops the concept of consistency from [ACID](ACID.md) and whole idea of relations.
 
-# ACID 
-
-## Atomicity 
-
-All transactions are all or nothing.
-
-## Consistency 
-
-It means foreign key and other constrains will always be enforced. Consistency make databases harder to scale.
-
-## Isolation
-
-Different kind of transactions will not interfere with each other.
-
-## Durability
-
-They offer durability because the data is stored on the disk.
 
 # How to choose database
 
@@ -97,7 +80,7 @@ First let's take a look at some steps you should do before replacing the legacy 
 
 Here are some casual trade-offs:
 
-1. The eliminate or limit transactional guarantees like ACID.
+1. The eliminate or limit transactional guarantees like [ACID](ACID.md).
 2. The can limit data modeling flexibility.
 
 After you chose database candidates, create a realistic test bench using your own data.
@@ -107,12 +90,12 @@ After you chose database candidates, create a realistic test bench using your ow
 - **SQL:** MySQL, PostgreSQL, Oracle, SQL Server.
 - **NoSQL:** MongoDB (document-oriented), Cassandra (column-family), Redis (key-value), Neo4j (graph).
 
-### SQL
+### [SQL](SQL.md)
 
 1. **Data Model**: Data is structured in tables with predefined schemas
 2. **Schema**: Requires a predefined schema where the structure of the data is established before inserting data.
 3. **Scalability**: Typically scales vertically by adding more powerful hardwares. Scaling horizontally can be challenging.
-4. **Transactions**: Supports ACID.
+4. **Transactions**: Supports [ACID](ACID.md).
 5. **Query Language**: Uses a standardized query language (SQL) for defining and manipulating the data.
 6. **Use Cases**: Well-suited for applications with complex queries and structured, relational data, such as financial systems, ERP (Enterprise Resource Planning), and transactional systems.
 
@@ -121,7 +104,7 @@ After you chose database candidates, create a realistic test bench using your ow
 1. **Data Model**: It supports various data models including document-oriented, key-values, column-family, and graphs.
 2. **Schema**: Data can be inserted without a predefined schema, allowing for dynamic and evolving data structures.
 3. **Scalability**: Designed to scale horizontally, allowing for distributed and parallel processing across nodes. Good for large amount of data and traffic.
-4. **Transactions**: May sacrifice some aspects of ACID properties for performance and scalability. NoSQL databases often provide eventual consistency, where data consistency is guaranteed over time rather than immediately.
+4. **Transactions**: May sacrifice some aspects of [ACID](ACID.md) properties for performance and scalability. NoSQL databases often provide eventual consistency, where data consistency is guaranteed over time rather than immediately.
 5. **Query Language**: No standardized query language across all NoSQL databases. Each type of NoSQL database may have its own query language or API.
 6. **Use Cases**: Ideal for scenarios with rapidly changing data, unstructured or semi-structured data, and high scalability requirements, such as content management systems, real-time big data applications, and mobile app backends.
 

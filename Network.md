@@ -106,7 +106,7 @@ The management server will
 
 - [VPN](Network/VPN%2009efe.md)
 - [Proxy](Proxy.md)
-- [Load Balancing](Load-Balancing.md)
+- [Load Balancing](Load-Balancer.md)
 - [CDN](CDN.md)
 - [Tor](Network/Tor%20662bd.md)
 - [Setup a security camera](Network/SecurityCamera.md)

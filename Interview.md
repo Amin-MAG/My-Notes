@@ -77,7 +77,7 @@ The solution could be using
 - [Message Brokers](Message-Brokers.md)
 - [CDN](CDN.md)
 - [Indexing](Databases.md#Indexing)
-- [Load Balancing](Load-Balancing.md)
+- [Load Balancing](Load-Balancer.md)
 # Resources
 
 - [System Design Interview: A Step-By-Step Guide](https://www.youtube.com/watch?v=i7twT3x5yv8)
