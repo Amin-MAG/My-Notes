@@ -2658,6 +2658,20 @@ You can save the communication to analyze
 
 ```bash
 tcpdump
+# To set a limit on the number of packets
+tcpdump -i eth0 -c 100
+```
+
+To save the file
+
+```bash
+tcpdump -w capture.pcap -i eth0
+```
+
+To read the saved file using tcpdump
+
+```bash
+tcpdump -r capture.pcap
 ```
 
 ## host
