@@ -152,13 +152,12 @@ Type of mutations:
 
 ## Load & Performance Testing
 
-- [Performance Testing]
+- [Performance Testing]()
 - [Locust](Locust.md)
 - [K6](K6.md)
 
 # References
 
-[What is Load Testing? How It Works, Tools, Tutorials, and More](https://stackify.com/what-is-load-testing/)
-
-[Load Testing Tutorial: What is? How to? (with Examples)](https://www.guru99.com/load-testing-tutorial.html#7)
+- [What is Load Testing? How It Works, Tools, Tutorials, and More](https://stackify.com/what-is-load-testing/)
+- [Load Testing Tutorial: What is? How to? (with Examples)](https://www.guru99.com/load-testing-tutorial.html#7)
 
