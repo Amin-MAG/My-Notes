@@ -29,3 +29,7 @@ Some kinds of load balancers cache the response of request which lead to less lo
 ### Databases
 
 Relational, Non-Relational, and any databases, in general, have a mechanism for caching.
+
+# See More
+
+- [Tips on Caching](https://www.youtube.com/watch?v=wh98s0XhMmQ)

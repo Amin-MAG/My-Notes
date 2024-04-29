@@ -76,3 +76,38 @@ Let's look at another example:
 `e = some(where (p.eft == allow)) && !some(where (p.eft == deny))`
 
 The logical meaning of this example combination is: if there is a strategy that matches the result of allow and no strategy that matches the result of deny, the result is true. In other words, it is true when the matching strategies are all allow. If there is any deny, both are false (more simply, when allow and deny exist at the same time, deny takes precedence).
+
+## Policy
+
+Policies contains the actual access control policies. Policies are flexible to be stored in different places. You just need to use the correct Adapter.
+
+
+### General Adapter
+
+You can store the policies in any way if you have the adapter.
+
+| Method                 | Type     | Description                                                |
+| ---------------------- | -------- | ---------------------------------------------------------- |
+| LoadPolicy()           | basic    | Load all policy rules from the storage                     |
+| SavePolicy()           | basic    | Save all policy rules to the storage                       |
+| AddPolicy()            | optional | Add a policy rule to the storage                           |
+| RemovePolicy()         | optional | Remove a policy rule from the storage                      |
+| RemoveFilteredPolicy() | optional | Remove policy rules that match the filter from the storage |
+
+### CSV Adapter
+
+The `policy.csv` file contains the actual access control policies in a CSV format. Each line represents a policy rule, and the columns correspond to the entities defined in the `model.conf` file. Here's an example of a policy file:
+
+```csv
+p,alice,data1,read
+p,bob,data2,write
+g,alice,admin
+g,admin,data_reader
+```
+
+- The first line allows the user `alice` to `read` `data1`.
+- The second line allows the user `bob` to `write` `data2`.
+- The third line assigns the `admin` role to the user `alice`.
+- The fourth line defines that the `admin` role inherits the `data_reader` role.
+
+> The structure of the `policy.csv` file depends on the access control model defined in the `model.conf` file. The order and meaning of the columns in the CSV file correspond to the entities defined in the model.
