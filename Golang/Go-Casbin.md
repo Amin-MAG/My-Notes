@@ -111,3 +111,57 @@ g,admin,data_reader
 - The fourth line defines that the `admin` role inherits the `data_reader` role.
 
 > The structure of the `policy.csv` file depends on the access control model defined in the `model.conf` file. The order and meaning of the columns in the CSV file correspond to the entities defined in the model.
+
+### Database Adapter 
+
+Corresponding database structure (such as MySQL)
+
+| id  | ptype | v0          | v1    | v2    | v3  | v4  | v5  |
+| --- | ----- | ----------- | ----- | ----- | --- | --- | --- |
+| 1   | p     | data2_admin | data2 | read  |     |     |     |
+| 2   | p     | data2_admin | data2 | write |     |     |     |
+| 3   | g     | alice       | admin |       |     |     |     |
+
+Meaning of each column:
+- `id`: The primary key in the database. It does not exist as part of the Casbin policy. The way it is generated depends on the specific adapter.
+- `ptype`: It corresponds to `p`, `g`, `g2`, etc.
+- `v0-v5`: The column names have no specific meaning and correspond to the values in the policy CSV from left to right. The number of columns depends on how many you define yourself. In theory, there can be an infinite number of columns, but generally only **6** columns are implemented in the adapter. If this is not enough for you, please submit an issue to the corresponding adapter repository.
+
+You can keep track of actual policies and roles in a database like MySQL. Here is an example
+
+```go
+package main
+
+import (
+	"log"
+
+	"github.com/casbin/casbin/v2"
+	"github.com/casbin/casbin/v2/model"
+
+	xormadapter "github.com/casbin/xorm-adapter/v2"
+	_ "github.com/go-sql-driver/mysql"
+)
+
+func main() {
+	// Initialize a Xorm adapter with MySQL database.
+	sqlAdapter, err := xormadapter.NewAdapter("mysql", "admin:admin@tcp(127.0.0.1:3306)/")
+	if err != nil {
+		log.Fatal("error creating the casbin adapter for mysql: ", err.Error())
+	}
+
+	m, err := model.NewModelFromFile("model.conf")
+	if err != nil {
+		log.Fatal("can not creat the model from the file: ", err.Error())
+	}
+
+	e, err := casbin.NewEnforcer(m, sqlAdapter)
+	if err != nil {
+		log.Fatal("can no create the enforcer in casbin: ", err.Error())
+	}
+	// ...
+}
+```
+
+# See More
+
+- [Access-Control-Models](../Access-Control-Models.md)
