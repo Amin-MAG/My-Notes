@@ -516,6 +516,8 @@ Reference Types:
 - [Close Chan](Golang/Closed-Chan-Golang.md)
 - [Go Generate](Golang/Go-Generate.md)
 - [Go C](Golang/Go-C.md)
+- [Using Casbian for Authorization](Golang/Go-Casbin.md)
+- [Go Arena](Golang/Go-Arena.md)
 
 # Libraries
 
