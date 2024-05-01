@@ -53,3 +53,38 @@ e = some(where (p.eft == allow))
 [matchers]  
 m = r.sub == p.sub && r.obj == p.obj && r.act == p.act
 ```
+
+![](Attachments/Access-Control-Models/image-20240507230946818.png)
+
+## Non-Discretionary Access Control 
+
+This model enforces strict access control rules defined by a central authority. Users and subjects are assigned specific access permissions based on predefined policies, and they have no control over granting or revoking access rights. Authorization is based on the subject's identity, object classification, and centrally defined rules. 
+
+One of the Non-Discretionary Access Control models is RBAC.
+
+### RBAC
+
+RBAC stands for Role-Based Access Control. In RBAC, a user is assigned a role for a resource, and a role can contain arbitrary actions. The request then checks if the user has the permission to perform the action on the resource.
+
+Here is a simple RBAC Model in [Go-Casbin](Golang/Go-Casbin.md) Format:
+
+```conf
+[request_definition]
+r = sub, act, obj
+
+[policy_definition]
+p = sub, act, obj
+
+[role_definition]
+g = _, _
+g2 = _, _
+
+[policy_effect]
+e = some(where (p.eft == allow))
+
+[matchers]
+m = r.sub == p.sub && g(p.act, r.act) && r.obj == p.obj
+```
+
+![](Attachments/Access-Control-Models/image-20240507230927557.png)
+
