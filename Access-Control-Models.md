@@ -88,3 +88,15 @@ m = r.sub == p.sub && g(p.act, r.act) && r.obj == p.obj
 
 ![](Attachments/Access-Control-Models/image-20240507230927557.png)
 
+### Hierarchical RBAC
+
+
+## Dynamic Access Control
+
+This model makes access decisions based on a wide range of contextual attributes, such as the user's identity, role, location, time of access, environmental conditions, and risk factors. Access rules and policies can be dynamically adjusted based on changing circumstances or risk levels. Authorization is evaluated in real-time based on various attributes and policies, rather than predefined rules or owner-granted permissions.
+
+One of the Dynamic Access Control models is ABAC.
+
+# See More
+
+- [Go-Casbin](Golang/Go-Casbin.md)
