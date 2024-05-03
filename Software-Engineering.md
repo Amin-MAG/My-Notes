@@ -79,6 +79,8 @@ Such a rule traditionally consisted of three parts:
 - [Game](Game.md)
 - [Telecommunication](Telecommunication.md)
 - [Data Engineering](Data-Engineering.md)
+- [Blockchain](Blockchain.md)
+- [Concurrency](Concurrency.md)
 
 # References
 
