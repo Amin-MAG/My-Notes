@@ -66,3 +66,84 @@ func TestWithRedis(t *testing.T) {
 	// ...
 }
 ```
+
+## Using Modules
+
+There are several modules for working with useful containers such as databases, message brokers, etc. For instance, In case that you need to create a test PostgreSQL container,
+
+```go
+package vclouddb
+
+import (
+	"context"
+	"testing"
+	"time"
+
+	"github.com/stretchr/testify/assert"
+	"github.com/testcontainers/testcontainers-go"
+	"github.com/testcontainers/testcontainers-go/modules/postgres"
+	"github.com/testcontainers/testcontainers-go/wait"
+)
+
+const (
+	dbName     = "testdb"
+	dbUser     = "testuer"
+	dbPassword = "testpass"
+)
+
+func TestAddUser(t *testing.T) {
+	ctx := context.Background()
+
+	// Create the test container
+	postgresContainer, err := postgres.RunContainer(ctx,
+		testcontainers.WithImage("docker.io/postgres:16-alpine"),
+		postgres.WithDatabase(dbName),
+		postgres.WithUsername(dbUser),
+		postgres.WithPassword(dbPassword),
+		testcontainers.WithWaitStrategy(
+			wait.ForLog("database system is ready to accept connections").
+				WithOccurrence(2).
+				WithStartupTimeout(5*time.Second),
+		),
+	)
+	assert.NoError(t, err)
+
+	// Clean up the container
+	t.Cleanup(func() {
+		err := postgresContainer.Terminate(ctx)
+		assert.NoError(t, err)
+	})
+
+	uri, err := postgresContainer.ConnectionString(ctx)
+	assert.NoError(t, err)
+
+	db, err := ConnectWithURI(uri)
+	assert.NoError(t, err, "can not connect to the database", err)
+
+	phoneNumber := "981727375662"
+	email := "test@gmail.com"
+	actualUser := User{
+		Username:    "test",
+		Email:       &email,
+		Password:    "123123qweqwe",
+		PhoneNumber: &phoneNumber,
+		FirstName:   "test first name",
+		LastName:    "test last name",
+	}
+
+	u, err := db.AddUser(actualUser)
+	assert.NotNil(t, u)
+	assert.NoError(t, err)
+	assert.Equal(t, u.Username, actualUser.Username)
+	assert.Equal(t, u.Email, actualUser.Email)
+	assert.Equal(t, u.PhoneNumber, actualUser.PhoneNumber)
+	assert.Equal(t, u.FirstName, actualUser.FirstName)
+	assert.Equal(t, u.LastName, actualUser.LastName)
+	assert.NotEqual(t, u.Password, actualUser.Password)
+	assert.NotEmpty(t, u.UUID)
+
+	newUser, err := db.AddUser(actualUser)
+	assert.Nil(t, newUser)
+	assert.Error(t, err)
+}
+```
