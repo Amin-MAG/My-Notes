@@ -147,3 +147,16 @@ func TestAddUser(t *testing.T) {
 	assert.Error(t, err)
 }
 ```
+
+## Container per Unit Test
+
+Creating a single database container and running all tests against it has its advantages:  
+
+1. Resource Efficiency: Running tests against a single database container can be more resource-efficient, as you only need to start and tear down one container for all tests.
+2. Consistency: All tests share the same database state, ensuring consistency across test runs.
+3. Simplicity: Managing one database container simplifies setup and teardown code in your tests.
+
+However, there are also benefits to creating a container per test:  
+
+1. Isolation: Each test runs against its own isolated database instance, preventing interference between tests. This can be particularly useful if your tests modify the database state.
+2. Concurrency: As you mentioned, creating a container per test allows you to run tests concurrently, potentially reducing test execution time, especially if your test suite is large.
