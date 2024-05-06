@@ -46,9 +46,25 @@ There are two libraries for communicating to Kafka in Go
 
 It serves as a highly reliable and scalable message queue.
 
-## Activity Tracking
+## Data streaming for Recommendation (Activity Tracking) 
 
 Kafka is ideal for ingesting and storing real-time events like clicks, views, and purchases from high traffic websites.
+
+It processes user click streams and aggregates data lake for deep analysis. [Flink](Flink.md) can be used with Kafka to perform real-time analytics and machine learning on the streaming data.
+
+## Change Data Capture (CDC)
+
+Imagine the challenge of keeping data in sync across multiple databases and applications. Kafka comes to the rescue by capturing changes made to source databases, such as transaction logs, in real time.
+
+With the help of [ElasticSearch](ElasticSearch.md) and [Redis](Redis.md), Kafka propagates these changes to target system reliably.
+
+CDC ensures **Data Consistency** and **Data Synchronization**. It reduces **Discrepancies** and enables **Real-time Data Integration**.
+
+## System Migration
+
+Upgrading or Migrating systems can be a daunting task. Kafka acts as a data bridge between the old and new versions of the services during system migration.
+
+Kafka ensures data consistency and availability throughout the migration process by replicating data between the old and new version of each service. This allows for a seamless transition without any data loss or disruption to the overall system.
 
 ## Gathering Data
 
@@ -56,15 +72,19 @@ Kafka can consolidate disparate streams into unified real-time pipelines for ana
 
 ## Microservice Architecture
 
-Kafka can be used in multiple patterns in microsevice architectures. It can serves as a real-time data bus that allows different services to communicate to each other.
+Kafka can be used in multiple patterns in microservice architectures. It can serves as a real-time data bus that allows different services to communicate to each other.
 
-## Monitoring and Obervability
+## Monitoring, Alerting, and Obervability
 
-Kafka integrated with ELK stack can collect metrics, logs, and network data in real-time that can be aggregated and analyze to monitor the overall system health and performance.
+Kafka integrated with ELK stack can collect metrics, logs, and network data in real-time that can be aggregated and analyze to monitor the overall system health and performance. [Flink](Flink.md) Can be used to analyze real-time data for alerting.
+ 
+## Log Processing and Analysis
+
+Kafka's ability to handle massive volumes of log data makes it an ideal choice for this use case. Kafka integrates seamlessly with the ELK Stack providing powerful log analysis and visualization capabilities.
 
 ## Big Data
 
-Since it use a distributed architecture it can handle massive volumes of real-time data streams.
+ Since it use a distributed architecture it can handle massive volumes of real-time data streams. 
 
 # References
 
