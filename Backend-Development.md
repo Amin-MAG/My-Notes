@@ -105,6 +105,61 @@ By compressing request and response's payload, you can reduce the amount of data
 
 By asynchronous sending logs to another service or saving them in files, you can enhance the performance of a service with a high throughput. In this case, there is a chance that you loose some of your logs when the service crashes. 
 
+
+# Top Tips for API Security
+
+## HTTPS
+
+Use HTTPS for having encrypted connection between client and server. It prevents Eavesdropping, Man-in-the-Middle, and other security threats.
+
+## OAuth2
+
+It is a way for authenticating the user by a third-party software or account. Since we do not keep track of credentials of the user, it is more safer.
+
+## WebAuthn or Web Authentication
+
+It uses methods that make it much harder for attackers to perform phishing or credential stuffing. It usually uses Facial Recognition or Fingerprints for authenticating.
+
+## API Keys
+
+API Keys are a common way for authenticating and authorizing service to service communications.
+
+Having a Single API key is not a good practice. Instead it is much better to use Leveled API Keys having various access levels.
+
+## Authorization
+
+Authenticating and Authorizing is different. Authorizing is about what actions each subject (for instance, each user) can perform on a specific resource. There are couple of different [Access Control Models](Access-Control-Models.md) that can be used for implementing the Authorization system.
+
+## Rate Limiting
+
+It is about controlling how many request each client can perform during a specific period of time. Rate Limiting help us protect our APIs from being overwhelmed by malicious actors.
+
+Rate Limiting can be based on different factors such as IP address, user ID, or API Key. It is possible to have different rate limits on different types of resources.
+
+## API Versioning
+
+Implementing API Versioning is a best practice that allow us to evolve the API over time while maintaining backward compatibility.
+
+## Allow Listing
+
+It is a mechanism that explicitly allow access to a list of trusted IP Addresses, User IDs, or API Keys. Allow Listing follows the principle of deny all. 
+
+## OWASP
+
+Open Web Application Security Project provides valuable resources and guidelines for web application security. 
+
+## [API-Gateway](API-Gateway.md)
+
+API Gateway is an access entry point for clients that sits between clients and backend services. It provides a centralized layer for enforcing security policies, rate limiting, authentication, etc. They can also provide traffic management, caching, logging, monitoring, etc .
+
+## Error Handling
+
+Proper Error handling is crucial for API Security and User Experience. 
+
+## Input Validation
+
+Implement robust input validation for all data received from clients. It can prevent attacks such as SQL Injection, XSS (Cross-Site Scripting), etc. The input validation should be done in both client and server sides.
+
 # Resource
 
 - [What happens when you type a URL into your browser?](https://www.youtube.com/watch?v=AlkDbnbv7dk)
