@@ -1,5 +1,21 @@
 # Golang
 
+## Reference Types vs Value Types
+
+Value Types:
+- `int`
+- `float`
+- `string`
+- `bool`
+- `struct`
+
+Reference Types:
+- `slice`
+- `channel`
+- `map`
+- `pointer`
+- `function`
+
 ## To Assembly
 
 To see the assembly code. 
@@ -91,7 +107,15 @@ func changeThePointer(s *string) {
 
 ## Context
 
-The main purpose of context is cancelation propagation. It also can pass values.
+The `context` package in Go provides a way to manage and propagate cancellation signals, deadlines, and other request-scoped values across API boundaries and between goroutines.
+
+1. **Cancellation**: Contexts can be used to signal cancellation of operations
+2. **Deadlines**: Contexts can have associated deadlines, which represent the maximum amount of time allowed for an operation to complete.
+3. **Request-Scoped Values**: Contexts can carry request-scoped values, such as authentication tokens, request IDs, and user information, across API boundaries and goroutines.
+4. **Propagation**: Contexts can be passed down through the call stack to child functions and goroutines using the `WithContext` method. This allows functions and goroutines to inherit cancellation signals, deadlines, and request-scoped values from their parent context.
+5. **Concurrent Safety**: Contexts are designed to be safe for concurrent use by multiple goroutines.
+
+Generally, The main purpose of context is cancelation propagation. It also can pass values.
 
 ```go
 type Context interface {
@@ -114,6 +138,47 @@ ctx, cancel := context.WithDeadline(ctx, time.Now().Add(time.Second))
 
 // To receive the data
 c := <- ctx.Done()
+```
+
+Here is an example showing you can use context and cancelation within different goroutines
+
+```go
+func main() {
+	// Create a background context as the parent context
+	parentCtx := context.Background()
+
+	// Create a context with cancellation
+	cancelCtx, cancel := context.WithCancel(parentCtx)
+
+	// Simulate a cancellation after 2 seconds
+	go func() {
+		time.Sleep(2 * time.Second)
+		cancel()
+	}()
+
+	// Create a context with timeout
+	timeoutCtx, _ := context.WithTimeout(parentCtx, 3*time.Second)
+
+	// Create a context with deadline
+	deadlineCtx, _ := context.WithDeadline(parentCtx, time.Now().Add(5*time.Second))
+
+	// Perform operations with different contexts
+	go performOperation(cancelCtx, "Cancel Context")
+	go performOperation(timeoutCtx, "Timeout Context")
+	go performOperation(deadlineCtx, "Deadline Context")
+
+	time.Sleep(time.Hour)
+}
+
+func performOperation(ctx context.Context, name string) {
+	// Simulate a long-running operation
+	select {
+	case <-time.After(4 * time.Second):
+		fmt.Println(name, ": Operation completed successfully")
+	case <-ctx.Done():
+		fmt.Println(name, ": Operation canceled or timed out:", ctx.Err())
+	}
+}
 ```
 
 ## Read from console
@@ -408,6 +473,12 @@ for i := 0; i < 5; i++ {
 }
 ```
 
+Here are some purposes of having `defer`:
+
+1. **Resource Cleanup**: It's commonly used for cleanup tasks such as closing files, releasing locks, or closing network connections. By deferring these actions, you ensure they are performed regardless of how the function exits.
+2. **Execution Control**: It can be used to control the execution flow within a function, ensuring that certain actions are performed in a predictable order.
+3. **Error Handling**: `defer` can also be used for error handling. For example, you might defer a function call that checks for and handles errors, ensuring that it's always executed before the function returns.
+
 ## `new` VS `make`
 
 The `make` function is used to create slices, maps, and channels. These data structures need to be initialized with specific internal data structures, and `make` ensures that the underlying data is properly initialized and ready for use. It returns a reference to the initialized data structure.
@@ -518,9 +589,4 @@ Reference Types:
 - [Go C](Golang/Go-C.md)
 - [Using Casbian for Authorization](Golang/Go-Casbin.md)
 - [Go Arena](Golang/Go-Arena.md)
-
-# Libraries
-
-Progress bar:
-
-[https://github.com/cheggaaa/pb](https://github.com/cheggaaa/pb)
+- [Garbage Collection](Golang/Go-Garbage-Collection.md)
