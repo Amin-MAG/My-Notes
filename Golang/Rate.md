@@ -1,6 +1,46 @@
 # Rate
 
-## By IP address
+You can limit the amount of request by `time/rate` package. Here is a simple example:
+
+```go
+func main() {
+	// Create a limiter with a rate limit of 1 event per second
+	limiter := rate.NewLimiter(1, 1)
+
+	// Simulate a burst of 5 events
+	for i := 0; i < 10; i++ {
+		// Wait for the limiter to allow an event
+		if err := limiter.Wait(context.TODO()); err != nil {
+			fmt.Printf("Error: %v\n", err)
+			return
+		}
+		// Perform some operation (e.g., handle request)
+		fmt.Println("Event processed")
+	}
+}
+```
+
+Maybe it is better to show an error instead of waiting for the rate limiter:
+
+```go
+func main() {
+	// Create a limiter with a rate limit of 1 event per second
+	limiter := rate.NewLimiter(1, 1)
+
+	// Simulate a burst of 5 events
+	for i := 0; i < 10; i++ {
+		// Reject the requests
+		if !limiter.Allow() {
+			fmt.Println("can not this process time:", i*400)
+		} else {
+			fmt.Println("Event processed")
+		}
+		time.Sleep(400 * time.Millisecond)
+	}
+}
+```
+
+## Rate Limit Middleware by IP Address
 
 To set a limiter by IP address.
 
