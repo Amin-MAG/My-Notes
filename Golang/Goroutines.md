@@ -1,8 +1,34 @@
 # Goroutines
 
-## Channels
 
-Very simple code for channels
+Goroutines and threads are both concurrency mechanisms used in programming, but they operate differently, especially in the context of languages like Go.
+
+## Goroutines VS Threads
+
+One important question is the difference between Goroutines and Threads.
+
+|                                                                               Goroutines                                                                               |                                                                 Threads                                                                 |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: |
+|                                              Goroutines are **lightweight user-space** threads managed by the Go runtime.                                              |                               Threads are the **smallest unit of execution** within an operating system.                                |
+|                                                        They are designed to be **cheap** to create and manage.                                                         |                        Threads are managed by the OS kernel and are more **heavyweight** compared to goroutines.                        |
+| Goroutines are **multiplexed onto a smaller number of OS threads**. This means that thousands or even millions of goroutines can run concurrently on a few OS threads. |                           Each thread **has its own stack and resources** allocated by the operating system.                            |
+|       Communication between goroutines is typically done using **channels**, which are built-in constructs for safely passing data between concurrent processes.       | Threads can be created and managed directly using **threading libraries** provided by the programming language or the operating system. |
+|                                 Goroutines are part of the Go language's concurrency model and are **specifically optimized** for it.                                  |     Threads are generally **more expensive to create and manage** compared to goroutines due to their **reliance on OS resources**.     |
+
+## Trade-offs of using Goroutines
+
+There are a couple of trade-offs in using goroutine that you should know
+
+| Advantages        | Disadvantages        |
+| ----------------- | -------------------- |
+| Concurrency<br>   | Complexity           |
+| Lightweight<br>   | Resource Management  |
+| Simple Syntax<br> | Performance Overhead |
+| Composition       |                      |
+
+# Channels
+  
+In Go, channels are a powerful construct for facilitating communication and synchronization between goroutines, enabling safe concurrent operations. This is a simple code using channels:
 
 ```go
 package main
@@ -65,7 +91,7 @@ time.Sleep(time.Second * 15)
 fmt.Println(<-c)
 ```
 
-It should be in another goroutine although.
+Although, It should be in another goroutine.
 
 ```go
 // This causes error
@@ -77,7 +103,7 @@ time.Sleep(time.Second * 4)
 fmt.Println(<-c)
 ```
 
-### Using Mutex and Channels simultaneously
+## Using Mutex and Channels simultaneously
 
 It's tricky and you should be careful when you are using the channels and mutex at the same time. If you want to send a new value through the channel, first the mutex should be unlocked. Here is an example of correct usage,
 
@@ -167,9 +193,7 @@ func main() {
 
 ## Buffer channel
 
-You can specify how much you want to buffer for your channel.
-
-In this example, We can continue to execute the code by having `res <- 3` in our buffer. By default, there is no buffer. It usually means we block the sender code, and it should wait for the receiver to receive it.
+You can specify how much you want to buffer for your channel. In this example, We can continue to execute the code by having `res <- 3` in our buffer. By default, there is no buffer. It usually means we block the sender code, and it should wait for the receiver to receive it.
 
 ```go
 c := make(chan int, 1)  
@@ -245,14 +269,6 @@ Take care of closing the channel. Remember that `close(chan)` is not something t
 
 ```go
 func main() {    
-   queue := make(chan string, 2)  
-   queue <- "one"  
-   queue <- "two"  
-   close(queue)  
-  
-   for elem := range queue {  
-      fmt.Println(elem)  
-   }
 }
 ```
 
@@ -275,9 +291,7 @@ func main() {
 }
 ```
 
-## Common errors
 
-### Deadlock
 
 When we are waiting to receive data from a channel, and at one point, we discover that there is no goroutine!
 
@@ -298,43 +312,4 @@ func main() {
 }
 ```
 
-## Mutex
 
-# Snippets
-
-A pattern that you can execute recursive calls and gather the results back.
-
-```go
-package main
-
-import "fmt"
-
-func Hack(start string) []string {
-	finalResult := []string{}
-
-	tempResult := Retrieve(start)
-	fmt.Println(tempResult)
-	finalResult = append(finalResult, tempResult...)
-
-	c := make(chan []string)
-	lenOfItems := len(tempResult)
-	for _, v := range tempResult {
-		go func(v string, c chan []string) {
-			subPath := Hack(v)
-			c <- subPath
-		}(v, c)
-	}
-
-	counter := 0
-	for {
-		if counter == lenOfItems {
-			break
-		}
-		subPath := <-c
-		counter++
-		finalResult = append(finalResult, subPath...)
-	}
-
-	return finalResult
-}
-```
