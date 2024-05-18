@@ -536,25 +536,44 @@ In summary, `make` is used for creating and initializing slices, maps, and chann
 
 As a limiting case, if a composite literal contains no fields at all, it creates a zero value for the type. The expressions `new(File)` and `&File{}` are equivalent.
 
-## Slice vs Array
+## Array vs Slice
 
 Arrays have **primitive data structure** and a **fixed size**. We rarely use arrays in Go. On the other hand, Slices can **grow and shrink**. Slices are a fantasy implementation of Arrays in Go.
 
-## Reference Types vs Value Types
+|                                                 Array                                                 |                                                                                                   Slice                                                                                                    |
+|:-----------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|             Arrays in Go are fixed-size sequences of elements that are of the same type.              |                         Slices are dynamic data structures that provide a more flexible way to work with sequences of data compared to arrays. Slices are built on top of arrays.                          |
+| Elements of an array are stored sequentially in memory, making access to elements by index efficient. | Slices have a length and a capacity. The length represents the number of elements in the slice, while the capacity represents the maximum number of elements that the slice can hold without reallocation. |
+|                          Arrays are declared using the `[size]type` syntax.                           |                                                                               Slices are declared using the `[]type` syntax.                                                                               |
 
-Value Types:
-- `int`
-- `float`
-- `string`
-- `bool`
-- `struct`
+### Arrays    
 
-Reference Types:
-- `slice`
-- `channel`
-- `map`
-- `pointer`
-- `function`
+```go
+var arr [5]int // Array of 5 integers
+```
+
+### Slices
+
+```go
+var slice []int // Slice of integers
+
+// Using make() function 
+slice := make([]int, 5, 10) 
+
+// Slicing an array 
+arr := [5]int{1, 2, 3, 4, 5} 
+
+// Slice of arr from index 1 (inclusive) to index 4 (exclusive)
+slice := arr[1:4] 
+```    
+
+## `os.Exit` vs `panic()`
+
+`panic` and `os.Exit` are both mechanisms for terminating a Go program, but they serve different purposes and have different effects.
+
+- **Stack Unwinding and Deferred Functions**: `panic` unwinds the stack and executes deferred functions, while `os.Exit` does not.
+- **Exit Code**: `os.Exit` allows specifying an exit code, which can be used by other programs or scripts to determine the outcome of the terminated program.
+- **Recoverability**: `panic` allows recovering from panics by using `recover()`, while `os.Exit` does not provide a mechanism for recovery.
 
 # Topics
 
