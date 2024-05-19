@@ -292,6 +292,87 @@ func main() {
 ```
 
 
+# Mutex
+
+Mutex helps in preventing data races and ensuring safe concurrent access to shared data. There are two kinds of Mutexes: `sync.Mutex` and `sync.RWMutex`.
+
+Both `sync.Mutex` and `sync.RWMutex` are synchronization primitives provided by the Go standard library (`sync` package) to control access to shared resources in a concurrent environment. Here are the differences
+
+|                                                                                             `sync.Mutex`                                                                                             |                                                                                                                  `sync.RWMutex`                                                                                                                   |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `sync.Mutex` is a mutual exclusion lock. It allows only one goroutine to acquire the lock at a time, ensuring that only one goroutine can access the critical section of code protected by the lock. |                                             `sync.RWMutex` is a reader-writer lock. It allows multiple readers to acquire the lock simultaneously or only one writer to acquire the lock exclusively.                                             |
+|                      When a goroutine acquires the lock using `Lock()` method, it becomes the owner of the lock until it explicitly releases the lock using `Unlock()` method.                       | Multiple goroutines can acquire the lock in read mode (`RLock()`), allowing concurrent read access to the shared resource. However, only one goroutine can acquire the lock in write mode (`Lock()`), preventing concurrent reads and writes.<br> |
+|                         If another goroutine attempts to acquire the lock while it's already locked, it will be blocked until the lock is released by the owning goroutine.                          |                                                      When a goroutine acquires the lock in write mode, it blocks all other goroutines (readers and writers) until it releases the lock.<br>                                                       |
+|                           `Mutex` is suitable for scenarios where exclusive access to a resource is required, and there is a need to prevent concurrent reads and writes.                            |                                                             `RWMutex` is suitable for scenarios where reads are frequent and writes are infrequent, allowing for better parallelism.                                                              |
+
+## `sync.Mutex`
+
+```go
+var (
+	counter int
+	mutex   sync.Mutex
+)
+
+func increment() {
+	mutex.Lock()
+	defer mutex.Unlock()
+	counter++
+}
+
+func main() {
+	wg := sync.WaitGroup{}
+	wg.Add(10)
+
+	for i := 0; i < 10; i++ {
+		go func() {
+			increment()
+			wg.Done()
+		}()
+	}
+
+	wg.Wait()
+	fmt.Println("Counter:", counter) // Output: Counter: 10
+}
+```
+
+## `sync.RWMutex`
+
+```go
+var (
+	data    map[string]string
+	rwMutex sync.RWMutex
+)
+
+func readData(key string) string {
+	rwMutex.RLock()
+	defer rwMutex.RUnlock()
+	return data[key]
+}
+
+func writeData(key, value string) {
+	rwMutex.Lock()
+	defer rwMutex.Unlock()
+	data[key] = value
+}
+
+func main() {
+	data = make(map[string]string)
+
+	// Writing data
+	go writeData("1", "one")
+	go writeData("2", "two")
+	go writeData("3", "three")
+
+	// Reading data
+	go fmt.Println("Read:", readData("1"))
+	go fmt.Println("Read:", readData("2"))
+	go fmt.Println("Read:", readData("3"))
+
+	time.Sleep(time.Second)
+	fmt.Println("Data:", data)
+}
+```
+
 
 When we are waiting to receive data from a channel, and at one point, we discover that there is no goroutine!
 
