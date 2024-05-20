@@ -46,7 +46,7 @@ func main() {
 }
 ```
 
-Another Simple example to sum 2 number
+Here is another example to sum 2 number
 
 ```go
 package main
@@ -73,21 +73,31 @@ func main() {
 }
 ```
 
-### Channels will wait until receive a value
+Channels in GoLang can be categorized into two main types based on their behavior: Unbuffered and Buffered channels
 
-The first point is that when we send something through the pipe it does not matter how much it takes to receive that data. It even does not matter that we receive it or not.
+|                                                     Unbuffered Channel                                                     |                                                           Buffered Channel                                                            |
+| :------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------: |
+|                                   Unbuffered channels have no capacity for storing data                                    |                                       Buffered channels have a fixed capacity for storing data                                        |
+|    When a goroutine sends data to an unbuffered channel, it blocks until another goroutine is ready to receive the data    |                                Sending data to a buffered channel blocks only when the buffer is full                                 |
+|       This synchronous behavior ensures that the sender and receiver are synchronized at each point of communication       | Buffered channels allow a certain degree of decoupling between the sender and receiver, as they don't have to synchronize immediately |
+
+Additionally, channels can be typed based on the type of data they can transmit.
+
+## Channels will wait until receive a value
+
+When sending data through a channel in Go, it doesn't matter how long it takes for the receiver to receive the data. Although, If you do not receive the data from channel, the channel will be blocked and can not send any new data.
 
 ```go
-c := make(chan int)  
-  
-go func(res chan int) {  
-   time.Sleep(3 * time.Second)  
-   res <- 3  
-}(c)  
-  
-time.Sleep(time.Second * 15)  
-// If you remove the line bellow nothing will happen,
-// We just ignore the channel
+c := make(chan int)
+
+go func(res chan int) {
+	time.Sleep(3 * time.Second)
+	res <- 3
+}(c)
+
+time.Sleep(time.Second * 5)
+// If you remove this line below, It is just
+// going to block the channel for sending new data
 fmt.Println(<-c)
 ```
 
@@ -121,7 +131,10 @@ func NewInventory() *Inventory {
   
 func (inv *Inventory) addItem(section string, quantity int, result chan bool) {  
     // Implement the logic to add items to the inventory section  
-    // Ensure that the section does not exceed its capacity    // Use the result channel to signal whether the operation was successful    inv.mu.Lock()  
+    // Ensure that the section does not exceed its capacity    
+    // Use the result channel to signal whether the operation was
+    // successful
+    inv.mu.Lock()  
     addedSuccessfully := true  
     defer func() {  
        inv.mu.Unlock()  
@@ -139,7 +152,8 @@ func (inv *Inventory) addItem(section string, quantity int, result chan bool) {
   
 func (inv *Inventory) removeItem(section string, quantity int, result chan bool) {  
     // Implement the logic to remove items from the inventory section  
-    // Use the result channel to signal whether the operation was successful    inv.mu.Lock()  
+    // Use the result channel to signal whether the operation was successful
+    inv.mu.Lock()  
     removedSuccessfully := true  
     defer func() {  
        inv.mu.Unlock()  
@@ -269,6 +283,15 @@ Take care of closing the channel. Remember that `close(chan)` is not something t
 
 ```go
 func main() {    
+	queue := make(chan string, 2)  
+	queue <- "one"  
+	queue <- "two"  
+	close(queue)  
+	
+	// It will print the both of values
+	for elem := range queue {  
+	  fmt.Println(elem)
+	}
 }
 ```
 
@@ -375,6 +398,12 @@ func main() {
 
 
 When we are waiting to receive data from a channel, and at one point, we discover that there is no goroutine!
+
+# Common errors
+
+## Deadlock
+
+When we are waiting to receive data from a channel, and at one point, we discover that there is no goroutines.
 
 ```go
 func worker(done chan bool) {  
