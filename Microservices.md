@@ -8,6 +8,21 @@
 
 Although microservice solves certain issues, it is not a silver bullet. It has several drawbacks and when using this architecture, numerous issues must be addressed.
 
+## Best Practices
+
+### Separate Data Store
+
+### Keep the code at a similar level of Maturity
+### Separate Build for each Microservice
+### Single Responsibility
+### Deploy into Containers
+### Treat Server as Stateless
+### Domain Driven Design
+### Micro Frontend
+
+### Orchestrating Microservices
+
+
 ## Characteristics
 
 1. **Size**: A microservice should encapsulate information and functionality that can be comprehended without frequent referencing
@@ -420,10 +435,7 @@ Amazon’s “service-oriented architecture” was largely the beginning of what
 
 # References
 
-[Microservice Architecture and Design Patterns - DZone Microservices](https://dzone.com/articles/design-patterns-for-microservices)
-
-[Microservices Design Patterns | Microservices Patterns | Edureka](https://www.edureka.co/blog/microservices-design-patterns)
-
-[Service Catalogs vs Service Portfolios: What's The Difference?](https://www.bmc.com/blogs/service-catalog-vs-service-portfolio-whats-the-difference/#)
-
-[4 Examples of Microservices in Action | DreamFactory Blog](https://blog.dreamfactory.com/microservices-examples/)
+- [Microservice Architecture and Design Patterns - DZone Microservices](https://dzone.com/articles/design-patterns-for-microservices)
+- [Microservices Design Patterns | Microservices Patterns | Edureka](https://www.edureka.co/blog/microservices-design-patterns)
+- [Service Catalogs vs Service Portfolios: What's The Difference?](https://www.bmc.com/blogs/service-catalog-vs-service-portfolio-whats-the-difference/#)
+- [4 Examples of Microservices in Action | DreamFactory Blog](https://blog.dreamfactory.com/microservices-examples/)
