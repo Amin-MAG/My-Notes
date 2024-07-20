@@ -321,6 +321,16 @@ To grant privileges on a specific table to a user.
 GRANT ALL PRIVILEGES ON TABLE <TABLE_NAME> TO <USERNAME>;
 ```
 
+## Locks
+
+In locking, it doesn't mean that we can not do anything with the component. It has multiple variations and apply some restrictions.
+
+### Table Lock
+
+### Page Lock
+
+### Row Lock
+
 # See more
 
 [Snippet](PostgreSQL%20Snippet.md)

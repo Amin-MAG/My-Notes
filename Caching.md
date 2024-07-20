@@ -26,6 +26,10 @@ The CDN first looks at its cache to see whether the request is available or not.
 
 Some kinds of load balancers cache the response of request which lead to less load on the origin server and less response time for users.
 
+### Message Queues
+
+Message brokers like Kafka use disk storage for caching.
+
 ### Databases
 
 Relational, Non-Relational, and any databases, in general, have a mechanism for caching.

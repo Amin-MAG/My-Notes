@@ -2,6 +2,7 @@
 # ☁️ Cloud
 
 - [K8s](Kubernetes.md)
+- [FaaS](FaaS.md)
 - [OpenShift](OpenShift.md)
 - [ServiceMesh](Service-Mesh.md)
 - [Cloud-Computing](Cloud-Computing.md)
