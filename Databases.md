@@ -8,6 +8,7 @@
 
 ## Wide-Column
 
+- [[DynamoDB]]
 - Cassandra
 - Hbase
 
