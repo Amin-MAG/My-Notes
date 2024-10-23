@@ -26,3 +26,35 @@ DynamoDB is a fully-managed, NoSQL database provided by Amazon Web Services.
 - Hyper Scale Applications
 - Hyper Ephemeral Compute
 - Online Transactional Processing Applications (ONTP)
+
+# Core Concepts
+
+## Basic Vocabulary
+
+- **Table**: It is kind of similar with tables in relational databases with some differences.
+- **Item**: Each record is called Item, so it is similar to a row in a relational database.
+- **Primary Key**: For each item, we need a primary key that uniquely identify that item.
+- **Attribute**: The other columns of an Item is called attributes. Keep in mind that with dynamoDB, it is not necessary to define all of the attributes. You just need to define the primary key for table.
+
+> There are multiple types for each attribute: strings, numbers, and complex types like list, maps, and sets.
+
+## Primary Keys
+
+- **Simple Primary Keys (Partition Key)**
+- **Composite Primary Keys (Partition Key + Sort Key)**: The combination of these two item should be unique.
+
+## Secondary Index
+
+You can flip the partition key and sort key and query based on the sort key if you have defined a secondary index. It will enable additional access pattern. 
+
+## Item Collection
+
+All items that share a particular partition key are set to be in an item collection. DynamoDB uses this item collection for partitioning and scaling. They are also important in case that you wanted to define a relationship.
+
+## DynamoDB Stream
+
+You can have multiple clients subscribing to the stream and they will be notified about creating, deleting, or updating items from DynamoDB.
+
+- **Aggregation**: Clients can consume that data to do some aggregations and write it back to the table.
+- **Analytics**: It is possible to export it to an analytics system.
+- **Microservices**
