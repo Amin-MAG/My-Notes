@@ -401,6 +401,15 @@ func main() {
 
 The `sync.Pool` package in Go provides a simple mechanism for managing a pool of temporary objects, such as frequently allocated but short-lived objects like buffers or goroutines. The primary purpose of `sync.Pool` is to reduce memory allocation overhead and improve performance by reusing objects from a pool instead of allocating new ones each time they are needed.
 
+> `sync.Pool` adopts a strategy of "**allocate on demand, recycle after use**".
+> 
+
+## Core Problem Solved
+
+- **Object creation overhead**: Initialization of complex objects may involve time-consuming operations such as memory allocation and resource loading
+- **GC pressure**: A large number of temporary objects increases the burden on the garbage collector
+- **Concurrency safety**: Traditional object pools require manual implementation of locking mechanisms, while `sync.Pool` has built-in concurrency safety support
+
 ## Key Features
 
 Here are some key features and purposes of the `sync.Pool` package:
@@ -457,11 +466,72 @@ pool := sync.Pool{
 
 // Get a connection from the pool
 dbConn := pool.Get().(*DatabaseConnection)
+// Reset the object after using it, for instance, for a buffer
+buf.Data = buf.Data[:0]
+// And put it back to the pool to avoid creation
+pool.Put(dbConn)
 ```
 
 We can use database connections in the pool in different goroutines. If there is no free object in the pool, it will create a new connection using the `New()` function.
 
-# Common errors
+Here is a better example showing how you can write more optimized code:
+
+```go
+package main
+
+import (
+    "bytes"
+    "fmt"
+    "sync"
+    "time"
+)
+
+var pool = sync.Pool{
+    New: func() interface{} {
+        return &bytes.Buffer{}
+    },
+}
+
+// Without object pool
+func withoutPool(count int) time.Duration {
+    start := time.Now()
+    for i := 0; i < count; i++ {
+        buf := &bytes.Buffer{}
+        buf.WriteString("hello world")
+        // No need to Put, objects are directly recycled by GC
+    }
+    return time.Since(start)
+}
+
+// With object pool
+func withPool(count int) time.Duration {
+    start := time.Now()
+    for i := 0; i < count; i++ {
+        buf := pool.Get().(*bytes.Buffer)
+        buf.WriteString("hello world")
+        buf.Reset() // Reset the state
+        pool.Put(buf)
+    }
+    return time.Since(start)
+}
+
+func main() {
+    count := 1000000
+    fmt.Printf("Without pool: %v\n", withoutPool(count))
+    fmt.Printf("With pool: %v\n", withPool(count))
+}
+```
+
+## Correct Usage
+
+- **Object pool initialization**: It is recommended to initialize at program startup
+- **State management**: Ensure that returned objects are in a clean state
+- **Concurrency safety**: No additional locking is needed, `sync.Pool` is thread-safe itself
+- **Type matching**: Correct type conversion is required when getting objects
+
+# Common Pitfalls
+
+There are couple of pitfalls in using Goroutines
 
 ## Deadlock
 
@@ -485,3 +555,6 @@ func main() {
 ```
 
 
+# Reference
+
+- [Boost Go Performance Instantly with Sync.Pool Explained](https://leapcell.io/blog/boost-go-performance-sync-pool?ref=dailydev)
