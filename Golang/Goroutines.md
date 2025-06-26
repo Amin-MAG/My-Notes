@@ -401,7 +401,7 @@ func main() {
 
 The `sync.Pool` package in Go provides a simple mechanism for managing a pool of temporary objects, such as frequently allocated but short-lived objects like buffers or goroutines. The primary purpose of `sync.Pool` is to reduce memory allocation overhead and improve performance by reusing objects from a pool instead of allocating new ones each time they are needed.
 
-## Purpose
+## Key Features
 
 Here are some key features and purposes of the `sync.Pool` package:
 
@@ -436,6 +436,9 @@ Here are some key features and purposes of the `sync.Pool` package:
 
 In this example, we'll create a pool of database connections. This scenario simulates a common use case where multiple goroutines need to interact with a database, and we want to reuse database connections to avoid the overhead of creating new connections each time.
 
+> This might not be a good example, since database connections are not short-term objects. Use pool functionalities inside the database packages for production.
+>  
+
 ```go
 // Create a new sync.Pool
 pool := sync.Pool{
@@ -451,6 +454,9 @@ pool := sync.Pool{
 		}
 	},
 }
+
+// Get a connection from the pool
+dbConn := pool.Get().(*DatabaseConnection)
 ```
 
 We can use database connections in the pool in different goroutines. If there is no free object in the pool, it will create a new connection using the `New()` function.
