@@ -27,3 +27,4 @@ Most of the documents are related to computer science.
 	- [Network](Network.md)
 - [Physics](Physics.md)
 - [English](English.md)
+- [French](French.md)
