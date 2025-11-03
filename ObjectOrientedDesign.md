@@ -1,3 +1,8 @@
+---
+title: ObjectOrientedDesign
+draft: true
+tags: []
+---
 # OOD
 
 It is going to focus on individual concepts and it’s not just generally speaking.

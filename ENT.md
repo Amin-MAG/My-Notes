@@ -1,3 +1,8 @@
+---
+title: ENT
+draft: true
+tags: []
+---
 # ENT Database
 
 The **ent** is a simple & powerful entity framework for Go.

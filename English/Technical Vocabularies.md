@@ -1,3 +1,8 @@
+---
+title: Technical Vocabularies
+draft: true
+tags: []
+---
 # Technical
 
 - However, a coroutine is not bound to any particular thread

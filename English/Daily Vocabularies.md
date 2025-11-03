@@ -1,3 +1,8 @@
+---
+title: Daily Vocabularies
+draft: true
+tags: []
+---
 # Daily
 
 # Expressions

@@ -1,3 +1,8 @@
+---
+title: gzip
+draft: true
+tags: []
+---
 # Gzip
 
 Using `gzip` compression to upload and download a file.

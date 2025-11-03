@@ -1,3 +1,8 @@
+---
+title: SecurityCamera
+draft: true
+tags: []
+---
 # Security Camera
 
 ## Setup Security Camera

@@ -1,3 +1,8 @@
+---
+title: Season 08
+draft: true
+tags: []
+---
 # Season 8
 
 # E02

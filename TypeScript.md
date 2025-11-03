@@ -1,3 +1,8 @@
+---
+title: TypeScript
+draft: true
+tags: []
+---
 # TypeScript
 
 ## Make instant web server

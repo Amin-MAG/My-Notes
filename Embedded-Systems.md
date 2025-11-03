@@ -1,3 +1,8 @@
+---
+title: Embedded Systems
+draft: true
+tags: []
+---
 # Embedded Systems
 
 Embedded Systems 2022 IUST Course

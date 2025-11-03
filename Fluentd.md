@@ -1,3 +1,8 @@
+---
+title: Fluentd
+draft: true
+tags: []
+---
 # Fluentd
 
 Fluentd is something like Logstash. It receives logs from multiple sources, processes them, and in the end, it sends them to another service. It is possible to be another Fluentd, Elastic, etc.

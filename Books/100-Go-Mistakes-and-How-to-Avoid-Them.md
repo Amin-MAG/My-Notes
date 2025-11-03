@@ -1,3 +1,8 @@
+---
+title: 100 Go Mistakes and How to Avoid Them
+draft: true
+tags: []
+---
 # 100 Go Mistakes and How to Avoid Them
 
 ## #1 Unintended Variable Shadowing

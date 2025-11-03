@@ -1,3 +1,8 @@
+---
+title: Go Prometheus
+draft: true
+tags: []
+---
 # Prometheus in Go
 
 ## Common metrics

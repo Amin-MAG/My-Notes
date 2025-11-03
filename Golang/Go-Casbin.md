@@ -1,3 +1,8 @@
+---
+title: Go Casbin
+draft: true
+tags: []
+---
 # Casbin
 
 Casbin is a powerful and efficient open-source access control library for GoLang. It provides support for access control models like ACL, RBAC, ABAC, and more. With Casbin, you can easily define permissions for your application and enforce access control policies in a flexible and scalable way.

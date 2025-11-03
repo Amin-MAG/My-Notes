@@ -1,3 +1,8 @@
+---
+title: Productions ècrites
+draft: true
+tags: []
+---
 ### Vous vous présentez sur l'application Duo (nom, nationalité, âge, loisirs)
 
 Je m'appelle Amin. Je suis Iranien. J'ai vingt-cinq ans. J'aime vraiment écoute du la musique, aller au café et la randonnée.

@@ -1,3 +1,8 @@
+---
+title: GoBot
+draft: true
+tags: []
+---
 # Go Bot
 
 # Adapters

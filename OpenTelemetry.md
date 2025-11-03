@@ -1,3 +1,8 @@
+---
+title: OpenTelemetry
+draft: true
+tags: []
+---
 # Open Telemetry
 
 To add new span

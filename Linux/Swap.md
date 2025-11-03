@@ -1,3 +1,8 @@
+---
+title: Swap
+draft: true
+tags: []
+---
 # Swap
 
 The swap is like an extended memory. The kernel will page memory and then it can execute a program that needs more memory than the system has. (Although it is slow)

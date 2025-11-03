@@ -1,3 +1,8 @@
+---
+title: Rate
+draft: true
+tags: []
+---
 # Rate
 
 You can limit the amount of request by `time/rate` package. Here is a simple example:

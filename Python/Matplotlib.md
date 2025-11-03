@@ -1,3 +1,8 @@
+---
+title: Matplotlib
+draft: true
+tags: []
+---
 # Matplotlib
 
 Plot a simple diagram.

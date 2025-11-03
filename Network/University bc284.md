@@ -1,3 +1,8 @@
+---
+title: University bc284
+draft: true
+tags: []
+---
 # University
 
 ## Transfer delay

@@ -1,3 +1,8 @@
+---
+title: Hugo
+draft: true
+tags: []
+---
 # Hugo
 
 ## Basic commands

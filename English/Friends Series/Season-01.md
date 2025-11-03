@@ -1,3 +1,8 @@
+---
+title: Season 01
+draft: true
+tags: []
+---
 # Season 1
 
 # E01

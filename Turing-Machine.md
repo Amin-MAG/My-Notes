@@ -1,3 +1,8 @@
+---
+title: Turing Machine
+draft: true
+tags: []
+---
 # Turing Machine
 
 # Mathematics ➕

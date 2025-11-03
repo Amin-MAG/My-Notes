@@ -1,3 +1,8 @@
+---
+title: Sidecar Co 7f6ce
+draft: true
+tags: []
+---
 # Sidecar Container
 
 ## **Context and Problem**

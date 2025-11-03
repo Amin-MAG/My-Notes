@@ -1,3 +1,8 @@
+---
+title: Season 06
+draft: true
+tags: []
+---
 # Season 6
 
 # E01

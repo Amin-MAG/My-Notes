@@ -1,3 +1,8 @@
+---
+title: Osmosis
+draft: true
+tags: []
+---
 # Osmosis
 
 ## Extract OSM file to DB

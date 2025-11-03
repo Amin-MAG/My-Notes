@@ -1,3 +1,8 @@
+---
+title: Memory Management
+draft: true
+tags: []
+---
 # Memory Management
 
 Here is a figure for the memory of the OS

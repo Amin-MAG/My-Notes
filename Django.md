@@ -1,3 +1,8 @@
+---
+title: Django
+draft: true
+tags: []
+---
 # Django
 
 ## MVT Model

@@ -1,3 +1,8 @@
+---
+title: Cryptocurrency
+draft: true
+tags: []
+---
 # Cryptocurrency
 The most considerable trouble in digital currencies is double-spending. The initial solution is to have a central system checking these transactions. As you may consider, this system is the single point of failure!
 Bitcoin uses Blockchain. Blockchain is a kind of distributed database.

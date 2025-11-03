@@ -1,3 +1,8 @@
+---
+title: Game AI ea18a
+draft: true
+tags: []
+---
 # Game AI
 
 Game AI comes in 2 flavors.

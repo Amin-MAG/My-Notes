@@ -1,3 +1,8 @@
+---
+title: Hashcat
+draft: true
+tags: []
+---
 # Hashcat
 
 ## Basic Usage

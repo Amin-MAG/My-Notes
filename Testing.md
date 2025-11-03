@@ -1,3 +1,8 @@
+---
+title: Testing
+draft: true
+tags: []
+---
 # 🧪 Testing
 
 In this page I want to learn different kinds of testings.

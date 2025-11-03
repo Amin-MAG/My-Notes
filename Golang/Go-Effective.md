@@ -1,3 +1,8 @@
+---
+title: Go Effective
+draft: true
+tags: []
+---
 # Go Effective
 
 ## Formatting

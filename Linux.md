@@ -1,3 +1,8 @@
+---
+title: Linux
+draft: false
+tags: []
+---
 # Linux
 
 ## Directories

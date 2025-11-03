@@ -1,3 +1,8 @@
+---
+title: NLP
+draft: true
+tags: []
+---
 # Natural Language Processing
 
 IUST NLP Course 2022

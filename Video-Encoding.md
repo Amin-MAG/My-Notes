@@ -1,3 +1,8 @@
+---
+title: Video Encoding
+draft: true
+tags: []
+---
 # Video Encoding
 
 Video encoding is the process of converting digital video files into a compressed format that can be easily stored or transmitted.

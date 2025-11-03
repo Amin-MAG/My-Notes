@@ -1,3 +1,8 @@
+---
+title: Python
+draft: true
+tags: []
+---
 # Python
 
 ## Why to use Python

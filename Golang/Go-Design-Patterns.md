@@ -1,3 +1,8 @@
+---
+title: Go Design Patterns
+draft: true
+tags: []
+---
 # Go Design Patterns
 
 You might know about some of design patterns. People, when they are thinking about design patterns, suggests some implementations using Object Oriented Languages. Yep, some of the design patterns are quite useful sometimes, but what about the implementation of the exact same design patterns in languages that does not support OOP? As you might know, Go language does not support some fantasy features like Classes and inheritance. Are the traditional thinking of them still working? I am going to see 

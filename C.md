@@ -1,3 +1,8 @@
+---
+title: C
+draft: true
+tags: []
+---
 # C
 
 Hello World in C :))

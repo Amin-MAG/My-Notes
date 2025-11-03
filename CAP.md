@@ -1,3 +1,8 @@
+---
+title: CAP
+draft: true
+tags: []
+---
 # CAP Theorem
 
 CAP Theorem tells us that in any distributed data store, we can only guarantee two of these three properties.

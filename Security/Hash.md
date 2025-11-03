@@ -1,3 +1,8 @@
+---
+title: Hash
+draft: true
+tags: []
+---
 # Hash
 
 A **hash function** is any [function](https://en.wikipedia.org/wiki/Function_(mathematics) "Function (mathematics)") that can be used to map [data](https://en.wikipedia.org/wiki/Data_(computing) "Data (computing)") of arbitrary size to fixed-size values.

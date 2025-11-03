@@ -1,3 +1,8 @@
+---
+title: The Final  40ff8
+draft: true
+tags: []
+---
 # The Final Exam
 
 ### When not to use Object Oriented Paradigm?

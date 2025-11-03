@@ -1,3 +1,8 @@
+---
+title: Rust
+draft: true
+tags: []
+---
 # Rust
 
 It is a choice for systems where performance is critical. For example, game engines, databases, or Operating Systems. Rust doesn’t have a garbage collector.

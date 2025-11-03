@@ -1,3 +1,8 @@
+---
+title: Linux Commands
+draft: false
+tags: []
+---
 # Linux Commands
 
 ## Get system info

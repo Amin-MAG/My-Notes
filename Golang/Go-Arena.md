@@ -1,3 +1,8 @@
+---
+title: Go Arena
+draft: true
+tags: []
+---
 # Go Arena
 
 In Go, the "arena" refers to the memory allocation strategy used by the Go runtime to manage memory for small objects. It's a term closely associated with the way Go handles memory allocation and garbage collection.

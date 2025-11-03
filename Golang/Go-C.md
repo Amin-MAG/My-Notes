@@ -1,3 +1,8 @@
+---
+title: Go C
+draft: true
+tags: []
+---
 # C library in Go
 
 C library refers to the ability to interact with C code directly from Go programs. This functionality is primarily provided through the `cgo` tool, which allows Go code to call C functions and use C types.

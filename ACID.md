@@ -1,3 +1,8 @@
+---
+title: ACID
+draft: true
+tags: []
+---
 # ACID 
 
 ACID Stands for A(Atomicity), C(Consistency), I(Isolation), D(Durability) that ensure reliable database transactions, event when some things go wrong.

@@ -1,3 +1,8 @@
+---
+title: Influx
+draft: true
+tags: []
+---
 # Influx
 
 ![Untitled](Influx/Untitled.png)

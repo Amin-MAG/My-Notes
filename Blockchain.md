@@ -1,3 +1,8 @@
+---
+title: Blockchain
+draft: true
+tags: []
+---
 # Blockchain
 
 A blockchain is a distributed ledger that is completely open to anyone. Once a some data has been recorded inside of a blockchain, it becomes very difficult to change it.

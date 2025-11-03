@@ -1,3 +1,8 @@
+---
+title: Go GraphQL
+draft: true
+tags: []
+---
 # Graph QL
 
 # Initial Setup

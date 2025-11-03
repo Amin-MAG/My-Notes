@@ -1,3 +1,8 @@
+---
+title: Homework 01 Theoretical
+draft: true
+tags: []
+---
 # Homework 01 - Theoretical
 
 ## 1. NLP Tools & Libraries

@@ -1,3 +1,8 @@
+---
+title: The Big Bang Series
+draft: true
+tags: []
+---
 # The Big Bang Theory
 
 [Season 1](Season%201%20b012a.md)

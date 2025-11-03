@@ -1,3 +1,8 @@
+---
+title: Closed Chan Golang
+draft: true
+tags: []
+---
 # Tricky closed channel in Golang
 
 When you close a channel in Go, it's essential to understand how receiving data from the channel works after it has been closed. If you attempt to receive data from a closed channel, the receiver will still receive the remaining values in the channel buffer, if any, without blocking. However, if the channel is empty, subsequent receives will immediately return a zero-value for the channel's type.

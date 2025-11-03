@@ -1,3 +1,8 @@
+---
+title: HW04 Assig f2f42
+draft: true
+tags: []
+---
 # HW04 Assignment
 
 ✍️ Mohammad Amin Ghasvari 97521432

@@ -1,3 +1,8 @@
+---
+title: Software Design
+draft: true
+tags: []
+---
 # Design
 
 We have system design and program design. In system design, we define our components and their relations to each other. In program design, We discuss the design patterns that can be used in writing codes. (function, classes, and...)

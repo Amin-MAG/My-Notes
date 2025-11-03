@@ -1,3 +1,8 @@
+---
+title: Microprocessor
+draft: true
+tags: []
+---
 # Microprocessor Lab
 
 ## Basics

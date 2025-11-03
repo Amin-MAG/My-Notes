@@ -1,3 +1,8 @@
+---
+title: Vagrant
+draft: true
+tags: []
+---
 # Vagrant
 - You can find list of images in vagrant cloud.
 - Virtual box is just a provider for the Vagrant. You can use the Vagrant with other providers like VMware, Hyper-V, Docker or...

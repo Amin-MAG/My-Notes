@@ -1,3 +1,8 @@
+---
+title: Systemctl
+draft: true
+tags: []
+---
 # Systemctl
 
 `Systemd` stores configuration for services in two places. The first is `/lib/systemd/system/`, where you’ll find configuration for many services on your system. Most software installs install services here. The second is `/etc/systemd/system/`, which overrides the `/lib/systemd` directory and is generally used to place user-created services in. There’s also `/etc/systemd/users/`, which runs services for individual logged-in users, such as fetching mail.

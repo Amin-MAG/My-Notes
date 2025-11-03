@@ -1,3 +1,8 @@
+---
+title: Kubectl
+draft: true
+tags: []
+---
 # Kubectl
 
 ## Get started

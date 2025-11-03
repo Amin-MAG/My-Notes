@@ -1,3 +1,8 @@
+---
+title: Load Balancer
+draft: true
+tags: []
+---
 # Load Balancer
 
 Load balancer is an inevitable component for a large scale application. Load Balancing helps ensure high availability, responsiveness, and scalability. 

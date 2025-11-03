@@ -1,3 +1,8 @@
+---
+title: Go Swagger
+draft: true
+tags: []
+---
 # Swagger
 
 ## Gin Swagger

@@ -1,3 +1,8 @@
+---
+title: Building The Kernel
+draft: true
+tags: []
+---
 # Building the kernel
 
 ```bash

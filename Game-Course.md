@@ -1,3 +1,8 @@
+---
+title: Game Course
+draft: true
+tags: []
+---
 # Game Course
 
 This page is related to the Game Course 2021-2022.

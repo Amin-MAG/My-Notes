@@ -1,3 +1,8 @@
+---
+title: Latency Numbers
+draft: true
+tags: []
+---
 # Latency Numbers
 
 ![](Operating-Systems/LatencyNumbers.png)

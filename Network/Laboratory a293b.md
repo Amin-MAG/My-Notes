@@ -1,3 +1,8 @@
+---
+title: Laboratory a293b
+draft: true
+tags: []
+---
 # Laboratory
 
 - [Experiment 0](Laboratory%20a293b/Experiment%200.md)

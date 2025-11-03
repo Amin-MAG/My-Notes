@@ -1,3 +1,8 @@
+---
+title: SQL Map
+draft: true
+tags: []
+---
 # SQL Map
 
 It's more effective when you set some default values. It increases the performance.

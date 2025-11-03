@@ -1,3 +1,8 @@
+---
+title: Homework 02 Theoretical
+draft: true
+tags: []
+---
 # Homework 02 - Theoretical
 
 ## Evaluating: Cross-Validation

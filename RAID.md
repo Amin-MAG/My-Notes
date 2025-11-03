@@ -1,3 +1,8 @@
+---
+title: RAID
+draft: true
+tags: []
+---
 # RAID
 
 It stands for "Redundant Array of Independent Disks". It is a technology to improve the reliability, availability, and performance. RAID uses combination of multiple physical hard drives and various techniques for organizing and managing data across those hard drives. The primary goal of the RAID is redundancy and/or performance.

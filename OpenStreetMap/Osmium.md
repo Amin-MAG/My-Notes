@@ -1,3 +1,8 @@
+---
+title: Osmium
+draft: true
+tags: []
+---
 # Osmium
 
 ## Calculate the difference

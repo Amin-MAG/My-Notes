@@ -1,3 +1,8 @@
+---
+title: Terraform
+draft: true
+tags: []
+---
 # Terraform
 
 It is an open-source tool that lets you automate and manage your infrastructures, your platform, and your services. It is a declarative language.

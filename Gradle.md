@@ -1,3 +1,8 @@
+---
+title: Gradle
+draft: true
+tags: []
+---
 # Gradle
 
 To build a project using Gradle

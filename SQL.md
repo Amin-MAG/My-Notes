@@ -1,3 +1,8 @@
+---
+title: SQL
+draft: true
+tags: []
+---
 # SQL
 
 SQL or Structured Query Language consist of several sections.

@@ -1,3 +1,8 @@
+---
+title: Go Real time
+draft: true
+tags: []
+---
 # Golang, Real-Time Techs
 
 Here I'm going to implement some kinds of ways that we can implement real-time data transferring.

@@ -1,3 +1,8 @@
+---
+title: Makefile
+draft: false
+tags: []
+---
 # Makefile
 
 You can do a set of commands using Makefile.

@@ -1,3 +1,8 @@
+---
+title: Go Generate
+draft: true
+tags: []
+---
 # Go Generate
 
 In Go programming language, code generation is a technique used to automate the creation of code during the build process. Go provides several tools and libraries to support code generation, and one of them is the `go generate` command, which is a standard way to run code generators.

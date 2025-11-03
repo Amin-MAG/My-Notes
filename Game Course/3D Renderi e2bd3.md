@@ -1,3 +1,8 @@
+---
+title: 3D Renderi e2bd3
+draft: true
+tags: []
+---
 # 3D Rendering
 
 We have Inverse-Mapping and Forward-Mapping (OpenGL, DirectX) approach for computer graphics rendering.

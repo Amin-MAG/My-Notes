@@ -1,3 +1,8 @@
+---
+title: FTP
+draft: true
+tags: []
+---
 # FTP
 
 One the best options is `vsftpd` that you can install on your server.

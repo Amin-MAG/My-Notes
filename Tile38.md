@@ -1,3 +1,8 @@
+---
+title: Tile38
+draft: true
+tags: []
+---
 # Tile 38
 
 It is a database which is based on the Redis database. It can have both persistent or in-memory mechanism to store the data. This database is specifically for geospacitial purposes.

@@ -1,3 +1,8 @@
+---
+title: MST
+draft: true
+tags: []
+---
 # Minimum Spanning Tree
 
 A spanning tree is a subgraph that is a tree and connects all the vertices. MST is the spanning tree with the minimum weight.

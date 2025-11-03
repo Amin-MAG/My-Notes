@@ -1,3 +1,8 @@
+---
+title: Arduino CLI
+draft: true
+tags: []
+---
 First create a configuration file
 
 ```bash

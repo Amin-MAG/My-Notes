@@ -1,3 +1,8 @@
+---
+title: Serverless in go
+draft: true
+tags: []
+---
 # Serverless in Go
 
 To create a serverless app in go language, you need to initialize your application.

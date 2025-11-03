@@ -1,3 +1,8 @@
+---
+title: Season 07
+draft: true
+tags: []
+---
 # Season 7
 
 # E01

@@ -1,3 +1,8 @@
+---
+title: Gobuster
+draft: true
+tags: []
+---
 # Gobuster
 
 It is a tool to find routes and paths of a website.

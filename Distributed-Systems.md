@@ -1,3 +1,8 @@
+---
+title: Distributed Systems
+draft: true
+tags: []
+---
 # Distributed Systems
 
 # Compare with a centralized system

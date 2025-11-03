@@ -1,3 +1,8 @@
+---
+title: Consul
+draft: true
+tags: []
+---
 # [Consul](https://github.com/hashicorp/consul)
 
 Consul is an implementation of [Service Mesh](Service-Mesh.md). Consul is a distributed, highly available, and data center aware solution to connect and configure applications across dynamic, distributed infrastructure.

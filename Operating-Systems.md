@@ -1,3 +1,8 @@
+---
+title: Operating Systems
+draft: false
+tags: []
+---
 # Operating System
 
 ## CPU Throttling

@@ -1,3 +1,8 @@
+---
+title: Gitlab CI
+draft: true
+tags: []
+---
 # Gitlab CI
 
 ## Overview

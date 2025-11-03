@@ -1,3 +1,8 @@
+---
+title: Artificial Intelligence
+draft: true
+tags: []
+---
 # Artificial Intelligence
 
 Each system is intelligent. At first, AI was just if and else statements.

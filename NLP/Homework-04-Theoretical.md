@@ -1,3 +1,8 @@
+---
+title: Homework 04 Theoretical
+draft: true
+tags: []
+---
 # NLP - Homework 04
 
 ## LSTM prevents the vanishing gradient

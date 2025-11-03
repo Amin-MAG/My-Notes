@@ -1,3 +1,8 @@
+---
+title: GoBenchmark
+draft: true
+tags: []
+---
 # Go Benchmark
 
 Let's assume this is your function:

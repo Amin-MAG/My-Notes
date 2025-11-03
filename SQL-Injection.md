@@ -1,3 +1,8 @@
+---
+title: SQL Injection
+draft: true
+tags: []
+---
 # SQL-Injection
 
 SQL injection or SQLi refers to attacks against relational databases such as `MySQL`. Many types of injection vulnerabilities are possible within web applications, such as HTTP injection, code injection, and command injection.

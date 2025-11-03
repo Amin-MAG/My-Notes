@@ -1,3 +1,8 @@
+---
+title: CDN
+draft: true
+tags: []
+---
 # CDN - Content Delivery Network
 
 It was developed to deliver static HTML content for users all around the world. It has evolved since 1998. The main duty is to bring content closer to the user. CDN deploys servers at hundreds of locations worldwide, known as PoP, Point of Presence, or edge servers.

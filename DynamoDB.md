@@ -1,3 +1,8 @@
+---
+title: DynamoDB
+draft: true
+tags: []
+---
 # Introduction of Dynamo DB
 
 ## 5 Misconceptions about DynamoDB

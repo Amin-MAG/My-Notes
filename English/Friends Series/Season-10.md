@@ -1,3 +1,8 @@
+---
+title: Season 10
+draft: true
+tags: []
+---
 # Season 10
 
 # E01

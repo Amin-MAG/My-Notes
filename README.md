@@ -1,3 +1,8 @@
+---
+title: Obsidian Notes
+draft: false
+tags: []
+---
 # My Notes
 
 ![Untitled](./notes/all.png)

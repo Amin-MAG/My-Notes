@@ -1,3 +1,8 @@
+---
+title: Logging
+draft: true
+tags: []
+---
 # Logging
 ## Beats
 

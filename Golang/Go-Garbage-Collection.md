@@ -1,3 +1,8 @@
+---
+title: Go Garbage Collection
+draft: true
+tags: []
+---
 # Garbage Collection in Go
 
 Go manages garbage collection (GC) automatically through its built-in garbage collector, which is part of the Go runtime. Garbage collection in Go is a form of automatic memory management that automatically reclaims memory that is no longer in use, preventing memory leaks and allowing developers to focus on writing code without explicitly managing memory allocation and deallocation.

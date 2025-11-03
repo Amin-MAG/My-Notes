@@ -1,3 +1,8 @@
+---
+title: FastAPI
+draft: true
+tags: []
+---
 # Fast API
 
 - Fast to code

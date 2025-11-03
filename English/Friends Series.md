@@ -1,3 +1,8 @@
+---
+title: Friends Series
+draft: true
+tags: []
+---
 # Friends
 
 [Season 1](Season-01.md)

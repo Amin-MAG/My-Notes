@@ -1,3 +1,8 @@
+---
+title: Simple Distributed System
+draft: true
+tags: []
+---
 # Build a simple distributed system
 
 Components of our system

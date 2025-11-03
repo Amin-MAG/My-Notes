@@ -1,3 +1,8 @@
+---
+title: Reverse Proxy
+draft: true
+tags: []
+---
 # Reverse Proxy
 
 A reverse proxy is a server that sits in front of one or more web servers, intercepting requests from clients. This is different from a forward proxy, where the proxy sits in front of the clients. With a reverse proxy, when clients send requests to the origin server of a website, those requests are intercepted at the network edge by the reverse proxy server. The reverse proxy server will then send requests to and receive responses from the origin server.

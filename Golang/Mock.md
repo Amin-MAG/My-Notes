@@ -1,3 +1,8 @@
+---
+title: Mock
+draft: true
+tags: []
+---
 # Golang Mock
 
 Here is the `foo.go` file:

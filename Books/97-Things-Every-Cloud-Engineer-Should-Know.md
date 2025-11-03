@@ -1,3 +1,8 @@
+---
+title: 97 Things Every Cloud Engineer Should Know
+draft: true
+tags: []
+---
 # 97 Things Every Cloud Engineer Should Know
 
 ##  What Is the Cloud?

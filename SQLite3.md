@@ -1,3 +1,8 @@
+---
+title: SQLite3
+draft: true
+tags: []
+---
 # SQLite3
 
 This kind of database is the main database for small devices such as android smartphones.

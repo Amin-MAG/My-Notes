@@ -1,3 +1,8 @@
+---
+title: GoGenerics
+draft: true
+tags: []
+---
 # Go Generics
 
 Here is a basic example of `sum` function.

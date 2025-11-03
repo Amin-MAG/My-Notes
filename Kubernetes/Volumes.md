@@ -1,3 +1,8 @@
+---
+title: Volumes
+draft: true
+tags: []
+---
 # Volumes
 
 On-disk files in a container are ephemeral, which can cause problems. Two main issues are:

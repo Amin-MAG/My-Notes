@@ -1,3 +1,8 @@
+---
+title: Software Engineering
+draft: true
+tags: []
+---
 # 👨‍💻 Software Engineering
 
 ## Software and System Design

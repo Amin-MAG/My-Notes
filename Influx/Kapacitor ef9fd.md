@@ -1,3 +1,8 @@
+---
+title: Kapacitor ef9fd
+draft: true
+tags: []
+---
 # Kapacitor
 
 After collecting data using Telegraf and then storing these data in InfluxDB, Then you can use Kapacitor to process your data. You can import time series data to transform, analyze or act on them.

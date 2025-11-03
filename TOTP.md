@@ -1,3 +1,8 @@
+---
+title: TOTP
+draft: true
+tags: []
+---
 # TOTP
 
 A time-based One-time Password (TOTP) is a computer algorithm that generates a one-time password (OTP) that uses the current time as a source of uniqueness.

@@ -1,3 +1,8 @@
+---
+title: Pods and Nodes
+draft: true
+tags: []
+---
 # Pods and Nodes
 
 ## Pods

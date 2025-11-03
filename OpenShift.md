@@ -1,3 +1,8 @@
+---
+title: OpenShift
+draft: true
+tags: []
+---
 
 # OpenShift
 

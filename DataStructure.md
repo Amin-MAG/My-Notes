@@ -1,3 +1,8 @@
+---
+title: DataStructure
+draft: true
+tags: []
+---
 # Data Structure
 
 Some tricky data structures are used in databases.

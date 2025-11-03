@@ -1,3 +1,8 @@
+---
+title: LPIC 1
+draft: false
+tags: []
+---
 # LPIC I
 
 # 101 - 1

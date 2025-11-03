@@ -1,3 +1,8 @@
+---
+title: PostgreSQL Snippet
+draft: true
+tags: []
+---
 # Snippet
 
 To get recent passengers that `passenger_id%10=5` and have any rides in recent 30 days for services 1, 2 or 3.

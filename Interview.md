@@ -1,3 +1,8 @@
+---
+title: Interview
+draft: true
+tags: []
+---
 # Interviews
 
 ## System Design Interview - Step By Step Process

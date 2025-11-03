@@ -1,3 +1,8 @@
+---
+title: WebSocket
+draft: true
+tags: []
+---
 # WebSocket
 
 WebSocket is a communication protocol, just like HTTP (Hypertext Transfer Protocol). However, there are significant differences between the two.

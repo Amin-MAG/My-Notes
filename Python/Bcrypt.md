@@ -1,3 +1,8 @@
+---
+title: Bcrypt
+draft: true
+tags: []
+---
 # Bcrypt
 
 To generate a new salt

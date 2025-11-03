@@ -1,3 +1,8 @@
+---
+title: Geohash
+draft: true
+tags: []
+---
 # Geohash
 
 There is a concept converts the latitude and longitude to a specific string. The length of this string shows how exactly this location is.

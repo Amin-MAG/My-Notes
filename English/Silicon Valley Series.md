@@ -1,3 +1,8 @@
+---
+title: Silicon Valley Series
+draft: true
+tags: []
+---
 # Silicon Valley
 
 [Season 1](Season%201%208ea0d.md)

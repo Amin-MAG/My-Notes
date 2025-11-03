@@ -1,3 +1,8 @@
+---
+title: Kafka
+draft: true
+tags: []
+---
 # Kafka
 
 It’s a Distributed Steaming platform for building data pipelines and streaming application at massive scale. It is written in Scala and Java.

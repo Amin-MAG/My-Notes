@@ -1,4 +1,28 @@
+---
+title: System Design Concepts
+draft: true
+tags: []
+---
 # System Design Concepts
+
+## Functional Requirement
+
+Functional requirements specify what a software product should do (for example, “users must be able to log in”).
+
+## Non-Functional Requirement
+
+Non-functional requirements (NFRs) are as critical as functional requirements because they define a system's qualities and operational parameters.
+
+While functional requirements specify what a software product should do (for example, “users must be able to log in”), non-functional requirements define how well it must accomplish these tasks under real-world conditions (for example, “the login process should respond within two seconds under peak load” or “all user credentials must be encrypted and stored securely”).
+
+Defining non-functional requirement is required for these reasons:
+
+- Quality of Service (including Availability)
+- System Stability (including reliability)
+- Scalability
+- Performance
+- Maintenance
+- Security and Compliance
 
 ## Vertical Scaling
 
@@ -81,3 +105,4 @@ They are kinda like databases because they have durable storage and can be repli
 # Resources
 
 - [20 System Design Concepts Explained in 10 Minutes](youtube.com/watch?v=i53Gi_K3o7I)
+- [Non-Functional Requirements: The Backbone of Great Software - Part 1](https://blog.bytebytego.com/p/non-functional-requirements-the-backbone)

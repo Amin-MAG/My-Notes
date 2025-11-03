@@ -1,3 +1,8 @@
+---
+title: Storage
+draft: true
+tags: []
+---
 # Storage
 
 ## LUN - Logical Unit Number

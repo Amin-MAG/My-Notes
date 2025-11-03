@@ -1,3 +1,8 @@
+---
+title: Homework 01 Practical
+draft: true
+tags: []
+---
 # Homework 01 - Practical
 
 ## Regular Expressions
