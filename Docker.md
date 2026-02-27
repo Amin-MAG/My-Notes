@@ -1,3 +1,8 @@
+---
+title: Docker
+draft: true
+tags: []
+---
 # Docker
 
 To see the docker system storage, you can use this:
@@ -323,6 +328,40 @@ db:
       POSTGRES_MULTIPLE_EXTENSIONS: postgis,hstore,postgis_topology,postgis_raster,pgrouting
     ports:
       - "5432:5432"
+```
+
+# Swarm
+
+## Initializing a new Swarm
+
+To **initialize a new swarm** on a node (making it the first _manager_). `--advertise-addr` tells Docker **which IP address other nodes should use to connect** to this manager.
+
+```bash
+# It will generate a token and a command
+docker swarm init --advertise-addr 192.168.1.10
+
+# Use the other command to connect nodes to this manager
+docker swarm join --token <token-from-pi1> 192.168.1.10:2377
+```
+
+## Manage the nodes
+
+You can list all of the nodes on managers and promote them.
+
+```bash
+# List all of the nodes
+docker node ls
+
+# Promote a node
+docker node promote rasp-1 
+```
+
+## Network
+
+Create a network which is **distributed across the entire swarm** (all nodes).
+
+```bash
+docker network create -d overlay proxy
 ```
 
 # Best practices
