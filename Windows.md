@@ -1,7 +1,7 @@
 ---
 title: Windows
 draft: true
-tags: []
+tags: [reference]
 ---
 # Windows
 

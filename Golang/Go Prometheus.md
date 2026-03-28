@@ -1,7 +1,7 @@
 ---
 title: Go Prometheus
 draft: true
-tags: []
+tags: [devops, golang, programming, reference]
 ---
 # Prometheus in Go
 

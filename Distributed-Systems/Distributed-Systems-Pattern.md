@@ -1,7 +1,7 @@
 ---
 title: Distributed Systems Pattern
 draft: true
-tags: []
+tags: [distributed-systems]
 ---
 # Distributed Systems Patterns
 

@@ -1,7 +1,7 @@
 ---
 title: Computer Engineering
 draft: true
-tags: []
+tags: [hardware, embedded-systems, networking]
 ---
 # Computer Engineering
 

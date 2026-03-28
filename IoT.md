@@ -1,7 +1,7 @@
 ---
 title: IoT
 draft: true
-tags: []
+tags: [hardware, embedded-systems, reference]
 ---
 # IoT
 
@@ -9,7 +9,7 @@ tags: []
 
 There are some steps to start
 
-1. Learn how to work with aurdino
+1. Learn how to work with Arduino
 2. Learn how to work with multiple sensors
 3. Integrating with more tools
 4. Raspberry pi
@@ -28,6 +28,6 @@ There are some steps to start
 - [RaspberryPi](RaspberryPi.md)
 - [Arduino](Arduino.md)
 
-# Resourses
+# Resources
 
 [What is Internet of Things? How to Learn IoT? IoT for Everyone | Stephen Simon](https://www.youtube.com/watch?v=vaPgCrSH9Uk)

@@ -1,7 +1,7 @@
 ---
 title: Go Memory Management
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Go Memory management
 

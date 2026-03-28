@@ -1,7 +1,7 @@
 ---
 title: System Design Concepts
 draft: true
-tags: []
+tags: [reference, system-design]
 ---
 # System Design Concepts
 
@@ -58,27 +58,27 @@ TCP is too low level. HTTP protocol is an application layer protocol which is mu
 
 ### REST
 
-It is a standardazation around HTTP protocol that make it stateless and consistent.
+It is a standardization around the HTTP protocol that makes it stateless and consistent.
 
 ### GraphQL
 
-Instead of multiple request, By using Graphql, you can request a `query` and fetch the fields that you want to receive. You can recieve multiple resources by a single request. [Here](Golang/Go%20GraphQL.md) is an initial setup for GraphQL in Go language.
+Instead of multiple requests, by using GraphQL, you can request a `query` and fetch the fields that you want to receive. You can receive multiple resources by a single request. [Here](Golang/Go%20GraphQL.md) is an initial setup for GraphQL in Go language.
 
 ### gRPC
 
-Other paradaigms uses JSON to request and respond, but gRPC uses protocol buffers which boosts the performance. The down side is that JSON is much more human readable than protocol buffers. [Here](Golang/gRPC.md) is an initial setup for GraphQL in Go language.
+Other paradigms use JSON to request and respond, but gRPC uses protocol buffers which boosts the performance. The downside is that JSON is much more human-readable than protocol buffers. [Here](Golang/gRPC.md) is an initial setup for GraphQL in Go language.
 
 ## Web Socket
 
-For realtime applications like chat apps, you can use websocket which pushes and receives the data immediately.
+For real-time applications like chat apps, you can use WebSocket which pushes and receives the data immediately.
 
 ## Databases
 
-You can read more about database in the [database](Databases.md) page.
+You can read more about databases on the [Databases](Databases.md) page.
 
 ## Sharding
 
-If we don't have to enforce any foreign key constraints (Consistancy from ACID), we can use sharding to have horizontal scaling. But sharding can get complicated. You can read more about sharding in the [sharding](Sharding.md) page.
+If we don't have to enforce any foreign key constraints (Consistency from ACID), we can use sharding to have horizontal scaling. But sharding can get complicated. You can read more about sharding in the [sharding](Sharding.md) page.
 
 ## Replication
 
@@ -88,11 +88,11 @@ If we want to scale our database read we can create read-only copies of our data
 
 ### Leader-Leader Replication
 
-It can cause to inconsistant databases.
+It can cause inconsistent databases.
 
 ## CAP Theorem
 
-It is stated in the theorem that we can choose 2 of three for our design. C for consistancy, A for availability, and P for Partion (Network). For example, for database partitioning we can either availability or consistancy.
+It is stated in the theorem that we can choose 2 of three for our design. C for consistency, A for availability, and P for Partion (Network). For example, for database partitioning we can either availability or consistency.
 
 ### ELC
 
@@ -100,7 +100,7 @@ It is stated in the theorem that we can choose 2 of three for our design. C for 
 
 ## Message Queues
 
-They are kinda like databases because they have durable storage and can be replicated or sharded. If our system receives more request than it can process it is good to use a message queue.
+They are kind of like databases because they have durable storage and can be replicated or sharded. If our system receives more requests than it can process, it is good to use a message queue.
 
 # Resources
 

@@ -1,7 +1,7 @@
 ---
 title: Embedded Systems
 draft: true
-tags: []
+tags: [embedded-systems, hardware, c, course-notes]
 ---
 # Embedded Systems
 
@@ -9,7 +9,7 @@ Embedded Systems 2022 IUST Course
 
 # Chapter I
 
-We have two types of computes
+We have two types of computers
 
 - Desktop-produced millions per year (PC, Servers, and notebooks)
 - Embedded-produced billions per year (like Military and medical equipment)
@@ -81,14 +81,14 @@ They can use actuators to change the environment.
 
 ## Processors
 
-- It is an artifacts that runs the algorithms.
+- It is an artifact that runs the algorithms.
 - It contains controller and data-path.
 
 ### General-Purpose processors
 
 ![](Attachments/Embedded-Systems/image-20240324220217925.png)
 
-- They can do variety of computational tasks.
+- They can do a variety of computational tasks.
 - Functional Flexibility
 - Low cost at high volumes
 - Slow and power hungry: The elements are not optimized. They have more registers.
@@ -99,7 +99,7 @@ They have general data-path and ALU.
 
 ### Single-Purpose processors
 
-- Just do on particular computational task
+- Just do one particular computational task
 - They are fast and Power efficient
 - Functional inflexibility
 - High cost at low volume
@@ -114,7 +114,7 @@ They have special functional units.
 
 ### ASICs processors
 
-They are designed to do exactly on program. (like Voice recorders or Bitcoin miners)
+They are designed to do exactly one program. (like Voice recorders or Bitcoin miners)
 
 ### ASICs VS General-Purpose
 
@@ -124,7 +124,7 @@ They are designed to do exactly on program. (like Voice recorders or Bitcoin min
 
 ## Memories
 
-- It is an artifacts stores bits.
+- It is an artifact that stores bits.
 - It creates storage fabrics and the access logic
 
 Write ability is about how fast the data is going to be written on that component.
@@ -145,7 +145,7 @@ Storage permanence is about how long it holds the bits.
 
 ## Interfaces (Buses)
 
-- It is an artifacts that transfers bits.
+- It is an artifact that transfers bits.
 - It can be wire, air, fiber, or...
 1. Connectivity Scheme
    1. Serial Communication
@@ -269,7 +269,7 @@ MOV r0, r2 ;    r0 = r2
 MVN r0, r2 ;    r0 = not r2
 ```
 
-### Comparsion operation
+### Comparison operation
 
 ```assembly
 ; values for CC are N, V, C, Z
@@ -290,14 +290,14 @@ What is Arduino?
 - Open-Source hardware platform & development environment
 - 
 
-Characterstics:
+Characteristics:
 
 - Low frequency range: Up to 20 MHz
 - Many IO pins: It's good for creating a control program
-- Cheep
+- Cheap
 - Widespread
 
-### Sheilds
+### Shields
 
 - TFT touch screen
 - Data logger
@@ -325,10 +325,10 @@ Characterstics:
 
 USB - FIFI - 
 
-what is PWM (?) You can create analog signals on digirtal ports 
+What is PWM? You can create analog signals on digital ports.
 
 > What is PCB?
-> What are the sheilds?
+> What are the shields?
 
 ## Automata Programming
 
@@ -341,7 +341,7 @@ A solution is to provide automata for our system and generate the code using the
 - Control Object: Control the output amount of the water
 - Control System: Check the height of the water
 
-Control State: Like in Truing Machine.
+Control State: Like in a Turing Machine.
 
 Structure:
 
@@ -356,8 +356,8 @@ Completeness, Avoid the contradiction
 - Timing behavior
 - State-oriented behavior
 - Event handling
-  - External events (casued by the environment)
-  - Internal Events (caused by the syste components)
+  - External events (caused by the environment)
+  - Internal Events (caused by the system components)
 - Support for a dependable system
 - Exception-handling behavior
 
@@ -430,10 +430,10 @@ It schedules the tasks in the way to have minimum $lateness_max$.
 
 ### EDF - Earliest Deadline First
 
-The losest deadline should be executed first.
+The closest deadline should be executed first.
 
 - It's preemptive.
-- ach time a task arrives, it is inserted into a queue of ready tasks, sorted by their deadlines.
+- Each time a task arrives, it is inserted into a queue of ready tasks, sorted by their deadlines.
 - It is optimal for periodic scheduling.
 - It requires dynamic priority.
 - EDF is the most optimal scheduling that doesn't have idle time.
@@ -441,7 +441,7 @@ The losest deadline should be executed first.
 Issues:
 
 - It is less predictable.
-- It provide less control over the execution.
+- It provides less control over the execution.
 - It has high overheads, since it should calculate the deadline.
 - Domino failure: when multiple tasks ties in priorities, there’s a possibility of
 failure.
@@ -486,27 +486,27 @@ One processor is a one-dimensional issue, But in multi-processor problem we have
 
 Classification of algorithms:
 
-- Partintioned 
+- Partitioned
 - Global
 - Semi-Partitioned: It is hybrid
 
 On important condition is $U < m$ and $u_{max} < m$.
 
-#### Anormalies
+#### Anomalies
 
 - Dhall's effect - Periodic task sets with utilization close to 1 are unschedulable using global RM/EDF
-- G-RM anormaly
+- G-RM anomaly
 
 
-### Partioned Scheduling
+### Partitioned Scheduling
 
-- Each of two dimentions is dealt with separately
+- Each of two dimensions is dealt with separately
 - No task migration
 
 All periodic tasks that are running on multiple cores have a common long period. 
 
 $$
-Utiliziation = \frac{C}{Priority}
+Utilization = \frac{C}{Priority}
 $$
 
 ### Global Scheduling
@@ -549,7 +549,7 @@ Tasks with zero laxity have the highest priorities, if there is no zero laxity b
 
 #### Pfair Algorithms
 
-An algorithm that maximize the accumulated utilization or U.
+An algorithm that maximizes the accumulated utilization or U.
 
 $$\Sigma u_i < m)$$
 
@@ -560,10 +560,10 @@ $$\Sigma u_i < m)$$
 It calculates the difference between real and fluid execution.
 
 $$
-Lag = FluidExecuation - RealTimeExecuation
+Lag = FluidExecution - RealTimeExecution
 $$
 
-The actual fomula is
+The actual formula is
 
 $$
 lag(T_i, t) = \omega_it - \Sigma S(T_i, u)
@@ -593,7 +593,7 @@ There are classes of operating systems:
 - Embedded systems usually don't need all of services of a standard OS.
 	- There is timing uncertainty issue in common OS.
 	- These additional features needs more resources like memory.
-	- Being modular is the first priority in Embedded Systems desing. 
+	- Being modular is the first priority in Embedded Systems design. 
 	- Common OS are not designed to be mission-critical. 
 
 There are large variety of requirements and environments in Embedded Systems.
@@ -643,11 +643,11 @@ TCB stores the information needed to manage and schedule threads.  The operating
 - Scheduling information
 - Thread name
 
-The TCBs are administerd in linked lists.
+The TCBs are administered in linked lists.
 
 ## FreeRTOS
 
-- FreeRTOS contains some C codes like `tasks.c`, `timers.c`, and... containing usefull functions.
+- FreeRTOS contains some C files like `tasks.c`, `timers.c`, etc., containing useful functions.
 - FreeRTOS is configured by a header file called `FreeRTOSConfig.h`.
 - Tasks are implemented as threads.
 
@@ -699,7 +699,7 @@ void vTaskDelay(TickType_t ticks)
 
 ### Interrupts
 
-- Tasks will only be executed when there are no Interrupts Service Rourtine (ISR) running.
+- Tasks will only be executed when there are no Interrupt Service Routines (ISR) running.
 - They are short
 
 # See more

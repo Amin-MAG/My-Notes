@@ -1,11 +1,11 @@
 ---
 title: C
 draft: true
-tags: []
+tags: [c, programming]
 ---
 # C
 
-Hello World in C :))
+Hello World in C:
 
 ```c
 #include <stdio.h>
@@ -15,13 +15,13 @@ int main(){
 }
 ```
 
-To Compile the code with the assembly files
+To compile the code and save the intermediate assembly files:
 
 ```bash
-gcc app.c --save-temp
+gcc app.c --save-temps
 ```
 
-To tell your compiler to optimize your code
+To tell the compiler to optimize your code:
 
 ```bash
 gcc -O app.c
@@ -31,18 +31,18 @@ gcc -O app.c
 
 ```c
 // Tells the compiler not to optimize this variable
-voletile _Bool detected = 0;
+volatile _Bool detected = 0;
 ```
 
 # Using Libraries and Dependencies
 
-Compile a code using the math library
+Compile code using the math library:
 
 ```bash
 gcc -o run main.c -lmath
 ```
 
-Compile a code using the libraries `hb` and `hb-ft`
+Compile code using the HarfBuzz and FreeType libraries:
 
 ```bash
 # For linux
@@ -63,3 +63,5 @@ This flag is used to specify include directories during compilation. The compile
 # See More
 
 - [gdb](gdb.md)
+- [Embedded Systems](Embedded-Systems.md)
+- [Programming Languages](ProgrammingLanguages.md)

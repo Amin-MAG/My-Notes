@@ -1,7 +1,7 @@
 ---
 title: API Gateway
 draft: true
-tags: []
+tags: [backend, reference, system-design]
 ---
 # API Gateway
 

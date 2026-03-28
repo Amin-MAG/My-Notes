@@ -1,7 +1,7 @@
 ---
 title: Kubernetes
 draft: true
-tags: []
+tags: [kubernetes, devops, docker, distributed-systems, reference]
 ---
 # Kubernetes
 

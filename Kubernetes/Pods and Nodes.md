@@ -1,7 +1,7 @@
 ---
 title: Pods and Nodes
 draft: true
-tags: []
+tags: [devops, kubernetes]
 ---
 # Pods and Nodes
 

@@ -1,7 +1,7 @@
 ---
 title: ElasticSearch
 draft: true
-tags: []
+tags: [databases, backend, distributed-systems, reference]
 ---
 # Elastic Search
 
@@ -24,7 +24,7 @@ While not *every* problem is a search problem, Elasticsearch offers speed and 
 
 # Components
 
-To understand how elastic search works we need to lean about some concepts and components of this system.
+To understand how Elasticsearch works, we need to learn about some concepts and components of this system.
 
 ## Logical Concepts
 
@@ -102,7 +102,7 @@ For applications that rely heavily on a search platform for the accessing, retri
 
 ### Website Search
 
-Websites which store a lot of content find elastic search a very useful tool for effective and accurate searches
+Websites that store a lot of content find Elasticsearch a very useful tool for effective and accurate searches.
 
 ### Enterprise Search
 
@@ -258,7 +258,7 @@ print(resp['result'])
 resp = es.get(index="test-index", id=1)
 print(resp['_source'])
 
-# Refresh the indecies
+# Refresh the indices
 es.indices.refresh(index="test-index")
 
 # Search between documents
@@ -280,3 +280,8 @@ fetched = es.get(index="ride-recommender-2022.06.29", id="Cp3xsIEBm0LuWQhlK45T")
 - [Elasticsearch: What it is, How it works, and what it's used for](https://www.knowi.com/blog/what-is-elastic-search/)
 - [Quick start | Elasticsearch Guide [7.16] | Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html)
 - [How indexing and retrieval algorithms work in Elasticsearch | ElasticSearch 7 for Beginners #1.2](https://www.youtube.com/watch?v=fcIzAg63WyI)
+
+# See Also
+
+- [Databases](Databases.md)
+- [Docker](Docker.md)

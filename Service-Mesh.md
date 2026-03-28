@@ -1,7 +1,7 @@
 ---
 title: Service Mesh
 draft: true
-tags: []
+tags: [devops, distributed-systems, reference]
 ---
 # Service Mesh
 

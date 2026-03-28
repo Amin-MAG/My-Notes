@@ -1,7 +1,7 @@
 ---
 title: OpenStack
 draft: true
-tags: []
+tags: [cloud, reference]
 ---
 # Open Stack
 

@@ -1,7 +1,7 @@
 ---
 title: Game
 draft: true
-tags: []
+tags: [reference]
 ---
 # Game
 

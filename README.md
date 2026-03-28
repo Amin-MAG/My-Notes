@@ -33,3 +33,8 @@ Most of the documents are related to computer science.
 - [Physics](Physics.md)
 - [English](English.md)
 - [French](French.md)
+
+## Meta
+
+- [English Mistakes Analysis](English-Mistakes-Analysis.md) — Common writing mistakes and areas for improvement
+- [Second Brain Suggestions](Second-Brain-Suggestions.md) — Suggestions for improving this repository

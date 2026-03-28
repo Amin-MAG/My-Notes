@@ -1,7 +1,7 @@
 ---
 title: Serverless
 draft: true
-tags: []
+tags: [cloud, reference]
 ---
 # Serverless
 

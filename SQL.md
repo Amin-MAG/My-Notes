@@ -1,11 +1,11 @@
 ---
 title: SQL
 draft: true
-tags: []
+tags: [databases, reference]
 ---
 # SQL
 
-SQL or Structured Query Language consist of several sections.
+SQL or Structured Query Language consists of several sections.
 
 - DML: Data Manipulation Language
 - DDL: Data Definition Language
@@ -35,7 +35,7 @@ Data Manipulation Language consists of keywords related to queries or mutating d
 ### Operators
 
 - Logical Operator: `AND`, `OR`, `NOT`
-- Numeric Operator: Addition, Substraction, Multiplication, Division, Modulus 
+- Numeric Operator: Addition, Subtraction, Multiplication, Division, Modulus 
 - String Operator: `Like`, Concatenation
 
 ### Functions
@@ -66,7 +66,7 @@ Data Control Language manages access permissions using `GRANT` and `REVOKE`.
 
 ## TCL 
 
-Transaction Control Language handles transaction management with `COMMIT`, `ROLEBACK`, and `SAVEPOINT`, ensuring data integrity through ACID properties.
+Transaction Control Language handles transaction management with `COMMIT`, `ROLLBACK`, and `SAVEPOINT`, ensuring data integrity through ACID properties.
 
 # See More
 

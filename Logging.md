@@ -1,7 +1,7 @@
 ---
 title: Logging
 draft: true
-tags: []
+tags: [devops, reference]
 ---
 # Logging
 ## Beats

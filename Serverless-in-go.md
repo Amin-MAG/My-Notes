@@ -1,7 +1,7 @@
 ---
 title: Serverless in go
 draft: true
-tags: []
+tags: [cloud, golang, serverless]
 ---
 # Serverless in Go
 

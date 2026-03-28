@@ -1,7 +1,7 @@
 ---
 title: gRPC
 draft: true
-tags: []
+tags: [backend, networking, system-design, reference]
 ---
 # gRPC
 

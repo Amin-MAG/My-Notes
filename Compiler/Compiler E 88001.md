@@ -1,7 +1,7 @@
 ---
 title: Compiler E 88001
 draft: true
-tags: []
+tags: [computer-science, course-notes]
 ---
 # Compiler Extra Project
 

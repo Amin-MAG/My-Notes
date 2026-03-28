@@ -1,7 +1,7 @@
 ---
 title: Vagrant
 draft: true
-tags: []
+tags: [devops, reference]
 ---
 # Vagrant
 - You can find list of images in vagrant cloud.

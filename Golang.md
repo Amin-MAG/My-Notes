@@ -1,7 +1,7 @@
 ---
 title: Golang
 draft: true
-tags: []
+tags: [golang, programming, backend, reference]
 ---
 # Golang
 
@@ -23,7 +23,7 @@ Reference Types:
 
 ## To Assembly
 
-To see the assembly code. 
+To see the assembly code:
 
 ```bash
 go tool compile -S file.go > file.s
@@ -53,7 +53,7 @@ func main() {
 
 ## Pointers
 
-A kind of code that shows how pointers work
+A code example that shows how pointers work:
 
 ```go
 func pointers() {
@@ -120,7 +120,7 @@ The `context` package in Go provides a way to manage and propagate cancellation 
 4. **Propagation**: Contexts can be passed down through the call stack to child functions and goroutines using the `WithContext` method. This allows functions and goroutines to inherit cancellation signals, deadlines, and request-scoped values from their parent context.
 5. **Concurrent Safety**: Contexts are designed to be safe for concurrent use by multiple goroutines.
 
-Generally, The main purpose of context is cancelation propagation. It also can pass values.
+Generally, the main purpose of context is cancellation propagation. It can also pass values. See [Go Context](Golang/GoContext.md) for more details.
 
 ```go
 type Context interface {
@@ -131,7 +131,7 @@ type Context interface {
 }
 ```
 
-Use `Background()` when you’re not reacting to anything and you don’t need the cancelation.
+Use `Background()` when you’re not reacting to anything and you don’t need the cancellation.
 
 ```go
 // To create one 
@@ -145,7 +145,7 @@ ctx, cancel := context.WithDeadline(ctx, time.Now().Add(time.Second))
 c := <- ctx.Done()
 ```
 
-Here is an example showing you can use context and cancelation within different goroutines
+Here is an example showing how you can use context and cancellation within different goroutines:
 
 ```go
 func main() {
@@ -207,7 +207,7 @@ reader := bufio.NewReader(os.Stdin)
 inp, _ := reader.ReadString('\n')
 inp = strings.TrimSuffix(inp, "\n")
 fmt.Printf("Your text is: %s\n", inp)
-fmt.Printf("Your text splited by spaces: %+v\n", strings.Split(inp, " "))
+fmt.Printf("Your text split by spaces: %+v\n", strings.Split(inp, " "))
 ```
 
 To read multiple lines
@@ -221,7 +221,7 @@ for {
 	text := scanner.Text()
 	if len(text) != 0 {
 		fmt.Printf("Your text is: %s\n", text)
-		fmt.Printf("Your text splited by spaces: %+v\n", strings.Split(text, " "))
+		fmt.Printf("Your text split by spaces: %+v\n", strings.Split(text, " "))
 	} else {
 		break
 	}
@@ -416,7 +416,7 @@ for s.Scan() {
 }
 ```
 
-Read the content of a file bytes by bytes
+Read the content of a file byte by byte
 
 ```go
 f, err := os.Open(name)  
@@ -543,7 +543,7 @@ As a limiting case, if a composite literal contains no fields at all, it creates
 
 ## Array vs Slice
 
-Arrays have **primitive data structure** and a **fixed size**. We rarely use arrays in Go. On the other hand, Slices can **grow and shrink**. Slices are a fantasy implementation of Arrays in Go.
+Arrays have a **primitive data structure** and a **fixed size**. We rarely use arrays in Go. On the other hand, slices can **grow and shrink**. Slices are a flexible wrapper around arrays in Go.
 
 |                                                 Array                                                 |                                                                                                   Slice                                                                                                    |
 |:-----------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -601,7 +601,7 @@ Reflection in Go is the ability of a program to examine its own structure and an
 - [gRPC](Golang/gRPC.md)
 - [Golang Mock](Mock.md)
 - [Go Generic](GoGenerics.md)
-- [Goroutines](Goroutines.md)
+- [Goroutines](Golang/Goroutines.md)
 - [Go patterns](GoPatterns.md)
 - [Go Design Patterns](Golang/Go-Design-Patterns.md)
 - [Go Refactorings](GoRefactorings.md)

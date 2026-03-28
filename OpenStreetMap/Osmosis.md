@@ -1,7 +1,7 @@
 ---
 title: Osmosis
 draft: true
-tags: []
+tags: [reference]
 ---
 # Osmosis
 

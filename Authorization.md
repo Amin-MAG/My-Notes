@@ -1,7 +1,7 @@
 ---
 title: Authorization
 draft: true
-tags: []
+tags: [backend, reference, security]
 ---
 # Authorization
 

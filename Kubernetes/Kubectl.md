@@ -1,7 +1,7 @@
 ---
 title: Kubectl
 draft: true
-tags: []
+tags: [devops, kubernetes]
 ---
 # Kubectl
 

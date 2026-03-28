@@ -1,7 +1,7 @@
 ---
 title: Season 1 b012a
 draft: true
-tags: []
+tags: [english]
 ---
 # Season 1
 

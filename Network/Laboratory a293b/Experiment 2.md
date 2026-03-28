@@ -1,7 +1,7 @@
 ---
 title: Experiment 2
 draft: true
-tags: []
+tags: [networking]
 ---
 # Experiment 2
 
@@ -172,4 +172,4 @@ The attacker might even change the routing table to redirect the traffic on the 
 
 ❓ Question 5
 
-We should encrypt our data and use certificates (TLS/SSL Protocols) to prevent this security issue. Then, the host3 only has the encrypted data and can not do anything. RPF is also useful for recognization and dropping the packet.
+We should encrypt our data and use certificates (TLS/SSL Protocols) to prevent this security issue. Then, the host3 only has the encrypted data and cannot do anything. RPF is also useful for recognization and dropping the packet.

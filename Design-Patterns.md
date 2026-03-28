@@ -1,11 +1,11 @@
 ---
 title: Design Patterns
 draft: true
-tags: []
+tags: [software-engineering, reference]
 ---
 # Design Patterns
 
-There are some common design principles that are common and useful between the developers.
+Design patterns are common, reusable solutions to frequently occurring problems in software design.
 
 # Creational
 
@@ -27,7 +27,7 @@ There are some common design principles that are common and useful between the d
 
 Let’s assume you’re going to develop a toolbar for your text editor application. There is a common button class that has an `onClick()` method.
 
-As you can understand, These buttons are very similar with each other. One solution is to use inheritance to implement the `onClick()` behavior. But Do they really extend the class? Before long, you realize that this approach is deeply flawed. You are going to have lots of subclasses here. Another terrible issue is that some operations are going to duplicated in somewhere else like the copy-paste operation.
+As you can see, these buttons are very similar to each other. One solution is to use inheritance to implement the `onClick()` behavior. But do they really extend the class? Before long, you realize that this approach is deeply flawed. You are going to have lots of subclasses here. Another terrible issue is that some operations are going to be duplicated somewhere else, like the copy-paste operation.
 
 The Command pattern suggests that GUI objects shouldn’t send these requests directly. Instead, you should extract all of the request details, such as the object being called, the name of the method and the list of arguments into a separate *command* class with a single method that triggers this request.
 
@@ -75,3 +75,9 @@ TV and remote could be different
 # References
 
 [The Catalog of Design Patterns](https://refactoring.guru/design-patterns/catalog)
+
+# See Also
+
+- [Refactoring](Refactoring.md)
+- [Object Oriented Design](ObjectOrientedDesign.md)
+- [Go Design Patterns](Golang/Go-Design-Patterns.md)

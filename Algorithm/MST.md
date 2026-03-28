@@ -1,7 +1,7 @@
 ---
 title: MST
 draft: true
-tags: []
+tags: [computer-science]
 ---
 # Minimum Spanning Tree
 

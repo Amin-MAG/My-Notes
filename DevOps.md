@@ -1,7 +1,7 @@
 ---
 title: DevOps
 draft: true
-tags: []
+tags: [devops, linux, docker]
 ---
 # 👷 DevOps
 
@@ -16,3 +16,8 @@ tags: []
 - [Vagrant](Vagrant.md)
 - [Automation](Automation.md)
 - [Gradle](Gradle.md)
+- [Kubernetes](Kubernetes.md)
+- [Observability](Observability.md)
+- [Prometheus](Prometheus.md)
+- [Logging](Logging.md)
+- [Git](Git.md)

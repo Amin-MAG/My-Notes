@@ -1,7 +1,7 @@
 ---
 title: gdb
 draft: true
-tags: []
+tags: [linux, programming, reference]
 ---
 # gdb
 

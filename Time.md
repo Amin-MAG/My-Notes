@@ -1,7 +1,7 @@
 ---
 title: Time
 draft: true
-tags: []
+tags: [physics, reference]
 ---
 # Time
 
@@ -63,7 +63,7 @@ dilated_time_leo = gravitational_time_dilation(delta_t_leo, R_leo)
 year = 60 * 60 * 24 * 365
 
 print("Gravitational time dilation for Jack:", dilated_time_jack * year)
-print("Gsravitational time dilation for Leo:", dilated_time_leo * year)
+print("Gravitational time dilation for Leo:", dilated_time_leo * year)
 print("Difference:", abs(dilated_time_jack * year - dilated_time_leo * year))
 ```
 

@@ -1,7 +1,7 @@
 ---
 title: Automation
 draft: true
-tags: []
+tags: [devops, reference]
 ---
 # Automation
 

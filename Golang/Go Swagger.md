@@ -1,7 +1,7 @@
 ---
 title: Go Swagger
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Swagger
 

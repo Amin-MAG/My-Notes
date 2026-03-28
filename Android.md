@@ -1,7 +1,7 @@
 ---
 title: Android
 draft: true
-tags: []
+tags: [mobile, programming, reference]
 ---
 # Android
 

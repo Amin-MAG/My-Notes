@@ -1,7 +1,7 @@
 ---
 title: Traefik
 draft: true
-tags: []
+tags: [devops, networking, reference]
 ---
 # Traefik
 

@@ -1,7 +1,7 @@
 ---
 title: OpenFaas
 draft: true
-tags: []
+tags: [cloud, reference, serverless]
 ---
 # Open Faas
 

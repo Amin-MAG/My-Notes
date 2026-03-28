@@ -1,7 +1,7 @@
 ---
 title: Interview
 draft: true
-tags: []
+tags: [reference, software-engineering]
 ---
 # Interviews
 

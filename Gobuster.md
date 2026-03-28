@@ -1,7 +1,7 @@
 ---
 title: Gobuster
 draft: true
-tags: []
+tags: [reference, security]
 ---
 # Gobuster
 

@@ -1,7 +1,7 @@
 ---
 title: Consul
 draft: true
-tags: []
+tags: [devops, distributed-systems, reference]
 ---
 # [Consul](https://github.com/hashicorp/consul)
 

@@ -1,7 +1,7 @@
 ---
 title: Season 03
 draft: true
-tags: []
+tags: [english]
 ---
 # Season 3
 

@@ -1,7 +1,7 @@
 ---
 title: WebSocket
 draft: true
-tags: []
+tags: [backend, networking, reference]
 ---
 # WebSocket
 

@@ -1,7 +1,7 @@
 ---
 title: Matplotlib
 draft: true
-tags: []
+tags: [data-science, programming, python, reference]
 ---
 # Matplotlib
 

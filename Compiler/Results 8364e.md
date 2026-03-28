@@ -1,7 +1,7 @@
 ---
 title: Results 8364e
 draft: true
-tags: []
+tags: [computer-science, course-notes]
 ---
 # Results
 

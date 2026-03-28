@@ -1,7 +1,7 @@
 ---
 title: Goroutines
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Goroutines
 
@@ -90,7 +90,7 @@ Additionally, channels can be typed based on the type of data they can transmit.
 
 ## Channels will wait until receive a value
 
-When sending data through a channel in Go, it doesn't matter how long it takes for the receiver to receive the data. Although, If you do not receive the data from channel, the channel will be blocked and can not send any new data.
+When sending data through a channel in Go, it doesn't matter how long it takes for the receiver to receive the data. Although, If you do not receive the data from channel, the channel will be blocked and cannot send any new data.
 
 ```go
 c := make(chan int)

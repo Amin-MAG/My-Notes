@@ -1,7 +1,7 @@
 ---
 title: Signal
 draft: true
-tags: []
+tags: [linux, programming, reference]
 ---
 # Signal Project - 01
 
@@ -186,7 +186,7 @@ As you see it becomes 6.8638 from 7.2410.
 
 ## Frequency Domain
 
-As the documents said, I used the snippet bellow to show the frequency domain
+As the documents said, I used the snippet below to show the frequency domain
 
 ```matlab
 clc;

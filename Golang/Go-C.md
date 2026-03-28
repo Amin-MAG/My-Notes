@@ -1,7 +1,7 @@
 ---
 title: Go C
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # C library in Go
 
@@ -44,7 +44,7 @@ gcc addition.c -o run
 ./run
 ```
 
-Since we can not have two main functions, I'm going to change the name `main` to `exec_cli`. We import the `"C"` package, which allows us to call C functions and use C types.
+Since we cannot have two main functions, I'm going to change the name `main` to `exec_cli`. We import the `"C"` package, which allows us to call C functions and use C types.
 
 ```go
 package main
@@ -104,7 +104,7 @@ typedef int (*callback)(int);
 void call_from_c(callback cb);  
   
 // Exporting the Go callback function  
-// We can not pass an anonymous/inline function.
+// We cannot pass an anonymous/inline function.
 // The function should be defined in C.
 extern int goCallback(int value);
 ```
@@ -150,7 +150,7 @@ func main() {
 }
 ```
 
-- Importing `callback.h` contains all of necessary informations
+- Importing `callback.h` contains all of necessary information
 - The `export` keyword on top of goCallback register the function in C.
 - Keep in mind to use `C.types` like `C.int` in the implementation of the function.
 - Also `go run main.go` might not work, because you need all of Go and C files. So you should run the `go build .` or `go run .`

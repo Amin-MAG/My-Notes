@@ -1,7 +1,7 @@
 ---
 title: Compiler
 draft: true
-tags: []
+tags: [computer-science, reference]
 ---
 # Compiler
 

@@ -1,7 +1,7 @@
 ---
 title: Go Garbage Collection
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Garbage Collection in Go
 

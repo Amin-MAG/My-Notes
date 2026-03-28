@@ -1,7 +1,7 @@
 ---
 title: Mobile Development
 draft: true
-tags: []
+tags: [mobile, programming, reference]
 ---
 # Mobile Development
 

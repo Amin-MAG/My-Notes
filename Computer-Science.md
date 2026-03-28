@@ -1,7 +1,7 @@
 ---
 title: Computer Science
 draft: false
-tags: []
+tags: [software-engineering, architecture]
 ---
 # Computer Science
 
@@ -13,3 +13,8 @@ tags: []
 - [Computing](Computing.md)
 - [Cryptocurrency](Cryptocurrency.md)
 - [Operating Systems](Operating-Systems.md)
+- [Network](Network.md)
+- [Security](Security.md)
+- [Databases](Databases.md)
+- [Programming Languages](ProgrammingLanguages.md)
+- [Turing Machine](Turing-Machine.md)

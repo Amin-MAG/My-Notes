@@ -1,7 +1,7 @@
 ---
 title: GoBot
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Go Bot
 

@@ -1,7 +1,7 @@
 ---
 title: The Big Bang Series
 draft: true
-tags: []
+tags: [english]
 ---
 # The Big Bang Theory
 

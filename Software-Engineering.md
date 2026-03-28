@@ -1,7 +1,7 @@
 ---
 title: Software Engineering
 draft: true
-tags: []
+tags: [reference, software-engineering]
 ---
 # 👨‍💻 Software Engineering
 
@@ -46,11 +46,11 @@ You can read more about testing on the [testing](Testing.md) page.
 
 ## Monitoring
 
-You can read more about testing on the [Monitoring](Monitoring.md) page.
+You can read more about monitoring on the [Monitoring](Monitoring.md) page.
 
 ## Observability and Tracing
 
-You can read more about testing on the [Observability](Observability.md) page.
+You can read more about observability on the [Observability](Observability.md) page.
 
 ## Miscellaneous
 
@@ -89,5 +89,5 @@ Such a rule traditionally consisted of three parts:
 
 # References
 
-- IUST Software Engineering Coruse
+- IUST Software Engineering Course
 - [Event condition action - Wikipedia](https://en.wikipedia.org/wiki/Event_condition_action)

@@ -1,7 +1,7 @@
 ---
 title: FastAPI
 draft: true
-tags: []
+tags: [programming, python]
 ---
 # Fast API
 

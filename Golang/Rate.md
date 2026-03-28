@@ -1,7 +1,7 @@
 ---
 title: Rate
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Rate
 
@@ -36,7 +36,7 @@ func main() {
 	for i := 0; i < 10; i++ {
 		// Reject the requests
 		if !limiter.Allow() {
-			fmt.Println("can not this process time:", i*400)
+			fmt.Println("cannot this process time:", i*400)
 		} else {
 			fmt.Println("Event processed")
 		}

@@ -1,7 +1,7 @@
 ---
 title: Scapy
 draft: true
-tags: []
+tags: [networking, python, reference, security]
 ---
 # Scapy
 

@@ -1,7 +1,7 @@
 ---
 title: Daily Vocabularies
 draft: true
-tags: []
+tags: [english]
 ---
 # Daily
 

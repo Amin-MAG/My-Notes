@@ -1,7 +1,7 @@
 ---
 title: Go Real time
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Golang, Real-Time Techs
 

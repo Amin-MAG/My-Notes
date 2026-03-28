@@ -1,7 +1,7 @@
 ---
 title: Mpitch
 draft: true
-tags: []
+tags: [linux, reference]
 ---
 # Mpich
 
@@ -43,11 +43,11 @@ int main(int argc, char** argv) {
     //send the second half to world2
     MPI_Send(b, 5, MPI_INT, 2, 0, MPI_COMM_WORLD);
 
-    //recieve world1 result
+    //receive world1 result
     int world1_result[5];
     MPI_Recv(world1_result, 5, MPI_INT, 1, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 
-    //recieve world2 result
+    //receive world2 result
     int world2_result[5];
     MPI_Recv(world2_result, 5, MPI_INT, 2, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 
@@ -78,7 +78,7 @@ int main(int argc, char** argv) {
     printf("\n");
 
   } else {
-    //recieve my_data from world0
+    //receive my_data from world0
     int my_data[5];
     MPI_Recv(my_data, 5, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 

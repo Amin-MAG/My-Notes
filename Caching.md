@@ -1,7 +1,7 @@
 ---
 title: Caching
 draft: true
-tags: []
+tags: [system-design, backend, reference]
 ---
 # Caching
 
@@ -29,7 +29,7 @@ The CDN first looks at its cache to see whether the request is available or not.
 
 ### Load Balancer
 
-Some kinds of load balancers cache the response of request which lead to less load on the origin server and less response time for users.
+Some kinds of load balancers cache the response of requests, which leads to less load on the origin server and less response time for users.
 
 ### Databases
 
@@ -38,3 +38,9 @@ Relational, Non-Relational, and any databases, in general, have a mechanism for 
 # See More
 
 - [Tips on Caching](https://www.youtube.com/watch?v=wh98s0XhMmQ)
+
+# See Also
+
+- [Redis](Redis.md)
+- [CDN](CDN.md)
+- [System Design Concepts](System-Design-Concepts.md)

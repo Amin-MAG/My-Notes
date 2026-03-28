@@ -1,7 +1,7 @@
 ---
 title: GoBenchmark
 draft: true
-tags: []
+tags: [golang, programming, reference]
 ---
 # Go Benchmark
 

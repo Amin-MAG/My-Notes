@@ -1,7 +1,7 @@
 ---
 title: Articles
 draft: true
-tags: []
+tags: [cloud, computer-science, reference]
 ---
 # Articles to read
 

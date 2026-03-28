@@ -1,7 +1,7 @@
 ---
 title: etcd
 draft: true
-tags: []
+tags: [distributed-systems, reference]
 ---
 # etcd
 

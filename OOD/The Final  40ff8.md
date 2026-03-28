@@ -1,7 +1,7 @@
 ---
 title: The Final  40ff8
 draft: true
-tags: []
+tags: [course-notes, software-engineering]
 ---
 # The Final Exam
 
@@ -83,7 +83,7 @@ The Three pillars of architectural design
 
 Abstraction is generalization of the behavior in a class. To make other child classes inherit from this parent and implement their behavior. used to avoid DRY. They have polymorphic behaviors. Here we have an `is` (has the same behavior) relation between the parent and child class.
 
-Encapsulation is to hide additional information. To hide complexity and define some interfaces as an API to communicate with different component of the program. We kinda limit the interaction between components. If the APIs has been defined well, changes shouldn’t break other components.
+Encapsulation is to hide additional information. To hide complexity and define some interfaces as an API to communicate with different component of the program. We kind of limit the interaction between components. If the APIs has been defined well, changes shouldn’t break other components.
 
 *Modularization is the process of separating the functionality of a program into independent, interchangeable modules, such that each contains everything necessary to execute only one aspect of the desired functionality.* A good point of this modular code base for a backend project is that making it to some micro services is much easier than non-modular spaghetti code.
 

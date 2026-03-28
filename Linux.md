@@ -1,7 +1,7 @@
 ---
 title: Linux
 draft: false
-tags: []
+tags: [linux, devops]
 ---
 # Linux
 

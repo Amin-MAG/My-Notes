@@ -1,7 +1,7 @@
 ---
 title: ClickHouse
 draft: true
-tags: []
+tags: [programming, python]
 ---
 # ClickHouse
 

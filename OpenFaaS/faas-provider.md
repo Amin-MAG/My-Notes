@@ -1,7 +1,7 @@
 ---
 title: faas provider
 draft: true
-tags: []
+tags: [cloud, serverless]
 ---
 # faas provider
 

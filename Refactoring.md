@@ -1,7 +1,7 @@
 ---
 title: Refactoring
 draft: true
-tags: []
+tags: [software-engineering, reference]
 ---
 # Refactorings
 
@@ -139,4 +139,4 @@ tags: []
 
 # Resources
 
-- [Refactoring gru](https://refactoring.guru/)
+- [Refactoring Guru](https://refactoring.guru/)

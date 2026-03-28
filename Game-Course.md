@@ -1,7 +1,7 @@
 ---
 title: Game Course
 draft: true
-tags: []
+tags: [reference]
 ---
 # Game Course
 

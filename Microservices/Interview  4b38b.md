@@ -1,7 +1,7 @@
 ---
 title: Interview  4b38b
 draft: true
-tags: []
+tags: [architecture, reference, software-engineering, system-design]
 ---
 # Interview Questions
 

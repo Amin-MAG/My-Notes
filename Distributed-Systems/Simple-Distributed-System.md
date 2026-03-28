@@ -1,7 +1,7 @@
 ---
 title: Simple Distributed System
 draft: true
-tags: []
+tags: [distributed-systems]
 ---
 # Build a simple distributed system
 

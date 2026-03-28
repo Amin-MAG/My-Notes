@@ -1,7 +1,7 @@
 ---
 title: Memory Management
 draft: true
-tags: []
+tags: [linux, reference]
 ---
 # Memory Management
 

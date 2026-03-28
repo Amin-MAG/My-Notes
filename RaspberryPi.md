@@ -1,7 +1,7 @@
 ---
 title: RaspberryPi
 draft: true
-tags: []
+tags: [embedded-systems, hardware, linux]
 ---
 # RaspberryPi
 

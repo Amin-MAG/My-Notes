@@ -1,6 +1,6 @@
 ---
 title: Knative
 draft: true
-tags: []
+tags: [devops, kubernetes]
 ---
 # Knative

@@ -1,7 +1,7 @@
 ---
 title: Game AI ea18a
 draft: true
-tags: []
+tags: [course-notes, reference]
 ---
 # Game AI
 

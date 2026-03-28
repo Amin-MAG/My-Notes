@@ -1,7 +1,7 @@
 ---
 title: Git
 draft: true
-tags: []
+tags: [software-engineering, devops, reference]
 ---
 # Git
 

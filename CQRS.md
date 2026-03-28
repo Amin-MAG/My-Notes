@@ -1,7 +1,7 @@
 ---
 title: CQRS
 draft: true
-tags: []
+tags: [architecture, system-design, reference]
 ---
 # CQRS (Command Query Responsibility Segregation)
 
@@ -17,7 +17,6 @@ Here are some key advantages of using CQRS
 
 ## Command Side
 
-- It deals with the creation, modification, and deletion of data.
 - It deals with the creation, modification, and deletion of data.
 - It typically uses a separate data store optimized for writes, which may be different from the data store used for reading.
 

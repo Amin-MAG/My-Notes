@@ -1,7 +1,7 @@
 ---
 title: Hashcat
 draft: true
-tags: []
+tags: [reference, security]
 ---
 # Hashcat
 

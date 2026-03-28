@@ -1,7 +1,7 @@
 ---
 title: Software Design
 draft: true
-tags: []
+tags: [reference, software-engineering]
 ---
 # Design
 
@@ -243,7 +243,7 @@ The systems that work with plenty of data.
     - Better performance because of less response time. (Geographical example about google)
     
     <aside>
-    💡 Note: Mirrors just look act like systems but can not change or update things.
+    💡 Note: Mirrors just look act like systems but cannot change or update things.
     
     </aside>
     
@@ -252,7 +252,7 @@ The systems that work with plenty of data.
 
 ### CAP Theory
 
-It says you can not have these three together.
+It says you cannot have these three together.
 
 - Consistency
 - Availability
@@ -335,7 +335,7 @@ It was the bearing of Web APIs and Web Services that we can use. The communicati
 
 Rendering is an embarrassingly parallel app.
 
-GPU should be a container we can not use virtualization. 
+GPU should be a container we cannot use virtualization. 
 
 To have Service-oriented architecture, Here are the basic laws.
 

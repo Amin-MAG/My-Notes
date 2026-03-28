@@ -1,7 +1,7 @@
 ---
 title: ffmpeg
 draft: true
-tags: []
+tags: [linux]
 ---
 # ffmpeg
 

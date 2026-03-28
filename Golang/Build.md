@@ -1,7 +1,7 @@
 ---
 title: Build
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Build Executive Binaries
 

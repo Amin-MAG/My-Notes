@@ -1,7 +1,7 @@
 ---
 title: Bcrypt
 draft: true
-tags: []
+tags: [programming, python]
 ---
 # Bcrypt
 

@@ -1,7 +1,7 @@
 ---
 title: DynamoDB
 draft: true
-tags: []
+tags: [cloud, databases, reference]
 ---
 # Introduction of Dynamo DB
 

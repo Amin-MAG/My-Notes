@@ -1,7 +1,7 @@
 ---
 title: EMQX
 draft: true
-tags: []
+tags: [backend, reference]
 ---
 # EMQX
 

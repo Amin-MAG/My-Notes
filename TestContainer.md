@@ -1,7 +1,7 @@
 ---
 title: TestContainer
 draft: true
-tags: []
+tags: [reference, software-engineering]
 ---
 # TestContainer
 
@@ -123,7 +123,7 @@ func TestAddUser(t *testing.T) {
 	assert.NoError(t, err)
 
 	db, err := ConnectWithURI(uri)
-	assert.NoError(t, err, "can not connect to the database", err)
+	assert.NoError(t, err, "cannot connect to the database", err)
 
 	phoneNumber := "981727375662"
 	email := "test@gmail.com"

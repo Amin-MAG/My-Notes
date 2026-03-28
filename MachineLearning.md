@@ -1,25 +1,25 @@
 ---
 title: MachineLearning
 draft: true
-tags: []
+tags: [ai-ml, data-science]
 ---
 # Machine Learning
 
 ## Introduction
 
-It is a subset of AI which is more statistical.
+It is a subset of [Artificial Intelligence](Artificial-Intelligence.md) that is more statistical.
 
-The process of machine learning consists of
+The process of machine learning consists of:
 
-- Aggregation of data
+- Aggregating data
 
 - Cleaning data
 
-- Select the training algorithm and create models
+- Selecting the training algorithm and creating models
 
-- Training and testing the model 
+- Training and testing the model
 
-- Predict new cases
+- Predicting new cases
 
 ### Types of predictions
 
@@ -29,27 +29,27 @@ The process of machine learning consists of
 
 - Clustering - Bank loans
 
-- Credit card fraud - Anormaly detection
+- Credit card fraud - Anomaly detection
 
 - Recommender - Netflix recommendations
 
-### Supercised VS Unsupervised
+### Supervised vs. Unsupervised
 
 - Supervised - Teaching the model by labeling. (Classification, Regression)
 
-- Unsuperviesed - It works on its own to discover the information without no labeling. (Clustering)
+- Unsupervised - The model works on its own to discover information without labeling. (Clustering)
 
 ## Regression
 
-Regression is the process of predicting a continuous value. They can be Linear or Non-Linear.
+Regression is the process of predicting a continuous value. They can be linear or non-linear.
 
-- Simple - Only on independent X
+- Simple - Only one independent X
 
-- Multiple - Multiple independant Xs
+- Multiple - Multiple independent Xs
 
 ### Applications
 
-Each scenario that you give the inputs and the result is a continuous value.
+Any scenario where you provide inputs and the result is a continuous value.
 
 - Household Price
 
@@ -67,11 +67,11 @@ Each scenario that you give the inputs and the result is a continuous value.
 
 - Fast Forest quantile
 
-- Linear, Polynominal, Lasso, Stepwise, Ridege
+- Linear, Polynomial, Lasso, Stepwise, Ridge
 
 - Bayesian Linear
 
-- Nerual Network
+- Neural Network
 
 - Decision Forest
 
@@ -89,7 +89,7 @@ $$
 
 ### Multiple Linear Regression
 
-The feature consists of multiple factors and features. Sometimes if we add more features the final result will become better.
+The equation consists of multiple factors and features. Sometimes adding more features improves the final result.
 
 $$
 y=\theta_0 + \theta_1x_1 + \theta_2x_2 + \theta_3x_3 + ...
@@ -97,25 +97,25 @@ $$
 
 ### Non-Linear Regression
 
-Sometimes, When you visualize the data, You can not find a linear solution to fit the answer. 
+Sometimes, when you visualize the data, you cannot find a linear solution to fit the answer.
 
 You can define new $\hat{X}$s that are equal to $\frac{1}{X}$, $X^2$, and so on. 
 
 ## Model Evaluation
 
-The goal is to build a model to predict an unknown scenario. There are two main methods
+The goal is to build a model to predict unknown scenarios. There are two main methods:
 
-- Train and Test are on same data
-  
+- Train and test on the same data
+
   - Not always good
-  
+
   - It causes overfitting
 
-- Train and Test are splited
+- Train and test are split
 
 ### MAE - Mean Absolute Error
 
-It's so simple.
+The simplest error metric.
 
 $$
 MAE=\frac{1}{n}\Sigma |y_i-\hat{y}_i|
@@ -131,7 +131,7 @@ $$
 
 ### RMSE
 
-It has the same unit with the first one.
+It has the same unit as the original value.
 
 $$
 MSE=\sqrt{\frac{1}{n}\Sigma(y_i-\hat{y}_i)^2}

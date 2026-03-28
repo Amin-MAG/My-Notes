@@ -1,7 +1,7 @@
 ---
 title: Cloud Computing
 draft: true
-tags: []
+tags: [cloud, computer-science, reference]
 ---
 # Cloud Computing
 

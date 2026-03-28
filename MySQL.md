@@ -1,7 +1,7 @@
 ---
 title: MySQL
 draft: true
-tags: []
+tags: [databases, backend, reference]
 ---
 # MySQL
 
@@ -11,6 +11,11 @@ tags: []
 mysql -u <USERNAME> -h <HOST> -P <PORT> -p
 ```
 
+# See Also
+
+- [Databases](Databases.md)
+- [PostgreSQL](PostgreSQL.md)
+- [SQLite3](SQLite3.md)
 ## Dump Data
 
 To dump the data of a specific table

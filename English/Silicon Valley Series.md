@@ -1,7 +1,7 @@
 ---
 title: Silicon Valley Series
 draft: true
-tags: []
+tags: [english]
 ---
 # Silicon Valley
 

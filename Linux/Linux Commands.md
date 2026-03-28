@@ -1,7 +1,7 @@
 ---
 title: Linux Commands
 draft: false
-tags: []
+tags: [linux]
 ---
 # Linux Commands
 
@@ -110,7 +110,7 @@ find . -mmin -30
 find /tmp/ -user amin
 find /tmp/ -group amin
 
-# You can not belongings to group or user
+# You cannot belongings to group or user
 find /tmp/ -nouser amin
 find /tmp/ -nogroup amin
 find /tmp/ ! -user amin
@@ -540,7 +540,7 @@ source ./tmp.txt
 set +a
 ```
 
-You can create a template file like bellow
+You can create a template file like below
 
 ```bash
 Package: SPCU-Client
@@ -630,7 +630,7 @@ It can take the output of a command and passes it as an argument for another com
 ls | xargs
 ls | xargs wc
 
-# It's more flexiable to 
+# It's more flexible to 
 echo "hi there" | xargs -I DATA echo hi DATA there!
 
 # Change xargs to expect NUL (``\0'') characters as separators
@@ -971,7 +971,7 @@ nice -n 14 ls
 sudo nice -n -14 ls
 ```
 
-**Notice:** non-root user can not set negative niceness for their tasks.
+**Notice:** non-root user cannot set negative niceness for their tasks.
 
 ### renice
 

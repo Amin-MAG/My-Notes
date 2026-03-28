@@ -1,7 +1,7 @@
 ---
 title: OpenTelemetry
 draft: true
-tags: []
+tags: [devops, reference]
 ---
 # Open Telemetry
 

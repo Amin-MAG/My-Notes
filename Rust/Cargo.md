@@ -1,7 +1,7 @@
 ---
 title: Cargo
 draft: true
-tags: []
+tags: [programming, rust]
 ---
 # Cargo 
 

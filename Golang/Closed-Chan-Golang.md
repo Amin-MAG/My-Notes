@@ -1,7 +1,7 @@
 ---
 title: Closed Chan Golang
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Tricky closed channel in Golang
 

@@ -1,7 +1,7 @@
 ---
 title: Nginx
 draft: true
-tags: []
+tags: [backend, networking, devops]
 ---
 # NGINX 
 

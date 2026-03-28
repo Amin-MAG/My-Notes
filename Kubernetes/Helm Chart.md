@@ -1,7 +1,7 @@
 ---
 title: Helm Chart
 draft: true
-tags: []
+tags: [devops, kubernetes]
 ---
 # What is Helm
 

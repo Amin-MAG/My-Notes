@@ -1,7 +1,7 @@
 ---
 title: Django
 draft: true
-tags: []
+tags: [backend, python, reference]
 ---
 # Django
 
@@ -140,7 +140,7 @@ python3 manage.py runserver
 python3 manage.py shell
 
 # For migrations, to make and apply migrations
-# You can not to specify the app name, then it will migrate for all
+# You cannot to specify the app name, then it will migrate for all
 python3 manage.py makemigrations
 python3 manage.py migrate
 

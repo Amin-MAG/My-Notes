@@ -1,7 +1,7 @@
 ---
 title: ObjectOrientedDesign
 draft: true
-tags: []
+tags: [software-engineering, architecture, course-notes]
 ---
 # OOD
 
@@ -52,11 +52,11 @@ The main answer or approach:
 
 Components use the API to interact and communicate with this component, So any changes in this component shouldn’t break the others (If the APIs are designed perfectly).
 
-We kinda limit the interaction between components.
+We kind of limit the interaction between components.
 
 ## DRY
 
-Against of Copy-Paste programming. Don’t Repeat Yourself!
+Against copy-paste programming. Don’t Repeat Yourself!
 
 - It’s difficult to apply changes to the code
 - Makes terrible bugs
@@ -94,7 +94,7 @@ Three part of a use case
 - Start and Stop: Describe the start and stop state clearly and precisely.
 - External Initiators
 
-The constant thing in softwares is change 🙂
+The constant thing in software is change 🙂
 
 # Software in Real World
 
@@ -140,7 +140,7 @@ Implicitly represents multiple path and scenarios.
 
 `Technical`
 
-On contrast of use cases, We can talk about the technical aspect of system. It describes a single feature or unit of work for a developer. The user stories should be designed in a way that is testable. (It means that it shouldn’t be vague) 
+In contrast to use cases, we can talk about the technical aspect of the system. It describes a single feature or unit of work for a developer. The user stories should be designed in a way that is testable. (It means that it shouldn’t be vague) 
 
 The user stories shouldn’t get too long. 
 
@@ -190,7 +190,7 @@ This is another point of view for a large scale project.
 # Design
 
 - Designs have a purpose.
-- Designs have enough informations so that someone can implement it.
+- Designs have enough information so that someone can implement it.
 - There are different styles of designs.
 
 It is the process of planning how to solve a problem through software. It’s a blueprint for developer. 
@@ -222,7 +222,7 @@ Classes are about being not doing!
 
 ## Speculative Development
 
-It’s kinda over engineering
+It’s kind of over engineering
 
 ## Summary
 
@@ -313,7 +313,7 @@ No one can change the class’s implementation. The class can be extended (With 
 
 ## Single Responsibility Principle (SRP)
 
-A systematic check is to use this table bellow. You use the class name for the first place and the method nam for the other.
+A systematic check is to use this table below. You use the class name for the first place and the method nam for the other.
 
 ![Untitled](OOD/Untitled%207.png)
 
@@ -331,15 +331,15 @@ The subtypes should be substitutable for their base types.
 
 ![Untitled](OOD/Untitled%2010.png)
 
-We can use some interfaces here to fix the unexpected behavior of the child. Another example of this issue is when we create a bird class that has `fly()` method, But the ostrich, the child of this class, can not `fly()`
+We can use some interfaces here to fix the unexpected behavior of the child. Another example of this issue is when we create a bird class that has `fly()` method, But the ostrich, the child of this class, cannot `fly()`
 
 ## Interface Segregation Principle (ISP)
 
-We should split the interfaces to make a child implementation more flexiable.
+We should split the interfaces to make a child implementation more flexible.
 
-## Dependency Inversion Principle (LIP)
+## Dependency Inversion Principle (DIP)
 
-A high-level module must not depends on the low-level module, It should depend on abstractions. 
+A high-level module must not depend on a low-level module; it should depend on abstractions.
 
 # Other pages
 

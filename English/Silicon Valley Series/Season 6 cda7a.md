@@ -1,7 +1,7 @@
 ---
 title: Season 6 cda7a
 draft: true
-tags: []
+tags: [english]
 ---
 # Season 6
 

@@ -1,7 +1,7 @@
 ---
 title: Season 07
 draft: true
-tags: []
+tags: [english]
 ---
 # Season 7
 

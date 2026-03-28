@@ -1,7 +1,12 @@
 ---
 title: Sharding
 draft: true
-tags: []
+tags: [databases, distributed-systems, system-design, reference]
 ---
 # Sharding
 
+# See Also
+
+- [Databases](Databases.md)
+- [Distributed Systems](Distributed-Systems.md)
+- [CAP Theorem](CAP.md)

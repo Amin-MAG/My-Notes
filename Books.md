@@ -1,7 +1,7 @@
 ---
 title: Books
 draft: true
-tags: []
+tags: [reference]
 ---
 # Books
 

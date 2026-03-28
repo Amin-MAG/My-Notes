@@ -1,7 +1,7 @@
 ---
 title: Arduino
 draft: true
-tags: []
+tags: [embedded-systems, hardware, c]
 ---
 # Arduino
 

@@ -1,7 +1,7 @@
 ---
 title: Wireshark  66880
 draft: true
-tags: []
+tags: [networking]
 ---
 # Wireshark Assignment I
 

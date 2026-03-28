@@ -1,7 +1,7 @@
 ---
 title: NetworkX
 draft: true
-tags: []
+tags: [computer-science]
 ---
 # NetworkX
 

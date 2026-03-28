@@ -1,7 +1,7 @@
 ---
 title: Proxy
 draft: true
-tags: []
+tags: [networking, reference, system-design]
 ---
 # Proxy
 

@@ -1,7 +1,7 @@
 ---
 title: Go Testing
 draft: true
-tags: []
+tags: [golang, programming, reference, software-engineering]
 ---
 # Testing
 

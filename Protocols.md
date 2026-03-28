@@ -1,7 +1,7 @@
 ---
 title: Protocols
 draft: true
-tags: []
+tags: [networking, reference]
 ---
 # Protocols
 

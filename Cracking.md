@@ -1,7 +1,7 @@
 ---
 title: Cracking
 draft: true
-tags: []
+tags: [reference, security]
 ---
 # Zip files
 

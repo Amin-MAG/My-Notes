@@ -1,7 +1,7 @@
 ---
 title: ArgoCD
 draft: true
-tags: []
+tags: [devops, kubernetes, reference]
 ---
 # Argo CD
 

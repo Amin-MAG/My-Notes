@@ -1,13 +1,13 @@
 ---
 title: Blockchain
 draft: true
-tags: []
+tags: [distributed-systems, cryptography, reference]
 ---
 # Blockchain
 
-A blockchain is a distributed ledger that is completely open to anyone. Once a some data has been recorded inside of a blockchain, it becomes very difficult to change it.
+A blockchain is a distributed ledger that is completely open to anyone. Once some data has been recorded inside a blockchain, it becomes very difficult to change it.
 
-In summary, it is like a distributed database that everyone can have a copy of that, but they can not change the records.
+In summary, it is like a distributed database that everyone can have a copy of that, but they cannot change the records.
 
 ## Block
 
@@ -15,11 +15,11 @@ Each block in the blockchain contains the data, hash of the block, and the hash 
 
 ### Genesis Block
 
-Genesis block is the parent of all of blocks. It is a special block, because it does not have a parent.
+The genesis block is the parent of all blocks. It is a special block, because it does not have a parent.
 
 ## Proof of work
 
-Changing a block in blockchain make it invalid. Using hashes is not enough to prevent tempering, because nowadays computers are fast enough to calculate hundreds of thousands of hashes per second. It is possible to to tamper a block and recalculate all of hashes of other blocks to manipulate.
+Changing a block in the blockchain makes it invalid. Using hashes is not enough to prevent tampering, because nowadays computers are fast enough to calculate hundreds of thousands of hashes per second. It is possible to tamper with a block and recalculate the hashes of all other blocks to manipulate the chain.
 
 Proof of work is a mechanism to slow down the creation of new blocks. For instance, proof of work of Bitcoin takes about 10 minutes to be calculated. By use of proof of work, It is much harder to manipulate, because you need to calculate the proof of work for each one of the blocks.
 
@@ -29,7 +29,7 @@ In addition to the proof of work, Blockchains also use the P2P networks to secur
 
 ### Joining to the network
 
-When someone joins the network, they gets the full copy of the blockchain.
+When someone joins the network, they get the full copy of the blockchain.
 
 ### Creating a new Block
 
@@ -37,12 +37,12 @@ The created block is sent to everyone on the network. Each node verifies the blo
 
 ## Difficulty Adjustment
 
-Day by day, the power of computing can be stronger than before. Maybe a proof of work in future could be done in less than 5 minutes. To resolve this issue, each two weeks, blockchain adjust a difficulty to make it easier or harder to perform the proof of work. In summary the reason for this mechanism is to
+Day by day, the power of computing can be stronger than before. Maybe a proof of work in future could be done in less than 5 minutes. To resolve this issue, every two weeks, the blockchain adjusts the difficulty to make it easier or harder to perform the proof of work. In summary the reason for this mechanism is to
 
 1. Adjust the difficulty of creating new block over time while computers gain more powerful capabilities
 2. Adjust the number of miners in the network. More number of miners means that the problem can be solved in a shorter amount of time, while having less miners cause a longer amount of time.
 
-> More difficulty means that the operation consumes more electricity than it generates in rewards. This is kind of against of being distributed, because they would be centralized for big miners.
+> More difficulty means that the operation consumes more electricity than it generates in rewards. This works against decentralization, because they would be centralized for big miners.
 
 ## Tamper with the Blockchain
 

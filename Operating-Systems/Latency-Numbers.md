@@ -1,7 +1,7 @@
 ---
 title: Latency Numbers
 draft: true
-tags: []
+tags: [linux, reference]
 ---
 # Latency Numbers
 

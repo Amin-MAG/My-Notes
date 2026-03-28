@@ -1,7 +1,7 @@
 ---
 title: API Gatewa 005bc
 draft: true
-tags: []
+tags: [architecture, system-design]
 ---
 # API Gateway
 

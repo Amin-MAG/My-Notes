@@ -1,11 +1,11 @@
 ---
 title: Tile38
 draft: true
-tags: []
+tags: [databases, backend, reference]
 ---
 # Tile 38
 
-It is a database which is based on the Redis database. It can have both persistent or in-memory mechanism to store the data. This database is specifically for geospacitial purposes.
+It is a database based on Redis. It can use both persistent and in-memory mechanisms to store data. This database is specifically designed for geospatial purposes.
 
 You can use the `tile38-cli` to connect to the instance.
 
@@ -21,7 +21,7 @@ SET areas 1 object '{ "type": "FeatureCollection", "features": [ { "type": "Feat
 
 - The `area` is the key of the data
 - The number `1` is the ID of this object in the `areas` key
-- Here we have Object/GeoJson, I can be Point , Bounding Box, etc.
+- Here we have Object/GeoJSON. It can be a Point, Bounding Box, etc.
 
 ## DEL
 
@@ -41,7 +41,7 @@ KEYS *
 
 ## SCAN
 
-To retrieve all IDs of a key collections
+To retrieve all IDs of a key collection:
 
 ```
 SCAN areas 
@@ -49,7 +49,7 @@ SCAN areas
 
 ## GET
 
-To retrieve entity with a specific ID
+To retrieve an entity with a specific ID:
 
 ```
 GET areas 12342 
@@ -59,7 +59,7 @@ GET areas 12342
 
 ## INTERSECTS
 
-Finds the all of objects in the key that have an intersection with the given object.
+Finds all objects in the key that intersect with the given object.
 
 ```
 INTERSECTS camps CIRCLE 30.23123 31.2312 100
@@ -69,4 +69,9 @@ This command will find all of the objects that have intersection with a circle w
 
 ## NEARBY
 
-Use a specific algorithm to find the nears places. You can use `LIMIT` keyword to avoid the query to be continued for all objects. 
+Uses a specific algorithm to find the nearest places. You can use the `LIMIT` keyword to prevent the query from scanning all objects.
+
+# See Also
+
+- [Databases](Databases.md)
+- [Redis](Redis.md)

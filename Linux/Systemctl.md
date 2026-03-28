@@ -1,7 +1,7 @@
 ---
 title: Systemctl
 draft: true
-tags: []
+tags: [linux]
 ---
 # Systemctl
 
@@ -115,7 +115,7 @@ systemctl reset-failed
 
 ## Resources
 
-Most of the article is from this link bellow.
+Most of the article is from this link below.
 
 [How To Add Your Own Services to systemd For Easier Management](https://www.cloudsavvyit.com/3092/how-to-add-your-own-services-to-systemd-for-easier-management/)
 

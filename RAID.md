@@ -1,7 +1,7 @@
 ---
 title: RAID
 draft: true
-tags: []
+tags: [hardware, reference]
 ---
 # RAID
 

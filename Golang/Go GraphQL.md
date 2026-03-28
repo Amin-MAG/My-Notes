@@ -1,7 +1,7 @@
 ---
 title: Go GraphQL
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Graph QL
 

@@ -1,7 +1,7 @@
 ---
 title: Cloud
 draft: true
-tags: []
+tags: [cloud, reference]
 ---
 
 # ☁️ Cloud
@@ -14,3 +14,6 @@ tags: []
 - [Backend Development](Backend-Development.md)
 - [OpenStack](OpenStack.md)
 - [Serverless](Serverless.md)
+- [Docker](Docker.md)
+- [Terraform](Terraform.md)
+- [CDN](CDN.md)

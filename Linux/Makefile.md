@@ -1,7 +1,7 @@
 ---
 title: Makefile
 draft: false
-tags: []
+tags: [linux]
 ---
 # Makefile
 

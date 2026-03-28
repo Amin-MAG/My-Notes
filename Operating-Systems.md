@@ -1,7 +1,7 @@
 ---
 title: Operating Systems
 draft: false
-tags: []
+tags: [linux, system-design]
 ---
 # Operating System
 

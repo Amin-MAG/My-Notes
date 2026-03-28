@@ -1,7 +1,7 @@
 ---
 title: Friends Series
 draft: true
-tags: []
+tags: [english]
 ---
 # Friends
 

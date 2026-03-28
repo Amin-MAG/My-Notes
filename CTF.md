@@ -1,7 +1,7 @@
 ---
 title: CTF
 draft: true
-tags: []
+tags: [reference, security]
 ---
 # CTF
 

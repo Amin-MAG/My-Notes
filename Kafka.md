@@ -1,7 +1,7 @@
 ---
 title: Kafka
 draft: true
-tags: []
+tags: [databases, distributed-systems, reference]
 ---
 # Kafka
 

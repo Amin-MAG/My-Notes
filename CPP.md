@@ -1,7 +1,7 @@
 ---
 title: CPP
 draft: true
-tags: []
+tags: [c, programming, reference]
 ---
 # CPP
 

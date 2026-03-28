@@ -1,7 +1,7 @@
 ---
 title: TOTP
 draft: true
-tags: []
+tags: [security, cryptography, reference]
 ---
 # TOTP
 
@@ -13,7 +13,7 @@ TOTP is the cornerstone of the Initiative for Open Authentication (OATH), and is
 
 HMAC-based one-time password (HOTP) is a one-time password (OTP) algorithm based on hash-based message authentication codes (HMAC). It is a cornerstone of the Initiative for Open Authentication (OATH).
 
-To establish TOTP authentication, the authenticator and authenticator must pre-establish both the [HOTP parameters](https://en.wikipedia.org/wiki/HMAC-based_One-time_Password_algorithm#parameters) and the following TOTP parameters:
+To establish TOTP authentication, the authenticator and the authenticated must pre-establish both the [HOTP parameters](https://en.wikipedia.org/wiki/HMAC-based_One-time_Password_algorithm#parameters) and the following TOTP parameters:
 
 Both the authenticator and the authenticated compute the TOTP value, then the authenticator checks whether the TOTP value supplied by the authenticated matches the locally generated TOTP value. Some authenticators allow values that should have been generated before or after the current time in order to account for slight [clock skews](https://en.wikipedia.org/wiki/Clock_skew), network latency, and user delays.
 
@@ -52,7 +52,7 @@ To enroll a user, you must first generate an OTP for them.  Google Authenticator
 2. Display the Key's Secret and QR-Code for the User. `key.Secret()` and `key.Image(...)`.
 3. Test that the user can successfully use their TOTP. `totp.Validate(...)`.
 4. Store TOTP Secret for the User in your backend. `key.Secret()`
-5. Provide the user with "recovery codes". (See Recovery Codes bellow)
+5. Provide the user with "recovery codes". (See Recovery Codes below)
 
 ```go
 import (

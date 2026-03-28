@@ -1,7 +1,7 @@
 ---
 title: ENT
 draft: true
-tags: []
+tags: [hardware, reference]
 ---
 # ENT Database
 

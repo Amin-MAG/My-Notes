@@ -1,7 +1,7 @@
 ---
 title: Telecommunication
 draft: true
-tags: []
+tags: [networking, reference]
 ---
 # Telecommunication
 

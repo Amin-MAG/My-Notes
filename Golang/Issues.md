@@ -1,7 +1,7 @@
 ---
 title: Issues
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Issues
 

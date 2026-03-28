@@ -1,7 +1,7 @@
 ---
 title: Go Effective
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Go Effective
 

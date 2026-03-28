@@ -1,7 +1,7 @@
 ---
 title: Resource Scheduling
 draft: true
-tags: []
+tags: [cloud, computer-science, reference]
 ---
 # Resource Scheduling
 

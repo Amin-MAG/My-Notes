@@ -1,7 +1,7 @@
 ---
 title: GoPatterns
 draft: true
-tags: []
+tags: [golang, programming, reference]
 ---
 # Go Patterns
 

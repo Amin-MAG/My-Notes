@@ -1,7 +1,7 @@
 ---
 title: Osmium
 draft: true
-tags: []
+tags: [reference]
 ---
 # Osmium
 

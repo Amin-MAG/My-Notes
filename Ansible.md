@@ -1,7 +1,7 @@
 ---
 title: Ansible
 draft: true
-tags: []
+tags: [devops, linux, reference]
 ---
 # Ansible
 

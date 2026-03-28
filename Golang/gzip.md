@@ -1,7 +1,7 @@
 ---
 title: gzip
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Gzip
 

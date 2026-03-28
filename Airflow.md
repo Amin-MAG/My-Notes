@@ -1,7 +1,7 @@
 ---
 title: Airflow
 draft: true
-tags: []
+tags: [data-engineering, devops, python, reference]
 ---
 # Apache Airflow
 

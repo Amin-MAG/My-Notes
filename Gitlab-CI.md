@@ -1,7 +1,7 @@
 ---
 title: Gitlab CI
 draft: true
-tags: []
+tags: [devops, reference]
 ---
 # Gitlab CI
 

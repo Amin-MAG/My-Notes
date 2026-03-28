@@ -1,7 +1,7 @@
 ---
 title: Security
 draft: true
-tags: []
+tags: [security, cryptography, networking]
 ---
 # Security
 
@@ -31,9 +31,9 @@ SQL injection or SQLi refers to attacks against relational databases such as `M
 
 # WIFI
 
-### Broad-Forcing
+### Brute-Forcing
 
-You can use different wordlists to attack close WIFIs.
+You can use different wordlists to attack closed Wi-Fi networks.
 
 You can also create your wordlist using the `crunch` command.
 
@@ -41,7 +41,7 @@ You can also create your wordlist using the `crunch` command.
 # Install crunch
 sudo apt install crunch
 
-# Create new wordlist by specifing length and letters
+# Create new wordlist by specifying length and letters
 crunch 6 6 0123456789abcdef -o 6char_wordlist.txt
 ```
 

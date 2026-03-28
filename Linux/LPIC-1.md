@@ -1,7 +1,7 @@
 ---
 title: LPIC 1
 draft: false
-tags: []
+tags: [linux]
 ---
 # LPIC I
 
@@ -482,7 +482,7 @@ Having separate partition for `/boot` ?
 
 1. You can recover your system using `/boot` partition.
 
-2. You can not encrypt `/boot` or load it from network because the UEFI or BIOS needs to read the data from this partition, but by separating `/boot/` and `/` partitions you can encrypt just `/` partition, or you even can put the `/` in another disk drive. (It is much cleaner.)
+2. You cannot encrypt `/boot` or load it from network because the UEFI or BIOS needs to read the data from this partition, but by separating `/boot/` and `/` partitions you can encrypt just `/` partition, or you even can put the `/` in another disk drive. (It is much cleaner.)
 
 ---
 
@@ -554,7 +554,7 @@ menuentry "Windows" {
 }
 ```
 
-To aggregate seperate config files and update the new configuration file.
+To aggregate separate config files and update the new configuration file.
 
 ```bash
 grub2-mkeconfig > /boot/grub2/grub.cfg
@@ -1494,7 +1494,7 @@ You can Also use `at` to schedule a job for a specific time.
 There 4 files for managing access of `cron` and `at` commands.
 
 - `/etc/cron.allow`: the whitelist of users that can use cron jobs
-- `/etc/cron.deny`: the blacklist of users that can not use cron jobs
+- `/etc/cron.deny`: the blacklist of users that cannot use cron jobs
 - `/etc/at.allow`: the whitelist of users that can use at jobs
 - `/etc/at.deny`: the blacklist of users that can use at jobs
 
@@ -1632,7 +1632,7 @@ The OS also has a mechanism to keep the time accurate by using a protocol called
 
 ### ntpd
 
-An ntp service controls and updates the time with global time. You should either use the `ntp` service or `ntpdate` to keep your system time updated. You can not use both.
+An ntp service controls and updates the time with global time. You should either use the `ntp` service or `ntpdate` to keep your system time updated. You cannot use both.
 
 The configuration of `ntp` service is in `/etc/ntp.conf`. You can add your time pools in this file.
 

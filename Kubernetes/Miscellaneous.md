@@ -1,7 +1,7 @@
 ---
 title: Miscellaneous
 draft: true
-tags: []
+tags: [devops, kubernetes]
 ---
 # Miscellaneous
 

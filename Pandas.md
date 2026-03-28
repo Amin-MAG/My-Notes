@@ -1,7 +1,7 @@
 ---
 title: Pandas
 draft: true
-tags: []
+tags: [data-science, python, reference]
 ---
 # Pandas
 

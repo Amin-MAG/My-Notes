@@ -1,7 +1,7 @@
 ---
 title: Go Generate
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Go Generate
 

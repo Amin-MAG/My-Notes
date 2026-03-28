@@ -1,7 +1,7 @@
 ---
 title: Message Brokers
 draft: true
-tags: []
+tags: [backend, distributed-systems, reference]
 ---
 # 💬 Message Brokers
 

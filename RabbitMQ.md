@@ -1,7 +1,7 @@
 ---
 title: RabbitMQ
 draft: true
-tags: []
+tags: [backend, distributed-systems, reference]
 ---
 # RabbitMQ
 

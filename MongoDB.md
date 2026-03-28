@@ -1,11 +1,11 @@
 ---
 title: MongoDB
 draft: true
-tags: []
+tags: [databases, backend, reference]
 ---
 # MongoDB
 
-Connect to a mongodb host
+Connect to a MongoDB host:
 
 ```bash
 mongosh mongodb://host:port
@@ -287,3 +287,8 @@ db.missions.aggregate([{$group: {campaign_id: "$campaign_id", count: {$sum : 1}}
 [MongoDB Cheat Sheet](https://gist.github.com/bradtraversy/f407d642bdc3b31681bc7e56d95485b6)
 
 [MongoDB Crash Course](https://www.youtube.com/watch?v=-56x56UppqQ)
+
+# See Also
+
+- [Databases](Databases.md)
+- [Elasticsearch](Elasticsearch.md)

@@ -1,7 +1,7 @@
 ---
 title: Homework 04 Theoretical
 draft: true
-tags: []
+tags: [ai-ml, course-notes]
 ---
 # NLP - Homework 04
 

@@ -1,7 +1,7 @@
 ---
 title: Jaeger
 draft: true
-tags: []
+tags: [devops, reference]
 ---
 # Jaeger
 

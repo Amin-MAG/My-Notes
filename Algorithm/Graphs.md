@@ -1,7 +1,7 @@
 ---
 title: Graphs
 draft: true
-tags: []
+tags: [computer-science]
 ---
 # Graphs
 

@@ -1,7 +1,7 @@
 ---
 title: TypeScript
 draft: true
-tags: []
+tags: [javascript, programming, reference]
 ---
 # TypeScript
 

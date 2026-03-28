@@ -1,7 +1,7 @@
 ---
 title: Distributed Systems
 draft: true
-tags: []
+tags: [distributed-systems, reference]
 ---
 # Distributed Systems
 
@@ -11,14 +11,14 @@ tags: []
 
 - Simpler
 - Easier to understand
-- Can be more faster for a single user
+- Can be faster for a single user
 
 ## Distributed systems
 
 - More robust (It means that it can tolerate failures)
 - More reliable (If a computer fails, you can still keep on working)
 - More scalable (It means serving more users with a small number of computers)
-- More complex but it worth
+- More complex but worth it
 
 # Characteristic
 
@@ -41,7 +41,7 @@ This is the opposite of the Client-Server model and each one of the devices can 
 
 ## See more
 
-- [Build a simple ditributed system](Distributed-Systems/Simple-Distributed-System)
+- [Build a simple distributed system](Distributed-Systems/Simple-Distributed-System)
 - [Most used distributed systems patterns](Distributed-Systems/Distributed-Systems-Pattern)
 
 # Resources
@@ -51,3 +51,11 @@ This is the opposite of the Client-Server model and each one of the devices can 
 [The Client Server Model | Clients and Servers](https://www.youtube.com/watch?v=L5BlpPU_muY)
 
 [Distributed Systems | Distributed Computing Explained](https://www.youtube.com/watch?v=ajjOEltiZm4)
+
+# See Also
+
+- [CAP Theorem](CAP.md)
+- [ACID](ACID.md)
+- [Sharding](Sharding.md)
+- [Microservices](Microservices.md)
+- [Algorithm (Consensus)](Algorithm.md)

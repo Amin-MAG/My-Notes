@@ -1,7 +1,7 @@
 ---
 title: Orchestration
 draft: true
-tags: []
+tags: [cloud, computer-science, reference]
 ---
 # Orchestrating Serverless Workflows
 

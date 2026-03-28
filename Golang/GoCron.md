@@ -1,7 +1,7 @@
 ---
 title: GoCron
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Go Cron
 

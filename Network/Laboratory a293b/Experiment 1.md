@@ -1,7 +1,7 @@
 ---
 title: Experiment 1
 draft: true
-tags: []
+tags: [networking]
 ---
 # Experiment 1
 
@@ -162,7 +162,7 @@ Yes, It had an ARP reply packet too. I saw added IP address and MAC address in b
 
 ❓ Question 3
 
-I used the `ping` command to check the connection, but of course, they can not `ping` each other.
+I used the `ping` command to check the connection, but of course, they cannot `ping` each other.
 
 Due to subnet, they have different networks, and they are not reachable!
 

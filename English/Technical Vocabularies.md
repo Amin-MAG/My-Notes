@@ -1,7 +1,7 @@
 ---
 title: Technical Vocabularies
 draft: true
-tags: []
+tags: [english]
 ---
 # Technical
 

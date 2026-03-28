@@ -1,7 +1,7 @@
 ---
 title: Laboratory a293b
 draft: true
-tags: []
+tags: [networking]
 ---
 # Laboratory
 

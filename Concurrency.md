@@ -1,7 +1,7 @@
 ---
 title: Concurrency
 draft: true
-tags: []
+tags: [programming, reference]
 ---
 # Concurrency
 
@@ -83,8 +83,8 @@ limit the total CPU usage
 
 We can create as many thread or routines as we want, but We should consider the bottleneck in the real world. For instance, in computing, 
 
-- When a network can only handle a certain number of outbound connection
-- When a website can only handle a certain number of simultaneous connection
+- When a network can only handle a certain number of outbound connections
+- When a website can only handle a certain number of simultaneous connections
 
 And that's why we use worker pools.
 

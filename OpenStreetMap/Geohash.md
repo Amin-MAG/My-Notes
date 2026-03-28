@@ -1,7 +1,7 @@
 ---
 title: Geohash
 draft: true
-tags: []
+tags: [reference]
 ---
 # Geohash
 

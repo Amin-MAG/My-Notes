@@ -1,7 +1,7 @@
 ---
 title: Container Orchestrations
 draft: true
-tags: []
+tags: [devops, kubernetes, reference]
 ---
 # Container Orchestrations
 

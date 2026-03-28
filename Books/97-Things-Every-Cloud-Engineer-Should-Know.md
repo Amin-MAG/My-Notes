@@ -1,7 +1,7 @@
 ---
 title: 97 Things Every Cloud Engineer Should Know
 draft: true
-tags: []
+tags: [reference]
 ---
 # 97 Things Every Cloud Engineer Should Know
 

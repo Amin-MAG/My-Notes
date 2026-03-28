@@ -1,7 +1,7 @@
 ---
 title: DataStructure
 draft: true
-tags: []
+tags: [computer-science, reference]
 ---
 # Data Structure
 

@@ -1,7 +1,7 @@
 ---
 title: Docker
 draft: true
-tags: []
+tags: [docker, devops, linux, reference]
 ---
 # Docker
 
@@ -73,7 +73,7 @@ docker cp <CONTAINER_NAME>:<SRC_PATH> <DEST_PATH>
 
 ## Create an image from a container
 
-We usage images to create the containers, but It is possible to create images from the container. You can start from a base image and apply your changes. Then you can create the new image:
+We use images to create containers, but it is also possible to create images from containers. You can start from a base image, apply your changes, and then create the new image:
 
 ```bash
 # docker commit <container-name> <new_image_name>:<tag>
@@ -86,7 +86,7 @@ docker commit -c 'CMD ["redis-server"]' base_image my_new_image:1.0.0
 
 ## Save
 
-Used when you want to load a docker image. You can save docker image on disk by:
+Used when you want to save a Docker image to disk:
 
 ```bash
 docker save busybox > busybox.tar
@@ -95,7 +95,7 @@ docker save myimage:latest | gzip > myimage_latest.tar.gz
 
 ## Load
 
-To load a docker image from the disk.
+To load a Docker image from disk:
 
 ```bash
 docker load < busybox.tar.gz
@@ -182,7 +182,7 @@ sudo docker network create -d macvaln --subnet 192.168.0.0/24 --gateway 192.168.
 
 ### IP Vlan (l2)
 
-The networks shares the MAC Address to solve the MAC Vlan issue.
+The network shares the MAC address to solve the MAC VLAN issue.
 
 ```bash
 sudo docker network create -d ipvlan --subnet 10.7.1.0/24 --gateway 10.7.1.3 -o parent=enp0s3 newasgard
@@ -366,29 +366,34 @@ docker network create -d overlay proxy
 
 # Best practices
 
-1. User official docker images as base image: For example if you want to create docker file for you node app do not use ubuntu base image, use the node image.
-2. Do not use latest tag (set more specific versions): Latest tags are unpredictable, you might get different docker image versions, and it might break stuff.
-3. Don't use full-blown images: Because they are larger in image size, so they will take more storage space and needs more time for pushing and pulling too. There are lots of unnecessary tools in these images. They can add lots of vulnerabilities to your image. So you may introduce unnecessary security issues from the beginning.
-4. Optimize caching image layers (You should order you commands in docker file from least to most frequently changing to take advantage of caching): Each docker file is consisted of image layers. Each step add a layer. Caching layers is important because when we are building application it will be much faster, even in pushing and pulling images only the non-cached layers will be pushed or pulled.
-5. Use `.dockerignore` to reduce the image size (and maybe prevent unintended secret exposure)
-6. User Multi-Stage builds (To separate build and runtime stage): That would result in increased image file and attack surface. (like `package.json` or `pom.xml`, JDK, Gradle, Maven)
-7. Use the least privileged user: Default user for starting application in user `Id=0` or root. It is a security bad practice, because it will access to the docker host. 
-8. Scan your image for vulnerabilities (Using tools like docker scan)
+1. Use official Docker images as base images: For example, if you want to create a Dockerfile for your Node app, do not use the Ubuntu base image; use the Node image.
+2. Do not use the latest tag (set more specific versions): Latest tags are unpredictable. You might get different Docker image versions, and it might break things.
+3. Don't use full-blown images: They are larger in size, take more storage space, and need more time for pushing and pulling. There are lots of unnecessary tools in these images that can add vulnerabilities. You may introduce unnecessary security issues from the beginning.
+4. Optimize caching image layers (order your commands in the Dockerfile from least to most frequently changing to take advantage of caching): Each Dockerfile consists of image layers. Each step adds a layer. Caching layers is important because building the application will be much faster, and when pushing and pulling images, only the non-cached layers will be transferred.
+5. Use `.dockerignore` to reduce the image size (and prevent unintended secret exposure).
+6. Use multi-stage builds (to separate build and runtime stages): Without them, you would have an increased image size and attack surface (including `package.json` or `pom.xml`, JDK, Gradle, Maven).
+7. Use the least privileged user: The default user for starting an application is `Id=0` (root). This is a security bad practice because it grants access to the Docker host.
+8. Scan your image for vulnerabilities (using tools like docker scan).
 
 > This is from [https://www.youtube.com/watch?v=8vXoMqWgbQQ](https://www.youtube.com/watch?v=8vXoMqWgbQQ)
 
 # Open Container Initiative
 
-OCI standardized container runtime, image and distribution specifications. This ensures that container ecosystem remains open and not tied  to a single vendor.
+OCI standardized container runtime, image, and distribution specifications. This ensures that the container ecosystem remains open and not tied to a single vendor.
 
-Docker has popularized several key concepts
+Docker has popularized several key concepts:
 
 1. Standard Image
-2. Streamline the Building of Container Images
-3. Enabling Sharing of Images with Registeries
-4. Facilitate the actual running of containers
+2. Streamlined Building of Container Images
+3. Enabling Sharing of Images with Registries
+4. Facilitating the Actual Running of Containers
 
 # References
 
 - https://www.youtube.com/watch?v=8vXoMqWgbQQ
-- [Is Docker Still Relevant?](https://www.youtube.com/watch?v=Cs2j-Rjqg94
+- [Is Docker Still Relevant?](https://www.youtube.com/watch?v=Cs2j-Rjqg94)
+
+# See Also
+
+- [Kubernetes](Kubernetes.md)
+- [Databases](Databases.md)

@@ -1,11 +1,11 @@
 ---
 title: DNS
 draft: true
-tags: []
+tags: [networking, reference]
 ---
 # DNS (Domain Name System)
 
-DNS or Domain name servers change the human-readable path or domain to IP addresses. A DNS resolver can be in ISP or popular DNS providers (Google/Cloudflare). If a DNS resolver can not find the domain name in its cache, It will ask authoritative nameserver. When we update a domain's DNS record, we are updating its authoritative nameserver.
+DNS or Domain name servers change the human-readable path or domain to IP addresses. A DNS resolver can be in ISP or popular DNS providers (Google/Cloudflare). If a DNS resolver cannot find the domain name in its cache, It will ask authoritative nameserver. When we update a domain's DNS record, we are updating its authoritative nameserver.
 
 ## Domain Hierarchy
 

@@ -1,6 +1,6 @@
 ---
 title: Flink
 draft: true
-tags: []
+tags: [data-engineering, reference]
 ---
 # Flink

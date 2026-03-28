@@ -1,7 +1,7 @@
 ---
 title: ProgrammingLanguages
 draft: true
-tags: []
+tags: [programming, software-engineering]
 ---
 # 👨‍💻 Programming Languages
 
@@ -17,14 +17,14 @@ tags: []
 
 ## Types of Programming Languages
 
-If we all of programming languages different branches of a tree, There are two main branch.
+If we view all programming languages as different branches of a tree, there are two main branches.
 
 1. **Imperative**: Giving explicit instructions
 2. **Declarative**: Describing our goal
 
 ## Imperative Programming Languages
 
-The main branches of this paradigm is 
+The main branches of this paradigm are:
 
 - Structured
 - Procedural
@@ -34,7 +34,7 @@ The main branches of this paradigm is
 
 ## Declarative Programming Languages
 
-The main branches of this paradigm is 
+The main branches of this paradigm are:
 
 - Reactive
 - Functional

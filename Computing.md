@@ -1,7 +1,7 @@
 ---
 title: Computing
 draft: true
-tags: []
+tags: [computer-science, reference]
 ---
 # Computing
 

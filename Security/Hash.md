@@ -1,7 +1,7 @@
 ---
 title: Hash
 draft: true
-tags: []
+tags: [security]
 ---
 # Hash
 

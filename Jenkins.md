@@ -1,7 +1,7 @@
 ---
 title: Jenkins
 draft: true
-tags: []
+tags: [devops, reference]
 ---
 # Jenkins
 

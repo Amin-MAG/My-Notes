@@ -1,7 +1,7 @@
 ---
 title: Season 10
 draft: true
-tags: []
+tags: [english]
 ---
 # Season 10
 

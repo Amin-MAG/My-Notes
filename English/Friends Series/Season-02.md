@@ -1,7 +1,7 @@
 ---
 title: Season 02
 draft: true
-tags: []
+tags: [english]
 ---
 # Season 2
 

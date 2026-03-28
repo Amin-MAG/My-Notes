@@ -1,7 +1,7 @@
 ---
 title: French
 draft: true
-tags: []
+tags: [french, reference]
 ---
 # French
 

@@ -1,7 +1,7 @@
 ---
 title: Databases
 draft: true
-tags: []
+tags: [databases, system-design, backend, reference]
 ---
 # 💾 Databases
 
@@ -56,19 +56,19 @@ tags: []
 
 Some essential features of a DBMS System:
 
-- Concurrency: It makes sure that these concurrent interactions succeed without corrupting or loosing any data.
+- Concurrency: It makes sure that concurrent interactions succeed without corrupting or losing any data.
 - Consistency: It ensures the data remains consistent and valid throughout the database.
 - Security: It controls authentication through users and permissions.
-- Reliability: It is easy to backup databases and roll them back.
-- Structure Query Language: They have a language to simplifies user interaction.
+- Reliability: It is easy to back up databases and roll them back.
+- Structured Query Language: They have a language to simplify user interaction.
 
-## Relation Database Management Systems
+## Relational Database Management Systems
 
-They are usually apply the rule of [ACID](ACID.md).
+They usually apply the rules of [ACID](ACID.md).
 
-## Non-Relation Database Management Systems
+## Non-Relational Database Management Systems
 
-This DMS drops the concept of consistency from [ACID](ACID.md) and whole idea of relations.
+This type of DMS drops the concept of consistency from [ACID](ACID.md) and the whole idea of relations.
 
 
 # How to choose database
@@ -82,14 +82,14 @@ First let's take a look at some steps you should do before replacing the legacy 
 - **Garbage Collector Strategy**: Garbage collection is a process that automatically identifies and frees up memory occupied by objects that are no longer in use by the application.
 - **Cache**: Consider the case that you can use caching to enhance the performance of the database.
 - **Read Replicas**: Consider adding the read replicas to your database system so that it can reduce the amount of pressure on it.
-- **Partitioning/Sharding**: Use sharding method can increase the complexity of your system, but in some cases it can be good solution. 
+- **Partitioning/Sharding**: Using sharding can increase the complexity of your system, but in some cases it can be a good solution.
 
 Here are some casual trade-offs:
 
-1. The eliminate or limit transactional guarantees like [ACID](ACID.md).
-2. The can limit data modeling flexibility.
+1. They eliminate or limit transactional guarantees like [ACID](ACID.md).
+2. They can limit data modeling flexibility.
 
-After you chose database candidates, create a realistic test bench using your own data.
+After you choose database candidates, create a realistic test bench using your own data.
 
 ## NoSQL vs SQL Databases
 
@@ -100,16 +100,16 @@ After you chose database candidates, create a realistic test bench using your ow
 
 1. **Data Model**: Data is structured in tables with predefined schemas
 2. **Schema**: Requires a predefined schema where the structure of the data is established before inserting data.
-3. **Scalability**: Typically scales vertically by adding more powerful hardwares. Scaling horizontally can be challenging.
+3. **Scalability**: Typically scales vertically by adding more powerful hardware. Scaling horizontally can be challenging.
 4. **Transactions**: Supports [ACID](ACID.md).
 5. **Query Language**: Uses a standardized query language (SQL) for defining and manipulating the data.
 6. **Use Cases**: Well-suited for applications with complex queries and structured, relational data, such as financial systems, ERP (Enterprise Resource Planning), and transactional systems.
 
 ### NoSQL
 
-1. **Data Model**: It supports various data models including document-oriented, key-values, column-family, and graphs.
+1. **Data Model**: It supports various data models including document-oriented, key-value, column-family, and graph.
 2. **Schema**: Data can be inserted without a predefined schema, allowing for dynamic and evolving data structures.
-3. **Scalability**: Designed to scale horizontally, allowing for distributed and parallel processing across nodes. Good for large amount of data and traffic.
+3. **Scalability**: Designed to scale horizontally, allowing for distributed and parallel processing across nodes. Good for large amounts of data and traffic.
 4. **Transactions**: May sacrifice some aspects of [ACID](ACID.md) properties for performance and scalability. NoSQL databases often provide eventual consistency, where data consistency is guaranteed over time rather than immediately.
 5. **Query Language**: No standardized query language across all NoSQL databases. Each type of NoSQL database may have its own query language or API.
 6. **Use Cases**: Ideal for scenarios with rapidly changing data, unstructured or semi-structured data, and high scalability requirements, such as content management systems, real-time big data applications, and mobile app backends.
@@ -158,3 +158,19 @@ Indexing in databases is a technique used to improve the speed of data retrieval
 - [Logging Databases](Logging.md#Databases)
 - [SQL Injection](SQL-Injection.md)
 - [How to choose the right database](https://www.youtube.com/watch?v=kkeFE6iRfMM)
+
+# See Also
+
+- [MySQL](MySQL.md)
+- [PostgreSQL](PostgreSQL.md)
+- [SQLite3](SQLite3.md)
+- [Redis](Redis.md)
+- [MongoDB](MongoDB.md)
+- [Elasticsearch](Elasticsearch.md)
+- [Tile38](Tile38.md)
+- [SQL](SQL.md)
+- [ACID](ACID.md)
+- [CAP Theorem](CAP.md)
+- [Sharding](Sharding.md)
+- [CQRS](CQRS.md)
+- [Materialized View](Materialized-View.md)

@@ -1,7 +1,7 @@
 ---
 title: 100 Go Mistakes and How to Avoid Them
 draft: true
-tags: []
+tags: [reference]
 ---
 # 100 Go Mistakes and How to Avoid Them
 

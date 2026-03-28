@@ -1,7 +1,7 @@
 ---
 title: Swap
 draft: true
-tags: []
+tags: [linux]
 ---
 # Swap
 

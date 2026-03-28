@@ -1,7 +1,7 @@
 ---
 title: Domain Driven Design
 draft: true
-tags: []
+tags: [architecture, software-engineering, reference]
 ---
 # Domain Driven Design  (DDD)
 
@@ -11,7 +11,7 @@ Domain-Driven Design (DDD) is a software development approach and methodology th
 2. Modeling Centric
 3. Incremental Development
 
-Each project have multiple sub-domains. For instance, sub-domains of Netflix can be Video Steaming, Billing, Recommendation, etc. In an iterative process consists of meetings between both engineering and product teams, we can recognize the sub-domains of the system. Sometimes, It is possible to break down a sub-domain to smaller sub-domains during the project.
+Each project has multiple sub-domains. For instance, sub-domains of Netflix can be Video Streaming, Billing, Recommendation, etc. In an iterative process consisting of meetings between both engineering and product teams, we can recognize the sub-domains of the system. Sometimes, it is possible to break down a sub-domain into smaller sub-domains during the project.
 
 ## The key principles and components
 
@@ -61,3 +61,10 @@ Repositories provide an abstraction for data access, allowing you to store and r
 ### Service
 
 Domain services encapsulate domain logic that doesn't naturally fit into entities or value objects. They are stateless and used for operations that are not tied to a specific entity.
+
+# See Also
+
+- [Microservices](Microservices.md)
+- [CQRS](CQRS.md)
+- [Event Sourcing](Event-Sourcing.md)
+- [Architecture Patterns](Architecture-Patterns.md)

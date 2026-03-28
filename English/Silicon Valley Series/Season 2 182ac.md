@@ -1,7 +1,7 @@
 ---
 title: Season 2 182ac
 draft: true
-tags: []
+tags: [english]
 ---
 # Season 2
 

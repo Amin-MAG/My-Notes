@@ -1,7 +1,7 @@
 ---
 title: Go Arena
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Go Arena
 

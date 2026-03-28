@@ -1,7 +1,7 @@
 ---
 title: Prometheus
 draft: true
-tags: []
+tags: [devops, reference]
 ---
 # Prometheus
 

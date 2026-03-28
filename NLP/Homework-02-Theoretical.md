@@ -1,7 +1,7 @@
 ---
 title: Homework 02 Theoretical
 draft: true
-tags: []
+tags: [ai-ml, course-notes]
 ---
 # Homework 02 - Theoretical
 

@@ -1,7 +1,7 @@
 ---
 title: Season 06
 draft: true
-tags: []
+tags: [english]
 ---
 # Season 6
 
@@ -137,7 +137,7 @@ tags: []
 ## Sentences
 
 - They shut the drapes.
-- I can not help it.
+- I cannot help it.
 
 # E16
 

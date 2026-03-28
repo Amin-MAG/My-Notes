@@ -1,7 +1,7 @@
 ---
 title: Microprocessor
 draft: true
-tags: []
+tags: [embedded-systems, hardware, c, course-notes]
 ---
 # Microprocessor Lab
 
@@ -38,7 +38,7 @@ delay_ms(30);
 
 ## LCD
 
-You need to initilize your LCD first, connect it to port C.
+You need to initialize your LCD first, connect it to port C.
 
 ```c
 lcd_init(16);
@@ -70,7 +70,7 @@ char code[] = { 0x3F, 0x06, 0x5B, 0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F, 0x77,0x7C,
 
 ## Terminal
 
-You need turn on the receiver and transmiter when you create your project.
+You need to turn on the receiver and transmitter when you create your project.
 
 ```c
 // To get a character from the terminal
@@ -86,7 +86,7 @@ To go to the next line you need to putchar values `\r` and `\n`.
 
 ## Timer 
 
-You can set a timer to give you interrupts. This will geenrate a function in your code.
+You can set a timer to give you interrupts. This will generate a function in your code.
 
 ```c
 // Timer 0 output compare interrupt service routine

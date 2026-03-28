@@ -1,7 +1,7 @@
 ---
 title: Season 01
 draft: true
-tags: []
+tags: [english]
 ---
 # Season 1
 
@@ -31,7 +31,7 @@ tags: []
 - While you're on a roll
 - You look like, you slept with a hanger in your mouth.
 - We are looking for an answer more sophisticated.
-- You can not live off your parents your whole life.
+- You cannot live off your parents your whole life.
 
 ## Words
 
@@ -136,7 +136,7 @@ tags: []
 
 - I feel violated.
 - I'm very aware of my tongue.
-- I can not you tried to move the green ottoman.
+- I cannot you tried to move the green ottoman.
 - Thank god you didn't fan out the magazines.
 - She'll scratch your eyes out.
 - This is so unfair.

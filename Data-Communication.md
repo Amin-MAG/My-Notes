@@ -1,7 +1,7 @@
 ---
 title: Data Communication
 draft: true
-tags: []
+tags: [networking, reference]
 ---
 # Data communication
 

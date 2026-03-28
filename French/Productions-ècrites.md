@@ -1,7 +1,7 @@
 ---
 title: Productions ècrites
 draft: true
-tags: []
+tags: [french]
 ---
 ### Vous vous présentez sur l'application Duo (nom, nationalité, âge, loisirs)
 

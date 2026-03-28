@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL Snippet
 draft: true
-tags: []
+tags: [databases, reference]
 ---
 # Snippet
 

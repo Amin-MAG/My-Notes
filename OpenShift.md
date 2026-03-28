@@ -1,7 +1,7 @@
 ---
 title: OpenShift
 draft: true
-tags: []
+tags: [cloud, kubernetes, reference]
 ---
 
 # OpenShift

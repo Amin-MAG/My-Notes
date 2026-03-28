@@ -1,7 +1,7 @@
 ---
 title: Homework 01 Practical
 draft: true
-tags: []
+tags: [ai-ml, course-notes]
 ---
 # Homework 01 - Practical
 

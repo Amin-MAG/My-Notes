@@ -1,7 +1,7 @@
 ---
 title: Go Casbin
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Casbin
 
@@ -156,7 +156,7 @@ func main() {
 
 	m, err := model.NewModelFromFile("model.conf")
 	if err != nil {
-		log.Fatal("can not creat the model from the file: ", err.Error())
+		log.Fatal("cannot creat the model from the file: ", err.Error())
 	}
 
 	e, err := casbin.NewEnforcer(m, sqlAdapter)

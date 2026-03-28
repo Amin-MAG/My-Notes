@@ -1,7 +1,7 @@
 ---
 title: OpenStreetMap
 draft: true
-tags: []
+tags: [reference]
 ---
 # Open Street Map
 

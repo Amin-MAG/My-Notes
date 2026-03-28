@@ -1,17 +1,18 @@
 ---
 title: Artificial Intelligence
 draft: true
-tags: []
+tags: [ai-ml, computer-science]
 ---
 # Artificial Intelligence
 
-Each system is intelligent. At first, AI was just if and else statements.
+Every system has some form of intelligence. In its earliest form, AI was simply if-else statements.
 
 - Computer Vision
-- [Language Processing - NLP](NLP.md)
+- [Natural Language Processing (NLP)](NLP.md)
 - [Computational Intelligence](Computational%20Intelligence.md)
 - [Machine Learning](MachineLearning.md)
 - Deep Learning
+- [Data Science](Data-Science.md)
 
 ## Tools
 

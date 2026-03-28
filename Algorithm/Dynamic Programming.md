@@ -1,7 +1,7 @@
 ---
 title: Dynamic Programming
 draft: true
-tags: []
+tags: [computer-science]
 ---
 # Dynamic Programming
 

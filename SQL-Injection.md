@@ -1,7 +1,7 @@
 ---
 title: SQL Injection
 draft: true
-tags: []
+tags: [reference, security]
 ---
 # SQL-Injection
 

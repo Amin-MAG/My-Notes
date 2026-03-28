@@ -1,7 +1,7 @@
 ---
 title: HW04 Assig f2f42
 draft: true
-tags: []
+tags: [computer-science, course-notes]
 ---
 # HW04 Assignment
 

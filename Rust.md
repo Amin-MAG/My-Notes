@@ -1,13 +1,13 @@
 ---
 title: Rust
 draft: true
-tags: []
+tags: [rust, programming]
 ---
 # Rust
 
 It is a choice for systems where performance is critical. For example, game engines, databases, or Operating Systems. Rust doesn’t have a garbage collector.
 
-Hello world in Rust
+Hello World in Rust:
 
 ```rust
 fn main() {
@@ -21,7 +21,7 @@ fn main() {
 }
 ```
 
-To compile the code
+To compile the code:
 
 ```bash
 rustc main.rs
@@ -33,7 +33,7 @@ The variables are immutable by default and it allows them to be used in stack me
 let hello = "hi mom"
 ```
 
-By using `mut` keyword, Mutable variables will be stored in the heap.
+By using the `mut` keyword, mutable variables can be stored on the heap.
 
 ## Read user input
 
@@ -57,6 +57,7 @@ fn main() {
 # See More
 
 - [Cargo, the Rust package manager](Rust/Cargo.md)
+- [Programming Languages](ProgrammingLanguages.md)
 
 # References
 

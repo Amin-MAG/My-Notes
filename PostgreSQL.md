@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL
 draft: true
-tags: []
+tags: [databases, backend, reference]
 ---
 # Postgres
 
@@ -28,7 +28,7 @@ select * from nodes;
 # To get 100 rows from nodes table
 select * from nodes limit 100;
 
-# To count the rows in the table with specefic condition
+# To count the rows in the table with a specific condition
 select count(*) from nodes where nodes.version=2;
 
 # Some other queries
@@ -56,7 +56,7 @@ psql --set ON_ERROR_STOP=on dbname < infile
 
 ## Truncate
 
-It will delete the content of table to set of tables.
+It will delete the content of a table or a set of tables.
 
 ```sql
 TRUNCATE bigtable, fattable;
@@ -64,7 +64,7 @@ TRUNCATE bigtable, fattable;
 
 ## Interval
 
-To specify a range of time, for example
+To specify a range of time. For example:
 
 ```sql
 from comment_comment as c
@@ -115,7 +115,7 @@ where exist(ways.tags, 'smapp_locality_node_ref') limit 200;
 
 ## Functions
 
-for example in OSM database or precisely postgis has `st_y()` and `st_x()` that gets the geometry object and will return a double. (latitude or longitude)
+For example, in the OSM database, PostGIS has `st_y()` and `st_x()` functions that take a geometry object and return a double (latitude or longitude).
 
 So how we can define such functions?
 
@@ -146,7 +146,7 @@ FROM get_category_likes('tech')
 
 ## Cursors
 
-You can create to cursor and open and close it in function. You can process the data row by row by fetching record and apply some changes or extracting your needed data.
+You can create a cursor, open it, and close it within a function. You can process the data row by row by fetching records and applying changes or extracting the data you need.
 
 This code is based on `nebula-clans/huddle-server` database.
 
@@ -199,7 +199,7 @@ PGPASSWORD=$POSTGRES_PASSWORD psql -h osm_db -U $POSTGRES_USER -d $POSTGRES_DB -
 
 # Arrays
 
-Arrays start from 1 in Postgre. Using `Array` you can define a new array.
+Arrays start from 1 in PostgreSQL. Using `Array` you can define a new array.
 
 ```sql
 select Array [st_y(n.geom), st_x(n.geom)] as coordinates from nodes;
@@ -224,7 +224,7 @@ We have other kinds of joins too:
 
 ![Untitled](Postgres/Untitled.png)
 
-## Joining more that one table
+## Joining more than one table
 
 ```sql
 select Array [st_y(n.geom), st_x(n.geom)] as coordinates
@@ -326,6 +326,9 @@ To grant privileges on a specific table to a user.
 GRANT ALL PRIVILEGES ON TABLE <TABLE_NAME> TO <USERNAME>;
 ```
 
-# See more
+# See Also
 
-[Snippet](PostgreSQL%20Snippet.md)
+- [Snippet](PostgreSQL%20Snippet.md)
+- [Databases](Databases.md)
+- [MySQL](MySQL.md)
+- [SQLite3](SQLite3.md)

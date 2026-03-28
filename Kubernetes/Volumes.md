@@ -1,7 +1,7 @@
 ---
 title: Volumes
 draft: true
-tags: []
+tags: [devops, kubernetes]
 ---
 # Volumes
 

@@ -1,7 +1,7 @@
 ---
 title: Git Flow
 draft: true
-tags: []
+tags: [devops, reference]
 ---
 # Git Flow
 

@@ -1,7 +1,7 @@
 ---
 title: HTTP
 draft: true
-tags: []
+tags: [networking, reference]
 ---
 # HTTP/HTTPS
 

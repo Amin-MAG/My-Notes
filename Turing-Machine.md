@@ -1,7 +1,7 @@
 ---
 title: Turing Machine
 draft: true
-tags: []
+tags: [computer-science, reference]
 ---
 # Turing Machine
 

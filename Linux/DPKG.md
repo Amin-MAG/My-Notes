@@ -1,7 +1,7 @@
 ---
 title: DPKG
 draft: true
-tags: []
+tags: [linux]
 ---
 # DPKG
 

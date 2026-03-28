@@ -1,7 +1,7 @@
 ---
 title: Building The Kernel
 draft: true
-tags: []
+tags: [linux, reference]
 ---
 # Building the kernel
 

@@ -1,7 +1,7 @@
 ---
 title: Data Science
 draft: true
-tags: []
+tags: [data-science, reference]
 ---
 # Data Science
 

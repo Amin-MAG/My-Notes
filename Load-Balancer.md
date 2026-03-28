@@ -1,7 +1,7 @@
 ---
 title: Load Balancer
 draft: true
-tags: []
+tags: [networking, reference, system-design]
 ---
 # Load Balancer
 

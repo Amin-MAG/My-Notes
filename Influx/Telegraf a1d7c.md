@@ -1,7 +1,7 @@
 ---
 title: Telegraf a1d7c
 draft: true
-tags: []
+tags: [databases, devops, reference]
 ---
 # Telegraf
 

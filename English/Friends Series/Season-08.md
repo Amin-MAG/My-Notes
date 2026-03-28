@@ -1,7 +1,7 @@
 ---
 title: Season 08
 draft: true
-tags: []
+tags: [english]
 ---
 # Season 8
 

@@ -1,7 +1,7 @@
 ---
 title: Arduino CLI
 draft: true
-tags: []
+tags: [embedded-systems, hardware, reference]
 ---
 First create a configuration file
 

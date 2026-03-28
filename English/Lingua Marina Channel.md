@@ -1,7 +1,7 @@
 ---
 title: Lingua Marina Channel
 draft: true
-tags: []
+tags: [english]
 ---
 # Lingua Marina Channel
 

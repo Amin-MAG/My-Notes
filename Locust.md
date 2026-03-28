@@ -1,7 +1,7 @@
 ---
 title: Locust
 draft: true
-tags: []
+tags: [python, reference, testing]
 ---
 # Locust
 

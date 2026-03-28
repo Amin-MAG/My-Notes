@@ -1,7 +1,7 @@
 ---
 title: SRE
 draft: true
-tags: []
+tags: [devops, reference]
 ---
 # SRE
 

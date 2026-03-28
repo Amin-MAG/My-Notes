@@ -1,7 +1,7 @@
 ---
 title: CDN
 draft: true
-tags: []
+tags: [networking, reference, system-design]
 ---
 # CDN - Content Delivery Network
 

@@ -1,7 +1,7 @@
 ---
 title: Influx
 draft: true
-tags: []
+tags: [databases, devops, reference]
 ---
 # Influx
 

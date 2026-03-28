@@ -1,7 +1,7 @@
 ---
 title: KubeMQ
 draft: true
-tags: []
+tags: [devops, kubernetes, reference]
 ---
 # KubeMQ
 

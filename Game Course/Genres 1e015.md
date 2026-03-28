@@ -1,6 +1,6 @@
 ---
 title: Genres 1e015
 draft: true
-tags: []
+tags: [course-notes, reference]
 ---
 # Genres

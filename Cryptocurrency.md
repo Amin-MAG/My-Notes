@@ -1,11 +1,12 @@
 ---
 title: Cryptocurrency
 draft: true
-tags: []
+tags: [cryptography, distributed-systems, reference]
 ---
 # Cryptocurrency
-The most considerable trouble in digital currencies is double-spending. The initial solution is to have a central system checking these transactions. As you may consider, this system is the single point of failure!
-Bitcoin uses Blockchain. Blockchain is a kind of distributed database.
+The most significant problem in digital currencies is double-spending. The initial solution is to have a central system checking these transactions. As you might expect, this system is a single point of failure.
+
+Bitcoin uses [Blockchain](Blockchain.md), which is a kind of distributed database.
 
 
 # Security in Cryptocurrency
@@ -43,7 +44,7 @@ General Properties:
 - Puzzle friendliness: to be difficult to bruteforce
 
 # How to earn BTC
-The computer should find a nonce and hash the whole mem pool and nonce together. In case that this hash is lower than difficulty, your block is accepted. That's how you show your Prove Of Work (POW). 
+The computer should find a nonce and hash the whole mempool and nonce together. If this hash is lower than the difficulty target, your block is accepted. That is how you show your Proof of Work (PoW).
 
 # Resources
 - A Comprehensive Introduction: BITCOIN AND CRYPTOCURRENCY TECHNOLOGIES

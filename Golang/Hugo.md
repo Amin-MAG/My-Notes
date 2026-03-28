@@ -1,7 +1,7 @@
 ---
 title: Hugo
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Hugo
 

@@ -1,38 +1,38 @@
 ---
 title: Backend Development
 draft: true
-tags: []
+tags: [backend, system-design, security, networking, software-engineering]
 ---
 # Backend Development
 
 ## API Architecture Styles
 
-APIs or Application Programming Interfaces are the backbone of our interconnected digital world. They act as bridges, allowing distinct software components to communicate and interact. There several architectural style that can be used.
+APIs (Application Programming Interfaces) are the backbone of our interconnected digital world. They act as bridges, allowing distinct software components to communicate and interact. There are several architectural styles that can be used.
 
 ### SOAP
 
-It's a veteran in the field, mature, comprehensive, and XML-based. SOAP is heavily used in financial service and payment gateways where security and reliability are key. 
+It is a veteran in the field, mature, comprehensive, and XML-based. SOAP is heavily used in financial services and payment gateways where security and reliability are key.
 
-IBM and Microsoft define a new way to define the APIs in 2007 which is called WSDL. WSDL contains all definitions about the API such as Elements, Operations, Messages, etc.. You can use SoapUI to see the API definition.
+IBM and Microsoft defined a new way to describe APIs in 2007 called WSDL. WSDL contains all definitions about the API such as Elements, Operations, Messages, etc. You can use SoapUI to view the API definition.
 
 ### RESTful 
 
-They are like the Internet's backbone. popular, easy to implement, and use HTTP methods. If you need real-time data or operate with a highly connected data model, This might not be the right choice.
+They are like the Internet's backbone. Popular, easy to implement, and they use HTTP methods. If you need real-time data or operate with a highly connected data model, this might not be the right choice.
 
 ### GraphQL
 
-It is not only a API architecture style, but also a query language. The client can specify the exact required fields by the query language.  This means no more over-fetching or under-fetching of data. It leads to more efficient network communication and faster responses.
+It is not only an API architecture style, but also a query language. The client can specify the exact required fields using the query language. This means no more over-fetching or under-fetching of data, leading to more efficient network communication and faster responses.
 
 ### gRPC
 
-It's modern, high-performance, and uses Protocol Buffers. It is a favorite choice for microservices architectures.
+It is modern, high-performance, and uses Protocol Buffers. It is a favorite choice for microservices architectures.
 
 - [gRPC](gRPC.md)
 - [gRPC in Golang](Golang/gRPC.md)
 
 ### WebSocket
 
-WebSocket is all about real-time, bidirectional, and persistent connections. It is perfect for live chat applications and real-time gaming, where low-latency is a key.
+WebSocket is all about real-time, bidirectional, and persistent connections. It is perfect for live chat applications and real-time gaming, where low latency is key.
 
 ### Webhook
 
@@ -40,18 +40,18 @@ It is all about event-driven, HTTP callbacks, and asynchronous operation. [Read 
 
 ## User Aspect in HTTP connection
 
-Users enters an URL to reach the website.
+Users enter a URL to reach the website.
 
 ```bash
 # Schema://Domain/Path/Resource
 http://example.com/product/electric/phone
 ```
 
-First, the browser needs to know how to reach the domain. This process is DNS lookup. DNS, Domain Name Server, is like a phone book that translate the domain names to IP addresses.
+First, the browser needs to know how to reach the domain. This process is called DNS lookup. DNS (Domain Name System) is like a phone book that translates domain names to IP addresses.
 
-1. The browser caches these information for short period.
-2. The operating system also caches these information.
-3. At last, browser should make a request to a DNS resolver to retreive these information.
+1. The browser caches this information for a short period.
+2. The operating system also caches this information.
+3. Finally, the browser makes a request to a DNS resolver to retrieve this information.
 
 Secondly, the browser establishes a TCP connection with the web server using the IP address.
 
@@ -73,7 +73,7 @@ In serverless, we need to create a new connection for each request. In this case
 
 ## N+1 Query Problem
 
-Consider a scenario that you have an API for fetching blog posts and first comments of each post. If you are using more than 2 queries to fetch these data, you are slowing down your API, because you 1 request for fetching post and n requests for fetching comments of each post. 
+Consider a scenario where you have an API for fetching blog posts and first comments of each post. If you are using more than 2 queries to fetch these data, you are slowing down your API, because you 1 request for fetching post and n requests for fetching comments of each post. 
 
 ```sql
 -- Do not use 
@@ -104,11 +104,11 @@ When the API is returning JSON responses, consider evaluating the performance of
 
 ## Compression
 
-By compressing request and response's payload, you can reduce the amount of data transferred over the network. You can see Brotli. Additionally, some cloud providers like cloudflare can handle this compression for you offloading this tasks from your server.
+By compressing request and response payloads, you can reduce the amount of data transferred over the network. You can look into Brotli. Additionally, some cloud providers like Cloudflare can handle this compression for you, offloading this task from your server.
 
 ## Asynchronous Logging
 
-By asynchronous sending logs to another service or saving them in files, you can enhance the performance of a service with a high throughput. In this case, there is a chance that you loose some of your logs when the service crashes. 
+By asynchronously sending logs to another service or saving them in files, you can enhance the performance of a service with high throughput. In this case, there is a chance that you lose some of your logs when the service crashes.
 
 
 # Top Tips for API Security
@@ -119,7 +119,7 @@ Use HTTPS for having encrypted connection between client and server. It prevents
 
 ## OAuth2
 
-It is a way for authenticating the user by a third-party software or account. Since we do not keep track of credentials of the user, it is more safer.
+It is a way for authenticating the user by a third-party software or account. Since we do not keep track of credentials of the user, it is safer.
 
 ## WebAuthn or Web Authentication
 
@@ -137,13 +137,13 @@ Authenticating and Authorizing is different. Authorizing is about what actions e
 
 ## Rate Limiting
 
-It is about controlling how many request each client can perform during a specific period of time. Rate Limiting help us protect our APIs from being overwhelmed by malicious actors.
+It is about controlling how many request each client can perform during a specific period of time. Rate limiting helps us protect our APIs from being overwhelmed by malicious actors.
 
 Rate Limiting can be based on different factors such as IP address, user ID, or API Key. It is possible to have different rate limits on different types of resources.
 
 ## API Versioning
 
-Implementing API Versioning is a best practice that allow us to evolve the API over time while maintaining backward compatibility.
+Implementing API versioning is a best practice that allows us to evolve the API over time while maintaining backward compatibility.
 
 ## Allow Listing
 

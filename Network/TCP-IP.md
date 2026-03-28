@@ -1,7 +1,7 @@
 ---
 title: TCP IP
 draft: true
-tags: []
+tags: [networking, reference]
 ---
 # TCP/IP
 

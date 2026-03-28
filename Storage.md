@@ -1,7 +1,7 @@
 ---
 title: Storage
 draft: true
-tags: []
+tags: [hardware, reference, system-design]
 ---
 # Storage
 

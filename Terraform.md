@@ -1,7 +1,7 @@
 ---
 title: Terraform
 draft: true
-tags: []
+tags: [devops, cloud, reference]
 ---
 # Terraform
 

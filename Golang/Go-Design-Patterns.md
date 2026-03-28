@@ -1,7 +1,7 @@
 ---
 title: Go Design Patterns
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Go Design Patterns
 
@@ -79,7 +79,7 @@ func (s *SUV) GetInfo() string {
 
 Then, whenever we want to create a car-related instance. We use these `New()` functions to get the `Car`.  We are using the interface in our program, so it will become highly independent to the real type of car.
 
-> Using the traditional Factory Method design pattern can make the creation process more complex. In addition, We need to pass some arguments to the factory method class that might not be used. This lead to confusion, when developer is using the factory class, because after a while the developer can not understand which arguments are essential for creating the target. In my opinion, also passing all of the prerequisites to the method is not a good approach.
+> Using the traditional Factory Method design pattern can make the creation process more complex. In addition, We need to pass some arguments to the factory method class that might not be used. This lead to confusion, when developer is using the factory class, because after a while the developer cannot understand which arguments are essential for creating the target. In my opinion, also passing all of the prerequisites to the method is not a good approach.
 
 ## Behavioral
 

@@ -1,7 +1,7 @@
 ---
 title: Homework 03
 draft: true
-tags: []
+tags: [ai-ml, course-notes]
 ---
 # NLP - Homework 03
 

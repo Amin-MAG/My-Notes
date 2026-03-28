@@ -1,7 +1,7 @@
 ---
 title: Workloads
 draft: true
-tags: []
+tags: [devops, kubernetes]
 ---
 # Workloads
 

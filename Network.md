@@ -1,7 +1,7 @@
 ---
 title: Network
 draft: true
-tags: []
+tags: [networking, reference]
 ---
 # Network
 
@@ -26,7 +26,7 @@ OSI Model is primarily used for educational purposes, as it provides a comprehen
 The TCP/IP model is the foundation of the internet and is widely used in various networking applications. TCP/IP Model has Four layers - Network Access, Internet, Transport, Application. TCP/IP is not just a model but also a suite of protocols. Different protocols operate at each layer to facilitate communication.
 #### Network Access Layer:
 
-It deals with the physical connection between the device and the network (similar to OSI Physical Layer). It is responsible for protocols that govern data link and physical layer interactions. The Data Unit, Frame, encapsulates the packet from the Internet Layer and add physical layer information, such as MAC addresses.
+It deals with the physical connection between the device and the network (similar to OSI Physical Layer). It is responsible for protocols that govern data link and physical layer interactions. The Data Unit, Frame, encapsulates the packet from the Internet Layer and adds physical layer information, such as MAC addresses.
 
 - **Ethernet**
 - **Wi-Fi (802.11)**
@@ -90,12 +90,12 @@ The network can handle the transmission of a specific amount of data. If there i
 
 ## SNMP
 
-This protocol is designed for troubleshooting the network. Assume you need to trace to find which components of your network is not working properly. It can be time-consuming in a large network system. 
+This protocol is designed for troubleshooting the network. Assume you need to trace to find which components of your network are not working properly. It can be time-consuming in a large network system. 
 SNMP protocol which uses UDP/161 and UDP/162 can report the status of network components to the Management Server.
 
 
 
-UDP/161 is a polling mechanism to retrieve data from components. The management server ask questions about the status of the components and they also respond to this question.
+UDP/161 is a polling mechanism to retrieve data from components. The management server asks questions about the status of the components and they also respond to this question.
 On the other hand, UDP/162 is called trap SNMP. This mechanism does not rely on management server's questions. Whenever something bad is going to happen, the component will send a message to the management server.
 > **Note**: We do not have to choose between Polling and Traps. It is possible to use mixture of them for monitoring the status of the network.
 
@@ -104,7 +104,7 @@ On the other hand, UDP/162 is called trap SNMP. This mechanism does not rely on 
 The management server will 
 - Record the data for historical use
 - Present health information as graphs
-- Provide a web base dashboard
+- Provide a web-based dashboard
 - Send alerts
 
 # See More

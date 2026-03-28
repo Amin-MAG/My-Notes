@@ -1,7 +1,7 @@
 ---
 title: Materialized View
 draft: true
-tags: []
+tags: [databases, system-design, reference]
 ---
 # Materialized Views
 
@@ -11,7 +11,7 @@ A materialized view is an architectural pattern that combines the benefits of pr
 
 ## Query Optimization
 
-Materialized views are primarily used for query optimization. Instead of running complex and resource-intensive queries each time for the user request, the materialized view precompute it and stores it.
+Materialized views are primarily used for query optimization. Instead of running complex and resource-intensive queries each time for the user request, the materialized view precomputes and stores the result.
 
 ## Periodic Refresh
 
@@ -19,7 +19,7 @@ Based on the business and resource constraints, Materialized views need to be up
 
 ## Incremental Updates
 
-To decrease the computational load, We can use incremental update (Only updating the changed data). Although it can be refreshed using full recomputation.
+To decrease the computational load, we can use incremental updates (only updating the changed data), although it can also be refreshed using full recomputation.
 
 ## Read-Heavy Workloads
 

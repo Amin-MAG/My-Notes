@@ -1,7 +1,7 @@
 ---
 title: VPN 09efe
 draft: true
-tags: []
+tags: [networking, security]
 ---
 # VPN
 
@@ -54,14 +54,14 @@ google-authenticator
 # Change configurations for sshd
 vim /etc/pam.d/sshd
 # Comment @include common-auth
-# Add line bellow
+# Add line below
 auth required pam_google_authenticator.so
 
-# Change the configrations of ssh
+# Change the configurations of ssh
 vim /etc/ssh/sshd_config
 # ChallengeResponseAuthentication yes
 # UsePAM yes
-# Add line bellow
+# Add line below
 AuthenticationMethods publickey,password publickey,keyboard-interactive
 ```
 

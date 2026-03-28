@@ -1,7 +1,7 @@
 ---
 title: Algorithm
 draft: true
-tags: []
+tags: [computer-science, system-design, reference]
 ---
 # Algorithm
 
@@ -15,7 +15,7 @@ tags: []
 
 ## Consistent Hashing
 
-It plays an important role in distributed systems. One example of this algorithm is Cassandra distributing data across multiple servers. In this algorithm, nodes are on a single rings. When you want to remove or add a node, it will be better than naive hashing, because just a range of that rings need remapping. 
+It plays an important role in distributed systems. One example of this algorithm is Cassandra distributing data across multiple servers. In this algorithm, nodes are placed on a single ring. When you want to remove or add a node, it performs better than naive hashing, because only a range of that ring needs remapping.
 
 ### See more
 
@@ -24,7 +24,7 @@ It plays an important role in distributed systems. One example of this algorithm
 
 ## Quad Trees
 
-Quad Trees is very useful for map related platforms. It divides a 2 dimension space like a map to a sequence of number. At first, It split the map into 4 regions and continue splitting each one of them to 4 smaller regions. This algorithm enables fast location-based insertion and search. You can also points in a radius by traversing the tree.
+Quad Trees are very useful for map-related platforms. They divide a 2-dimensional space like a map into a sequence of regions. First, the map is split into 4 regions and each one is further split into 4 smaller regions. This algorithm enables fast location-based insertion and search. You can also find points within a radius by traversing the tree.
 
 ### See more
 
@@ -33,7 +33,7 @@ Quad Trees is very useful for map related platforms. It divides a 2 dimension sp
 
 ## Leaky Bucket
 
-Leaky Bucket algorithm is for rate limiting. These kind of algorithms are simple algorithms with each making tradeoffs between accuracy and performance.
+The Leaky Bucket algorithm is used for rate limiting. These kinds of algorithms are simple, with each making tradeoffs between accuracy and performance.
 
 ### See more
 
@@ -50,7 +50,7 @@ Bloom Filters shine in caching, deduplication, and analytics. It is a probabilis
 
 ## Consensus Algorithms
 
-In distributed systems, reaching consensus an ensuring that all nodes agree on a share state is tricky.
+In distributed systems, reaching consensus and ensuring that all nodes agree on a shared state is tricky.
 
 ## Raft
 
@@ -64,3 +64,9 @@ Kafka and etcd use Raft algorithm in their replication, fail over, and leader el
 # Resources
 
 - [Algorithms You Should Know Before System Design Interviews](https://www.youtube.com/watch?v=xbgzl2maQUU)
+
+# See Also
+
+- [Data Structures](DataStructure.md)
+- [System Design Concepts](System-Design-Concepts.md)
+- [Distributed Systems](Distributed-Systems.md)

@@ -1,7 +1,7 @@
 ---
 title: Mock
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Golang Mock
 

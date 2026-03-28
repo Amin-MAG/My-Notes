@@ -1,14 +1,14 @@
 ---
 title: Python
 draft: true
-tags: []
+tags: [python, programming]
 ---
 # Python
 
 ## Why to use Python
 
 **Good sides of using Python:**
-1. **Readability**: Python's syntax is  easy to understand, making it accessible to beginners and experienced programmers alike.
+1. **Readability**: Python's syntax is easy to understand, making it accessible to beginners and experienced programmers alike.
 2. **Versatility**: Python is a multipurpose language with a vast ecosystem of libraries and frameworks that support a wide range of applications. Whether it's web development with frameworks like Django or Flask, data analysis with libraries like Pandas and NumPy, or machine learning with TensorFlow or PyTorch, Python has tools for almost any task.
 3. **Large Standard Library**: Python comes with a comprehensive standard library that provides support for many common programming tasks, reducing the need for external dependencies.
 4. **Community Support**
@@ -22,7 +22,7 @@ tags: []
 3. **Mobile Development**
 4. **Deployment Size**: Python applications typically require the Python interpreter to be installed on the target system, which can increase deployment size compared to compiled languages.
 
-## Differenced Between Python 2 & 3
+## Differences Between Python 2 & 3
 
 - **Print Statement vs. Function**
 - **Unicode Support**
@@ -51,7 +51,7 @@ tags: []
 
 All imports in `__init__.py` are made available when you import the package (directory) that contains it.
 
-the code in `__init__.py`runs the first time you import any module from that directory. So it's normally a good place to put any package-level initialization code.
+The code in `__init__.py` runs the first time you import any module from that directory, so it is normally a good place to put any package-level initialization code.
 
 ## Method order in a class
 
@@ -100,13 +100,13 @@ def sum(arg):
 
 ## Linter
 
-To apply this linter you need to install the black linter.
+To apply this formatter, you need to install Black:
 
 ```bash
 pip3 install black
 ```
 
-Then you can add this linter to your git hook.
+Then you can add this formatter to your git hook:
 
 ```bash
 # Enable the pre commit hook
@@ -125,7 +125,7 @@ fi
 
 ## Itertools
 
-With this library, you can for instance calculate the production of two list or get all of subset combinations of a list.
+With this library, you can for instance calculate the product of two lists or get all subset combinations of a list.
 
 ```python
 import itertools
@@ -147,7 +147,7 @@ It can perform more operations and these two are just some examples.
 
 ## Enumerate
 
-You can write more cleaner code using `enumerate`. In case you need the index of an iterm in a list
+You can write cleaner code using `enumerate` when you need the index of an item in a list:
 
 ```python
 for i, item in enumerate(items):
@@ -156,7 +156,7 @@ for i, item in enumerate(items):
 
 ## Breakpoint
 
-You can use `breackpoint()` and then you kind of enter to the shell mode.
+You can use `breakpoint()` to enter an interactive debugging shell.
 
 ```python
 n # for next
@@ -167,12 +167,11 @@ c # continue
 ## Write a decorator
 
 ```python
-def do_twice(func) {
+def do_twice(func):
 	def wrapper_do_twice():
 		func()
 		func()
-	return wrapper_do_twice()
-}
+	return wrapper_do_twice
 ```
 
 # Socket
@@ -205,7 +204,7 @@ A snippet to generate a dictionary based on another dictionary in one line:
 {'a': [100, 101, 102, 103, 104, 105, 106, 107, 108, 109], 'b': [200, 201, 202, 203, 204, 205, 206, 207, 208, 209], 'c': [300, 301, 302, 303, 304, 305, 306, 307, 308, 309], 'd': [400, 401, 402, 403, 404, 405, 406, 407, 408, 409]}
 ```
 
-To unzip a file in the python with the password
+To unzip a password-protected file in Python:
 
 ```python
 from zipfile import ZipFile
@@ -241,3 +240,4 @@ oo = bytearray.fromhex(os)
 - [Matplotlib](Python/Matplotlib.md)
 - [Scapy](Scapy.md)
 - [Bcrypt](Python/Bcrypt.md)
+- [Programming Languages](ProgrammingLanguages.md)

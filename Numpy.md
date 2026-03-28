@@ -1,6 +1,6 @@
 ---
 title: Numpy
 draft: true
-tags: []
+tags: [data-science, python, reference]
 ---
 # Numpy

@@ -1,7 +1,7 @@
 ---
 title: Kapacitor ef9fd
 draft: true
-tags: []
+tags: [databases, devops, reference]
 ---
 # Kapacitor
 

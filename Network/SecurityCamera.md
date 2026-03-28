@@ -1,7 +1,7 @@
 ---
 title: SecurityCamera
 draft: true
-tags: []
+tags: [networking, reference]
 ---
 # Security Camera
 

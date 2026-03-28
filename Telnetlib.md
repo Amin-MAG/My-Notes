@@ -1,7 +1,7 @@
 ---
 title: Telnetlib
 draft: true
-tags: []
+tags: [networking, python, reference]
 ---
 # Telnetlib
 

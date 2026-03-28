@@ -1,7 +1,7 @@
 ---
 title: FTP
 draft: true
-tags: []
+tags: [networking, reference]
 ---
 # FTP
 

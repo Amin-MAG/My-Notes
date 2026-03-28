@@ -1,7 +1,7 @@
 ---
 title: NLP
 draft: true
-tags: []
+tags: [ai-ml, course-notes]
 ---
 # Natural Language Processing
 
@@ -17,5 +17,5 @@ IUST NLP Course 2022
   - [HW02-Practical](NLP/Homework-02-Practical.ipynb)
 - Homework 3
   - [HW03](NLP/Homework-03.md)    
-- Homwork 4
+- Homework 4
   - [HW02-Theoretical](NLP/Homework-04-Theoretical.md)

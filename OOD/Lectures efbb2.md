@@ -1,7 +1,7 @@
 ---
 title: Lectures efbb2
 draft: true
-tags: []
+tags: [course-notes, software-engineering]
 ---
 # Lectures
 

@@ -1,7 +1,7 @@
 ---
 title: Microservices
 draft: true
-tags: []
+tags: [architecture, system-design, distributed-systems, backend, reference]
 ---
 # Microservices
 

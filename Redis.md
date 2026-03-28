@@ -1,11 +1,11 @@
 ---
 title: Redis
 draft: true
-tags: []
+tags: [databases, backend, distributed-systems, reference]
 ---
 # Redis
 
-A remote dictionary server is an In-Memory database. Often used to improve performance. It is also a fully-fledged primary database. You can extend the Redis core with the Redis modules. Because it is an In-Memory database, then it is super fast and performant. It also makes the running test much faster. 
+A remote dictionary server is an in-memory database, often used to improve performance. It is also a fully-fledged primary database. You can extend the Redis core with Redis modules. Because it is an in-memory database, it is super fast and performant. It also makes running tests much faster.
 
 ## Persist Redis data
 
@@ -183,7 +183,7 @@ ZCARD userlogins
 
 ### ZRANGEBYSCORE, ZREVRANGEBYSCORE
 
-To filter some of the results from redis.
+To filter some of the results from Redis.
 
 ```bash
 # Filter the userlogins that are more than 10
@@ -199,7 +199,7 @@ ZRANGEBYSCORE userlogins -inf 5 WITHSCORES
 
 ## Caching Objects
 
-It stores frequently requested data in memory. It facilitates the webservers to respond very quickly to the most frequent requests. It will decrease the load on the database and increase the response time.
+It stores frequently requested data in memory. It enables web servers to respond very quickly to the most frequent requests. It decreases the load on the database and improves the response time.
 
 ## Session Store
 
@@ -246,3 +246,8 @@ hll hyper log log
 # Resources
 
 - [Top 5 Redis Use Cases](https://www.youtube.com/watch?v=a4yX7RUgTxI)
+
+# See Also
+
+- [Databases](Databases.md)
+- [Tile38](Tile38.md)

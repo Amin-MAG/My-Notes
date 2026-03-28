@@ -1,7 +1,7 @@
 ---
 title: GoGenerics
 draft: true
-tags: []
+tags: [golang, programming]
 ---
 # Go Generics
 
@@ -29,7 +29,7 @@ func main() {
 }
 ```
 
-You can make these definition easy most of the time. For example, if you want numeric type:
+You can simplify these definitions most of the time. For example, if you want a numeric type:
 
 ```go
 package main
@@ -38,7 +38,7 @@ import (
     "golang.org/x/exp/constraints"
 )
 
-func Sum[V constraints.Float | constraints.Intger](m ...V) V {
+func Sum[V constraints.Float | constraints.Integer](m ...V) V {
     var s V
     for _, v := range m {
         s += v

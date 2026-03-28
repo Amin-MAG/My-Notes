@@ -1,7 +1,7 @@
 ---
 title: SQL Map
 draft: true
-tags: []
+tags: [security]
 ---
 # SQL Map
 

@@ -1,7 +1,7 @@
 ---
 title: PlatformIO
 draft: true
-tags: []
+tags: [embedded-systems, hardware, reference]
 ---
 # PlatformIO
 

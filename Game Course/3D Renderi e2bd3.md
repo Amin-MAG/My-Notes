@@ -1,7 +1,7 @@
 ---
 title: 3D Renderi e2bd3
 draft: true
-tags: []
+tags: [course-notes, reference]
 ---
 # 3D Rendering
 

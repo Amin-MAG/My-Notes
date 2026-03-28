@@ -1,7 +1,7 @@
 ---
 title: Sidecar Co 7f6ce
 draft: true
-tags: []
+tags: [architecture, system-design]
 ---
 # Sidecar Container
 
