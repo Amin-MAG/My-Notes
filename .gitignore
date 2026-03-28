@@ -4,31 +4,15 @@
 .idea
 
 # Obsidian
-.obsidian
-
-# Draft notes
-Draft.md
-Interview-General-Questions.md
-
-# Templates
-Templates/
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
 
 # Daily Notes
 Daily.md
-Daily-Notes/
-
-# Idea folder related to personal notes
-Ideas/
+Daily-Kanban.md
 
 # Work
 VPORT**.md
 Obkio**.md
-Delgate**.md
-Resume.md
 
-# zk
-.zk
-
-
-.stversions
-.stfolder
