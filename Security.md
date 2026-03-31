@@ -220,9 +220,11 @@ So there is no complexity here, the browser will check the access-control-allowe
 - [Gobuster](Gobuster.md)
 - [SQL-Map](Security/SQL-Map.md)
 - [Cryptography](Cryptography.md)
+- [Diffie-Hellman](Diffie-Hellman.md)
 - [Security Camera](Network/SecurityCamera.md)
 - [University](Security/University.md)
 - [Hack](Hack.md)
+- [mitmproxy](mitmproxy.md)
 
 # Resources
 

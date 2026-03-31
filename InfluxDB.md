@@ -1,3 +1,8 @@
+---
+title: InfluxDB
+draft: true
+tags: []
+---
 # InfluxDB
 
 It’s an Open-Source time series database written in Go. The metrics from Telegraf are going to be stored here.
@@ -37,3 +42,54 @@ for instance
 ```influxdb
 weather,location=montreal temperature=21.5 1640995200
 ```
+
+### Organization
+
+-InfluxDB v2.x uses the concept of organizations to group buckets and users.
+
+### Flux Language
+
+A functional query language for querying, transforming, and analyzing data. Here is an example
+
+```flux
+from(bucket: "mybucket")
+  |> range(start: -1h)
+  |> filter(fn: (r) => r._measurement == "weather" and r.location == "montreal")
+```
+
+### Retention Policy
+
+Retention Policy defines how long data in a bucket is kept. InfluxDB will automatically delete data older than this duration.
+
+
+| Feature             | Tags                      | Fields                                        |
+| ------------------- | ------------------------- | --------------------------------------------- |
+| Indexed?            | ✅ Yes                     | ❌ No                                          |
+| Query performance   | ✅ Fast filtering          | ⚠️ Slower filtering                           |
+| Use in aggregations | ❌ No aggregations on tags | ✅ Used in aggregations like `mean()`, `sum()` |
+| Can be numeric?     | ❌ No (always strings)     | ✅ Yes                                         |
+### Organization
+
+-InfluxDB v2.x uses the concept of organizations to group buckets and users.
+
+### Flux Language
+
+A functional query language for querying, transforming, and analyzing data. Here is an example
+
+```flux
+from(bucket: "mybucket")
+  |> range(start: -1h)
+  |> filter(fn: (r) => r._measurement == "weather" and r.location == "montreal")
+```
+
+### Retention Policy
+
+Retention Policy defines how long data in a bucket is kept. InfluxDB will automatically delete data older than this duration.
+
+
+| Feature             | Tags                      | Fields                                        |
+| ------------------- | ------------------------- | --------------------------------------------- |
+| Indexed?            | ✅ Yes                     | ❌ No                                          |
+| Query performance   | ✅ Fast filtering          | ⚠️ Slower filtering                           |
+| Use in aggregations | ❌ No aggregations on tags | ✅ Used in aggregations like `mean()`, `sum()` |
+| Can be numeric?     | ❌ No (always strings)     | ✅ Yes                                         |

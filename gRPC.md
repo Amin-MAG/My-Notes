@@ -30,7 +30,7 @@ gRPC (gRPC Remote Procedure Calls) is a high-performance, open-source framework 
 
 ## Prerequisites
 
-For most commands to work, the gRPC server must have **reflection enabled** (see [[#Enabling Reflection]] below). Without it, you'll need to pass the `.proto` files manually using the `-proto` flag.
+For most commands to work, the gRPC server must have **reflection enabled** (see [Enabling Reflection](##Enabling%20Reflection) below). Without it, you'll need to pass the `.proto` files manually using the `-proto` flag.
 
 ---
 
