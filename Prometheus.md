@@ -379,6 +379,7 @@ There are some other use cases:
 
 # See more
 
+- [Thanos](Thanos.md)
 - [Instant and Range Vector](https://satyanash.net/software/2021/01/04/understanding-prometheus-range-vectors.html)
 
 # Resources
