@@ -174,3 +174,7 @@ Understanding the process of establishing a secure connection between the client
 ## Web Security Vulnerabilities
 
 Awareness of common vulnerabilities like Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), and SQL Injection.
+
+# See more
+
+- [mitmproxy](../mitmproxy.md)

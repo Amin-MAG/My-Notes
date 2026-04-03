@@ -13,6 +13,7 @@ Every system has some form of intelligence. In its earliest form, AI was simply 
 - [Machine Learning](MachineLearning.md)
 - Deep Learning
 - [Data Science](Data-Science.md)
+- [OpenFang](Openfang.md)
 
 ## Tools
 
