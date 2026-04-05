@@ -36,6 +36,50 @@ A raw API call requires you to be present. You type, it responds, done. If you w
 OpenFang agents run on schedules. You configure a venue scout once, and every morning it searches for new venues, enriches the data, stores results to memory, and pushes a summary to your Telegram — all without you doing anything. This is the difference between a tool you use and a system that works for you.
 
 ## Related Topics
+---
+
+## Core Concepts
+
+### Agents
+
+The basic unit of OpenFang. Each agent has:
+
+- A system prompt defining its behavior and expertise
+- A set of tools it can use (`web_search`, `web_fetch`, `shell_exec`, etc.)
+- Its own persistent memory scoped to that agent
+- A model assigned to it (can differ per agent)
+
+Agents are **persistent processes** — not request/response. They stay alive, maintain state, and can run background tasks.
+
+### Hands
+
+Agents on full autopilot. Unlike regular agents that wait for you to type, Hands:
+
+- Run on schedules (e.g. every morning at 9am)
+- Execute multi-phase operational playbooks autonomously
+- Build knowledge graphs over time
+- Report metrics and results to the dashboard
+
+**7 built-in Hands:** Researcher, Collector, Predictor, Lead, Clip, Twitter, Browser
+
+Each Hand bundles a `HAND.toml` manifest, a 500+ word expert system prompt, a `SKILL.md` knowledge file, and dashboard metrics — all compiled into the binary.
+
+### Tools
+
+What agents can _do_. Every tool call runs inside a **WASM sandbox** with fuel metering — a security layer that prevents runaway code. Key tools:
+
+|Tool|What it does|
+|---|---|
+|`web_search`|Search the web|
+|`web_fetch`|Fetch a specific URL|
+|`memory_store`|Persist a fact to long-term memory|
+|`memory_recall`|Recall relevant facts from past sessions|
+|`knowledge_add_entity`|Add a node to the knowledge graph|
+|`knowledge_add_relation`|Link two knowledge graph nodes|
+|`knowledge_query`|Query the knowledge graph|
+|`shell_exec`|Run shell commands (sandboxed)|
+|`event_publish`|Trigger another agent|
+|`schedule_create`|Create a scheduled task|
 
 - [Artificial Intelligence](Artificial-Intelligence.md) — OpenFang is built on top of LLMs (Claude, GPT, etc.) and adds autonomy, memory, and tool use on top of foundation models
 - [Computer Science](Computer-Science.md) — Core CS concepts underpin OpenFang: scheduling, process management, sandboxing (WASM), embedding-based vector search, and knowledge graphs
