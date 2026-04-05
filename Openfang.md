@@ -81,6 +81,75 @@ What agents can _do_. Every tool call runs inside a **WASM sandbox** with fuel m
 |`event_publish`|Trigger another agent|
 |`schedule_create`|Create a scheduled task|
 
+### Channels
+
+How agents receive and send messages from the outside world. 40 adapters built in — Telegram, Discord, Slack, Gotify, webhooks, email, and more. Each channel routes messages to a configured default agent. Per-channel model overrides are supported.
+
+**One channel = one default agent.** To have multiple agents accessible via the same platform, use multiple bot tokens (one per agent) or a router agent that delegates via `event_publish`.
+
+### Skills
+
+Markdown knowledge files injected into an agent's context at runtime. They are **not tools** — they are reference knowledge that shapes how the agent reasons.
+
+Per-agent skill files:
+
+|File|Purpose|
+|---|---|
+|`SOUL.md`|Agent personality and core values|
+|`IDENTITY.md`|Agent's role and identity|
+|`USER.md`|Info about the user — name, location, preferences|
+|`TOOLS.md`|Instructions for how to use tools correctly|
+|`MEMORY.md`|What to persist across sessions|
+|`AGENTS.md`|Info about other agents it can collaborate with|
+|`HEARTBEAT.md`|Instructions for autonomous background ticks|
+
+60 expert skills ship bundled with OpenFang (Kubernetes, Docker, GitHub, security audit, etc). You can write custom skills and publish them to FangHub.
+---
+
+## Key CLI Reference
+
+```bash
+# Daemon
+openfang start                    # start daemon
+openfang stop                     # graceful stop
+pkill -f openfang                 # force kill — use this when config changes don't apply
+openfang status                   # check daemon status
+openfang config show              # show currently loaded config
+openfang logs --follow            # tail live logs
+openfang doctor                   # run diagnostics
+
+# Agents
+openfang agent list
+openfang agent spawn <file.toml>
+openfang agent kill <ID>
+openfang agent chat <ID>
+
+# Hands
+openfang hand list
+openfang hand activate <hand>
+openfang hand deactivate <hand>
+openfang hand status <hand>
+openfang hand pause <hand>
+openfang hand resume <hand>
+
+# Triggers / Scheduling
+openfang trigger list
+openfang trigger create --agent <name> --cron "<cron>" --message "<msg>"
+openfang trigger delete <ID>
+
+# Channels
+openfang channel list
+openfang channel setup <channel>  # interactive wizard
+
+# Skills
+openfang skill list
+openfang skill install <source>
+openfang skill search <query>
+```
+
+---
+
+## See Also
 - [Artificial Intelligence](Artificial-Intelligence.md) — OpenFang is built on top of LLMs (Claude, GPT, etc.) and adds autonomy, memory, and tool use on top of foundation models
 - [Computer Science](Computer-Science.md) — Core CS concepts underpin OpenFang: scheduling, process management, sandboxing (WASM), embedding-based vector search, and knowledge graphs
 - [Distributed Systems](Distributed-Systems.md) — Agent-to-agent communication, event-driven pipelines, and the A2A protocol follow distributed systems patterns
