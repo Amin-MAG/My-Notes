@@ -35,7 +35,43 @@ A raw API call requires you to be present. You type, it responds, done. If you w
 
 OpenFang agents run on schedules. You configure a venue scout once, and every morning it searches for new venues, enriches the data, stores results to memory, and pushes a summary to your Telegram — all without you doing anything. This is the difference between a tool you use and a system that works for you.
 
-## Related Topics
+### 3. Real Tool Use — Not Simulated
+
+Modern LLMs can describe what they would do to search the web or read a file. OpenFang agents actually do it. When an agent calls `web_search`, it fires a real search engine query. When it calls `web_fetch`, it retrieves the actual live page. When it calls `shell_exec`, it runs the command on your machine. The results come back into the agent's context and it reasons over real data — not hallucinated content.
+
+This is the difference between asking Claude "what mini PCs are on Kijiji right now?" (it will guess) and running an agent that actually fetches Kijiji listing pages and reads them (it will find real listings).
+
+### 4. Multi-Channel Access to the Same Agent
+
+With a raw API, you get one interface — wherever you're making the call. With OpenFang, the same agent is reachable via Telegram, Discord, Slack, the web dashboard, the REST API, and n8n workflows simultaneously. You configure the agent once and access it from anywhere.
+
+More importantly, the agent maintains a **canonical session** across channels — if you tell it something on Telegram, it remembers that context when you continue on the web dashboard.
+
+### 5. Multi-Agent Pipelines
+
+With a raw model, you do one thing per request. If you want to chain tasks — find venues, then research each one, then write outreach emails — you do it manually, copy-pasting between conversations.
+
+With OpenFang, you build a pipeline: a venue-scout agent stores results to shared memory, an outreach-composer agent reads that memory and generates emails, all triggered automatically. The agents coordinate without you being involved at all.
+
+### 6. Security and Control
+
+A raw API call has no guardrails beyond what you put in the prompt. OpenFang adds 16 security layers — a WASM sandbox around every tool call, prompt injection scanning, SSRF protection, capability-based access control (agents can only use the tools you explicitly grant them), and a Merkle hash-chain audit trail of every action taken.
+
+For agents that have shell access and internet connectivity — which is a real attack surface — this matters.
+
+### The Simple Summary
+
+|Raw model (API/Claude.ai)|OpenFang agent|
+|---|---|
+|Stateless — forgets everything|Persistent memory across sessions|
+|You must be present to get anything done|Runs autonomously on schedules|
+|Describes what it would do|Actually does it via real tool calls|
+|One interface|40 channels simultaneously|
+|One task at a time|Multi-agent pipelines|
+|No guardrails|16 security layers|
+
+OpenFang is the answer to: _"I want this model to actually do things for me, remember context over time, and work even when I'm not at my keyboard."_
+
 ---
 
 ## Core Concepts
