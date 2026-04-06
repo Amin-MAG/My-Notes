@@ -94,3 +94,78 @@ A = g^a mod p
 - Computing `a` from `g`, `p`, and `A` is the **Discrete Logarithm Problem (DLP)** — computationally infeasible for large primes.
 
 This asymmetry is the entire security foundation of Diffie-Hellman.
+
+---
+
+## The Protocol
+
+### Public Parameters
+
+Both parties agree publicly on:
+- `g` — a generator (small integer, commonly 2 or 5)
+- `p` — a large prime number
+
+### Step-by-Step
+
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Public Channel
+    participant Bob
+
+    Note over Alice,Bob: Agree on public parameters: g=5, p=23
+
+    Alice->>Alice: Choose private key a=6
+    Bob->>Bob: Choose private key b=15
+
+    Alice->>Alice: Compute A = 5^6 mod 23 = 8
+    Bob->>Bob: Compute B = 5^15 mod 23 = 19
+
+    Alice->>"Public Channel": Send A = 8
+    "Public Channel"->>Bob: A = 8
+
+    Bob->>"Public Channel": Send B = 19
+    "Public Channel"->>Alice: B = 19
+
+    Alice->>Alice: Compute s = B^a mod 23 = 19^6 mod 23 = 2
+    Bob->>Bob: Compute s = A^b mod 23 = 8^15 mod 23 = 2
+
+    Note over Alice,Bob: Shared secret = 2 (never transmitted!)
+```
+
+### Why They Get the Same Answer
+
+The math is symmetric because exponentiation commutes under modular arithmetic:
+
+```
+Alice computes: B^a mod p = (g^b)^a mod p = g^(a·b) mod p
+Bob   computes: A^b mod p = (g^a)^b mod p = g^(a·b) mod p
+```
+
+Both sides reduce to `g^(a·b) mod p`. The shared value is identical — and it was never sent over the wire.
+
+---
+
+## Why Eve Can't Break It
+
+Eve observes the public channel and sees:
+
+| Value | Known to Eve? |
+|-------|:---:|
+| `g` (generator) | Yes |
+| `p` (prime) | Yes |
+| `A = g^a mod p` | Yes |
+| `B = g^b mod p` | Yes |
+| `a` (Alice's private key) | **No** |
+| `b` (Bob's private key) | **No** |
+| `g^(a·b) mod p` (shared secret) | **No** |
+
+To compute the shared secret, Eve would need to solve:
+
+```
+Given g, p, and A = g^a mod p — find a.
+```
+
+This is the **Discrete Logarithm Problem**. For a 2048-bit prime `p`, the search space exceeds `2^2048` — larger than the number of atoms in the observable universe. No classical algorithm can solve it in feasible time.
+
+---
