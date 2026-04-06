@@ -169,3 +169,22 @@ Given g, p, and A = g^a mod p — find a.
 This is the **Discrete Logarithm Problem**. For a 2048-bit prime `p`, the search space exceeds `2^2048` — larger than the number of atoms in the observable universe. No classical algorithm can solve it in feasible time.
 
 ---
+---
+
+## See also
+
+- [Security](Security.md) — Digital signatures, certificates, and OpenSSL commands
+- [Cryptography](Security/Cryptography.md) — AES and other encryption standards
+- [HTTP](Network/HTTP.md) — TLS/HTTPS relies on DH for key exchange
+- [mitmproxy](mitmproxy.md) — Man-in-the-middle proxy, relevant to DH's MITM limitation
+
+---
+
+## References
+
+- Diffie, W. & Hellman, M. (1976). *New Directions in Cryptography*. IEEE Transactions on Information Theory.
+- Pohlig, S. & Hellman, M. (1978). *An Improved Algorithm for Computing Logarithms over GF(p)*. IEEE Transactions on Information Theory.
+- Adrian et al. (2015). *Imperfect Forward Secrecy: How Diffie-Hellman Fails in Practice* — [Logjam](https://weakdh.org/).
+- RFC 3526 — *More Modular Exponential (MODP) Diffie-Hellman groups for IKE*.
+- RFC 7919 — *Negotiated Finite Field Diffie-Hellman Ephemeral Parameters for TLS*.
+- NIST FIPS 203 (2024) — *Module-Lattice-Based Key-Encapsulation Mechanism Standard (ML-KEM)*.
