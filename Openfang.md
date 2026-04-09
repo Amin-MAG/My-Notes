@@ -140,6 +140,29 @@ Per-agent skill files:
 |`HEARTBEAT.md`|Instructions for autonomous background ticks|
 
 60 expert skills ship bundled with OpenFang (Kubernetes, Docker, GitHub, security audit, etc). You can write custom skills and publish them to FangHub.
+
+### Memory (3 layers)
+
+|Layer|What it is|Scope|
+|---|---|---|
+|Active context|Current conversation messages in the context window|Current session only|
+|Compaction|LLM summarizes old messages, keeps recent ones in full|Survives session end|
+|Vector memory|Important facts stored as embeddings, recalled semantically|Permanent across all sessions|
+
+All stored locally at `~/.openfang/openfang.db` — pure SQLite, no cloud, no external service.
+
+**How vector recall works:** Before answering, the agent searches past memory for semantically similar facts and injects them into context. This requires an embedding model — OpenFang uses Ollama for this if configured, otherwise falls back to text search.
+
+**Memory is per-agent and per-channel.** Different users on the same channel get separate sessions. The same user across different channels gets a merged canonical session.
+
+### Agent-to-Agent Communication
+
+OpenFang supports three patterns:
+
+1. **Workflows** — multi-agent pipelines with fan-out (parallel), sequential, conditional, and loop steps. Defined as JSON, managed by the workflow engine.
+2. **A2A Protocol** — Google Agent-to-Agent task delegation. One agent assigns a task to another and waits for the result.
+3. **`event_publish` tool** — async fire-and-forget. An agent publishes an event, another agent subscribed to it picks it up.
+
 ---
 
 ## Creating a Custom Agent
