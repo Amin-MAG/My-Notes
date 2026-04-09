@@ -142,6 +142,75 @@ Per-agent skill files:
 60 expert skills ship bundled with OpenFang (Kubernetes, Docker, GitHub, security audit, etc). You can write custom skills and publish them to FangHub.
 ---
 
+## Creating a Custom Agent
+
+```toml
+# ~/.openfang/agents/my-agent.toml
+name = "my-agent"
+version = "0.1.0"
+description = "What this agent does"
+module = "builtin:chat"
+
+[model]
+provider = "anthropic"
+model = "claude-sonnet-4-5"
+
+[capabilities]
+tools = ["web_search", "web_fetch", "memory_store", "memory_recall"]
+
+[system_prompt]
+text = """
+You are a [role]. No questions. Execute immediately.
+
+STRICT WORKFLOW:
+1. First step — be explicit
+2. Second step
+3. Output format
+
+Never ask clarifying questions. Start working on any input.
+"""
+```
+
+**System prompt tips:**
+
+- Give explicit numbered steps so the agent has no reason to ask questions
+- Add "No questions. Execute immediately." at the top
+- Specify the exact output format you want
+- Keep it under 1000 tokens for reliable performance
+
+---
+
+## Agent Management
+
+```bash
+# List all agents and their state
+openfang agent list
+
+# Spawn a new agent from a toml file
+openfang agent spawn ~/.openfang/agents/my-agent.toml
+
+# Kill a specific agent by ID
+openfang agent kill <ID>
+
+# Kill all agents at once
+openfang agent list | tail -n +3 | awk '{print $1}' | xargs -I {} openfang agent kill {}
+
+# Respawn shortcut — add to ~/.zshrc
+alias respawn='f() { openfang agent kill $(openfang agent list | grep "$1" | awk "{print \$1}") && openfang agent spawn ~/.openfang/agents/$1.toml }; f'
+# Usage:
+respawn my-agent
+```
+
+**Killing and respawning does NOT delete memory** — only the active chat session is lost. Memory, knowledge graph, and past sessions are preserved in SQLite.
+
+To wipe all memory completely:
+
+```bash
+rm ~/.openfang/openfang.db
+pkill -f openfang && openfang start
+```
+---
+
 ## Key CLI Reference
 
 ```bash
