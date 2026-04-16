@@ -5,8 +5,7 @@ tags:
   - storage
   - distributed-systems
 ---
-
-# Longhorn — Cloud-Native Distributed Storage for Kubernetes
+# Longhorn
 
 ## What is Longhorn?
 
@@ -29,6 +28,40 @@ A Longhorn volume is a block device backed by replicas distributed across your n
 Each volume is made up of N replicas, where N is your configured replica count (default: 3). Each replica lives on a different node. When a pod writes data, Longhorn writes to all replicas simultaneously. This is what gives Longhorn its fault tolerance — any single node can die and your data is safe on the remaining replicas.
 
 > **Important:** Replicas protect against hardware failure, not logical failure. If you accidentally delete a PVC or a bug corrupts your data, all replicas faithfully replicate that change. Replicas are not a substitute for backups.
+
+### Volume Robustness
+
+A volume can be in one of three states:
+
+|State|Meaning|
+|---|---|
+|**Healthy**|All configured replicas exist and are in sync|
+|**Degraded**|Volume is accessible but has fewer replicas than configured — redundancy is reduced|
+|**Faulted**|No healthy replicas remain — volume is inaccessible|
+
+A degraded volume still works for your workloads, but you are exposed: if another replica fails before the missing one is rebuilt, you risk data loss.
+---
+
+## Useful Commands
+
+```bash
+# View all volumes and their health
+kubectl get volumes -n longhorn-system
+
+# View node storage summary
+kubectl get nodes.longhorn.io -n longhorn-system -o wide
+
+# Inspect a node's disk scheduling details
+kubectl get nodes.longhorn.io <node> -n longhorn-system -o json | \
+  jq '.status.diskStatus | to_entries[] | {disk: .key, available: .value.storageAvailable, scheduled: .value.storageScheduled}'
+
+# View all replicas
+kubectl get replicas -n longhorn-system -o wide
+
+# Check Longhorn manager logs
+kubectl logs -n longhorn-system -l app=longhorn-manager --tail=50
+```
+
 ---
 
 ## Further Reading
@@ -44,3 +77,5 @@ Each volume is made up of N replicas, where N is your configured replica count (
 - [Distributed Systems](Distributed-Systems.md)
 - [Velero](Velero.md)
 - [Cloud Computing](Cloud-Computing.md)
+- [Performance Monitoring Tools](Performance-Monitoring-Tools.md)
+- [I/O Monitoring Tools](IO-MONITORING-TOOLS.md)
