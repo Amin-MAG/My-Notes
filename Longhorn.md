@@ -42,6 +42,41 @@ A volume can be in one of three states:
 A degraded volume still works for your workloads, but you are exposed: if another replica fails before the missing one is rebuilt, you risk data loss.
 ---
 
+## Snapshots
+
+Snapshots are point-in-time captures of a volume stored **locally on the same disk as the replica**. They are incremental — only changed blocks since the last snapshot are stored, so they are space-efficient.
+
+- Created manually via UI/CLI or automatically via recurring jobs
+- Can be used to roll back a volume to a previous state
+- Are **not** a backup — if the node dies, snapshots on that node are lost with it
+- Snapshots chain together; deleting one merges its changes into the next
+
+---
+
+## Backups
+
+Backups ship snapshot data to an **external target** outside the cluster. This is your real disaster recovery layer.
+
+### Supported Backup Targets
+
+|Target|Notes|
+|---|---|
+|S3 (AWS, MinIO, Backblaze, etc.)|Most common, works great with a local MinIO instance|
+|NFS|Simple for homelabs|
+|Azure Blob Storage|For Azure-hosted clusters|
+|CIFS/SMB|Windows share compatible|
+
+### How to Configure (MinIO example)
+
+In your Longhorn values or via the UI under **Settings → General → Backup Target**:
+
+```
+s3://my-bucket@us-east-1/
+```
+
+With credentials stored in a Kubernetes secret referenced by **Backup Target Credential Secret**.
+---
+
 ## Useful Commands
 
 ```bash
